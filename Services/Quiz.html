@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Solutions | VU Study LGWT</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="services.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Pre & Latest Semester Quiz</h1>
+        <p>Direct Google Drive Access for All Subject Folders</p>
+    </header>
+
+    <div class="container">
+        <a href="../index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Dashboard</a>
+
+        <div class="semester-container">
+            
+            <div class="semester-card">
+                <span class="latest-tag">LATEST SEMESTER</span>
+                <i class="fa-solid fa-folder-tree main-icon"></i>
+                <h3>Spring 2026</h3>
+                <p>Access all current semester solved quizzes organized by subject code.</p>
+                <a href="coming_soon.html" class="drive-btn btn-latest">
+                    <i class="fab fa-google-drive"></i> Open Folder
+                </a>
+            </div>
+
+            <div class="semester-card">
+                <i class="fa-solid fa-box-archive main-icon"></i>
+                <h3>Archives</h3>
+                <p>Solved quiz papers and MCQ banks from Spring 2025 and older sessions.</p>
+                <a href="not_found.html" class="drive-btn btn-archive">
+                    <i class="fas fa-eye"></i> View History
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('service-footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+
+</body>
+</html>

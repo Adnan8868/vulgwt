@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MGMT Subjects</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f1f5f9;
+            color: #1e3c72;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .header p {
+            margin-top: 5px;
+            font-size: 18px;
+            opacity: 0.85;
+        }
+
+        /* SEARCH BOX */
+        .search-box {
+            margin-top: 20px;
+        }
+
+        .search-box input {
+            padding: 12px 15px;
+            width: 280px;
+            border-radius: 50px;
+            border: none;
+            font-size: 16px;
+            outline: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        /* CARD */
+        .card {
+            background: linear-gradient(135deg, #ffffff, #e0e7ff);
+            padding: 25px 20px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 22px;
+            color: #1e3c72;
+        }
+
+        .book-name {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #334155;
+        }
+
+        /* BUTTONS */
+        .card a {
+            display: block;
+            margin: 10px 0;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .handouts {
+            background: linear-gradient(135deg, #3b6cb7, #1e3c72);
+        }
+
+        .handouts:hover {
+            background: linear-gradient(135deg, #1e3c72, #3b6cb7);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        .highlighted {
+            background: linear-gradient(135deg, #ffcc00, #ff9900);
+            color: #1e3c72;
+        }
+
+        .highlighted:hover {
+            background: linear-gradient(135deg, #ff9900, #ffcc00);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        .ppt {
+            background: linear-gradient(135deg, #10b981, #047857);
+        }
+
+        .ppt:hover {
+            background: linear-gradient(135deg, #047857, #10b981);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        /* BACK BUTTON */
+        .back-btn {
+            display: inline-block;
+            margin: 20px 0 20px 10px;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #ffcc00, #ff9900);
+            color: #1e3c72;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .search-box input {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>MGMT || HRM Subject Handouts</h1>
+        <p>Choose your subject and download study material</p>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search by code or subject..." onkeyup="searchSubjects()">
+        </div>
+    </div>
+
+    <div class="container" id="subjectContainer">
+        <!-- MGMT611 -->
+        <div class="card">
+            <h3>MGMT611</h3>
+            <p class="book-name">Human Relations</p>
+            <a href="https://drive.google.com/uc?export=download&id=1ntz6WVwt31dAShiHFXjuOULf_0nJze35"
+                class="handouts" target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- MGMT614 -->
+        <div class="card">
+            <h3>MGMT614</h3>
+            <p class="book-name">Supply Chain Management</p>
+            <a href="https://drive.google.com/uc?export=download&id=1JNc7YhLZGdODlRj9iOKp7iQLbeV5cz-G"
+                class="handouts" target="_blank">Handouts</a>
+            <a href="not_found.html"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- MGMT615 -->
+        <div class="card">
+            <h3>MGMT615</h3>
+            <p class="book-name">Transportation & Logistics Management</p>
+            <a href="https://drive.google.com/uc?export=download&id=1JPeqQ5RzXxZaFNe67yvhJhqFCapKV4wD"
+                class="handouts" target="_blank">Handouts</a>
+            <a href="not_found.html"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- MGMT622 -->
+        <div class="card">
+            <h3>MGMT622</h3>
+            <p class="book-name">Management Skills</p>
+            <a href="https://drive.google.com/uc?export=download&id=1phCNywx_xoubmto2Fk97ntoW5EuXoy3g"
+                class="handouts" target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- MGMT623 -->
+        <div class="card">
+            <h3>MGMT623</h3>
+            <p class="book-name">Leadership & Team Management</p>
+            <a href="https://drive.google.com/uc?export=download&id=18b7q1Av7jsPYEtyNreTF5w_ziex3XBWY"
+                class="handouts" target="_blank">Handouts</a>
+            <a href="not_found.html"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- MGMT624 -->
+        <div class="card">
+            <h3>MGMT624</h3>
+            <p class="book-name">Conflict Management</p>
+            <a href="https://drive.google.com/uc?export=download&id=1aIhAI1iVIcGamexG35iKyExhovB9vUKi"
+                class="handouts" target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- MGMT625 -->
+        <div class="card">
+            <h3>MGMT625</h3>
+            <p class="book-name">CHANGE MANAGEMENT</p>
+            <a href="https://drive.google.com/uc?export=download&id=1IeK2h4z3UGvJw6lBOzt0UzEYBQGU1n02"
+                class="handouts" target="_blank">Handouts</a>
+            <a href="not_found.html"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- MGMT627 -->
+        <div class="card">
+            <h3>MGMT627</h3>
+            <p class="book-name">Project Management</p>
+            <a href="https://drive.google.com/uc?export=download&id=1Ry8zdwMislUvhK__OnWmM22IgEOblmXw"
+                class="handouts" target="_blank">Handouts</a>
+            <a href="not_found.html"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- MGMT628 -->
+        <div class="card">
+            <h3>MGMT628</h3>
+            <p class="book-name">Organizational Development</p>
+            <a href="https://drive.google.com/uc?export=download&id=1r5b3bOs4BrycOnfgRlPBTnT6ZHmS_CRl"
+                class="handouts" target="_blank">Handouts</a>
+            <a href="not_found.html"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- MGMT629 -->
+        <div class="card">
+            <h3>MGMT629</h3>
+            <p class="book-name">Crisis Management</p>
+            <a href="https://drive.google.com/uc?export=download&id=1nLXbLzcHajREcAwKqywkRsqaxnq-z48V"
+                class="handouts" target="_blank">Handouts</a>
+            <a href="not_found.html"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- MGMT630 -->
+        <div class="card">
+            <h3>MGMT630</h3>
+            <p class="book-name">Knowledge Management</p>
+            <a href="https://drive.google.com/uc?export=download&id=15drEvGbAXzvh_s9EaYeA_lnds8ODBNy1"
+                class="handouts" target="_blank">Handouts</a>
+            <a href="not_found.html"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+
+    </div>
+
+    <a href="handouts.html" class="back-btn">Back to Handouts</a>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('handouts-footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <script src="search_script.js"></script>
+
+</body>
+
+</html>

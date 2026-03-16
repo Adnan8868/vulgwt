@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTH Subjects</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f1f5f9;
+            color: #1e3c72;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .header p {
+            margin-top: 5px;
+            font-size: 18px;
+            opacity: 0.85;
+        }
+
+        /* SEARCH BOX */
+        .search-box {
+            margin-top: 20px;
+        }
+
+        .search-box input {
+            padding: 12px 15px;
+            width: 280px;
+            border-radius: 50px;
+            border: none;
+            font-size: 16px;
+            outline: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        /* CARD */
+        .card {
+            background: linear-gradient(135deg, #ffffff, #e0e7ff);
+            padding: 25px 20px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 22px;
+            color: #1e3c72;
+        }
+
+        .book-name {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #334155;
+        }
+
+        /* BUTTONS */
+        .card a {
+            display: block;
+            margin: 10px 0;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .handouts {
+            background: linear-gradient(135deg, #3b6cb7, #1e3c72);
+        }
+
+        .handouts:hover {
+            background: linear-gradient(135deg, #1e3c72, #3b6cb7);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        .highlighted {
+            background: linear-gradient(135deg, #ffcc00, #ff9900);
+            color: #1e3c72;
+        }
+
+        .highlighted:hover {
+            background: linear-gradient(135deg, #ff9900, #ffcc00);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        .ppt {
+            background: linear-gradient(135deg, #10b981, #047857);
+        }
+
+        .ppt:hover {
+            background: linear-gradient(135deg, #047857, #10b981);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        /* BACK BUTTON */
+        .back-btn {
+            display: inline-block;
+            margin: 20px 0 20px 10px;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #ffcc00, #ff9900);
+            color: #1e3c72;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+        }
+
+
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .search-box input {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>MTH Subject Handouts</h1>
+        <p>Choose your subject and download study material</p>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search by code or subject..." onkeyup="searchSubjects()">
+        </div>
+    </div>
+
+    <div class="container" id="subjectContainer">
+        <!-- MTH001 -->
+        <div class="card">
+            <h3>MTH001</h3>
+            <p class="book-name">Elementary Mathematics</p>
+            <a href="https://drive.google.com/uc?export=download&id=1V7Ndod8Wp4lj4Ft_MPhDW3gr3Ii-pyVj" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">HandWrite Notes</a>
+        </div>
+        <!-- MTH100 -->
+        <div class="card">
+            <h3>MTH100</h3>
+            <p class="book-name">General Mathematics</p>
+            <a href="https://drive.google.com/uc?export=download&id=1Plmwckeb4Dr_FuyqHasHjcEnkifdpQ53" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/file/d/1ZlR55xiZmXk2Hrsq5VqDq5tNtipJ5y1A/view?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="https://drive.google.com/file/d/1GcogJ_47cV_3Wqqof2rlSueTcCDaBAKP/view?usp=drive_link"
+                class="ppt">HandWrite Notes</a>
+        </div>
+        <!-- MTH101 -->
+        <div class="card">
+            <h3>MTH101</h3>
+            <p class="book-name">Calculus And Analytical Geometry</p>
+            <a href="https://drive.google.com/uc?export=download&id=1SfvSaeGyUbKuQtQ9uPJovO10PRGYyDIe" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/10h9TxVsM8xG1KkKMAMD3FPAuLvNm3Qb6?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="https://drive.google.com/drive/folders/1OKqSqpqGQOGPE2e0LONYWGDY616L1uO_?usp=drive_link"
+                class="ppt">HandWrite Notes</a>
+        </div>
+        <!-- MTH102 -->
+        <div class="card">
+            <h3>MTH102</h3>
+            <p class="book-name">Basic Algebra and Trigonometry </p>
+            <a href="https://drive.google.com/uc?export=download&id=1MZfBZWVGH1hZndck6F67PptybTZW3AKG" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">HandWrite Notes</a>
+        </div>
+        <!-- MTH104 -->
+        <div class="card">
+            <h3>MTH104</h3>
+            <p class="book-name">Sets and Logic</p>
+            <a href="https://drive.google.com/drive/folders/1dHOnAXGZAZIqXXtn60m-WlAR3AaqmsoC?usp=drive_link"
+                class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1dHOnAXGZAZIqXXtn60m-WlAR3AaqmsoC?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="https://drive.google.com/file/d/1WMyJWPtjIQM90AMLR3JeXci80DaOqs-V/view?usp=drive_link"
+                class="ppt">HandWrite Notes</a>
+        </div>
+        <!-- MTH201 -->
+        <div class="card">
+            <h3>MTH201</h3>
+            <p class="book-name">Multivariable Calculus</p>
+            <a href="https://drive.google.com/uc?export=download&id=13zFZHK_dR6ymNDcvmWc2gbgqCbi9HMCe" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">HandWrite Notes</a>
+        </div>
+        <!-- MTH202 -->
+        <div class="card">
+            <h3>MTH202</h3>
+            <p class="book-name">Discrete Mathematics</p>
+            <a href="https://drive.google.com/uc?export=download&id=12sJJ11vxNbyfLWLbs_8BZUzyGv0YVl6E" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1scCQyY5IkPVN_4razWD1I1oLRBeHSBiO?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="https://drive.google.com/file/d/1IbxZF0OnLc2p9vWFXBY1dNZPj99I6t2K/view?usp=drive_link"
+                class="ppt">HandWrite Notes</a>
+        </div>
+        <!-- MTH301 -->
+        <div class="card">
+            <h3>MTH301</h3>
+            <p class="book-name">Calculus II</p>
+            <a href="https://drive.google.com/uc?export=download&id=1tnt94eHuMaRiPgnoNXMC3MCp_zy5FCmE" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="https://drive.google.com/drive/folders/1k_MYNQ9jOtCFWw-HUip0Fhp67CYmMGvH?usp=drive_link"
+                class="ppt">HandWrite Notes</a>
+        </div>
+        <!-- MTH302 -->
+        <div class="card">
+            <h3>MTH302</h3>
+            <p class="book-name">Business Mathematics & Statistics</p>
+            <a href="https://drive.google.com/uc?export=download&id=1iCpy2HEzYRbhuaXC1jErlAIsSnqWfIbP" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/file/d/1g91yXOFbIurs97QEqA_pAK9EVTm6RVpv/view?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">HandWrite Notes</a>
+        </div>
+        <!-- MTH303 -->
+        <div class="card">
+            <h3>MTH303</h3>
+            <p class="book-name">Mathematical Methods</p>
+            <a href="https://drive.google.com/uc?export=download&id=1oT6JPs8vnN7X3w6jUDHxKno0YoIiJmG-" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">HandWrite Notes</a>
+        </div>
+        <!-- MTH304 -->
+        <div class="card">
+            <h3>MTH304</h3>
+            <p class="book-name">Statics</p>
+            <a href="https://drive.google.com/uc?export=download&id=1bIyLMvQGovluDnwQe8A1hEUXt-2IwkrR" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="https://drive.google.com/drive/folders/1MczjsaAufs447bM-QBq2YlTmB8-K2NM-?usp=drive_link"
+                class="ppt">HandWrite Notes</a>
+        </div>
+        <!-- MTH401 -->
+        <div class="card">
+            <h3>MTH401</h3>
+            <p class="book-name">DIFFERENTIAL EQUATIONS</p>
+            <a href="https://drive.google.com/uc?export=download&id=1N_ZSuz31Zs3Mgz0q0dUQplymdkF5hnBI" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">HandWrite Notes</a>
+        </div>
+        <!-- MTH403 -->
+        <div class="card">
+            <h3>MTH403</h3>
+            <p class="book-name">Calculus & Analytical Geometry-II</p>
+            <a href="https://drive.google.com/uc?export=download&id=1M9zqxgQd2D6hi4YGyev2jOJ6DmKtONOj" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">HandWrite Notes</a>
+        </div>
+        <!-- MTH404 -->
+        <div class="card">
+            <h3>MTH404</h3>
+            <p class="book-name">Dynamics</p>
+            <a href="https://drive.google.com/drive/folders/1FVbuwZYSqisJ6CqwZLaPYDjp5K2p2Wtf?usp=drive_link"
+                class="handouts" target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="https://drive.google.com/file/d/1BBhcQCgBx8kcZD3elUFLNM103qEsOtXw/view?usp=drive_link"
+                class="ppt">HandWrite Notes</a>
+        </div>
+        <!-- MTH405 -->
+        <div class="card">
+            <h3>MTH405</h3>
+            <p class="book-name">Elementary Topics in Pure Mathematics</p>
+            <a href="https://drive.google.com/uc?export=download&id=1gEzR7z0Jnq8fKPC2Ug0VWxyoZvQ1eNKj" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">HandWrite Notes</a>
+        </div>
+        <!-- MTH501 -->
+        <div class="card">
+            <h3>MTH501</h3>
+            <p class="book-name">Linear Algebra</p>
+            <a href="https://drive.google.com/uc?export=download&id=1CR7ijfBlljUhl2HazgKjMRK8E5DWOilp" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/file/d/1K__zvA1zZNUWb9OFAe5AA1yKV52RYq6w/view?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="https://drive.google.com/drive/folders/1aPoRXPK4kk3DvgT7jnPQKZ6zKFSZ4pvZ?usp=drive_link"
+                class="ppt">HandWrite Notes</a>
+        </div>
+        <!-- MTH601 -->
+        <div class="card">
+            <h3>MTH601</h3>
+            <p class="book-name">OPERATIONS RESEARCH</p>
+            <a href="https://drive.google.com/uc?export=download&id=1BF-3QeiF1oIho77QV5PsHjxztDjIuyUJ" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1wt4qCZGrPox6hB3hF8YZg4aU5sxU6iiE?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="https://drive.google.com/drive/folders/1tzNrMhTKXoy7u1s_-CHNAwO2kstXN9Yd?usp=drive_link"
+                class="ppt">HandWrite Notes</a>
+        </div>
+        <!-- MTH603 -->
+        <div class="card">
+            <h3>MTH603</h3>
+            <p class="book-name">Numerical Analysis</p>
+            <a href="https://drive.google.com/uc?export=download&id=1P1W9kk8Ib1Z2gqfMlRKDr7Vk1hotmtnf" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1_3QNKvAn1J6LUEo04xQGv67MFE_vDiMA?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">HandWrite Notes</a>
+        </div>
+        <!-- MTH621 -->
+        <div class="card">
+            <h3>MTH621</h3>
+            <p class="book-name">Real Analysis I</p>
+            <a href="https://drive.google.com/uc?export=download&id=1q8syQhAsfuSfiph4zhHYsnmyVIVhTNT6" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="https://drive.google.com/file/d/1NYOnbovJST2Ry6iba751j9N42eU1bBp7/view?usp=drive_link"
+                class="ppt">HandWrite Notes</a>
+        </div>
+        <!-- MTH622 -->
+        <div class="card">
+            <h3>MTH622</h3>
+            <p class="book-name">VECTORS AND CLASSICAL MECHANICS</p>
+            <a href="https://drive.google.com/uc?export=download&id=1NYn3BleFvdmeADuP7QbeiSNeMJr8Qg27" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/file/d/1hPHrO_Kf-yP6QZxa6X-dO4AITvbAA3Cz/view?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">HandWrite Notes</a>
+        </div>
+        <!-- MTH631 -->
+        <div class="card">
+            <h3>MTH631</h3>
+            <p class="book-name">Real Analysis II</p>
+            <a href="https://drive.google.com/uc?export=download&id=1bp9bqWyWaOv3thJe6H01WwSBYzDsEZwZ" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">HandWrite Notes</a>
+        </div>
+        <!-- MTH632 -->
+        <div class="card">
+            <h3>MTH632</h3>
+            <p class="book-name">Complex Analysis and Differential Geometry</p>
+            <a href="https://drive.google.com/uc?export=download&id=1W9V5-HELV5IhVSYNA1gfI_pFdveh5cpf" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">HandWrite Notes</a>
+        </div>
+        <!-- MTH633 -->
+        <div class="card">
+            <h3>MTH633</h3>
+            <p class="book-name">Group Theory</p>
+            <a href="https://drive.google.com/uc?export=download&id=1S9489BygKnC2bX3kG42EfJiHKW5xY5kq" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/file/d/1BTCgeiH019jhMOtrkLIS8jXk5AiI5qYp/view?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">HandWrite Notes</a>
+        </div>
+        <!-- MTH634 -->
+        <div class="card">
+            <h3>MTH634</h3>
+            <p class="book-name">Topology</p>
+            <a href="https://drive.google.com/uc?export=download&id=1X-71Ej6fL1w6obF-2d3v-kVNr1WFueft" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/file/d/1Fz7PX0MM0udo9mBbdL67flP6x7OQxDaq/view?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">HandWrite Notes</a>
+        </div>
+        <!-- MTH641 -->
+        <div class="card">
+            <h3>MTH641</h3>
+            <p class="book-name">Functional Analysis</p>
+            <a href="https://drive.google.com/uc?export=download&id=1mip-W4gA4DfpYib1wgYLgVKh0vjFdhZL" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">HandWrite Notes</a>
+        </div>
+        <!-- MTH642 -->
+        <div class="card">
+            <h3>MTH642</h3>
+            <p class="book-name">Fluid Mechanics</p>
+            <a href="https://drive.google.com/uc?export=download&id=1bNUXyPtIclUnhmpYGQYkPQVzfRdJE_u6" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="https://drive.google.com/drive/folders/1auCYiI8LzL_FxvrpAT9H9R1zc4cKoc8m?usp=drive_link"
+                class="ppt">HandWrite Notes</a>
+        </div>
+        <!-- MTH643 -->
+        <div class="card">
+            <h3>MTH643</h3>
+            <p class="book-name">Advanced Differential Equations</p>
+            <a href="https://drive.google.com/uc?export=download&id=1y4IGTxIYA_36gC2TNcwW7-8j1wf5NQHg" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">HandWrite Notes</a>
+        </div>
+        <!-- MTH644 -->
+        <div class="card">
+            <h3>MTH644</h3>
+            <p class="book-name">Advanced Linear Algebra</p>
+            <a href="https://drive.google.com/drive/folders/1o_gi0eEVlXx9IX-Oh2iAq1nlQVFGSFoH?usp=drive_link"
+                class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1o_gi0eEVlXx9IX-Oh2iAq1nlQVFGSFoH?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="https://drive.google.com/drive/folders/1o_gi0eEVlXx9IX-Oh2iAq1nlQVFGSFoH?usp=drive_link"
+                class="ppt">HandWrite Notes</a>
+        </div>
+        <!-- MTH645 -->
+        <div class="card">
+            <h3>MTH645</h3>
+            <p class="book-name">Advanced Measure Theory</p>
+            <a href="https://drive.google.com/file/d/1SqJTTptjtSAkgHcL46Fp9SNf8ZQqXjDj/view?usp=drive_link"
+                class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/file/d/1E-JWxJldmW9z2wyN7JJkMOmHKDj30ioK/view?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">HandWrite Notes</a>
+        </div>
+
+    </div>
+
+    <a href="handouts.html" class="back-btn">Back to Handouts</a>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('handouts-footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <script src="search_script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+/* --- Google Fonts & Reset --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f8fafc;
+    color: #334155;
+    line-height: 1.6;
+}
+
+/* --- Premium Header Section --- */
+header {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 4px solid #ffcc00;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+header p {
+    font-size: 15px;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- Container & Navigation --- */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #1e3c72;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 30px;
+    padding: 8px 15px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #ffcc00;
+    transform: translateX(-5px);
+}
+
+/* --- Semester Cards Grid --- */
+.semester-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.semester-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid #eef2f6;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.semester-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(30, 60, 114, 0.12);
+    border-color: #1e3c72;
+}
+
+/* Icons Styling */
+.semester-card i.main-icon {
+    font-size: 45px;
+    color: #1e3c72;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.semester-card h3 {
+    font-size: 22px;
+    color: #1e3c72;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.semester-card p {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+/* --- Compact Modern Buttons --- */
+.drive-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-latest {
+    background: #ffcc00;
+    color: #1e3c72 !important;
+}
+
+.btn-latest:hover {
+    background: #e6b800;
+    box-shadow: 0 5px 15px rgba(255, 204, 0, 0.3);
+}
+
+.btn-archive {
+    background: #f1f5f9;
+    color: #475569 !important;
+}
+
+.btn-archive:hover {
+    background: #e2e8f0;
+}
+
+/* --- Floating Badge --- */
+.latest-tag {
+    background: #25d366;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 700;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.2);
+    text-transform: uppercase;
+}
+
+/* --- Responsive Settings --- */
+@media (max-width: 768px) {
+    header {
+        padding: 40px 15px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    .semester-container {
+        grid-template-columns: 1fr;
+    }
+}

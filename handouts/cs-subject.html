@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Subjects</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f1f5f9;
+            color: #1e3c72;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .header p {
+            margin-top: 5px;
+            font-size: 18px;
+            opacity: 0.85;
+        }
+
+        /* SEARCH BOX */
+        .search-box {
+            margin-top: 20px;
+        }
+
+        .search-box input {
+            padding: 12px 15px;
+            width: 280px;
+            border-radius: 50px;
+            border: none;
+            font-size: 16px;
+            outline: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        /* CARD */
+        .card {
+            background: linear-gradient(135deg, #ffffff, #e0e7ff);
+            padding: 25px 20px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 22px;
+            color: #1e3c72;
+        }
+
+        .book-name {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #334155;
+        }
+
+        /* BUTTONS */
+        .card a {
+            display: block;
+            margin: 10px 0;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .handouts {
+            background: linear-gradient(135deg, #3b6cb7, #1e3c72);
+        }
+
+        .handouts:hover {
+            background: linear-gradient(135deg, #1e3c72, #3b6cb7);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        .highlighted {
+            background: linear-gradient(135deg, #ffcc00, #ff9900);
+            color: #1e3c72;
+        }
+
+        .highlighted:hover {
+            background: linear-gradient(135deg, #ff9900, #ffcc00);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        .ppt {
+            background: linear-gradient(135deg, #10b981, #047857);
+        }
+
+        .ppt:hover {
+            background: linear-gradient(135deg, #047857, #10b981);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        /* BACK BUTTON */
+        .back-btn {
+            display: inline-block;
+            margin: 20px 0 20px 10px;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #ffcc00, #ff9900);
+            color: #1e3c72;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .search-box input {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>CS Subject Handouts</h1>
+        <p>Choose your subject and download study material</p>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search by code or subject..." onkeyup="searchSubjects()">
+        </div>
+    </div>
+
+    <div class="container" id="subjectContainer">
+        <!-- CS001 -->
+        <div class="card">
+            <h3>CS001</h3>
+            <p class="book-name">Computer Proficiency License</p>
+            <a href="https://drive.google.com/file/d/16ImmGYzNg_nmkPBOletb68HzBnFuMIg-/view?usp=drive_link" class="handouts" target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS101 -->
+        <div class="card">
+            <h3>CS101</h3>
+            <p class="book-name">Introduction to Computing</p>
+            <a href="https://drive.google.com/uc?export=download&id=1r2xzDmFNQo8M-ffuzdSJ2PAycIz_jaL8" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/11yMEjOXAJEgGgB3fPW3rQaW3XOqAmyrU?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS201 -->
+        <div class="card">
+            <h3>CS201</h3>
+            <p class="book-name">Introduction to Programming</p>
+            <a href="https://drive.google.com/uc?export=download&id=1vSW7ajSdV6NkTGfFZuHo8dxE30ZqLtoi" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/17eM3SAEiCBOyNd-INQsAuqtSFII9AtSv?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS202 -->
+        <div class="card">
+            <h3>CS202</h3>
+            <p class="book-name"> Fundamentals of Front End Development</p>
+            <a href="https://drive.google.com/uc?export=download&id=1pE65qNopOsQcw02A5lLuMSEBYwrT273M" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS204 -->
+        <div class="card">
+            <h3>CS204</h3>
+            <p class="book-name">Cyber Law</p>
+            <a href="https://drive.google.com/uc?export=download&id=1eIBdHMamhLf03070V8A-jchwjPPIl-R_" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1n4q3f68yiAwLZ3A7hjee4vjX3LT_TI1J?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="https://drive.google.com/file/d/1DxtgWkSxmlj9HsfKMVgfgIe_jQtpKKJs/view?usp=drive_link"
+                class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS205 -->
+        <div class="card">
+            <h3>CS205</h3>
+            <p class="book-name">Information Security</p>
+            <a href="https://drive.google.com/uc?export=download&id=1LKR2pcbJjOKBYxNdFvrkiz9jNboy-DS6" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1bnr8VJETywsgLHY2QVUyrvn9OhYG1oi0?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="https://drive.google.com/file/d/1VyKMDhkOddpa3knFUatD2oHozkZiELca/view?usp=drive_link"
+                class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS301 -->
+        <div class="card">
+            <h3>CS301</h3>
+            <p class="book-name">Data Structures</p>
+            <a href="https://drive.google.com/uc?export=download&id=1-N8_ddH9IJF93--pMzhkgqnbEi8lGAi9" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1_tTenyQbgHZFSzHSiquiuDVAnrRzvJsG?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS302 -->
+        <div class="card">
+            <h3>CS302</h3>
+            <p class="book-name">Digital Logic & Design</p>
+            <a href="https://drive.google.com/uc?export=download&id=1vqiH0KUgKwu7AJzEihaUSuxtlx24yEva" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1FSRgNfPZgX0A2-VF5Oo5kaF6Ft6zjD_i?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS304 -->
+        <div class="card">
+            <h3>CS304</h3>
+            <p class="book-name">Object Oriented Programming</p>
+            <a href="https://drive.google.com/uc?export=download&id=1g1Mbm1uBn2JH1eBOkAiEEw0vjf0MAX3-" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1dUV6yyxA8dXNYwfBlDmvx3_WmJ5Dxk9-?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS311 -->
+        <div class="card">
+            <h3>CS311</h3>
+            <p class="book-name">Introduction to Web Services Development </p>
+            <a href="https://drive.google.com/uc?export=download&id=163fs8TgkKBJGlsvV5GOPMtDwmYxr4eJ7" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS312 -->
+        <div class="card">
+            <h3>CS312</h3>
+            <p class="book-name">Database Modeling and Design </p>
+            <a href="https://drive.google.com/uc?export=download&id=1nDpK70rA8nB8BwdVtIkyoytyCwiMkA9k" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1RwTXw8VVH2AxX1swTkRjASq4HcnkPA9Q?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS315 -->
+        <div class="card">
+            <h3>CS315</h3>
+            <p class="book-name">Network Security</p>
+            <a href="https://drive.google.com/uc?export=download&id=1b7Fn0ZQLN53xNQUvu_0K5sQaKrrxLEVB" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS401 -->
+        <div class="card">
+            <h3>CS401</h3>
+            <p class="book-name">Assembly Language Programming </p>
+            <a href="https://drive.google.com/uc?export=download&id=12gXxDYwrV1NABFID-poki8XFO5Nxiski" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1srf0YfO45v0VKLfKomu3RdPMSAc2ugoC?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS402 -->
+        <div class="card">
+            <h3>CS402</h3>
+            <p class="book-name">Theory of Automata</p>
+            <a href="https://drive.google.com/uc?export=download&id=1QO8oKDC2VlqkBuHFBQl6N3tPWM5gXYyX" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1SQ_KceBd6QWydWiiIPrBDWSianhFEnK7?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS403 -->
+        <div class="card">
+            <h3>CS403</h3>
+            <p class="book-name">Database Management System</p>
+            <a href="https://drive.google.com/uc?export=download&id=1dg-c25Zm2AgS2CK7uqv_x3C8xpv--eaU" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/11VUndHop-gwsTzw87ZByaTrZAzkaUBiT?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS405 -->
+        <div class="card">
+            <h3>CS405</h3>
+            <p class="book-name">Database Programming using Oracle 11g</p>
+            <a href="https://drive.google.com/uc?export=download&id=1CzvD77mFOE9hixkSWLnRJ1IWK9LqmO2V" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS407 -->
+        <div class="card">
+            <h3>CS407</h3>
+            <p class="book-name">Routing and Switching</p>
+            <a href="https://drive.google.com/uc?export=download&id=1IX0hiU6r0sVEJPb7lC5Vu2aMaofHV4AA" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS408 -->
+        <div class="card">
+            <h3>CS408</h3>
+            <p class="book-name">Human Computer Interaction</p>
+            <a href="https://drive.google.com/uc?export=download&id=1XmTpw_7bIwBKQpuAxwzOVhs1ZnU5_3WP" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1c2f5kzpGdHlHO3V8NTTBLSbUEq-Nj9R3?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS409 -->
+        <div class="card">
+            <h3>CS409</h3>
+            <p class="book-name">Introduction to Database Administration</p>
+            <a href="https://drive.google.com/uc?export=download&id=1R4AKwlAWZbYcRCGCc29zq_TeRmV7WTXF" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1L2l5wcJM9qjU0ELtA84UmKlcaNRAkdZ4?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="https://drive.google.com/file/d/1h01zzZbs3fQVMuiY_eDAjxaY8Bxay4mS/view?usp=drive_link"
+                class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS411 -->
+        <div class="card">
+            <h3>CS411</h3>
+            <p class="book-name">Visual Programming</p>
+            <a href="https://drive.google.com/uc?export=download&id=1SIssIJkn1P2Dmikm8NmUcxTYd7YxNuCs" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1musuJCffN7ckR_5D651khuywOvn5-gL9?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS420 -->
+        <div class="card">
+            <h3>CS420</h3>
+            <p class="book-name">Mobile Web Development For Portable Devices</p>
+            <a href="https://drive.google.com/uc?export=download&id=18m7Y94Irb8UhLX4UZswbU_MeynThFGtG" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/17zZ-VKwRQc6_VtVBhP-O-DqagtugV6xG?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS432 -->
+        <div class="card">
+            <h3>CS435</h3>
+            <p class="book-name">Booklet of Network Modeling and Simulation</p>
+            <a href="https://drive.google.com/uc?export=download&id=1iKIl3ye2_Yz-b43PG-orG9TvK0ok1BBs" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1OcFpM6xpn2XmBVFKnIKWP2ypGXr3YjJg?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS435 -->
+        <div class="card">
+            <h3>CS435</h3>
+            <p class="book-name">Cloud Computing</p>
+            <a href="https://drive.google.com/uc?export=download&id=1xPBbXCqJVxKcGzHUDD32wRrfq25LoKoJ" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/11719rS7Cak_Lgqe8seSFh8ZPWoI7_ElZ?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS501 -->
+        <div class="card">
+            <h3>CS501</h3>
+            <p class="book-name">Advance Computer Architecture</p>
+            <a href="https://drive.google.com/uc?export=download&id=1JJ_hMVKPNoJKUcrXsClTLmmcd5fPNUR3" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1gccP84wZwW0GvwrUMy6cgKJ2jD8JJgH1?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS502 -->
+        <div class="card">
+            <h3>CS502</h3>
+            <p class="book-name">Design and Analysis of Algorithms</p>
+            <a href="https://drive.google.com/uc?export=download&id=1EiHQLxRkA1Itq5DWA9WlKAHN57erm5tN" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/163Grrqk28VnJCnR1pxXv8sZiz9Gzv-hY?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS504 -->
+        <div class="card">
+            <h3>CS504</h3>
+            <p class="book-name">Software Engineering – I</p>
+            <a href="https://drive.google.com/uc?export=download&id=1ta8_GTmXipOw1m-2EqKK9ZBlSiR-kUY3" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/16vE7_L4Mbu_A8j-s0DHrDXG1ZkyVEDdf?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS505 -->
+        <div class="card">
+            <h3>CS505</h3>
+            <p class="book-name">Introduction to Virtualization</p>
+            <a href="https://drive.google.com/uc?export=download&id=1XW_ZWG2ypDCeIOpXIOWSi41Shmf76f1t" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/file/d/1XW_ZWG2ypDCeIOpXIOWSi41Shmf76f1t/view?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS506 -->
+        <div class="card">
+            <h3>CS506</h3>
+            <p class="book-name">Web Design and Development</p>
+            <a href="https://drive.google.com/uc?export=download&id=1j1gX5aIHHkvpWfLwIMqm4epnJfzxnQAT" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1wSIp3R0jmuU6BmuNbNA7pAEJd1xeoM9j?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS507 -->
+        <div class="card">
+            <h3>CS507</h3>
+            <p class="book-name">Information System</p>
+            <a href="https://drive.google.com/uc?export=download&id=1dlRfeoEE-TFJBXiJUBGSjUqAbtIYVwJI" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1PF_DGVRU8PbRHDqZIlr_a6PqoF8n1DZu?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS508 -->
+        <div class="card">
+            <h3>CS508</h3>
+            <p class="book-name">Modern Programming Languages</p>
+            <a href="https://drive.google.com/uc?export=download&id=1Y5d_uuMseD6glF74yG5YlMskZ8YuSByr" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1dLvD79ml76t33JbIHmBqV5e0uj_EhRPY?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS510 -->
+        <div class="card">
+            <h3>CS510</h3>
+            <p class="book-name">Software Requirements and Specification</p>
+            <a href="https://drive.google.com/uc?export=download&id=1qAzhhmDfIuUFjZL6m00JfFeX7L9hw4DD" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1ipaB1nM4vzTjyop1E2BnnIB8LWDjNndJ?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS511 -->
+        <div class="card">
+            <h3>CS511</h3>
+            <p class="book-name">Web Engineering</p>
+            <a href="https://drive.google.com/drive/folders/18UbNu8DOBGE7QvV2URaVtBwSbvxDBKKv?usp=drive_link"
+                class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/18UbNu8DOBGE7QvV2URaVtBwSbvxDBKKv?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS601 -->
+        <div class="card">
+            <h3>CS601</h3>
+            <p class="book-name">Data Communication</p>
+            <a href="https://drive.google.com/uc?export=download&id=1u_4mNALdFK6uIdN4Ma2O6xCLLXiM3Nn0" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1HykBN-oph0dognk6AD7rJvrnapDwR2Zg?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS602 -->
+        <div class="card">
+            <h3>CS602</h3>
+            <p class="book-name">Computer Graphics</p>
+            <a href="https://drive.google.com/uc?export=download&id=1YGIuo6OJ4c8OJkiKLtmdwwIDPJTo1Mj4" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1MmNukuN4Tv97_VBeUnQY9TWHUSYISeBG?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS603 -->
+        <div class="card">
+            <h3>CS603</h3>
+            <p class="book-name">Software Architecture and Design</p>
+            <a href="not_found.html" class="handouts" target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS604 -->
+        <div class="card">
+            <h3>CS604</h3>
+            <p class="book-name">Operating System</p>
+            <a href="https://drive.google.com/uc?export=download&id=1i9D54AhB1HIVRxofAgStmkgm6Lwq3o3A" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1vmQApQohYyycJH1uyiBCaJgplXNgcOiH?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS605 -->
+        <div class="card">
+            <h3>CS605</h3>
+            <p class="book-name">Software Engineering-II</p>
+            <a href="https://drive.google.com/uc?export=download&id=1d7P0YH1pfMlquLozoXqzzG9JG3-4yUkv" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1x-4BbdEhDI9fdDR3haDnnq_yPIkNHnEL?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS606 -->
+        <div class="card">
+            <h3>CS606</h3>
+            <p class="book-name">Compiler Construction</p>
+            <a href="https://drive.google.com/uc?export=download&id=1Xt8egZ1k4Xw77v9Qr3yM7fk5URHr0z6d" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1EqV6c3qP7pzO81vXMWNuC9-vqImMxEV6?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS607 -->
+        <div class="card">
+            <h3>CS607</h3>
+            <p class="book-name">Artificial Intelligence</p>
+            <a href="https://drive.google.com/uc?export=download&id=1OHbV31CljXEC5jgegd2YKJVpUHNSrYO1" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1vTHx7-n1ysQKAqFGarV5wGasEJkgCPS9?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS608 -->
+        <div class="card">
+            <h3>CS608</h3>
+            <p class="book-name">Classroom Management (Software Verification and Validation)</p>
+            <a href="https://drive.google.com/uc?export=download&id=1-Ma40JpK1w07pU5kiLatUhGfDpIKWN1m" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS609 -->
+        <div class="card">
+            <h3>CS609</h3>
+            <p class="book-name">System Programming</p>
+            <a href="https://drive.google.com/uc?export=download&id=1oRUHjRr7HAG_vSW0OKe5zAOloVcoUkS8" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1W2GOJ_7UE1zmYkAxu2H3-iEunkQX4VhO?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS610 -->
+        <div class="card">
+            <h3>CS610</h3>
+            <p class="book-name">COMPUTER NETWORKS</p>
+            <a href="https://drive.google.com/uc?export=download&id=1k6sAGLfKIX2KimMuax9CixTa5htpvc4t" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1Gg6SxzxGofXuO0pXp0RigQLPvqRSlbX0?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="https://drive.google.com/file/d/1N45uEer2tyz1_e5KPG8_2IOw_YIzQ9bq/view?usp=drive_link"
+                class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS611 -->
+        <div class="card">
+            <h3>CS611</h3>
+            <p class="book-name">Software Quality Engineering</p>
+            <a href="https://drive.google.com/uc?export=download&id=1KsLO-DcPMjByUnqvB7nOn0F8dLKwq43c" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/file/d/1EjG1UzTlaBG-klp3i5R3yeWKHaJFJWlZ/view?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS614 -->
+        <div class="card">
+            <h3>CS614</h3>
+            <p class="book-name">Data Warehousing</p>
+            <a href="https://drive.google.com/uc?export=download&id=1HC3LD4j6vlmQJzwyPfcEquMhbAanaZMT" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/file/d/1bO5q3rlP0MXQoa2UCKfnOpB5fLXiSE-H/view?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS615 -->
+        <div class="card">
+            <h3>CS615</h3>
+            <p class="book-name">Software Project Management</p>
+            <a href="https://drive.google.com/uc?export=download&id=1JY0_3cGuOmYMfk9eFNCBBEuUMjUCCsPw" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1Fx8qlxWioEPQ2Y1wdkRj9hYgEz-cl9t_?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS620 -->
+        <div class="card">
+            <h3>CS620</h3>
+            <p class="book-name">Modeling & Simulation</p>
+            <a href="https://drive.google.com/drive/folders/1nygHEDjjN49KP3dBX3mWey0T4UrRNn2f?usp=drive_link"
+                class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1nygHEDjjN49KP3dBX3mWey0T4UrRNn2f?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="https://drive.google.com/drive/folders/1nygHEDjjN49KP3dBX3mWey0T4UrRNn2f?usp=drive_link"
+                class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS621 -->
+        <div class="card">
+            <h3>CS621</h3>
+            <p class="book-name">Parallel and Distributed Computing</p>
+            <a href="https://drive.google.com/drive/folders/11s7wRV9y4e8S_HVDhTm6M6JnTU1slwz1?usp=drive_link"
+                class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/11s7wRV9y4e8S_HVDhTm6M6JnTU1slwz1?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="https://drive.google.com/file/d/1dtdKNGNKHPihjqSX5XXXO0Lfas4ORvff/view?usp=drive_link"
+                class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS625 -->
+        <div class="card">
+            <h3>CS625</h3>
+            <p class="book-name">Professional Paractices</p>
+            <a href="https://drive.google.com/uc?export=download&id=1Vz5a9DZL-G9CFqFhNCanQxuG-mWOrhnQ" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1Oq4LwMDZm77JxmEgLnDz4vd8mbhZPcxB?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS636 -->
+        <div class="card">
+            <h3>CS636</h3>
+            <p class="book-name">Formal Methods</p>
+            <a href="https://drive.google.com/file/d/1VmOj-f1kc_dM8AA9z3hsYDACVdhnTRaO/view?usp=drive_link"
+                class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/file/d/1QB9xhksVb1ehNYoKUcfNa4zboEtvTsmx/view?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS701 -->
+        <div class="card">
+            <h3>CS701</h3>
+            <p class="book-name">Theory of Computation</p>
+            <a href="https://drive.google.com/file/d/1Zudg5e6dWlJvTWr7iaLuETq1QllV66Wz/view?usp=drive_link"
+                class="handouts" target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS702 -->
+        <div class="card">
+            <h3>CS702</h3>
+            <p class="book-name">Advanced Algorithms Analysis and Design</p>
+            <a href="https://drive.google.com/file/d/1nUnuYQbble_Mgv3vaSe0OBR5SqMeLwDh/view?usp=drive_link"
+                class="handouts" target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS704 -->
+        <div class="card">
+            <h3>CS704</h3>
+            <p class="book-name">Advanced Computer Architecture</p>
+            <a href="https://drive.google.com/file/d/1-cxt4MVCQQDJen7_f6N2-RK20otcNHVY/view?usp=drive_link"
+                class="handouts" target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS711 -->
+        <div class="card">
+            <h3>CS711</h3>
+            <p class="book-name">Software Design</p>
+            <a href="https://drive.google.com/file/d/1uLSyo_nEPiwF3ReMOS-LAxL4M02Ex-Ep/view?usp=drive_link"
+                class="handouts" target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS712 -->
+        <div class="card">
+            <h3>CS712</h3>
+            <p class="book-name">Distributed Database Management Systems</p>
+            <a href="not_found.html" class="handouts" target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS718 -->
+        <div class="card">
+            <h3>CS718</h3>
+            <p class="book-name">Wireless Networks</p>
+            <a href="https://drive.google.com/file/d/1FljAxEkI6OUbRHTLrC04A6Ws5bGDkmxP/view?usp=drive_link"
+                class="handouts" target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS724 -->
+        <div class="card">
+            <h3>CS724</h3>
+            <p class="book-name">Software process Improvement</p>
+            <a href="https://drive.google.com/file/d/1k65C8GeBAPg-g2l8c1zwZHxtpHdIu6zA/view?usp=drive_link"
+                class="handouts" target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- CS726 -->
+        <div class="card">
+            <h3>CS726</h3>
+            <p class="book-name">Information Retrieval Techniques</p>
+            <a href="https://drive.google.com/file/d/15ObB0_ZbuV7QGVnUXI_xLzAfYnHKnDsN/view?usp=drive_link"
+                class="handouts" target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+
+    </div>
+
+    <a href="handouts.html" class="back-btn">Back to Handouts</a>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('handouts-footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <script src="search_script.js"></script>
+
+</body>
+
+</html>

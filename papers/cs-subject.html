@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Past Papers</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f1f5f9;
+            color: #1e3c72;
+        }
+
+        /* HEADER */
+
+        .header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        .header p {
+            margin-top: 5px;
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        /* SEARCH */
+
+        .search-box {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .search-box input {
+            padding: 12px 15px;
+            width: 280px;
+            border-radius: 50px;
+            border: none;
+            font-size: 16px;
+            outline: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* BACK BUTTON */
+
+        .back-btn {
+            display: inline-block;
+            margin: 30px 20px;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #3b6cb7, #1e3c72);
+            color: white;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        /* CONTAINER */
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        /* CARD */
+
+        .card {
+            background: linear-gradient(135deg, #ffffff, #e0e7ff);
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .course-code {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .course-name {
+            font-size: 15px;
+            color: #334155;
+            margin-bottom: 20px;
+        }
+
+        /* BUTTONS */
+
+        .btn {
+            display: block;
+            margin: 8px 0;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .midterm {
+            background: linear-gradient(135deg, #3b6cb7, #1e3c72);
+        }
+
+        .finalterm {
+            background: linear-gradient(135deg, #10b981, #047857);
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>CS Past Papers</h1>
+        <p>Midterm & Finalterm Past Papers</p>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search subject...">
+        </div>
+
+    </div>
+
+    <a href="pastpapers.html" class="back-btn">⬅ Back to Subjects</a>
+
+    <div class="container" id="subjectContainer">
+
+        <!-- Subjects -->
+
+        <script>
+
+            const subjects = [
+
+                ["CS001", "Computer Proficiency License"],
+                ["CS101", "Introduction to Computing"],
+                ["CS201", "Introduction to Programming"],
+                ["CS202", "Fundamentals of Front End Development"],
+                ["CS204", "Cyber Law"],
+                ["CS205", "Information Security"],
+                ["CS206", "Introduction to Network Design and Analysis"],
+                ["CS301", "Data Structures"],
+                ["CS302", "Digital Logic & Design"],
+                ["CS304", "Object Oriented Programming"],
+                ["CS311", "Introduction to Web Services Development"],
+                ["CS312", "Database Modeling and Design"],
+                ["CS315", "Network Security"],
+                ["CS401", "Assembly Language Programming"],
+                ["CS402", "Theory of Automata"],
+                ["CS403", "Database Management System"],
+                ["CS405", "Database Programming using Oracle 11g"],
+                ["CS407", "Routing and Switching"],
+                ["CS408", "Human Computer Interaction"],
+                ["CS409", "Introduction to Database Administration"],
+                ["CS411", "Visual Programming"],
+                ["CS420", "Mobile Web Development For Portable Devices"],
+                ["CS435", "Cloud Computing"],
+                ["CS501", "Advance Computer Architecture"],
+                ["CS502", "Design and Analysis of Algorithms"],
+                ["CS504", "Software Engineering – I"],
+                ["CS505", "Introduction to Virtualization"],
+                ["CS506", "Web Design and Development"],
+                ["CS507", "Information System"],
+                ["CS508", "Modern Programming Languages"],
+                ["CS510", "Software Requirements and Specification"],
+                ["CS511", "Web Engineering"],
+                ["CS601", "Data Communication"],
+                ["CS602", "Computer Graphics"],
+                ["CS603", "Software Architecture and Design"],
+                ["CS604", "Operating System"],
+                ["CS605", "Software Engineering-II"],
+                ["CS606", "Compiler Construction"],
+                ["CS607", "Artificial Intelligence"],
+                ["CS608", "Software Verification and Validation"],
+                ["CS609", "System Programming"],
+                ["CS610", "Computer Networks"],
+                ["CS611", "Software Quality Engineering"],
+                ["CS614", "Data Warehousing"],
+                ["CS615", "Software Project Management"],
+                ["CS620", "Modeling & Simulation"],
+                ["CS621", "Parallel and Distributed Computing"],
+                ["CS625", "Professional Practices"],
+                ["CS636", "Formal Methods"],
+                ["CS701", "Theory of Computation"],
+                ["CS702", "Advanced Algorithms Analysis and Design"],
+                ["CS704", "Advanced Computer Architecture"],
+                ["CS711", "Software Design"],
+                ["CS712", "Distributed Database Management Systems"],
+                ["CS718", "Wireless Networks"],
+                ["CS724", "Software Process Improvement"],
+                ["CS726", "Information Retrieval Techniques"]
+
+            ];
+
+            const container = document.getElementById("subjectContainer");
+
+            subjects.forEach(sub => {
+                container.innerHTML += `
+<div class="card">
+<div class="icon">💻</div>
+<div class="course-code">${sub[0]}</div>
+<div class="course-name">${sub[1]}</div>
+<a href="drive.html?code=${sub[0]}&type=mid" class="btn midterm">Midterm Papers</a>
+<a href="drive.html?code=${sub[0]}&type=final" class="btn finalterm">Finalterm Papers</a>
+</div>
+`;
+            });
+
+        </script>
+
+    </div>
+<div id="footer-placeholder"></div>
+
+    <script>
+        fetch('ppr-footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <script src="search.js"></script>
+</body>
+
+</html>

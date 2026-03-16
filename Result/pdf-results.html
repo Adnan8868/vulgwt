@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS Full Result Proofs | LGWT</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="page-header">
+        <h1>Complete LMS Result Proofs</h1>
+        <p>Full Semester Performance Records (Verified PDF)</p>
+    </header>
+
+    <div class="container">
+        <a href="../index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+
+        <div class="semester-block">
+            <h2 class="sem-title"><i class="fas fa-graduation-cap"></i> Semester: Fall 2025</h2>
+            <div class="grid">
+                <div class="student-card">
+                    <div class="media-box">
+                        <iframe src="https://drive.google.com/file/d/STUDENT_1_PDF_ID/preview"></iframe>
+                    </div>
+                    <div class="info">
+                        <h3>Student 1 (Full Result)</h3>
+                        <p>Complete LMS activities and final marksheet for Fall 2025.</p>
+                        <a href="DRIVE_LINK_1" target="_blank" class="btn btn-blue">View Full PDF Proof</a>
+                    </div>
+                </div>
+
+                <div class="student-card">
+                    <div class="media-box">
+                        <iframe src="https://drive.google.com/file/d/STUDENT_2_PDF_ID/preview"></iframe>
+                    </div>
+                    <div class="info">
+                        <h3>Student 2 (Full Result)</h3>
+                        <p>Complete LMS activities and final marksheet for Fall 2025.</p>
+                        <a href="DRIVE_LINK_2" target="_blank" class="btn btn-blue">View Full PDF Proof</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="semester-block" style="margin-top: 60px;">
+            <h2 class="sem-title"><i class="fas fa-history"></i> Semester: Spring 2025</h2>
+            <div class="grid">
+                <div class="student-card">
+                    <div class="media-box">
+                        <iframe src="https://drive.google.com/file/d/SPRING_STUDENT_1_ID/preview"></iframe>
+                    </div>
+                    <div class="info">
+                        <h3>Student A (Full Result)</h3>
+                        <p>Complete LMS activities record for Spring 2025 semester.</p>
+                        <a href="DRIVE_LINK_A" target="_blank" class="btn btn-blue">View Full PDF Proof</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('result-footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,193 @@
+<style>
+    footer {
+        background: linear-gradient(135deg, #0f172a, #1e3c72);
+        color: white;
+        padding: 70px 20px 30px;
+        margin-top: 60px;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .footer-container {
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 40px;
+    }
+
+    .footer-box h2 {
+        color: #ffcc00;
+        font-size: 22px;
+        margin-bottom: 25px;
+        font-weight: 700;
+        position: relative;
+    }
+
+    .footer-box h2::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        width: 45px;
+        height: 3px;
+        background: #ffcc00;
+        border-radius: 2px;
+    }
+
+    .footer-box p {
+        font-size: 14px;
+        line-height: 1.8;
+        color: #cbd5e1;
+        margin-bottom: 20px;
+    }
+
+    .footer-box ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-box ul li {
+        margin-bottom: 12px;
+    }
+
+    .footer-box ul li a {
+        color: #f8fafc;
+        text-decoration: none;
+        font-size: 14px;
+        transition: 0.3s ease;
+        display: inline-block;
+    }
+
+    .footer-box ul li a:hover {
+        color: #ffcc00;
+        transform: translateX(8px);
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 15px;
+        margin-top: 25px;
+    }
+
+    .social-icons a {
+        background: rgba(255, 255, 255, 0.1);
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        color: #ffcc00;
+        font-size: 20px;
+        transition: 0.4s;
+    }
+
+    .social-icons a:hover {
+        transform: translateY(-8px) rotate(360deg);
+        background: #ffcc00;
+        color: #1e3c72;
+        box-shadow: 0 5px 15px rgba(255, 204, 0, 0.3);
+    }
+
+    .copyright {
+        text-align: center;
+        margin-top: 60px;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .copyright p {
+        font-size: 14px;
+        color: #94a3b8;
+        margin: 5px 0;
+    }
+
+    /* Premium Developer Badge */
+    .dev-badge-wrapper {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .dev-badge {
+        background: rgba(255, 255, 255, 0.03);
+        padding: 10px 30px;
+        border-radius: 100px;
+        border: 1px solid rgba(255, 204, 0, 0.15);
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    .dev-badge:hover {
+        background: rgba(255, 204, 0, 0.1);
+        border-color: #ffcc00;
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(255, 204, 0, 0.1);
+    }
+
+    .dev-name {
+        color: #ffcc00;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-shadow: 0 0 10px rgba(255, 204, 0, 0.2);
+    }
+</style>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-box">
+            <h2>VU Study LGWT</h2>
+            <p>
+                <b>VU Study LGWT</b> is the premier digital ecosystem for <b>Virtual University (VU)</b> students.
+                Managed by the <b>Learning & Growing with Team</b>, we offer expert <b>LMS Handling</b> and verified
+                <b>VU Resources</b>.
+            </p>
+            <div class="social-icons">
+                <a href="https://www.youtube.com/@vustudylgwt" target="_blank" title="YouTube"><i
+                        class="fa-brands fa-youtube"></i></a>
+                <a href="https://wa.me/923196248868" target="_blank" title="WhatsApp Support"><i
+                        class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://chat.whatsapp.com/HQBpzMaYfqSCwjWiMNTT6W" target="_blank" title="Join Community"><i
+                        class="fa-solid fa-users"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <h2>Our Services</h2>
+            <ul>
+                <li><a href="../index.html#offer">✅ Full Semester LMS Handling</a></li>
+                <li><a href="../Services/assignmnet.html">📝 Assignment Solutions</a></li>
+                <li><a href="../Services/Quiz.html">🎯 Quiz & GDB Support</a></li>
+                <li><a href="../index.html#results">📊 Results Proofs</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-box">
+            <h2>VU Resources</h2>
+            <ul>
+                <li><a href="../handouts.html">📚 Latest VU Handouts</a></li>
+                <li><a href="../pastpapers.html">📝 Solved Past Papers</a></li>
+                <li><a href="screenshot-results.html">📸 Success Screenshots</a></li>
+                <li><a href="video-results.html">🎥 Video Proofs</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>© 2026 <b>VU Study LGWT</b> | Learning & Growing with Team Community.</p>
+        <p>Your Trusted Partner for Virtual University Excellence.</p>
+
+        <div class="dev-badge-wrapper">
+            <div class="dev-badge">
+                <span style="font-size: 11px; opacity: 0.6; letter-spacing: 2px;">POWERED BY</span>
+                <span class="dev-name">MUHAMMAD ADNAN</span>
+                <i class="fa-solid fa-code" style="color: #ffcc00;"></i>
+            </div>
+        </div>
+    </div>
+</footer>

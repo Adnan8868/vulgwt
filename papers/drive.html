@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Papers Links</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f1f5f9;
+            color: #1e3c72;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .header p {
+            margin-top: 5px;
+            opacity: 0.9;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin: 30px 20px;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #3b6cb7, #1e3c72);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .paper-card {
+            background: white;
+            padding: 18px 20px;
+            margin: 12px 0;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+            transition: 0.3s;
+        }
+
+        .paper-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .paper-title {
+            font-weight: 600;
+        }
+
+        .drive-btn {
+            padding: 10px 18px;
+            background: linear-gradient(135deg, #10b981, #047857);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .drive-btn:hover {
+            background: linear-gradient(135deg, #047857, #10b981);
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1 id="subjectHeader">Loading...</h1>
+        <p id="typeSubtitle">Download Past Papers from Google Drive</p>
+    </div>
+
+    <a href="javascript:history.back()" class="back-btn">⬅ Back to Subject</a>
+
+    <div class="container" id="papersContainer">
+    </div>
+
+    <footer> © 2026 LMS Services | Past Papers </footer>
+
+    <script>
+        // DATABASE: Yahan aapne subjects, unke names aur links daalne hain
+        const database = {
+            // ACC Subject
+            "ACC311": { mid: [{ name: "Waqar Files" }, { link: "https://drive.google.com/drive/folders/1KLkLPnCQfw4oVa7gusRwEbMuvc0Cyn8Z?usp=sharing" }], final: [] },
+            "ACC501": { mid: [], final: [] },
+            // BIF Subject
+            "BIF101": { mid: [], final: [] },
+            "BIF401": { mid: [], final: [] },
+            "BIF402": { mid: [], final: [] },
+            "BIF501": { mid: [], final: [] },
+            "BIF601": { mid: [], final: [] },
+            "BIF602": { mid: [], final: [] },
+            "BIF731": { mid: [], final: [] },
+            // BIO Subject
+            "BIO101": { mid: [], final: [] },
+            "BIO201": { mid: [], final: [] },
+            "BIO202": { mid: [], final: [] },
+            "BIO301": { mid: [], final: [] },
+            "BIO302": { mid: [], final: [] },
+            "BIO303": { mid: [], final: [] },
+            "BIO401": { mid: [], final: [] },
+            "BIO502": { mid: [], final: [] },
+            "BIO503": { mid: [], final: [] },
+            "BIO731": { mid: [], final: [] },
+            "BIO732": { mid: [], final: [] },
+            // BNK Subject
+            "BNK601": { mid: [], final: [] },
+            "BNK603": { mid: [], final: [] },
+            "BNK604": { mid: [], final: [] },
+            "BNK610": { mid: [], final: [] },
+            "BNK612": { mid: [], final: [] },
+            // ECO Subject
+            "ECO401": { mid: [], final: [] },
+            "ECO402": { mid: [], final: [] },
+            "ECO403": { mid: [], final: [] },
+            "ECO404": { mid: [], final: [] },
+            "ECO501": { mid: [], final: [] },
+            "ECO601": { mid: [], final: [] },
+            "ECO605": { mid: [], final: [] },
+            "ECO606": { mid: [], final: [] },
+            "ECO607": { mid: [], final: [] },
+            "ECO610": { mid: [], final: [] },
+            "ECO612": { mid: [], final: [] },
+            // EDU Subject
+            "EDU101": { mid: [], final: [] },
+            "EDU201": { mid: [], final: [] },
+            "EDU301": { mid: [], final: [] },
+            "EDU302": { mid: [], final: [] },
+            "EDU303": { mid: [], final: [] },
+            "EDU304": { mid: [], final: [] },
+            "EDU305": { mid: [], final: [] },
+            "EDU401": { mid: [], final: [] },
+            "EDU402": { mid: [], final: [] },
+            "EDU403": { mid: [], final: [] },
+            "EDU404": { mid: [], final: [] },
+            "EDU405": { mid: [], final: [] },
+            "EDU406": { mid: [], final: [] },
+            "EDU410": { mid: [], final: [] },
+            "EDU411": { mid: [], final: [] },
+            "EDU430": { mid: [], final: [] },
+            "EDU431": { mid: [], final: [] },
+            "EDU433": { mid: [], final: [] },
+            "EDU501": { mid: [], final: [] },
+            "EDU510": { mid: [], final: [] },
+            "EDU512": { mid: [], final: [] },
+            "EDU515": { mid: [], final: [] },
+            "EDU516": { mid: [], final: [] },
+            "EDU601": { mid: [], final: [] },
+            "EDU602": { mid: [], final: [] },
+            "EDU603": { mid: [], final: [] },
+            "EDU604": { mid: [], final: [] },
+            "EDU654": { mid: [], final: [] },
+            "EDU712": { mid: [], final: [] },
+            // ENG Subject
+            "ENG001": { mid: [], final: [] },
+            "ENG101": { mid: [], final: [] },
+            "ENG201": { mid: [], final: [] },
+            "ENG301": { mid: [], final: [] },
+            "ENG501": { mid: [], final: [] },
+            "ENG502": { mid: [], final: [] },
+            "ENG503": { mid: [], final: [] },
+            "ENG504": { mid: [], final: [] },
+            "ENG505": { mid: [], final: [] },
+            "ENG506": { mid: [], final: [] },
+            "ENG507": { mid: [], final: [] },
+            "ENG508": { mid: [], final: [] },
+            "ENG509": { mid: [], final: [] },
+            "ENG510": { mid: [], final: [] },
+            "ENG511": { mid: [], final: [] },
+            "ENG512": { mid: [], final: [] },
+            "ENG513": { mid: [], final: [] },
+            "ENG514": { mid: [], final: [] },
+            "ENG515": { mid: [], final: [] },
+            "ENG516": { mid: [], final: [] },
+            "ENG517": { mid: [], final: [] },
+            "ENG518": { mid: [], final: [] },
+            "ENG519": { mid: [], final: [] },
+            "ENG520": { mid: [], final: [] },
+            "ENG521": { mid: [], final: [] },
+            "ENG522": { mid: [], final: [] },
+            "ENG523": { mid: [], final: [] },
+            "ENG529": { mid: [], final: [] },
+            // FIN Subject
+            "FIN611": { mid: [], final: [] },
+            "FIN621": { mid: [], final: [] },
+            "FIN622": { mid: [], final: [] },
+            "FIN623": { mid: [], final: [] },
+            "FIN624": { mid: [], final: [] },
+            "FIN625": { mid: [], final: [] },
+            "FIN630": { mid: [], final: [] },
+            // GSC Subject
+            "GSC101": { mid: [], final: [] },
+            "GSC201": { mid: [], final: [] },
+            // IT Subject
+            "IT430": { mid: [], final: [] },
+            "IT601": { mid: [], final: [] },
+            // MCM Subject
+            "MCM101": { mid: [], final: [] },
+            "MCM301": { mid: [], final: [] },
+            "MCM304": { mid: [], final: [] },
+            "MCM310": { mid: [], final: [] },
+            "MCM311": { mid: [], final: [] },
+            "MCM401": { mid: [], final: [] },
+            "MCM404": { mid: [], final: [] },
+            "MCM411": { mid: [], final: [] },
+            "MCM431": { mid: [], final: [] },
+            "MCM501": { mid: [], final: [] },
+            "MCM511": { mid: [], final: [] },
+            "MCM514": { mid: [], final: [] },
+            "MCM515": { mid: [], final: [] },
+            "MCM516": { mid: [], final: [] },
+            "MCM517": { mid: [], final: [] },
+            "MCM520": { mid: [], final: [] },
+            "MCM531": { mid: [], final: [] },
+            "MCM601": { mid: [], final: [] },
+            "MCM604": { mid: [], final: [] },
+            "MCM610": { mid: [], final: [] },
+            // MGT Subject
+            "MGT101": { mid: [], final: [] },
+            "MGT111": { mid: [], final: [] },
+            "MGT201": { mid: [], final: [] },
+            "MGT301": { mid: [], final: [] },
+            "MGT401": { mid: [], final: [] },
+            "MGT404": { mid: [], final: [] },
+            "MGT411": { mid: [], final: [] },
+            "MGT501": { mid: [], final: [] },
+            "MGT502": { mid: [], final: [] },
+            "MGT503": { mid: [], final: [] },
+            "MGT504": { mid: [], final: [] },
+            "MGT510": { mid: [], final: [] },
+            "MGT520": { mid: [], final: [] },
+            "MGT601": { mid: [], final: [] },
+            "MGT602": { mid: [], final: [] },
+            "MGT603": { mid: [], final: [] },
+            "MGT604": { mid: [], final: [] },
+            "MGT610": { mid: [], final: [] },
+            "MGT611": { mid: [], final: [] },
+            "MGT612": { mid: [], final: [] },
+            "MGT613": { mid: [], final: [] },
+            "MGT621": { mid: [], final: [] },
+            "MGT705": { mid: [], final: [] },
+            "MGT713": { mid: [], final: [] },
+            //    MGMT Subject
+            "MGMT611": { mid: [], final: [] },
+            "MGMT614": { mid: [], final: [] },
+            "MGMT615": { mid: [], final: [] },
+            "MGMT622": { mid: [], final: [] },
+            "MGMT623": { mid: [], final: [] },
+            "MGMT624": { mid: [], final: [] },
+            "MGMT625": { mid: [], final: [] },
+            "MGMT627": { mid: [], final: [] },
+            "MGMT628": { mid: [], final: [] },
+            "MGMT629": { mid: [], final: [] },
+            "MGMT630": { mid: [], final: [] },
+            //    MKT Subject
+            "MKT501": { mid: [], final: [] },
+            "MKT530": { mid: [], final: [] },
+            "MKT610": { mid: [], final: [] },
+            "MKT611": { mid: [], final: [] },
+            "MKT621": { mid: [], final: [] },
+            "MKT624": { mid: [], final: [] },
+            "MKT625": { mid: [], final: [] },
+            // MTH Subject
+            "MTH001": { mid: [], final: [] },
+            "MTH100": { mid: [], final: [] },
+            "MTH101": { mid: [], final: [] },
+            "MTH102": { mid: [], final: [] },
+            "MTH104": { mid: [], final: [] },
+            "MTH201": { mid: [], final: [] },
+            "MTH202": { mid: [], final: [] },
+            "MTH301": { mid: [], final: [] },
+            "MTH302": { mid: [], final: [] },
+            "MTH303": { mid: [], final: [] },
+            "MTH304": { mid: [], final: [] },
+            "MTH401": { mid: [], final: [] },
+            "MTH403": { mid: [], final: [] },
+            "MTH404": { mid: [], final: [] },
+            "MTH405": { mid: [], final: [] },
+            "MTH501": { mid: [], final: [] },
+            "MTH601": { mid: [], final: [] },
+            "MTH603": { mid: [], final: [] },
+            "MTH621": { mid: [], final: [] },
+            "MTH622": { mid: [], final: [] },
+            "MTH631": { mid: [], final: [] },
+            "MTH632": { mid: [], final: [] },
+            "MTH633": { mid: [], final: [] },
+            "MTH634": { mid: [], final: [] },
+            "MTH641": { mid: [], final: [] },
+            "MTH642": { mid: [], final: [] },
+            "MTH701": { mid: [], final: [] },
+            "MTH706": { mid: [], final: [] },
+            "MTH707": { mid: [], final: [] },
+            "MTH721": { mid: [], final: [] },
+            // PAK Subject
+            "PAK301": { mid: [], final: [] },
+            "PAK302": { mid: [], final: [] },
+            // PHY Subject
+            "PHY101": { mid: [], final: [] },
+            "PHY301": { mid: [], final: [] },
+            // PSC Subject
+            "PSC201": { mid: [], final: [] },
+            "PSC401": { mid: [], final: [] },
+            // PSY Subject
+            "PSY101": { mid: [], final: [] },
+            "PSY401": { mid: [], final: [] },
+            "PSY402": { mid: [], final: [] },
+            "PSY403": { mid: [], final: [] },
+            "PSY404": { mid: [], final: [] },
+            "PSY405": { mid: [], final: [] },
+            "PSY406": { mid: [], final: [] },
+            "PSY407": { mid: [], final: [] },
+            "PSY408": { mid: [], final: [] },
+            "PSY409": { mid: [], final: [] },
+            "PSY502": { mid: [], final: [] },
+            "PSY504": { mid: [], final: [] },
+            "PSY505": { mid: [], final: [] },
+            "PSY510": { mid: [], final: [] },
+            "PSY511": { mid: [], final: [] },
+            "PSY512": { mid: [], final: [] },
+            "PSY513": { mid: [], final: [] },
+            "PSY514": { mid: [], final: [] },
+            "PSY515": { mid: [], final: [] },
+            "PSY610": { mid: [], final: [] },
+            "PSY631": { mid: [], final: [] },
+            "PSY632": { mid: [], final: [] },
+            // SOC101 Subject
+            "SOC101": { mid: [], final: [] },
+            "SOC301": { mid: [], final: [] },
+            "SOC302": { mid: [], final: [] },
+            "SOC401": { mid: [], final: [] },
+            "SOC402": { mid: [], final: [] },
+            "SOC403": { mid: [], final: [] },
+            "SOC601": { mid: [], final: [] },
+            "SOC602": { mid: [], final: [] },
+            "SOC603": { mid: [], final: [] },
+            //    STA Subject
+            "STA100": { mid: [], final: [] },
+            "STA301": { mid: [], final: [] },
+            "STA404": { mid: [], final: [] },
+            "STA406": { mid: [], final: [] },
+            "STA630": { mid: [], final: [] },
+            "STA632": { mid: [], final: [] },
+            "STA641": { mid: [], final: [] },
+            "STA642": { mid: [], final: [] }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get('code');
+        const type = params.get('type');
+
+        // CHECK LOGIC: Redirect to not_found.html if data is missing
+        if (!database[code] || !database[code][type] || database[code][type].length === 0) {
+            window.location.href = "not_found.html";
+        } else {
+            const papers = database[code][type];
+            const typeText = (type === 'mid') ? "Midterm" : "Finalterm";
+
+            // Header update karen
+            document.getElementById('subjectHeader').innerText = `${code} ${typeText} Past Papers`;
+
+            const container = document.getElementById('papersContainer');
+            papers.forEach((item) => {
+                container.innerHTML += `
+                    <div class="paper-card">
+                        <span class="paper-title">${item.name}</span>
+                        <a href="${item.link}" target="_blank" class="drive-btn">Open Drive</a>
+                    </div>`;
+            });
+        }
+    </script>
+</body>
+
+</html>

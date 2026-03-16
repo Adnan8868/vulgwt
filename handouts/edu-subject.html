@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDU Subjects</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f1f5f9;
+            color: #1e3c72;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .header p {
+            margin-top: 5px;
+            font-size: 18px;
+            opacity: 0.85;
+        }
+
+        /* SEARCH BOX */
+        .search-box {
+            margin-top: 20px;
+        }
+
+        .search-box input {
+            padding: 12px 15px;
+            width: 280px;
+            border-radius: 50px;
+            border: none;
+            font-size: 16px;
+            outline: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        /* CARD */
+        .card {
+            background: linear-gradient(135deg, #ffffff, #e0e7ff);
+            padding: 25px 20px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 22px;
+            color: #1e3c72;
+        }
+
+        .book-name {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #334155;
+        }
+
+        /* BUTTONS */
+        .card a {
+            display: block;
+            margin: 10px 0;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .handouts {
+            background: linear-gradient(135deg, #3b6cb7, #1e3c72);
+        }
+
+        .handouts:hover {
+            background: linear-gradient(135deg, #1e3c72, #3b6cb7);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        .highlighted {
+            background: linear-gradient(135deg, #ffcc00, #ff9900);
+            color: #1e3c72;
+        }
+
+        .highlighted:hover {
+            background: linear-gradient(135deg, #ff9900, #ffcc00);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        .ppt {
+            background: linear-gradient(135deg, #10b981, #047857);
+        }
+
+        .ppt:hover {
+            background: linear-gradient(135deg, #047857, #10b981);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        /* BACK BUTTON */
+        .back-btn {
+            display: inline-block;
+            margin: 20px 0 20px 10px;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #ffcc00, #ff9900);
+            color: #1e3c72;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .search-box input {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>EDU Subject Handouts</h1>
+        <p>Choose your subject and download study material</p>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search by code or subject..." onkeyup="searchSubjects()">
+        </div>
+    </div>
+
+    <div class="container" id="subjectContainer">
+        <!-- EDU101 -->
+        <div class="card">
+            <h3>EDU101</h3>
+            <p class="book-name">Foundations of Education</p>
+            <a href="https://drive.google.com/uc?export=download&id=16TkwNibadi8kOa8tCb37-2qKRG4LYe1m" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1S1YV3HM_I78IMV49lwszvkWHXS73MG-r?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- EDU201 -->
+        <div class="card">
+            <h3>EDU201</h3>
+            <p class="book-name">Learning Theories</p>
+            <a href="https://drive.google.com/uc?export=download&id=1vSbeTvhyMzu-hVVEY29wm1nymOgHJwCd" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="#" class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- EDU301 -->
+        <div class="card">
+            <h3>EDU301</h3>
+            <p class="book-name">General Methods of Teaching</p>
+            <a href="https://drive.google.com/uc?export=download&id=1qjYsRGNDRsYkAFc1Aliiute3MNBrJzk_" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not.html" class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- EDU302 -->
+        <div class="card">
+            <h3>EDU302</h3>
+            <p class="book-name">Human Development and Learning</p>
+            <a href="https://drive.google.com/uc?export=download&id=1iVICWuAadFOQu7lTnxPsX2rWx9QC_cNI" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="#" class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- EDU303 -->
+        <div class="card">
+            <h3>EDU303</h3>
+            <p class="book-name">Child Development</p>
+            <a href="https://drive.google.com/uc?export=download&id=1tbqS12WTcflnXe9Fqwzjru0qSi6kmqWS" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not.html" class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- EDU304 -->
+        <div class="card">
+            <h3>EDU304</h3>
+            <p class="book-name">Student Guidance and Counselling</p>
+            <a href="https://drive.google.com/uc?export=download&id=16kwwr1u9LOrkRALaybGaF7DFREqK_GHP" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="#" class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- EDU305 -->
+        <div class="card">
+            <h3>EDU305</h3>
+            <p class="book-name">Classroom Management</p>
+            <a href="https://drive.google.com/uc?export=download&id=1WcFzujXupwGT_OdeEP3yScWHI7XQIb9x" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not.html" class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- EDU401 -->
+        <div class="card">
+            <h3>EDU401</h3>
+            <p class="book-name">Contemporary Issues and Trends in Education</p>
+            <a href="https://drive.google.com/uc?export=download&id=1Fhr7ze-iSUKoUkCDuUdJCeUmoGtDD772" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/file/d/1XseboMVivx_QS31SqMHDtO7BctclH7eN/view?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- EDU402 -->
+        <div class="card">
+            <h3>EDU402</h3>
+            <p class="book-name">Curriculum Development</p>
+            <a href="https://drive.google.com/uc?export=download&id=1MFe5sjrAkxi4mdXc-pZg_ktHRbKNBmA2" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not.html" class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- EDU403 -->
+        <div class="card">
+            <h3>EDU403</h3>
+            <p class="book-name">Art Craft and Calligraphy</p>
+            <a href="https://drive.google.com/uc?export=download&id=1dbq6c4EYdFQl9z0jH7iLNluJ2ZBrX4HM" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="#" class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- EDU404 -->
+        <div class="card">
+            <h3>EDU404</h3>
+            <p class="book-name">Classroom Testing and Evaluation</p>
+            <a href="https://drive.google.com/uc?export=download&id=1pG-0J2yVVLrC5tyW5_YYHzg09a5jqecx" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not.html" class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- EDU405 -->
+        <div class="card">
+            <h3>EDU405</h3>
+            <p class="book-name">Classroom Assessment</p>
+            <a href="https://drive.google.com/uc?export=download&id=1P7AH_i9IhQRTj6vGN8qnAJoGS_Jn-lZn" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="#" class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- EDU406 -->
+        <div class="card">
+            <h3>EDU406</h3>
+            <p class="book-name">Critical Thinking and Reflective Practices</p>
+            <a href="https://drive.google.com/uc?export=download&id=1gVmg8FZve-O5eq2voQYly1R6aTEQYxtZ" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not.html" class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- EDU409 -->
+        <div class="card">
+            <h3>EDU510</h3>
+            <p class="book-name">Teaching of Literacy and Language </p>
+            <a href="https://drive.google.com/uc?export=download&id=19xsBF7HTowCt1wKo32Kusi7bv4aaPIe1" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="#" class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- EDU410 -->
+        <div class="card">
+            <h3>EDU410</h3>
+            <p class="book-name">Teaching of Literacy Skills</p>
+            <a href="https://drive.google.com/uc?export=download&id=1VWlAXDj8oc7bO3ypd5CMldz6yLRUUw05" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not.html" class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- EDU411 -->
+        <div class="card">
+            <h3>EDU411</h3>
+            <p class="book-name">تدریس زبانِ اردو</p>
+            <a href="https://drive.google.com/uc?export=download&id=1Qim0_5j4HqkQ-Ul_4Zl4edAS5wIFHcHX" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="#" class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- EDU430 -->
+        <div class="card">
+            <h3>EDU430</h3>
+            <p class="book-name">Information Technology in Education</p>
+            <a href="https://drive.google.com/uc?export=download&id=183shV9Kqt2XAbA-ODD9p54-pGBaGXUK8" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not.html" class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- EDU431 -->
+        <div class="card">
+            <h3>EDU431</h3>
+            <p class="book-name">Test Development and Evaluation</p>
+            <a href="https://drive.google.com/uc?export=download&id=1RddK8C9IwyMkgLzuzZzWam4d0njbSrBX" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="#" class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- EDU433 -->
+        <div class="card">
+            <h3>EDU433</h3>
+            <p class="book-name">Professionalism in Teaching</p>
+            <a href="https://drive.google.com/uc?export=download&id=1xlCoqSI2WmYch0sYZy31vuCfSx0fvomZ" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not.html" class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- EDU501 -->
+        <div class="card">
+            <h3>EDU501</h3>
+            <p class="book-name">School Community and Teacher</p>
+            <a href="https://drive.google.com/uc?export=download&id=1VxnBoe3zdzfbpbyBtOi44vH0m38mktns" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="#" class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- EDU510 -->
+        <div class="card">
+            <h3>EDU510</h3>
+            <p class="book-name">Teaching of Mathematics</p>
+            <a href="https://drive.google.com/uc?export=download&id=16u_3uP83X87PP3GlB-Ff7PMSiCoTlIqc" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="#" class="handouts" target="_blank">Handouts</a>
+            <a href="not.html" class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- EDU512 -->
+        <div class="card">
+            <h3>EDU512</h3>
+            <p class="book-name">Teaching of Islamic Studies</p>
+            <a href="#" class="handouts" target="_blank">Handouts</a>
+            <a href="#" class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- EDU515 -->
+        <div class="card">
+            <h3>EDU515</h3>
+            <p class="book-name">Teaching of Geography</p>
+            <a href="#" class="handouts" target="_blank">Handouts</a>
+            <a href="not.html" class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- EDU516 -->
+        <div class="card">
+            <h3>EDU516</h3>
+            <p class="book-name">Teaching of English</p>
+            <a href="#" class="handouts" target="_blank">Handouts</a>
+            <a href="#" class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- EDU601 -->
+        <div class="card">
+            <h3>EDU601</h3>
+            <p class="book-name"> Philosophy of Education </p>
+            <a href="#" class="handouts" target="_blank">Handouts</a>
+            <a href="not.html" class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- EDU602 -->
+        <div class="card">
+            <h3>EDU602</h3>
+            <p class="book-name">Educational Leadership and Management</p>
+            <a href="#" class="handouts" target="_blank">Handouts</a>
+            <a href="#" class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- EDU603 -->
+        <div class="card">
+            <h3>EDU603</h3>
+            <p class="book-name">Educational Governance: Policy & Practice</p>
+            <a href="#" class="handouts" target="_blank">Handouts</a>
+            <a href="not.html" class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- EDU604 -->
+        <div class="card">
+            <h3>EDU604</h3>
+            <p class="book-name">Comparative Education</p>
+            <a href="#" class="handouts" target="_blank">Handouts</a>
+            <a href="#" class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- EDU654 -->
+        <div class="card">
+            <h3>EDU654</h3>
+            <p class="book-name">Addressing Problems of Learning through Pedagogy & Technology</p>
+            <a href="#" class="handouts" target="_blank">Handouts</a>
+            <a href="not.html" class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- EDU712 -->
+        <div class="card">
+            <h3>EDU712</h3>
+            <p class="book-name">Quantitative Research Methods</p>
+            <a href="#" class="handouts" target="_blank">Handouts</a>
+            <a href="#" class="highlighted">Highlighted</a>
+            <a href="not.html" class="ppt">PPT Slides</a>
+        </div>
+
+    </div>
+
+    <a href="handouts.html" class="back-btn">Back to Handouts</a>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('handouts-footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <script src="search_script.js"></script>
+
+</body>
+
+</html>

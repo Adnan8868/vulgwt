@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handouts</title>
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(120deg, #eef2f3, #d9e7ff);
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        .header p {
+            margin-top: 5px;
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        /* CARD */
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 18px;
+            background: #2a5298;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .card a:hover {
+            background: #1e3c72;
+        }
+
+        /* BACK BUTTON */
+        .back-btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 25px;
+            margin-left: 15px;
+            background: linear-gradient(135deg, #3b6cb7, #1e3c72);
+            color: white;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(135deg, #1e3c72, #3b6cb7);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 26px;
+            }
+
+            .header p {
+                font-size: 16px;
+            }
+
+            .container {
+                padding: 30px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1>Handouts</h1>
+        <p>Subject Wise Study Handouts for Students</p>
+    </div>
+
+    <a href="../index.html" class="back-btn"> Back to Home</a>
+    <div class="container">
+
+        <div class="grid">
+
+            <!-- Example Handout Cards -->
+
+            <div class="card">
+                <div class="icon">📄</div>
+                <h3>ACC Handouts</h3>
+                <a href="acc-subject.html">Open Subject Handouts</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">📄</div>
+                <h3>BIF Handouts</h3>
+                <a href="bif-subject.html">Open Subject Handouts</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">📄</div>
+                <h3>BIO Handouts</h3>
+                <a href="bio-subject.html">Open Subject Handouts</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">📄</div>
+                <h3>BNK Handouts</h3>
+                <a href="bnk-subject.html">Open Subject Handouts</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">📄</div>
+                <h3>CS Handouts</h3>
+                <a href="cs-subject.html">Open Subject Handouts</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">📄</div>
+                <h3>ECO Handouts</h3>
+                <a href="eco-subject.html">Open Subject Handouts</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">📄</div>
+                <h3>EDU Handouts</h3>
+                <a href="edu-subject.html">Open Subject Handouts</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">📄</div>
+                <h3>ENG Handouts</h3>
+                <a href="eng-subject.html">Open Subject Handouts</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">📄</div>
+                <h3>FIN Handouts</h3>
+                <a href="fin-subject.html">Open Subject Handouts</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">📄</div>
+                <h3>GSC Handouts</h3>
+                <a href="gsc-subject.html">Open Subject Handouts</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">📄</div>
+                <h3>ISL Handouts</h3>
+                <a href="isl-subject.html" >Open Subject Handouts</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">📄</div>
+                <h3>IT Handouts</h3>
+                <a href="it-subject.html">Open Subject Handouts</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">📄</div>
+                <h3>MCM Handouts</h3>
+                <a href="mcm-subject.html">Open Subject Handouts</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">📄</div>
+                <h3>MGMT Handouts</h3>
+                <a href="mgmt-subject.html">Open Subject Handouts</a>
+            </div>
+            
+            <div class="card">
+                <div class="icon">📄</div>
+                <h3>MGT Handouts</h3>
+                <a href="mgt-subject.html">Open Subject Handouts</a>
+            </div>
+            
+            <div class="card">
+                <div class="icon">📄</div>
+                <h3>MKT Handouts</h3>
+                <a href="mkt-subject.html">Open Subject Handouts</a>
+            </div>
+            
+            <div class="card">
+                <div class="icon">📄</div>
+                <h3>MTH Handouts</h3>
+                <a href="mth-subject.html">Open Subject Handouts</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">📄</div>
+                <h3>PAK Handouts</h3>
+                <a href="pak-subject.html">Open Subject Handouts</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">📄</div>
+                <h3>PSC Handouts</h3>
+                <a href="psc-subject.html">Open Subject Handouts</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">📄</div>
+                <h3>PHY Handouts</h3>
+                <a href="phy-subject.html">Open Subject Handouts</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">📄</div>
+                <h3>PSY Handouts</h3>
+                <a href="psy-subject.html">Open Subject Handouts</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">📄</div>
+                <h3>SOC Handouts</h3>
+                <a href="soc-subject.html" >Open Subject Handouts</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">📄</div>
+                <h3>STA Handouts</h3>
+                <a href="sta-subject.html">Open Subject Handouts</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+     <div id="footer-placeholder"></div>
+    
+    <script>
+        fetch('handouts-footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+
+</body>
+
+</html>

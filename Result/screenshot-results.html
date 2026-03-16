@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screenshot Proofs | LGWT</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="page-header">
+        <h1>LMS Result Screenshots</h1>
+        <p>Verified Snapshots of Semester Performance</p>
+    </header>
+
+    <div class="container">
+        <a href="../index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+
+        <div class="semester-block">
+            <h2 class="sem-title"><i class="fas fa-calendar-check"></i> Semester: Fall 2025</h2>
+            <div class="grid">
+
+                <div class="student-card">
+                    <div class="media-box">
+                        <img src="student1_ss.jpg" alt="Student 1 Result SS">
+                    </div>
+                    <div class="info">
+                        <h3>Student 1 Result</h3>
+                        <p>Complete LMS Result Screenshot for Fall 2025.</p>
+                        <a href="YOUR_DRIVE_PDF_LINK_1" target="_blank" class="btn btn-blue">
+                            <i class="fas fa-file-pdf"></i> View Full Verified PDF
+                        </a>
+                    </div>
+                </div>
+
+                <div class="student-card">
+                    <div class="media-box">
+                        <img src="student2_ss.jpg" alt="Student 2 Result SS">
+                    </div>
+                    <div class="info">
+                        <h3>Student 2 Result</h3>
+                        <p>Complete LMS Result Screenshot for Fall 2025.</p>
+                        <a href="YOUR_DRIVE_PDF_LINK_2" target="_blank" class="btn btn-blue">
+                            <i class="fas fa-file-pdf"></i> View Full Verified PDF
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('result-footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+
+</html>

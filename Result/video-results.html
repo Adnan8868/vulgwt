@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Proofs | LGWT</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="page-header">
+        <h1>LMS Handling Video Proofs</h1>
+        <p>Live Recorded Proofs of Student Success</p>
+    </header>
+
+    <div class="container">
+        <a href="../index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+
+        <div class="semester-block">
+            <h2 class="sem-title"><i class="fab fa-youtube"></i> Semester: Fall 2025</h2>
+            <div class="grid">
+
+                <div class="student-card">
+                    <div class="media-box">
+                        <iframe src="https://www.youtube.com/embed/YOUR_YT_ID_1" allowfullscreen></iframe>
+                    </div>
+                    <div class="info">
+                        <h3>Student 1 Record</h3>
+                        <p>Full LMS semester handling video proof (Fall 2025).</p>
+                        <a href="https://youtube.com/watch?v=YOUR_YT_ID_1" target="_blank" class="btn btn-blue"
+                            style="background: #ff0000;">
+                            <i class="fab fa-youtube"></i> Watch on YouTube
+                        </a>
+                    </div>
+                </div>
+
+                <div class="student-card">
+                    <div class="media-box">
+                        <iframe src="https://www.youtube.com/embed/YOUR_YT_ID_2" allowfullscreen></iframe>
+                    </div>
+                    <div class="info">
+                        <h3>Student 2 Record</h3>
+                        <p>Full LMS semester handling video proof (Fall 2025).</p>
+                        <a href="https://youtube.com/watch?v=YOUR_YT_ID_2" target="_blank" class="btn btn-blue"
+                            style="background: #ff0000;">
+                            <i class="fab fa-youtube"></i> Watch on YouTube
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('result-footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+
+</html>

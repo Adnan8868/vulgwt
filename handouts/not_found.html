@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Not Available</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f1f5f9;
+            color: #1e3c72;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        section {
+            flex: 1;
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .whatsapp-links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .whatsapp-links a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 30px;
+            background: #25d366;
+            color: #fff;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+            transition: 0.3s;
+        }
+
+        .whatsapp-links a:hover {
+            background: #1ebe57;
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 50px;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #3b6cb7, #1e3c72);
+            color: white;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(135deg, #1e3c72, #3b6cb7);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 40px 15px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>Material Not Available</header>
+
+    <section>
+        <h1>Oops! Material Not Found</h1>
+        <p>
+            Sorry, the study material you are looking for is currently not available.<br>
+            But don’t worry! You can contact us directly on WhatsApp or join our groups & channel for help, updates, and
+            LMS handling.
+        </p>
+
+        <div class="whatsapp-links">
+            <a href="https://chat.whatsapp.com/CTYeKaeMCf00pyhM0aMB0e" target="_blank">
+                <img src="https://img.icons8.com/color/48/000000/whatsapp.png" style="width:24px;">
+                Join Help Group
+            </a>
+
+            <a href="https://chat.whatsapp.com/Jbnx4sIJBI8AhjLwrdkSN8" target="_blank">
+                <img src="https://img.icons8.com/color/48/000000/whatsapp.png" style="width:24px;">
+                Join New Students Group
+            </a>
+
+            <a href="https://whatsapp.com/channel/0029VbAfKscEVccSHYySNP3I" target="_blank">
+                <img src="https://img.icons8.com/color/48/000000/whatsapp.png" style="width:24px;">
+                Join Whatsapp Channel
+            </a>
+
+            <a href="https://wa.me/03196248868" target="_blank">
+                <img src="https://img.icons8.com/color/48/000000/whatsapp.png" style="width:24px;">
+                Contact Admin Directly
+            </a>
+        </div>
+
+        <a href="../index.html" class="back-btn">Back to Home</a>
+    </section>
+
+     <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('handouts-footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+
+</body>
+
+</html>

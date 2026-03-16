@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCM Subjects | VU LGWT</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f1f5f9;
+            color: #1e3c72;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .header p {
+            margin-top: 5px;
+            font-size: 18px;
+            opacity: 0.85;
+        }
+
+        /* SEARCH BOX */
+        .search-box {
+            margin-top: 20px;
+        }
+
+        .search-box input {
+            padding: 12px 15px;
+            width: 280px;
+            border-radius: 50px;
+            border: none;
+            font-size: 16px;
+            outline: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        /* CARD */
+        .card {
+            background: linear-gradient(135deg, #ffffff, #e0e7ff);
+            padding: 25px 20px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 22px;
+            color: #1e3c72;
+        }
+
+        .book-name {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #334155;
+        }
+
+        /* BUTTONS */
+        .card a {
+            display: block;
+            margin: 10px 0;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .handouts {
+            background: linear-gradient(135deg, #3b6cb7, #1e3c72);
+        }
+
+        .handouts:hover {
+            background: linear-gradient(135deg, #1e3c72, #3b6cb7);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        .highlighted {
+            background: linear-gradient(135deg, #ffcc00, #ff9900);
+            color: #1e3c72;
+        }
+
+        .highlighted:hover {
+            background: linear-gradient(135deg, #ff9900, #ffcc00);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        .ppt {
+            background: linear-gradient(135deg, #10b981, #047857);
+        }
+
+        .ppt:hover {
+            background: linear-gradient(135deg, #047857, #10b981);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        /* BACK BUTTON */
+        .back-btn {
+            display: inline-block;
+            margin: 20px 0 20px 10px;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #ffcc00, #ff9900);
+            color: #1e3c72;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .search-box input {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>MCM Subject Handouts</h1>
+        <p>Choose your subject and download study material</p>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search by code or subject..." onkeyup="searchSubjects()">
+        </div>
+    </div>
+
+    <div class="container" id="subjectContainer">
+        <!-- MCM101 -->
+        <div class="card">
+            <h3>MCM101</h3>
+            <p class="book-name">Introduction to Mass Communication</p>
+            <a href="https://drive.google.com/uc?export=download&id=1k_6NYkPJRUvq6f7iUCtTBIry5jzPJxuG" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- MCM301 -->
+        <div class="card">
+            <h3>MCM301</h3>
+            <p class="book-name">Communication Skills</p>
+            <a href="https://drive.google.com/uc?export=download&id=1BWXpCAFsLIv_W6rNK1yLa5AxCxS2aQ4K" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1XJFu5qckJZvIPK6uLnG8S--sbSEBt1xq?usp=drive_link"
+                class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- MCM304 -->
+        <div class="card">
+            <h3>MCM304</h3>
+            <p class="book-name">Mass Media in Pakistan</p>
+            <a href="https://drive.google.com/uc?export=download&id=1YHk_AgjBV5hlXGfUm4tW5drtRiVrgv96" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- MCM310 -->
+        <div class="card">
+            <h3>MCM310</h3>
+            <p class="book-name">Journalistic Writing</p>
+            <a href="https://drive.google.com/uc?export=download&id=1BeqQTzJgkJeb_oBw2CM54bey0IJMhKJL" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- MCM311 -->
+        <div class="card">
+            <h3>MCM311</h3>
+            <p class="book-name">Reporting and Sub-Editing</p>
+            <a href="https://drive.google.com/uc?export=download&id=1m1FYzKzbOAZLP-hugVl6p35LecnvWeO7" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- MCM401 -->
+        <div class="card">
+            <h3>MCM401</h3>
+            <p class="book-name">Fundamentals of Public Relations</p>
+            <a href="https://drive.google.com/uc?export=download&id=1RS2hpWnR8VIY5D-GuXN5hDnUsaytWAnq" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- MCM404 -->
+        <div class="card">
+            <h3>MCM404</h3>
+            <p class="book-name">Globalization of Media</p>
+            <a href="https://drive.google.com/uc?export=download&id=1mZpvdz8cwqdOt-F4jYVnavFQ6ZnNTOmr" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+
+        <!-- MCM411 -->
+        <div class="card">
+            <h3>MCM411</h3>
+            <p class="book-name">Introduction to Broadcasting</p>
+            <a href="https://drive.google.com/uc?export=download&id=1EnX4uPVNUnY_pttNv9-ZdjU7eBFlNVVr" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- MCM431 -->
+        <div class="card">
+            <h3>MCM431</h3>
+            <p class="book-name">Development Communication</p>
+            <a href="https://drive.google.com/uc?export=download&id=1JA8LYP6-z92SeaKNZWossf3uOQzi4ejM" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- MCM501 -->
+        <div class="card">
+            <h3>MCM501</h3>
+            <p class="book-name">Advertising</p>
+            <a href="https://drive.google.com/uc?export=download&id=1WSbiapvs7SaQpRRew8eSOdAdKT3IWDdU" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- MCM511 -->
+        <div class="card">
+            <h3>MCM511</h3>
+            <p class="book-name">Theories of Communication</p>
+            <a href="https://drive.google.com/uc?export=download&id=1da2SgiZo7dUujz5tzLzVEXCRS7MoJNZz" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- MCM514 -->
+        <div class="card">
+            <h3>MCM514</h3>
+            <p class="book-name">Feature & Column Writing </p>
+            <a href="https://drive.google.com/uc?export=download&id=1xyxLSESx_-yAVFbBwNnH-mHCw606X5-D" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- MCM515 -->
+        <div class="card">
+            <h3>MCM515</h3>
+            <p class="book-name">Radio News, Reporting and Production</p>
+            <a href="https://drive.google.com/uc?export=download&id=1AtqJoo22m9lxIjfkNSz97sBJHLXHvhq8" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- MCM516 -->
+        <div class="card">
+            <h3>MCM516</h3>
+            <p class="book-name">TV News Reporting and Production</p>
+            <a href="https://drive.google.com/uc?export=download&id=17nSfBMNjFrpYVzAnTyBCBRJcR12zBe6K" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- MCM517 -->
+        <div class="card">
+            <h3>MCM517</h3>
+            <p class="book-name">Online Journalism</p>
+            <a href="https://drive.google.com/uc?export=download&id=12j0xzApO6OVwnPXRATD_VpvKjZYNpgRU" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- MCM520 -->
+        <div class="card">
+            <h3>MCM520</h3>
+            <p class="book-name">Contemporary Mass Media</p>
+            <a href="https://drive.google.com/uc?export=download&id=1wRnXUzQN-hHddrVTssGG-yrwWUdUIAy1" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- MCM531 -->
+        <div class="card">
+            <h3>MCM531</h3>
+            <p class="book-name">Community Journalism</p>
+            <a href="https://drive.google.com/uc?export=download&id=1CYW68mq116YyWJ_xUTPA01dJWdf6p1Ho" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- MCM601 -->
+        <div class="card">
+            <h3>MCM601</h3>
+            <p class="book-name">Media Management</p>
+            <a href="https://drive.google.com/uc?export=download&id=15E7hwpSmqxFEd55zqgRN-J91SP_Kf5jq" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- MCM604 -->
+        <div class="card">
+            <h3>MCM604</h3>
+            <p class="book-name">International Communication</p>
+            <a href="https://drive.google.com/uc?export=download&id=1tGdxE_n9D7AuHlZWqhFzTKMnFICYHQv5" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+        <!-- MCM610 -->
+        <div class="card">
+            <h3>MCM610</h3>
+            <p class="book-name">Media Laws and Ethics</p>
+            <a href="https://drive.google.com/uc?export=download&id=18VgeX9Lg2CEGOoYos4Oa2sd4CEpY0IFH" class="handouts"
+                target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+            <a href="not_found.html" class="ppt">PPT Slides</a>
+        </div>
+    </div>
+
+    <a href="handouts.html" class="back-btn">Back to Handouts</a>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('handouts-footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <script src="search_script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENG Subjects</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f1f5f9;
+            color: #1e3c72;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .header p {
+            margin-top: 5px;
+            font-size: 18px;
+            opacity: 0.85;
+        }
+
+        /* SEARCH BOX */
+        .search-box {
+            margin-top: 20px;
+        }
+
+        .search-box input {
+            padding: 12px 15px;
+            width: 280px;
+            border-radius: 50px;
+            border: none;
+            font-size: 16px;
+            outline: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        /* CARD */
+        .card {
+            background: linear-gradient(135deg, #ffffff, #e0e7ff);
+            padding: 25px 20px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 22px;
+            color: #1e3c72;
+        }
+
+        .book-name {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #334155;
+        }
+
+        /* BUTTONS */
+        .card a {
+            display: block;
+            margin: 10px 0;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .handouts {
+            background: linear-gradient(135deg, #3b6cb7, #1e3c72);
+        }
+
+        .handouts:hover {
+            background: linear-gradient(135deg, #1e3c72, #3b6cb7);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        .highlighted {
+            background: linear-gradient(135deg, #ffcc00, #ff9900);
+            color: #1e3c72;
+        }
+
+        .highlighted:hover {
+            background: linear-gradient(135deg, #ff9900, #ffcc00);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        /* BACK BUTTON */
+        .back-btn {
+            display: inline-block;
+            margin: 20px 0 20px 10px;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #ffcc00, #ff9900);
+            color: #1e3c72;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .search-box input {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>ENG Subject Handouts</h1>
+        <p>Choose your subject and download study material</p>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search by code or subject..." onkeyup="searchSubjects()">
+        </div>
+    </div>
+
+    <div class="container" id="subjectContainer">
+        <!-- ENG001 -->
+        <div class="card">
+            <h3>ENG001</h3>
+            <p class="book-name">Elementary English</p>
+            <a href="https://drive.google.com/uc?export=download&id=1EZ9mSH4NMZw0Ea7tDJK1g5g3iiurQRnj" class="handouts" target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+        </div>
+        <!-- ENG101 -->
+        <div class="card">
+            <h3>ENG101</h3>
+            <p class="book-name">English Comprehension</p>
+            <a href="https://drive.google.com/uc?export=download&id=1oUU7yD_761Y62eiuj1KOkzYA6sJyF65H" class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1II6te3MZQUHwLo0_ERTPfHPiFqF-U057?usp=drive_link" class="highlighted">Highlighted</a>
+        </div>
+        <!-- ENG201 -->
+        <div class="card">
+            <h3>ENG201</h3>
+            <p class="book-name">Business and Technical English</p>
+            <a href="https://drive.google.com/uc?export=download&id=18uuwE2AZns7YHZPJJPTplU0ktgvxUGQZ" class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1DMKOzXB76VtRnMQUFrrnQw0pPBN-0lAM?usp=drive_link" class="highlighted">Highlighted</a>
+        </div>
+        <!-- ENG301 -->
+        <div class="card">
+            <h3>ENG301</h3>
+            <p class="book-name">BUSINESS COMMUNICATION</p>
+            <a href="https://drive.google.com/uc?export=download&id=1wQ6ge7H2zGNqq6-ZagyUoXAl4uqDmA-3" class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1r1kbCyJ1t1TcdgpcUhHKib6MJ8m8axaZ?usp=drive_link" class="highlighted">Highlighted</a>
+        </div>
+        <!-- ENG501 -->
+        <div class="card">
+            <h3>ENG501</h3>
+            <p class="book-name">History of English Language</p>
+            <a href="https://drive.google.com/uc?export=download&id=1cvUGCYh2SXjC-nii3P78VPRBmG08s70Q" class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1lugzC5sWzgancnWbgY1Ydi5Xe74uGA2C?usp=drive_link" class="highlighted">Highlighted</a>
+        </div>
+        <!-- ENG502 -->
+        <div class="card">
+            <h3>ENG502</h3>
+            <p class="book-name">Introduction to Linguistics</p>
+            <a href="https://drive.google.com/uc?export=download&id=1em2YBMIISiEC-mnp2EMtYLeJhnvH-mMr" class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1oHho4dtGnZxTGGwLNX0_8gCYFo_8Bp9y?usp=drive_link" class="highlighted">Highlighted</a>
+        </div>
+        <!-- ENG503 -->
+        <div class="card">
+            <h3>ENG503</h3>
+            <p class="book-name">Introduction to ELT</p>
+            <a href="https://drive.google.com/uc?export=download&id=1lrhXGXIKRqR-KYOHSrHwZqwd3gWOSM56" class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1gdAGCcTvJAwj55a6eg8L0659IUfSsNo5?usp=drive_link" class="highlighted">Highlighted</a>
+        </div>
+        <!-- ENG504 -->
+        <div class="card">
+            <h3>ENG504</h3>
+            <p class="book-name">Second Language Acquisition</p>
+            <a href="https://drive.google.com/uc?export=download&id=1XcHxPNhibM677cLYuNl8wRgBSTDusFlS" class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1c-wqy0d2RyWbjeAo53Wt7U0QhwLbfIfy?usp=drive_link" class="highlighted">Highlighted</a>
+        </div>
+        <!-- ENG505 -->
+        <div class="card">
+            <h3>ENG505</h3>
+            <p class="book-name">Language Learning Theories</p>
+            <a href="https://drive.google.com/uc?export=download&id=1YACzWuKyCyagVDQmBLmo0OVEux3abmEN" class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1OsFpSYlg5pKGTVa-HlvH1ARM5-RsrkzH?usp=drive_link" class="highlighted">Highlighted</a>
+        </div>
+        <!-- ENG506 -->
+        <div class="card">
+            <h3>ENG506</h3>
+            <p class="book-name">World Englishes</p>
+            <a href="https://drive.google.com/uc?export=download&id=1taS0axoOsedpU163k8fGhAqxeoc3hp34" class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1RUjVCekUXBLHp2vjLzfnAQJectQG7bBP?usp=drive_link" class="highlighted">Highlighted</a>
+        </div>
+        <!-- ENG507 -->
+        <div class="card">
+            <h3>ENG507</h3>
+            <p class="book-name">Phonetics and Phonology</p>
+            <a href="https://drive.google.com/uc?export=download&id=1dp_rlmSJoVMNqm4e1Lqto4_OVg2Nseki" class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/130yIam2ZmVd73Ass4YjAXQ4mbnJrEA2O?usp=drive_link" class="highlighted">Highlighted</a>
+        </div>
+        <!-- ENG508 -->
+        <div class="card">
+            <h3>ENG508</h3>
+            <p class="book-name">Semantics and Pragmatics</p>
+            <a href="https://drive.google.com/uc?export=download&id=1l82Ju8jhNWaa2SQFVqYZAZq1J-n2R_Ly" class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1nggruhu0oWrYJH73Fzyu98ZPv6L0JpUk?usp=drive_link" class="highlighted">Highlighted</a>
+        </div>
+        <!-- ENG509 -->
+        <div class="card">
+            <h3>ENG509</h3>
+            <p class="book-name">Morphology and Syntax</p>
+            <a href="https://drive.google.com/uc?export=download&id=1fAx8GEYUulT-Tgong3185frwtgMnySsl" class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1L4SDEltjCI6mBVBebbzgKjsHIqntsQQo?usp=drive_link" class="highlighted">Highlighted</a>
+        </div>
+        <!-- ENG510 -->
+        <div class="card">
+            <h3>ENG510</h3>
+            <p class="book-name">Sociolinguistics</p>
+            <a href="https://drive.google.com/uc?export=download&id=1K3HBgK83Bzf3Ty_svNB8gGGAe7w95rSO" class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1GcOCIUO8_kSwuIenFX5wK-EWr484iq-b?usp=drive_link" class="highlighted">Highlighted</a>
+        </div>
+        <!-- ENG511 -->
+        <div class="card">
+            <h3>ENG511</h3>
+            <p class="book-name">Psycholinguistics</p>
+            <a href="https://drive.google.com/uc?export=download&id=14ZmjJVG0LMLW_Izy1yvGK6uePTD3l-zE" class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1_0vyxQ24yqWI8onjarqD_rwtBORPOUwh?usp=drive_link" class="highlighted">Highlighted</a>
+        </div>
+        <!-- ENG512 -->
+        <div class="card">
+            <h3>ENG512</h3>
+            <p class="book-name">Bilingualism</p>
+            <a href="https://drive.google.com/uc?export=download&id=1md8D98ZXUBzUkUGKOdSXniVwS7RpCPjC" class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1RTDxFWCl5LAQdpf18NbglSDWPAAklUp5?usp=drive_link" class="highlighted">Highlighted</a>
+        </div>
+        <!-- ENG513 -->
+        <div class="card">
+            <h3>ENG513</h3>
+            <p class="book-name">Language Teaching Methods</p>
+            <a href="https://drive.google.com/uc?export=download&id=1c8I8zMqJbiDM4ayfYsDvDbWl3S6aXPVv" class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1vJ_Dk9KR45XfKn0pb-5Ed9dY6Mgw9SHi?usp=drive_link" class="highlighted">Highlighted</a>
+        </div>
+        <!-- ENG514 -->
+        <div class="card">
+            <h3>ENG514</h3>
+            <p class="book-name">Teaching Listening and Speaking Skills</p>
+            <a href="https://drive.google.com/uc?export=download&id=1FO0-EmpH17t3heSI4WgzOy9un35dzene" class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1hrJmqy17GQUaPWYkdZLs3d2omwqxlhGz?usp=drive_link" class="highlighted">Highlighted</a>
+        </div>
+        <!-- ENG515 -->
+        <div class="card">
+            <h3>ENG515</h3>
+            <p class="book-name">Teaching of Reading and Writing Skills </p>
+            <a href="https://drive.google.com/uc?export=download&id=1Rtxy56_qbj_3OAItEVYxxz9NcQyMByxb" class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1mGQNXepoIBz4-gDtutne25rDSbbhayCB?usp=drive_link" class="highlighted">Highlighted</a>
+        </div>
+        <!-- ENG516 -->
+        <div class="card">
+            <h3>ENG516</h3>
+            <p class="book-name">School Teaching of Business Communication</p>
+            <a href="https://drive.google.com/uc?export=download&id=1C0nZ0Wp6fUJdU52ZElowSh3sF4Js3P49" class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1R8pFgAvat590lNReDx9IoS5yYRZdlApg?usp=drive_link" class="highlighted">Highlighted</a>
+        </div>
+        <!-- ENG517 -->
+        <div class="card">
+            <h3>ENG517</h3>
+            <p class="book-name">Computer Assisted Language Learning</p>
+            <a href="https://drive.google.com/uc?export=download&id=1_gfo5lZ6DyT1cHrOFwFRCvqa5GN37CB-" class="handouts" target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+        </div>
+        <!-- ENG518 -->
+        <div class="card">
+            <h3>ENG518</h3>
+            <p class="book-name">Research Methodology</p>
+            <a href="https://drive.google.com/uc?export=download&id=1qLRoskDqYap5SSxneclEJnZEoUCk_ziS" class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1tGUAmZYQTcY1MakgMf25gNedxWm1-qIB?usp=drive_link" class="highlighted">Highlighted</a>
+        </div>
+        <!-- ENG519 -->
+        <div class="card">
+            <h3>ENG519</h3>
+            <p class="book-name">Curriculum Design</p>
+            <a href="https://drive.google.com/uc?export=download&id=1-2TF_FPGBRyXR91o-8D_Vk-lf_HzmSf5" class="handouts" target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+        </div>
+        <!-- ENG520 -->
+        <div class="card">
+            <h3>ENG520</h3>
+            <p class="book-name">Testing and Assessment</p>
+            <a href="https://drive.google.com/uc?export=download&id=18G5stqVMhSfnP5n6Aihg2AEV3w8INhb5" class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1oxMIRgNIEt0plpHOfcrAhg_CV35IzU7v?usp=drive_link" class="highlighted">Highlighted</a>
+        </div>
+        <!-- ENG521 -->
+        <div class="card">
+            <h3>ENG521</h3>
+            <p class="book-name">Language Classroom Management</p>
+            <a href="https://drive.google.com/uc?export=download&id=1qzJDHuCeNqcH32VKiG5YZpexFSkDaYMo" class="handouts" target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+        </div>
+        <!-- ENG522 -->
+        <div class="card">
+            <h3>ENG522</h3>
+            <p class="book-name">Applied Linguistics</p>
+            <a href="https://drive.google.com/uc?export=download&id=1wOb9qWNLeyMbzbQkwnswkmPLk-M_SV5p" class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1Dv4yOkZP-pREzy7pk2Tgqd_jD34jwOO6?usp=drive_link" class="highlighted">Highlighted</a>
+        </div>
+        <!-- ENG523 -->
+        <div class="card">
+            <h3>ENG523</h3>
+            <p class="book-name">Discourse Analysis</p>
+            <a href="https://drive.google.com/uc?export=download&id=1d3TSdYz0xhylqlVPfQk6XWMG4LrAH2jH" class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1spkszvgIA_Vdd9RgqmbNi1rZLaEfcRW1?usp=drive_link" class="highlighted">Highlighted</a>
+        </div>
+        <!-- ENG524 -->
+        <div class="card">
+            <h3>ENG524</h3>
+            <p class="book-name">CRITICAL DISCOURSE ANALYSIS</p>
+            <a href="https://drive.google.com/uc?export=download&id=1LyGnVcL3Rc-MFTfqaa4KdNpvH8wpHG3W" class="handouts" target="_blank">Handouts</a>
+            <a href="https://drive.google.com/drive/folders/1UGDi8zPkc8RiHTgEqIn9K-noVPclKDMM?usp=drive_link" class="highlighted">Highlighted</a>
+        </div>
+        <!-- ENG527 -->
+        <div class="card">
+            <h3>ENG527</h3>
+            <p class="book-name">Language and Gender</p>
+            <a href="https://drive.google.com/uc?export=download&id=14OMSN_CwM7VFNFtvyYg1HXogHfSAaofd" class="handouts" target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+        </div>
+        <!-- ENG529 -->
+        <div class="card">
+            <h3>ENG529</h3>
+            <p class="book-name">Technology in Language Teaching </p>
+            <a href="https://drive.google.com/uc?export=download&id=1d-3XflNRY8_Ktzztq48RB6oVkhdeJa77" class="handouts" target="_blank">Handouts</a>
+            <a href="not_found.html" class="highlighted">Highlighted</a>
+        </div>
+
+    </div>
+
+       <a href="handouts.html" class="back-btn">Back to Handouts</a>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('handouts-footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <script src="search_script.js"></script>
+
+</body>
+
+</html>
