@@ -4,119 +4,342 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Past Papers Links</title>
-    <link rel="icon" href="../favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    <title>Drive Resources | LGWT Study</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
+        :root {
+            --primary: #1e3c72;
+            --secondary: #2a5298;
+            --accent: #ffcc00;
+            --success: #10b981;
+        }
+
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
             background: #f1f5f9;
-            color: #1e3c72;
+            color: #334155;
         }
 
-        .header {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
+        /* Premium Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
+            padding: 50px 20px;
             text-align: center;
-            padding: 30px 20px;
+            border-bottom: 5px solid var(--accent);
         }
 
-        .header h1 {
+        .page-header h1 {
             margin: 0;
-            font-size: 30px;
+            font-size: 28px;
+            font-weight: 700;
         }
 
-        .header p {
-            margin-top: 5px;
+        .page-header p {
             opacity: 0.9;
-        }
-
-        .back-btn {
-            display: inline-block;
-            margin: 30px 20px;
-            padding: 12px 25px;
-            background: linear-gradient(135deg, #3b6cb7, #1e3c72);
-            color: white;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        .back-btn:hover {
-            transform: translateY(-3px);
+            margin-top: 10px;
+            font-size: 14px;
         }
 
         .container {
-            max-width: 900px;
-            margin: auto;
+            max-width: 1000px;
+            margin: -30px auto 40px;
+            padding: 0 20px;
+        }
+
+        /* Back Button */
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: white;
+            color: var(--primary);
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+
+        .back-btn:hover {
+            background: var(--accent);
+            transform: translateX(-5px);
+        }
+
+        /* --- Special SMS Box --- */
+        .special-note {
+            background: #fff9e6;
+            border-left: 5px solid var(--accent);
             padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .special-note h4 {
+            margin: 0 0 10px 0;
+            color: #856404;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .special-note p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #664d03;
+        }
+
+        /* Papers Grid */
+        .papers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
         }
 
         .paper-card {
             background: white;
-            padding: 18px 20px;
-            margin: 12px 0;
-            border-radius: 12px;
+            padding: 20px;
+            border-radius: 15px;
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e2e8f0;
             transition: 0.3s;
         }
 
         .paper-card:hover {
-            transform: translateY(-4px);
+            transform: translateY(-5px);
+            border-color: var(--primary);
         }
 
-        .paper-title {
-            font-weight: 600;
+        .paper-info h3 {
+            margin: 0 0 15px 0;
+            font-size: 16px;
+            color: var(--primary);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .paper-info h3 i {
+            color: var(--accent);
+            margin-top: 4px;
         }
 
         .drive-btn {
-            padding: 10px 18px;
-            background: linear-gradient(135deg, #10b981, #047857);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px;
+            background: var(--success);
             color: white;
-            border-radius: 50px;
+            border-radius: 8px;
             text-decoration: none;
-            font-size: 14px;
             font-weight: 600;
+            font-size: 14px;
             transition: 0.3s;
         }
 
         .drive-btn:hover {
-            background: linear-gradient(135deg, #047857, #10b981);
-            transform: scale(1.05);
+            background: #059669;
         }
 
-        footer {
-            text-align: center;
-            padding: 25px;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
+        /* Footer Styling */
+        .footer-clean {
+            background: linear-gradient(135deg, #1e3c72 0%, #162a4d 100%);
             color: white;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+            border-top: 5px solid #ffcc00;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .footer-main {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 0 20px;
+        }
+
+        .footer-logo {
+            color: #ffcc00;
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+
+        .footer-section h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #ffcc00;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-section p {
             font-size: 14px;
+            line-height: 1.7;
+            opacity: 0.8;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .contact-item i {
+            color: #ffcc00;
+            width: 20px;
+        }
+
+        /* Social Pills */
+        .social-pills {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .pill {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 15px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: white;
+            font-size: 13px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .wa {
+            background: #25d366;
+        }
+
+        .yt {
+            background: #ff0000;
+        }
+
+        .pill:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+        .footer-bottom-line {
+            text-align: center;
             margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 13px;
+            opacity: 0.6;
+        }
+
+        @media (max-width: 768px) {
+            .footer-main {
+                text-align: center;
+            }
+
+            .footer-section h3,
+            .social-pills {
+                justify-content: center;
+            }
+
+            .contact-item {
+                justify-content: center;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <div class="header">
-        <h1 id="subjectHeader">Loading...</h1>
-        <p id="typeSubtitle">Download Past Papers from Google Drive</p>
+    <div class="page-header">
+        <h1 id="subjectHeader">Loading Resources...</h1>
+        <p><i class="fab fa-google-drive"></i> LGWT Official Study Cloud Storage</p>
     </div>
 
-    <a href="javascript:history.back()" class="back-btn">⬅ Back to Subject</a>
+    <div class="container">
+        <a href="javascript:history.back()" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to Subjects
+        </a>
 
-    <div class="container" id="papersContainer">
+        <div class="special-note">
+            <h4><i class="fas fa-exclamation-circle"></i> Important Instructions</h4>
+            <p>
+                <strong>Zaruri Baat:</strong> Jin files ke naam mein <b>"Most Important"</b> ya <b>"Important"</b> likha
+                hai, unhein lazmi download karen.
+                Hamari <b>"My File 100% Best"</b> wali files ko kabhi miss na karen.
+                <br><br>
+                <b>ENG Subjects:</b> Maha Malik ki files bohat important hain, lazmi check karen.
+                <br><b>MTH Subjects:</b> Di gayi files ke sath <b>Kinza Bilal</b> ki preparation videos bhi lazmi dekhen
+                behtar samajh ke liye.
+            </p>
+        </div>
+
+        <div class="papers-grid" id="papersContainer">
+        </div>
     </div>
 
-    <footer> © 2026 LMS Services | Past Papers </footer>
+    <footer class="footer-clean">
+        <div class="footer-main">
+
+            <div class="footer-section">
+                <h2 class="footer-logo">𝐕𝐔 𝐒𝐭𝐮𝐝𝐲 𝐋𝐆𝐖𝐓</h2>
+                <p>Your trusted partner for Virtual University Success. We provide 100% accurate LMS Handling,
+                    assignments, and quiz solutions with guaranteed results.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3><i class="fas fa-headset"></i> Get Help Now</h3>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>+92 319 6248868 (LMS Support)</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>friends.4598@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Response Time: Under 30 Minutes</span>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3><i class="fas fa-share-alt"></i> Follow Our Team</h3>
+                <p>Stay updated with the latest VU news and handouts through our official channels.</p>
+                <div class="social-pills">
+                    <a href="https://wa.me/923196248868" class="pill wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="https://www.youtube.com/@VUStudyLGWT" class="pill yt"><i class="fab fa-youtube"></i>
+                        YouTube</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom-line">
+            <p>© 2026 <b>LGWT Official</b> | Helping Students Grow Together <i class="fas fa-graduation-cap"></i></p>
+        </div>
+    </footer>
 
     <script>
-        // DATABASE: Yahan aapne subjects, unke names aur links daalne hain
+        // DATABASE (Same as yours, just keep adding here)
         const database = {
             // ACC Subject
             "ACC311": {
@@ -394,28 +617,90 @@
             "CS636": { mid: [], final: [] },
 
             // ECO Subject
-            "ECO401": { mid: [], final: [] },
-            "ECO402": { mid: [], final: [] },
-            "ECO403": { mid: [], final: [] },
+            "ECO401": {
+                mid: [
+                    { name: "Broken VU TALK", link: "https://drive.google.com/drive/folders/1PwE_YYezepwfmfLNJ3Cngfselr68jbqL" },
+                    { name: "Atiq Kundi", link: "https://drive.google.com/drive/folders/1gkVYn-xHZ3BMDtekPUskLPupzI6EKYSC" },
+                ], final: []
+            },
+            "ECO402": {
+                mid: [
+                    { name: "Atiq Kundi", link: "https://drive.google.com/drive/folders/1hB1uoDtKVMm844oKVfkKuy2noBoVqycI" },
+                    { name: "Broken VU TALK", link: "https://drive.google.com/drive/folders/1BhdwNAi3Kp58aLyTo1fAmqxnCtIKS44m" },
+                    { name: "Fall 2022 Semster Drive Link", link: "https://drive.google.com/drive/folders/1ley9AoocAzCz4bhGB8v-5S0Rcg9q5fiD" },
+
+                ], final: []
+            },
+            "ECO403": {
+                mid: [
+                    { name: "Atiq Kundi", link: "https://drive.google.com/drive/folders/1poCV2On2a68ab4Zrbm6Bi3EynkATvPTv" },
+                    { name: "Fall 2022", link: "https://drive.google.com/drive/folders/189ny2QAKMltY8Hv6-D9DEDDlhK0N7oh2" },
+                ], final: []
+            },
             "ECO404": { mid: [], final: [] },
             "ECO501": { mid: [], final: [] },
             "ECO601": { mid: [], final: [] },
             "ECO605": { mid: [], final: [] },
             "ECO606": { mid: [], final: [] },
             "ECO607": { mid: [], final: [] },
-            "ECO610": { mid: [], final: [] },
+            "ECO610": {
+                mid: [
+                    { name: "Broken VU TALK", link: "https://drive.google.com/drive/folders/18e2ruViE3WK1uoCxoFIBvc-CUoSJpTUY" },
+                ], final: []
+            },
             "ECO612": { mid: [], final: [] },
             // EDU Subject
-            "EDU101": { mid: [], final: [] },
+            "EDU101": {
+                mid: [
+                    { name: "Maha Malik The Most Important", link: "https://drive.google.com/drive/folders/1cYlp6jmlXP1HSiSzV_UxrucQ5WAXUQRH" },
+                    { name: "Broken VU TALK", link: "https://drive.google.com/drive/folders/1d0zedWG9OAgTdeP8KUPzcl3ITk5l_saX" },
+                    { name: "Atiq Kundi", link: "https://drive.google.com/drive/folders/1GwAWrPJpWqmLH07XonNP5p57lipmnMaO" },
+                ], final: []
+            },
             "EDU201": { mid: [], final: [] },
-            "EDU301": { mid: [], final: [] },
-            "EDU302": { mid: [], final: [] },
-            "EDU303": { mid: [], final: [] },
+            "EDU301": {
+                mid: [
+                    { name: "Broken VU TALK", link: "https://drive.google.com/drive/folders/1LxTcCaKDmvjQGyRR194nhKgG54GJvljR" },
+                    { name: "Atiq Kundi", link: "https://drive.google.com/drive/folders/1jzd2akn6D7eND8o0dtU_dd8i-vC97rIn" },
+                ], final: []
+            },
+            "EDU302": {
+                mid: [
+                    { name: "Atiq Kundi", link: "https://drive.google.com/drive/folders/1cj8tmfFA0tf9RfIH8QsOSO2FAGwTG0bQ" },
+                ], final: []
+            },
+            "EDU303": {
+                mid: [
+                    { name: "VU TALK", link: "https://drive.google.com/drive/folders/1iybrVZZRsPHPCKK0uMdDa5ODpwywjpE3" },
+                ], final: []
+            },
             "EDU304": { mid: [], final: [] },
-            "EDU305": { mid: [], final: [] },
-            "EDU401": { mid: [], final: [] },
-            "EDU402": { mid: [], final: [] },
-            "EDU403": { mid: [], final: [] },
+            "EDU305": {
+                mid: [
+                    { name: "Maha Malik The Most Important", link: "https://drive.google.com/drive/folders/1Lz0x7CCQmNr7U-E-t5J6Bcxear2aX7B5" },
+                    { name: "Atiq Kundi", link: "https://drive.google.com/drive/folders/1dAv2saHQGj7GrG6zIN1oEBiES60AbCs5" },
+                ], final: []
+            },
+            "EDU401": {
+                mid: [
+                    { name: "Maha Malik The Most Important", link: "https://drive.google.com/drive/folders/1U4KiO_MX93IiwoiECh0GEOSCyVbXh5Ea" },
+                    { name: "Atiq Kundi", link: "https://drive.google.com/drive/folders/1X8Go8GFdKJzM_8fIFV6u50HubDbaK66S" },
+                    { name: "Broken VU TALK", link: "https://drive.google.com/drive/folders/1J_pAIMTgMcXaUoLxWXpG4MO04wrTj6sA" },
+                ], final: []
+            },
+            "EDU402": {
+                mid: [
+                    { name: "Atiq Kundi", link: "https://drive.google.com/drive/folders/1MeCpvG6_FqZHWLasCrJXaPWSxxYbWlRv" },
+                    { name: "Broken VU TALK", link: "https://drive.google.com/drive/folders/1N6zVi8V6jVaWpolzE20uTzXyKKIauC5k" },
+                ], final: []
+            },
+            "EDU403": {
+                mid: [
+                    { name: "Maha Malik The MOst IMP", link: "https://drive.google.com/drive/folders/1Ra1eIJG5OPi-5f1XQrwzFsPSPH_RoOVL" },
+                    { name: "Atiq Kundi", link: "https://drive.google.com/drive/folders/1uddL0FBmHFtYATypwnMeaa1y_yaqwJvw" },
+                    { name: "Broken VU TALK", link: "https://drive.google.com/drive/folders/1s2ExSJcCdj4BDlDHplOjBJ9DDlPRvFtb" },
+                ], final: []
+            },
             "EDU404": { mid: [], final: [] },
             "EDU405": { mid: [], final: [] },
             "EDU406": { mid: [], final: [] },
@@ -437,13 +722,21 @@
             "EDU712": { mid: [], final: [] },
             // ENG Subject
             "ENG001": { mid: [], final: [] },
-            "ENG101": { mid: [
-                { name: "MY Drive 100% Important & Correct", link: "https://drive.google.com/drive/folders/1cTE3-BCOuaTHMRaW-3NAEwFk9YbhKfPm?usp=drive_link" },
-                { name: "Maha Malik Important", link: "https://drive.google.com/drive/folders/16TgkuyWzdp7ZXgHura3a9YPzWeainMJU" },
-                { name: "Broken VU TALK", link: "https://drive.google.com/drive/folders/1Ei3MmhSVr9oQM7vjs7r3hiNI2oqNBJ1-" },
-                { name: "Atiq Kundi", link: "https://drive.google.com/drive/folders/1KbYsAYxBiSS3q3_k-cu4T6LJxHzF23l6" },
-            ], final: [] },
-            "ENG201": { mid: [], final: [] },
+            "ENG101": {
+                mid: [
+                    { name: "MY Drive 100% Important & Correct", link: "https://drive.google.com/drive/folders/1cTE3-BCOuaTHMRaW-3NAEwFk9YbhKfPm?usp=drive_link" },
+                    { name: "Maha Malik Important", link: "https://drive.google.com/drive/folders/16TgkuyWzdp7ZXgHura3a9YPzWeainMJU" },
+                    { name: "Broken VU TALK", link: "https://drive.google.com/drive/folders/1Ei3MmhSVr9oQM7vjs7r3hiNI2oqNBJ1-" },
+                    { name: "Atiq Kundi", link: "https://drive.google.com/drive/folders/1KbYsAYxBiSS3q3_k-cu4T6LJxHzF23l6" },
+                ], final: []
+            },
+            "ENG201": {
+                mid: [
+                    { name: "Maha Malik Important", link: "https://drive.google.com/drive/folders/1S_GD4vwnf6tw-Ppepw-mcNHD-7BexYLG" },
+                    { name: "Broken VU TALK", link: "https://drive.google.com/drive/folders/1yshheXMI0wjBCkLyBNamYLgbtSdsZCm_" },
+                    { name: "Atiq Kundi", link: "https://drive.google.com/drive/folders/1csGZw8kytmJpyVmWjC0uXpGCYmRuk7dH" },
+                ], final: []
+            },
             "ENG301": { mid: [], final: [] },
             "ENG501": { mid: [], final: [] },
             "ENG502": { mid: [], final: [] },
@@ -550,26 +843,87 @@
             "MKT624": { mid: [], final: [] },
             "MKT625": { mid: [], final: [] },
             // MTH Subject
-            "MTH001": { mid: [], final: [] },
-            "MTH100": { mid: [], final: [] },
-            "MTH101": { mid: [], final: [] },
+            "MTH001": { mid: [{ name: "Atiq Kundi", link: "https://drive.google.com/drive/folders/1JoONIsIF3bgUEs2kh249ShHkkkGDRLT5" },], final: [] },
+            "MTH100": {
+                mid: [
+                    { name: "VU TALK", link: "https://drive.google.com/drive/folders/1B104XVCYIcmKb7eC038pGSCwb9cV3VSu" },
+                    { name: "Atiq Kundi", link: "https://drive.google.com/drive/folders/1JlyuUJa1ZNtStBj6INaPTJ1u0gfnp04P" },
+                    { name: "Math Helper", link: "https://drive.google.com/drive/folders/1dqLvA1dIkxb5NFdxkYMbzzd9M27WqMXH" },
+                ], final: []
+            },
+            "MTH101": {
+                mid: [
+                    { name: "Atiq Kundi", link: "https://drive.google.com/drive/folders/1NPi7BDup-J-MOaVeKtjW3Uapk2j4nxbn" },
+                    { name: "Broken VU TALK", link: "https://drive.google.com/drive/folders/1IZIX4XlnTryuqBLV-2OA25VUCts-6GZT" },
+                ], final: []
+            },
             "MTH102": { mid: [], final: [] },
-            "MTH104": { mid: [], final: [] },
-            "MTH201": { mid: [], final: [] },
-            "MTH202": { mid: [], final: [] },
-            "MTH301": { mid: [], final: [] },
-            "MTH302": { mid: [], final: [] },
+            "MTH104": {
+                mid: [
+                    { name: "Atiq Kundi", link: "https://drive.google.com/drive/folders/1jUyk92-xyOmEMp5yn8Z4jc4RIP6eRPV8" },
+                    { name: "Broken VU TALK", link: "https://drive.google.com/drive/folders/1T4hrbWkR3Wsg24h-Q9dTPqIQs1En_5JL" },
+                ], final: []
+            },
+            "MTH201": {
+                mid: [
+                    { name: "Broken VU TALK MTH301&201 Are Same Sub", link: "https://drive.google.com/drive/folders/1qfCSjreI9NSzK4Bk_CF7eumth8qiSUAa" },
+                    { name: "Atiq Kundi MTH301&201 Are Same Sub", link: "https://drive.google.com/drive/folders/17cH-4KRZ9QCp74AMk5fT_MQFiy0iO8nr" },
+                ], final: []
+            },
+            "MTH202": {
+                mid: [
+                    { name: "Atiq Kundi", link: "https://drive.google.com/drive/folders/1yDJEEaZzS3X8LzNr-FqEuMsHvQWBoxx8" },
+                ], final: []
+            },
+            "MTH301": {
+                mid: [
+                    { name: "Broken VU TALK", link: "https://drive.google.com/drive/folders/1qfCSjreI9NSzK4Bk_CF7eumth8qiSUAa" },
+                    { name: "Atiq Kundi", link: "https://drive.google.com/drive/folders/17cH-4KRZ9QCp74AMk5fT_MQFiy0iO8nr" },
+                ], final: []
+            },
+            "MTH302": {
+                mid: [
+                    { name: "Broken VU TALK", link: "https://drive.google.com/drive/folders/1D2DDbSkxQLano2au1veNOlP0kP87yqJi" },
+                    { name: "Atiq Kundi", link: "https://drive.google.com/drive/folders/1umrywoXsIEA7LZwXbVD6wJ_qqfZhxMpt" },
+                ], final: []
+            },
             "MTH303": { mid: [], final: [] },
-            "MTH304": { mid: [], final: [] },
-            "MTH401": { mid: [], final: [] },
+            "MTH304": { mid: [{ name: "Attiq Kundi", link: "https://drive.google.com/drive/folders/1bTEVrDrAW9-HGMjDZvXTS2iUdwx5E342" }], final: [] },
+            "MTH401": {
+                mid: [
+                    { name: "Attiq Kundi", link: "https://drive.google.com/drive/folders/1SH9JVGqClCEo3S0omUofXgdOmUrwLQgc" },
+                    { name: "Broken VU TALK", link: "https://drive.google.com/drive/folders/1zTnZ847hRHCRE0kXwztqNYK73jLyLVFc" },
+                    { name: "MATH Helper", link: "https://drive.google.com/drive/folders/1vTTETSSA-ZNf_fVSvvhMCqzB3Faw9pmU" },
+                ], final: []
+            },
             "MTH403": { mid: [], final: [] },
             "MTH404": { mid: [], final: [] },
             "MTH405": { mid: [], final: [] },
-            "MTH501": { mid: [], final: [] },
-            "MTH601": { mid: [], final: [] },
-            "MTH603": { mid: [], final: [] },
-            "MTH621": { mid: [], final: [] },
-            "MTH622": { mid: [], final: [] },
+            "MTH501": {
+                mid: [
+                    { name: "Broken VU TALK", link: "https://drive.google.com/drive/folders/1tdTpTpFRj48QQoOiK4Ba8jnUAUrpKWSh" },
+                    { name: "Atiq Kundi Mega Drive", link: "https://drive.google.com/drive/folders/1O7lb9dqa22FNMAtkNAWDqHhuld0Nm-_A" },
+                ], final: []
+            },
+            "MTH601": {
+                mid: [
+                    { name: "Broken VU TALK", link: "https://drive.google.com/drive/folders/1VOKt0p1AH4Gvpc-ZcLHfKi0yLmjof0df" },
+                    { name: "Atiq Kundi", link: "https://drive.google.com/drive/folders/1t3dlgtDmbxkbvk-ilN2JAmYWCd0bwfyz" },
+                ], final: []
+            },
+            "MTH603": {
+                mid: [
+                    { name: "Broken VU TALK", link: "https://drive.google.com/drive/folders/1VOKt0p1AH4Gvpc-ZcLHfKi0yLmjof0df" },
+                    { name: "Atiq Kundi Mid & Final Mix", link: "https://drive.google.com/drive/folders/1yAMcKVlffFC_xr2iz5JC1c3wHUAGEwtr" },
+                ], final: []
+            },
+            "MTH621": { mid: [{ name: "Attiq Kundi", link: "https://drive.google.com/drive/folders/18HAK9Hey4nlRQ3kVJnAdPubXuYsFcqao" }], final: [] },
+            "MTH622": {
+                mid: [
+                    { name: "Broken VU TALK", link: "https://drive.google.com/drive/folders/1f239w0MHoCFjFQxS0lAAdffYsf14td58" },
+                    { name: "Attiq Kundi", link: "https://drive.google.com/drive/folders/1Nwmxrb3u1GSs5XVazjzFNCxv8XIfWR53" },
+                ], final: []
+            },
             "MTH631": { mid: [], final: [] },
             "MTH632": { mid: [], final: [] },
             "MTH633": { mid: [], final: [] },
@@ -581,10 +935,12 @@
             "MTH707": { mid: [], final: [] },
             "MTH721": { mid: [], final: [] },
             // PAK Subject
-            "PAK301": { mid: [
-                {name:"Broken VU TALK", link:"https://drive.google.com/drive/folders/1zvvPbcgcIyYcpGmvx7W-2nVrhT4e-HhI"},
-                {name:"Atiq Kundi", link:"https://drive.google.com/drive/folders/1zvvPbcgcIyYcpGmvx7W-2nVrhT4e-HhI"},
-            ], final: [] },
+            "PAK301": {
+                mid: [
+                    { name: "Broken VU TALK", link: "https://drive.google.com/drive/folders/1zvvPbcgcIyYcpGmvx7W-2nVrhT4e-HhI" },
+                    { name: "Atiq Kundi", link: "https://drive.google.com/drive/folders/1zvvPbcgcIyYcpGmvx7W-2nVrhT4e-HhI" },
+                ], final: []
+            },
             "PAK302": { mid: [], final: [] },
             // PHY Subject
             "PHY101": { mid: [], final: [] },
@@ -616,23 +972,27 @@
             "PSY631": { mid: [], final: [] },
             "PSY632": { mid: [], final: [] },
             // SOC101 Subject
-            "SOC101": { mid: [
-                {name:"Broken VU TALK", link:"https://drive.google.com/drive/folders/1rov3WyjxR3H9E7rxQHx31tlEhfWJsBa4"},
-                {name:"Atiq Kundi", link:"https://drive.google.com/drive/folders/1BPMJ8U2pvqzAdvbprfeNzFNa594ZjsQT"},
-                {name:"BS English 1 Drive 2024", link:"https://drive.google.com/drive/folders/1MqrDLqK3afiiVvR2R_TNxLRPeQVkX4gv"},
-                {name:"BS English 2 Drive 2024", link:"https://drive.google.com/drive/folders/1-Dhh7L4CeKwnRABAUBhNUcCy-61pQm20"},
-                {name:"Maha Malik Drive Most Important", link:"https://drive.google.com/drive/folders/1mvWF5cmP1kaa-Iqc0bSU6PdtV0EHssjx"},
-            ], final: [] },
-            "SOC301": { mid: [{name:"Broken VU TALK", link:"https://drive.google.com/drive/folders/108OuNsckKxdwYgZlW9H6mg9eitEUayx8"}], final: [] },
-            "SOC302": { mid: [{name:"Broken VU TALK", link:"https://drive.google.com/drive/folders/101W3aMy1l1hIip8pexdDu9NbqdfU2hbi"}], final: [] },
-            "SOC401": { mid: [
-                {name:"Broken VU TALK", link:"https://drive.google.com/drive/folders/1tE1SRUqE_D7tN1I8DkcNbwSqMx51lDXy"},
-                {name:"Atiq Kundi", link:"https://drive.google.com/drive/folders/1hEucXkDoFC_3g_3nsJqcllD3DkxjPeMI"},
-                {name:"BS English Drive 2024", link:"https://drive.google.com/drive/folders/1-4kK4NTaigoyxXdlmpo-mqr2oLEFjlkK"},
-                {name:"Maha Malik Drive Most Important", link:"https://drive.google.com/drive/folders/1Zjreg4WYzDDSzKu8MWF_CEfjt7ARzSW4"},
-            ], final: [] },
+            "SOC101": {
+                mid: [
+                    { name: "Broken VU TALK", link: "https://drive.google.com/drive/folders/1rov3WyjxR3H9E7rxQHx31tlEhfWJsBa4" },
+                    { name: "Atiq Kundi", link: "https://drive.google.com/drive/folders/1BPMJ8U2pvqzAdvbprfeNzFNa594ZjsQT" },
+                    { name: "BS English 1 Drive 2024", link: "https://drive.google.com/drive/folders/1MqrDLqK3afiiVvR2R_TNxLRPeQVkX4gv" },
+                    { name: "BS English 2 Drive 2024", link: "https://drive.google.com/drive/folders/1-Dhh7L4CeKwnRABAUBhNUcCy-61pQm20" },
+                    { name: "Maha Malik Drive Most Important", link: "https://drive.google.com/drive/folders/1mvWF5cmP1kaa-Iqc0bSU6PdtV0EHssjx" },
+                ], final: []
+            },
+            "SOC301": { mid: [{ name: "Broken VU TALK", link: "https://drive.google.com/drive/folders/108OuNsckKxdwYgZlW9H6mg9eitEUayx8" }], final: [] },
+            "SOC302": { mid: [{ name: "Broken VU TALK", link: "https://drive.google.com/drive/folders/101W3aMy1l1hIip8pexdDu9NbqdfU2hbi" }], final: [] },
+            "SOC401": {
+                mid: [
+                    { name: "Broken VU TALK", link: "https://drive.google.com/drive/folders/1tE1SRUqE_D7tN1I8DkcNbwSqMx51lDXy" },
+                    { name: "Atiq Kundi", link: "https://drive.google.com/drive/folders/1hEucXkDoFC_3g_3nsJqcllD3DkxjPeMI" },
+                    { name: "BS English Drive 2024", link: "https://drive.google.com/drive/folders/1-4kK4NTaigoyxXdlmpo-mqr2oLEFjlkK" },
+                    { name: "Maha Malik Drive Most Important", link: "https://drive.google.com/drive/folders/1Zjreg4WYzDDSzKu8MWF_CEfjt7ARzSW4" },
+                ], final: []
+            },
             "SOC402": { mid: [], final: [] },
-            "SOC403": { mid: [{name:"broken VU TALK", link:"https://drive.google.com/drive/folders/1-gVAnDpRyacAe7ToCV96zjIL83i6jmLZ"}], final: [] },
+            "SOC403": { mid: [{ name: "broken VU TALK", link: "https://drive.google.com/drive/folders/1-gVAnDpRyacAe7ToCV96zjIL83i6jmLZ" }], final: [] },
             "SOC601": { mid: [], final: [] },
             "SOC602": { mid: [], final: [] },
             "SOC603": { mid: [], final: [] },
@@ -647,35 +1007,38 @@
             },
             "STA404": { mid: [], final: [] },
             "STA406": { mid: [], final: [] },
-            "STA630": { mid: [{name: "Broken VU TALK", link:"https://drive.google.com/drive/folders/1-KNxJU8DVoNO3F3ct-MYVEVS5kjOgDPh"}], final: [] },
-            "STA632": { mid: [{name: "Broken VU TALK => Please Check May BE Final Term",link:"https://drive.google.com/drive/folders/1gAgP7TyoOgTBmF-CGHJ-btLzPpkHpByf"}], final: [] },
-            "STA641": { mid: [{name: "Broken VU TALK", link:"https://drive.google.com/drive/folders/1Ay2JlTaMA-h-N9BYpIQz99A22MTUwNjF"}], final: [] },
-            "STA642": { mid: [{name: "Broken VU TALK", link:"https://drive.google.com/drive/folders/12D5rcsPX9EWPK5tkTCZlvi2tLYsTUeQh"}], final: [] },
-            
+            "STA630": { mid: [{ name: "Broken VU TALK", link: "https://drive.google.com/drive/folders/1-KNxJU8DVoNO3F3ct-MYVEVS5kjOgDPh" }], final: [] },
+            "STA632": { mid: [{ name: "Broken VU TALK => Please Check May BE Final Term", link: "https://drive.google.com/drive/folders/1gAgP7TyoOgTBmF-CGHJ-btLzPpkHpByf" }], final: [] },
+            "STA641": { mid: [{ name: "Broken VU TALK", link: "https://drive.google.com/drive/folders/1Ay2JlTaMA-h-N9BYpIQz99A22MTUwNjF" }], final: [] },
+            "STA642": { mid: [{ name: "Broken VU TALK", link: "https://drive.google.com/drive/folders/12D5rcsPX9EWPK5tkTCZlvi2tLYsTUeQh" }], final: [] },
+
             // Urdu
-            "URDU101": {mid: [{name:"VU TALK", link:"https://drive.google.com/drive/folders/1F0_StFx2r2Cqtx1IWnKSovOXEfMH9zmr"}], final:[] },
+            "URDU101": { mid: [{ name: "VU TALK", link: "https://drive.google.com/drive/folders/1F0_StFx2r2Cqtx1IWnKSovOXEfMH9zmr" }], final: [] },
         };
+
 
         const params = new URLSearchParams(window.location.search);
         const code = params.get('code');
         const type = params.get('type');
 
-        // CHECK LOGIC: Redirect to not_found.html if data is missing
         if (!database[code] || !database[code][type] || database[code][type].length === 0) {
             window.location.href = "not_found.html";
         } else {
             const papers = database[code][type];
             const typeText = (type === 'mid') ? "Midterm" : "Finalterm";
 
-            // Header update karen
-            document.getElementById('subjectHeader').innerText = `${code} ${typeText} Past Papers`;
+            document.getElementById('subjectHeader').innerText = `${code} ${typeText} Resources`;
 
             const container = document.getElementById('papersContainer');
             papers.forEach((item) => {
                 container.innerHTML += `
                     <div class="paper-card">
-                        <span class="paper-title">${item.name}</span>
-                        <a href="${item.link}" target="_blank" class="drive-btn">Open Drive</a>
+                        <div class="paper-info">
+                            <h3><i class="far fa-file-pdf"></i> ${item.name}</h3>
+                        </div>
+                        <a href="${item.link}" target="_blank" class="drive-btn">
+                            <i class="fab fa-google-drive"></i> Open Google Drive
+                        </a>
                     </div>`;
             });
         }
