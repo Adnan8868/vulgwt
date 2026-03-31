@@ -278,68 +278,53 @@
     </section>
 
     <!-- HTML FOE LMS Calculators -->
-    <section id="lms-calculator" class="py-20 bg-slate-50">
-        <div class="max-w-5xl mx-auto px-4">
-            <div class="text-center mb-10">
-                <span
-                    class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider">Premium
-                    Billing</span>
-                <h2 class="text-4xl font-extrabold text-slate-900 mt-4">Smart <span class="text-blue-600">LMS
-                        Estimator</span></h2>
-                <p class="text-slate-500 mt-2">Enter subjects to see your total bill and exclusive savings.</p>
-            </div>
+   <section id="lms-calculator" class="py-10 md:py-20 bg-slate-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="text-center mb-10">
+            <span class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider">Premium Billing</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-4 uppercase text-center">Smart <span class="text-blue-600">LMS Estimator</span></h2>
+            <p class="text-slate-500 mt-2 text-sm">Enter subjects to see your total bill and exclusive savings.</p>
+        </div>
 
-            <div class="bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-slate-100">
-                <div class="grid md:grid-cols-12">
-                    <div class="md:col-span-4 bg-blue-600 p-10 text-white flex flex-col justify-between">
+        <div class="bg-white rounded-[2rem] md:rounded-[3rem] shadow-2xl overflow-hidden border border-slate-100">
+            <div class="flex flex-col md:grid md:grid-cols-12">
+                
+                <div class="md:col-span-4 bg-blue-600 p-8 md:p-10 text-white flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6">Welcome to LGWT! 👋</h3>
+                        <p class="text-blue-100 mb-8 text-sm leading-relaxed">Quality LMS handling with transparent billing. Discounts are automatically applied based on your subjects.</p>
+
+                        <div class="space-y-4">
+                            <div class="bg-white/10 p-4 rounded-2xl border border-white/20">
+                                <p class="text-[10px] font-bold uppercase text-yellow-400 mb-1">Total Transparency</p>
+                                <p class="text-xs">Original Bill vs Discounted Bill visible side-by-side.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-8 p-6 md:p-10">
+                    
+                    <div id="form-stage" class="space-y-8">
                         <div>
-                            <h3 class="text-2xl font-bold mb-6">Welcome to LGWT! 👋</h3>
-                            <p class="text-blue-100 mb-8 text-sm leading-relaxed">Quality LMS handling with transparent
-                                billing. Discounts are automatically applied based on your subjects.</p>
-
-                            <div class="space-y-4">
-                                <div class="bg-white/10 p-3 rounded-xl border border-white/20">
-                                    <p class="text-[10px] font-bold uppercase text-yellow-400">Total Transparency</p>
-                                    <p class="text-xs">Original Bill vs Discounted Bill visible side-by-side.</p><br>
-                                    <p class="text-xs">Complete semester management including Quizzes, GDBs, and Cisco
-                                        assignments.</p>
-                                </div>
+                            <label class="block text-slate-700 font-bold mb-3 uppercase text-xs tracking-widest">Enter Subject Codes</label>
+                            <div id="tags-container" class="flex flex-wrap gap-2 p-3 bg-slate-50 rounded-[1.5rem] border-2 border-slate-200 focus-within:border-blue-500 transition-all min-h-[140px] items-start">
+                                <input type="text" id="tag-input" placeholder="Type CS101..." class="bg-transparent outline-none flex-grow p-2 text-slate-700 placeholder:text-slate-400">
                             </div>
+                            <p class="text-[10px] text-slate-400 mt-3">Separate codes with <b>Comma (,)</b>, <b>Space</b>, or <b>Enter</b>.</p>
                         </div>
+                        <button onclick="calculateInvoice()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-5 rounded-2xl shadow-xl transition-all transform active:scale-95">
+                            Generate My Bill 📄
+                        </button>
                     </div>
 
-                    <div class="md:col-span-8 p-10" id="form-stage">
-                        <div class="space-y-8">
-                            <div>
-                                <label
-                                    class="block text-slate-700 font-bold mb-3 uppercase text-xs tracking-widest">Enter
-                                    Subject Codes</label>
-                                <div id="tags-container"
-                                    class="flex flex-wrap gap-2 p-3 bg-slate-50 rounded-[1.5rem] border-2 border-slate-200 focus-within:border-blue-500 transition-all min-h-[140px] items-start">
-                                    <input type="text" id="tag-input" placeholder="Type CS101..."
-                                        class="bg-transparent outline-none flex-grow p-2 text-slate-700 placeholder:text-slate-400">
-                                </div>
-                                <p class="text-[10px] text-slate-400 mt-3">Separate codes with <b>Comma (,)</b>,
-                                    <b>Space</b>, or <b>Enter</b>.
-                                </p>
-                            </div>
-                            <button onclick="calculateInvoice()"
-                                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-5 rounded-2xl shadow-xl transition-all transform hover:scale-[1.01]">
-                                Generate My Bill 📄
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="md:col-span-8 p-8 hidden" id="result-stage">
+                    <div id="result-stage" class="hidden">
                         <div class="flex justify-between items-center mb-6">
-                            <h3 class="text-xl font-bold text-slate-800 tracking-tight">Your Detailed Invoice</h3>
-                            <button onclick="goBack()" class="text-blue-600 font-bold text-xs hover:underline">Edit
-                                List</button>
+                            <h3 class="text-xl font-bold text-slate-800 tracking-tight text-sm md:text-xl">Your Detailed Invoice</h3>
+                            <button onclick="goBack()" class="text-blue-600 font-bold text-xs hover:underline">Edit List</button>
                         </div>
 
-                        <div class="overflow-hidden border border-slate-100 rounded-3xl mb-8">
-                            <table class="w-full text-left">
-                                <thead class="bg-slate-50 border-b border-slate-100">
+                        <div class="overflow-x-auto border border-slate-100 rounded-3xl mb-8">
+                            <table class="w-full text-left min-w-[400px]"> <thead class="bg-slate-50 border-b border-slate-100">
                                     <tr class="text-[10px] font-bold text-slate-400 uppercase">
                                         <th class="p-4">Subject</th>
                                         <th class="p-4 text-center">Monthly</th>
@@ -352,53 +337,43 @@
                         </div>
 
                         <div class="mb-8 grid grid-cols-1 gap-2">
-                            <div id="off4k"
-                                class="p-3 rounded-xl border border-slate-100 flex justify-between items-center opacity-40 text-xs transition-all">
+                            <div id="off4k" class="p-3 rounded-xl border border-slate-100 flex justify-between items-center opacity-40 text-xs transition-all">
                                 <span>4K+ Semester Discount Offer</span><b class="text-green-600">- 500</b>
                             </div>
-                            <div id="off5k"
-                                class="p-3 rounded-xl border border-slate-100 flex justify-between items-center opacity-40 text-xs transition-all">
+                            <div id="off5k" class="p-3 rounded-xl border border-slate-100 flex justify-between items-center opacity-40 text-xs transition-all">
                                 <span>5K+ Super Discount Offer</span><b class="text-green-600">- 800</b>
                             </div>
-                            <div id="off6k"
-                                class="p-3 rounded-xl border border-slate-100 flex justify-between items-center opacity-40 text-xs transition-all">
+                            <div id="off6k" class="p-3 rounded-xl border border-slate-100 flex justify-between items-center opacity-40 text-xs transition-all">
                                 <span>6K+ Mega Discount Offer</span><b class="text-green-600">- 1200</b>
                             </div>
                         </div>
 
-                        <div class="bg-slate-900 rounded-[2.5rem] p-8 text-white shadow-2xl relative overflow-hidden">
+                        <div class="bg-slate-900 rounded-[2.5rem] p-6 md:p-8 text-white shadow-2xl relative overflow-hidden">
                             <div class="grid grid-cols-2 gap-4 mb-8">
                                 <div class="border-r border-white/10 pr-4">
                                     <p class="text-[9px] text-blue-300 font-bold uppercase mb-1">Total Original Bill</p>
-                                    <span id="grossBill"
-                                        class="text-xl font-bold text-slate-400 line-through tracking-tighter">Rs.
-                                        0</span>
+                                    <span id="grossBill" class="text-lg md:text-xl font-bold text-slate-400 line-through tracking-tighter">Rs. 0</span>
                                 </div>
                                 <div class="pl-4">
-                                    <p class="text-[9px] text-green-400 font-bold uppercase mb-1">Discounted Final Bill
-                                    </p>
-                                    <span id="finalBill"
-                                        class="text-3xl font-black text-yellow-400 tracking-tighter">Rs. 0</span>
+                                    <p class="text-[9px] text-green-400 font-bold uppercase mb-1">Discounted Final Bill</p>
+                                    <span id="finalBill" class="text-2xl md:text-3xl font-black text-yellow-400 tracking-tighter">Rs. 0</span>
                                 </div>
                             </div>
 
                             <div class="bg-blue-800/30 border border-blue-700/50 p-4 rounded-2xl mb-8">
                                 <p class="text-[10px] text-blue-100 italic leading-relaxed text-center">
-                                    <b>Supporting Note:</b> "If You Want More Discount Then Contact Me Using Cliced On
-                                    <b style="color: orange;"> Confirm & Book on WhatsApp</b>"
+                                    <b>Supporting Note:</b> "If You Want More Discount Then Contact Me Using Clicked On <b style="color: orange;"> Confirm & Book on WhatsApp</b>"
                                 </p>
                             </div>
 
-                            <button onclick="bookNow()"
-                                class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 shadow-lg transition-all transform active:scale-95">
+                            <button onclick="bookNow()" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 shadow-lg transition-all transform active:scale-95 text-xs md:text-base">
                                 <i class="fab fa-whatsapp text-xl"></i> Confirm & Book on WhatsApp
                             </button>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </div> </div> </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- BOT -->
     <section id="bot-console" class="py-24 bg-[#020617] relative overflow-hidden border-y border-blue-500/20">
