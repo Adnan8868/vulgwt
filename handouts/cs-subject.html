@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Handouts Hub | LGWT Official</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="https://img.icons8.com/fluency/48/graduation-cap.png" type="image/x-icon">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2a5298 100%);
+        }
+
+        .subject-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: #3b82f6;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50">
+
+    <header class="hero-gradient text-white py-16 px-4 shadow-2xl relative text-center">
+        <h1 class="text-3xl md:text-5xl font-extrabold mb-4 uppercase tracking-widest">
+            CS <span class="text-yellow-400">Handouts</span> Hub
+        </h1>
+        <p class="text-blue-100 text-lg max-w-2xl mx-auto opacity-90">Download verified CS handouts, highlighted notes,
+            and premium PPT slides.</p>
+
+        <div class="max-w-xl mx-auto mt-10 relative rounded-full overflow-hidden shadow-2xl bg-white">
+            <span class="absolute inset-y-0 left-5 flex items-center text-slate-400">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+            <input type="text" id="searchInput" onkeyup="searchSubjects()" placeholder="Search CS code (e.g. CS101)..."
+                class="w-full py-5 pl-14 pr-6 text-slate-900 font-bold outline-none border-none">
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-6 py-12">
+        <div class="mb-10">
+            <a href="handouts.html"
+                class="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-2xl text-blue-800 font-bold shadow-sm hover:shadow-md transition border border-gray-100">
+                <i class="fa-solid fa-arrow-left"></i> Back to Resource Hub
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="subjectContainer">
+
+            <script>
+                // Your Massive CS Handouts Database
+                const csHandouts = [
+                    { id: "CS001", name: "Computer Proficiency License", handouts: "https://drive.google.com/file/d/16ImmGYzNg_nmkPBOletb68HzBnFuMIg-/view", highlighted: "1fFxksRZwJT6zGojaQSRPWzxvh6pbctJK", ppt: "not_found.html" },
+                    { id: "CS101", name: "Introduction to Computing", handouts: "1r2xzDmFNQo8M-ffuzdSJ2PAycIz_jaL8", highlighted: "https://drive.google.com/drive/folders/11yMEjOXAJEgGgB3fPW3rQaW3XOqAmyrU", ppt: "not_found.html" },
+                    { id: "CS201", name: "Introduction to Programming", handouts: "1vSW7ajSdV6NkTGfFZuHo8dxE30ZqLtoi", highlighted: "https://drive.google.com/drive/folders/17eM3SAEiCBOyNd-INQsAuqtSFII9AtSv", ppt: "not_found.html" },
+                    { id: "CS202", name: "Fundamentals of Front End Development", handouts: "1pE65qNopOsQcw02A5lLuMSEBYwrT273M", highlighted: "not_found.html", ppt: "not_found.html" },
+                    { id: "CS204", name: "Cyber Law", handouts: "1eIBdHMamhLf03070V8A-jchwjPPIl-R_", highlighted: "https://drive.google.com/drive/folders/1n4q3f68yiAwLZ3A7hjee4vjX3LT_TI1J", ppt: "https://drive.google.com/file/d/1DxtgWkSxmlj9HsfKMVgfgIe_jQtpKKJs/view" },
+                    { id: "CS205", name: "Information Security", handouts: "1LKR2pcbJjOKBYxNdFvrkiz9jNboy-DS6", highlighted: "https://drive.google.com/drive/folders/1bnr8VJETywsgLHY2QVUyrvn9OhYG1oi0", ppt: "https://drive.google.com/file/d/1VyKMDhkOddpa3knFUatD2oHozkZiELca/view" },
+                    { id: "CS301", name: "Data Structures", handouts: "1-N8_ddH9IJF93--pMzhkgqnbEi8lGAi9", highlighted: "https://drive.google.com/drive/folders/1_tTenyQbgHZFSzHSiquiuDVAnrRzvJsG", ppt: "not_found.html" },
+                    { id: "CS302", name: "Digital Logic & Design", handouts: "1vqiH0KUgKwu7AJzEihaUSuxtlx24yEva", highlighted: "https://drive.google.com/drive/folders/1FSRgNfPZgX0A2-VF5Oo5kaF6Ft6zjD_i", ppt: "not_found.html" },
+                    { id: "CS304", name: "Object Oriented Programming", handouts: "1g1Mbm1uBn2JH1eBOkAiEEw0vjf0MAX3-", highlighted: "https://drive.google.com/drive/folders/1dUV6yyxA8dXNYwfBlDmvx3_WmJ5Dxk9-", ppt: "not_found.html" },
+                    { id: "CS311", name: "Web Services Development", handouts: "163fs8TgkKBJGlsvV5GOPMtDwmYxr4eJ7", highlighted: "not_found.html", ppt: "not_found.html" },
+                    { id: "CS312", name: "Database Modeling and Design", handouts: "1nDpK70rA8nB8BwdVtIkyoytyCwiMkA9k", highlighted: "https://drive.google.com/drive/folders/1RwTXw8VVH2AxX1swTkRjASq4HcnkPA9Q", ppt: "not_found.html" },
+                    { id: "CS315", name: "Network Security", handouts: "1b7Fn0ZQLN53xNQUvu_0K5sQaKrrxLEVB", highlighted: "not_found.html", ppt: "not_found.html" },
+                    { id: "CS401", name: "Assembly Language Programming", handouts: "12gXxDYwrV1NABFID-poki8XFO5Nxiski", highlighted: "https://drive.google.com/drive/folders/1srf0YfO45v0VKLfKomu3RdPMSAc2ugoC", ppt: "not_found.html" },
+                    { id: "CS402", name: "Theory of Automata", handouts: "1QO8oKDC2VlqkBuHFBQl6N3tPWM5gXYyX", highlighted: "https://drive.google.com/drive/folders/1SQ_KceBd6QWydWiiIPrBDWSianhFEnK7", ppt: "not_found.html" },
+                    { id: "CS403", name: "Database Management System", handouts: "1dg-c25Zm2AgS2CK7uqv_x3C8xpv--eaU", highlighted: "https://drive.google.com/drive/folders/11VUndHop-gwsTzw87ZByaTrZAzkaUBiT", ppt: "not_found.html" },
+                    { id: "CS405", name: "Oracle 11g Programming", handouts: "1CzvD77mFOE9hixkSWLnRJ1IWK9LqmO2V", highlighted: "not_found.html", ppt: "not_found.html" },
+                    { id: "CS407", name: "Routing and Switching", handouts: "1IX0hiU6r0sVEJPb7lC5Vu2aMaofHV4AA", highlighted: "not_found.html", ppt: "not_found.html" },
+                    { id: "CS408", name: "Human Computer Interaction", handouts: "1XmTpw_7bIwBKQpuAxwzOVhs1ZnU5_3WP", highlighted: "https://drive.google.com/drive/folders/1c2f5kzpGdHlHO3V8NTTBLSbUEq-Nj9R3", ppt: "not_found.html" },
+                    { id: "CS409", name: "Database Administration", handouts: "1R4AKwlAWZbYcRCGCc29zq_TeRmV7WTXF", highlighted: "https://drive.google.com/drive/folders/1L2l5wcJM9qjU0ELtA84UmKlcaNRAkdZ4", ppt: "https://drive.google.com/file/d/1h01zzZbs3fQVMuiY_eDAjxaY8Bxay4mS/view" },
+                    { id: "CS411", name: "Visual Programming", handouts: "1SIssIJkn1P2Dmikm8NmUcxTYd7YxNuCs", highlighted: "https://drive.google.com/drive/folders/1musuJCffN7ckR_5D651khuywOvn5-gL9", ppt: "not_found.html" },
+                    { id: "CS420", name: "Mobile Web Development", handouts: "18m7Y94Irb8UhLX4UZswbU_MeynThFGtG", highlighted: "https://drive.google.com/drive/folders/17zZ-VKwRQc6_VtVBhP-O-DqagtugV6xG", ppt: "not_found.html" },
+                    { id: "CS432", name: "Network Modeling & Simulation", handouts: "1iKIl3ye2_Yz-b43PG-orG9TvK0ok1BBs", highlighted: "https://drive.google.com/drive/folders/1OcFpM6xpn2XmBVFKnIKWP2ypGXr3YjJg", ppt: "not_found.html" },
+                    { id: "CS435", name: "Cloud Computing", handouts: "1xPBbXCqJVxKcGzHUDD32wRrfq25LoKoJ", highlighted: "https://drive.google.com/drive/folders/11719rS7Cak_Lgqe8seSFh8ZPWoI7_ElZ", ppt: "not_found.html" },
+                    { id: "CS501", name: "Advance Computer Architecture", handouts: "1JJ_hMVKPNoJKUcrXsClTLmmcd5fPNUR3", highlighted: "https://drive.google.com/drive/folders/1gccP84wZwW0GvwrUMy6cgKJ2jD8JJgH1", ppt: "not_found.html" },
+                    { id: "CS502", name: "Algorithms Design & Analysis", handouts: "1EiHQLxRkA1Itq5DWA9WlKAHN57erm5tN", highlighted: "https://drive.google.com/drive/folders/163Grrqk28VnJCnR1pxXv8sZiz9Gzv-hY", ppt: "not_found.html" },
+                    { id: "CS504", name: "Software Engineering – I", handouts: "1ta8_GTmXipOw1m-2EqKK9ZBlSiR-kUY3", highlighted: "https://drive.google.com/drive/folders/16vE7_L4Mbu_A8j-s0DHrDXG1ZkyVEDdf", ppt: "not_found.html" },
+                    { id: "CS505", name: "Introduction to Virtualization", handouts: "1XW_ZWG2ypDCeIOpXIOWSi41Shmf76f1t", highlighted: "https://drive.google.com/file/d/1XW_ZWG2ypDCeIOpXIOWSi41Shmf76f1t/view", ppt: "not_found.html" },
+                    { id: "CS506", name: "Web Design and Development", handouts: "1j1gX5aIHHkvpWfLwIMqm4epnJfzxnQAT", highlighted: "https://drive.google.com/drive/folders/1wSIp3R0jmuU6BmuNbNA7pAEJd1xeoM9j", ppt: "not_found.html" },
+                    { id: "CS507", name: "Information System", handouts: "1dlRfeoEE-TFJBXiJUBGSjUqAbtIYVwJI", highlighted: "https://drive.google.com/drive/folders/1PF_DGVRU8PbRHDqZIlr_a6PqoF8n1DZu", ppt: "not_found.html" },
+                    { id: "CS508", name: "Modern Programming Languages", handouts: "1Y5d_uuMseD6glF74yG5YlMskZ8YuSByr", highlighted: "https://drive.google.com/drive/folders/1dLvD79ml76t33JbIHmBqV5e0uj_EhRPY", ppt: "not_found.html" },
+                    { id: "CS510", name: "Software Specification", handouts: "1qAzhhmDfIuUFjZL6m00JfFeX7L9hw4DD", highlighted: "https://drive.google.com/drive/folders/1ipaB1nM4vzTjyop1E2BnnIB8LWDjNndJ", ppt: "not_found.html" },
+                    { id: "CS511", name: "Web Engineering", handouts: "https://drive.google.com/drive/folders/18UbNu8DOBGE7QvV2URaVtBwSbvxDBKKv", highlighted: "https://drive.google.com/drive/folders/18UbNu8DOBGE7QvV2URaVtBwSbvxDBKKv", ppt: "not_found.html" },
+                    { id: "CS601", name: "Data Communication", handouts: "1u_4mNALdFK6uIdN4Ma2O6xCLLXiM3Nn0", highlighted: "https://drive.google.com/drive/folders/1HykBN-oph0dognk6AD7rJvrnapDwR2Zg", ppt: "not_found.html" },
+                    { id: "CS602", name: "Computer Graphics", handouts: "1YGIuo6OJ4c8OJkiKLtmdwwIDPJTo1Mj4", highlighted: "https://drive.google.com/drive/folders/1MmNukuN4Tv97_VBeUnQY9TWHUSYISeBG", ppt: "not_found.html" },
+                    { id: "CS603", name: "Software Architecture", handouts: "not_found.html", highlighted: "not_found.html", ppt: "not_found.html" },
+                    { id: "CS604", name: "Operating System", handouts: "1i9D54AhB1HIVRxofAgStmkgm6Lwq3o3A", highlighted: "https://drive.google.com/drive/folders/1vmQApQohYyycJH1uyiBCaJgplXNgcOiH", ppt: "not_found.html" },
+                    { id: "CS605", name: "Software Engineering-II", handouts: "1d7P0YH1pfMlquLozoXqzzG9JG3-4yUkv", highlighted: "https://drive.google.com/drive/folders/1x-4BbdEhDI9fdDR3haDnnq_yPIkNHnEL", ppt: "not_found.html" },
+                    { id: "CS606", name: "Compiler Construction", handouts: "1Xt8egZ1k4Xw77v9Qr3yM7fk5URHr0z6d", highlighted: "https://drive.google.com/drive/folders/1EqV6c3qP7pzO81vXMWNuC9-vqImMxEV6", ppt: "not_found.html" },
+                    { id: "CS607", name: "Artificial Intelligence", handouts: "1OHbV31CljXEC5jgegd2YKJVpUHNSrYO1", highlighted: "https://drive.google.com/drive/folders/1vTHx7-n1ysQKAqFGarV5wGasEJkgCPS9", ppt: "not_found.html" },
+                    { id: "CS608", name: "Software Verification & Validation", handouts: "1-Ma40JpK1w07pU5kiLatUhGfDpIKWN1m", highlighted: "not_found.html", ppt: "not_found.html" },
+                    { id: "CS609", name: "System Programming", handouts: "1oRUHjRr7HAG_vSW0OKe5zAOloVcoUkS8", highlighted: "https://drive.google.com/drive/folders/1W2GOJ_7UE1zmYkAxu2H3-iEunkQX4VhO", ppt: "not_found.html" },
+                    { id: "CS610", name: "Computer Networks", handouts: "1k6sAGLfKIX2KimMuax9CixTa5htpvc4t", highlighted: "https://drive.google.com/drive/folders/1Gg6SxzxGofXuO0pXp0RigQLPvqRSlbX0", ppt: "https://drive.google.com/file/d/1N45uEer2tyz1_e5KPG8_2IOw_YIzQ9bq/view" },
+                    { id: "CS611", name: "Software Quality Engineering", handouts: "1KsLO-DcPMjByUnqvB7nOn0F8dLKwq43c", highlighted: "https://drive.google.com/file/d/1EjG1UzTlaBG-klp3i5R3yeWKHaJFJWlZ/view", ppt: "not_found.html" },
+                    { id: "CS614", name: "Data Warehousing", handouts: "1HC3LD4j6vlmQJzwyPfcEquMhbAanaZMT", highlighted: "https://drive.google.com/file/d/1bO5q3rlP0MXQoa2UCKfnOpB5fLXiSE-H/view", ppt: "not_found.html" },
+                    { id: "CS615", name: "Software Project Management", handouts: "1JY0_3cGuOmYMfk9eFNCBBEuUMjUCCsPw", highlighted: "https://drive.google.com/drive/folders/1Fx8qlxWioEPQ2Y1wdkRj9hYgEz-cl9t_", ppt: "not_found.html" },
+                    { id: "CS620", name: "Modeling & Simulation", handouts: "https://drive.google.com/drive/folders/1nygHEDjjN49KP3dBX3mWey0T4UrRNn2f", highlighted: "https://drive.google.com/drive/folders/1nygHEDjjN49KP3dBX3mWey0T4UrRNn2f", ppt: "https://drive.google.com/drive/folders/1nygHEDjjN49KP3dBX3mWey0T4UrRNn2f" },
+                    { id: "CS621", name: "Parallel Computing", handouts: "https://drive.google.com/drive/folders/11s7wRV9y4e8S_HVDhTm6M6JnTU1slwz1", highlighted: "https://drive.google.com/drive/folders/11s7wRV9y4e8S_HVDhTm6M6JnTU1slwz1", ppt: "https://drive.google.com/file/d/1dtdKNGNKHPihjqSX5XXXO0Lfas4ORvff/view" },
+                    { id: "CS625", name: "Professional Practices", handouts: "1Vz5a9DZL-G9CFqFhNCanQxuG-mWOrhnQ", highlighted: "https://drive.google.com/drive/folders/1Oq4LwMDZm77JxmEgLnDz4vd8mbhZPcxB", ppt: "not_found.html" },
+                    { id: "CS636", name: "Formal Methods", handouts: "https://drive.google.com/file/d/1VmOj-f1kc_dM8AA9z3hsYDACVdhnTRaO/view", highlighted: "https://drive.google.com/file/d/1QB9xhksVb1ehNYoKUcfNa4zboEtvTsmx/view", ppt: "not_found.html" },
+                    { id: "CS701", name: "Theory of Computation", handouts: "https://drive.google.com/file/d/1Zudg5e6dWlJvTWr7iaLuETq1QllV66Wz/view", highlighted: "not_found.html", ppt: "not_found.html" },
+                    { id: "CS702", name: "Advanced Algorithms", handouts: "https://drive.google.com/file/d/1nUnuYQbble_Mgv3vaSe0OBR5SqMeLwDh/view", highlighted: "not_found.html", ppt: "not_found.html" },
+                    { id: "CS704", name: "Advanced Architecture", handouts: "https://drive.google.com/file/d/1-cxt4MVCQQDJen7_f6N2-RK20otcNHVY/view", highlighted: "not_found.html", ppt: "not_found.html" },
+                    { id: "CS711", name: "Software Design", handouts: "https://drive.google.com/file/d/1uLSyo_nEPiwF3ReMOS-LAxL4M02Ex-Ep/view", highlighted: "not_found.html", ppt: "not_found.html" },
+                    { id: "CS718", name: "Wireless Networks", handouts: "https://drive.google.com/file/d/1FljAxEkI6OUbRHTLrC04A6Ws5bGDkmxP/view", highlighted: "not_found.html", ppt: "not_found.html" },
+                    { id: "CS724", name: "Software process Improvement", handouts: "https://drive.google.com/file/d/1k65C8GeBAPg-g2l8c1zwZHxtpHdIu6zA/view", highlighted: "not_found.html", ppt: "not_found.html" },
+                    { id: "CS726", name: "Information Retrieval", handouts: "https://drive.google.com/file/d/15ObB0_ZbuV7QGVnUXI_xLzAfYnHKnDsN/view", highlighted: "not_found.html", ppt: "not_found.html" }
+                ];
+
+                const container = document.getElementById('subjectContainer');
+
+                csHandouts.forEach(item => {
+                    const handoutsLink = item.handouts.startsWith('http') ? item.handouts : `https://drive.google.com/uc?export=download&id=${item.handouts}`;
+
+                    container.innerHTML += `
+                        <div class="card subject-card bg-white p-8 rounded-[2.5rem] flex flex-col justify-between shadow-sm">
+                            <div>
+                                <span class="bg-blue-50 text-blue-600 px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">CS Material</span>
+                                <h3 class="text-2xl font-black text-slate-800 mt-3">${item.id}</h3>
+                                <p class="text-slate-500 text-sm font-medium mb-8">${item.name}</p>
+                            </div>
+                            <div class="space-y-3">
+                                <a href="${handoutsLink}" class="flex items-center justify-center gap-2 w-full py-3 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-100" target="_blank">
+                                    <i class="fa-solid fa-file-pdf"></i> Handouts
+                                </a>
+                                <a href="${item.highlighted}" class="flex items-center justify-center gap-2 w-full py-3 bg-yellow-400 text-blue-900 rounded-xl font-bold hover:bg-yellow-500 transition" target="_blank">
+                                    <i class="fa-solid fa-highlighter"></i> Highlighted
+                                </a>
+                                <a href="${item.ppt}" class="flex items-center justify-center gap-2 w-full py-3 bg-slate-100 text-slate-500 rounded-xl font-bold hover:bg-slate-200 transition">
+                                    <i class="fa-solid fa-file-powerpoint"></i> PPT Slides
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                function searchSubjects() {
+                    let input = document.getElementById('searchInput').value.toUpperCase();
+                    let cards = document.getElementsByClassName('subject-card');
+                    for (let i = 0; i < cards.length; i++) {
+                        let text = cards[i].innerText.toUpperCase();
+                        cards[i].style.display = text.includes(input) ? "" : "none";
+                    }
+                }
+            </script>
+        </div>
+    </div>
+
+    
+    <!-- Footer -->
+    <footer
+        class="bg-[#0f172a] text-white pt-16 pb-8 mt-20 relative overflow-hidden border-t border-blue-500/20 font-['Poppins']">
+
+        <div class="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 rounded-full blur-[80px] -mr-32 -mt-32">
+        </div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-yellow-500/5 rounded-full blur-[80px] -ml-32 -mb-32">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+
+                <div class="space-y-6">
+                    <div class="text-2xl font-black tracking-tighter">
+                        LGWT <span class="text-yellow-400">OFFICIAL</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Learning & Growing With Team. Pakistan's most trusted partner for Virtual University
+                        students. We provide 100% accurate solutions & LMS handling.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://whatsapp.com/channel/0029VbAfKscEVccSHYySNP3I" target="_blank"
+                            class="w-10 h-10 bg-white/5 text-green-500 rounded-xl flex items-center justify-center hover:bg-green-500 hover:text-white transition-all border border-white/10">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                        <a href="https://youtube.com/@VUStudyLGWT" target="_blank"
+                            class="w-10 h-10 bg-white/5 text-red-500 rounded-xl flex items-center justify-center hover:bg-red-500 hover:text-white transition-all border border-white/10">
+                            <i class="fab fa-youtube text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h4 class="text-white font-bold border-l-4 border-blue-600 pl-4 uppercase tracking-widest text-xs">
+                        Resources</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm font-medium">
+                        <li><a href="../handouts/handouts.html"
+                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
+                                VU Handouts</a></li>
+                        <li><a href="../papers/pastpapers.html"
+                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
+                                Past Papers Vault</a></li>
+                        <li><a href="../Result/video-results.html"
+                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
+                                Video Results</a></li>
+                        <li><a href="../Result/pdf-results.html"
+                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
+                                PDF Proofs</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h4
+                        class="text-white font-bold border-l-4 border-yellow-400 pl-4 uppercase tracking-widest text-xs">
+                        Our Services</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm font-medium">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500/50 text-xs"></i>
+                            Full LMS Handling</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500/50 text-xs"></i>
+                            Assignment Solutions
+                        </li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500/50 text-xs"></i>
+                            Quiz Management</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500/50 text-xs"></i>
+                            Cisco Assignemnts
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h4 class="text-white font-bold border-l-4 border-blue-600 pl-4 uppercase tracking-widest text-xs">
+                        Support</h4>
+                    <div class="bg-white/5 p-6 rounded-[2rem] border border-white/10 space-y-4 shadow-2xl">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white">
+                                <i class="fa-solid fa-headset text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-slate-500 font-black uppercase tracking-widest">Help
+                                    Desk</p>
+                                <p class="text-xs font-bold text-white">vustudylgwt@gmail.com</p>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/923196248868" target="_blank"
+                            class="block w-full py-3 bg-yellow-400 text-blue-950 text-center rounded-xl font-black text-[10px] hover:bg-yellow-300 transition-all uppercase tracking-widest shadow-lg">
+                            Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-px w-full bg-gradient-to-r from-transparent via-slate-700 to-transparent mb-8"></div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-slate-500 text-[10px] font-medium text-center md:text-left">
+                    &copy; 2026 <span class="text-white font-bold">LGWT Official</span>. Learning & Growing With
+                    Team.
+                </div>
+                <div class="flex items-center gap-4 text-slate-500 text-[9px] uppercase tracking-[0.3em] font-black">
+                    Trust <span class="text-blue-500">●</span> Accuracy <span class="text-yellow-400">●</span>
+                    Success
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

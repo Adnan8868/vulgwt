@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENG Handouts Hub | LGWT Official</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="https://img.icons8.com/fluency/48/graduation-cap.png" type="image/x-icon">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2a5298 100%);
+        }
+
+        .subject-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: #3b82f6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="hero-gradient text-white py-16 px-4 text-center shadow-2xl">
+        <h1 class="text-3xl md:text-5xl font-extrabold mb-4 uppercase tracking-widest">
+            ENG <span class="text-yellow-400">Handouts</span> Hub
+        </h1>
+        <p class="text-blue-100 text-lg">Download English subject handouts & highlighted notes.</p>
+
+        <div class="max-w-xl mx-auto mt-10 relative rounded-full overflow-hidden shadow-2xl">
+            <span class="absolute inset-y-0 left-5 flex items-center text-slate-400">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+            <input type="text" id="searchInput" onkeyup="searchSubjects()" placeholder="Search subject (e.g. ENG101)..."
+                class="w-full py-5 pl-14 pr-6 text-slate-900 font-bold outline-none">
+        </div>
+    </header>
+
+    <!-- BACK -->
+    <div class="max-w-7xl mx-auto px-6 py-10">
+        <a href="handouts.html"
+            class="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-2xl text-blue-800 font-bold shadow hover:shadow-md border">
+            <i class="fa-solid fa-arrow-left"></i> Back to Resource Hub
+        </a>
+    </div>
+
+    <!-- CARDS -->
+    <div class="max-w-7xl mx-auto px-6 pb-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="subjectContainer"></div>
+    </div>
+
+    <script>
+        const engData = [
+
+            { id: "ENG001", name: "Elementary English", handouts: "1EZ9mSH4NMZw0Ea7tDJK1g5g3iiurQRnj", highlighted: "not_found.html" },
+
+            { id: "ENG101", name: "English Comprehension", handouts: "1oUU7yD_761Y62eiuj1KOkzYA6sJyF65H", highlighted: "https://drive.google.com/drive/folders/1II6te3MZQUHwLo0_ERTPfHPiFqF-U057" },
+
+            { id: "ENG201", name: "Business and Technical English", handouts: "18uuwE2AZns7YHZPJJPTplU0ktgvxUGQZ", highlighted: "https://drive.google.com/drive/folders/1DMKOzXB76VtRnMQUFrrnQw0pPBN-0lAM" },
+
+            { id: "ENG301", name: "Business Communication", handouts: "1wQ6ge7H2zGNqq6-ZagyUoXAl4uqDmA-3", highlighted: "https://drive.google.com/drive/folders/1r1kbCyJ1t1TcdgpcUhHKib6MJ8m8axaZ" },
+
+            { id: "ENG501", name: "History of English Language", handouts: "1cvUGCYh2SXjC-nii3P78VPRBmG08s70Q", highlighted: "https://drive.google.com/drive/folders/1lugzC5sWzgancnWbgY1Ydi5Xe74uGA2C" },
+
+            { id: "ENG502", name: "Introduction to Linguistics", handouts: "1em2YBMIISiEC-mnp2EMtYLeJhnvH-mMr", highlighted: "https://drive.google.com/drive/folders/1oHho4dtGnZxTGGwLNX0_8gCYFo_8Bp9y" },
+
+            { id: "ENG503", name: "Introduction to ELT", handouts: "1lrhXGXIKRqR-KYOHSrHwZqwd3gWOSM56", highlighted: "https://drive.google.com/drive/folders/1gdAGCcTvJAwj55a6eg8L0659IUfSsNo5" },
+
+            { id: "ENG504", name: "Second Language Acquisition", handouts: "1XcHxPNhibM677cLYuNl8wRgBSTDusFlS", highlighted: "https://drive.google.com/drive/folders/1c-wqy0d2RyWbjeAo53Wt7U0QhwLbfIfy" },
+
+            { id: "ENG505", name: "Language Learning Theories", handouts: "1YACzWuKyCyagVDQmBLmo0OVEux3abmEN", highlighted: "https://drive.google.com/drive/folders/1OsFpSYlg5pKGTVa-HlvH1ARM5-RsrkzH" },
+
+            { id: "ENG506", name: "World Englishes", handouts: "1taS0axoOsedpU163k8fGhAqxeoc3hp34", highlighted: "https://drive.google.com/drive/folders/1RUjVCekUXBLHp2vjLzfnAQJectQG7bBP" },
+
+            { id: "ENG507", name: "Phonetics and Phonology", handouts: "1dp_rlmSJoVMNqm4e1Lqto4_OVg2Nseki", highlighted: "https://drive.google.com/drive/folders/130yIam2ZmVd73Ass4YjAXQ4mbnJrEA2O" },
+
+            { id: "ENG508", name: "Semantics and Pragmatics", handouts: "1l82Ju8jhNWaa2SQFVqYZAZq1J-n2R_Ly", highlighted: "https://drive.google.com/drive/folders/1nggruhu0oWrYJH73Fzyu98ZPv6L0JpUk" },
+
+            { id: "ENG509", name: "Morphology and Syntax", handouts: "1fAx8GEYUulT-Tgong3185frwtgMnySsl", highlighted: "https://drive.google.com/drive/folders/1L4SDEltjCI6mBVBebbzgKjsHIqntsQQo" },
+
+            { id: "ENG510", name: "Sociolinguistics", handouts: "1K3HBgK83Bzf3Ty_svNB8gGGAe7w95rSO", highlighted: "https://drive.google.com/drive/folders/1GcOCIUO8_kSwuIenFX5wK-EWr484iq-b" },
+
+            { id: "ENG511", name: "Psycholinguistics", handouts: "14ZmjJVG0LMLW_Izy1yvGK6uePTD3l-zE", highlighted: "https://drive.google.com/drive/folders/1_0vyxQ24yqWI8onjarqD_rwtBORPOUwh" },
+
+            { id: "ENG512", name: "Bilingualism", handouts: "1md8D98ZXUBzUkUGKOdSXniVwS7RpCPjC", highlighted: "https://drive.google.com/drive/folders/1RTDxFWCl5LAQdpf18NbglSDWPAAklUp5" },
+
+            { id: "ENG513", name: "Language Teaching Methods", handouts: "1c8I8zMqJbiDM4ayfYsDvDbWl3S6aXPVv", highlighted: "https://drive.google.com/drive/folders/1vJ_Dk9KR45XfKn0pb-5Ed9dY6Mgw9SHi" },
+
+            { id: "ENG514", name: "Teaching Listening and Speaking Skills", handouts: "1FO0-EmpH17t3heSI4WgzOy9un35dzene", highlighted: "https://drive.google.com/drive/folders/1hrJmqy17GQUaPWYkdZLs3d2omwqxlhGz" },
+
+            { id: "ENG515", name: "Teaching Reading and Writing Skills", handouts: "1Rtxy56_qbj_3OAItEVYxxz9NcQyMByxb", highlighted: "https://drive.google.com/drive/folders/1mGQNXepoIBz4-gDtutne25rDSbbhayCB" },
+
+            { id: "ENG516", name: "School Teaching of Business Communication", handouts: "1C0nZ0Wp6fUJdU52ZElowSh3sF4Js3P49", highlighted: "https://drive.google.com/drive/folders/1R8pFgAvat590lNReDx9IoS5yYRZdlApg" },
+
+            { id: "ENG517", name: "Computer Assisted Language Learning", handouts: "1_gfo5lZ6DyT1cHrOFwFRCvqa5GN37CB-", highlighted: "not_found.html" },
+
+            { id: "ENG518", name: "Research Methodology", handouts: "1qLRoskDqYap5SSxneclEJnZEoUCk_ziS", highlighted: "https://drive.google.com/drive/folders/1tGUAmZYQTcY1MakgMf25gNedxWm1-qIB" },
+
+            { id: "ENG519", name: "Curriculum Design", handouts: "1-2TF_FPGBRyXR91o-8D_Vk-lf_HzmSf5", highlighted: "not_found.html" },
+
+            { id: "ENG520", name: "Testing and Assessment", handouts: "18G5stqVMhSfnP5n6Aihg2AEV3w8INhb5", highlighted: "https://drive.google.com/drive/folders/1oxMIRgNIEt0plpHOfcrAhg_CV35IzU7v" },
+
+            { id: "ENG521", name: "Language Classroom Management", handouts: "1qzJDHuCeNqcH32VKiG5YZpexFSkDaYMo", highlighted: "not_found.html" },
+
+            { id: "ENG522", name: "Applied Linguistics", handouts: "1wOb9qWNLeyMbzbQkwnswkmPLk-M_SV5p", highlighted: "https://drive.google.com/drive/folders/1Dv4yOkZP-pREzy7pk2Tgqd_jD34jwOO6" },
+
+            { id: "ENG523", name: "Discourse Analysis", handouts: "1d3TSdYz0xhylqlVPfQk6XWMG4LrAH2jH", highlighted: "https://drive.google.com/drive/folders/1spkszvgIA_Vdd9RgqmbNi1rZLaEfcRW1" },
+
+            { id: "ENG524", name: "Critical Discourse Analysis", handouts: "1LyGnVcL3Rc-MFTfqaa4KdNpvH8wpHG3W", highlighted: "https://drive.google.com/drive/folders/1UGDi8zPkc8RiHTgEqIn9K-noVPclKDMM" },
+
+            { id: "ENG527", name: "Language and Gender", handouts: "14OMSN_CwM7VFNFtvyYg1HXogHfSAaofd", highlighted: "not_found.html" },
+
+            { id: "ENG529", name: "Technology in Language Teaching", handouts: "1d-3XflNRY8_Ktzztq48RB6oVkhdeJa77", highlighted: "not_found.html" }
+
+        ];
+
+        const container = document.getElementById('subjectContainer');
+
+        engData.forEach(item => {
+
+            const handoutsLink = item.handouts.startsWith('http')
+                ? item.handouts
+                : `https://drive.google.com/uc?export=download&id=${item.handouts}`;
+
+            container.innerHTML += `
+                <div class="subject-card bg-white p-8 rounded-[2.5rem] flex flex-col justify-between">
+                    <div>
+                        <span class="bg-blue-50 text-blue-600 px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">
+                            English
+                        </span>
+                        <h3 class="text-2xl font-black text-slate-800 mt-3">${item.id}</h3>
+                        <p class="text-slate-500 text-sm font-medium mb-8">${item.name}</p>
+                    </div>
+
+                    <div class="space-y-3">
+                        <a href="${handoutsLink}" target="_blank"
+                            class="flex items-center justify-center gap-2 w-full py-3 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition">
+                            <i class="fa-solid fa-file-pdf"></i> Handouts
+                        </a>
+
+                        <a href="${item.highlighted}" target="_blank"
+                            class="flex items-center justify-center gap-2 w-full py-3 bg-yellow-400 text-blue-900 rounded-xl font-bold hover:bg-yellow-500 transition">
+                            <i class="fa-solid fa-highlighter"></i> Highlighted
+                        </a>
+                    </div>
+                </div>
+            `;
+        });
+
+        function searchSubjects() {
+            let input = document.getElementById('searchInput').value.toUpperCase();
+            let cards = document.getElementsByClassName('subject-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                let text = cards[i].innerText.toUpperCase();
+                cards[i].style.display = text.includes(input) ? "" : "none";
+            }
+        }
+    </script>
+
+
+    
+    <!-- Footer -->
+    <footer
+        class="bg-[#0f172a] text-white pt-16 pb-8 mt-20 relative overflow-hidden border-t border-blue-500/20 font-['Poppins']">
+
+        <div class="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 rounded-full blur-[80px] -mr-32 -mt-32">
+        </div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-yellow-500/5 rounded-full blur-[80px] -ml-32 -mb-32">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+
+                <div class="space-y-6">
+                    <div class="text-2xl font-black tracking-tighter">
+                        LGWT <span class="text-yellow-400">OFFICIAL</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Learning & Growing With Team. Pakistan's most trusted partner for Virtual University
+                        students. We provide 100% accurate solutions & LMS handling.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://whatsapp.com/channel/0029VbAfKscEVccSHYySNP3I" target="_blank"
+                            class="w-10 h-10 bg-white/5 text-green-500 rounded-xl flex items-center justify-center hover:bg-green-500 hover:text-white transition-all border border-white/10">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                        <a href="https://youtube.com/@VUStudyLGWT" target="_blank"
+                            class="w-10 h-10 bg-white/5 text-red-500 rounded-xl flex items-center justify-center hover:bg-red-500 hover:text-white transition-all border border-white/10">
+                            <i class="fab fa-youtube text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h4 class="text-white font-bold border-l-4 border-blue-600 pl-4 uppercase tracking-widest text-xs">
+                        Resources</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm font-medium">
+                        <li><a href="../handouts/handouts.html"
+                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
+                                VU Handouts</a></li>
+                        <li><a href="../papers/pastpapers.html"
+                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
+                                Past Papers Vault</a></li>
+                        <li><a href="../Result/video-results.html"
+                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
+                                Video Results</a></li>
+                        <li><a href="../Result/pdf-results.html"
+                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
+                                PDF Proofs</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h4
+                        class="text-white font-bold border-l-4 border-yellow-400 pl-4 uppercase tracking-widest text-xs">
+                        Our Services</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm font-medium">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500/50 text-xs"></i>
+                            Full LMS Handling</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500/50 text-xs"></i>
+                            Assignment Solutions
+                        </li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500/50 text-xs"></i>
+                            Quiz Management</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500/50 text-xs"></i>
+                            Cisco Assignemnts
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h4 class="text-white font-bold border-l-4 border-blue-600 pl-4 uppercase tracking-widest text-xs">
+                        Support</h4>
+                    <div class="bg-white/5 p-6 rounded-[2rem] border border-white/10 space-y-4 shadow-2xl">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white">
+                                <i class="fa-solid fa-headset text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-slate-500 font-black uppercase tracking-widest">Help
+                                    Desk</p>
+                                <p class="text-xs font-bold text-white">vustudylgwt@gmail.com</p>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/923196248868" target="_blank"
+                            class="block w-full py-3 bg-yellow-400 text-blue-950 text-center rounded-xl font-black text-[10px] hover:bg-yellow-300 transition-all uppercase tracking-widest shadow-lg">
+                            Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-px w-full bg-gradient-to-r from-transparent via-slate-700 to-transparent mb-8"></div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-slate-500 text-[10px] font-medium text-center md:text-left">
+                    &copy; 2026 <span class="text-white font-bold">LGWT Official</span>. Learning & Growing With
+                    Team.
+                </div>
+                <div class="flex items-center gap-4 text-slate-500 text-[9px] uppercase tracking-[0.3em] font-black">
+                    Trust <span class="text-blue-500">●</span> Accuracy <span class="text-yellow-400">●</span>
+                    Success
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

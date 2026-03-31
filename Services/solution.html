@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions Hub | LGWT Official</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="https://img.icons8.com/fluency/48/graduation-cap.png" type="image/x-icon">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2a5298 100%);
+        }
+
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid #e2e8f0;
+        }
+
+        .service-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgba(30, 58, 138, 0.2);
+            border-color: #3b82f6;
+        }
+
+        .latest-badge {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.9;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero-gradient text-white py-24 px-4 shadow-2xl relative text-center overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
+        <h1 class="text-4xl md:text-6xl font-black mb-4 tracking-tighter uppercase">Solutions <span
+                class="text-yellow-400">Vault</span></h1>
+        <p class="text-blue-100 text-lg opacity-90 max-w-2xl mx-auto font-medium">Spring 2026 Solved Assignments,
+            Quizzes, and GDBs.</p>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-6 py-16">
+
+        <div class="mb-12">
+            <a href="../index.html"
+                class="inline-flex items-center gap-2 bg-white px-8 py-4 rounded-[1.5rem] text-blue-700 font-black shadow-sm hover:shadow-md transition border border-gray-100">
+                <i class="fa-solid fa-arrow-left"></i> BACK TO DASHBOARD
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <div class="service-card bg-white p-10 rounded-[3rem] relative overflow-hidden group">
+                <div class="absolute top-6 right-6">
+                    <span
+                        class="latest-badge bg-green-500 text-white text-[10px] font-black px-4 py-1.5 rounded-full shadow-lg uppercase">Spring
+                        2026</span>
+                </div>
+                <div
+                    class="w-20 h-20 bg-blue-50 text-blue-600 rounded-[1.5rem] flex items-center justify-center mb-8 text-4xl group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-fire-flame-curved"></i>
+                </div>
+                <h3 class="text-2xl font-black text-slate-800 mb-4 tracking-tight">Active Solutions</h3>
+                <p class="text-slate-500 mb-8 text-sm leading-relaxed font-medium">Latest Assignments, Quizzes, and GDBs
+                    folder. Updated daily with 100% accurate work.</p>
+                <a href="https://drive.google.com/drive/folders/YOUR_CURRENT_SEM_FOLDER_ID" target="_blank"
+                    class="flex items-center justify-center gap-3 w-full bg-blue-600 text-white py-5 rounded-2xl font-black hover:bg-blue-700 transition shadow-lg shadow-blue-100">
+                    <i class="fa-solid fa-folder-open"></i> OPEN FOLDER
+                </a>
+            </div>
+
+            <div class="service-card bg-white p-10 rounded-[3rem] group">
+                <div
+                    class="w-20 h-20 bg-yellow-50 text-yellow-600 rounded-[1.5rem] flex items-center justify-center mb-8 text-4xl group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h3 class="text-2xl font-black text-slate-800 mb-4 tracking-tight">Grand Quiz Bank</h3>
+                <p class="text-slate-500 mb-8 text-sm leading-relaxed font-medium">Mega collection of past quizzes and
+                    repeated MCQs for mid/final term preparation.</p>
+                <a href="not_found.html"
+                    class="flex items-center justify-center gap-3 w-full bg-yellow-400 text-blue-900 py-5 rounded-2xl font-black hover:bg-yellow-500 transition shadow-lg">
+                    <i class="fa-solid fa-file-lines"></i> VIEW QUIZZES
+                </a>
+            </div>
+
+            <div class="service-card bg-slate-900 p-10 rounded-[3rem] border border-white/5 group">
+                <div
+                    class="w-20 h-20 bg-white/5 text-slate-400 rounded-[1.5rem] flex items-center justify-center mb-8 text-4xl group-hover:text-white transition-colors">
+                    <i class="fa-solid fa-box-archive"></i>
+                </div>
+                <h3 class="text-2xl font-black text-white mb-4 tracking-tight">Old Archives</h3>
+                <p class="text-slate-400 mb-8 text-sm leading-relaxed font-medium">Reference solutions from 2024-25. Use
+                    these to understand the assignment patterns.</p>
+                <a href="not_found.html"
+                    class="flex items-center justify-center gap-3 w-full bg-white/10 text-white py-5 rounded-2xl font-black border border-white/10 hover:bg-white hover:text-slate-900 transition">
+                    <i class="fa-solid fa-clock-rotate-left"></i> VIEW HISTORY
+                </a>
+            </div>
+
+        </div>
+
+        <div
+            class="mt-16 bg-blue-950 rounded-[3rem] p-10 text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full bg-blue-600/5 pointer-events-none"></div>
+            <div class="text-center md:text-left relative z-10">
+                <h4 class="text-2xl font-black mb-2 text-yellow-400 uppercase tracking-tight">Don't see your subject?
+                </h4>
+                <p class="text-blue-200 opacity-80 font-medium">WhatsApp us your subject code for instant solution
+                    assistance.</p>
+            </div>
+            <a href="https://wa.me/923196248868" target="_blank"
+                class="bg-green-500 hover:bg-green-600 px-12 py-5 rounded-2xl font-black transition transform hover:scale-105 shadow-xl whitespace-nowrap relative z-10">
+                <i class="fab fa-whatsapp text-xl mr-2"></i> REQUEST ON WHATSAPP
+            </a>
+        </div>
+    </div>
+
+    <footer class="bg-[#0f172a] text-white pt-16 pb-8 font-['Poppins']">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+
+                <div class="space-y-6">
+                    <div class="text-2xl font-black tracking-tighter">
+                        LGWT <span class="text-yellow-400">OFFICIAL</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Learning & Growing With Team. Pakistan's most trusted educational platform for Virtual
+                        University students.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://chat.whatsapp.com/CTYeKaeMCf00pyhM0aMB0e"
+                            class="text-green-500 hover:text-white transition-all text-xl"><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a href="https://youtube.com/@LGWTOfficial"
+                            class="text-red-500 hover:text-white transition-all text-xl"><i
+                                class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h4 class="text-sm font-black uppercase tracking-widest border-l-4 border-blue-600 pl-3">Navigation
+                    </h4>
+                    <ul class="text-slate-400 text-sm space-y-3">
+                        <li><a href="../index.html" class="hover:text-white transition">Home Page</a></li>
+                        <li><a href="../handouts/handouts.html" class="hover:text-white transition">VU Handouts</a></li>
+                        <li><a href="../papers/pastpapers.html" class="hover:text-white transition">Past Papers</a></li>
+                        <li><a href="../index.html#bot-console" class="hover:text-white transition">Bot Center</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h4 class="text-sm font-black uppercase tracking-widest border-l-4 border-yellow-400 pl-3">Get Help
+                    </h4>
+                    <div class="bg-white/5 p-5 rounded-2xl border border-white/10">
+                        <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">WhatsApp Support</p>
+                        <p class="text-sm font-bold text-blue-400">+92 319 6248868</p>
+                        <a href="https://wa.me/923196248868"
+                            class="block mt-3 text-center bg-yellow-400 text-blue-900 py-2 rounded-lg text-xs font-black hover:bg-yellow-300 transition">CHAT
+                            NOW</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest">
+                    &copy; 2026 LGWT OFFICIAL | ALL RIGHTS RESERVED
+                </p>
+                <p class="text-slate-500 text-[10px] font-black italic">
+                    Learning <span class="text-blue-500">&</span> Growing <span class="text-yellow-400">With Team</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

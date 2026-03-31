@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MGT Handouts Hub | LGWT Official</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="https://img.icons8.com/fluency/48/graduation-cap.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2a5298 100%);
+        }
+
+        .subject-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: #3b82f6;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50">
+
+    <header class="hero-gradient text-white py-16 px-4 shadow-2xl relative text-center">
+        <h1 class="text-3xl md:text-5xl font-extrabold mb-4 uppercase tracking-widest">MGT <span
+                class="text-yellow-400">Handouts</span> Hub</h1>
+        <p class="text-blue-100 text-lg opacity-90">Download verified handouts and highlighted notes for all Management
+            subjects.</p>
+        <div class="max-w-xl mx-auto mt-10 relative rounded-full overflow-hidden shadow-2xl">
+            <span class="absolute inset-y-0 left-5 flex items-center text-slate-400"><i
+                    class="fa-solid fa-magnifying-glass"></i></span>
+            <input type="text" id="searchInput" onkeyup="searchSubjects()" placeholder="Search subject (e.g. MGT211)..."
+                class="w-full py-5 pl-14 pr-6 text-slate-900 font-bold outline-none">
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-6 py-12">
+        <div class="mb-10">
+            <a href="handouts.html"
+                class="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-2xl text-blue-800 font-bold shadow-sm hover:shadow-md transition border border-gray-100">
+                <i class="fa-solid fa-arrow-left"></i> Back to Resource Hub
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="subjectContainer">
+
+            <script>
+                const mgtData = [
+                    {
+                        id: "MGT101", name: "Basics of Financial Accounting",
+                        handouts: "1kq_Lyk_Ciyk2BiFbhR7GCawAHfa-d5KN",
+                        highlighted: "https://drive.google.com/file/d/18EsOgUnAD74kaQoLTeGH85xfvsPnBPYH/view",
+                        ppt: "not_found.html"
+                    },
+
+                    { id: "MGT111", name: "Introduction to Public Administration", handouts: "1RLdfDaBIjc-qPrAk8p5tl3heYT1gTDl0", highlighted: "https://drive.google.com/file/d/1ixOh_Oo2O2cpQpeawpgAgVqrHZ1DMdRd/view", ppt: "not_found.html" },
+                    { id: "MGT201", name: "Financial Management", handouts: "1D3MfaAj9llGzVfETITzr7zmW2w72kxQr", highlighted: "https://drive.google.com/drive/folders/1yplK2QVl0QtIHABHwvG9y3bybkYodSNM", ppt: "not_found.html" },
+                    { id: "MGT211", name: "Introduction to Business", handouts: "1EBRMSC34bVcrgeFE8QXeTHLvBd6v6-j_", highlighted: "https://drive.google.com/uc?export=download&id=1gdj02Ui7EMrOaU8YVuMeNUFaWezqyGyc", ppt: "not_found.html" },
+                    { id: "MGT301", name: "Technical Articles", handouts: "1xe78opbBfoVvhuZlMOcto9LtbXTbcKn8", highlighted: "https://drive.google.com/drive/folders/1gbwNuBvBGe_yD4mQEgBguGpCqzlnPWBI", ppt: "https://drive.google.com/file/d/1EqUK4Z3f7z6Z-u_EQQj9C4xAkS1vpgPZ/view" },
+                    { id: "MGT401", name: "Financial Accounting II", handouts: "1Jb2GEsz31W3Hwui4AvwZcDSSG044Y-kr", highlighted: "not_found.html", ppt: "not_found.html" },
+                    { id: "MGT404", name: "Managerial Accounting", handouts: "1S7-16sqAfJIH95xvrO00z_-tS8Ay7bSt", highlighted: "not_found.html", ppt: "not_found.html" },
+                    { id: "MGT411", name: "Money & Banking", handouts: "1rW9IJ66Sn8mrKXZhYcNynxn3qSXJ8H4s", highlighted: "not_found.html", ppt: "https://drive.google.com/drive/folders/1RM88UhP158R7dfhubU63MGD9VzK5ucav" },
+                    { id: "MGT501", name: "Human Resource Management", handouts: "1k5GRolNgZSw2JeQtDggVVE9eabLliq4w", highlighted: "https://drive.google.com/drive/folders/1K03OlFByht_jbPzdL8_N8LhAbq8GCwQU", ppt: "not_found.html" },
+                    { id: "MGT502", name: "Organizational Behavior", handouts: "1pcr4NggkvGrWyg49fYmKM9meRaxTqdbM", highlighted: "https://drive.google.com/file/d/1sarTe4Yy4Fw_ji97bYSWvVJaqCdFd7Kt/view", ppt: "not_found.html" },
+                    { id: "MGT503", name: "Principles of Management", handouts: "1icK0lWc9rX9nj5QfWGZlyBz-U2t_UAEj", highlighted: "https://drive.google.com/drive/folders/1BDth85EVoVyoZWpcoKrSwQ_zbV76Mas0", ppt: "not_found.html" },
+                    { id: "MGT504", name: "Organization Theory and Design", handouts: "1kiXj7OlsUJ2pFgUK9RXqwVx9qlc0bA2w", highlighted: "not_found.html", ppt: "not_found.html" },
+                    { id: "MGT510", name: "Total Quality Management", handouts: "1VuTlN23XLI8ryDBFDkVxEPe5TWXg7gXz", highlighted: "not_found.html", ppt: "not_found.html" },
+                    { id: "MGT520", name: "International Business", handouts: "10Bu7btnO8gv8oucaJLkQGoDwh2qXshEW", highlighted: "not_found.html", ppt: "not_found.html" },
+                    { id: "MGT601", name: "SME Management", handouts: "1Zsm6KLOGU1gzbL4zc2kgC9-KUkt6P0Lp", highlighted: "not_found.html", ppt: "not_found.html" },
+                    { id: "MGT602", name: "Entrepreneurship", handouts: "1IN51Nonj8t-mSTjATZwt2KM6hBb0X4Bc", highlighted: "https://drive.google.com/file/d/1IN51Nonj8t-mSTjATZwt2KM6hBb0X4Bc/view", ppt: "https://drive.google.com/file/d/1tQ88sy-_EWL-8mxYoTilAEAkxTFJZJVp/view" },
+                    { id: "MGT603", name: "Strategic Management", handouts: "1p1wKq67LjdRRUlwR3Q38W5cZleD5mLSG", highlighted: "not_found.html", ppt: "not_found.html" },
+                    { id: "MGT611", name: "Business and Labour Laws", handouts: "1a2b1agsnAa5WI2JqmXEMv6X1FcWjc9MM", highlighted: "not_found.html", ppt: "not_found.html" },
+                    { id: "MGT612", name: "Corporate Law", handouts: "1-W9tVnz58wOMyQY3-Fhg8HOg9_Ud27ij", highlighted: "not_found.html", ppt: "not_found.html" },
+                    { id: "MGT613", name: "Production and Operations Management", handouts: "12iiE0_SOA0sfw_ciFgFSInNCtj_0no1_", highlighted: "not_found.html", ppt: "not_found.html" },
+                    { id: "MGT621", name: "Administrative Law", handouts: "18sucCSivbGgYTc56SLdCC6SHmBIwAuIz", highlighted: "not_found.html", ppt: "not_found.html" },
+                    { id: "MGT705", name: "Advanced Cost Accounting", handouts: "13qRat5FH6Wx_6NltIctH8ti7kE1bX1tq", highlighted: "not_found.html", ppt: "not_found.html" },
+                    { id: "MGT713", name: "Production Management", handouts: "1Xk-TceTINiJa_h-4EqUxlmVuHWW6cl5q", highlighted: "not_found.html", ppt: "not_found.html" }
+                ];
+
+                const container = document.getElementById('subjectContainer');
+                mgtData.forEach(item => {
+                    const handoutsLink = item.handouts.startsWith('http') ? item.handouts : `https://drive.google.com/uc?export=download&id=${item.handouts}`;
+                    container.innerHTML += `
+                        <div class="card subject-card bg-white p-8 rounded-[2.5rem] flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-2xl font-black text-slate-800">${item.id}</h3>
+                                <p class="text-slate-500 text-sm font-medium mb-8">${item.name}</p>
+                            </div>
+                            <div class="space-y-3">
+                                <a href="${handoutsLink}" class="flex items-center justify-center gap-2 w-full py-3 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 shadow-lg shadow-blue-100" target="_blank"><i class="fa-solid fa-file-pdf"></i> Handouts</a>
+                                <a href="${item.highlighted}" class="flex items-center justify-center gap-2 w-full py-3 bg-yellow-400 text-blue-900 rounded-xl font-bold hover:bg-yellow-500" target="_blank"><i class="fa-solid fa-highlighter"></i> Highlighted</a>
+                                <a href="${item.ppt}" class="flex items-center justify-center gap-2 w-full py-3 bg-slate-100 text-slate-500 rounded-xl font-bold hover:bg-slate-200"><i class="fa-solid fa-file-powerpoint"></i> PPT Slides</a>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                function searchSubjects() {
+                    let input = document.getElementById('searchInput').value.toUpperCase();
+                    let cards = document.getElementsByClassName('subject-card');
+                    for (let i = 0; i < cards.length; i++) {
+                        let text = cards[i].innerText.toUpperCase();
+                        cards[i].style.display = text.includes(input) ? "" : "none";
+                    }
+                }
+            </script>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer
+        class="bg-[#0f172a] text-white pt-16 pb-8 mt-20 relative overflow-hidden border-t border-blue-500/20 font-['Poppins']">
+
+        <div class="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 rounded-full blur-[80px] -mr-32 -mt-32">
+        </div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-yellow-500/5 rounded-full blur-[80px] -ml-32 -mb-32">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+
+                <div class="space-y-6">
+                    <div class="text-2xl font-black tracking-tighter">
+                        LGWT <span class="text-yellow-400">OFFICIAL</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Learning & Growing With Team. Pakistan's most trusted partner for Virtual University
+                        students. We provide 100% accurate solutions & LMS handling.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://whatsapp.com/channel/0029VbAfKscEVccSHYySNP3I" target="_blank"
+                            class="w-10 h-10 bg-white/5 text-green-500 rounded-xl flex items-center justify-center hover:bg-green-500 hover:text-white transition-all border border-white/10">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                        <a href="https://youtube.com/@VUStudyLGWT" target="_blank"
+                            class="w-10 h-10 bg-white/5 text-red-500 rounded-xl flex items-center justify-center hover:bg-red-500 hover:text-white transition-all border border-white/10">
+                            <i class="fab fa-youtube text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h4 class="text-white font-bold border-l-4 border-blue-600 pl-4 uppercase tracking-widest text-xs">
+                        Resources</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm font-medium">
+                        <li><a href="../handouts/handouts.html"
+                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
+                                VU Handouts</a></li>
+                        <li><a href="../papers/pastpapers.html"
+                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
+                                Past Papers Vault</a></li>
+                        <li><a href="../Result/video-results.html"
+                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
+                                Video Results</a></li>
+                        <li><a href="../Result/pdf-results.html"
+                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
+                                PDF Proofs</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h4
+                        class="text-white font-bold border-l-4 border-yellow-400 pl-4 uppercase tracking-widest text-xs">
+                        Our Services</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm font-medium">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500/50 text-xs"></i>
+                            Full LMS Handling</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500/50 text-xs"></i>
+                            Assignment Solutions
+                        </li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500/50 text-xs"></i>
+                            Quiz Management</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500/50 text-xs"></i>
+                            Cisco Assignemnts
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h4 class="text-white font-bold border-l-4 border-blue-600 pl-4 uppercase tracking-widest text-xs">
+                        Support</h4>
+                    <div class="bg-white/5 p-6 rounded-[2rem] border border-white/10 space-y-4 shadow-2xl">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white">
+                                <i class="fa-solid fa-headset text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-slate-500 font-black uppercase tracking-widest">Help
+                                    Desk</p>
+                                <p class="text-xs font-bold text-white">vustudylgwt@gmail.com</p>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/923196248868" target="_blank"
+                            class="block w-full py-3 bg-yellow-400 text-blue-950 text-center rounded-xl font-black text-[10px] hover:bg-yellow-300 transition-all uppercase tracking-widest shadow-lg">
+                            Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-px w-full bg-gradient-to-r from-transparent via-slate-700 to-transparent mb-8"></div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-slate-500 text-[10px] font-medium text-center md:text-left">
+                    &copy; 2026 <span class="text-white font-bold">LGWT Official</span>. Learning & Growing With
+                    Team.
+                </div>
+                <div class="flex items-center gap-4 text-slate-500 text-[9px] uppercase tracking-[0.3em] font-black">
+                    Trust <span class="text-blue-500">●</span> Accuracy <span class="text-yellow-400">●</span>
+                    Success
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

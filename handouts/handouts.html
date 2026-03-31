@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VU Study Handouts | LGWT Official Hub</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="https://img.icons8.com/fluency/48/graduation-cap.png" type="image/x-icon">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2a5298 100%);
+        }
+
+        .subject-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .subject-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Purane code ki jagah yeh likhein */
+        .search-focus:focus-within {
+            outline: 4px solid #facc15;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50">
+
+    <header class="hero-gradient text-white py-16 px-4 shadow-2xl relative overflow-hidden text-center">
+        <div class="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 tracking-tight">VIRTUAL UNIVERSITY <span
+                class="text-yellow-400">HANDOUTS</span></h1>
+        <p class="text-blue-100 text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-90">Access subject-wise official
+            study material and updated handouts for all VU courses.</p>
+
+        <div class="max-w-2xl mx-auto relative search-focus rounded-2xl overflow-hidden shadow-2xl transition-all">
+            <i class="fa-solid fa-magnifying-glass absolute left-5 top-1/2 -translate-y-1/2 text-gray-400 text-xl"></i>
+            <input type="text" id="searchInput" onkeyup="filterSubjects()"
+                placeholder="Search Subject Name or Code (e.g. CS101, Accounting)..."
+                class="w-full p-5 pl-14 rounded-2xl text-gray-800 outline-none border-none text-lg">
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-6 py-12">
+        <div class="flex flex-wrap justify-between items-center mb-10 gap-4">
+            <a href="../index.html"
+                class="flex items-center gap-2 bg-white px-6 py-3 rounded-xl text-blue-700 font-bold shadow-sm hover:bg-blue-50 transition border border-gray-100">
+                <!-- <i class="fa-solid fa-arrow-left"></i> Back to Dashboard -->
+                <span>🏠</span> Back to Home
+            </a>
+            <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded-lg font-semibold border border-blue-200">
+                <i class="fa-solid fa-layer-group mr-2"></i> <span id="countDisplay">22 Subject Categories</span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" id="grid">
+
+            <div class="subject-card bg-white rounded-[2rem] p-8 text-center border border-gray-100 shadow-sm"
+                data-name="ACC Accounting">
+                <div
+                    class="w-20 h-20 bg-blue-50 text-blue-600 rounded-3xl flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner">
+                    <i class="fa-solid fa-calculator"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">ACC Handouts</h3>
+                <p class="text-sm text-gray-500 mb-6 uppercase tracking-widest font-semibold">Accounting</p>
+                <a href="acc-subject.html"
+                    class="block w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Open
+                    Folder</a>
+            </div>
+
+            <div class="subject-card bg-white rounded-[2rem] p-8 text-center border border-gray-100 shadow-sm"
+                data-name="BIF Bioinformatics">
+                <div
+                    class="w-20 h-20 bg-emerald-50 text-emerald-600 rounded-3xl flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner">
+                    <i class="fa-solid fa-dna"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">BIF Handouts</h3>
+                <p class="text-sm text-gray-500 mb-6 uppercase tracking-widest font-semibold">Bioinformatics</p>
+                <a href="bif-subject.html"
+                    class="block w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Open
+                    Folder</a>
+            </div>
+
+            <div class="subject-card bg-white rounded-[2rem] p-8 text-center border border-gray-100 shadow-sm"
+                data-name="BIO Biology">
+                <div
+                    class="w-20 h-20 bg-green-50 text-green-600 rounded-3xl flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">BIO Handouts</h3>
+                <p class="text-sm text-gray-500 mb-6 uppercase tracking-widest font-semibold">Biology</p>
+                <a href="bio-subject.html"
+                    class="block w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Open
+                    Folder</a>
+            </div>
+
+            <div class="subject-card bg-white rounded-[2rem] p-8 text-center border border-gray-100 shadow-sm"
+                data-name="BNK Banking">
+                <div
+                    class="w-20 h-20 bg-indigo-50 text-indigo-600 rounded-3xl flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner">
+                    <i class="fa-solid fa-piggy-bank"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">BNK Handouts</h3>
+                <p class="text-sm text-gray-500 mb-6 uppercase tracking-widest font-semibold">Banking</p>
+                <a href="bnk-subject.html"
+                    class="block w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Open
+                    Folder</a>
+            </div>
+
+            <div class="subject-card bg-white rounded-[2rem] p-8 text-center border border-gray-100 shadow-sm"
+                data-name="CHE Chemistry">
+                <div
+                    class="w-20 h-20 bg-orange-50 text-orange-600 rounded-3xl flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner">
+                    <i class="fa-solid fa-flask-vial"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">CHE Handouts</h3>
+                <p class="text-sm text-gray-500 mb-6 uppercase tracking-widest font-semibold">Chemistry</p>
+                <a href="che-subject.html"
+                    class="block w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Open
+                    Folder</a>
+            </div>
+
+            <div class="subject-card bg-white rounded-[2rem] p-8 text-center border border-gray-100 shadow-sm"
+                data-name="CS Computer Science IT">
+                <div
+                    class="w-20 h-20 bg-blue-100 text-blue-700 rounded-3xl flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner">
+                    <i class="fa-solid fa-desktop"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">CS Handouts</h3>
+                <p class="text-sm text-gray-500 mb-6 uppercase tracking-widest font-semibold">Computer Science</p>
+                <a href="cs-subject.html"
+                    class="block w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Open
+                    Folder</a>
+            </div>
+
+            <div class="subject-card bg-white rounded-[2rem] p-8 text-center border border-gray-100 shadow-sm"
+                data-name="ECO Economics">
+                <div
+                    class="w-20 h-20 bg-rose-50 text-rose-600 rounded-3xl flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">ECO Handouts</h3>
+                <p class="text-sm text-gray-500 mb-6 uppercase tracking-widest font-semibold">Economics</p>
+                <a href="eco-subject.html"
+                    class="block w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Open
+                    Folder</a>
+            </div>
+
+            <div class="subject-card bg-white rounded-[2rem] p-8 text-center border border-gray-100 shadow-sm"
+                data-name="EDU Education">
+                <div
+                    class="w-20 h-20 bg-teal-50 text-teal-600 rounded-3xl flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">EDU Handouts</h3>
+                <p class="text-sm text-gray-500 mb-6 uppercase tracking-widest font-semibold">Education</p>
+                <a href="edu-subject.html"
+                    class="block w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Open
+                    Folder</a>
+            </div>
+
+            <div class="subject-card bg-white rounded-[2rem] p-8 text-center border border-gray-100 shadow-sm"
+                data-name="ENG English">
+                <div
+                    class="w-20 h-20 bg-cyan-50 text-cyan-600 rounded-3xl flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner">
+                    <i class="fa-solid fa-pen-fancy"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">ENG Handouts</h3>
+                <p class="text-sm text-gray-500 mb-6 uppercase tracking-widest font-semibold">English</p>
+                <a href="eng-subject.html"
+                    class="block w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Open
+                    Folder</a>
+            </div>
+
+            <div class="subject-card bg-white rounded-[2rem] p-8 text-center border border-gray-100 shadow-sm"
+                data-name="FIN Finance">
+                <div
+                    class="w-20 h-20 bg-lime-50 text-lime-600 rounded-3xl flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner">
+                    <i class="fa-solid fa-coins"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">FIN Handouts</h3>
+                <p class="text-sm text-gray-500 mb-6 uppercase tracking-widest font-semibold">Finance</p>
+                <a href="fin-subject.html"
+                    class="block w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Open
+                    Folder</a>
+            </div>
+
+            <div class="subject-card bg-white rounded-[2rem] p-8 text-center border border-gray-100 shadow-sm"
+                data-name="GSC General Science">
+                <div
+                    class="w-20 h-20 bg-violet-50 text-violet-600 rounded-3xl flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner">
+                    <i class="fa-solid fa-microscope"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">GSC Handouts</h3>
+                <p class="text-sm text-gray-500 mb-6 uppercase tracking-widest font-semibold">General Science</p>
+                <a href="gsc-subject.html"
+                    class="block w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Open
+                    Folder</a>
+            </div>
+
+            <div class="subject-card bg-white rounded-[2rem] p-8 text-center border border-gray-100 shadow-sm"
+                data-name="ISL Islamiyat Ethics">
+                <div
+                    class="w-20 h-20 bg-emerald-100 text-emerald-700 rounded-3xl flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner">
+                    <i class="fa-solid fa-mosque"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">ISL & ETH Handouts</h3>
+                <p class="text-sm text-gray-500 mb-6 uppercase tracking-widest font-semibold">Islamic Studies</p>
+                <a href="isl-subject.html"
+                    class="block w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Open
+                    Folder</a>
+            </div>
+
+            <div class="subject-card bg-white rounded-[2rem] p-8 text-center border border-gray-100 shadow-sm"
+                data-name="MCM Mass Communication Media Studies">
+                <div
+                    class="w-20 h-20 bg-red-50 text-red-600 rounded-3xl flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner">
+                    <i class="fa-solid fa-tower-broadcast"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">MCM Handouts</h3>
+                <p class="text-sm text-gray-500 mb-6 uppercase tracking-widest font-semibold">Mass Communication</p>
+                <a href="mcm-subject.html"
+                    class="block w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Open
+                    Folder</a>
+            </div>
+
+            <div class="subject-card bg-white rounded-[2rem] p-8 text-center border border-gray-100 shadow-sm"
+                data-name="MGT Management">
+                <div
+                    class="w-20 h-20 bg-sky-50 text-sky-600 rounded-3xl flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">MGT Handouts</h3>
+                <p class="text-sm text-gray-500 mb-6 uppercase tracking-widest font-semibold">Management</p>
+                <a href="mgt-subject.html"
+                    class="block w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Open
+                    Folder</a>
+            </div>
+
+            <div class="subject-card bg-white rounded-[2rem] p-8 text-center border border-gray-100 shadow-sm"
+                data-name="MGMT Management Business">
+                <div
+                    class="w-20 h-20 bg-slate-100 text-slate-700 rounded-3xl flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner">
+                    <i class="fa-solid fa-users-gear"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">MGMT Handouts</h3>
+                <p class="text-sm text-gray-500 mb-6 uppercase tracking-widest font-semibold">Management</p>
+                <a href="mgmt-subject.html"
+                    class="block w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Open
+                    Folder</a>
+            </div>
+
+            <div class="subject-card bg-white rounded-[2rem] p-8 text-center border border-gray-100 shadow-sm"
+                data-name="MKT Marketing Advertising">
+                <div
+                    class="w-20 h-20 bg-pink-50 text-pink-600 rounded-3xl flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner">
+                    <i class="fa-solid fa-bullhorn"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">MKT Handouts</h3>
+                <p class="text-sm text-gray-500 mb-6 uppercase tracking-widest font-semibold">Marketing</p>
+                <a href="mkt-subject.html"
+                    class="block w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Open
+                    Folder</a>
+            </div>
+
+            <div class="subject-card bg-white rounded-[2rem] p-8 text-center border border-gray-100 shadow-sm"
+                data-name="MTH Mathematics">
+                <div
+                    class="w-20 h-20 bg-yellow-50 text-yellow-600 rounded-3xl flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner">
+                    <i class="fa-solid fa-square-root-variable"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">MTH Handouts</h3>
+                <p class="text-sm text-gray-500 mb-6 uppercase tracking-widest font-semibold">Mathematics</p>
+                <a href="mth-subject.html"
+                    class="block w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Open
+                    Folder</a>
+            </div>
+
+            <div class="subject-card bg-white rounded-[2rem] p-8 text-center border border-gray-100 shadow-sm"
+                data-name="PAK Pakistan Studies">
+                <div
+                    class="w-20 h-20 bg-green-100 text-green-700 rounded-3xl flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner">
+                    <i class="fa-solid fa-flag"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">PAK Handouts</h3>
+                <p class="text-sm text-gray-500 mb-6 uppercase tracking-widest font-semibold">Pak Studies</p>
+                <a href="pak-subject.html"
+                    class="block w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Open
+                    Folder</a>
+            </div>
+
+            <div class="subject-card bg-white rounded-[2rem] p-8 text-center border border-gray-100 shadow-sm"
+                data-name="PHY Physics">
+                <div
+                    class="w-20 h-20 bg-blue-50 text-blue-500 rounded-3xl flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner">
+                    <i class="fa-solid fa-atom"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">PHY Handouts</h3>
+                <p class="text-sm text-gray-500 mb-6 uppercase tracking-widest font-semibold">Physics</p>
+                <a href="phy-subject.html"
+                    class="block w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Open
+                    Folder</a>
+            </div>
+
+            <div class="subject-card bg-white rounded-[2rem] p-8 text-center border border-gray-100 shadow-sm"
+                data-name="PSY Psychology">
+                <div
+                    class="w-20 h-20 bg-purple-50 text-purple-600 rounded-3xl flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">PSY Handouts</h3>
+                <p class="text-sm text-gray-500 mb-6 uppercase tracking-widest font-semibold">Psychology</p>
+                <a href="psy-subject.html"
+                    class="block w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Open
+                    Folder</a>
+            </div>
+
+            <div class="subject-card bg-white rounded-[2rem] p-8 text-center border border-gray-100 shadow-sm"
+                data-name="SOC Sociology Social Sciences">
+                <div
+                    class="w-20 h-20 bg-amber-50 text-amber-600 rounded-3xl flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner">
+                    <i class="fa-solid fa-people-roof"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">SOC Handouts</h3>
+                <p class="text-sm text-gray-500 mb-6 uppercase tracking-widest font-semibold">Sociology</p>
+                <a href="soc-subject.html"
+                    class="block w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Open
+                    Folder</a>
+            </div>
+
+            <div class="subject-card bg-white rounded-[2rem] p-8 text-center border border-gray-100 shadow-sm"
+                data-name="STA Statistics">
+                <div
+                    class="w-20 h-20 bg-fuchsia-50 text-fuchsia-600 rounded-3xl flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner">
+                    <i class="fa-solid fa-chart-simple"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">STA Handouts</h3>
+                <p class="text-sm text-gray-500 mb-6 uppercase tracking-widest font-semibold">Statistics</p>
+                <a href="sta-subject.html"
+                    class="block w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Open
+                    Folder</a>
+            </div>
+
+        </div>
+
+
+        <div id="noResult" class="hidden text-center py-20">
+            <i class="fa-solid fa-face-frown text-6xl text-gray-300 mb-4"></i>
+            <h2 class="text-2xl font-bold text-gray-400">Oops! Subject not found</h2>
+            <button onclick="resetSearch()" class="mt-4 text-blue-600 font-bold hover:underline">Clear search</button>
+        </div>
+    </div>
+
+    <footer
+        class="bg-[#0f172a] text-white pt-20 pb-10 mt-20 relative overflow-hidden border-t border-white/5 font-['Poppins']">
+
+        <div class="absolute top-0 right-0 w-80 h-80 bg-blue-600/10 rounded-full blur-[100px] -mr-40 -mt-40"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-yellow-500/5 rounded-full blur-[100px] -ml-40 -mb-40"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+
+                <div class="space-y-6">
+                    <div class="text-3xl font-black tracking-tighter">
+                        VU STUDY <span class="text-yellow-400">LGWT</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed font-medium">
+                        Pakistan's most trusted partner for Virtual University success. We provide 100% accurate LMS
+                        solutions, verified handouts, and guaranteed results.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://chat.whatsapp.com/CTYeKaeMCf00pyhM0aMB0e" target="_blank"
+                            class="w-11 h-11 bg-white/5 text-green-500 rounded-2xl flex items-center justify-center hover:bg-green-500 hover:text-white transition-all shadow-xl border border-white/10">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@VUStudyLGWT" target="_blank"
+                            class="w-11 h-11 bg-white/5 text-red-500 rounded-2xl flex items-center justify-center hover:bg-red-500 hover:text-white transition-all shadow-xl border border-white/10">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h4 class="text-white font-bold border-l-4 border-blue-600 pl-4 uppercase tracking-[0.2em] text-xs">
+                        Quick Links</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm font-semibold">
+                        <li><a href="handouts.html"
+                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
+                                Handouts Library</a></li>
+                        <li><a href="../papers/pastpapers.html"
+                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
+                                Past Papers Vault</a></li>
+                        <li><a href="../Services/solution.html"
+                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
+                                Our Services</a></li>
+                        <li><a href="../Result/pdf-results.html"
+                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
+                                Proofs & Results</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h4
+                        class="text-white font-bold border-l-4 border-yellow-400 pl-4 uppercase tracking-[0.2em] text-xs">
+                        Services</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm font-semibold">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500/50"></i>
+                            LMS Full Handling</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500/50"></i>
+                            Paid Assignments</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500/50"></i>
+                            Quiz Management</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500/50"></i>
+                            Cisco Assignments</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h4 class="text-white font-bold border-l-4 border-blue-600 pl-4 uppercase tracking-[0.2em] text-xs">
+                        Support</h4>
+                    <div class="bg-white/5 p-6 rounded-[2rem] border border-white/10 space-y-4 shadow-2xl">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-900/50">
+                                <i class="fa-solid fa-headset text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-slate-500 font-black uppercase tracking-widest">Help Desk</p>
+                                <p class="text-sm font-bold text-white">+92 319 6248868</p>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/923196248868" target="_blank"
+                            class="block w-full py-4 bg-yellow-400 text-blue-950 text-center rounded-xl font-black text-xs hover:bg-yellow-300 transition-all uppercase tracking-widest shadow-lg">
+                            Send Message
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-px w-full bg-gradient-to-r from-transparent via-slate-700 to-transparent mb-10"></div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-slate-500 text-[11px] font-medium text-center md:text-left leading-relaxed">
+                    &copy; 2026 <span class="text-white font-bold">LGWT Official</span>. Crafted with <i
+                        class="fa-solid fa-heart text-red-500"></i> for Virtual University Students.
+                </div>
+                <div class="flex items-center gap-2 text-slate-500 text-[10px] uppercase tracking-[0.3em] font-black">
+                    Learning <span class="text-blue-500">&</span> Growing <span class="text-yellow-400">With Team</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+        // Advanced Filter Logic
+        function filterSubjects() {
+            const val = document.getElementById("searchInput").value.toLowerCase();
+            const cards = document.querySelectorAll(".subject-card");
+            let count = 0;
+
+            cards.forEach(card => {
+                const name = card.getAttribute("data-name").toLowerCase();
+                if (name.includes(val)) {
+                    card.style.display = "block";
+                    count++;
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            document.getElementById("noResult").style.display = count === 0 ? "block" : "none";
+            document.getElementById("countDisplay").innerText = `Found ${count} Categories`;
+        }
+
+        function resetSearch() {
+            document.getElementById("searchInput").value = "";
+            filterSubjects();
+        }
+    </script>
+</body>
+
+</html>

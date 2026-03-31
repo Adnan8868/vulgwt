@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Links Hub | LGWT Official</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://img.icons8.com/fluency/48/graduation-cap.png" type="image/x-icon">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+        }
+
+        .card-glow:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .custom-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: #3b82f6;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 custom-scroll">
+
+    <header class="hero-bg text-white py-20 px-4 text-center relative overflow-hidden">
+        <div
+            class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]">
+        </div>
+        <div class="relative z-10">
+            <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4">Study <span
+                    class="text-yellow-400">Links</span> Hub</h1>
+            <p class="text-blue-200 max-w-2xl mx-auto mb-10 font-medium italic">Verified Short Lectures & YouTube
+                Playlists for VU Courses.</p>
+
+            <div class="max-w-xl mx-auto relative group">
+                <i
+                    class="fa-solid fa-magnifying-glass absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-500 transition"></i>
+                <input type="text" id="searchInput" placeholder="Search Subject Code (e.g. CS101)..."
+                    class="w-full p-5 pl-14 rounded-2xl text-slate-800 shadow-2xl outline-none focus:ring-4 focus:ring-yellow-400/50 transition-all font-bold">
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-6 py-12">
+        <div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
+            <a href="index.html"
+                class="flex items-center gap-2 bg-white px-6 py-3 rounded-xl text-blue-700 font-bold shadow-sm hover:bg-blue-50 border border-slate-100 transition">
+                <i class="fa-solid fa-house"></i> Back to Home
+            </a>
+            <div class="bg-blue-600 text-white px-6 py-3 rounded-xl font-bold shadow-lg flex items-center gap-3">
+                <i class="fa-solid fa-layer-group"></i>
+                <span id="subjectCount">Total Subjects: 0</span>
+            </div>
+        </div>
+
+        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-2xl mb-12 flex items-start gap-4">
+            <i class="fa-solid fa-triangle-exclamation text-yellow-600 text-xl mt-1"></i>
+            <p class="text-yellow-800 text-sm font-medium">
+                <b>IMPORTANT:</b> Agar aapka subject list mein nahi hai, toh official lectures dekhain. Hum links ko
+                waqtan fawaqtan update karte rehte hain.
+            </p>
+        </div>
+
+        <div id="subjectContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        </div>
+
+        <div id="noResult" class="hidden text-center py-20">
+            <div class="text-6xl mb-4">😕</div>
+            <h3 class="text-2xl font-bold text-slate-400 uppercase">Subject Not Found</h3>
+            <p class="text-slate-500 mt-2">Try searching with just the code like "CS" or "MTH".</p>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // SUBJECT DATA
+        const subjects = [
+            // ACC Subjects
+            { code: "📚 ACC 311", link: "https://youtube.com/playlist?list=PLZp2HLoa99VkWKje5MgYt1JMElkzzLu3R&si=-ujyBKidDYo4EBgx" },
+            { code: "📚 ACC 501", link: "https://youtube.com/playlist?list=PLZp2HLoa99VlF-WHPyBnDCddhKa0iMi6M&si=rhi6gLJ2iUgVl0lt" },
+            // BIO Subjects
+            { code: "📚 BIO 101", link: "https://youtube.com/playlist?list=PLP4jqZZBeTPpOiQ9TpXV23-sm9yuuY3Nl&si=uuXnwE0u61-jxEEC" },
+            { code: "📚 BIO 401", link: "https://youtube.com/playlist?list=PLt3Oo4_Qc3uTAs9LzMcVD6n9-RMV87Qrt&si=ql02OaZO1oSbe6D" },
+            // CS Subjects
+            { code: "📚 CS101", link: "https://youtube.com/playlist?list=PLzxNPvn_0tjtECEA4HAT7qOWILYLC1Rdw&si=yVOJy6eRizWbg7Qs" },
+            { code: "📚 CS201", link: "https://youtube.com/playlist?list=PL1EXAGJzUWBzuRezwId4iQyL5N3Jybdgn&si=Sb8Q8CiNYjyY9pdl" },
+            { code: "📚 CS201P", link: "https://youtube.com/playlist?list=PL1EXAGJzUWByhYm3WgbeiiTI7s_a9wlu3&si=7h-LxPHr2KMkNLaW" },
+            { code: "📚 CS202", link: "https://youtube.com/playlist?list=PLKFcyV7OSsShTy0RUNHXtAdxkfVHCV0Od&si=NgDWw61Zu9vzuZQc" },
+            { code: "📚 CS205", link: "https://youtube.com/playlist?list=PLyZmlxzdS0WtnFtTXBD0k7b1Lo7OZf4gf&si=ztwUdenQV0h8Mg7w" },
+            { code: "📚 CS301", link: "https://youtube.com/playlist?list=PL1EXAGJzUWBwJOZ82bzrxka_fWK3QNNWV&si=EZDlsB1clwPOfV-i" },
+            { code: "📚 CS301P", link: "https://youtube.com/playlist?list=PL1EXAGJzUWBwsYlcJ8lh6nteeMp3QbeAP&si=Bsju6xw4CHicaYEI" },
+            { code: "📚 CS302", link: "https://youtube.com/playlist?list=PLmP-OrFxaX-jb8B_v8aQyE2F6ZzRxorap&si=C03BEUSrx53Yp_3y" },
+            { code: "📚 CS302 Short", link: "https://youtube.com/playlist?list=PLmP-OrFxaX-jb8B_v8aQyE2F6ZzRxorap&si=0RHXE1jXrSMeFX7N" },
+            { code: "📚 CS302P", link: "https://youtube.com/playlist?list=PLQ2wIG-CTpwA9rQE62HNnBJVBYRve7BR4&si=miQpf1bbKz30AlKP" },
+            { code: "📚 CS304", link: "https://youtube.com/playlist?list=PL1EXAGJzUWBwe_TeEC2g5a71GRl98TIAl&si=a9pYqlbmRBk5H1X-" },
+            { code: "📚 CS304P", link: "https://youtube.com/playlist?list=PL1EXAGJzUWBwe_TeEC2g5a71GRl98TIAl&si=a9pYqlbmRBk5H1X-" },
+            { code: "📚 CS401", link: "https://youtube.com/playlist?list=PLxSadPlZSPVRsFn3UBocPQPyDa4g8Arcx&si=1bLMTAYCfDS42mCx" },
+            { code: "📚 CS402", link: "https://youtube.com/playlist?list=PLmZDxjypE-1BzYPnTc_L1PxUp88Y8PgxJ&si=4c0_ABxdRGTKQ8cj" },
+            { code: "📚 CS403", link: "https://youtube.com/playlist?list=PL1EXAGJzUWBw0y2xNguaEJ0g5iYqKkppD&si=elotCBY_iGgnB4t-" },
+            { code: "📚 CS403P", link: "https://youtube.com/playlist?list=PL1EXAGJzUWByQIOptJN76ALwjJz5JyuGc&si=SgqbLfQZdDLHr0L5 " },
+            { code: "📚 CS408", link: "https://youtube.com/playlist?list=PLxSadPlZSPVSIkltHoRFe-1APW25Q4MM7&si=-LGUIpKwXIqxHrAE" },
+            { code: "📚 CS409", link: "https://youtube.com/playlist?list=PLc888mkLG2X_Vdwrz21mFwQqTm3fNDtds&si=L6d9t321UMU7j_zj" },
+            { code: "📚 CS411", link: "https://youtube.com/playlist?list=PLVSBvqr3MeHSwHxxyXU1PO_t9pnft2lTW&si=OQwaca4Sf52bokWT" },
+            { code: "📚 CS432", link: "https://youtube.com/playlist?list=PLc888mkLG2X_ujpI4r9Oce-UqTRf2VCNU&si=6grF2wgegNm27-mU" },
+            { code: "📚 CS501", link: "https://youtube.com/playlist?list=PL043DHjwUKS4nIbQZGZNyF9W0_8tPvBEG&si=43UvVpVlE6Mdbi3e" },
+            { code: "📚 CS502", link: "https://youtube.com/playlist?list=PL1EXAGJzUWBxG8Hm8QaOWKK1P6zMVgAV5&si=FOSHHgsAYC3U_w9W" },
+            { code: "📚 CS504", link: "https://youtube.com/playlist?list=PL1EXAGJzUWByPWei7Z0cPxrwsCYlLGYNz&si=OdQUX6yor8FxcweQ" },
+            { code: "📚 CS506", link: "https://youtube.com/playlist?list=PL1EXAGJzUWByDXWZxxsFvOlXNyc1Q-rFi&si=mbdXn01aKuG0Iff6" },
+            { code: "📚 CS507", link: "https://youtube.com/playlist?list=PLZiOhULnkWwwgrjxFDxUd9Vakw7B0iNW0&si=V_kVlG0Z28VoEBU7" },
+            { code: "📚 CS508", link: "https://youtube.com/playlist?list=PLC_ZKW-xzzQfzqxwtzwoJNyWWG0GDlTN-&si=hYQsG__T82Qc3MzV" },
+            { code: "📚 CS510", link: "https://youtube.com/playlist?list=PLxSadPlZSPVTD2X7BAtduxhqtKyJmRday&si=-U7zk_kn1erp6gcE" },
+            { code: "📚 CS601", link: "https://youtube.com/playlist?list=PLKyB9RYzaFRgeYAB4C1iZ9X7bsDI7GWfv&si=0ETDySHIl059MARH" },
+            { code: "📚 CS602", link: "https://youtube.com/playlist?list=PL043DHjwUKS6-D_ZFrdFCKFVZAxG0dAU_&si=E-hXMt48YIGUkzBm" },
+            { code: "📚 CS603", link: "https://youtube.com/playlist?list=PLxSadPlZSPVSud0o6TkZses0F4b_480n-&si=Enc7HjxLW5-3LZUL" },
+            { code: "📚 CS605", link: "https://youtube.com/playlist?list=PLxSadPlZSPVSR3uvOjGhdVZmP3ZniYEu6&si=naxWLanxjwaZX9vu" },
+            { code: "📚 CS606", link: "https://youtube.com/playlist?list=PL043DHjwUKS5kD6r0t66lbDcvgmSPMppI&si=59eXAunPGP3aIWf7" },
+            { code: "📚 CS607", link: "https://youtube.com/playlist?list=PLC_ZKW-xzzQd63MXFzfGxjzKn90pUzl1n&si=5RBFE167oHIeevQP" },
+            { code: "📚 CS609", link: "https://youtube.com/playlist?list=PL1InxKivDc_orBi3F-GiwvH-T939GfWaN&si=X1UIg943z5-1VMxw" },
+            { code: "📚 CS610", link: "https://youtube.com/playlist?list=PL1EXAGJzUWBwR_xIO3e0TQ51YF1NYnFrX&si=syPIZ44d4cYSPaJA" },
+            { code: "📚 CS615", link: "https://youtube.com/playlist?list=PL4gx2mXeLU4mc_m3ll1WJztR00c6htAYp&si=GBfs96YyHZmc8aug" },
+            { code: "📚 CS625", link: "https://youtube.com/playlist?list=PLJGNjy8afpZQKI520EGIXRoyfatsAsMye&si=xcY4KyQh_JVCehCK" },
+
+            // ECO Subjects
+            { code: "📚 ECO 401", link: "https://youtube.com/playlist?list=PLP4jqZZBeTPqXp_oVZaNzNT7xo-IVZzRD&si=17BfJEFrlqJphJTM" },
+            { code: "📚 ECO 402", link: "https://youtube.com/playlist?list=PL0Rl6622PpjXjc6MSK9eo2rCTfyHLs1DL&si=ZtEAH2kJEwzTr3YN" },
+            { code: "📚 ECO 403", link: "https://youtube.com/playlist?list=PL0Rl6622PpjU87eV4SGKl5uucaq1geD-k&si=czEO0tiyzPBOe6y0" },
+            { code: "📚 ECO 606", link: "https://youtube.com/playlist?list=PL0Rl6622PpjUvk9vuAxBKrSaazrPrUM6u&si=oV22qaeOw--C3iE9" },
+            { code: "📚 ECO 610", link: "https://youtube.com/playlist?list=PLZp2HLoa99VnV2tp8u5inPq8NXZuTmLFZ&si=j_INJFwM9QTDvRea_" },
+
+            // ENG Subjects
+            { code: "📚 ENG 101", link: "https://youtube.com/playlist?list=PLP4jqZZBeTPrFLAj2_Lyt_G0rFUgzZW-e&si=zRnYxzm7e8rBojTf" },
+            { code: "📚 ENG 201", link: "https://youtube.com/playlist?list=PLP4jqZZBeTPqbnLkPn5yvB9ix-zc2UAEa&si=aDzyycBfmppbVgyq" },
+            { code: "📚 ENG 301", link: "https://youtube.com/playlist?list=PLP4jqZZBeTPrSmTJDIMuxkGFHHdmNvCX8&si=cOqoXH6EGTFnyvpX" },
+            { code: "📚 ENG 301 Vu Experts", link: "https://youtube.com/playlist?list=PLALlVhpHcq8xAy4UiJAl7kI9lpPkCydYY&si=wuSF1pBueIoEHhVp" },
+            { code: "📚 ENG 501", link: "https://youtube.com/playlist?list=PLMTEEvnTRWdRI8IcOZJkZzbwe9A3AnSSH&si=az7kT-j87XMAwnzH" },
+            { code: "📚 ENG 502", link: "https://youtube.com/playlist?list=PLMTEEvnTRWdRJmfIdn2vfAy_1wzkt_EvU&si=aoysOcDu2y7EUKu0" },
+            { code: "📚 ENG 503", link: "https://youtube.com/playlist?list=PL_m_6w_f26o1TB6vBlROBmu-8X6EqUjco&si=Fo0P9w1Q8IhCNnJF" },
+            { code: "📚 ENG 504", link: "https://youtube.com/playlist?list=PL_m_6w_f26o3Kc4t2GQdmrQ_NEPeBFn7D&si=TUPKzxg25rbA0be3" },
+            { code: "📚 ENG 506", link: "https://youtube.com/playlist?list=PL_m_6w_f26o2p_4q7-jic89BeRP739MwM&si=tK2BByb8epPaskjC" },
+            { code: "📚 ENG 508", link: "https://youtube.com/playlist?list=PLPhqYD53s2pfSHR_uonWNbfNV8qYNDc2M&si=RbEuZEnXBXOV4BPc" },
+            { code: "📚 ENG 511", link: "https://youtube.com/playlist?list=PLoDi8KeO32zJ_DEXsKlcoqtgpcnLOvaPc&si=FxvB2yGVLjrY3g0E" },
+            { code: "📚 ENG 514", link: "https://youtube.com/playlist?list=PL_m_6w_f26o0PBfgqZtSgHyEvVIwOyMIL&si=0GIJ6uL7w1aQVbH6" },
+            { code: "📚 ENG 518", link: "https://youtube.com/playlist?list=PLLTu3wl1K1pypgda716pJEN_H-Vhr51mf&si=j0irr-IfmJbv0NAN" },
+            { code: "📚 ENG 519", link: "https://youtube.com/playlist?list=PL_m_6w_f26o2zrLlbqE6cprLMOlKeR7_C&si=UnWLTKoJcwlX0jrS" },
+            { code: "📚 ENG 520", link: "https://youtube.com/playlist?list=PL_m_6w_f26o2WKlXjdobNleh0ZsUWknWD&si=rjl2PEau2iabm-e0" },
+            { code: "📚 ENG 522", link: "https://youtube.com/playlist?list=PL_m_6w_f26o3OvI6ZKt-jqWIM_TXVsiCt&si=wAAtat0ZOwOjQQo1" },
+            { code: "📚 ENG 523", link: "https://youtube.com/playlist?list=PL_m_6w_f26o0Lhdd_IJgnizMPPlN_5wgu&si=WMX7ATdXWz-0ov8Y" },
+            { code: "📚 ENG 529", link: "https://youtube.com/playlist?list=PLe_rkQZAB6r4lxeyjRopPeMSSDcOgwDdY&si=mpk9yF3q0CTvYvk3_" },
+
+            // MCM Subjects
+            { code: "📚 MCM 101", link: "https://youtube.com/playlist?list=PL7RxEwsx3K6G_xz_22pfGN4gvr7VrnZvC&si=R62AfkbHtGXa6DOt" },
+            { code: "📚 MCM 101 Halim insights", link: "https://youtube.com/playlist?list=PLP4jqZZBeTPqgWcWPQaYLeTo9GOWOjZ4G&si=9bF0omCPppyC7y32" },
+            { code: "📚 MCM 301", link: "https://youtube.com/playlist?list=PLP4jqZZBeTPo1RELJaOsgxKQ-pCw-fHxp&si=TFvmuCclyznHfM7V" },
+            { code: "📚 MCM 304", link: "https://youtube.com/playlist?list=PLP4jqZZBeTPpfO2wtQjgTXWPM_PLfAPvN&si=iEtp7u-an4pBr2Dg" },
+            { code: "📚 MCM 310", link: "https://youtube.com/playlist?list=PLGiFZ-cHE-nDa47d4G57KEGJTWioYWRxl&si=jENvNFbt30dPhC7f" },
+            { code: "📚 MCM 401", link: "https://youtube.com/playlist?list=PLk2RLjlPxbB3l9bNy0a_7QB-C6wpBpUUz&si=V_7OuP7hRdt_QwXb_" },
+
+            // MGT Subjects
+            { code: "📚 MGT 101", link: "https://youtube.com/playlist?list=PLZp2HLoa99VloanG42ZlKK7DIv5iDv2bo&si=XCglqId31inRLmwK" },
+            { code: "📚 MGT 111", link: "https://youtube.com/playlist?list=PLzxNPvn_0tjuzlRfJfLG-xsyXhQghOqq4&si=Leog1gxu-BjseP8V" },
+            { code: "📚 MGT 201", link: "https://youtube.com/playlist?list=PLZp2HLoa99Vn85D8e4A5f3PWsLFFPJsqg&si=NKDrUs93Vruwn2m8" },
+            { code: "📚 MGT 301", link: "https://youtube.com/playlist?list=PLZp2HLoa99VlexZ3_BGaD9yjfp4d2akQc&si=215Zjuev6K6OegCd" },
+            { code: "📚 MGT 401", link: "https://youtube.com/playlist?list=PLZp2HLoa99VmHTJ8RLs9q6qb85sv1lwkS&si=FvmUAWzUnGv6j8W4" },
+            { code: "📚 MGT 402", link: "https://youtube.com/playlist?list=PLZp2HLoa99VnxELfPagy2AOll0Cj6gYn5&si=Tr_B-IHT_VvZHG9W" },
+            { code: "📚 MGT 411", link: "https://youtube.com/playlist?list=PLZp2HLoa99VmhLsQD45ochXsgK-wS6H4C&si=W-R2iKKpgMAH4in9" },
+            { code: "📚 MGT 501", link: "https://youtube.com/playlist?list=PL043DHjwUKS5MVHJ5weM-ipiB00zPTFcn&si=1BqXhNghL7DBKNK-" },
+            { code: "📚 MGT 502", link: "https://youtube.com/playlist?list=PL043DHjwUKS6dfHbL9Kq2G7Q6hBSOIsFu&si=gWgD_v3WaBMAYQkQ" },
+            { code: "📚 MGT 503", link: "https://youtube.com/playlist?list=PLzxNPvn_0tjsujDhLRbk48E7N7Gq3hCAx&si=5MuNPLEri31K2P4f" },
+            { code: "📚 MGT 504", link: "https://youtube.com/playlist?list=PLZp2HLoa99VlliNuv4PFtzqis6nZkP4Dl&si=p2z7rW5rsivuRuGV" },
+            { code: "📚 MGT 510", link: "https://youtube.com/playlist?list=PLALlVhpHcq8yrSEV2TM3il8NXlC8_jpmj&si=IlLem-FxiG2YTppc" },
+            { code: "📚 MGT 602", link: "https://youtube.com/playlist?list=PLZp2HLoa99Vnrez_XlVAYGcpk0VQQW1tl&si=fnc5OsMC6f-EUwUM" },
+            { code: "📚 MGT 603", link: "https://youtube.com/playlist?list=PLZp2HLoa99VnXKi57MJdkX9FQRTpMoK1L&si=8VgC1cpaAtUA7Qs2" },
+            { code: "📚 MGT 610", link: "https://youtube.com/playlist?list=PLALlVhpHcq8wiwkePFRlMllliWfjGO2Dk&si=VJAptkGSqifWF60G" },
+
+            // MATH Subjects
+            { code: "📚 MTH 001", link: "https://youtube.com/playlist?list=PLsO_V9s8C6fq2-xSSp8ictPC3_VWZFfaU&si=oasUtipR3FUHSSO7" },
+            { code: "📚 MTH 100", link: "https://youtube.com/playlist?list=PLb_lcwOJoSku3PoY0o_6HXC7NIvt5KSUa&si=Ayx_ej_6dHUMt8XN" },
+            { code: "📚 MTH 101", link: "https://youtube.com/playlist?list=PL_CVl-a6qycIwm2clfLYbzjIR10_3NyxW&si=XOkcZb1WeISkhmWi" },
+            { code: "📚 MTH 102", link: "https://youtube.com/playlist?list=PLneCQQGFGDDsaJ5WjbOqsXfU1FDEoduFe&si=yjsYVhWavDWJU5Ad" },
+            { code: "📚 MTH 104", link: "https://youtube.com/playlist?list=PLb_lcwOJoSku-Dl5dYzLVFJEfQHjBj0mu&si=5UuS3k4olF3Qs98Q" },
+            { code: "📚 MTH 202", link: "https://youtube.com/playlist?list=PL_CVl-a6qycLQRB33OErT5VlWeXEJsbHK&si=FDvzcprr_jew-Cjt" },
+            { code: "📚 MTH 301", link: "https://youtube.com/playlist?list=PL_CVl-a6qycIBrSxIFQa_eyhTmqaaGu2w&si=WG4yut5TgIPLmYe0" },
+            { code: "📚 MTH 302", link: "https://youtube.com/playlist?list=PLP4jqZZBeTPrDCa9sQlyjq2zCYOK_ihpk&si=BBPT63LMTg5yCBeU" },
+            { code: "📚 MTH 304", link: "https://youtube.com/playlist?list=PLvftZiG4pHReAnYVGEkcd51EdSZcKcffd&si=wU7u54Nq7nGcQYOw" },
+            { code: "📚 MTH 401 (By Math Helper)", link: "https://youtube.com/playlist?list=PLHovNXcaEvDEIUaHojii7a9cOyYUOPHC6&si=y6JiawwTs7yg_MG5" },
+            { code: "📚 MTH 401 (By waqar institute)", link: "https://youtube.com/playlist?list=PLvg8QSU5Bi0To0SWhrn9uE_PVILXP04ue&si=znKmn8O-Xb2gWLk6" },
+            { code: "📚 MTH 404", link: "https://youtube.com/playlist?list=PLHovNXcaEvDE3fRZ5YpF1okc1mOra9NFl&si=lHFNC8HQQEiQi2hR" },
+            { code: "📚 MTH 405", link: "https://youtube.com/playlist?list=PLZzOwhSbeHnuGXjaT2WncD8rAZIVyuO8L&si=foLHmI9O7vrwOpwl" },
+            { code: "📚 MTH 501", link: "https://youtube.com/playlist?list=PL_CVl-a6qycJnbTqTDUCDI7lFyQXN-efl&si=wWUYMjURTITYxN_p" },
+            { code: "📚 MTH 601", link: "https://youtube.com/playlist?list=PLbzyTzlrb-qjdxPiXaGldtd9Zf8v4Uq3p&si=yueA72xovqH0r1wK" },
+            { code: "📚 MTH 603", link: "https://youtube.com/playlist?list=PLvg8QSU5Bi0QujmiLAyw8tVnKIV-TtdHw&si=PSSk9l7JyF4ProJt_" },
+
+            // PSY Subjects
+            { code: "📚 PSY 101", link: "https://youtube.com/playlist?list=PLP4jqZZBeTPq2s5XnImn_fCjCycV_2Il6&si=Hs4ol4W4sfo2Z5Cg" },
+            { code: "📚 PSY 401", link: "https://youtube.com/playlist?list=PL6_8kyoZy5Ck3bDb7K5-y0rlU-pOkCb3I&si=LuvvWtmatv31v_NW" },
+            { code: "📚 PSY 402", link: "https://youtube.com/playlist?list=PLP4jqZZBeTPoQ-WHvhfqIU98eZAJ41lwi&si=w44BPXB_3jb8KxUE" },
+            { code: "📚 PSY 403", link: "https://youtube.com/playlist?list=PLP4jqZZBeTPpJmy1CZJaRLqbHY82Y3iYx&si=s_H_Qioambkju6GC" },
+            { code: "📚 PSY 404", link: "https://youtube.com/playlist?list=PLP4jqZZBeTPq3fL6TAfhcwVtUaA0umLrZ&si=3yUoOLUoLollSXgk" },
+            { code: "📚 PSY 405", link: "https://youtube.com/playlist?list=PL6_8kyoZy5CnT-cwghFt4-4SObzhSpcro&si=ItII3eLmwfSvlpp9" },
+            { code: "📚 PSY 406", link: "https://youtube.com/playlist?list=PLP4jqZZBeTPqjyLxWQC9HC1xBqOfi2k3w&si=m0Nlx7b-6A_gymps" },
+            { code: "📚 PSY 407", link: "https://youtube.com/playlist?list=PL6_8kyoZy5CkMCU68xTcdPkWbSj4mZJvN&si=8HZUC0hu3HvLNo74" },
+            { code: "📚 PSY 408", link: "https://youtube.com/playlist?list=PL6_8kyoZy5CmnVpkjaihBqkOxyz9oT60_&si=vVb-Ht2ry5WJ6c1t" },
+            { code: "📚 PSY 409", link: "https://youtube.com/playlist?list=PL6_8kyoZy5CmkZzUrCLLVEcLBLiIk60uV&si=qgc-Wt1Ic1-WKvL__" },
+            { code: "📚 PSY 502", link: "https://youtube.com/playlist?list=PLP4jqZZBeTPrJbHfgkvCHB5SdIdbdrEWd&si=AHx-y8kxo4MIKlfO" },
+            { code: "📚 PSY 504", link: "https://youtube.com/playlist?list=PLP4jqZZBeTPqxjl-2wHpCj7Kpv7lkcsmh&si=LfjuvIFdVBKhl5uF" },
+            { code: "📚 PSY 505", link: "https://youtube.com/playlist?list=PL6_8kyoZy5CmPJ4SSe0BF6Q6prG5-MA3D&si=pkjHDMfQzBOdyU3Y" },
+            { code: "📚 PSY 510", link: "https://youtube.com/playlist?list=PL6_8kyoZy5ClL9RhzU46P6LgpDo4uTgrB&si=IyINt3DVF-qhjwCo" },
+            { code: "📚 PSY 511", link: "https://youtube.com/playlist?list=PL6_8kyoZy5ClO3CBxLkOeDwJDDB6caZnW&si=lzyS0CdEm4VDVk0C" },
+            { code: "📚 PSY 512", link: "https://youtube.com/playlist?list=PL6_8kyoZy5CkL6afduDdrQd0JaWw0l0k4&si=lB3pfTCxRM2wHcwn" },
+            { code: "📚 PSY 513", link: "https://youtube.com/playlist?list=PL6_8kyoZy5ClLsNCnlinFOJnDu190KSBe&si=hF079Q0882bUCKYO" },
+            { code: "📚 PSY 514", link: "https://youtube.com/playlist?list=PL6_8kyoZy5CmOmcEA9B3vRfVb5D2N_wtx&si=RxfCdC0hPzw8NaZM" },
+            { code: "📚 PSY 515", link: "https://youtube.com/playlist?list=PLehqPF_t_cjhwtH3QIl7-QgEHZp08ZrIt&si=YfN9rPqcZfy-ouuK" },
+            { code: "📚 PSY 516", link: "https://youtube.com/playlist?list=PLP4jqZZBeTPrVtou4sF4ZCQX-XAvC4i8n&si=8kWbuDU4Vk3cPXHE" },
+            { code: "📚 PSY 610", link: "https://youtube.com/playlist?list=PL6_8kyoZy5ClGwDdlKqqe9qiukd69mzIu&si=FPMD863RBaYSop6z" },
+            { code: "📚 PSY 611", link: "https://youtube.com/playlist?list=PL6_8kyoZy5CkjbHoVIsgiVnwBiPnxrLtU&si=B3TdZwIui4n1-9Jo" },
+            { code: "📚 PSY 631", link: "https://youtube.com/playlist?list=PLP4jqZZBeTPodHRC4lOenUFH9lXCoL39L&si=6VX4PA_BK82HlPnE" },
+            { code: "📚 PSY 632", link: "https://youtube.com/playlist?list=PL6_8kyoZy5CmoH4QO5taFuGX9vqFOgszB&si=Ja-mRKwtp00HzNAK_" },
+
+            // STA Subjects
+            { code: "📚 STA 301", link: "https://youtube.com/playlist?list=PL043DHjwUKS46H8CPLoYE-Lcl5veuqr6b&si=XLaMgL9K3JH5smbV" },
+            { code: "📚 STA 406", link: "https://youtube.com/playlist?list=PLAct2cV1I81jpoEyOWXLRH9VTrMpiNUZM&si=5DQ01gHujS0cuQCb" },
+            { code: "📚 STA 630", link: "https://youtube.com/playlist?list=PLP4jqZZBeTPp8bKqmtWtLRb-W_mCx5iet&si=PgpAGrYEUiOCjEKx" },
+            { code: "📚 STA 641", link: "https://youtube.com/playlist?list=PLP4jqZZBeTPpUl3rJh3KjuEoMetq7mX-7&si=oA_K0LYuZr3dV_It" },
+        ];
+
+        const container = document.getElementById("subjectContainer");
+        const searchInput = document.getElementById("searchInput");
+        const countDisplay = document.getElementById("subjectCount");
+
+        function displaySubjects(list) {
+            container.innerHTML = "";
+            list.forEach(sub => {
+                container.innerHTML += `
+                    <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 card-glow flex flex-col justify-between transition-all">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4">
+                                <i class="fa-solid fa-book-open-reader"></i>
+                            </div>
+                            <h3 class="text-xl font-black text-slate-800 uppercase tracking-tighter">${sub.code}</h3>
+                            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-1">${sub.name || 'VU Subject'}</p>
+                        </div>
+                        <a href="${sub.link}" target="_blank" class="mt-8 flex items-center justify-center gap-2 w-full py-4 bg-blue-600 text-white rounded-xl text-xs font-black hover:bg-blue-700 shadow-lg shadow-blue-200 transition uppercase tracking-widest">
+                            <i class="fa-brands fa-youtube text-lg"></i> Open Playlist
+                        </a>
+                    </div>
+                `;
+            });
+            countDisplay.innerText = `Total Subjects: ${list.length}`;
+        }
+
+        displaySubjects(subjects);
+
+        searchInput.addEventListener("keyup", function () {
+            let val = this.value.toUpperCase();
+            const filtered = subjects.filter(sub => sub.code.includes(val));
+            displaySubjects(filtered);
+            document.getElementById("noResult").style.display = filtered.length === 0 ? "block" : "none";
+        });
+    </script>
+
+    <footer
+        class="bg-[#0f172a] text-white pt-20 pb-10 mt-20 border-t border-white/5 relative overflow-hidden font-['Poppins']">
+
+        <div class="absolute top-0 right-0 w-96 h-96 bg-red-600/5 rounded-full blur-[120px]"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+
+                <div class="space-y-6">
+                    <div class="text-3xl font-black tracking-tighter">
+                        LGWT <span class="text-red-600">STUDY</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Virtual University ke official lectures aur short series ka sab se bada collection. Hamara
+                        maqsad har student tak muft taleem pohnchana hai.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://wa.me/923196248868" target="_blank"
+                            class="w-11 h-11 bg-white/5 text-green-500 rounded-2xl flex items-center justify-center hover:bg-green-500 hover:text-white transition-all border border-white/10 shadow-xl">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                        <a href="https://youtube.com/@VUStudyLGWT" target="_blank"
+                            class="w-11 h-11 bg-white/5 text-red-500 rounded-2xl flex items-center justify-center hover:bg-red-500 hover:text-white transition-all border border-white/10 shadow-xl">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h4
+                        class="text-white font-bold border-l-4 border-red-600 pl-4 uppercase tracking-[0.2em] text-[10px]">
+                        Popular Series</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm font-medium">
+                        <li><a href="#" class="hover:text-red-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-play text-[10px] opacity-50 group-hover:translate-x-1 transition"></i>
+                                CS Series Links</a></li>
+                        <li><a href="#" class="hover:text-red-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-play text-[10px] opacity-50 group-hover:translate-x-1 transition"></i>
+                                MGT Short Lectures</a></li>
+                        <li><a href="#" class="hover:text-red-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-play text-[10px] opacity-50 group-hover:translate-x-1 transition"></i>
+                                MTH Practice Links</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h4
+                        class="text-white font-bold border-l-4 border-blue-600 pl-4 uppercase tracking-[0.2em] text-[10px]">
+                        Quick Support</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm font-medium">
+                        <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
+                        <li><a href="index.html#lms-calculator" class="hover:text-white transition">Fee Estimator</a>
+                        </li>
+                        <li><a href="Result/pdf-results.html" class="hover:text-white transition">Success Proofs</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h4
+                        class="text-white font-bold border-l-4 border-yellow-400 pl-4 uppercase tracking-[0.2em] text-[10px]">
+                        Need Help?</h4>
+                    <div class="bg-white/5 p-6 rounded-[2rem] border border-white/10 shadow-2xl">
+                        <p class="text-[11px] text-slate-400 mb-4">"Kya aapka subject missing hai? Humein WhatsApp par
+                            batayein hum playlist link add kar denge."</p>
+                        <a href="https://wa.me/923196248868"
+                            class="block w-full py-3 bg-red-600 text-white text-center rounded-xl font-black text-[10px] hover:bg-red-700 transition-all uppercase tracking-widest shadow-lg shadow-red-900/20">
+                            REQUEST PLAYLIST
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-px w-full bg-gradient-to-r from-transparent via-slate-800 to-transparent mb-10"></div>
+
+            <div
+                class="flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-bold text-slate-500 tracking-widest uppercase">
+                <div>&copy; 2026 LGWT OFFICIAL | <span class="text-white">STUDY HUB v2.0</span></div>
+                <div class="flex items-center gap-2 italic">
+                    Learning <span class="text-blue-500">&</span> Growing <span class="text-yellow-400">With Team</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

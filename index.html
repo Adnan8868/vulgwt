@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VU Study LGWT | Professional LMS Solutions</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="https://img.icons8.com/fluency/48/graduation-cap.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- Nave Bar -->
+    <nav class="fixed w-full z-50 nav-glass border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="text-2xl font-bold text-blue-800">
+                    <span class="text-blue-600">VU</span> STUDY <span class="text-yellow-500">LGWT</span>
+                </div>
+
+                <div class="hidden md:flex space-x-8 font-medium text-gray-700">
+                    <a href="#" class="hover:text-blue-600 transition">Home</a>
+                    <a href="#services" class="hover:text-blue-600 transition">Services</a>
+                    <a href="#results" class="hover:text-blue-600 transition">Results</a>
+                    <a href="#resources" class="hover:text-blue-600 transition">Files & Handouts</a>
+                    <a href="contact.html"
+                        class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">Contact</a>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden text-2xl text-blue-800 focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 p-4 space-y-4 shadow-lg">
+            <a href="#" class="block text-gray-700 font-medium">Home</a>
+            <a href="#services" class="block text-gray-700 font-medium">Services</a>
+            <a href="#results" class="block text-gray-700 font-medium">Results</a>
+            <a href="contact.html" class="block text-blue-600 font-bold">Contact Now</a>
+        </div>
+    </nav>
+
+    <!-- Home page -->
+    <section class="hero-bg min-h-screen flex items-center justify-center text-center px-4 pt-16">
+        <div class="max-w-4xl">
+            <h1 class="text-3xl md:text-6xl font-bold text-white mb-6">
+                <span id="typed-heading"></span>
+            </h1>
+            <p class="text-lg md:text-xl text-blue-100 mb-10 leading-relaxed">
+                Professional handling for Assignments, Quizzes, GDBs, and Complete LMS Management.
+                Guaranteed marks with 100% accurate solutions.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#lms-calculator"
+                    class="bg-yellow-500 text-blue-900 px-10 py-4 rounded-xl font-bold text-lg hover:bg-yellow-400 shadow-xl transition transform hover:scale-105">
+                    Check
+                    Fee 💰
+                </a>
+                <a href="#resources"
+                    class="bg-white/10 text-white border border-white/30 backdrop-blur px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition">
+                    Free Resources
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest -->
+    <section class="py-12 bg-white border-b">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div class="space-y-2">
+                <i class="fa-solid fa-circle-check text-blue-600 text-3xl"></i>
+                <h4 class="font-bold text-gray-800">100% Accuracy</h4>
+            </div>
+            <div class="space-y-2">
+                <i class="fa-solid fa-clock-rotate-left text-blue-600 text-3xl"></i>
+                <h4 class="font-bold text-gray-800">On-Time Delivery</h4>
+            </div>
+            <div class="space-y-2">
+                <i class="fa-solid fa-shield-halved text-blue-600 text-3xl"></i>
+                <h4 class="font-bold text-gray-800">Trusted Service</h4>
+            </div>
+            <div class="space-y-2">
+                <i class="fa-solid fa-tags text-blue-600 text-3xl"></i>
+                <h4 class="font-bold text-gray-800">Fair Pricing</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources -->
+    <section id="resources" class="py-24 bg-slate-50 border-y">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8">
+            <a href="handouts/handouts.html"
+                class="bg-white p-10 rounded-[2.5rem] flex items-center gap-6 card-hover border">
+                <div
+                    class="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-3xl shadow-xl">
+                    📚</div>
+                <div>
+                    <h3 class="text-xl font-bold">VU Handouts</h3>
+                    <p class="text-slate-400 text-sm">Download latest highlighted PDF files.</p>
+                </div>
+            </a>
+
+            <a href="papers/pastpapers.html"
+                class="bg-white p-10 rounded-[2.5rem] flex items-center gap-6 card-hover border">
+                <div
+                    class="w-16 h-16 bg-yellow-500 text-white rounded-2xl flex items-center justify-center text-3xl shadow-xl">
+                    📂</div>
+                <div>
+                    <h3 class="text-xl font-bold">Solved Papers</h3>
+                    <p class="text-slate-400 text-sm">Access Mid & Finalterm past paper vault.</p>
+                </div>
+            </a>
+
+            <a href="links.html"
+                class="bg-white p-10 rounded-[2.5rem] flex items-center gap-6 card-hover border group hover:border-red-500 transition-all">
+                <div
+                    class="w-16 h-16 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center text-3xl shadow-xl group-hover:scale-110 transition">
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold">Study Playlists</h3>
+                    <p class="text-slate-400 text-sm">Subject-wise YouTube short lectures.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Files -->
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <span
+                    class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">Academic
+                    Solutions</span>
+                <h2 class="text-4xl font-black text-slate-900 mt-4 uppercase">Latest <span
+                        class="text-blue-600">Solutions</span></h2>
+                <div class="w-16 h-1 bg-yellow-400 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <div
+                    class="bg-slate-50 p-10 rounded-[3rem] card-shadow text-center border border-slate-100 relative group transition-all">
+                    <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">📝</div>
+                    <h3 class="text-2xl font-black text-slate-800 mb-4">Assignments</h3>
+                    <p class="text-slate-500 text-sm mb-8 leading-relaxed">Plagiarism-free, properly formatted solutions
+                        according to VU marking scheme.</p>
+                    <a href="Services/assignmnet.html"
+                        class="inline-flex items-center gap-2 text-blue-600 font-black text-sm uppercase tracking-widest hover:gap-4 transition-all">
+                        Access Hub <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div
+                    class="bg-slate-50 p-10 rounded-[3rem] card-shadow text-center border border-slate-100 relative group transition-all">
+                    <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">🎯</div>
+                    <h3 class="text-2xl font-black text-slate-800 mb-4">Grand Quizzes</h3>
+                    <p class="text-slate-500 text-sm mb-8 leading-relaxed">10/10 marks guaranteed with our expert
+                        handling and huge MCQ bank.</p>
+                    <a href="Services/solution.html"
+                        class="inline-flex items-center gap-2 text-blue-600 font-black text-sm uppercase tracking-widest hover:gap-4 transition-all">
+                        Open Bank <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div
+                    class="bg-slate-50 p-10 rounded-[3rem] card-shadow text-center border border-slate-100 relative group transition-all">
+                    <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">💬</div>
+                    <h3 class="text-2xl font-black text-slate-800 mb-4">GDB Support</h3>
+                    <p class="text-slate-500 text-sm mb-8 leading-relaxed">Unique academic points for Graded Discussion
+                        Boards to ensure full marks.</p>
+                    <a href="Services/solution.html"
+                        class="inline-flex items-center gap-2 text-blue-600 font-black text-sm uppercase tracking-widest hover:gap-4 transition-all">
+                        View GDBs <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Handling SMS -->
+    <section id="offer" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="text-center mb-16">
+                <span
+                    class="bg-yellow-100 text-yellow-700 px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest">Premium
+                    Service</span>
+                <h2 class="text-4xl font-black text-slate-900 mt-4 uppercase">LMS Handling <span
+                        class="text-blue-600">Offers</span></h2>
+                <p class="text-slate-500 mt-2 italic">Professional management for busy students</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10">
+
+                <div
+                    class="bg-white p-10 rounded-[3rem] shadow-xl border border-blue-50 relative overflow-hidden group hover:border-blue-500 transition-all">
+                    <div
+                        class="absolute -top-10 -right-10 w-32 h-32 bg-blue-600/5 rounded-full group-hover:scale-150 transition-all">
+                    </div>
+
+                    <h3 class="text-2xl font-black text-slate-800 mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-briefcase text-blue-600"></i> Complete Handling
+                    </h3>
+
+                    <ul class="space-y-4 text-slate-600 font-medium mb-10">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500"></i>
+                            Assignments Solutions</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500"></i>
+                            Expert Quizzes Handling</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500"></i>
+                            Unique GDB Solutions</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500"></i>
+                            Cisco Specialist (CS201, 206, 610)</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500"></i> Mid
+                            & Finalterm Preparation</li>
+                        <li class="flex items-center gap-3 font-bold text-blue-600"><i
+                                class="fa-solid fa-star text-yellow-500"></i> Full/Half Semester Packages</li>
+                    </ul>
+
+                    <a href="https://wa.me/923196248868" target="_blank"
+                        class="flex items-center justify-center gap-3 w-full py-5 bg-blue-600 text-white rounded-2xl font-black shadow-lg shadow-blue-200 hover:bg-blue-700 transition">
+                        <i class="fab fa-whatsapp text-xl"></i> HIRE ON WHATSAPP
+                    </a>
+                </div>
+
+                <div
+                    class="bg-slate-900 p-10 rounded-[3rem] shadow-2xl relative overflow-hidden group border border-white/5">
+                    <div
+                        class="absolute -bottom-10 -left-10 w-32 h-32 bg-yellow-400/10 rounded-full group-hover:scale-150 transition-all">
+                    </div>
+
+                    <h3 class="text-2xl font-black text-white mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-shield-halved text-yellow-400"></i> Why Choose Us?
+                    </h3>
+
+                    <div class="space-y-6 mb-10">
+                        <div class="flex gap-4">
+                            <div class="text-2xl text-yellow-400"><i class="fa-solid fa-user-tie"></i></div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Experienced Experts</h4>
+                                <p class="text-slate-400 text-xs mt-1">Specialized team for each VU subject.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="text-2xl text-blue-400"><i class="fa-solid fa-bolt"></i></div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Fast Response</h4>
+                                <p class="text-slate-400 text-xs mt-1">Under 30 minutes reply time guaranteed.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="text-2xl text-green-400"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Reasonable Price</h4>
+                                <p class="text-slate-400 text-xs mt-1">Quality work with easy installment options.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#results"
+                        class="flex items-center justify-center gap-3 w-full py-5 bg-white/10 text-white border border-white/20 rounded-2xl font-black hover:bg-white hover:text-slate-900 transition">
+                        <i class="fa-solid fa-eye"></i> VIEW RESULTS PROOF
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- HTML FOE LMS Calculators -->
+    <section id="lms-calculator" class="py-20 bg-slate-50">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <span
+                    class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider">Premium
+                    Billing</span>
+                <h2 class="text-4xl font-extrabold text-slate-900 mt-4">Smart <span class="text-blue-600">LMS
+                        Estimator</span></h2>
+                <p class="text-slate-500 mt-2">Enter subjects to see your total bill and exclusive savings.</p>
+            </div>
+
+            <div class="bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-slate-100">
+                <div class="grid md:grid-cols-12">
+                    <div class="md:col-span-4 bg-blue-600 p-10 text-white flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-6">Welcome to LGWT! 👋</h3>
+                            <p class="text-blue-100 mb-8 text-sm leading-relaxed">Quality LMS handling with transparent
+                                billing. Discounts are automatically applied based on your subjects.</p>
+
+                            <div class="space-y-4">
+                                <div class="bg-white/10 p-3 rounded-xl border border-white/20">
+                                    <p class="text-[10px] font-bold uppercase text-yellow-400">Total Transparency</p>
+                                    <p class="text-xs">Original Bill vs Discounted Bill visible side-by-side.</p><br>
+                                    <p class="text-xs">Complete semester management including Quizzes, GDBs, and Cisco
+                                        assignments.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-8 p-10" id="form-stage">
+                        <div class="space-y-8">
+                            <div>
+                                <label
+                                    class="block text-slate-700 font-bold mb-3 uppercase text-xs tracking-widest">Enter
+                                    Subject Codes</label>
+                                <div id="tags-container"
+                                    class="flex flex-wrap gap-2 p-3 bg-slate-50 rounded-[1.5rem] border-2 border-slate-200 focus-within:border-blue-500 transition-all min-h-[140px] items-start">
+                                    <input type="text" id="tag-input" placeholder="Type CS101..."
+                                        class="bg-transparent outline-none flex-grow p-2 text-slate-700 placeholder:text-slate-400">
+                                </div>
+                                <p class="text-[10px] text-slate-400 mt-3">Separate codes with <b>Comma (,)</b>,
+                                    <b>Space</b>, or <b>Enter</b>.
+                                </p>
+                            </div>
+                            <button onclick="calculateInvoice()"
+                                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-5 rounded-2xl shadow-xl transition-all transform hover:scale-[1.01]">
+                                Generate My Bill 📄
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-8 p-8 hidden" id="result-stage">
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="text-xl font-bold text-slate-800 tracking-tight">Your Detailed Invoice</h3>
+                            <button onclick="goBack()" class="text-blue-600 font-bold text-xs hover:underline">Edit
+                                List</button>
+                        </div>
+
+                        <div class="overflow-hidden border border-slate-100 rounded-3xl mb-8">
+                            <table class="w-full text-left">
+                                <thead class="bg-slate-50 border-b border-slate-100">
+                                    <tr class="text-[10px] font-bold text-slate-400 uppercase">
+                                        <th class="p-4">Subject</th>
+                                        <th class="p-4 text-center">Monthly</th>
+                                        <th class="p-4 text-center">Half Sem</th>
+                                        <th class="p-4 text-right">Full Rate</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="invoiceList"></tbody>
+                            </table>
+                        </div>
+
+                        <div class="mb-8 grid grid-cols-1 gap-2">
+                            <div id="off4k"
+                                class="p-3 rounded-xl border border-slate-100 flex justify-between items-center opacity-40 text-xs transition-all">
+                                <span>4K+ Semester Discount Offer</span><b class="text-green-600">- 500</b>
+                            </div>
+                            <div id="off5k"
+                                class="p-3 rounded-xl border border-slate-100 flex justify-between items-center opacity-40 text-xs transition-all">
+                                <span>5K+ Super Discount Offer</span><b class="text-green-600">- 800</b>
+                            </div>
+                            <div id="off6k"
+                                class="p-3 rounded-xl border border-slate-100 flex justify-between items-center opacity-40 text-xs transition-all">
+                                <span>6K+ Mega Discount Offer</span><b class="text-green-600">- 1200</b>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-900 rounded-[2.5rem] p-8 text-white shadow-2xl relative overflow-hidden">
+                            <div class="grid grid-cols-2 gap-4 mb-8">
+                                <div class="border-r border-white/10 pr-4">
+                                    <p class="text-[9px] text-blue-300 font-bold uppercase mb-1">Total Original Bill</p>
+                                    <span id="grossBill"
+                                        class="text-xl font-bold text-slate-400 line-through tracking-tighter">Rs.
+                                        0</span>
+                                </div>
+                                <div class="pl-4">
+                                    <p class="text-[9px] text-green-400 font-bold uppercase mb-1">Discounted Final Bill
+                                    </p>
+                                    <span id="finalBill"
+                                        class="text-3xl font-black text-yellow-400 tracking-tighter">Rs. 0</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-blue-800/30 border border-blue-700/50 p-4 rounded-2xl mb-8">
+                                <p class="text-[10px] text-blue-100 italic leading-relaxed text-center">
+                                    <b>Supporting Note:</b> "If You Want More Discount Then Contact Me Using Cliced On
+                                    <b style="color: orange;"> Confirm & Book on WhatsApp</b>"
+                                </p>
+                            </div>
+
+                            <button onclick="bookNow()"
+                                class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 shadow-lg transition-all transform active:scale-95">
+                                <i class="fab fa-whatsapp text-xl"></i> Confirm & Book on WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOT -->
+    <section id="bot-console" class="py-24 bg-[#020617] relative overflow-hidden border-y border-blue-500/20">
+
+        <div class="absolute inset-0 opacity-10"
+            style="background-image: radial-gradient(#1e40af 1px, transparent 1px); background-size: 30px 30px;"></div>
+
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+                <div class="relative group">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-[2rem] blur opacity-20 group-hover:opacity-40 transition">
+                    </div>
+
+                    <div class="relative bg-black rounded-[2rem] border border-blue-500/30 overflow-hidden shadow-2xl">
+                        <div
+                            class="bg-slate-900/50 px-6 py-3 border-b border-white/10 flex justify-between items-center">
+                            <div class="flex gap-2">
+                                <span class="w-3 h-3 rounded-full bg-red-500 shadow-[0_0_10px_#ef4444]"></span>
+                                <span class="w-3 h-3 rounded-full bg-yellow-500 shadow-[0_0_10px_#eab308]"></span>
+                                <span class="w-3 h-3 rounded-full bg-green-500 shadow-[0_0_10px_#22c55e]"></span>
+                            </div>
+                            <span
+                                class="text-[10px] font-mono text-blue-400 tracking-tighter animate-pulse">LGWT_NEURAL_LINK:
+                                ACTIVE</span>
+                        </div>
+
+                        <div class="p-8 font-mono text-sm h-80 overflow-hidden relative">
+                            <div id="hacker-logs" class="space-y-2">
+                            </div>
+                            <div
+                                class="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-blue-500/5 to-transparent h-20 w-full animate-[scan_3s_linear_infinite]">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-left space-y-6">
+                    <h2 class="text-4xl font-black text-white leading-tight uppercase">
+                        LGWT <span class="text-blue-500">Auto-Bot</span> <br>
+                        <span class="text-2xl text-slate-400">Advanced Baileys Engine</span>
+                    </h2>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                            <i class="fa-solid fa-note-sticky text-yellow-400 mb-2"></i>
+                            <p class="text-white font-bold text-xs">Sticker Engine</p>
+                            <p class="text-[9px] text-slate-500">Auto Image to WebP</p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                            <i class="fa-solid fa-magnifying-glass text-blue-400 mb-2"></i>
+                            <p class="text-white font-bold text-xs">Handout Search</p>
+                            <p class="text-[9px] text-slate-500">Direct PDF Fetching</p>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/923144598683?text=!menu" target="_blank"
+                        class="inline-flex items-center gap-4 px-10 py-5 bg-blue-600 text-white rounded-2xl font-black hover:bg-blue-700 hover:shadow-[0_0_30px_rgba(37,99,235,0.4)] transition-all">
+                        <i class="fa-solid fa-terminal"></i> OPEN BOT COMMAND MENU
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Result Student How Much Assignments Handle -->
+    <section class="py-16 bg-blue-900 relative overflow-hidden">
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+
+                <div class="space-y-2">
+                    <div class="text-4xl md:text-5xl font-black text-white tracking-tighter">
+                        <span class="counter" data-target="50">0</span>+
+                    </div>
+                    <p class="text-blue-200 text-xs md:text-sm font-bold uppercase tracking-widest">Assignments Solved
+                    </p>
+                </div>
+
+                <div class="space-y-2">
+                    <div class="text-4xl md:text-5xl font-black text-yellow-400 tracking-tighter">
+                        <span class="counter" data-target="500">0</span>+
+                    </div>
+                    <p class="text-blue-200 text-xs md:text-sm font-bold uppercase tracking-widest">Quizzes Handled</p>
+                </div>
+
+                <div class="space-y-2">
+                    <div class="text-4xl md:text-5xl font-black text-white tracking-tighter">
+                        <span class="counter" data-target="98">0</span>%
+                    </div>
+                    <p class="text-blue-200 text-xs md:text-sm font-bold uppercase tracking-widest">Success Rate</p>
+                </div>
+
+                <div class="space-y-2">
+                    <div class="text-4xl md:text-5xl font-black text-yellow-400 tracking-tighter">
+                        <span class="counter" data-target="45">0</span>+
+                    </div>
+                    <p class="text-blue-200 text-xs md:text-sm font-bold uppercase tracking-widest">Happy Students</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Acadmic result -->
+    <section id="results" class="py-24 bg-white border-t">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="mb-16">
+                <span
+                    class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">Verified
+                    Proofs</span>
+                <h2 class="text-4xl font-black text-slate-900 mt-4 uppercase">
+                    Academic <span class="text-blue-600 underline decoration-yellow-400">Success Hub</span>
+                </h2>
+                <p class="text-slate-500 font-bold italic mt-2">100% accurate work results verified by students.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+
+                <div
+                    class="group bg-slate-50 p-10 rounded-[3rem] border border-slate-100 hover:border-red-500/30 transition-all shadow-xl hover:shadow-2xl text-center">
+                    <div
+                        class="w-20 h-20 bg-red-100 text-red-600 rounded-[2rem] flex items-center justify-center text-4xl mx-auto mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-800 uppercase">Video Results</h3>
+                    <p class="text-slate-500 text-sm mt-3 mb-8">Watch screen recordings of LMS activities, Quiz
+                        handling, and Grand Quizzes results.</p>
+                    <a href="Result/video-results.html"
+                        class="inline-flex items-center gap-3 bg-red-600 text-white px-8 py-4 rounded-2xl font-bold hover:bg-red-700 shadow-lg shadow-red-200 transition">
+                        WATCH VIDEOS <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div
+                    class="group bg-slate-50 p-10 rounded-[3rem] border border-slate-100 hover:border-blue-500/30 transition-all shadow-xl hover:shadow-2xl text-center">
+                    <div
+                        class="w-20 h-20 bg-blue-100 text-blue-600 rounded-[2rem] flex items-center justify-center text-4xl mx-auto mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-800 uppercase">PDF Reports</h3>
+                    <p class="text-slate-500 text-sm mt-3 mb-8">Download and verify full semester marksheets and
+                        activity logs of our students.</p>
+                    <a href="Result/pdf-results.html"
+                        class="inline-flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold hover:bg-blue-700 shadow-lg shadow-blue-200 transition">
+                        VIEW PDF PROOFS <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Small Icon Whatsapp on side bar  -->
+    <a href="https://wa.me/923196248868" target="_blank" class="fixed bottom-8 right-8 z-[100] group flex items-center">
+        <span
+            class="bg-white text-gray-800 px-4 py-2 rounded-lg shadow-xl mr-3 opacity-0 group-hover:opacity-100 transition-opacity font-bold">Need
+            Help? Chat now!</span>
+        <div
+            class="bg-green-500 text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-3xl hover:bg-green-600 transition animate-bounce">
+            <i class="fa-brands fa-whatsapp"></i>
+        </div>
+    </a>
+
+    <!-- Footer -->
+    <footer
+        class="bg-[#0f172a] text-white pt-20 pb-10 mt-20 relative overflow-hidden border-t border-white/5 font-['Poppins']">
+
+        <div class="absolute top-0 right-0 w-80 h-80 bg-blue-600/10 rounded-full blur-[100px] -mr-40 -mt-40"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-yellow-500/5 rounded-full blur-[100px] -ml-40 -mb-40"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+
+                <div class="space-y-6">
+                    <div class="text-3xl font-black tracking-tighter">
+                        VU STUDY <span class="text-yellow-400">LGWT</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed font-medium">
+                        Pakistan's most trusted partner for Virtual University success. We provide 100% accurate LMS
+                        solutions, verified handouts, and guaranteed results.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://chat.whatsapp.com/CTYeKaeMCf00pyhM0aMB0e" target="_blank"
+                            class="w-11 h-11 bg-white/5 text-green-500 rounded-2xl flex items-center justify-center hover:bg-green-500 hover:text-white transition-all shadow-xl border border-white/10">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@VUStudyLGWT" target="_blank"
+                            class="w-11 h-11 bg-white/5 text-red-500 rounded-2xl flex items-center justify-center hover:bg-red-500 hover:text-white transition-all shadow-xl border border-white/10">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h4 class="text-white font-bold border-l-4 border-blue-600 pl-4 uppercase tracking-[0.2em] text-xs">
+                        Quick Links</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm font-semibold">
+                        <li><a href="handouts/handouts.html"
+                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
+                                Handouts Library</a></li>
+                        <li><a href="papers/pastpapers.html"
+                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
+                                Past Papers Vault</a></li>
+                        <li><a href="#services"
+                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
+                                Our Services</a></li>
+                        <li><a href="#results" class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
+                                Proofs & Results</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h4
+                        class="text-white font-bold border-l-4 border-yellow-400 pl-4 uppercase tracking-[0.2em] text-xs">
+                        Services</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm font-semibold">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500/50"></i>
+                            LMS Full Handling</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500/50"></i>
+                            Paid Assignments</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500/50"></i>
+                            Quiz Management</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500/50"></i>
+                            Cisco Assignments</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h4 class="text-white font-bold border-l-4 border-blue-600 pl-4 uppercase tracking-[0.2em] text-xs">
+                        Support</h4>
+                    <div class="bg-white/5 p-6 rounded-[2rem] border border-white/10 space-y-4 shadow-2xl">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-900/50">
+                                <i class="fa-solid fa-headset text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-slate-500 font-black uppercase tracking-widest">Help Desk</p>
+                                <p class="text-sm font-bold text-white">+92 319 6248868</p>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/923196248868" target="_blank"
+                            class="block w-full py-4 bg-yellow-400 text-blue-950 text-center rounded-xl font-black text-xs hover:bg-yellow-300 transition-all uppercase tracking-widest shadow-lg">
+                            Send Message
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-px w-full bg-gradient-to-r from-transparent via-slate-700 to-transparent mb-10"></div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-slate-500 text-[11px] font-medium text-center md:text-left leading-relaxed">
+                    &copy; 2026 <span class="text-white font-bold">LGWT Official</span>. Crafted with <i
+                        class="fa-solid fa-heart text-red-500"></i> for Virtual University Students.
+                </div>
+                <div class="flex items-center gap-2 text-slate-500 text-[10px] uppercase tracking-[0.3em] font-black">
+                    Learning <span class="text-blue-500">&</span> Growing <span class="text-yellow-400">With Team</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LMS CalCulator Scripts -->
+    <script>
+        const specialBooks = ["CS101", "ENG101", "MTH101", "ISL202", "PAK301", "MGT211"];
+        const tagsContainer = document.getElementById('tags-container');
+        const tagInput = document.getElementById('tag-input');
+        let tags = [];
+
+        tagInput.addEventListener('keydown', (e) => {
+            if (e.key === ',' || e.key === ' ' || e.key === 'Enter') {
+                e.preventDefault();
+                let val = tagInput.value.trim().toUpperCase().replace(/,/g, '');
+                if (val && !tags.includes(val)) { tags.push(val); renderTags(); }
+                tagInput.value = '';
+            }
+        });
+
+        function renderTags() {
+            tagsContainer.querySelectorAll('.tag-badge').forEach(t => t.remove());
+            tags.forEach((tag, i) => {
+                const badge = document.createElement('div');
+                badge.className = 'tag-badge bg-blue-600 text-white px-3 py-1 rounded-lg text-xs font-bold flex items-center gap-2';
+                badge.innerHTML = `${tag} <span class="cursor-pointer opacity-70" onclick="removeTag(${i})">&times;</span>`;
+                tagsContainer.insertBefore(badge, tagInput);
+            });
+        }
+        function removeTag(i) { tags.splice(i, 1); renderTags(); }
+
+        function calculateInvoice() {
+            if (tags.length === 0) { alert("Please add subjects!"); return; }
+            const listBody = document.getElementById('invoiceList');
+            listBody.innerHTML = "";
+            let subtotal = 0;
+
+            tags.forEach(code => {
+                let rate = specialBooks.includes(code) ? 600 : 1000;
+                subtotal += rate;
+                listBody.innerHTML += `
+            <tr class="border-b border-slate-50 text-sm">
+                <td class="p-4 font-bold text-slate-700">${code}</td>
+                <td class="p-4 text-center text-slate-500">Rs. ${Math.round(rate / 4)}</td>
+                <td class="p-4 text-center text-slate-500 font-medium">Rs. ${Math.round(rate / 2)}</td>
+                <td class="p-4 text-right font-bold text-blue-600">Rs. ${rate}</td>
+            </tr>`;
+            });
+
+            let disc = 0;
+            resetOffers();
+            if (subtotal >= 6000) { disc = 1100; highlight('off6k'); }
+            else if (subtotal >= 5000) { disc = 800; highlight('off5k'); }
+            else if (subtotal >= 4000) { disc = 500; highlight('off4k'); }
+
+            document.getElementById('grossBill').innerText = `Rs. ${subtotal}`;
+            document.getElementById('finalBill').innerText = `Rs. ${subtotal - disc}`;
+            document.getElementById('form-stage').classList.add('hidden');
+            document.getElementById('result-stage').classList.remove('hidden');
+        }
+
+        function highlight(id) {
+            const el = document.getElementById(id);
+            el.classList.replace('opacity-40', 'opacity-100');
+            el.classList.add('bg-green-50', 'border-green-400', 'scale-105', 'shadow-sm');
+        }
+
+        function resetOffers() {
+            ['off4k', 'off5k', 'off6k'].forEach(id => {
+                document.getElementById(id).className = "p-3 rounded-xl border border-slate-100 flex justify-between items-center opacity-40 transition-all";
+            });
+        }
+
+        function goBack() {
+            document.getElementById('form-stage').classList.remove('hidden');
+            document.getElementById('result-stage').classList.add('hidden');
+        }
+
+        function bookNow() {
+            const final = document.getElementById('finalBill').innerText;
+            const msg = `Assalam o Alaikum LGWT! %0AMujhe LMS Handling start karwani hai.%0ASubjects: ${tags.join(', ')}%0AFinal Discounted Bill: ${final}%0A%0A(Website Invoice Checked)`;
+            window.open(`https://wa.me/923196248868?text=${msg}`, '_blank');
+        }
+    </script>
+
+    <!-- Other Script -->
+    <script>
+        var typed = new Typed('#typed-heading', {
+            strings: ["Welcome to VU Study LGWT", "Your LMS Solution Partner", "Accurate Assignment Help", "Expert Quiz Handling"],
+            typeSpeed: 60,
+            backSpeed: 40,
+            loop: true
+        });
+
+        // Mobile Menu Toggle logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            const icon = btn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+        });
+    </script>
+
+    <!-- BOT Script -->
+    <script>
+        const logContainer = document.getElementById('hacker-logs');
+        const commands = [
+            { txt: "> Initializing Baileys Socket...", color: "text-blue-400" },
+            { txt: "> Loading Dani.js & Auth Info...", color: "text-blue-400" },
+            { txt: "> connection.update: OPEN", color: "text-green-500" },
+            { txt: "> setupHandoutSearch: READY", color: "text-blue-400" },
+            { txt: "> setupResultCheck: READY", color: "text-blue-400" },
+            { txt: "> Listening for .sticker command...", color: "text-yellow-500" },
+            { txt: "> Request received from: 923xxxxxxxxx", color: "text-white" },
+            { txt: "> Processing PDF search: CS101...", color: "text-cyan-400" },
+            { txt: "> System Heartbeat: OK", color: "text-green-500" },
+            { txt: "-----------------------------------", color: "text-slate-700" }
+        ];
+
+        let lineIndex = 0;
+
+        function addLogLine() {
+            if (lineIndex >= commands.length) {
+                logContainer.innerHTML = ""; // Loop reset
+                lineIndex = 0;
+            }
+
+            const line = document.createElement('div');
+            line.className = `log-line ${commands[lineIndex].color} text-[12px]`;
+            line.innerText = commands[lineIndex].txt;
+            logContainer.appendChild(line);
+
+            lineIndex++;
+            setTimeout(addLogLine, Math.random() * 1000 + 500); // Random delay for "real" feel
+        }
+
+        // Start animation when page loads
+        window.addEventListener('load', addLogLine);
+    </script>
+    <!-- Assignemnt Counter Script -->
+    <script>
+        // Function to start counter animation
+        const startCounters = () => {
+            const counters = document.querySelectorAll('.counter');
+            const speed = 200; // Jitna kam hoga, utna fast chalega
+
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        };
+
+        // Scroll Detection to trigger counter
+        let started = false;
+        window.addEventListener('scroll', () => {
+            const section = document.querySelector('.counter')?.parentElement;
+            if (section) {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight && !started) {
+                    startCounters();
+                    started = true;
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

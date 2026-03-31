@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Papers Hub | LGWT Official</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="https://img.icons8.com/fluency/48/graduation-cap.png" type="image/x-icon">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2a5298 100%);
+        }
+
+        .subject-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: #3b82f6;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50">
+
+    <header class="hero-gradient text-white py-16 px-4 shadow-2xl relative text-center">
+        <h1 class="text-3xl md:text-5xl font-extrabold mb-4 uppercase tracking-widest">
+            <span id="pageCategory">MKT</span> <span class="text-yellow-400">Past Papers</span>
+        </h1>
+        <p class="text-blue-100 text-lg max-w-2xl mx-auto opacity-90 font-medium">Download verified midterm and
+            finalterm solved papers archive.</p>
+
+        <div class="max-w-xl mx-auto mt-10 relative rounded-full overflow-hidden shadow-2xl">
+            <span class="absolute inset-y-0 left-5 flex items-center text-slate-400">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+            <input type="text" id="searchInput" onkeyup="searchSubjects()" placeholder="Search subject code..."
+                class="w-full py-5 pl-14 pr-6 text-slate-900 font-bold outline-none border-none">
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-6 py-12">
+        <div class="mb-10">
+            <a href="pastpapers.html"
+                class="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-2xl text-blue-800 font-bold shadow-sm hover:shadow-md transition border border-gray-100">
+                <i class="fa-solid fa-arrow-left"></i> Back to Subjects Hub
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="subjectContainer">
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // ==========================================
+        // 1. APNA DATA YAHAN ADD KAREIN 
+        // ==========================================
+       const subjects = [
+                ["MKT501", "Marketing Management"],
+                ["MKT530", "Consumer Behavior"],
+                ["MKT610", "Customer Relationship Management"],
+                ["MKT611", "Marketing Research"],
+                ["MKT621", "Advertising and Promotion"],
+                ["MKT624", "Brand Management"],
+                ["MKT625", "Services Marketing"]
+            ];
+
+
+        // Page ki category set karein (Optionally)
+        document.getElementById('pageCategory').innerText = "MKT";
+
+        // ==========================================
+        // 2. AUTO-GENERATOR LOGIC (DO NOT CHANGE)
+        // ==========================================
+        const container = document.getElementById('subjectContainer');
+
+        subjects.forEach(sub => {
+            container.innerHTML += `
+                <div class="card subject-card bg-white p-8 rounded-[2.5rem] flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-blue-50 text-blue-600 px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">Past Papers</span>
+                            <span class="text-3xl text-slate-200"><i class="fa-solid fa-file-contract"></i></span>
+                        </div>
+                        <h3 class="text-2xl font-black text-slate-800">${sub[0]}</h3>
+                        <p class="text-slate-500 text-sm font-medium mb-8 leading-relaxed">${sub[1]}</p>
+                    </div>
+                    <div class="space-y-3 pt-4 border-t border-slate-50">
+                        <a href="drive.html?code=${sub[0]}&type=mid" class="flex items-center justify-center gap-2 w-full py-3 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-100">
+                            <i class="fa-solid fa-file-invoice"></i> Midterm Papers
+                        </a>
+                        <a href="drive.html?code=${sub[0]}&type=final" class="flex items-center justify-center gap-2 w-full py-3 bg-green-600 text-white rounded-xl font-bold hover:bg-green-700 transition shadow-lg shadow-green-100">
+                            <i class="fa-solid fa-graduation-cap"></i> Finalterm Papers
+                        </a>
+                    </div>
+                </div>
+            `;
+        });
+
+        // Search Function
+        function searchSubjects() {
+            let input = document.getElementById('searchInput').value.toUpperCase();
+            let cards = document.getElementsByClassName('subject-card');
+            for (let i = 0; i < cards.length; i++) {
+                let text = cards[i].innerText.toUpperCase();
+                cards[i].style.display = text.includes(input) ? "" : "none";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTH Handouts Hub | LGWT Official</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="https://img.icons8.com/fluency/48/graduation-cap.png" type="image/x-icon">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2a5298 100%);
+        }
+
+        .subject-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: #3b82f6;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50">
+
+    <header class="hero-gradient text-white py-16 px-4 shadow-2xl text-center">
+        <h1 class="text-3xl md:text-5xl font-extrabold mb-4 uppercase tracking-widest">
+            MTH <span class="text-yellow-400">Handouts</span> Hub
+        </h1>
+        <p class="text-blue-100 text-lg opacity-90">
+            Download Mathematics handouts, highlighted notes, and handwritten material.
+        </p>
+
+        <div class="max-w-xl mx-auto mt-10 relative rounded-full overflow-hidden shadow-2xl">
+            <span class="absolute inset-y-0 left-5 flex items-center text-slate-400">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+            <input type="text" id="searchInput" onkeyup="searchSubjects()" placeholder="Search subject (e.g. MTH101)..."
+                class="w-full py-5 pl-14 pr-6 text-slate-900 font-bold outline-none">
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-6 py-12">
+
+        <div class="mb-10">
+            <a href="handouts.html"
+                class="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-2xl text-blue-800 font-bold shadow-sm hover:shadow-md transition border border-gray-100">
+                <i class="fa-solid fa-arrow-left"></i> Back to Resource Hub
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="subjectContainer"></div>
+
+    </div>
+
+    <script>
+        const mthData = [
+            { id: "MTH001", name: "Elementary Mathematics", handouts: "1V7Ndod8Wp4lj4Ft_MPhDW3gr3Ii-pyVj", highlighted: "not_found.html", ppt: "not_found.html" },
+
+            { id: "MTH100", name: "General Mathematics", handouts: "1Plmwckeb4Dr_FuyqHasHjcEnkifdpQ53", highlighted: "https://drive.google.com/file/d/1ZlR55xiZmXk2Hrsq5VqDq5tNtipJ5y1A/view", ppt: "https://drive.google.com/file/d/1GcogJ_47cV_3Wqqof2rlSueTcCDaBAKP/view" },
+
+            { id: "MTH101", name: "Calculus And Analytical Geometry", handouts: "1SfvSaeGyUbKuQtQ9uPJovO10PRGYyDIe", highlighted: "https://drive.google.com/drive/folders/10h9TxVsM8xG1KkKMAMD3FPAuLvNm3Qb6", ppt: "https://drive.google.com/drive/folders/1OKqSqpqGQOGPE2e0LONYWGDY616L1uO_" },
+
+            { id: "MTH102", name: "Basic Algebra and Trigonometry", handouts: "1MZfBZWVGH1hZndck6F67PptybTZW3AKG", highlighted: "not_found.html", ppt: "not_found.html" },
+
+            { id: "MTH104", name: "Sets and Logic", handouts: "https://drive.google.com/drive/folders/1dHOnAXGZAZIqXXtn60m-WlAR3AaqmsoC", highlighted: "https://drive.google.com/drive/folders/1dHOnAXGZAZIqXXtn60m-WlAR3AaqmsoC", ppt: "https://drive.google.com/file/d/1WMyJWPtjIQM90AMLR3JeXci80DaOqs-V/view" },
+
+            { id: "MTH201", name: "Multivariable Calculus", handouts: "13zFZHK_dR6ymNDcvmWc2gbgqCbi9HMCe", highlighted: "not_found.html", ppt: "not_found.html" },
+
+            { id: "MTH202", name: "Discrete Mathematics", handouts: "12sJJ11vxNbyfLWLbs_8BZUzyGv0YVl6E", highlighted: "https://drive.google.com/drive/folders/1scCQyY5IkPVN_4razWD1I1oLRBeHSBiO", ppt: "https://drive.google.com/file/d/1IbxZF0OnLc2p9vWFXBY1dNZPj99I6t2K/view" },
+
+            { id: "MTH301", name: "Calculus II", handouts: "1tnt94eHuMaRiPgnoNXMC3MCp_zy5FCmE", highlighted: "not_found.html", ppt: "https://drive.google.com/drive/folders/1k_MYNQ9jOtCFWw-HUip0Fhp67CYmMGvH" },
+
+            { id: "MTH302", name: "Business Mathematics & Statistics", handouts: "1iCpy2HEzYRbhuaXC1jErlAIsSnqWfIbP", highlighted: "https://drive.google.com/file/d/1g91yXOFbIurs97QEqA_pAK9EVTm6RVpv/view", ppt: "not_found.html" },
+
+            { id: "MTH303", name: "Mathematical Methods", handouts: "1oT6JPs8vnN7X3w6jUDHxKno0YoIiJmG-", highlighted: "not_found.html", ppt: "not_found.html" },
+
+            { id: "MTH304", name: "Statics", handouts: "1bIyLMvQGovluDnwQe8A1hEUXt-2IwkrR", highlighted: "not_found.html", ppt: "https://drive.google.com/drive/folders/1MczjsaAufs447bM-QBq2YlTmB8-K2NM-" },
+
+            { id: "MTH401", name: "Differential Equations", handouts: "1N_ZSuz31Zs3Mgz0q0dUQplymdkF5hnBI", highlighted: "not_found.html", ppt: "not_found.html" },
+
+            { id: "MTH403", name: "Calculus & Analytical Geometry-II", handouts: "1M9zqxgQd2D6hi4YGyev2jOJ6DmKtONOj", highlighted: "not_found.html", ppt: "not_found.html" },
+
+            { id: "MTH404", name: "Dynamics", handouts: "https://drive.google.com/drive/folders/1FVbuwZYSqisJ6CqwZLaPYDjp5K2p2Wtf", highlighted: "not_found.html", ppt: "https://drive.google.com/file/d/1BBhcQCgBx8kcZD3elUFLNM103qEsOtXw/view" },
+
+            { id: "MTH405", name: "Elementary Topics in Pure Mathematics", handouts: "1gEzR7z0Jnq8fKPC2Ug0VWxyoZvQ1eNKj", highlighted: "not_found.html", ppt: "not_found.html" },
+
+            { id: "MTH501", name: "Linear Algebra", handouts: "1CR7ijfBlljUhl2HazgKjMRK8E5DWOilp", highlighted: "https://drive.google.com/file/d/1K__zvA1zZNUWb9OFAe5AA1yKV52RYq6w/view", ppt: "https://drive.google.com/drive/folders/1aPoRXPK4kk3DvgT7jnPQKZ6zKFSZ4pvZ" },
+
+            { id: "MTH601", name: "Operations Research", handouts: "1BF-3QeiF1oIho77QV5PsHjxztDjIuyUJ", highlighted: "https://drive.google.com/drive/folders/1wt4qCZGrPox6hB3hF8YZg4aU5sxU6iiE", ppt: "https://drive.google.com/drive/folders/1tzNrMhTKXoy7u1s_-CHNAwO2kstXN9Yd" },
+
+            { id: "MTH603", name: "Numerical Analysis", handouts: "1P1W9kk8Ib1Z2gqfMlRKDr7Vk1hotmtnf", highlighted: "https://drive.google.com/drive/folders/1_3QNKvAn1J6LUEo04xQGv67MFE_vDiMA", ppt: "not_found.html" },
+
+            { id: "MTH621", name: "Real Analysis I", handouts: "1q8syQhAsfuSfiph4zhHYsnmyVIVhTNT6", highlighted: "not_found.html", ppt: "https://drive.google.com/file/d/1NYOnbovJST2Ry6iba751j9N42eU1bBp7/view" },
+
+            { id: "MTH622", name: "Vectors and Classical Mechanics", handouts: "1NYn3BleFvdmeADuP7QbeiSNeMJr8Qg27", highlighted: "https://drive.google.com/file/d/1hPHrO_Kf-yP6QZxa6X-dO4AITvbAA3Cz/view", ppt: "not_found.html" },
+
+            { id: "MTH631", name: "Real Analysis II", handouts: "1bp9bqWyWaOv3thJe6H01WwSBYzDsEZwZ", highlighted: "not_found.html", ppt: "not_found.html" },
+
+            { id: "MTH632", name: "Complex Analysis and Differential Geometry", handouts: "1W9V5-HELV5IhVSYNA1gfI_pFdveh5cpf", highlighted: "not_found.html", ppt: "not_found.html" },
+
+            { id: "MTH633", name: "Group Theory", handouts: "1S9489BygKnC2bX3kG42EfJiHKW5xY5kq", highlighted: "https://drive.google.com/file/d/1BTCgeiH019jhMOtrkLIS8jXk5AiI5qYp/view", ppt: "not_found.html" },
+
+            { id: "MTH634", name: "Topology", handouts: "1X-71Ej6fL1w6obF-2d3v-kVNr1WFueft", highlighted: "https://drive.google.com/file/d/1Fz7PX0MM0udo9mBbdL67flP6x7OQxDaq/view", ppt: "not_found.html" },
+
+            { id: "MTH641", name: "Functional Analysis", handouts: "1mip-W4gA4DfpYib1wgYLgVKh0vjFdhZL", highlighted: "not_found.html", ppt: "not_found.html" },
+
+            { id: "MTH642", name: "Fluid Mechanics", handouts: "1bNUXyPtIclUnhmpYGQYkPQVzfRdJE_u6", highlighted: "not_found.html", ppt: "https://drive.google.com/drive/folders/1auCYiI8LzL_FxvrpAT9H9R1zc4cKoc8m" },
+
+            { id: "MTH643", name: "Advanced Differential Equations", handouts: "1y4IGTxIYA_36gC2TNcwW7-8j1wf5NQHg", highlighted: "not_found.html", ppt: "not_found.html" },
+
+            { id: "MTH644", name: "Advanced Linear Algebra", handouts: "https://drive.google.com/drive/folders/1o_gi0eEVlXx9IX-Oh2iAq1nlQVFGSFoH", highlighted: "https://drive.google.com/drive/folders/1o_gi0eEVlXx9IX-Oh2iAq1nlQVFGSFoH", ppt: "https://drive.google.com/drive/folders/1o_gi0eEVlXx9IX-Oh2iAq1nlQVFGSFoH" },
+
+            { id: "MTH645", name: "Advanced Measure Theory", handouts: "https://drive.google.com/file/d/1SqJTTptjtSAkgHcL46Fp9SNf8ZQqXjDj/view", highlighted: "https://drive.google.com/file/d/1E-JWxJldmW9z2wyN7JJkMOmHKDj30ioK/view", ppt: "not_found.html" }
+        ];
+
+        const container = document.getElementById('subjectContainer');
+
+        mthData.forEach(item => {
+            const handoutsLink = item.handouts.startsWith('http')
+                ? item.handouts
+                : `https://drive.google.com/uc?export=download&id=${item.handouts}`;
+
+            const highlightedLink = item.highlighted.startsWith('http')
+                ? item.highlighted
+                : item.highlighted === "not_found.html"
+                    ? item.highlighted
+                    : `https://drive.google.com/uc?export=download&id=${item.highlighted}`;
+
+            container.innerHTML += `
+                <div class="subject-card bg-white p-8 rounded-[2.5rem] flex flex-col justify-between">
+                    <div>
+                        <span class="bg-blue-50 text-blue-600 px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">Mathematics</span>
+                        <h3 class="text-2xl font-black text-slate-800 mt-3">${item.id}</h3>
+                        <p class="text-slate-500 text-sm font-medium mb-8">${item.name}</p>
+                    </div>
+
+                    <div class="space-y-3">
+                        <a href="${handoutsLink}" target="_blank"
+                            class="flex items-center justify-center gap-2 w-full py-3 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition">
+                            <i class="fa-solid fa-file-pdf"></i> Handouts
+                        </a>
+
+                        <a href="${highlightedLink}" target="_blank"
+                            class="flex items-center justify-center gap-2 w-full py-3 bg-yellow-400 text-blue-900 rounded-xl font-bold hover:bg-yellow-500 transition">
+                            <i class="fa-solid fa-highlighter"></i> Highlighted
+                        </a>
+
+                        <a href="${item.ppt}"
+                            class="flex items-center justify-center gap-2 w-full py-3 bg-slate-100 text-slate-500 rounded-xl font-bold hover:bg-slate-200 transition">
+                            <i class="fa-solid fa-file-pen"></i> Handwritten
+                        </a>
+                    </div>
+                </div>
+            `;
+        });
+
+        function searchSubjects() {
+            let input = document.getElementById('searchInput').value.toUpperCase();
+            let cards = document.getElementsByClassName('subject-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                let text = cards[i].innerText.toUpperCase();
+                cards[i].style.display = text.includes(input) ? "" : "none";
+            }
+        }
+    </script>
+
+    <!-- Footer -->
+    <footer
+        class="bg-[#0f172a] text-white pt-16 pb-8 mt-20 relative overflow-hidden border-t border-blue-500/20 font-['Poppins']">
+
+        <div class="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 rounded-full blur-[80px] -mr-32 -mt-32">
+        </div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-yellow-500/5 rounded-full blur-[80px] -ml-32 -mb-32">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+
+                <div class="space-y-6">
+                    <div class="text-2xl font-black tracking-tighter">
+                        LGWT <span class="text-yellow-400">OFFICIAL</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Learning & Growing With Team. Pakistan's most trusted partner for Virtual University
+                        students. We provide 100% accurate solutions & LMS handling.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://whatsapp.com/channel/0029VbAfKscEVccSHYySNP3I" target="_blank"
+                            class="w-10 h-10 bg-white/5 text-green-500 rounded-xl flex items-center justify-center hover:bg-green-500 hover:text-white transition-all border border-white/10">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                        <a href="https://youtube.com/@VUStudyLGWT" target="_blank"
+                            class="w-10 h-10 bg-white/5 text-red-500 rounded-xl flex items-center justify-center hover:bg-red-500 hover:text-white transition-all border border-white/10">
+                            <i class="fab fa-youtube text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h4 class="text-white font-bold border-l-4 border-blue-600 pl-4 uppercase tracking-widest text-xs">
+                        Resources</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm font-medium">
+                        <li><a href="../handouts/handouts.html"
+                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
+                                VU Handouts</a></li>
+                        <li><a href="../papers/pastpapers.html"
+                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
+                                Past Papers Vault</a></li>
+                        <li><a href="../Result/video-results.html"
+                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
+                                Video Results</a></li>
+                        <li><a href="../Result/pdf-results.html"
+                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
+                                PDF Proofs</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h4
+                        class="text-white font-bold border-l-4 border-yellow-400 pl-4 uppercase tracking-widest text-xs">
+                        Our Services</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm font-medium">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500/50 text-xs"></i>
+                            Full LMS Handling</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500/50 text-xs"></i>
+                            Assignment Solutions
+                        </li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500/50 text-xs"></i>
+                            Quiz Management</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500/50 text-xs"></i>
+                            Cisco Assignemnts
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h4 class="text-white font-bold border-l-4 border-blue-600 pl-4 uppercase tracking-widest text-xs">
+                        Support</h4>
+                    <div class="bg-white/5 p-6 rounded-[2rem] border border-white/10 space-y-4 shadow-2xl">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white">
+                                <i class="fa-solid fa-headset text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-slate-500 font-black uppercase tracking-widest">Help
+                                    Desk</p>
+                                <p class="text-xs font-bold text-white">vustudylgwt@gmail.com</p>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/923196248868" target="_blank"
+                            class="block w-full py-3 bg-yellow-400 text-blue-950 text-center rounded-xl font-black text-[10px] hover:bg-yellow-300 transition-all uppercase tracking-widest shadow-lg">
+                            Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-px w-full bg-gradient-to-r from-transparent via-slate-700 to-transparent mb-8"></div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-slate-500 text-[10px] font-medium text-center md:text-left">
+                    &copy; 2026 <span class="text-white font-bold">LGWT Official</span>. Learning & Growing With
+                    Team.
+                </div>
+                <div class="flex items-center gap-4 text-slate-500 text-[9px] uppercase tracking-[0.3em] font-black">
+                    Trust <span class="text-blue-500">●</span> Accuracy <span class="text-yellow-400">●</span>
+                    Success
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
