@@ -648,7 +648,7 @@
 
     <!-- LMS CalCulator Scripts -->
     <script>
-        const specialBooks = ["CS101", "ENG101", "MTH101", "ISL202", "PAK301", "MGT211"];
+        const specialBooks = ["CS101", "ENG101", "MTH101", "ISL202", "PAK301", "MGT211", "CS201P", "CS301P"];
         const tagsContainer = document.getElementById('tags-container');
         const tagInput = document.getElementById('tag-input');
         let tags = [];
@@ -680,7 +680,7 @@
             let subtotal = 0;
 
             tags.forEach(code => {
-                let rate = specialBooks.includes(code) ? 600 : 1000;
+                let rate = specialBooks.includes(code) ? 500 : 800;
                 subtotal += rate;
                 listBody.innerHTML += `
             <tr class="border-b border-slate-50 text-sm">
@@ -722,7 +722,7 @@
 
         function bookNow() {
             const final = document.getElementById('finalBill').innerText;
-            const msg = `Assalam o Alaikum LGWT! %0AMujhe LMS Handling start karwani hai.%0ASubjects: ${tags.join(', ')}%0AFinal Discounted Bill: ${final}%0A%0A(Website Invoice Checked)`;
+            const msg = `Assalam o Alaikum LGWT! %0AMujhe LMS Handling start karwani hai.%0ASubjects: ${tags.join(', ')}%0AFinal Discounted Bill: ${final}%0A%0A(Website Invoice Checked) \n Please Give Me More Discount If Possible`;
             window.open(`https://wa.me/923196248868?text=${msg}`, '_blank');
         }
     </script>
