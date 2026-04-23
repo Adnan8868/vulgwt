@@ -7,7 +7,8 @@
     <title>Solutions Hub | VU Study LGWT</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" href="https://img.icons8.com/fluency/48/graduation-cap.png" type="image/x-icon">
 
@@ -55,11 +56,14 @@
 <body>
 
     <header class="hero-gradient text-white py-20 px-4 shadow-2xl relative text-center">
-        <div class="absolute top-0 left-0 w-32 h-32 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+        <div
+            class="absolute top-0 left-0 w-32 h-32 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2">
+        </div>
 
         <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight uppercase">Latest <span
                 class="text-yellow-400">Semester Solutions</span></h1>
-        <p class="text-blue-100 text-lg opacity-90 max-w-2xl mx-auto">Verified, properly formatted, and plagiarism-free
+        <p class="text-blue-100 text-lg opacity-90 max-w-2xl mx-auto">Verified, properly formatted, and
+            plagiarism-free
             solutions for Spring 2026.</p>
     </header>
 
@@ -72,8 +76,8 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-
-            <div
+            
+            <!-- <div
                 class="service-card bg-white p-10 rounded-[3rem] shadow-xl border border-blue-50 relative overflow-hidden group">
                 <div class="absolute top-6 right-6">
                     <span
@@ -87,14 +91,72 @@
                 </div>
 
                 <h3 class="text-2xl font-bold text-slate-800 mb-4">Spring 2026 Solutions</h3>
-                <p class="text-slate-500 mb-8 leading-relaxed font-medium">Is folder mein aapko maujooda semester ke
-                    tamam subjects ke solved files (Assignments/Quiz/GDB) milengi.</p>
+                <p class="text-slate-500 mb-8 leading-relaxed font-medium">Access our comprehensive library of verified solutions for the current semester. We provide high-quality, plagiarism-free files for all your Assignments, Grand Quizzes, and GDBs to ensure your academic success.</p>
 
-                <a href="https://drive.google.com/drive/folders/1UPyxfEZw_ZwZVKlg78Ly_0mj0XBrPx59"
-                    class="flex items-center justify-center gap-3 w-full bg-blue-600 text-white py-5 rounded-2xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">
+                <a href="#"
+                    class="flex items-center justify-center gap-3 w-full bg-blue-600 text-white py-5 rounded-2xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200 mt-20">
                     <i class="fab fa-google-drive text-xl"></i> Open Drive Folder
                 </a>
+            </div> -->
+
+
+            <!-- New Code -->
+
+            <div
+                class="service-card bg-white p-10 rounded-[3rem] shadow-xl border border-blue-50 relative overflow-hidden group">
+                <div class="absolute top-6 right-6">
+                    <span
+                        class="latest-badge bg-green-500 text-white text-[10px] font-black px-4 py-1.5 rounded-full shadow-lg uppercase tracking-widest">Active
+                        Now</span>
+                </div>
+
+                <div
+                    class="w-20 h-20 bg-blue-50 text-blue-600 rounded-[1.5rem] flex items-center justify-center mb-8 text-4xl">
+                    <i class="fa-solid fa-cloud-arrow-down"></i>
+                </div>
+
+                <h3 class="text-2xl font-bold text-slate-800 mb-4">Spring 2026 Solutions</h3>
+
+                <input type="text" id="searchInput" placeholder="Search Subject (e.g. CS101)..."
+                    class="w-full p-4 mb-6 border-2 border-slate-100 rounded-2xl focus:border-blue-500 outline-none transition">
+
+                <div id="dynamic-files" class="space-y-3 mb-8 max-h-[150px] overflow-y-auto pr-2">
+                    <p class="text-slate-400 text-sm">⏳📂 Loading files... please wait! 😊</p>
+                </div>
             </div>
+
+            <script>
+                const API_URL = "https://script.google.com/macros/s/AKfycbzh6l6p1Lh3MJ02CSzN26MdHCSvfv3Nb_04h87odh0ANWrwikWwJGa68kyoNM5FKO6wDQ/exec";
+
+                fetch(API_URL)
+                    .then(res => res.json())
+                    .then(data => {
+                        const container = document.getElementById('dynamic-files');
+
+                        // Yeh raha "Not Found" ka naya logic
+                        function render(files) {
+                            if (files.length === 0) {
+                                container.innerHTML = `<p class="text-center py-4 text-slate-400 font-bold">No Solution Found!</p>`;
+                                return;
+                            }
+                            container.innerHTML = files.map(f => `
+                    <a href="${f.url}" target="_blank" class="flex items-center justify-between p-4 bg-slate-50 rounded-xl hover:bg-blue-50 transition border border-slate-100">
+                        <span class="text-sm font-bold text-slate-700">${f.name}</span>
+                        <i class="fa-solid fa-download text-blue-600"></i>
+                    </a>
+                `).join('');
+                        }
+
+                        render(data);
+
+                        // Search Logic (Ye waisa hi hai)
+                        document.getElementById('searchInput').addEventListener('input', (e) => {
+                            const term = e.target.value.toLowerCase();
+                            const filtered = data.filter(f => f.name.toLowerCase().includes(term));
+                            render(filtered);
+                        });
+                    });
+            </script>
 
             <div class="service-card bg-slate-50 p-10 rounded-[3rem] border border-slate-200 group">
                 <div
@@ -103,11 +165,12 @@
                 </div>
 
                 <h3 class="text-2xl font-bold text-slate-700 mb-4">Previous Archives</h3>
-                <p class="text-slate-400 mb-8 leading-relaxed">Pichle tamam semesters (2025 aur purane) ka record yahan
+                <p class="text-slate-400 mb-8 leading-relaxed">Pichle tamam semesters (2025 aur purane) ka
+                    record yahan
                     maujood hai preparation ke liye.</p>
 
                 <a href="https://drive.google.com/drive/folders/1_GXw68voiSjGIJXPgZ_EGE5SlN2QkqA8"
-                    class="flex items-center justify-center gap-3 w-full bg-white text-slate-600 py-5 rounded-2xl font-bold border border-slate-300 hover:bg-slate-100 transition">
+                    class="flex items-center justify-center gap-3 w-full bg-white text-slate-600 py-5 rounded-2xl font-bold border border-slate-300 hover:bg-slate-100 transition mt-20">
                     <i class="fa-solid fa-eye"></i> View History
                 </a>
             </div>
@@ -118,7 +181,8 @@
             class="mt-16 bg-blue-900 rounded-[2.5rem] p-10 text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
             <div class="text-center md:text-left">
                 <h4 class="text-2xl font-bold mb-2 text-yellow-400">Solution Not Found?</h4>
-                <p class="text-blue-100 opacity-80">Agar aapki file folder mein nahi hai, toh fikar na karein, humein
+                <p class="text-blue-100 opacity-80">Agar aapki file folder mein nahi hai, toh fikar na karein,
+                    humein
                     WhatsApp karein.</p>
             </div>
             <a href="https://wa.me/923196248868"
@@ -126,8 +190,6 @@
                 <i class="fab fa-whatsapp mr-2"></i> REQUEST NOW
             </a>
         </div>
-
-
     </div>
 
     <footer class="bg-[#0f172a] text-white pt-16 pb-8 font-['Poppins']">
@@ -153,18 +215,24 @@
                 </div>
 
                 <div class="space-y-6">
-                    <h4 class="text-sm font-black uppercase tracking-widest border-l-4 border-blue-600 pl-3">Navigation
+                    <h4 class="text-sm font-black uppercase tracking-widest border-l-4 border-blue-600 pl-3">
+                        Navigation
                     </h4>
                     <ul class="text-slate-400 text-sm space-y-3">
                         <li><a href="../index.html" class="hover:text-white transition">Home Page</a></li>
-                        <li><a href="../handouts/handouts.html" class="hover:text-white transition">VU Handouts</a></li>
-                        <li><a href="../papers/pastpapers.html" class="hover:text-white transition">Past Papers</a></li>
-                        <li><a href="../index.html#bot-console" class="hover:text-white transition">Bot Center</a></li>
+                        <li><a href="../handouts/handouts.html" class="hover:text-white transition">VU
+                                Handouts</a></li>
+                        <li><a href="../papers/pastpapers.html" class="hover:text-white transition">Past
+                                Papers</a></li>
+                        <li><a href="../index.html#bot-console" class="hover:text-white transition">Bot
+                                Center</a></li>
                     </ul>
                 </div>
 
                 <div class="space-y-6">
-                    <h4 class="text-sm font-black uppercase tracking-widest border-l-4 border-yellow-400 pl-3">Get Help
+                    <h4
+                        class="text-sm font-black uppercase tracking-widest border-l-4 border-yellow-400 pl-3">
+                        Get Help
                     </h4>
                     <div class="bg-white/5 p-5 rounded-2xl border border-white/10">
                         <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">WhatsApp Support</p>
@@ -176,12 +244,14 @@
                 </div>
             </div>
 
-            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div
+                class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest">
                     &copy; 2026 LGWT OFFICIAL | ALL RIGHTS RESERVED
                 </p>
                 <p class="text-slate-500 text-[10px] font-black italic">
-                    Learning <span class="text-blue-500">&</span> Growing <span class="text-yellow-400">With Team</span>
+                    Learning <span class="text-blue-500">&</span> Growing <span class="text-yellow-400">With
+                        Team</span>
                 </p>
             </div>
         </div>
