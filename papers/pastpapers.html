@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Past Papers Vault | LGWT Study</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
     <link rel="icon" href="https://img.icons8.com/fluency/48/graduation-cap.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -55,17 +56,48 @@
 <body>
 
     <header class="hero-section text-white py-16 px-4 text-center shadow-xl">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-tight">Exam <span class="text-yellow-400">Past
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-tight">Exam <span
+                class="text-yellow-400">Past
                 Papers</span></h1>
-        <p class="opacity-90 max-w-2xl mx-auto text-lg text-blue-100">Official Solved Midterm & Finalterm Collections
+        <p class="opacity-90 max-w-2xl mx-auto text-lg text-blue-100">Official Solved Midterm & Finalterm
+            Collections
             for Virtual University.</p>
 
         <div class="max-w-2xl mx-auto mt-10 relative">
             <input type="text" id="searchInput" onkeyup="filterCards()"
-                placeholder="Search Subject (e.g.BIO, MGT, MTH, CS, PHY)..."
+                placeholder="Search Subject (e.g.BIO, MGT, MTH,)..."
                 class="w-full p-5 rounded-2xl text-gray-800 shadow-2xl focus:ring-4 focus:ring-yellow-400 outline-none border-none text-lg">
         </div>
     </header>
+
+    <!-- Compact Quiz Vault Bar -->
+    <div class="max-w-7xl mx-auto px-6 mt-6">
+        <a href="https://drive.google.com/drive/folders/1U3sBJAIT0teIgq47oVd9YfVwco43gmpE" target="_blank" class="group">
+            <div
+                class="bg-white border border-blue-100 rounded-2xl p-4 flex flex-col md:flex-row items-center justify-between gap-4 shadow-sm hover:shadow-md transition-all border-l-8 border-l-blue-600">
+
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm md:text-base font-bold text-slate-800">
+                            All-in-One Quiz Archive <span
+                                class="text-blue-600 text-[10px] ml-2 px-2 py-0.5 bg-blue-50 rounded-full">2025-2026+</span>
+                        </h3>
+                        <p class="text-[11px] text-slate-500 font-medium">Click to access current and future
+                            solved quizzes (Auto-Updating File)</p>
+                    </div>
+                </div>
+
+                <div
+                    class="flex items-center gap-2 bg-slate-900 text-white px-5 py-2.5 rounded-xl font-bold text-[11px] tracking-widest group-hover:bg-blue-600 transition-all uppercase">
+                    Open Drive <i class="fa-solid fa-external-link text-[10px] text-yellow-400"></i>
+                </div>
+            </div>
+        </a>
+    </div>
 
     <div class="max-w-7xl mx-auto px-6 py-12">
         <div class="mb-10">
@@ -355,74 +387,105 @@
 
             document.getElementById('noResult').style.display = (found === 0) ? "block" : "none";
         }
-        
+
     </script>
-    <footer class="bg-[#0f172a] text-white pt-20 pb-10 mt-20 relative overflow-hidden font-['Poppins'] border-t border-white/5">
-    
-    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 via-yellow-400 to-blue-600"></div>
-    <div class="absolute -bottom-20 -right-20 w-80 h-80 bg-blue-600/10 rounded-full blur-[100px]"></div>
+    <footer
+        class="bg-[#0f172a] text-white pt-20 pb-10 mt-20 relative overflow-hidden font-['Poppins'] border-t border-white/5">
 
-    <div class="max-w-7xl mx-auto px-6 relative z-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div
+            class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 via-yellow-400 to-blue-600">
+        </div>
+        <div class="absolute -bottom-20 -right-20 w-80 h-80 bg-blue-600/10 rounded-full blur-[100px]"></div>
 
-            <div class="space-y-6">
-                <div class="text-2xl font-black tracking-tighter">
-                    LGWT <span class="text-yellow-400">PAPERS</span>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+
+                <div class="space-y-6">
+                    <div class="text-2xl font-black tracking-tighter">
+                        LGWT <span class="text-yellow-400">PAPERS</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Pakistan's most organized collection of VU Solved Past Papers. Helping students since
+                        2025 with 100% verified material.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://wa.me/923196248868" target="_blank"
+                            class="w-10 h-10 bg-white/5 text-green-500 rounded-xl flex items-center justify-center hover:bg-green-500 hover:text-white transition-all border border-white/10 shadow-lg">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://youtube.com/@VUStudyLGWT" target="_blank"
+                            class="w-10 h-10 bg-white/5 text-red-500 rounded-xl flex items-center justify-center hover:bg-red-500 hover:text-white transition-all border border-white/10 shadow-lg">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
                 </div>
-                <p class="text-slate-400 text-sm leading-relaxed">
-                    Pakistan's most organized collection of VU Solved Past Papers. Helping students since 2025 with 100% verified material.
-                </p>
-                <div class="flex gap-4">
-                    <a href="https://wa.me/923196248868" target="_blank" class="w-10 h-10 bg-white/5 text-green-500 rounded-xl flex items-center justify-center hover:bg-green-500 hover:text-white transition-all border border-white/10 shadow-lg">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a href="https://youtube.com/@VUStudyLGWT" target="_blank" class="w-10 h-10 bg-white/5 text-red-500 rounded-xl flex items-center justify-center hover:bg-red-500 hover:text-white transition-all border border-white/10 shadow-lg">
-                        <i class="fab fa-youtube"></i>
-                    </a>
+
+                <div class="space-y-6">
+                    <h4
+                        class="text-white font-bold border-l-4 border-blue-600 pl-4 uppercase tracking-[0.2em] text-[10px]">
+                        Study Material</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm font-medium">
+                        <li><a href="../handouts/handouts.html"
+                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
+                                Main Handouts</a></li>
+                        <li><a href="../index.html#results"
+                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
+                                Result Proofs</a></li>
+                        <li><a href="../index.html#bot-console"
+                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
+                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
+                                LGWT Bot Center</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h4
+                        class="text-white font-bold border-l-4 border-yellow-400 pl-4 uppercase tracking-[0.2em] text-[10px]">
+                        Quick Help</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm font-medium">
+                        <li class="flex items-center gap-3"><i
+                                class="fa-solid fa-circle-check text-green-500/50"></i> Midterm Papers</li>
+                        <li class="flex items-center gap-3"><i
+                                class="fa-solid fa-circle-check text-green-500/50"></i> Finalterm Papers</li>
+                        <li class="flex items-center gap-3"><i
+                                class="fa-solid fa-circle-check text-green-500/50"></i> Solved Subjective</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h4
+                        class="text-white font-bold border-l-4 border-blue-600 pl-4 uppercase tracking-[0.2em] text-[10px]">
+                        Missing Something?</h4>
+                    <div class="bg-white/5 p-6 rounded-[2.5rem] border border-white/10 space-y-4 shadow-2xl">
+                        <p class="text-[11px] text-slate-400 leading-relaxed italic">"Agar aapka subject list
+                            mein nahi hai, toh inbox mein batayein, hum add kar denge."</p>
+                        <a href="https://wa.me/923196248868?text=Assalam-o-Alaikum! Mujhe past papers chahiye."
+                            target="_blank"
+                            class="block w-full py-3 bg-blue-600 text-white text-center rounded-xl font-black text-[10px] hover:bg-blue-700 transition-all uppercase tracking-widest shadow-lg shadow-blue-500/20">
+                            REQUEST PAPERS
+                        </a>
+                    </div>
                 </div>
             </div>
 
-            <div class="space-y-6">
-                <h4 class="text-white font-bold border-l-4 border-blue-600 pl-4 uppercase tracking-[0.2em] text-[10px]">Study Material</h4>
-                <ul class="space-y-4 text-slate-400 text-sm font-medium">
-                    <li><a href="../handouts/handouts.html" class="hover:text-yellow-400 transition flex items-center gap-2 group"><i class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i> Main Handouts</a></li>
-                    <li><a href="../index.html#results" class="hover:text-yellow-400 transition flex items-center gap-2 group"><i class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i> Result Proofs</a></li>
-                    <li><a href="../index.html#bot-console" class="hover:text-yellow-400 transition flex items-center gap-2 group"><i class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i> LGWT Bot Center</a></li>
-                </ul>
+            <div class="h-px w-full bg-gradient-to-r from-transparent via-slate-700 to-transparent mb-10">
             </div>
 
-            <div class="space-y-6">
-                <h4 class="text-white font-bold border-l-4 border-yellow-400 pl-4 uppercase tracking-[0.2em] text-[10px]">Quick Help</h4>
-                <ul class="space-y-4 text-slate-400 text-sm font-medium">
-                    <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500/50"></i> Midterm Papers</li>
-                    <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500/50"></i> Finalterm Papers</li>
-                    <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500/50"></i> Solved Subjective</li>
-                </ul>
-            </div>
-
-            <div class="space-y-6">
-                <h4 class="text-white font-bold border-l-4 border-blue-600 pl-4 uppercase tracking-[0.2em] text-[10px]">Missing Something?</h4>
-                <div class="bg-white/5 p-6 rounded-[2.5rem] border border-white/10 space-y-4 shadow-2xl">
-                    <p class="text-[11px] text-slate-400 leading-relaxed italic">"Agar aapka subject list mein nahi hai, toh inbox mein batayein, hum add kar denge."</p>
-                    <a href="https://wa.me/923196248868?text=Assalam-o-Alaikum! Mujhe past papers chahiye." target="_blank" class="block w-full py-3 bg-blue-600 text-white text-center rounded-xl font-black text-[10px] hover:bg-blue-700 transition-all uppercase tracking-widest shadow-lg shadow-blue-500/20">
-                        REQUEST PAPERS
-                    </a>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div
+                    class="text-slate-500 text-[10px] font-bold uppercase tracking-widest text-center md:text-left">
+                    &copy; 2026 LGWT OFFICIAL | <span class="text-white">PREMIUM EXAM VAULT</span>
+                </div>
+                <div
+                    class="flex items-center gap-2 text-slate-500 text-[9px] uppercase tracking-[0.4em] font-black">
+                    Learning <span class="text-blue-500">&</span> Growing <span class="text-yellow-400">With
+                        Team</span>
                 </div>
             </div>
         </div>
-
-        <div class="h-px w-full bg-gradient-to-r from-transparent via-slate-700 to-transparent mb-10"></div>
-
-        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="text-slate-500 text-[10px] font-bold uppercase tracking-widest text-center md:text-left">
-                &copy; 2026 LGWT OFFICIAL | <span class="text-white">PREMIUM EXAM VAULT</span>
-            </div>
-            <div class="flex items-center gap-2 text-slate-500 text-[9px] uppercase tracking-[0.4em] font-black">
-                Learning <span class="text-blue-500">&</span> Growing <span class="text-yellow-400">With Team</span>
-            </div>
-        </div>
-    </div>
-</footer>
+    </footer>
 </body>
 
 </html>
