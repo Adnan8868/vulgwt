@@ -1,56 +1,123 @@
 // --- 1. DATA ARRAY ---
-// Yahan aap apne 340+ subjects add kar sakte hain.
-// Har video ka 'url' lazmi dalen taake button playlist bana sake.
 const prepData = {
     mid: [
+        
+        // ====================
+        //      CS SUBJECTS
+        // ====================
         {
             id: "CS101",
             name: "Introduction to Computing",
             videos: [
-                { title: "Video 1", url: "https://www.youtube.com/watch?v=8KL-E4MsSuA" },
-                { title: "Video 2", url: "https://www.youtube.com/watch?v=83YSyEuNfyI&list=PLP4jqZZBeTPq-EEkvG15IldzITQNZrBxg" },
-                { title: "Video 3", url: "https://www.youtube.com/watch?v=OEG5bI2JGM0&list=PLaSoQBRcPRGdLCR_T84PiBDU3EdhDbeYF" },
-                { title: "Study BRD", url: "https://www.youtube.com/watch?v=-rR-7k9nLaI" },
-                { title: "Helper 007", url: "https://www.youtube.com/watch?v=mSHxKDYUNAY" },
-                { title: "VU MENTOR", url: "https://www.youtube.com/watch?v=wF__e8AmtWI" },
-            ]
-        },
-        {
-            id: "CS301",
-            name: "Introduction to Computing",
-            videos: [
-                { title: "Video 1", url: "https://www.youtube.com/watch?v=8KL-E4MsSuA" },
-                { title: "Video 2", url: "https://www.youtube.com/watch?v=83YSyEuNfyI&list=PLP4jqZZBeTPq-EEkvG15IldzITQNZrBxg" },
-                { title: "Video 3", url: "https://www.youtube.com/watch?v=OEG5bI2JGM0&list=PLaSoQBRcPRGdLCR_T84PiBDU3EdhDbeYF" },
-                { title: "Study BRD", url: "https://www.youtube.com/watch?v=-rR-7k9nLaI" },
-                { title: "Helper 007", url: "https://www.youtube.com/watch?v=mSHxKDYUNAY" },
-                { title: "VU MENTOR", url: "https://www.youtube.com/watch?v=wF__e8AmtWI" },
+                { title: "Study BRD One Video 2 Hour", url: "https://www.youtube.com/watch?v=xiLNwY1SFBE" },
+                { title: "Study BRD One Video 30 Mint", url: "https://www.youtube.com/watch?v=-rR-7k9nLaI" },
+                { title: "VU Concepts", url: "https://www.youtube.com/watch?v=NKgFMXzTPbo" },
+                { title: "Student Info 5", url: "https://www.youtube.com/watch?v=ari4JM71X70&t=268s" },
+                { title: "World Of Education", url: "https://www.youtube.com/watch?v=qVK1rnJdnwg" },
+                { title: "Halim Insight Quiz 1", url: "https://www.youtube.com/watch?v=83YSyEuNfyI&list=PLP4jqZZBeTPq-EEkvG15IldzITQNZrBxg" },
+                { title: "Halim Insight Quiz 2", url: "https://www.youtube.com/watch?v=iIIkXIzOk9s&list=PLP4jqZZBeTPq-EEkvG15IldzITQNZrBxg&index=2" },
             ]
         },
         {
             id: "CS201",
             name: "Introduction to Programming",
             videos: [
-                { title: "Pointers Concept", url: "https://www.youtube.com/watch?v=zuegQmMd8M0" },
-                { title: "Arrays & Strings", url: "https://www.youtube.com/watch?v=ENrzD9HAZK4" }
+                { title: "KST Learning", url: "https://www.youtube.com/watch?v=ur7UFeznVfA" },
+                { title: "KST Learning 2nd Part", url: "https://youtu.be/ZVqbR5dmd2A?si=0Px6DjR_LwXwh57q" },
+                { title: "VU TALK", url: "https://youtu.be/-iphkgjRSu4?si=VzJdjgCketK_KrOS" },
+                { title: "VU Concepts", url: "https://www.youtube.com/watch?v=bhKrAd0BDc0" },
+                { title: "Education World 2025-26", url: "https://www.youtube.com/watch?v=TnP4xFJzt1g" },
+                { title: "Education World 2025 Part 1", url: "https://www.youtube.com/watch?v=7VZTcaUivc4" },
+                { title: "Education World 2025 Part 2", url: "https://www.youtube.com/watch?v=K4hgd1BIFTk" },
+                { title: "Education World 2023/24", url: "https://www.youtube.com/watch?v=ES4ihxdicMA" },
+                { title: "Vu Knowledge", url: "https://www.youtube.com/watch?v=7zRh6aIR7DU" },
             ]
         },
         {
-            id: "MGT211",
-            name: "Introduction to Business",
+            id: "CS302",
+            name: "Digital Logic and Design",
             videos: [
-                { title: "Midterm Most Imp Questions", url: "https://www.youtube.com/watch?v=V74l_zS1x8E" }
+                { title: "KST Learning", url: "https://www.youtube.com/watch?v=lRuo3jiOq78" },
+                { title: "Information HUB (IMP)", url: "https://youtu.be/MgIgWthlnXU?si=XkOLIgx_cT7kNC4B" },
+                { title: "VU Concepts", url: "https://www.youtube.com/watch?v=bhKrAd0BDc0" },
+                { title: "Education World 2024", url: "https://www.youtube.com/watch?v=fmxPoCHVdxE" },
             ]
-        }
-    ],
-    final: [
+        },
+        // ====================
+        //      ENG SUBJECTS
+        // ====================
         {
-            id: "CS101",
-            name: "Introduction to Computing",
+            id: "ENG101",
+            name: "English Comprehension",
             videos: [
-                { title: "Final Term Full Course", url: "https://www.youtube.com/watch?v=uXWycyeTejs" }
+                { title: "VU Concepts", url: "https://www.youtube.com/watch?v=INFgfS252_k" },
+                { title: "Kinza Bilal", url: "https://www.youtube.com/watch?v=e3jFScc2N9M" },
+                { title: "Student Info 5", url: "https://www.youtube.com/watch?v=Wsm83Ko_1yw" },
+                { title: "Halim Insights Quiz 1", url: "https://www.youtube.com/watch?v=X1o8fbKF444" },
+                { title: "Halim Insights Quiz 2", url: "https://www.youtube.com/watch?v=fjtHksew3G0" },
+                { title: "VU Studyfy", url: "https://www.youtube.com/watch?v=f39VEOFzdaQ" },
+                { title: "Education World 2024", url: "https://www.youtube.com/watch?v=iJ6jD_dA3dI" },
+                { title: "VU Knowledge", url: "https://www.youtube.com/watch?v=ZOHwTZHC8Ak" },
             ]
-        }
+        },
+        {
+            id: "ENG201",
+            name: "Business and Technical English",
+            videos: [
+                { title: "VU Concepts", url: "https://www.youtube.com/watch?v=sMOMsi8Zi6g" },
+                { title: "Study BRD", url: "https://www.youtube.com/watch?v=8j4VHtCurfs" },
+                { title: "Education World 2024", url: "https://www.youtube.com/watch?v=-Gu51idRqjw" },
+                { title: "Education World 2022", url: "https://www.youtube.com/watch?v=ILX64xJ7Llc" },
+                { title: "VU Knowledge", url: "https://www.youtube.com/watch?v=kcXdpu-br3c" },
+            ]
+        },
+        
+        // ======================
+        //      MATH SUBJECTS
+        // ======================
+        {
+            id: "MTH101",
+            name: "Calculus And Analytical Geometry",
+            videos: [
+                { title: "Kinza Bilal video 1", url: "https://www.youtube.com/watch?v=qqR79pnutTw" },
+                { title: "Kinza Bilal video 2", url: "https://www.youtube.com/watch?v=_tceeWlfROs" },
+                { title: "Kinza Bilal Quiz 1 P1", url: "https://youtu.be/C1Pt7lTIp7c?si=QZ4zrtoiNg1jRyoU" },
+                { title: "Kinza Bilal Quiz 1 P2", url: "https://www.youtube.com/watch?v=evW6Fhqz57w" },
+                { title: "Kinza Bilal Quiz 2", url: "https://www.youtube.com/watch?v=5C3EezM7DCU" },
+                { title: "Iqra Azhar Paractice Quiestion", url: "https://www.youtube.com/watch?v=I9s24YHXP7A" },
+                { title: "VU UzMA Scholars", url: "https://www.youtube.com/watch?v=Gra7rK2yORc" },
+            ]
+        },
+        {
+            id: "MTH301",
+            name: "Calculus II",
+            videos: [
+                { title: "Kinza Bilal video 1", url: "https://www.youtube.com/watch?v=5iskXcWIxug" },
+                { title: "Kinza Bilal Video 2", url: "https://youtu.be/Ib6WAYdEz8A?si=QKOpYOeaQGeWUy4K" },
+                { title: "Kinza Bilal Quiz 1", url: "https://youtu.be/NlpOQYZiNi8?si=dyEI2dOU1pGGQyTL" },
+                { title: "Kinza Bilal Quiz 2", url: "https://youtu.be/flwXUd91P5c?si=J1J5UEz-z649Ep_r" },
+                { title: "Uzma Scholar", url: "https://youtu.be/XvmnIS1eTpA?si=RjqkqPMApCXeEmio" },
+                { title: "VU Knowledge", url: "https://www.youtube.com/watch?v=DJPmHLPiEtg" },
+            ]
+        },
+        // ======================
+        //     PAK301 SUBJECTS
+        // ======================
+        {
+            id: "PAK301",
+            name: "Ideology of Pakistan",
+            videos: [
+                { title: "Student Info 5", url: "https://youtu.be/32UK2yXDVOE?si=4SEx7yWy0YE8Fim3" },
+                { title: "VU Concepts", url: "https://www.youtube.com/watch?v=RU2ZvPYehHY" },
+                { title: "VU Universe", url: "https://www.youtube.com/watch?v=eYwvWabdjJI" },
+                { title: "VU Studyfy", url: "https://www.youtube.com/watch?v=wErHEn8j9uQ" },
+                { title: "Kinza Bilal", url: "https://www.youtube.com/watch?v=wcTWeQN8dEI" },
+            ]
+        },
+    ],
+
+    // Final Start Here
+    final: [
     ]
 };
 
