@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Prep Hub | LGWT Official</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+            scroll-behavior: smooth;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2a5298 100%);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #3b82f6;
+            border-radius: 10px;
+        }
+
+        .tab-active {
+            background-color: #fbbf24;
+            color: #1e3a8a;
+            border-color: #fbbf24;
+            box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+        }
+
+        .section-line {
+            height: 2px;
+            flex: 1;
+            background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50">
+
+    <header class="hero-gradient text-white py-10 px-4 shadow-2xl text-center relative overflow-hidden">
+        <div class="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+        <h1 class="text-3xl md:text-5xl font-extrabold mb-4 uppercase tracking-widest">Exam <span
+                class="text-yellow-400">Prep</span> Hub</h1>
+        <p class="text-blue-100 text-sm opacity-90 mb-8">
+            <span id="headerSubjectCount">0</span>+ Subjects Mid & Final Term Preparation Videos
+        </p>
+
+        <div class="max-w-xl mx-auto relative rounded-xl overflow-hidden shadow-2xl bg-white mb-6">
+            <span class="absolute inset-y-0 left-5 flex items-center text-slate-400"><i
+                    class="fa-solid fa-magnifying-glass"></i></span>
+            <input type="text" id="searchInput" onkeyup="handleSearch()"
+                placeholder="Search Subject Code (e.g. CS101, MGT)..."
+                class="w-full py-4 pl-14 pr-6 text-slate-900 font-bold outline-none border-none">
+        </div>
+
+        <div class="flex justify-center gap-4 mt-6">
+            <button onclick="switchTab('mid')" id="midTabBtn"
+                class="px-8 py-2 rounded-full border-2 border-white/30 font-bold transition-all tab-active">Mid-Term</button>
+            <button onclick="switchTab('final')" id="finalTabBtn"
+                class="px-8 py-2 rounded-full border-2 border-white/30 font-bold transition-all hover:bg-white/10">Final-Term</button>
+        </div>
+    </header>
+    
+
+    <!-- Not Found -->
+    <div class="max-w-7xl mx-auto px-6 -mt-8 relative z-20 mt-6">
+        <div class="flex justify-end">
+            <div id="statsBox"
+                class="bg-white px-4 py-2 rounded-xl shadow-lg border border-slate-100 flex items-center gap-3 transition-all">
+                <div
+                    class="w-8 h-8 bg-blue-600 text-white rounded-lg flex items-center justify-center text-sm shadow-md">
+                    <i class="fa-solid fa-chart-simple"></i>
+                </div>
+                <div class="flex flex-col md:flex-row md:gap-4 gap-1">
+                    <div class="flex items-center gap-1">
+                        <p id="statLabel"
+                            class="text-[9px] font-bold text-slate-400 uppercase tracking-tighter">Total
+                            Subjects:</p>
+                        <span id="subjectCount" class="text-sm font-black text-blue-900">00</span>
+                    </div>
+                    <div class="hidden md:block w-[1px] h-4 bg-slate-200"></div>
+                    <div class="flex items-center gap-1">
+                        <p class="text-[9px] font-bold text-slate-400 uppercase tracking-tighter">Total Links:
+                        </p>
+                        <span id="totalLinksCount" class="text-sm font-black text-blue-600">00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 py-12">
+        <div id="notFoundMsg" class="hidden text-center py-20">
+            <div class="bg-red-50 border-2 border-dashed border-red-200 rounded-3xl p-10 max-w-md mx-auto">
+                <i class="fa-solid fa-magnifying-glass text-4xl text-red-300 mb-4"></i>
+                <h3 class="text-xl font-black text-slate-800 uppercase mb-2">Subject Not Found</h3>
+                <p class="text-slate-500 text-sm font-medium leading-relaxed">
+                    Sorry, we couldn't find this subject. <br>
+                    <span class="text-red-600 font-bold">Please search on YouTube manually.</span>
+                </p>
+            </div>
+        </div>
+
+        <div id="mainPrepContainer"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 py-12" id="mainPrepContainer">
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 py-12" id="mainPrepContainer">
+    </div>
+
+    <script src="prep-script.js"></script>
+</body>
+
+</html>
