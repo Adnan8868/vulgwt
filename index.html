@@ -7,7 +7,8 @@
     <title>VU Study LGWT | Professional LMS Solutions</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" href="https://img.icons8.com/fluency/48/graduation-cap.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
@@ -17,6 +18,11 @@
 
 <body class="bg-gray-50">
 
+    <!-- Scroll Bar -->
+    <div id="scroll-progress-container" class="fixed top-0 left-0 w-full h-1 z-[100] bg-transparent">
+        <div id="scroll-progress-bar" class="h-full bg-yellow-500 w-0 transition-all duration-150"></div>
+    </div>
+
     <!-- Nave Bar -->
     <nav class="fixed w-full z-50 nav-glass border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -25,14 +31,17 @@
                     <span class="text-blue-600">VU</span> STUDY <span class="text-yellow-500">LGWT</span>
                 </div>
 
-                <div class="hidden md:flex space-x-8 font-medium text-gray-700">
-                    <a href="#" class="hover:text-blue-600 transition mt-3">Home</a>
-                    <a href="#services" class="hover:text-blue-600 transition mt-3">Services</a>
-                    <a href="#results" class="hover:text-blue-600 transition mt-3">Results</a>
-                    <a href="#lms-calculator" class="hover:text-blue-600 transition mt-3">Fee CalCulator</a>
-                    <a href="#resources" class="hover:text-blue-600 transition mt-3">Files & Handouts</a>
+                <div class="hidden md:flex space-x-6 lg:space-x-8 font-medium text-gray-700 items-center">
+                    <a href="#home" class="hover:text-blue-600 transition">Home</a>
+                    <a href="#resources" class="hover:text-blue-600 transition">Exam Prep</a>
+                    <a href="#services" class="hover:text-blue-600 transition">Services</a>
+                    <a href="#lms-calculator" class="hover:text-blue-600 transition">Fee Calculator</a>
+                    <a href="#results" class="hover:text-blue-600 transition">Results</a>
+
                     <a href="contact.html"
-                        class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">Contact</a>
+                        class="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-6 py-2.5 rounded-xl hover:shadow-lg hover:shadow-blue-200 transition-all transform hover:-translate-y-0.5 active:scale-95 font-bold text-sm uppercase tracking-wider flex items-center gap-2">
+                        <i class="fa-solid fa-headset text-xs"></i> Contact
+                    </a>
                 </div>
 
                 <button id="mobile-menu-btn" class="md:hidden text-2xl text-blue-800 focus:outline-none">
@@ -41,18 +50,24 @@
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 p-4 space-y-4 shadow-lg">
-            <a href="#" class="block text-gray-700 font-medium hover:text-blue-600">Home</a>
-            <a href="#services" class="block text-gray-700 font-medium hover:text-blue-600">Services</a>
-            <a href="#results" class="block text-gray-700 font-medium hover:text-blue-600">Results</a>
-            <a href="#resources" class="block text-gray-700 font-medium hover:text-blue-600">Files & Handouts</a>
-            <a href="#lms-calculator" class="block text-gray-700 font-medium hover:text-blue-600">Fee CalCulator</a>
-            <a href="contact.html" class="block text-blue-600 font-bold hover:text-blue-600">Contact Now</a>
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white border-t border-gray-100 p-6 space-y-5 shadow-2xl rounded-b-[2rem]">
+            <a href="#home" class="block text-gray-700 font-semibold hover:text-blue-600">Home</a>
+            <a href="#resources" class="block text-gray-700 font-semibold hover:text-blue-600">Files & Exam
+                Prep</a>
+            <a href="#services" class="block text-gray-700 font-semibold hover:text-blue-600">Services</a>
+            <a href="#lms-calculator" class="block text-gray-700 font-semibold hover:text-blue-600">Fee
+                Calculator</a>
+            <a href="#results" class="block text-gray-700 font-semibold hover:text-blue-600">Results</a>
+            <a href="contact.html"
+                class="block w-full py-4 bg-blue-600 text-white text-center rounded-2xl font-black shadow-lg shadow-blue-100">
+                CONTACT US NOW
+            </a>
         </div>
     </nav>
 
     <!-- Home page -->
-    <section class="hero-bg min-h-screen flex items-center justify-center text-center px-4 pt-16">
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center text-center px-4 pt-16">
         <div class="max-w-4xl">
             <h1 class="text-3xl md:text-6xl font-bold text-white mb-6">
                 <span id="typed-heading"></span>
@@ -99,40 +114,68 @@
 
     <!-- Resources -->
     <section id="resources" class="py-24 bg-slate-50 border-y">
-        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8">
-            <a href="handouts/handouts.html"
-                class="bg-white p-10 rounded-[2.5rem] flex items-center gap-6 card-hover border group hover:border-blue-500 transition-all">
-                <div
-                    class="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-3xl shadow-xl">
-                    📚</div>
-                <div>
-                    <h3 class="text-xl font-bold">VU Handouts</h3>
-                    <p class="text-slate-400 text-sm">Download latest highlighted PDF files.</p>
-                </div>
-            </a>
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <span
+                    class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">Student
+                    Toolkit</span>
+                <h2 class="text-4xl font-black text-slate-900 mt-4 uppercase">Academic <span
+                        class="text-blue-600">Resources Hub</span></h2>
+                <div class="w-16 h-1 bg-yellow-400 mx-auto mt-4"></div>
+                <p class="text-slate-500 mt-4 font-medium italic">Everything you need to excel in your Virtual
+                    University journey</p>
+            </div>
 
-            <a href="papers/pastpapers.html"
-                class="bg-white p-10 rounded-[2.5rem] flex items-center gap-6 card-hover border group hover:border-green-500 transition-all">
-                <div
-                    class="w-16 h-16 bg-yellow-500 text-white rounded-2xl flex items-center justify-center text-3xl shadow-xl">
-                    📂</div>
-                <div>
-                    <h3 class="text-xl font-bold">Solved Papers</h3>
-                    <p class="text-slate-400 text-sm">Access Mid & Finalterm past paper vault.</p>
-                </div>
-            </a>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-            <a href="link.html"
-                class="bg-white p-10 rounded-[2.5rem] flex items-center gap-6 card-hover border group hover:border-red-500 transition-all">
-                <div
-                    class="w-16 h-16 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center text-3xl shadow-xl group-hover:scale-110 transition">
-                    <i class="fa-brands fa-youtube"></i>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold">Study Playlists</h3>
-                    <p class="text-slate-400 text-sm">Subject-wise YouTube short lectures.</p>
-                </div>
-            </a>
+                <a href="handouts/handouts.html"
+                    class="bg-white p-8 rounded-[2.5rem] shadow-sm border border-slate-100 flex flex-col items-center text-center group hover:border-blue-500 hover:shadow-xl transition-all duration-300">
+                    <div
+                        class="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <h3 class="text-lg font-black text-slate-800 uppercase mb-2">VU Handouts</h3>
+                    <p class="text-slate-400 text-[11px] leading-relaxed">Download latest highlighted &
+                        updated PDF handouts.</p>
+                </a>
+
+                <a href="papers/pastpapers.html"
+                    class="bg-white p-8 rounded-[2.5rem] shadow-sm border border-slate-100 flex flex-col items-center text-center group hover:border-yellow-500 hover:shadow-xl transition-all duration-300">
+                    <div
+                        class="w-16 h-16 bg-yellow-500 text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+                    <h3 class="text-lg font-black text-slate-800 uppercase mb-2">Past Papers</h3>
+                    <p class="text-slate-400 text-[11px] leading-relaxed">Access Mid-term & Final-term solved
+                        paper vault.</p>
+                </a>
+
+                <a href="link.html" target="_blank"
+                    class="bg-white p-8 rounded-[2.5rem] shadow-sm border border-slate-100 flex flex-col items-center text-center group hover:border-red-500 hover:shadow-xl transition-all duration-300">
+                    <div
+                        class="w-16 h-16 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                    <h3 class="text-lg font-black text-slate-800 uppercase mb-2">Short Lectures</h3>
+                    <p class="text-slate-400 text-[11px] leading-relaxed">Subject-wise curated YouTube study
+                        playlists.</p>
+                </a>
+
+                <a href="Exam Prepartion/ExamPrepartion.html"
+                    class="bg-slate-900 p-8 rounded-[2.5rem] shadow-xl border border-slate-800 flex flex-col items-center text-center group hover:bg-blue-600 transition-all duration-300 relative overflow-hidden">
+                    <div
+                        class="absolute -top-5 -right-5 w-16 h-16 bg-white/5 rounded-full group-hover:scale-150 transition-transform">
+                    </div>
+                    <div
+                        class="w-16 h-16 bg-white/10 text-yellow-400 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner group-hover:rotate-12 transition-transform">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-lg font-black text-white uppercase mb-2">Exam Prep Hub</h3>
+                    <p class="text-slate-400 text-[11px] leading-relaxed group-hover:text-white/80">340+
+                        Subjects Mid & Final Term Video Solutions.</p>
+                </a>
+
+            </div>
         </div>
     </section>
 
@@ -154,7 +197,8 @@
                     class="bg-slate-50 p-10 rounded-[3rem] card-shadow text-center border border-slate-100 relative group transition-all">
                     <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">📝</div>
                     <h3 class="text-2xl font-black text-slate-800 mb-4">Assignments</h3>
-                    <p class="text-slate-500 text-sm mb-8 leading-relaxed">Plagiarism-free, properly formatted solutions
+                    <p class="text-slate-500 text-sm mb-8 leading-relaxed">Plagiarism-free, properly formatted
+                        solutions
                         according to VU marking scheme.</p>
                     <a href="Services/assignmnet.html"
                         class="inline-flex items-center gap-2 text-blue-600 font-black text-sm uppercase tracking-widest hover:gap-4 transition-all">
@@ -166,7 +210,8 @@
                     class="bg-slate-50 p-10 rounded-[3rem] card-shadow text-center border border-slate-100 relative group transition-all">
                     <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">🎯</div>
                     <h3 class="text-2xl font-black text-slate-800 mb-4">Grand Quizzes</h3>
-                    <p class="text-slate-500 text-sm mb-8 leading-relaxed">10/10 marks guaranteed with our expert
+                    <p class="text-slate-500 text-sm mb-8 leading-relaxed">10/10 marks guaranteed with our
+                        expert
                         handling and huge MCQ bank.</p>
                     <a href="Services/solution.html"
                         class="inline-flex items-center gap-2 text-blue-600 font-black text-sm uppercase tracking-widest hover:gap-4 transition-all">
@@ -203,15 +248,20 @@
                     </h3>
 
                     <ul class="space-y-4 text-slate-600 font-medium mb-10">
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500"></i>
+                        <li class="flex items-center gap-3"><i
+                                class="fa-solid fa-circle-check text-green-500"></i>
                             Assignments Solutions</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500"></i>
+                        <li class="flex items-center gap-3"><i
+                                class="fa-solid fa-circle-check text-green-500"></i>
                             Expert Quizzes Handling</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500"></i>
+                        <li class="flex items-center gap-3"><i
+                                class="fa-solid fa-circle-check text-green-500"></i>
                             Unique GDB Solutions</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500"></i>
+                        <li class="flex items-center gap-3"><i
+                                class="fa-solid fa-circle-check text-green-500"></i>
                             Cisco Specialist (CS201, 206, 610)</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500"></i> Mid
+                        <li class="flex items-center gap-3"><i
+                                class="fa-solid fa-circle-check text-green-500"></i> Mid
                             & Finalterm Preparation</li>
                         <li class="flex items-center gap-3 font-bold text-blue-600"><i
                                 class="fa-solid fa-star text-yellow-500"></i> Full/Half Semester Packages</li>
@@ -238,21 +288,25 @@
                             <div class="text-2xl text-yellow-400"><i class="fa-solid fa-user-tie"></i></div>
                             <div>
                                 <h4 class="text-white font-bold text-sm">Experienced Experts</h4>
-                                <p class="text-slate-400 text-xs mt-1">Specialized team for each VU subject.</p>
+                                <p class="text-slate-400 text-xs mt-1">Specialized team for each VU subject.
+                                </p>
                             </div>
                         </div>
                         <div class="flex gap-4">
                             <div class="text-2xl text-blue-400"><i class="fa-solid fa-bolt"></i></div>
                             <div>
                                 <h4 class="text-white font-bold text-sm">Fast Response</h4>
-                                <p class="text-slate-400 text-xs mt-1">Under 30 minutes reply time guaranteed.</p>
+                                <p class="text-slate-400 text-xs mt-1">Under 30 minutes reply time guaranteed.
+                                </p>
                             </div>
                         </div>
                         <div class="flex gap-4">
-                            <div class="text-2xl text-green-400"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                            <div class="text-2xl text-green-400"><i
+                                    class="fa-solid fa-hand-holding-dollar"></i></div>
                             <div>
                                 <h4 class="text-white font-bold text-sm">Reasonable Price</h4>
-                                <p class="text-slate-400 text-xs mt-1">Quality work with easy installment options.</p>
+                                <p class="text-slate-400 text-xs mt-1">Quality work with easy installment
+                                    options.</p>
                             </div>
                         </div>
                     </div>
@@ -274,25 +328,31 @@
                 <span
                     class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider">Premium
                     Billing</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-4 uppercase text-center">Smart <span
-                        class="text-blue-600">LMS Estimator</span></h2>
-                <p class="text-slate-500 mt-2 text-sm">Enter subjects to see your total bill and exclusive savings.</p>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-4 uppercase text-center">
+                    Smart <span class="text-blue-600">LMS Estimator</span></h2>
+                <p class="text-slate-500 mt-2 text-sm">Enter subjects to see your total bill and exclusive
+                    savings.</p>
             </div>
 
-            <div class="bg-white rounded-[2rem] md:rounded-[3rem] shadow-2xl overflow-hidden border border-slate-100">
+            <div
+                class="bg-white rounded-[2rem] md:rounded-[3rem] shadow-2xl overflow-hidden border border-slate-100">
                 <div class="flex flex-col md:grid md:grid-cols-12">
 
-                    <div class="md:col-span-4 bg-blue-600 p-8 md:p-10 text-white flex flex-col justify-between">
+                    <div
+                        class="md:col-span-4 bg-blue-600 p-8 md:p-10 text-white flex flex-col justify-between">
                         <div>
                             <h3 class="text-2xl font-bold mb-6">Welcome to LGWT! 👋</h3>
-                            <p class="text-blue-100 mb-8 text-sm leading-relaxed">Quality LMS handling with transparent
+                            <p class="text-blue-100 mb-8 text-sm leading-relaxed">Quality LMS handling with
+                                transparent
                                 billing. Discounts are automatically applied based on your subjects.</p>
 
                             <div class="space-y-4">
                                 <div class="bg-white/10 p-4 rounded-2xl border border-white/20">
-                                    <p class="text-[10px] font-bold uppercase text-yellow-400 mb-1">Total Transparency
+                                    <p class="text-[10px] font-bold uppercase text-yellow-400 mb-1">Total
+                                        Transparency
                                     </p>
-                                    <p class="text-xs">Original Bill vs Discounted Bill visible side-by-side.</p>
+                                    <p class="text-xs">Original Bill vs Discounted Bill visible side-by-side.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -310,8 +370,10 @@
                                     <input type="text" id="tag-input" placeholder="Type CS101..."
                                         class="bg-transparent outline-none flex-grow p-2 text-slate-700 placeholder:text-slate-400">
                                 </div>
-                                <p class="text-[10px] text-slate-400 mt-3">Separate codes with <b>Comma (,)</b>,
-                                    <b>Space</b>, or <b>Enter</b>.</p>
+                                <p class="text-[10px] text-slate-400 mt-3">Separate codes with <b>Comma
+                                        (,)</b>,
+                                    <b>Space</b>, or <b>Enter</b>.
+                                </p>
                             </div>
                             <button onclick="calculateInvoice()"
                                 class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-5 rounded-2xl shadow-xl transition-all transform active:scale-95">
@@ -321,9 +383,12 @@
 
                         <div id="result-stage" class="hidden">
                             <div class="flex justify-between items-center mb-6">
-                                <h3 class="text-xl font-bold text-slate-800 tracking-tight text-sm md:text-xl">Your
+                                <h3
+                                    class="text-xl font-bold text-slate-800 tracking-tight text-sm md:text-xl">
+                                    Your
                                     Detailed Invoice</h3>
-                                <button onclick="goBack()" class="text-blue-600 font-bold text-xs hover:underline">Edit
+                                <button onclick="goBack()"
+                                    class="text-blue-600 font-bold text-xs hover:underline">Edit
                                     List</button>
                             </div>
 
@@ -344,7 +409,8 @@
                             <div class="mb-8 grid grid-cols-1 gap-2">
                                 <div id="off4k"
                                     class="p-3 rounded-xl border border-slate-100 flex justify-between items-center opacity-40 text-xs transition-all">
-                                    <span>4K+ Semester Discount Offer</span><b class="text-green-600">- 500</b>
+                                    <span>4K+ Semester Discount Offer</span><b class="text-green-600">-
+                                        500</b>
                                 </div>
                                 <div id="off5k"
                                     class="p-3 rounded-xl border border-slate-100 flex justify-between items-center opacity-40 text-xs transition-all">
@@ -360,14 +426,16 @@
                                 class="bg-slate-900 rounded-[2.5rem] p-6 md:p-8 text-white shadow-2xl relative overflow-hidden">
                                 <div class="grid grid-cols-2 gap-4 mb-8">
                                     <div class="border-r border-white/10 pr-4">
-                                        <p class="text-[9px] text-blue-300 font-bold uppercase mb-1">Total Original Bill
+                                        <p class="text-[9px] text-blue-300 font-bold uppercase mb-1">Total
+                                            Original Bill
                                         </p>
                                         <span id="grossBill"
                                             class="text-lg md:text-xl font-bold text-slate-400 line-through tracking-tighter">Rs.
                                             0</span>
                                     </div>
                                     <div class="pl-4">
-                                        <p class="text-[9px] text-green-400 font-bold uppercase mb-1">Discounted Final
+                                        <p class="text-[9px] text-green-400 font-bold uppercase mb-1">
+                                            Discounted Final
                                             Bill</p>
                                         <span id="finalBill"
                                             class="text-2xl md:text-3xl font-black text-yellow-400 tracking-tighter">Rs.
@@ -377,7 +445,8 @@
 
                                 <div class="bg-blue-800/30 border border-blue-700/50 p-4 rounded-2xl mb-8">
                                     <p class="text-[10px] text-blue-100 italic leading-relaxed text-center">
-                                        <b>Supporting Note:</b> "If You Want More Discount Then Contact Me Using Clicked
+                                        <b>Supporting Note:</b> "If You Want More Discount Then Contact Me
+                                        Using Clicked
                                         On <b style="color: orange;"> Confirm & Book on WhatsApp</b>"
                                     </p>
                                 </div>
@@ -398,7 +467,8 @@
     <section id="bot-console" class="py-24 bg-[#020617] relative overflow-hidden border-y border-blue-500/20">
 
         <div class="absolute inset-0 opacity-10"
-            style="background-image: radial-gradient(#1e40af 1px, transparent 1px); background-size: 30px 30px;"></div>
+            style="background-image: radial-gradient(#1e40af 1px, transparent 1px); background-size: 30px 30px;">
+        </div>
 
         <div class="max-w-6xl mx-auto px-4 relative z-10">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
@@ -408,13 +478,17 @@
                         class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-[2rem] blur opacity-20 group-hover:opacity-40 transition">
                     </div>
 
-                    <div class="relative bg-black rounded-[2rem] border border-blue-500/30 overflow-hidden shadow-2xl">
+                    <div
+                        class="relative bg-black rounded-[2rem] border border-blue-500/30 overflow-hidden shadow-2xl">
                         <div
                             class="bg-slate-900/50 px-6 py-3 border-b border-white/10 flex justify-between items-center">
                             <div class="flex gap-2">
-                                <span class="w-3 h-3 rounded-full bg-red-500 shadow-[0_0_10px_#ef4444]"></span>
-                                <span class="w-3 h-3 rounded-full bg-yellow-500 shadow-[0_0_10px_#eab308]"></span>
-                                <span class="w-3 h-3 rounded-full bg-green-500 shadow-[0_0_10px_#22c55e]"></span>
+                                <span
+                                    class="w-3 h-3 rounded-full bg-red-500 shadow-[0_0_10px_#ef4444]"></span>
+                                <span
+                                    class="w-3 h-3 rounded-full bg-yellow-500 shadow-[0_0_10px_#eab308]"></span>
+                                <span
+                                    class="w-3 h-3 rounded-full bg-green-500 shadow-[0_0_10px_#22c55e]"></span>
                             </div>
                             <span
                                 class="text-[10px] font-mono text-blue-400 tracking-tighter animate-pulse">LGWT_NEURAL_LINK:
@@ -470,7 +544,8 @@
                     <div class="text-4xl md:text-5xl font-black text-white tracking-tighter">
                         <span class="counter" data-target="50">0</span>+
                     </div>
-                    <p class="text-blue-200 text-xs md:text-sm font-bold uppercase tracking-widest">Assignments Solved
+                    <p class="text-blue-200 text-xs md:text-sm font-bold uppercase tracking-widest">
+                        Assignments Solved
                     </p>
                 </div>
 
@@ -478,21 +553,24 @@
                     <div class="text-4xl md:text-5xl font-black text-yellow-400 tracking-tighter">
                         <span class="counter" data-target="500">0</span>+
                     </div>
-                    <p class="text-blue-200 text-xs md:text-sm font-bold uppercase tracking-widest">Quizzes Handled</p>
+                    <p class="text-blue-200 text-xs md:text-sm font-bold uppercase tracking-widest">Quizzes
+                        Handled</p>
                 </div>
 
                 <div class="space-y-2">
                     <div class="text-4xl md:text-5xl font-black text-white tracking-tighter">
                         <span class="counter" data-target="98">0</span>%
                     </div>
-                    <p class="text-blue-200 text-xs md:text-sm font-bold uppercase tracking-widest">Success Rate</p>
+                    <p class="text-blue-200 text-xs md:text-sm font-bold uppercase tracking-widest">Success
+                        Rate</p>
                 </div>
 
                 <div class="space-y-2">
                     <div class="text-4xl md:text-5xl font-black text-yellow-400 tracking-tighter">
                         <span class="counter" data-target="45">0</span>+
                     </div>
-                    <p class="text-blue-200 text-xs md:text-sm font-bold uppercase tracking-widest">Happy Students</p>
+                    <p class="text-blue-200 text-xs md:text-sm font-bold uppercase tracking-widest">Happy
+                        Students</p>
                 </div>
 
             </div>
@@ -509,7 +587,8 @@
                 <h2 class="text-4xl font-black text-slate-900 mt-4 uppercase">
                     Academic <span class="text-blue-600 underline decoration-yellow-400">Success Hub</span>
                 </h2>
-                <p class="text-slate-500 font-bold italic mt-2">100% accurate work results verified by students.</p>
+                <p class="text-slate-500 font-bold italic mt-2">100% accurate work results verified by
+                    students.</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
@@ -521,7 +600,8 @@
                         <i class="fa-solid fa-play"></i>
                     </div>
                     <h3 class="text-2xl font-black text-slate-800 uppercase">Video Results</h3>
-                    <p class="text-slate-500 text-sm mt-3 mb-8">Watch screen recordings of LMS activities, Quiz
+                    <p class="text-slate-500 text-sm mt-3 mb-8">Watch screen recordings of LMS activities,
+                        Quiz
                         handling, and Grand Quizzes results.</p>
                     <a href="Result/video-results.html"
                         class="inline-flex items-center gap-3 bg-red-600 text-white px-8 py-4 rounded-2xl font-bold hover:bg-red-700 shadow-lg shadow-red-200 transition">
@@ -536,7 +616,8 @@
                         <i class="fa-solid fa-file-pdf"></i>
                     </div>
                     <h3 class="text-2xl font-black text-slate-800 uppercase">PDF Reports</h3>
-                    <p class="text-slate-500 text-sm mt-3 mb-8">Download and verify full semester marksheets and
+                    <p class="text-slate-500 text-sm mt-3 mb-8">Download and verify full semester marksheets
+                        and
                         activity logs of our students.</p>
                     <a href="Result/pdf-results.html"
                         class="inline-flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold hover:bg-blue-700 shadow-lg shadow-blue-200 transition">
@@ -549,7 +630,8 @@
     </section>
 
     <!-- Small Icon Whatsapp on side bar  -->
-    <a href="https://wa.me/923196248868" target="_blank" class="fixed bottom-8 right-8 z-[100] group flex items-center">
+    <a href="https://wa.me/923196248868" target="_blank"
+        class="fixed bottom-8 right-8 z-[100] group flex items-center">
         <span
             class="bg-white text-gray-800 px-4 py-2 rounded-lg shadow-xl mr-3 opacity-0 group-hover:opacity-100 transition-opacity font-bold">Need
             Help? Chat now!</span>
@@ -563,8 +645,11 @@
     <footer
         class="bg-[#0f172a] text-white pt-20 pb-10 mt-20 relative overflow-hidden border-t border-white/5 font-['Poppins']">
 
-        <div class="absolute top-0 right-0 w-80 h-80 bg-blue-600/10 rounded-full blur-[100px] -mr-40 -mt-40"></div>
-        <div class="absolute bottom-0 left-0 w-80 h-80 bg-yellow-500/5 rounded-full blur-[100px] -ml-40 -mb-40"></div>
+        <div class="absolute top-0 right-0 w-80 h-80 bg-blue-600/10 rounded-full blur-[100px] -mr-40 -mt-40">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-80 h-80 bg-yellow-500/5 rounded-full blur-[100px] -ml-40 -mb-40">
+        </div>
 
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
@@ -574,7 +659,8 @@
                         VU STUDY <span class="text-yellow-400">LGWT</span>
                     </div>
                     <p class="text-slate-400 text-sm leading-relaxed font-medium">
-                        Pakistan's most trusted partner for Virtual University success. We provide 100% accurate LMS
+                        Pakistan's most trusted partner for Virtual University success. We provide 100%
+                        accurate LMS
                         solutions, verified handouts, and guaranteed results.
                     </p>
                     <div class="flex gap-4">
@@ -590,7 +676,8 @@
                 </div>
 
                 <div class="space-y-6">
-                    <h4 class="text-white font-bold border-l-4 border-blue-600 pl-4 uppercase tracking-[0.2em] text-xs">
+                    <h4
+                        class="text-white font-bold border-l-4 border-blue-600 pl-4 uppercase tracking-[0.2em] text-xs">
                         Quick Links</h4>
                     <ul class="space-y-4 text-slate-400 text-sm font-semibold">
                         <li><a href="handouts/handouts.html"
@@ -605,7 +692,8 @@
                                 class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
                                     class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
                                 Our Services</a></li>
-                        <li><a href="#results" class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
+                        <li><a href="#results"
+                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
                                     class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
                                 Proofs & Results</a></li>
                     </ul>
@@ -616,19 +704,24 @@
                         class="text-white font-bold border-l-4 border-yellow-400 pl-4 uppercase tracking-[0.2em] text-xs">
                         Services</h4>
                     <ul class="space-y-4 text-slate-400 text-sm font-semibold">
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500/50"></i>
+                        <li class="flex items-center gap-3"><i
+                                class="fa-solid fa-circle-check text-green-500/50"></i>
                             LMS Full Handling</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500/50"></i>
+                        <li class="flex items-center gap-3"><i
+                                class="fa-solid fa-circle-check text-green-500/50"></i>
                             Paid Assignments</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500/50"></i>
+                        <li class="flex items-center gap-3"><i
+                                class="fa-solid fa-circle-check text-green-500/50"></i>
                             Quiz Management</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500/50"></i>
+                        <li class="flex items-center gap-3"><i
+                                class="fa-solid fa-circle-check text-green-500/50"></i>
                             Cisco Assignments</li>
                     </ul>
                 </div>
 
                 <div class="space-y-6">
-                    <h4 class="text-white font-bold border-l-4 border-blue-600 pl-4 uppercase tracking-[0.2em] text-xs">
+                    <h4
+                        class="text-white font-bold border-l-4 border-blue-600 pl-4 uppercase tracking-[0.2em] text-xs">
                         Support</h4>
                     <div class="bg-white/5 p-6 rounded-[2rem] border border-white/10 space-y-4 shadow-2xl">
                         <div class="flex items-center gap-4">
@@ -637,7 +730,8 @@
                                 <i class="fa-solid fa-headset text-xl"></i>
                             </div>
                             <div>
-                                <p class="text-[10px] text-slate-500 font-black uppercase tracking-widest">Help Desk</p>
+                                <p class="text-[10px] text-slate-500 font-black uppercase tracking-widest">
+                                    Help Desk</p>
                                 <p class="text-sm font-bold text-white">+92 319 6248868</p>
                             </div>
                         </div>
@@ -649,194 +743,23 @@
                 </div>
             </div>
 
-            <div class="h-px w-full bg-gradient-to-r from-transparent via-slate-700 to-transparent mb-10"></div>
+            <div class="h-px w-full bg-gradient-to-r from-transparent via-slate-700 to-transparent mb-10">
+            </div>
 
             <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="text-slate-500 text-[11px] font-medium text-center md:text-left leading-relaxed">
                     &copy; 2026 <span class="text-white font-bold">LGWT Official</span>. Crafted with <i
                         class="fa-solid fa-heart text-red-500"></i> for Virtual University Students.
                 </div>
-                <div class="flex items-center gap-2 text-slate-500 text-[10px] uppercase tracking-[0.3em] font-black">
-                    Learning <span class="text-blue-500">&</span> Growing <span class="text-yellow-400">With Team</span>
+                <div
+                    class="flex items-center gap-2 text-slate-500 text-[10px] uppercase tracking-[0.3em] font-black">
+                    Learning <span class="text-blue-500">&</span> Growing <span class="text-yellow-400">With
+                        Team</span>
                 </div>
             </div>
         </div>
     </footer>
-
-
-    <!-- LMS CalCulator Scripts -->
-    <script>
-        const specialBooks = ["CS101", "ENG101", "MTH101", "ISL202", "PAK301", "MGT211", "CS201P", "CS301P"];
-        const tagsContainer = document.getElementById('tags-container');
-        const tagInput = document.getElementById('tag-input');
-        let tags = [];
-
-        tagInput.addEventListener('keydown', (e) => {
-            if (e.key === ',' || e.key === ' ' || e.key === 'Enter') {
-                e.preventDefault();
-                let val = tagInput.value.trim().toUpperCase().replace(/,/g, '');
-                if (val && !tags.includes(val)) { tags.push(val); renderTags(); }
-                tagInput.value = '';
-            }
-        });
-
-        function renderTags() {
-            tagsContainer.querySelectorAll('.tag-badge').forEach(t => t.remove());
-            tags.forEach((tag, i) => {
-                const badge = document.createElement('div');
-                badge.className = 'tag-badge bg-blue-600 text-white px-3 py-1 rounded-lg text-xs font-bold flex items-center gap-2';
-                badge.innerHTML = `${tag} <span class="cursor-pointer opacity-70" onclick="removeTag(${i})">&times;</span>`;
-                tagsContainer.insertBefore(badge, tagInput);
-            });
-        }
-        function removeTag(i) { tags.splice(i, 1); renderTags(); }
-
-        function calculateInvoice() {
-            if (tags.length === 0) { alert("Please add subjects!"); return; }
-            const listBody = document.getElementById('invoiceList');
-            listBody.innerHTML = "";
-            let subtotal = 0;
-
-            tags.forEach(code => {
-                let rate = specialBooks.includes(code) ? 500 : 800;
-                subtotal += rate;
-                listBody.innerHTML += `
-            <tr class="border-b border-slate-50 text-sm">
-                <td class="p-4 font-bold text-slate-700">${code}</td>
-                <td class="p-4 text-center text-slate-500">Rs. ${Math.round(rate / 4)}</td>
-                <td class="p-4 text-center text-slate-500 font-medium">Rs. ${Math.round(rate / 2)}</td>
-                <td class="p-4 text-right font-bold text-blue-600">Rs. ${rate}</td>
-            </tr>`;
-            });
-
-            let disc = 0;
-            resetOffers();
-            if (subtotal >= 6000) { disc = 1100; highlight('off6k'); }
-            else if (subtotal >= 5000) { disc = 800; highlight('off5k'); }
-            else if (subtotal >= 4000) { disc = 500; highlight('off4k'); }
-
-            document.getElementById('grossBill').innerText = `Rs. ${subtotal}`;
-            document.getElementById('finalBill').innerText = `Rs. ${subtotal - disc}`;
-            document.getElementById('form-stage').classList.add('hidden');
-            document.getElementById('result-stage').classList.remove('hidden');
-        }
-
-        function highlight(id) {
-            const el = document.getElementById(id);
-            el.classList.replace('opacity-40', 'opacity-100');
-            el.classList.add('bg-green-50', 'border-green-400', 'scale-105', 'shadow-sm');
-        }
-
-        function resetOffers() {
-            ['off4k', 'off5k', 'off6k'].forEach(id => {
-                document.getElementById(id).className = "p-3 rounded-xl border border-slate-100 flex justify-between items-center opacity-40 transition-all";
-            });
-        }
-
-        function goBack() {
-            document.getElementById('form-stage').classList.remove('hidden');
-            document.getElementById('result-stage').classList.add('hidden');
-        }
-
-        function bookNow() {
-            const final = document.getElementById('finalBill').innerText;
-            const msg = `Assalam o Alaikum LGWT! %0AMujhe LMS Handling start karwani hai.%0ASubjects: ${tags.join(', ')}%0AFinal Discounted Bill: ${final}%0A%0A(Website Invoice Checked) \n Please Give Me More Discount If Possible`;
-            window.open(`https://wa.me/923196248868?text=${msg}`, '_blank');
-        }
-    </script>
-
-    <!-- Other Script -->
-    <script>
-        var typed = new Typed('#typed-heading', {
-            strings: ["Welcome to VU Study LGWT", "Your LMS Solution Partner", "Accurate Assignment Help", "Expert Quiz Handling"],
-            typeSpeed: 60,
-            backSpeed: 40,
-            loop: true
-        });
-
-        // Mobile Menu Toggle logic
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-            const icon = btn.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-xmark');
-        });
-    </script>
-
-    <!-- BOT Script -->
-    <script>
-        const logContainer = document.getElementById('hacker-logs');
-        const commands = [
-            { txt: "> Initializing Baileys Socket...", color: "text-blue-400" },
-            { txt: "> Loading Dani.js & Auth Info...", color: "text-blue-400" },
-            { txt: "> connection.update: OPEN", color: "text-green-500" },
-            { txt: "> setupHandoutSearch: READY", color: "text-blue-400" },
-            { txt: "> setupResultCheck: READY", color: "text-blue-400" },
-            { txt: "> Listening for .sticker command...", color: "text-yellow-500" },
-            { txt: "> Request received from: 923xxxxxxxxx", color: "text-white" },
-            { txt: "> Processing PDF search: CS101...", color: "text-cyan-400" },
-            { txt: "> System Heartbeat: OK", color: "text-green-500" },
-            { txt: "-----------------------------------", color: "text-slate-700" }
-        ];
-
-        let lineIndex = 0;
-
-        function addLogLine() {
-            if (lineIndex >= commands.length) {
-                logContainer.innerHTML = ""; // Loop reset
-                lineIndex = 0;
-            }
-
-            const line = document.createElement('div');
-            line.className = `log-line ${commands[lineIndex].color} text-[12px]`;
-            line.innerText = commands[lineIndex].txt;
-            logContainer.appendChild(line);
-
-            lineIndex++;
-            setTimeout(addLogLine, Math.random() * 1000 + 500);
-        }
-
-        window.addEventListener('load', addLogLine);
-    </script>
-
-    <!-- Assignemnt Counter Script -->
-    <script>
-        const startCounters = () => {
-            const counters = document.querySelectorAll('.counter');
-            const speed = 200; // Jitna kam hoga, utna fast chalega
-
-            counters.forEach(counter => {
-                const updateCount = () => {
-                    const target = +counter.getAttribute('data-target');
-                    const count = +counter.innerText;
-                    const inc = target / speed;
-
-                    if (count < target) {
-                        counter.innerText = Math.ceil(count + inc);
-                        setTimeout(updateCount, 20);
-                    } else {
-                        counter.innerText = target;
-                    }
-                };
-                updateCount();
-            });
-        };
-
-        // Scroll Detection to trigger counter
-        let started = false;
-        window.addEventListener('scroll', () => {
-            const section = document.querySelector('.counter')?.parentElement;
-            if (section) {
-                const rect = section.getBoundingClientRect();
-                if (rect.top < window.innerHeight && !started) {
-                    startCounters();
-                    started = true;
-                }
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 
 </body>
 
