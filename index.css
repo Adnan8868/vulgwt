@@ -65,3 +65,21 @@
  .custom-scroll::-webkit-scrollbar-thumb:hover {
      background: #1e3a8a;
  }
+
+
+ /* Active Navigation Link Style */
+.nav-active {
+    color: #1e40af !important; /* Dark Blue */
+    font-weight: 800 !important;
+    position: relative;
+}
+
+.nav-active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fbbf24; /* Yellow underline */
+}
