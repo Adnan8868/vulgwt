@@ -54,25 +54,48 @@
 </head>
 
 <body>
+    <header class="hero-section text-white py-10 px-4 text-center shadow-xl">
+        <h1 class="text-3xl md:text-4xl font-bold mb-2 uppercase tracking-tight">
+            Exam <span class="text-yellow-400">Past Papers</span>
+        </h1>
+        <p class="opacity-90 max-w-2xl mx-auto text-sm md:text-base text-blue-100">
+            Official Solved Midterm & Finalterm Collections for Virtual University.
+        </p>
 
-    <header class="hero-section text-white py-16 px-4 text-center shadow-xl">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-tight">Exam <span
-                class="text-yellow-400">Past
-                Papers</span></h1>
-        <p class="opacity-90 max-w-2xl mx-auto text-lg text-blue-100">Official Solved Midterm & Finalterm
-            Collections
-            for Virtual University.</p>
-
-        <div class="max-w-2xl mx-auto mt-10 relative">
+        <div class="max-w-xl mx-auto mt-6 relative">
             <input type="text" id="searchInput" onkeyup="filterCards()"
-                placeholder="Search Subject (e.g.BIO, MGT, MTH,)..."
-                class="w-full p-5 rounded-2xl text-gray-800 shadow-2xl focus:ring-4 focus:ring-yellow-400 outline-none border-none text-lg">
+                placeholder="Search Subject (e.g. BIO, MGT, CS)..."
+                class="w-full p-4 rounded-xl text-gray-800 shadow-2xl focus:ring-4 focus:ring-yellow-400 outline-none border-none text-base">
         </div>
     </header>
 
+    <div class="max-w-7xl mx-auto px-6 mt-6">
+        <div class="bg-blue-50 border-l-4 border-blue-600 rounded-xl p-4 shadow-sm">
+            <div class="flex items-start gap-3">
+                <div class="text-blue-600 text-xl mt-1">
+                    <i class="fa-solid fa-circle-info"></i>
+                </div>
+                <div class="flex-1">
+                    <h2 class="text-blue-900 font-bold uppercase text-sm mb-1">
+                        Papers Kaise Talash Karen?
+                    </h2>
+                    <div class="text-slate-600 text-xs md:text-sm leading-snug">
+                        <span class="font-bold">1. Search:</span> Pehle Subject search kren (MTH, CS etc)<br>
+                        <span class="font-bold">2. Open Vault:</span> Box par click kren<br>
+                        <span class="font-bold">3. Specific Code:</span> Andar apna code search kren (e.g.
+                        CS101). <br>
+                        <p class="text-red-600 font-bold mt-1 italic">Nahi mil raha? WhatsApp par rabta kren.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Compact Quiz Vault Bar -->
     <div class="max-w-7xl mx-auto px-6 mt-6">
-        <a href="https://drive.google.com/drive/folders/1U3sBJAIT0teIgq47oVd9YfVwco43gmpE" target="_blank" class="group">
+        <a href="https://drive.google.com/drive/folders/1U3sBJAIT0teIgq47oVd9YfVwco43gmpE" target="_blank"
+            class="group">
             <div
                 class="bg-white border border-blue-100 rounded-2xl p-4 flex flex-col md:flex-row items-center justify-between gap-4 shadow-sm hover:shadow-md transition-all border-l-8 border-l-blue-600">
 
@@ -364,32 +387,13 @@
 
         </div>
 
-         <div id="noResult" class="hidden text-center py-20">
+        <div id="noResult" class="hidden text-center py-20">
             <p class="text-2xl font-bold text-gray-400">❌ No subjects found matching your search</p><br>
-            <b class="text-2xl font-bold text-gray-400 mt-">Please Pehly Subject Folder Open Kren Then Apna Subject Code Search Kren (eg... CS Papers)</b>
+            <b class="text-2xl font-bold text-gray-400 mt-">Please Pehly Subject Folder Open Kren Then Apna
+                Subject Code Search Kren (eg... CS Papers)</b>
         </div>
     </div>
 
-    <script>
-        function filterCards() {
-            let input = document.getElementById('searchInput').value.toLowerCase();
-            let cards = document.querySelectorAll('.paper-card');
-            let found = 0;
-
-            cards.forEach(card => {
-                let name = card.getAttribute('data-name').toLowerCase();
-                if (name.includes(input)) {
-                    card.style.display = "flex";
-                    found++;
-                } else {
-                    card.style.display = "none";
-                }
-            });
-
-            document.getElementById('noResult').style.display = (found === 0) ? "block" : "none";
-        }
-
-    </script>
     <footer
         class="bg-[#0f172a] text-white pt-20 pb-10 mt-20 relative overflow-hidden font-['Poppins'] border-t border-white/5">
 
@@ -487,6 +491,27 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function filterCards() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let cards = document.querySelectorAll('.paper-card');
+            let found = 0;
+
+            cards.forEach(card => {
+                let name = card.getAttribute('data-name').toLowerCase();
+                if (name.includes(input)) {
+                    card.style.display = "flex";
+                    found++;
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            document.getElementById('noResult').style.display = (found === 0) ? "block" : "none";
+        }
+
+    </script>
 </body>
 
 </html>
