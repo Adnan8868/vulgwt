@@ -37,7 +37,7 @@
 
 <body class="bg-slate-50">
 
-    <header class="hero-gradient text-white py-16 px-4 shadow-2xl relative text-center">
+    <header class="hero-gradient text-white py-12 px-4 shadow-2xl relative text-center">
         <h1 class="text-3xl md:text-5xl font-extrabold mb-4 uppercase tracking-widest">BIO <span
                 class="text-yellow-400">Handouts</span> Hub</h1>
         <p class="text-blue-100 text-lg opacity-90 font-medium">Download verified Biology handouts, genetics notes, and
@@ -95,12 +95,35 @@
                                 <a href="${handoutsLink}" class="flex items-center justify-center gap-2 w-full py-3 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-100" target="_blank">
                                     <i class="fa-solid fa-file-pdf"></i> Handouts
                                 </a>
-                                <a href="${item.highlighted}" class="flex items-center justify-center gap-2 w-full py-3 bg-yellow-400 text-blue-900 rounded-xl font-bold hover:bg-yellow-500 transition" target="_blank">
-                                    <i class="fa-solid fa-highlighter"></i> Highlighted
-                                </a>
-                                <a href="${item.ppt}" class="flex items-center justify-center gap-2 w-full py-3 bg-slate-100 text-slate-500 rounded-xl font-bold hover:bg-slate-200 transition">
-                                    <i class="fa-solid fa-file-powerpoint"></i> PPT Slides
-                                </a>
+                                  <!-- Highlighted -->
+                                ${item.highlighted === "not_found.html"
+                            ? `
+                                    <button disabled
+                                        class="flex items-center justify-center gap-2 w-full py-3 bg-slate-200 text-slate-400 rounded-xl font-bold cursor-not-allowed opacity-70">
+                                        <i class="fa-solid fa-ban"></i> Highlights Not Available
+                                    </button>
+                                    `
+                            : `
+                                    <a href="${item.highlighted}"
+                                        class="flex items-center justify-center gap-2 w-full py-3 bg-gradient-to-r from-orange-500 to-yellow-400 text-blue-900 rounded-xl font-bold hover:bg-yellow-500 transition"
+                                        target="_blank">
+                                        <i class="fa-solid fa-highlighter"></i> Highlighted
+                                    </a>
+                                    ` }
+
+                                <!-- PPT -->
+                                ${item.ppt === "not_found.html" ? `
+                                    <button disabled
+                                        class="flex items-center justify-center gap-2 w-full py-3 bg-slate-200 text-slate-400 rounded-xl font-bold cursor-not-allowed opacity-70">
+                                        <i class="fa-solid fa-ban"></i> PPT Not Available
+                                    </button>
+                                    ` : `
+                                    <a href="${item.ppt}"
+                                        class="flex items-center justify-center gap-2 w-full py-3 bg-purple-600 text-white rounded-xl font-bold hover:bg-purple-900 transition"
+                                        target="_blank">
+                                        <i class="fa-solid fa-file-powerpoint"></i> PPT Slides
+                                    </a>
+                                `}
                             </div>
                         </div>
                     `;
