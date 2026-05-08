@@ -1,7 +1,6 @@
 // --- 1. DATA ARRAY ---
 const prepData = {
     mid: [
-        
         // ====================
         //      CS SUBJECTS
         // ====================
@@ -43,6 +42,34 @@ const prepData = {
                 { title: "Education World 2024", url: "https://www.youtube.com/watch?v=fmxPoCHVdxE" },
             ]
         },
+        {
+            id: "CS304",
+            name: "Object Oriented Programming",
+            videos: [
+                { title: "VU TALK 3 Hour Video", url: "https://www.youtube.com/watch?v=9GkpGI4Rtd8" },
+                { title: "KST Learning 2024", url: "https://www.youtube.com/watch?v=U8v5rBrywW4" },
+                { title: "KST Learning 2023", url: "https://youtu.be/_x896bToxC0?si=pn0pRojv6KzGopZH" },
+                { title: "World OF Education 2024 MCQ's", url: "https://www.youtube.com/watch?v=SngAaW0Wgjc" },
+                { title: "World OF Education 2024 Subjective", url: "https://youtu.be/bkZppUKDRsQ?si=KNLZKzDpJ7FP_I2D" },
+                { title: "World OF Education 2023 MCQ's", url: "https://www.youtube.com/watch?v=nJfGKE_ffZY" },
+                { title: "VU Knowledge", url: "https://youtu.be/ogIhZ6FJdDQ?si=7SW3c9pIySLBiRM4" },
+                { title: "Mobiz Knowledge Korner MCQS 50 mint", url: "https://www.youtube.com/watch?v=rQyzv93LzbA" },
+                { title: "Mobiz Knowledge Korner Subjective 1.5 Hour+", url: "https://www.youtube.com/watch?v=o6E_bGzrsMk" },
+
+            ]
+        },
+        {
+            id: "CS403",
+            name: "Database Management Systems",
+            videos: [
+                { title: "VU Concepts", url: "https://www.youtube.com/watch?v=NsICuHTTosQ" },
+                { title: "Learn With Universe", url: "https://www.youtube.com/watch?v=jzSas-vnoFk" },
+                { title: "KST Learning 2024", url: "https://youtu.be/-Is2hRhnmyQ?si=yIUJuNlF1i9HLXQN" },
+                { title: "KST Learning 2023", url: "https://youtu.be/hS5STygltYo?si=R8dw-TrknFN0ARXI" },
+                { title: "VU Universe", url: "https://www.youtube.com/watch?v=x7KtpJtBoyw" },
+
+            ]
+        },
         // ====================
         //      ENG SUBJECTS
         // ====================
@@ -71,7 +98,6 @@ const prepData = {
                 { title: "VU Knowledge", url: "https://www.youtube.com/watch?v=kcXdpu-br3c" },
             ]
         },
-        
         // ======================
         //      MATH SUBJECTS
         // ======================
