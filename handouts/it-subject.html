@@ -16,14 +16,16 @@
     </style>
 </head>
 <body class="bg-slate-50">
-    <header class="hero-gradient text-white py-16 px-4 shadow-2xl text-center">
-        <h1 class="text-3xl md:text-5xl font-extrabold mb-4 uppercase tracking-widest">IT <span class="text-yellow-400">Handouts</span> Hub</h1>
+
+    <header class="hero-gradient text-white py-12 px-4 shadow-2xl text-center">
+        <h1 class="text-3xl md:text-5xl font-extrabold mb-4 uppercase tracking-widest">IT <span class="text-yellow-400">Handouts</span></h1>
         <p class="text-blue-100 text-lg opacity-90">E-Commerce and Network Administration materials.</p>
         <div class="max-w-xl mx-auto mt-10 relative rounded-full overflow-hidden shadow-2xl bg-white text-left">
             <span class="absolute inset-y-0 left-5 flex items-center text-slate-400"><i class="fa-solid fa-magnifying-glass"></i></span>
             <input type="text" id="searchInput" onkeyup="searchSubjects()" placeholder="Search (e.g. IT430)..." class="w-full py-5 pl-14 pr-6 text-slate-900 font-bold outline-none border-none">
         </div>
     </header>
+
     <div class="max-w-7xl mx-auto px-6 py-12">
         <div class="mb-10"><a href="handouts.html" class="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-2xl text-blue-800 font-bold shadow-sm hover:shadow-md transition border border-gray-100"><i class="fa-solid fa-arrow-left"></i> Back to Resource Hub</a></div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="subjectContainer">
@@ -35,7 +37,39 @@
                 const container = document.getElementById('subjectContainer');
                 itData.forEach(item => {
                     const hLink = item.handouts.startsWith('http') ? item.handouts : `https://drive.google.com/uc?export=download&id=${item.handouts}`;
-                    container.innerHTML += `<div class="card subject-card bg-white p-8 rounded-[2.5rem] flex flex-col justify-between shadow-sm"><div><span class="bg-blue-50 text-blue-600 px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest italic">Information Tech</span><h3 class="text-2xl font-black text-slate-800 mt-3">${item.id}</h3><p class="text-slate-500 text-sm font-medium mb-8 leading-tight">${item.name}</p></div><div class="space-y-3"><a href="${hLink}" class="flex items-center justify-center gap-2 w-full py-3 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition" target="_blank"><i class="fa-solid fa-file-pdf"></i> Handouts</a><a href="${item.highlighted}" class="flex items-center justify-center gap-2 w-full py-3 bg-yellow-400 text-blue-900 rounded-xl font-bold hover:bg-yellow-500 transition" target="_blank"><i class="fa-solid fa-highlighter"></i> Highlighted</a><a href="${item.ppt}" class="flex items-center justify-center gap-2 w-full py-3 bg-slate-100 text-slate-500 rounded-xl font-bold hover:bg-slate-200 transition"><i class="fa-solid fa-file-powerpoint"></i> PPT Slides</a></div></div>`;
+                    container.innerHTML += `<div class="card subject-card bg-white p-8 rounded-[2.5rem] flex flex-col justify-between shadow-sm"><div><span class="bg-blue-50 text-blue-600 px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest italic">Information Tech</span><h3 class="text-2xl font-black text-slate-800 mt-3">${item.id}</h3><p class="text-slate-500 text-sm font-medium mb-8 leading-tight">${item.name}</p></div><div class="space-y-3"><a href="${hLink}" class="flex items-center justify-center gap-2 w-full py-3 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition" target="_blank"><i class="fa-solid fa-file-pdf"></i> Handouts</a>
+                           
+                                 <!-- Highlighted -->
+                                ${item.highlighted === "not_found.html"
+                            ? `
+                                    <button disabled
+                                        class="flex items-center justify-center gap-2 w-full py-3 bg-slate-200 text-slate-400 rounded-xl font-bold cursor-not-allowed opacity-70">
+                                        <i class="fa-solid fa-ban"></i> Highlights Not Available
+                                    </button>
+                                    `
+                            : `
+                                    <a href="${item.highlighted}"
+                                        class="flex items-center justify-center gap-2 w-full py-3 bg-gradient-to-r from-orange-500 to-yellow-400 text-blue-900 rounded-xl font-bold hover:bg-yellow-500 transition"
+                                        target="_blank">
+                                        <i class="fa-solid fa-highlighter"></i> Highlighted
+                                    </a>
+                                    ` }
+
+                                <!-- PPT -->
+                                ${item.ppt === "not_found.html" ? `
+                                    <button disabled
+                                        class="flex items-center justify-center gap-2 w-full py-3 bg-slate-200 text-slate-400 rounded-xl font-bold cursor-not-allowed opacity-70">
+                                        <i class="fa-solid fa-ban"></i> PPT Not Available
+                                    </button>
+                                    ` : `
+                                    <a href="${item.ppt}"
+                                        class="flex items-center justify-center gap-2 w-full py-3 bg-purple-600 text-white rounded-xl font-bold hover:bg-purple-900 transition"
+                                        target="_blank">
+                                        <i class="fa-solid fa-file-powerpoint"></i> PPT Slides
+                                    </a>
+                                `}
+                        
+                    </div></div>`;
                 });
                 function searchSubjects() { let input = document.getElementById('searchInput').value.toUpperCase(); let cards = document.getElementsByClassName('subject-card'); for (let i = 0; i < cards.length; i++) { let text = cards[i].innerText.toUpperCase(); cards[i].style.display = text.includes(input) ? "" : "none"; } }
             </script>
