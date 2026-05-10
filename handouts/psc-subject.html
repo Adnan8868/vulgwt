@@ -4,213 +4,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PSC Subjects</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    <title>PSC Handouts | LGWT Official</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" href="https://img.icons8.com/fluency/48/graduation-cap.png" type="image/x-icon">
-
     <style>
         body {
-            margin: 0;
             font-family: 'Poppins', sans-serif;
-            background: #f1f5f9;
-            color: #1e3c72;
+            background-color: #f8fafc;
         }
 
-        /* HEADER */
-        .header {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2a5298 100%);
         }
 
-        .header h1 {
-            margin: 0;
-            font-size: 32px;
-            font-weight: 700;
+        .subject-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
         }
 
-        .header p {
-            margin-top: 5px;
-            font-size: 18px;
-            opacity: 0.85;
-        }
-
-        /* SEARCH BOX */
-        .search-box {
-            margin-top: 20px;
-        }
-
-        .search-box input {
-            padding: 12px 15px;
-            width: 280px;
-            border-radius: 50px;
-            border: none;
-            font-size: 16px;
-            outline: none;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        /* CONTAINER */
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            padding: 0 20px;
-        }
-
-        /* CARD */
-        .card {
-            background: linear-gradient(135deg, #ffffff, #e0e7ff);
-            padding: 25px 20px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-            transition: 0.3s;
-        }
-
-        .card:hover {
+        .subject-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
-        }
-
-        .card h3 {
-            margin-bottom: 10px;
-            font-size: 22px;
-            color: #1e3c72;
-        }
-
-        .book-name {
-            font-size: 16px;
-            margin-bottom: 20px;
-            color: #334155;
-        }
-
-        /* BUTTONS */
-        .card a {
-            display: block;
-            margin: 10px 0;
-            padding: 12px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            color: white;
-            transition: 0.3s;
-        }
-
-        .handouts {
-            background: linear-gradient(135deg, #3b6cb7, #1e3c72);
-        }
-
-        .handouts:hover {
-            background: linear-gradient(135deg, #1e3c72, #3b6cb7);
-            transform: translateY(-3px) scale(1.05);
-        }
-
-        .highlighted {
-            background: linear-gradient(135deg, #ffcc00, #ff9900);
-            color: #1e3c72;
-        }
-
-        .highlighted:hover {
-            background: linear-gradient(135deg, #ff9900, #ffcc00);
-            transform: translateY(-3px) scale(1.05);
-        }
-
-        .ppt {
-            background: linear-gradient(135deg, #10b981, #047857);
-        }
-
-        .ppt:hover {
-            background: linear-gradient(135deg, #047857, #10b981);
-            transform: translateY(-3px) scale(1.05);
-        }
-
-        /* BACK BUTTON */
-        .back-btn {
-            display: inline-block;
-            margin: 20px 0 20px 10px;
-            padding: 15px 30px;
-            background: linear-gradient(135deg, #ffcc00, #ff9900);
-            color: #1e3c72;
-            font-weight: 600;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .back-btn:hover {
-            transform: translateY(-3px) scale(1.05);
-        }
-
-        /* FOOTER */
-        footer {
-            text-align: center;
-            padding: 25px;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: white;
-            font-size: 14px;
-            margin-top: 40px;
-        }
-
-        footer a {
-            color: #ffcc00;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .search-box input {
-                width: 90%;
-            }
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: #3b82f6;
         }
     </style>
 </head>
 
-<body>
+<body class="bg-slate-50">
 
-    <div class="header">
-        <h1>PSC Subject Handouts</h1>
-        <p>Choose your subject and download study material</p>
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Search by code or subject..." onkeyup="searchSubjects()">
+    <header class="hero-gradient text-white py-12 px-4 shadow-2xl text-center">
+        <h1 class="text-3xl md:text-5xl font-extrabold mb-4 uppercase tracking-widest">PSC <span
+                class="text-yellow-400">Handouts</span> Hub</h1>
+        <p class="text-blue-100 text-lg opacity-90">Political Science and International Relations material.</p>
+        <div
+            class="max-w-xl mx-auto mt-10 relative rounded-full overflow-hidden shadow-2xl bg-white text-left">
+            <span class="absolute inset-y-0 left-5 flex items-center text-slate-400"><i
+                    class="fa-solid fa-magnifying-glass"></i></span>
+            <input type="text" id="searchInput" onkeyup="searchSubjects()"
+                placeholder="Search (e.g. PSC201)..."
+                class="w-full py-5 pl-14 pr-6 text-slate-900 font-bold outline-none border-none">
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-6 py-12">
+        <div class="mb-10">
+            <a href="handouts.html"
+                class="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-2xl text-blue-800 font-bold shadow-sm hover:shadow-md transition border border-gray-100">
+                <i class="fa-solid fa-arrow-left"></i> Back to Resource Hub
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="subjectContainer">
+            <script>
+                const pscData = [
+                    {
+                        id: "PSC201",
+                        name: "International Relations",
+                        handouts: "1Oq25bGbk14gvYABupLJhJlG6scArNhav",
+                        highlighted: "not_found.html",
+                        ppt: "not_found.html"
+                    },
+                    {
+                        id: "PSC401",
+                        name: "Public International Law",
+                        handouts: "17Hg0fFhLx7XY39fFaIW5Uj9NN1tLWa5A",
+                        highlighted: "not_found.html",
+                        ppt: "not_found.html"
+                    }
+                ];
+
+                const container = document.getElementById('subjectContainer');
+                pscData.forEach(item => {
+                    const hLink = item.handouts.startsWith('http') ? item.handouts : `https://drive.google.com/uc?export=download&id=${item.handouts}`;
+                    
+                    container.innerHTML += `
+                        <div class="card subject-card bg-white p-8 rounded-[2.5rem] flex flex-col justify-between shadow-sm">
+                            <div>
+                                <span class="bg-blue-50 text-blue-600 px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest italic">Political Science</span>
+                                <h3 class="text-2xl font-black text-slate-800 mt-3">${item.id}</h3>
+                                <p class="text-slate-500 text-sm font-medium mb-8 leading-tight">${item.name}</p>
+                            </div>
+                            <div class="space-y-3">
+                                <a href="${hLink}" class="flex items-center justify-center gap-2 w-full py-3 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition" target="_blank"><i class="fa-solid fa-file-pdf"></i> Handouts</a>
+                                
+                                ${item.highlighted === "not_found.html" 
+                                    ? `<button disabled class="flex items-center justify-center gap-2 w-full py-3 bg-slate-200 text-slate-400 rounded-xl font-bold cursor-not-allowed opacity-70"><i class="fa-solid fa-ban"></i> Highlights Not Available</button>`
+                                    : `<a href="${item.highlighted}" class="flex items-center justify-center gap-2 w-full py-3 bg-gradient-to-r from-orange-500 to-yellow-400 text-blue-900 rounded-xl font-bold hover:bg-yellow-500 transition" target="_blank"><i class="fa-solid fa-highlighter"></i> Highlighted</a>`
+                                }
+
+                                ${item.ppt === "not_found.html" 
+                                    ? `<button disabled class="flex items-center justify-center gap-2 w-full py-3 bg-slate-200 text-slate-400 rounded-xl font-bold cursor-not-allowed opacity-70"><i class="fa-solid fa-ban"></i> PPT Not Available</button>`
+                                    : `<a href="${item.ppt}" class="flex items-center justify-center gap-2 w-full py-3 bg-purple-600 text-white rounded-xl font-bold hover:bg-purple-900 transition" target="_blank"><i class="fa-solid fa-file-powerpoint"></i> PPT Slides</a>`
+                                }
+                            </div>
+                        </div>`;
+                });
+
+                function searchSubjects() {
+                    let input = document.getElementById('searchInput').value.toUpperCase();
+                    let cards = document.getElementsByClassName('subject-card');
+                    for (let i = 0; i < cards.length; i++) {
+                        let text = cards[i].innerText.toUpperCase();
+                        cards[i].style.display = text.includes(input) ? "" : "none";
+                    }
+                }
+            </script>
         </div>
     </div>
 
-    <div class="container" id="subjectContainer">
-        <!-- PSC201 -->
-        <div class="card">
-            <h3>PSC201</h3>
-            <p class="book-name">International Relations</p>
-            <a href="https://drive.google.com/uc?export=download&id=1Oq25bGbk14gvYABupLJhJlG6scArNhav" class="handouts"
-                target="_blank">Handouts</a>
-            <a href="not_found.html" class="highlighted">Highlighted</a>
-            <a href="not_found.html" class="ppt">PPT Slides</a>
-        </div>
-        <!-- PSC401 -->
-        <div class="card">
-            <h3>PSC401</h3>
-            <p class="book-name">Public International Law</p>
-            <a href="https://drive.google.com/uc?export=download&id=17Hg0fFhLx7XY39fFaIW5Uj9NN1tLWa5A" class="handouts"
-                target="_blank">Handouts</a>
-            <a href="not_found.html" class="highlighted">Highlighted</a>
-            <a href="not_found.html" class="ppt">PPT Slides</a>
-        </div>
-
-    </div>
-
-    <a href="handouts.html" class="back-btn">Back to Handouts</a>
-
+    <!-- Footer space (LMS Handling section same as PAK page) -->
     <div id="footer-placeholder"></div>
 
     <script>
+        // Aapka existing footer fetch logic
         fetch('handouts-footer.html')
             .then(response => response.text())
             .then(data => {
@@ -218,8 +127,5 @@
             });
     </script>
 
-    <script src="search_script.js"></script>
-
 </body>
-
 </html>
