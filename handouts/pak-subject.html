@@ -86,7 +86,7 @@
 
                 const container = document.getElementById('subjectContainer');
                 pakData.forEach(item => {
-                    const hLink = item.handouts.startsWith('http') ? item.handouts : `https://drive.google.com/uc?export=download id = ${item.handouts}`;
+                    const hLink = item.handouts.startsWith('http') ? item.handouts : `https://drive.google.com/uc?export=download&id=${item.handouts}`;
                     container.innerHTML += `
                         <div class="card subject-card bg-white p-8 rounded-[2.5rem] flex flex-col justify-between shadow-sm">
                             <div>
