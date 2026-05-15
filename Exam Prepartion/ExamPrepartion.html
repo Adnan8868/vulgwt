@@ -9,6 +9,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="https://img.icons8.com/fluency/48/graduation-cap.png" type="image/x-icon">
 
     <style>
         body {
@@ -47,7 +48,7 @@
 
 <body class="bg-slate-50">
 
-    <header class="hero-gradient text-white py-10 px-4 shadow-2xl text-center relative overflow-hidden">
+    <header class="hero-gradient text-white py-8 px-2 shadow-2xl text-center relative overflow-hidden">
         <div class="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
         <h1 class="text-3xl md:text-5xl font-extrabold mb-4 uppercase tracking-widest">Exam <span
                 class="text-yellow-400">Prep</span> Hub</h1>
@@ -59,7 +60,7 @@
             <span class="absolute inset-y-0 left-5 flex items-center text-slate-400"><i
                     class="fa-solid fa-magnifying-glass"></i></span>
             <input type="text" id="searchInput" onkeyup="handleSearch()"
-                placeholder="Search Subject Code (e.g. CS101, MGT)..."
+                placeholder="Search Subject Code (e.g. CS101, MGT211)..."
                 class="w-full py-4 pl-14 pr-6 text-slate-900 font-bold outline-none border-none">
         </div>
 
@@ -67,20 +68,80 @@
             <button onclick="switchTab('mid')" id="midTabBtn"
                 class="px-8 py-2 rounded-full border-2 border-white/30 font-bold transition-all tab-active">Mid-Term</button>
             <button onclick="switchTab('final')" id="finalTabBtn"
-                class="px-8 py-2 rounded-full border-2 border-white/30 font-bold transition-all hover:bg-white/10">Final-Term</button>
+                class="px-8 py-2 rounded-full border-2 border-white/30 font-bold transition-all">Final-Term</button>
         </div>
+
         <div class="max-w-7xl mx-auto px-6 pt-6">
             <a href="../index.html"
-                class="inline-flex items-center gap-2 text-white/80 hover:text-white transition-all group font-medium text-sm">
+                class="inline-flex items-center gap-2 text-green-900 font-semibold hover:text-white transition-all group font-medium text-sm bg-gray-400 rounded-3xl border border-red-200">
                 <div
-                    class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center group-hover:bg-white/20 transition-all">
+                    class="w-6 h-8 bg-white/10 rounded-lg flex items-center justify-center group-hover:bg-white/20 transition-all">
                     <i class="fa-solid fa-arrow-left text-xs"></i>
                 </div>
-                Back to Home Portal
+                Back to Home Page 
             </a>
         </div>
     </header>
-    
+
+    <!-- Preparation Note -->
+    <div class="max-w-4xl mx-auto mt-8 bg-white rounded-3xl p-6 shadow-2xl border border-slate-200">
+        <div class="flex items-start gap-4">
+
+            <!-- Icon -->
+            <div
+                class="w-14 h-14 rounded-2xl bg-yellow-400 text-blue-900 flex items-center justify-center text-2xl shadow-lg shrink-0">
+                <i class="fa-solid fa-lightbulb"></i>
+            </div>
+
+            <!-- Content -->
+            <div class="text-left">
+
+                <h3 class="text-xl font-extrabold text-yellow-500 uppercase tracking-wide mb-3">
+                    Important Preparation Note
+                </h3>
+
+                <!-- Search Notice -->
+                <div class="mb-4 bg-blue-50 border border-blue-200 rounded-2xl px-4 py-3">
+                    <p class="text-blue-800 font-bold text-sm md:text-base">
+                        🔍 Sab se pehle uper apna
+                        <span class="text-red-600">Subject Code</span>
+                        search karein
+                        (Example: CS101, MGT211, ENG101)
+                    </p>
+                </div>
+
+                <p class="text-slate-700 leading-relaxed text-sm md:text-base font-medium">
+                    Yahan aapko
+                    <span class="font-extrabold text-blue-700">Best Preparation Videos</span>
+                    available milengi jo exams mein achi preparation aur
+                    <span class="font-extrabold text-yellow-500">High CGPA</span>
+                    lene mein help karti hain.
+                </p>
+
+                <p class="text-slate-700 leading-relaxed text-sm md:text-base mt-3">
+                    Humne different teachers ki sabse useful videos ko combine karke
+                    <span class="font-bold text-blue-700">ek hi playlist</span>
+                    mein add kiya hai takay aapko alag alag jagah search na karna pade.
+                </p>
+
+                <!-- Highlight Box -->
+                <div class="mt-5 bg-yellow-50 border border-yellow-200 rounded-2xl p-4">
+                    <p class="text-slate-800 font-semibold text-sm md:text-base leading-relaxed">
+                        📌 Recommended: Paper se
+                        <span class="font-extrabold text-red-600">1 ya 2 din pehle</span>
+                        yeh playlist lazmi dekhein takay aapke concepts clear ho jaen
+                        aur exam mein best performance ke sath
+                        <span class="font-extrabold text-green-600">achi CGPA</span>
+                        aa sake.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
 
     <!-- Not Found -->
     <div class="max-w-7xl mx-auto px-6 -mt-8 relative z-20 mt-6">
