@@ -33,6 +33,23 @@ const prepData = {
             ]
         },
         {
+            id: "CS301",
+            name: "Data Structures",
+            videos: [
+                { title: "KST Learning 2024", url: "https://youtu.be/tppgQE5FGS8?si=CXlNJGX3czXKyZR2" },
+                { title: "KST Learning 2023", url: "https://www.youtube.com/watch?v=_x896bToxC0" },
+                { title: "VU TALK 4 Hour (Mid Term)", url: "https://www.youtube.com/watch?v=56Fz9JfGoUs" },
+                { title: "VU Concepts", url: "https://www.youtube.com/watch?v=C89jmdUo_4U" },
+                { title: "Education World 2025", url: "https://www.youtube.com/watch?v=OKEXZf9mwa4" },
+                { title: "Education World 2024 P1", url: "https://www.youtube.com/watch?v=TYBFivgqD-k" },
+                { title: "Education World 2024 P2", url: "https://www.youtube.com/watch?v=xumUg3ySmVg" },
+                { title: "Education World 2023 P1", url: "https://www.youtube.com/watch?v=Do7QIHHujBw" },
+                { title: "Education World 2022 P1", url: "https://www.youtube.com/watch?v=5omrPW507p8" },
+                { title: "Scholar Uzma", url: "https://www.youtube.com/watch?v=1wPfOQ9f95s" },
+                { title: "Learn with Abid (Short Notes)", url: "https://www.youtube.com/watch?v=SO4Is9azya4" },
+            ]
+        },
+        {
             id: "CS302",
             name: "Digital Logic and Design",
             videos: [
@@ -67,6 +84,23 @@ const prepData = {
                 { title: "KST Learning 2024", url: "https://youtu.be/-Is2hRhnmyQ?si=yIUJuNlF1i9HLXQN" },
                 { title: "KST Learning 2023", url: "https://youtu.be/hS5STygltYo?si=R8dw-TrknFN0ARXI" },
                 { title: "VU Universe", url: "https://www.youtube.com/watch?v=x7KtpJtBoyw" },
+
+            ]
+        },
+        // ====================
+        //      MGT SUBJECTS
+        // ====================
+        {
+            id: "MGT503",
+            name: "Principles of Management",
+            videos: [
+                { title: "Study With BRD 1 Hour Video", url: "https://www.youtube.com/watch?v=_67MmjPsZv8" },
+                { title: "Student Info 5 (Tips And Tell Prep)", url: "https://www.youtube.com/watch?v=in9Wz8khBEY" },
+                { title: "Halim Insight Quiz 1", url: "https://www.youtube.com/watch?v=jV8LmfXG_dI" },
+                { title: "VU Helper0711", url: "https://www.youtube.com/watch?v=RgLyLPwEIe8" },
+                { title: "SDGInsights", url: "https://www.youtube.com/watch?v=SPW5SF2aDCg" },
+                { title: "SDGInsights", url: "https://www.youtube.com/watch?v=SPW5SF2aDCg" },
+                { title: "VU Expert (Ai Lectures WIse Quiz)", url: "https://www.youtube.com/watch?v=iIcX77fYxPo" },
 
             ]
         },
@@ -138,6 +172,73 @@ const prepData = {
                 { title: "VU Universe", url: "https://www.youtube.com/watch?v=eYwvWabdjJI" },
                 { title: "VU Studyfy", url: "https://www.youtube.com/watch?v=wErHEn8j9uQ" },
                 { title: "Kinza Bilal", url: "https://www.youtube.com/watch?v=wcTWeQN8dEI" },
+            ]
+        },
+        // ====================
+        //      ISL SUBJECTS
+        // ====================
+        {
+            id: "ISL202",
+            name: "Islamic Study",
+            videos: [
+                { title: "Study BRD 1 hour 51 Mint video", url: "https://www.youtube.com/watch?v=Ku5-AGIR1nE" },
+                { title: "VU Knowledge", url: "https://www.youtube.com/watch?v=bxi3XEdbQBM" },
+                { title: "Student Info 5 (Must Watch)", url: "https://www.youtube.com/watch?v=qF-F5WuFInk" },
+                { title: "Halim Insights Quiz 1", url: "https://www.youtube.com/watch?v=ZwbpXUZqWEw" },
+                { title: "Halim Insights Quiz 2", url: "https://www.youtube.com/watch?v=BYfkx-g_nI0" },
+                { title: "Halim Insights Quiz 3", url: "https://www.youtube.com/watch?v=f9eqpVU5a3o" },
+            ]
+        },
+        // ====================
+        //      SOC SUBJECTS
+        // ====================
+        {
+            id: "SOC101",
+            name: "Introduction to Sociology",
+            videos: [
+                { title: "Halim Insights Quiz 1", url: "https://www.youtube.com/watch?v=hMEmoNOT36c" },
+                { title: "Halim Insights Quiz 2", url: "https://www.youtube.com/watch?v=MTLLC5GHeSE" },
+                { title: "Halim Insights Quiz 3", url: "https://www.youtube.com/watch?v=fImDbETtaIg" },
+                { title: "Helper0711", url: "https://www.youtube.com/watch?v=X27ZX3yHMKs" },
+                { title: "Life Star Acadmy", url: "https://www.youtube.com/watch?v=4rKJdgwx6VQ" },
+                { title: "VU Nexus Quiz 1 2026", url: "https://www.youtube.com/watch?v=qCYXoPfwj88" },
+                { title: "Brainy Squad", url: "https://www.youtube.com/watch?v=TuFINz2yG1M" },
+            ]
+        },
+        // ====================
+        //      PSY SUBJECTS
+        // ====================
+        {
+            id: "PSY101",
+            name: "Introduction to Psychology",
+            videos: [
+                { title: "Helper0711", url: "https://www.youtube.com/watch?v=ZeF7SwWdqqE" },
+                { title: "Uzma Scholar", url: "https://www.youtube.com/watch?v=OhOTFdi8_hc" },
+                { title: "The Merciful Academy", url: "https://www.youtube.com/watch?v=PjKOJQEDILo" },
+                { title: "Halim Insights Quiz 1", url: "https://www.youtube.com/watch?v=UaDrBFvcAgU" },
+                { title: "Halim Insights Quiz 2", url: "https://www.youtube.com/watch?v=u3P97kCd1RQ" },
+                { title: "Halim Insights Complete Mid", url: "https://www.youtube.com/watch?v=DnHnIe4VhNY" },
+                { title: "Brainty Squad", url: "https://www.youtube.com/watch?v=bVQ59JpB1n8" },
+            ]
+        },
+        // ====================
+        //      PHY SUBJECTS
+        // ====================
+        {
+            id: "PHY101",
+            name: "Physics",
+            videos: [
+                { title: "Kinza Bilal", url: "https://www.youtube.com/watch?v=MkEQ7krNYPI" },
+                { title: "World of Education 2022", url: "https://www.youtube.com/watch?v=iEZECHr5Svw" },
+                { title: "World of Education 2022 Video 2", url: "https://www.youtube.com/watch?v=HBFkM63VgMo" },
+                { title: "VU Knowlede", url: "https://www.youtube.com/watch?v=KOn25fE6Umk" },
+                { title: "Routine Math", url: "https://www.youtube.com/watch?v=ySOkbxvvH-w" },
+                { title: "VU Guide Swera", url: "https://www.youtube.com/watch?v=MeMgoUV3AG0" },
+                { title: "Uzma Scholar", url: "https://www.youtube.com/watch?v=tIL6yfpq-hE" },
+                { title: "Information Corner", url: "https://www.youtube.com/watch?v=tCUROzxHRpw" },
+                { title: "Helper0711", url: "https://www.youtube.com/watch?v=8XlExjegyv8" },
+                { title: "Vu Studyfy", url: "https://www.youtube.com/watch?v=S_gHxob_9Hk" },
+                { title: "sdginsights", url: "https://www.youtube.com/watch?v=SYimBPEg8to" },
             ]
         },
     ],
@@ -225,7 +326,7 @@ function renderUI() {
                         </div>
                     </div>
                     <a href="${combinedUrl}" target="_blank" class="mt-5 w-full py-3 bg-red-600 text-white rounded-xl font-bold text-center shadow-lg hover:bg-red-700 transition flex items-center justify-center gap-2 text-sm uppercase tracking-wider">
-                        <i class="fa-solid fa-play"></i> Start Prep
+                        <i class="fa-solid fa-play"></i> Open Playlist Preparation
                     </a>
                 </div>
             `;
