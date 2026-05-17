@@ -171,6 +171,79 @@
         // DATA OBJECTS ARRAY: Nayi updates isi structured database stack layout me add hon gi
         // =========================================================================
         const myAnnouncements = [
+        {
+    id: "ann-03",
+    dateDay: "17",
+    dateMonth: "May",
+    dateYear: "2026",
+    timeStr: "11:00 AM",
+    badge: "⚠️ Paper Pattern Overview",
+    title: "IMPORTANT REMINDER — PAPER PATTERN FOR ALL COURSES",
+    content: `
+        <div class="space-y-5">
+            <p class="text-slate-400 italic mb-2">Dear Students, Here is a quick overview of the paper pattern categorized by subject types. Please prepare your exams accordingly:</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                
+                <div class="bg-slate-950/80 border border-blue-500/20 p-5 rounded-2xl relative overflow-hidden group hover:border-blue-500/40 transition-all">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-2 mb-3">
+                        <span class="text-xs font-black text-blue-400 uppercase tracking-wider"><i class="fa-solid fa-list-check mr-1"></i> Objective Based</span>
+                        <span class="bg-blue-500/10 text-blue-400 text-[9px] font-bold px-2 py-0.5 rounded uppercase">MCQs Focus</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 text-xs md:text-sm font-bold">
+                        <div class="flex items-center gap-1.5 p-1.5 bg-slate-900/50 rounded-lg border border-white/5"><span class="text-blue-400"><i class="fa-solid fa-code text-[10px]"></i></span> <span class="text-slate-200">CS101</span></div>
+                        <div class="flex items-center gap-1.5 p-1.5 bg-slate-900/50 rounded-lg border border-white/5"><span class="text-blue-400"><i class="fa-solid fa-book text-[10px]"></i></span> <span class="text-slate-200">ISL202</span></div>
+                        <div class="flex items-center gap-1.5 p-1.5 bg-slate-900/50 rounded-lg border border-white/5"><span class="text-blue-400"><i class="fa-solid fa-flag text-[10px]"></i></span> <span class="text-slate-200">PAK301</span></div>
+                        <div class="flex items-center gap-1.5 p-1.5 bg-slate-900/50 rounded-lg border border-white/5"><span class="text-blue-400"><i class="fa-solid fa-language text-[10px]"></i></span> <span class="text-slate-200">ENG101</span></div>
+                        <div class="flex items-center gap-1.5 p-1.5 bg-slate-900/50 rounded-lg border border-white/5"><span class="text-blue-400"><i class="fa-solid fa-chart-pie text-[10px]"></i></span> <span class="text-slate-200">MGT211</span></div>
+                        <div class="flex items-center gap-1.5 p-1.5 bg-slate-900/50 rounded-lg border border-white/5"><span class="text-blue-400"><i class="fa-solid fa-users text-[10px]"></i></span> <span class="text-slate-200">SOC101</span></div>
+                        <div class="flex items-center gap-1.5 p-1.5 bg-slate-900/50 rounded-lg border border-white/5"><span class="text-blue-400"><i class="fa-solid fa-briefcase text-[10px]"></i></span> <span class="text-slate-200">MGT503</span></div>
+                        <div class="flex items-center gap-1.5 p-1.5 bg-slate-900/50 rounded-lg border border-white/5"><span class="text-blue-400"><i class="fa-solid fa-address-book text-[10px]"></i></span> <span class="text-slate-200">MGT301</span></div>
+                        <div class="flex items-center gap-1.5 p-1.5 bg-slate-900/50 rounded-lg border border-white/5"><span class="text-blue-400"><i class="fa-solid fa-brain text-[10px]"></i></span> <span class="text-slate-200">PSY101</span></div>
+                        <div class="flex items-center gap-1.5 p-1.5 bg-slate-900/50 rounded-lg border border-white/5"><span class="text-blue-400"><i class="fa-solid fa-dna text-[10px]"></i></span> <span class="text-slate-200">BIO101</span></div>
+                        <div class="flex items-center gap-1.5 p-1.5 bg-slate-900/50 rounded-lg border border-white/5"><span class="text-blue-400"><i class="fa-solid fa-coins text-[10px]"></i></span> <span class="text-slate-200">ECO401</span></div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-950/80 border border-purple-500/20 p-5 rounded-2xl relative overflow-hidden group hover:border-purple-500/40 transition-all">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-2 mb-3">
+                        <span class="text-xs font-black text-purple-400 uppercase tracking-wider"><i class="fa-solid fa-pen-to-square mr-1"></i> Subjective Based</span>
+                        <span class="bg-purple-500/10 text-purple-400 text-[9px] font-bold px-2 py-0.5 rounded uppercase">Theory Focus</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 text-xs md:text-sm font-bold">
+                        <div class="flex items-center gap-1.5 p-1.5 bg-slate-900/50 rounded-lg border border-white/5"><span class="text-purple-400"><i class="fa-solid fa-atom text-[10px]"></i></span> <span class="text-slate-200">PHY101</span></div>
+                        <div class="flex items-center gap-1.5 p-1.5 bg-slate-900/50 rounded-lg border border-white/5"><span class="text-purple-400"><i class="fa-solid fa-bolt text-[10px]"></i></span> <span class="text-slate-200">PHY301</span></div>
+                        <div class="flex items-center gap-1.5 p-1.5 bg-slate-900/50 rounded-lg border border-white/5"><span class="text-purple-400"><i class="fa-solid fa-calculator text-[10px]"></i></span> <span class="text-slate-200">MTH101</span></div>
+                        <div class="flex items-center gap-1.5 p-1.5 bg-slate-900/50 rounded-lg border border-white/5"><span class="text-purple-400"><i class="fa-solid fa-pen-clip text-[10px]"></i></span> <span class="text-slate-200">ENG201</span></div>
+                        <div class="flex items-center gap-1.5 p-1.5 bg-slate-900/50 rounded-lg border border-white/5"><span class="text-purple-400"><i class="fa-solid fa-laptop-code text-[10px]"></i></span> <span class="text-slate-200">CS201</span></div>
+                        <div class="flex items-center gap-1.5 p-1.5 bg-slate-900/50 rounded-lg border border-white/5"><span class="text-purple-400"><i class="fa-solid fa-calculator text-[10px]"></i></span> <span class="text-slate-200">MTH301</span></div>
+                        <div class="flex items-center gap-1.5 p-1.5 bg-slate-900/50 rounded-lg border border-white/5"><span class="text-purple-400"><i class="fa-solid fa-calculator text-[10px]"></i></span> <span class="text-slate-200">MTH302</span></div>
+                        <div class="flex items-center gap-1.5 p-1.5 bg-slate-900/50 rounded-lg border border-white/5"><span class="text-purple-400"><i class="fa-solid fa-tower-cell text-[10px]"></i></span> <span class="text-slate-200">MCM301</span></div>
+                        <div class="flex items-center gap-1.5 p-1.5 bg-slate-900/50 rounded-lg border border-white/5"><span class="text-purple-400"><i class="fa-solid fa-chart-line text-[10px]"></i></span> <span class="text-slate-200">MGT603</span></div>
+                        <div class="flex items-center gap-1.5 p-1.5 bg-slate-900/50 rounded-lg border border-white/5"><span class="text-purple-400"><i class="fa-solid fa-wallet text-[10px]"></i></span> <span class="text-slate-200">ACC501</span></div>
+                        <div class="flex items-center gap-1.5 p-1.5 bg-slate-900/50 rounded-lg border border-white/5"><span class="text-purple-400"><i class="fa-solid fa-network-wired text-[10px]"></i></span> <span class="text-slate-200">IT430</span></div>
+                        <div class="flex items-center gap-1.5 p-1.5 bg-slate-900/50 rounded-lg border border-white/5"><span class="text-purple-400"><i class="fa-solid fa-diagram-project text-[10px]"></i></span> <span class="text-slate-200">MGT502</span></div>
+                        <div class="flex items-center gap-1.5 p-1.5 bg-slate-900/50 rounded-lg border border-white/5"><span class="text-purple-400"><i class="fa-solid fa-microchip text-[10px]"></i></span> <span class="text-slate-200">CS302</span></div>
+                        <div class="flex items-center gap-1.5 p-1.5 bg-slate-900/50 rounded-lg border border-white/5"><span class="text-purple-400"><i class="fa-solid fa-wave-square text-[10px]"></i></span> <span class="text-slate-200">PSY502</span></div>
+                        <div class="flex items-center gap-1.5 p-1.5 bg-slate-900/50 rounded-lg border border-white/5"><span class="text-purple-400"><i class="fa-solid fa-terminal text-[10px]"></i></span> <span class="text-slate-200">CS304</span></div>
+                        <div class="flex items-center gap-1.5 p-1.5 bg-slate-900/50 rounded-lg border border-white/5"><span class="text-purple-400"><i class="fa-solid fa-database text-[10px]"></i></span> <span class="text-slate-200">CS403</span></div>
+                        <div class="flex items-center gap-1.5 p-1.5 bg-slate-900/50 rounded-lg border border-white/5"><span class="text-purple-400"><i class="fa-solid fa-server text-[10px]"></i></span> <span class="text-slate-200">CS601</span></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="bg-amber-500/5 border border-amber-500/20 p-4 rounded-xl flex items-start gap-2.5 text-amber-200 text-xs md:text-sm mt-2">
+                <span class="text-amber-500 mt-0.5"><i class="fa-solid fa-circle-info"></i></span>
+                <span><strong>Note:</strong> Final confirmation about your paper type will be shared in your <em>LMS</em> by the <em>Virtual University</em> before exams. So, keep checking your LMS notifications regularly.</span>
+            </div>
+            
+            <div class="text-center font-bold text-blue-400 text-xs md:text-sm pt-1 tracking-wide">
+                🤲 JazakAllah Khair 🤲
+            </div>
+        </div>
+    `
+},
             {
                 id: "ann-01",
                 dateDay: "16",
