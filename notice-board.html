@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS Official Notice Board | VU Study LGWT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-[#0f172a] text-slate-100 min-h-screen flex flex-col">
+
+    <nav
+        class="fixed w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800 h-16 flex items-center justify-between px-4 md:px-8 shadow-lg">
+        <div class="flex items-center gap-4">
+            <div class="text-xl md:text-2xl font-black text-white tracking-tight">
+                <span class="text-blue-500">VU</span> STUDY <span class="text-yellow-500">LGWT</span>
+            </div>
+            <span
+                class="hidden md:inline-block bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
+                LMS Notice System
+            </span>
+        </div>
+
+        <div id="nav-action-container">
+            <a href="index.html"
+                class="flex items-center gap-2 text-xs font-bold bg-white/5 hover:bg-white/10 text-slate-300 px-4 py-2 rounded-xl border border-white/10 transition">
+                <i class="fa-solid fa-house text-[10px]"></i> Home
+            </a>
+        </div>
+    </nav>
+
+    <div class="flex flex-1 pt-16">
+
+        <aside
+            class="hidden lg:flex flex-col w-64 bg-slate-950 border-r border-slate-900 p-5 sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto">
+            <div class="space-y-4">
+                <div>
+                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider px-1 mb-2">
+                        Account Portal</div>
+                    <a href="https://vulms.vu.edu.pk" target="_blank"
+                        class="flex items-center justify-between w-full px-4 py-3 text-xs font-black text-blue-950 bg-yellow-500 hover:bg-yellow-400 rounded-xl shadow-md transition transform hover:-translate-y-0.5 tracking-wider uppercase">
+                        <span><i class="fa-solid fa-user-shield mr-2"></i> Login to VULMS</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-80"></i>
+                    </a>
+                </div>
+
+                <div class="h-px bg-slate-900 my-2"></div>
+
+                <div class="space-y-2">
+                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider px-1 mb-2">
+                        Official Channels</div>
+
+                    <a href="https://whatsapp.com/channel/0029VbAfKscEVccSHYySNP3I" target="_blank"
+                        class="flex items-center justify-between px-4 py-2.5 text-xs font-bold text-slate-400 hover:text-green-400 hover:bg-white/5 rounded-xl transition group">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-base text-green-500"></i>
+                            <span>WhatsApp Channel</span>
+                        </div>
+                        <i
+                            class="fa-solid fa-chevron-right text-[9px] opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-0.5"></i>
+                    </a>
+
+                    <a href="https://chat.whatsapp.com/CTYeKaeMCf00pyhM0aMB0e" target="_blank"
+                        class="flex items-center justify-between px-4 py-2.5 text-xs font-bold text-slate-400 hover:text-green-400 hover:bg-white/5 rounded-xl transition group">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-users text-sm text-green-500"></i>
+                            <span>WhatsApp Group</span>
+                        </div>
+                        <i
+                            class="fa-solid fa-chevron-right text-[9px] opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-0.5"></i>
+                    </a>
+
+                    <a href="https://www.youtube.com/@VUStudyLGWT" target="_blank"
+                        class="flex items-center justify-between px-4 py-2.5 text-xs font-bold text-slate-400 hover:text-red-400 hover:bg-white/5 rounded-xl transition group">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-brands fa-youtube text-base text-red-500"></i>
+                            <span>YouTube Channel</span>
+                        </div>
+                        <i
+                            class="fa-solid fa-chevron-right text-[9px] opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-0.5"></i>
+                    </a>
+                </div>
+
+                <div class="h-px bg-slate-900 my-2"></div>
+
+                <div class="space-y-2">
+                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider px-1 mb-2">
+                        Important Links</div>
+
+                    <a href="https://www.vu.edu.pk" target="_blank"
+                        class="flex items-center justify-between px-4 py-2.5 text-xs font-bold text-slate-400 hover:text-blue-400 hover:bg-white/5 rounded-xl transition group">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-globe text-sm text-blue-400"></i>
+                            <span>VU Official Site</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-40"></i>
+                    </a>
+
+                    <a href="https://datesheet.vu.edu.pk" target="_blank"
+                        class="flex items-center justify-between px-4 py-2.5 text-xs font-bold text-slate-400 hover:text-amber-400 hover:bg-white/5 rounded-xl transition group">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-calendar-check text-sm text-amber-500"></i>
+                            <span>Make Date Sheet</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-40"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-auto p-3 bg-slate-900/50 border border-white/5 rounded-2xl text-center">
+                <p class="text-[10px] text-slate-500 font-medium">Learning & Growing With Team</p>
+                <p class="text-[9px] text-blue-500 font-bold tracking-widest mt-0.5">LGWT OFFICIAL &copy; 2026
+                </p>
+            </div>
+        </aside>
+
+        <main class="flex-1 p-4 md:p-8 overflow-x-hidden">
+            <div class="max-w-3xl mx-auto">
+
+                <div id="list-view-section" class="space-y-6">
+                    <div class="flex items-center gap-3 border-b border-slate-800/80 pb-4">
+                        <div
+                            class="w-10 h-10 bg-slate-900 border border-slate-800 text-yellow-500 rounded-xl flex items-center justify-center text-lg shadow-inner">
+                            <i class="fa-solid fa-bell animate-pulse"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-base md:text-lg font-black text-white uppercase tracking-wider">
+                                Active Announcement Feed
+                            </h2>
+                            <p class="text-[11px] text-slate-400 font-medium">Click on any announcement header
+                                to review comprehensive details.</p>
+                        </div>
+                    </div>
+
+                    <div id="announcement-rows-target" class="space-y-3.5"></div>
+                </div>
+
+                <div id="detail-view-section"
+                    class="hidden bg-slate-900/60 border border-white/5 rounded-[2rem] p-6 md:p-8 shadow-2xl relative transition-all duration-300">
+                    <div class="border-b border-slate-800 pb-4 mb-6">
+                        <div
+                            class="flex items-center justify-between gap-4 text-[10px] font-bold uppercase tracking-wider">
+                            <span id="detail-badge-target"
+                                class="bg-blue-500/10 text-blue-400 px-2.5 py-0.5 rounded-md border border-blue-500/20">--</span>
+                            <span id="detail-date-target" class="text-slate-500">--</span>
+                        </div>
+                        <h1 id="detail-title-target"
+                            class="text-base md:text-xl font-black text-yellow-400 uppercase tracking-wide mt-3 leading-snug">
+                            --</h1>
+                    </div>
+
+                    <div id="detail-content-target"
+                        class="space-y-4 text-slate-300 font-medium text-xs md:text-sm leading-relaxed"></div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // =========================================================================
+        // DATA OBJECTS ARRAY: Nayi updates isi structured database stack layout me add hon gi
+        // =========================================================================
+        const myAnnouncements = [
+            {
+                id: "ann-01",
+                dateDay: "16",
+                dateMonth: "May",
+                dateYear: "2026",
+                timeStr: "05:00 PM",
+                badge: "⚠️ Update for Practical Subjects",
+                title: "UPDATE FOR PRACTICAL SUBJECTS – CS201P, CS301P, ETC.",
+                content: `
+                    <div class="space-y-4">
+                        <ul class="space-y-3 font-medium pl-1 text-slate-300">
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-yellow-500 mt-1 text-xs"><i class="fa-solid fa-square-poll-horizontal"></i></span>
+                                <span><strong>1️⃣ No Mid-Term Exams:</strong> Subjects with "P" in the code will not have a Mid-Term exam.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-yellow-500 mt-1 text-xs"><i class="fa-solid fa-square-poll-horizontal"></i></span>
+                                <span><strong>2️⃣ Attendance Requirement:</strong> Your Final Term date sheet will only be generated if you have attempted at least 70% of the quizzes.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5 bg-red-500/5 border border-red-500/10 p-4 rounded-2xl text-red-200 mt-4">
+                                <span class="text-red-400 mt-0.5"><i class="fa-solid fa-triangle-exclamation"></i></span>
+                                <span><strong>3️⃣ Important Reminder:</strong> Do not miss any quizzes during the semester. Missing them may result in your Final exam being blocked.</span>
+                            </li>
+                        </ul>
+                    </div>
+                `
+            },
+            {
+                id: "ann-02",
+                dateDay: "14",
+                dateMonth: "May",
+                dateYear: "2026",
+                timeStr: "11:30 AM",
+                badge: "📢 Mid-Term Exam Format",
+                title: "MID TERM EXAMINATIONS – PAPER PATTERN",
+                content: `
+                    <p class="text-slate-400 italic mb-4">Dear Students, The Mid-Term Examinations are near. Please prepare as per the official paper pattern provided for your courses.</p>
+                    
+                    <div class="bg-slate-950/60 border border-slate-800 p-5 rounded-2xl space-y-3 mb-4">
+                        <div class="text-xs font-black text-blue-400 uppercase tracking-wider border-b border-slate-800 pb-1.5">General Paper Pattern – Undergraduate Courses</div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs md:text-sm text-slate-400 font-semibold">
+                            <div>📌 <span class="text-slate-500">Total Marks:</span> <span class="text-slate-100 font-bold">30</span></div>
+                            <div>📌 <span class="text-slate-500">Time Allowed:</span> <span class="text-slate-100 font-bold">50 Minutes</span></div>
+                        </div>
+                        <div class="pt-2">
+                            <div class="text-[11px] font-bold text-slate-500 uppercase mb-2">Paper Format Structure:</div>
+                            <ul class="space-y-1.5 text-xs text-slate-300 pl-4 list-disc font-medium">
+                                <li>14 MCQs – 1 mark each</li>
+                                <li>2 Short Questions – 3 marks each</li>
+                                <li>2 Long Questions – 5 marks each</li>
+                            </ul>
+                            <p class="text-[10px] font-bold text-yellow-500 bg-yellow-500/5 border border-yellow-500/10 px-3 py-1.5 rounded-lg mt-3 w-fit"><i class="fa-solid fa-circle-info mr-1"></i> Note: All questions must be attempted.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-950/60 border border-slate-800 p-5 rounded-2xl space-y-2 mb-4">
+                        <div class="text-xs font-black text-red-400 uppercase tracking-wider flex items-center gap-1.5 border-b border-slate-800 pb-1.5">
+                            <i class="fa-solid fa-circle-exclamation"></i> Important Notice Exceptions
+                        </div>
+                        <p class="text-xs text-slate-400 font-medium leading-relaxed">
+                            For the following 20 undergraduate courses and all MS courses, the paper pattern differs from the general pattern above. The specific pattern for these courses is posted in the Course Announcement Section on VULMS:
+                        </p>
+                        <div class="bg-slate-900/60 p-3 rounded-xl font-bold text-green-500 tracking-wide text-center border border-slate-800 leading-loose text-xs shadow-sm mt-2">
+                            BIO101, BT401, CS101, ECO401, ENG001, ENG101, ISL202, MGT211, MGT301, MGT503, MTH001, MTH631, MTH643, PAK301, PHY101, PSY101, SOC101, STA302, ZOO503, ZOO504.
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-slate-300 bg-blue-500/5 border border-blue-500/10 p-4 rounded-xl leading-relaxed font-medium">
+                        <strong>For the Exact Paper Pattern & Syllabus:</strong> Students should check the Announcement Section of each subject on VULMS for detailed guidelines and the latest exam pattern.
+                    </p>
+                `
+            }
+        ];
+
+        // 1. Initializer Row Module Renderer Matrix
+        function initNoticeBoard() {
+            const rowTarget = document.getElementById('announcement-rows-target');
+            rowTarget.innerHTML = myAnnouncements.map(ann => `
+                <div onclick="openAnnouncement('${ann.id}')" class="bg-slate-900/50 border border-white/5 p-4 md:p-5 rounded-2xl flex gap-4 items-center hover:border-blue-500/40 hover:bg-slate-900/80 transition-all duration-200 cursor-pointer group w-full shadow-md">
+                    <div class="bg-slate-950 text-slate-100 font-bold p-2 rounded-xl flex flex-col items-center justify-center min-w-[70px] max-w-[70px] group-hover:bg-blue-600 transition-colors shrink-0 shadow-inner">
+                        <span class="text-[9px] uppercase font-semibold tracking-wider leading-tight text-slate-500 group-hover:text-blue-100">${ann.dateMonth}</span>
+                        <span class="text-lg font-black tracking-tighter leading-tight mt-0.5">${ann.dateDay}</span>
+                        <span class="text-[9px] font-bold text-slate-600 group-hover:text-blue-200 tracking-tighter leading-none">${ann.dateYear}</span>
+                    </div>
+                    <div class="flex-grow min-w-0">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-slate-950 text-slate-500 border border-slate-800 px-2 py-0.5 rounded font-bold text-[9px] tracking-wide">${ann.timeStr}</span>
+                        </div>
+                        <h3 class="text-xs md:text-sm font-black text-slate-200 group-hover:text-blue-400 transition-colors mt-2 uppercase tracking-wide truncate">
+                            ${ann.title}
+                        </h3>
+                    </div>
+                    <div class="text-slate-700 group-hover:text-blue-500 hidden sm:block shrink-0 pr-1 transition-colors">
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 2. Open event dynamic action switch trigger panel logic
+        function openAnnouncement(id) {
+            const activeData = myAnnouncements.find(item => item.id === id);
+            if (activeData) {
+                document.getElementById('detail-title-target').innerHTML = activeData.title;
+                document.getElementById('detail-badge-target').innerHTML = activeData.badge;
+                document.getElementById('detail-date-target').innerHTML = `<i class="fa-regular fa-clock mr-1"></i> Published: ${activeData.dateMonth} ${activeData.dateDay}, ${activeData.dateYear} - ${activeData.timeStr}`;
+                document.getElementById('detail-content-target').innerHTML = activeData.content;
+
+                document.getElementById('list-view-section').classList.add('hidden');
+                document.getElementById('detail-view-section').classList.remove('hidden');
+
+                // Generate contextual navigation button module setup framework
+                document.getElementById('nav-action-container').innerHTML = `
+                    <button onclick="closeAnnouncement()" class="flex items-center gap-2 text-xs font-black bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl shadow-md transition">
+                        <i class="fa-solid fa-circle-chevron-left text-[11px]"></i> Back To Feed
+                    </button>
+                `;
+            }
+        }
+
+        // 3. Close operation action clear router logic module components
+        function closeAnnouncement() {
+            document.getElementById('detail-view-section').classList.add('hidden');
+            document.getElementById('list-view-section').classList.remove('hidden');
+
+            document.getElementById('nav-action-container').innerHTML = `
+                <a href="index.html" class="flex items-center gap-2 text-xs font-bold bg-white/5 hover:bg-white/10 text-slate-300 px-4 py-2 rounded-xl border border-white/10 transition">
+                    <i class="fa-solid fa-house text-[10px]"></i> Home
+                </a>
+            `;
+        }
+
+        window.onload = initNoticeBoard;
+    </script>
+</body>
+
+</html>
