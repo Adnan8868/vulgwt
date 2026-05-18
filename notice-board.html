@@ -9,6 +9,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="https://img.icons8.com/fluency/48/graduation-cap.png" type="image/x-icon">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -171,15 +172,52 @@
         // DATA OBJECTS ARRAY: Nayi updates isi structured database stack layout me add hon gi
         // =========================================================================
         const myAnnouncements = [
-        {
-    id: "ann-03",
-    dateDay: "17",
-    dateMonth: "May",
-    dateYear: "2026",
-    timeStr: "11:00 AM",
-    badge: "⚠️ Paper Pattern Overview",
-    title: "IMPORTANT REMINDER — PAPER PATTERN FOR ALL COURSES",
-    content: `
+            {
+                id: "ann-04",
+                dateDay: "18",
+                dateMonth: "May",
+                dateYear: "2026",
+                timeStr: "04:30 PM",
+                badge: "⚠️ Urgent Live Session Alert",
+                title: "MID-TERM EXAM PREPARATION & LIVE GUIDE SESSION - BY LEARNING & GROWING WITH TEAM",
+                content: `
+                <div class="space-y-5">
+                    <p class="text-slate-300 font-medium">Dear Students, Aapke Mid-Term Exams <strong class="text-red-400">1st June</strong> se start ho rahe hain aur ab sirf <strong class="text-red-400">10 din baki</strong> reh gaye hain! 😱</p>
+                    
+                    <p class="bg-slate-950/60 border border-slate-800 p-4 rounded-2xl text-slate-300 leading-relaxed">
+                        Kya aap pareshan hain ke itne kam waqt mein achi CGPA kaise leni hai? Short time mein taiyari kaise karni hai? Aur kya sirf past paper files par depend rehna kafi hai ya nahi? In sab sawalat ke live jawabats ke liye humne kal raat (<strong class="text-yellow-400">19 May 2026, Tuesday</strong>) thik <strong class="text-yellow-400">9:15 PM</strong> par ek special <strong class="text-blue-400">Live Google Meet Session</strong> arrange kiya hai.
+                    </p>
+
+                    <div class="bg-blue-500/5 border border-blue-500/20 p-4 rounded-2xl border-l-4 border-l-blue-500">
+                        <span class="text-xs font-black text-blue-400 uppercase tracking-wider block mb-1">🔥 Special Segment</span>
+                        <p class="text-xs md:text-sm text-slate-300 font-medium">Is session mein live computer screen par aapko sikhaya jayega ke <strong>Math ka exam</strong> bina time waste kiye jaldi aur aasan tarike se software par kaise solve karte hain! Apne dosto (friends) ko bhi sath lazmi add karein taake sab live sawal puch sakein.</p>
+                    </div>
+
+                    <div class="bg-amber-500/5 border border-amber-500/20 p-4 rounded-2xl">
+                        <span class="text-xs font-black text-amber-400 uppercase tracking-wider block mb-1">📱 Mobile Users Ke Liye Hidayat</span>
+                        <p class="text-xs text-slate-400 font-medium">Class join karne se pehle apne mobile mein <strong>Google Meet App</strong> Play Store se lazmi download/install kar lein taake join karte waqt koi pareshani na ho.</p>
+                    </div>
+
+                    <div class="flex flex-wrap gap-3 pt-2">
+                        <a href="https://meet.google.com/yrd-kgan-hbv" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 px-5 rounded-xl text-xs transition shadow-lg flex items-center gap-2">
+                            <i class="fa-solid fa-video text-[10px]"></i> Join Live Meeting
+                        </a>
+                        <a href="https://api.whatsapp.com/send?text=%F0%9F%93%A2%20%2AAnouncement%2A%3A%20Kal%20Raat%209%3A15%20PM%20Live%20Google%20Meet%20Session%20Hoga%21%20Mid-Term%2010-Days%20Strategy%20%26%20Math%20Software%20Tracing%20Guide.%20Join%20Link%3A%20https%3A%2F%2Fmeet.google.com%2Fyrd-kgan-hbv" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2.5 px-5 rounded-xl text-xs transition shadow-lg flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Share With Friends
+                        </a>
+                    </div>
+                </div>
+            `
+            },
+            {
+                id: "ann-03",
+                dateDay: "17",
+                dateMonth: "May",
+                dateYear: "2026",
+                timeStr: "11:00 AM",
+                badge: "⚠️ Paper Pattern Overview",
+                title: "IMPORTANT REMINDER — PAPER PATTERN FOR ALL COURSES",
+                content: `
         <div class="space-y-5">
             <p class="text-slate-400 italic mb-2">Dear Students, Here is a quick overview of the paper pattern categorized by subject types. Please prepare your exams accordingly:</p>
             
@@ -243,7 +281,7 @@
             </div>
         </div>
     `
-},
+            },
             {
                 id: "ann-01",
                 dateDay: "16",
