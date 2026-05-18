@@ -1,8 +1,8 @@
 // ====== WEB STUDY - VU STUDY LGWT LIVE POPUP ENGINE ======
 document.addEventListener("DOMContentLoaded", function () {
-    // Check if student already closed the notification
-    if (localStorage.getItem("lgwt_meeting_popup_closed") === "true") {
-        return; // Agar closed hai toh popup nahi dikhega [cite: 72]
+    // CHANGE: localStorage ki jagah sessionStorage use kiya hai taake browser tab band hote hi memory saaf ho jaye
+    if (sessionStorage.getItem("lgwt_meeting_popup_closed") === "true") {
+        return; // Jab tak tab open hai, close karne ke baad dobara nahi dikhega
     }
 
     // 1. Inject Dynamic Tailwind Custom Keyframes Animation for Premium Glow Effect
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.head.appendChild(styleTag);
     }
 
-    // --- AAPKA FINAL GOOGLE MEET LINK (Integrated) ---
+    // --- AAPKA FINAL GOOGLE MEET LINK ---
     const GOOGLE_MEET_LINK = "https://meet.google.com/yrd-kgan-hbv";
 
     // --- WHATSAPP MEIN SHARE HONE WALA POORA AUTOMATIC TEXT CONTENT ---
@@ -127,7 +127,7 @@ Apne dosto ke sath bhi lazmi share karein aur unhe bhi invite karein.
     });
 });
 
-// Function to close popup smoothly and save state in Local Storage
+// Function to close popup smoothly and save state in Session Storage
 function closeLgwtPopup(dontShowAgain) {
     const overlay = document.getElementById('lgwtPopupOverlay');
     if (overlay) {
@@ -135,7 +135,8 @@ function closeLgwtPopup(dontShowAgain) {
         overlay.querySelector('div').classList.add('scale-95');
         
         if (dontShowAgain) {
-            localStorage.setItem("lgwt_meeting_popup_closed", "true"); // Save state [cite: 70]
+            // CHANGE: Ab ye data browser tab close hote hi clear ho jaye ga
+            sessionStorage.setItem("lgwt_meeting_popup_closed", "true");
         }
     }
 }
