@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam-Wise Resource Vault | VU Study LGWT</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="https://img.icons8.com/fluency/48/graduation-cap.png" type="image/x-icon">
+    
+    <style>
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background-color: #f9fafb; 
+            scroll-behavior: smooth;
+        }
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .tab-btn {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .tab-btn.active {
+            background-color: #2563eb !important;
+            color: #ffffff !important;
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+        }
+        .vault-card { 
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+        .vault-card:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 15px 25px -5px rgba(30, 58, 138, 0.05);
+            border-color: #2563eb;
+        }
+    </style>
+</head>
+
+<body class="text-slate-800 min-h-screen flex flex-col bg-gray-50">
+
+    <nav class="fixed w-full z-[90] nav-glass border-b border-gray-200/80 h-20 flex items-center justify-between px-6 md:px-16 shadow-sm">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white text-lg shadow-md shadow-blue-200">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="text-xl md:text-2xl font-black text-blue-900 tracking-tight">
+                VU STUDY <span class="text-yellow-500">LGWT</span>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <a href="index.html" class="flex items-center gap-2 text-xs font-bold bg-gray-100 hover:bg-gray-200 text-slate-700 px-4 py-2.5 rounded-xl border border-gray-200 transition-all">
+                <i class="fa-solid fa-house text-[10px]"></i> Home
+            </a>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-28 pb-20 px-4 md:px-8 max-w-5xl mx-auto w-full">
+        <div class="space-y-6">
+
+            <div class="bg-white border border-gray-200/60 rounded-3xl p-6 md:p-8 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-blue-50 border border-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-xl shrink-0">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-lg md:text-xl font-black text-blue-900 uppercase tracking-wide">Exam Categorized Resource Vault</h1>
+                        <p id="vault-subtitle" class="text-xs text-gray-500 font-medium mt-0.5">Perfect segregation for Mid, Final, Mix Drives and customized Quiz sections.</p>
+                    </div>
+                </div>
+                <div id="counter-badge" class="w-fit bg-blue-600 text-white px-5 py-2 rounded-full text-[10px] font-black uppercase tracking-widest shadow-md shadow-blue-100">
+                    0 Resources Found
+                </div>
+            </div>
+
+            <div class="relative shadow-sm rounded-2xl">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-400">
+                    <i class="fa-solid fa-magnifying-glass text-xs"></i>
+                </span>
+                <input type="text" id="vault-search" oninput="filterVault()" placeholder="Global Search: Type anything (e.g. Maha Malik, CS101, Attiq, Quiz) to search across all sections..." 
+                    class="w-full bg-white border border-gray-200 rounded-2xl pl-12 pr-4 py-4 text-xs font-semibold text-gray-700 placeholder-gray-400 focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 transition-all">
+            </div>
+
+            <div id="tab-navigation-container" class="grid grid-cols-2 md:grid-cols-5 gap-2 bg-white p-2 rounded-2xl shadow-sm border border-gray-200">
+                <button onclick="switchTab('mid')" id="tab-btn-mid" class="tab-btn active py-3 px-2 rounded-xl font-black text-[9px] uppercase tracking-wider text-gray-600 bg-gray-50 hover:bg-gray-100 text-center">Midterm Only</button>
+                <button onclick="switchTab('final')" id="tab-btn-final" class="tab-btn py-3 px-2 rounded-xl font-black text-[9px] uppercase tracking-wider text-gray-600 bg-gray-50 hover:bg-gray-100 text-center">Finalterm Only</button>
+                <button onclick="switchTab('mix')" id="tab-btn-mix" class="tab-btn py-3 px-2 rounded-xl font-black text-[9px] uppercase tracking-wider text-gray-600 bg-gray-50 hover:bg-gray-100 text-center">Mid & Final Mix</button>
+                <button onclick="switchTab('newquiz')" id="tab-btn-newquiz" class="tab-btn py-3 px-2 rounded-xl font-black text-[9px] uppercase tracking-wider text-gray-600 bg-gray-50 hover:bg-gray-100 text-center">Latest Quizzes</button>
+                <button onclick="switchTab('subwise')" id="tab-btn-subwise" class="tab-btn py-3 px-2 rounded-xl font-black text-[9px] uppercase tracking-wider text-gray-600 bg-gray-50 hover:bg-gray-100 text-center">Subject Wise Data</button>
+            </div>
+
+            <div id="vault-cards-target" class="grid grid-cols-1 gap-3.5"></div>
+
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 text-white pt-16 pb-12 px-6 md:px-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
+                <div class="space-y-4">
+                    <div class="text-2xl font-black tracking-tight text-white">
+                        VU STUDY <span class="text-yellow-400">LGWT</span>
+                    </div>
+                    <p class="text-slate-400 text-xs font-medium leading-relaxed max-w-sm">
+                        Pakistan's most trusted partner for Virtual University success. Providing dynamic solutions, clean past sheets, and learning roadmaps.
+                    </p>
+                </div>
+                <div class="flex flex-col md:items-end justify-center">
+                    <div class="bg-slate-800/50 border border-slate-700/50 p-4 rounded-2xl w-full max-w-xs">
+                        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Need Direct Support?</p>
+                        <p class="text-sm font-black text-yellow-400 mb-2">+92 319 6248868</p>
+                        <a href="https://wa.me/923196248868" target="_blank" class="block w-full py-2 bg-yellow-400 hover:bg-yellow-300 text-slate-900 text-center rounded-xl font-black text-[10px] uppercase tracking-wider transition-all">
+                            Send WhatsApp Msg
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-px w-full bg-slate-800 mb-8"></div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="text-slate-500 text-[11px] font-medium text-center md:text-left leading-relaxed">
+                    &copy; 2026 <span class="text-slate-300 font-bold">LGWT Official</span>. Crafted for Virtual University Students.
+                </div>
+                <div class="text-slate-500 text-[10px] uppercase tracking-[0.3em] font-black">
+                    Learning <span class="text-blue-400">&</span> Growing <span class="text-yellow-400">With Team</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        // Highly segregated structural data stream mapping completely clean entries
+        const mainVaultData = {
+            mid: [
+                { name: "Mid All Data Drive (Attiq Kundi)", desc: "Complete folders collection pack from Attiq Kundi cloud storage node", badge: "Mega Mid Drive", icon: "fa-folder-open", color: "text-purple-600 bg-purple-50 border-purple-100", url: "https://drive.google.com/drive/folders/1xnMat0LNYkpkWSwWWWiNFU4rV45vzdEL" },
+                { name: "Midterm Data Node By VU TALK", desc: "Aggregated midterm solution files managed directly by VU TALK team", badge: "VU Talk Mid", icon: "fa-folder-open", color: "text-blue-600 bg-blue-50 border-blue-100", url: "https://drive.google.com/drive/folders/1ArwT9HcZQ0E6LujnPiPzoC3Sv56eNPZK" },
+                { name: "PRO 2022 Midterm Mega Drive", desc: "Past papers 2022 student collective cloud folder built for mid-term", badge: "Archive Drive", icon: "fa-database", color: "text-gray-600 bg-gray-50 border-gray-200", url: "https://drive.google.com/drive/folders/1HVEfmK1OQZKZYAbkBUali0Et1zTFeeCl" },
+                { name: "Biological Science", desc: "Mid Term All Biological Science Students Study Material", badge: "Bio", icon: "fa-database", color: "text-gray-600 bg-gray-50 border-gray-200", url: "https://drive.google.com/drive/folders/1DXn42cd0TnmGSqdTpfywGmtKImoHF-NV" },
+                { name: "Team Hadi Mid-Term", desc: "Mid Term Files Team Hadi Study Material Data", badge: "Team Hadi drive", icon: "fa-database", color: "text-gray-600 bg-gray-50 border-gray-200", url: "https://drive.google.com/drive/folders/1tQb0qKW8KE4p8O1Xawf917CI683JnkMT" },
+                { name: "VU Topper Mid-Term", desc: "Mid Term Files VU Topper Study Material Data", badge: "VU Topper", icon: "fa-database", color: "text-gray-600 bg-gray-50 border-gray-200", url: "https://drive.google.com/drive/folders/1swAsTvjQ4mkJUQrJrjzYT1iVGrsad09H" },
+                { name: "VU File Mid Term", desc: "VU Mid Term Files Drive 2022", badge: "Vu File", icon: "fa-database", color: "text-gray-600 bg-gray-50 border-gray-200", url: "https://drive.google.com/drive/folders/1jltMuKf0h6RAbXqQ7OCyHG7CpWxxXc0g" },
+            ],
+
+            final: [
+                { name: "Final Term Attiq Kundi Drive 1", desc: "Mega Final Term Drive Link By Attiq In Every Folder Separates", badge: "Mega Drive", icon: "fa-folder-open", color: "text-red-600 bg-red-50 border-red-100", url: "https://drive.google.com/drive/folders/10GG0S4v28Vo2yde_ba18NMmG1Nxwl3q8" },
+                { name: "Final Term Attiq Kundi Drive 2", desc: "Mega Final Term Drive Link By Attiq In Every Folder Separates", badge: "Mega Drive", icon: "fa-folder-open", color: "text-red-600 bg-red-50 border-red-100", url: "https://drive.google.com/drive/folders/1opOEKdl6UpcQn_BAadopZDF561txt59P" },
+                { name: "Pro Final VU TALK", desc: "Final Term VU TALK In Folders Wise Subjects Mega Drive", badge: "Mega Vu Talk", icon: "fa-folder-open", color: "text-red-600 bg-red-50 border-red-100", url: "https://drive.google.com/drive/folders/1QI9_QgYZU88uulylWksI3mKXECYDkSHB" },
+                { name: "Biological Science", desc: "Final Term All Biological Science Students Study Material", badge: "Bio", icon: "fa-folder-open", color: "text-red-600 bg-red-50 border-red-100", url: "https://drive.google.com/drive/folders/17RTgzLuloAXAjl0mCYfMWDDxC7eo9ovG" },
+                { name: "Afsand Yar Khan Final Collection", desc: "In This Folder Almost Final Term Data Not Set in FOlder Wise And Mix up Some Mid-Term", badge: "Core Finals", icon: "fa-scroll", color: "text-red-600 bg-red-50 border-red-100", url: "https://drive.google.com/drive/folders/1ZCeUHM8vXczv8ye6a0jfrcNjLi9-qgS7" },
+                { name: "Final Term VU QUIZ ARTIST ", desc: "Active quiz sheet models updated by VU QUIZ ARTIST", badge: "Final-Term", icon: "fa-star", color: "text-blue-600 bg-blue-50 border-blue-100", url: "https://drive.google.com/drive/folders/11gLeO_CnEFnU5yEdvgkEUQNgjhUQx0g5" },
+            ],
+
+            mix: [
+                { name: "Mughal Organized Master Drive Folder Mid & Final", desc: "Mid-term & Final Term Mix conceptual structural data sets pool", badge: "Mughal Mix Drive", icon: "fa-cubes", color: "text-purple-600 bg-purple-50 border-purple-100", url: "https://drive.google.com/drive/folders/1gn9vOlBosa4sco-W_NvgGWgCV432sLdu" },
+                { name: "ZOOLOGY Legends By Zaman", desc: "All Zoo, BIO, BIF Mid & Final-Term organized by Muhammad Zaman", badge: "Zaman Master Hub", icon: "fa-server", color: "text-indigo-600 bg-indigo-50 border-indigo-100", url: "https://drive.google.com/drive/folders/18XX5kpRc1150FVti-kDjvto25xKbmEtO" },
+                { name: "ALL ZOO SEMSTER", desc: "All ZOO Subject & Final-Term organized by Muhammad Zaman", badge: "Zoo codes", icon: "fa-server", color: "text-indigo-600 bg-indigo-50 border-indigo-100", url: "https://drive.google.com/drive/folders/1AW5xcAeABpWu9ZNx8fCKDi6Eh1H-Yn50" },
+                { name: "BIO, BT, ZOO", desc: "All Bio, BT, ZOO & Final-Term organized by Muhammad Zaman", badge: "Bio, BT, ZOO", icon: "fa-server", color: "text-indigo-600 bg-indigo-50 border-indigo-100", url: "https://drive.google.com/drive/folders/1Vj6_3QoLYZgRhl0ADVH9jbloQ2jDz-gG" },
+                { name: "Biological Students Study Material", desc: "Mid And Final All in One Biological Study Material Available in this Drive", badge: "Mid & Final", icon: "fa-server", color: "text-indigo-600 bg-indigo-50 border-indigo-100", url: "https://drive.google.com/drive/folders/1e86UwiTdTO5uun4newSAn4YepBfIHj8o" },
+                { name: "Hamza Hassan", desc: "Mid & Final Term Hamza Hassan In Folders Wise Subjects Mega Drive", badge: "Mid & Final", icon: "fa-server", color: "text-red-600 bg-red-50 border-red-100", url: "https://drive.google.com/drive/folders/1i3v79NvfvB6-gCq1KgB-jwSLl3OoX9_O" },
+                { name: "Bio Mid And Final by Zain", desc: "Bio By Zain Mid Term And Final Term Drive Link", badge: "Mid & Final Bio", icon: "fa-server", color: "text-red-600 bg-red-50 border-red-100", url: "https://drive.google.com/drive/folders/1otdtBp0wTC9KseXTAG7lf35VGbrQjw3k?direction=a" },
+            ],
+
+            newquiz: [
+                { name: "Midterm Preparation 2026 by VU Nexus", desc: "Fresh midterm preparation files drive by VU Nexus team", badge: "Spring 2026", icon: "fa-star", color: "text-blue-600 bg-blue-50 border-blue-100", url: "https://drive.google.com/drive/folders/1LwwBCp5lr-yKi2pUfQG0peGwYOWK4z7t" },
+                { name: "Mid Term 2026 By VU STAR", desc: "Latest structural active quiz sheet models updated by VU Stars", badge: "Spring 2026", icon: "fa-star", color: "text-blue-600 bg-blue-50 border-blue-100", url: "https://drive.google.com/drive/folders/1UTbPrKABjR6Y67SUpbFH8BmET5uJmDfz" },
+                { name: "Mid Term 2024 By VU STAR", desc: "Latest structural active quiz sheet models updated by VU Stars", badge: "2023 - 2024", icon: "fa-star", color: "text-blue-600 bg-blue-50 border-blue-100", url: "https://drive.google.com/drive/folders/1UTbPrKABjR6Y67SUpbFH8BmET5uJmDfz" },
+                { name: "Mid Term & Final Term Quiz Iqra Azhar", desc: "Archived seasonal files provided directly via VU Zone Iqra Azhar", badge: "Mid & Final", icon: "fa-star", color: "text-cyan-600 bg-cyan-50 border-cyan-100", url: "https://drive.google.com/drive/folders/1D829ShkgQ_1m4r-LfzO0sYYo0YS-xA_a" }
+            ],
+
+            subwise: []
+        };
+
+        // Text mappings to display dynamic category labels inside global search results
+        const tabNamesMapping = {
+            mid: "Midterm Specifics",
+            final: "Finalterm Specifics",
+            mix: "Mid & Final Mix",
+            newquiz: "Latest Quizzes Bank",
+            subwise: "Subject Wise Data"
+        };
+
+        let currentActiveTab = 'mid';
+
+        // Core Render Engine for Building Segment Cards Matrix
+        function displayTabContent(items, isGlobalSearch = false) {
+            const target = document.getElementById('vault-cards-target');
+            const counter = document.getElementById('counter-badge');
+            
+            counter.innerText = `${items.length} Folders Found`;
+
+            if (items.length === 0) {
+                target.innerHTML = `
+                    <div class="text-center py-16 bg-white border border-dashed border-gray-300 rounded-3xl shadow-sm">
+                        <div class="w-12 h-12 bg-gray-50 text-gray-400 rounded-full flex items-center justify-center text-xl mx-auto mb-3">
+                            <i class="fa-solid fa-folder-open"></i>
+                        </div>
+                        <p class="text-xs font-bold text-gray-500 uppercase tracking-wider">No resources found matching search</p>
+                        <p class="text-[10px] text-gray-400 mt-1 font-medium">Try another term search filter or select an alternate menu button.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // Loop and build clean cards matching index.html light style parameters
+            target.innerHTML = items.map(item => `
+                <div class="vault-card bg-white border border-gray-200/60 p-4 md:p-5 rounded-2xl flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between shadow-sm relative overflow-hidden">
+                    <div class="flex gap-4 items-center min-w-0 w-full">
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center text-sm shrink-0 border shadow-inner ${item.color || 'text-blue-600 bg-blue-50 border-blue-100'}">
+                            <i class="fa-solid ${item.icon}"></i>
+                        </div>
+                        <div class="min-w-0 flex-1">
+                            <div class="flex flex-wrap items-center gap-1.5">
+                                <span class="inline-block bg-gray-100 text-slate-600 border border-gray-200 px-2 py-0.5 rounded-md font-black text-[8px] tracking-wider uppercase">
+                                    ${item.badge}
+                                </span>
+                                ${isGlobalSearch && item.originTab ? `
+                                    <span class="inline-block bg-blue-50 text-blue-700 border border-blue-100 px-2 py-0.5 rounded-md font-black text-[8px] tracking-wider uppercase">
+                                        <i class="fa-solid fa-layer-group text-[7px] mr-0.5"></i> ${tabNamesMapping[item.originTab]}
+                                    </span>
+                                ` : ''}
+                            </div>
+                            <h3 class="text-xs md:text-sm font-black text-blue-900 mt-1.5 uppercase tracking-wide truncate">
+                                ${item.name}
+                            </h3>
+                            <p class="text-[10px] text-gray-400 font-bold uppercase tracking-wider truncate mt-0.5">
+                                ${item.desc}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full sm:w-auto shrink-0 pt-1 sm:pt-0">
+                        <a href="${item.url}" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-[10px] font-black bg-yellow-400 hover:bg-yellow-300 text-blue-950 px-5 py-3 rounded-xl shadow-md uppercase tracking-widest transition-all active:scale-95">
+                            Open Drive Folder <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-70"></i>
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Switch Active Menu State Logic Tab Matrix
+        function switchTab(tabKey) {
+            currentActiveTab = tabKey;
+            
+            // Manage Active CSS Status On UI Tabs
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`tab-btn-${tabKey}`).classList.add('active');
+            
+            // Reset search parameters & normal navigation settings layout UI toggles back
+            document.getElementById('vault-search').value = '';
+            document.getElementById('tab-navigation-container').classList.remove('opacity-40', 'pointer-events-none');
+            document.getElementById('vault-subtitle').innerText = "Perfect segregation for Mid, Final, Mix Drives and customized Quiz sections.";
+            
+            displayTabContent(mainVaultData[tabKey], false);
+        }
+
+        // Global dynamic multi-purpose filter search engine mapping all categories instantly
+        function filterVault() {
+            const query = document.getElementById('vault-search').value.toLowerCase().trim();
+            const tabContainer = document.getElementById('tab-navigation-container');
+            const subtitle = document.getElementById('vault-subtitle');
+            
+            // If search is empty, restore selected tab layout state parameters
+            if (!query) {
+                tabContainer.classList.remove('opacity-40', 'pointer-events-none');
+                subtitle.innerText = "Perfect segregation for Mid, Final, Mix Drives and customized Quiz sections.";
+                displayTabContent(mainVaultData[currentActiveTab], false);
+                return;
+            }
+
+            // Lock navigation tabs visual clarity during active global search session
+            tabContainer.add ? null : tabContainer.classList.add('opacity-40', 'pointer-events-none');
+            subtitle.innerHTML = `<span class="text-blue-600 font-bold">🔍 Global Search Engine Active:</span> Searching files inside all categories combined...`;
+
+            // Step 1: Collect data array elements from every single inner object category streams
+            let globalCollectedSet = [];
+            
+            for (const key in mainVaultData) {
+                if (mainVaultData.hasOwnProperty(key)) {
+                    // Deep copy items array to avoid overriding source properties configuration
+                    mainVaultData[key].forEach(element => {
+                        globalCollectedSet.push({
+                            ...element,
+                            originTab: key // Track category parent node source parameters
+                        });
+                    });
+                }
+            }
+
+            // Step 2: Query filtering algorithm processing titles, data tags and descriptive items
+            const filteredResults = globalCollectedSet.filter(item => 
+                item.name.toLowerCase().includes(query) || 
+                item.desc.toLowerCase().includes(query) || 
+                item.badge.toLowerCase().includes(query)
+            );
+
+            // Step 3: Trigger dynamic card list generation
+            displayTabContent(filteredResults, true);
+        }
+
+        window.onload = () => {
+            displayTabContent(mainVaultData['mid'], false);
+        };
+    </script>
+</body>
+
+</html>
