@@ -7,7 +7,7 @@
     <title>Exam-Wise Resource Vault | VU Study LGWT</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;600;700;900&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" href="https://img.icons8.com/fluency/48/graduation-cap.png" type="image/x-icon">
     
@@ -93,6 +93,21 @@
                 <button onclick="switchTab('subwise')" id="tab-btn-subwise" class="tab-btn py-3 px-2 rounded-xl font-black text-[9px] uppercase tracking-wider text-gray-600 bg-gray-50 hover:bg-gray-100 text-center">Subject Wise Data</button>
             </div>
 
+            <div id="bulk-actions-panel" class="bg-gradient-to-r from-blue-900 to-slate-900 rounded-2xl p-4 shadow-md flex flex-col sm:flex-row items-center justify-between gap-3 border border-blue-800">
+                <div class="text-center sm:text-left">
+                    <p class="text-[10px] font-black tracking-widest text-yellow-400 uppercase">⚡ Share All At Once</p>
+                    <p id="bulk-panel-desc" class="text-white font-medium text-xs mt-0.5">Copy or Share all listed folders of this section in a single message.</p>
+                </div>
+                <div class="flex items-center gap-2 w-full sm:w-auto">
+                    <button onclick="handleBulkAction('copy')" id="master-bulk-copy-btn" class="flex-1 sm:flex-initial flex items-center justify-center gap-2 text-[10px] font-black bg-white hover:bg-gray-100 text-blue-950 px-4 py-3 rounded-xl uppercase tracking-wider transition-all active:scale-95 shadow-sm">
+                        <i class="fa-regular fa-copy text-sm text-blue-600"></i> Copy Whole List
+                    </button>
+                    <button onclick="handleBulkAction('whatsapp')" class="flex-1 sm:flex-initial flex items-center justify-center gap-2 text-[10px] font-black bg-emerald-500 hover:bg-emerald-400 text-white px-4 py-3 rounded-xl uppercase tracking-wider transition-all active:scale-95 shadow-md shadow-emerald-900/20">
+                        <i class="fa-brands fa-whatsapp text-sm"></i> Share to WhatsApp
+                    </button>
+                </div>
+            </div>
+
             <div id="vault-cards-target" class="grid grid-cols-1 gap-3.5"></div>
 
         </div>
@@ -131,10 +146,9 @@
                 </div>
             </div>
         </div>
-    </nav>
+    </footer>
 
     <script>
-        // Highly segregated structural data stream mapping completely clean entries
         const mainVaultData = {
             mid: [
                 { name: "Mid All Data Drive (Attiq Kundi)", desc: "Complete folders collection pack from Attiq Kundi cloud storage node", badge: "Mega Mid Drive", icon: "fa-folder-open", color: "text-purple-600 bg-purple-50 border-purple-100", url: "https://drive.google.com/drive/folders/1xnMat0LNYkpkWSwWWWiNFU4rV45vzdEL" },
@@ -175,7 +189,6 @@
             subwise: []
         };
 
-        // Text mappings to display dynamic category labels inside global search results
         const tabNamesMapping = {
             mid: "Midterm Specifics",
             final: "Finalterm Specifics",
@@ -185,15 +198,19 @@
         };
 
         let currentActiveTab = 'mid';
+        let currentRenderedItems = []; 
 
-        // Core Render Engine for Building Segment Cards Matrix
+        // Core Render Engine
         function displayTabContent(items, isGlobalSearch = false) {
             const target = document.getElementById('vault-cards-target');
             const counter = document.getElementById('counter-badge');
+            const bulkPanel = document.getElementById('bulk-actions-panel');
             
+            currentRenderedItems = items; 
             counter.innerText = `${items.length} Folders Found`;
 
             if (items.length === 0) {
+                bulkPanel.classList.add('hidden'); 
                 target.innerHTML = `
                     <div class="text-center py-16 bg-white border border-dashed border-gray-300 rounded-3xl shadow-sm">
                         <div class="w-12 h-12 bg-gray-50 text-gray-400 rounded-full flex items-center justify-center text-xl mx-auto mb-3">
@@ -206,8 +223,12 @@
                 return;
             }
 
-            // Loop and build clean cards matching index.html light style parameters
-            target.innerHTML = items.map(item => `
+            bulkPanel.classList.remove('hidden');
+            document.getElementById('bulk-panel-desc').innerText = isGlobalSearch 
+                ? `Copy or Share all ${items.length} filtered search matching items instantly.`
+                : `Copy or Share all ${items.length} structured folders of ${tabNamesMapping[currentActiveTab]} category.`;
+
+            target.innerHTML = items.map((item, index) => `
                 <div class="vault-card bg-white border border-gray-200/60 p-4 md:p-5 rounded-2xl flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between shadow-sm relative overflow-hidden">
                     <div class="flex gap-4 items-center min-w-0 w-full">
                         <div class="w-12 h-12 rounded-xl flex items-center justify-center text-sm shrink-0 border shadow-inner ${item.color || 'text-blue-600 bg-blue-50 border-blue-100'}">
@@ -232,24 +253,100 @@
                             </p>
                         </div>
                     </div>
-                    <div class="w-full sm:w-auto shrink-0 pt-1 sm:pt-0">
-                        <a href="${item.url}" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-[10px] font-black bg-yellow-400 hover:bg-yellow-300 text-blue-950 px-5 py-3 rounded-xl shadow-md uppercase tracking-widest transition-all active:scale-95">
-                            Open Drive Folder <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-70"></i>
+                    
+                    <div class="w-full sm:w-auto shrink-0 flex items-center gap-2 pt-1 sm:pt-0">
+                        <button onclick="copySingleResource(this, '${btoa(encodeURIComponent(item.name))}', '${item.url}')" 
+                            class="flex items-center justify-center gap-1.5 text-[10px] font-black bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-700 px-4 py-3 rounded-xl transition-all active:scale-95" 
+                            title="Copy Title & Link">
+                            <i class="fa-regular fa-copy text-[10px]"></i> <span>Copy</span>
+                        </button>
+                        
+                        <a href="${item.url}" target="_blank" class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 text-[10px] font-black bg-yellow-400 hover:bg-yellow-300 text-blue-950 px-5 py-3 rounded-xl shadow-md uppercase tracking-widest transition-all active:scale-95">
+                            Open Drive <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-70"></i>
                         </a>
                     </div>
                 </div>
             `).join('');
         }
 
+        // Single Row Copy Engine with Channel Link
+        function copySingleResource(btnElement, encodedName, url) {
+            const decodedName = decodeURIComponent(atob(encodedName));
+            let formattedText = `📁 *${decodedName}*\n🔗 Link: ${url}\n\n`;
+            formattedText += `📢 *Join WhatsApp Channel for Live VU Help:* \n👉 https://whatsapp.com/channel/0029VbAfKscEVccSHYySNP3I\n\n`;
+            formattedText += `VU Study LGWT Official`;
+
+            navigator.clipboard.writeText(formattedText).then(() => {
+                const originalContent = btnElement.innerHTML;
+                btnElement.innerHTML = `<i class="fa-solid fa-check text-emerald-600"></i> <span class="text-emerald-700">Copied!</span>`;
+                btnElement.classList.remove('bg-slate-100', 'text-slate-700');
+                btnElement.classList.add('bg-emerald-50', 'border-emerald-200');
+
+                setTimeout(() => {
+                    btnElement.innerHTML = originalContent;
+                    btnElement.classList.add('bg-slate-100', 'text-slate-700');
+                    btnElement.classList.remove('bg-emerald-50', 'border-emerald-200');
+                }, 1500);
+            });
+        }
+
+        // MASTER BULK ENGINE: Compiles whole dynamic array list and injects the WhatsApp Channel Promo Box at the footer
+        function compileBulkMessage() {
+            if (!currentRenderedItems || currentRenderedItems.length === 0) return "";
+
+            let sectionHeaderName = tabNamesMapping[currentActiveTab].toUpperCase();
+            let textMessageBlock = `🎓 *VU STUDY LGWT RESOURCE VAULT* 🎓\n`;
+            textMessageBlock += `━━━━━━━━━━━━━━━━━━━━━\n`;
+            textMessageBlock += `📂 *CATEGORY: ${sectionHeaderName}*\n`;
+            textMessageBlock += `🔢 Total Links Compiled: ${currentRenderedItems.length}\n`;
+            textMessageBlock += `━━━━━━━━━━━━━━━━━━━━━\n\n`;
+
+            currentRenderedItems.forEach((item, index) => {
+                textMessageBlock += `${index + 1}. *${item.name}*\n`;
+                textMessageBlock += `📝 _${item.desc}_\n`;
+                textMessageBlock += `🔗 ${item.url}\n`;
+                textMessageBlock += `-------------------------------------\n`;
+            });
+
+            // STYLISH COMMUNITY INVITE CHANNEL BLOCK INJECTED HERE PERFECTLY
+            textMessageBlock += `\n📢 *FOR LATEST VU UPDATES & LIVE HELP* \n`;
+            textMessageBlock += `🟢 *Join Our WhatsApp Channel Now:* \n`;
+            textMessageBlock += `🔗 https://whatsapp.com/channel/0029VbAfKscEVccSHYySNP3I\n`;
+            textMessageBlock += `━━━━━━━━━━━━━━━━━━━━━\n`;
+            textMessageBlock += `🚀 *Prepare your exams flawlessly with Team LGWT!*`;
+            return textMessageBlock;
+        }
+
+        function handleBulkAction(actionType) {
+            const compiledMessageText = compileBulkMessage();
+            if (!compiledMessageText) return;
+
+            if (actionType === 'copy') {
+                navigator.clipboard.writeText(compiledMessageText).then(() => {
+                    const copyMasterBtn = document.getElementById('master-bulk-copy-btn');
+                    const originalBtnHtml = copyMasterBtn.innerHTML;
+                    
+                    copyMasterBtn.innerHTML = `<i class="fa-solid fa-square-check text-emerald-500 text-sm"></i> Entire List Copied!`;
+                    copyMasterBtn.classList.add('bg-emerald-50', 'text-emerald-900', 'border-emerald-300');
+
+                    setTimeout(() => {
+                        copyMasterBtn.innerHTML = originalBtnHtml;
+                        copyMasterBtn.classList.remove('bg-emerald-50', 'text-emerald-900', 'border-emerald-300');
+                    }, 2000);
+                });
+            } else if (actionType === 'whatsapp') {
+                const whatsappGatewayUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(compiledMessageText)}`;
+                window.open(whatsappGatewayUrl, '_blank');
+            }
+        }
+
         // Switch Active Menu State Logic Tab Matrix
         function switchTab(tabKey) {
             currentActiveTab = tabKey;
             
-            // Manage Active CSS Status On UI Tabs
             document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
             document.getElementById(`tab-btn-${tabKey}`).classList.add('active');
             
-            // Reset search parameters & normal navigation settings layout UI toggles back
             document.getElementById('vault-search').value = '';
             document.getElementById('tab-navigation-container').classList.remove('opacity-40', 'pointer-events-none');
             document.getElementById('vault-subtitle').innerText = "Perfect segregation for Mid, Final, Mix Drives and customized Quiz sections.";
@@ -263,7 +360,6 @@
             const tabContainer = document.getElementById('tab-navigation-container');
             const subtitle = document.getElementById('vault-subtitle');
             
-            // If search is empty, restore selected tab layout state parameters
             if (!query) {
                 tabContainer.classList.remove('opacity-40', 'pointer-events-none');
                 subtitle.innerText = "Perfect segregation for Mid, Final, Mix Drives and customized Quiz sections.";
@@ -271,33 +367,28 @@
                 return;
             }
 
-            // Lock navigation tabs visual clarity during active global search session
             tabContainer.add ? null : tabContainer.classList.add('opacity-40', 'pointer-events-none');
             subtitle.innerHTML = `<span class="text-blue-600 font-bold">🔍 Global Search Engine Active:</span> Searching files inside all categories combined...`;
 
-            // Step 1: Collect data array elements from every single inner object category streams
             let globalCollectedSet = [];
             
             for (const key in mainVaultData) {
                 if (mainVaultData.hasOwnProperty(key)) {
-                    // Deep copy items array to avoid overriding source properties configuration
                     mainVaultData[key].forEach(element => {
                         globalCollectedSet.push({
                             ...element,
-                            originTab: key // Track category parent node source parameters
+                            originTab: key
                         });
                     });
                 }
             }
 
-            // Step 2: Query filtering algorithm processing titles, data tags and descriptive items
             const filteredResults = globalCollectedSet.filter(item => 
                 item.name.toLowerCase().includes(query) || 
                 item.desc.toLowerCase().includes(query) || 
                 item.badge.toLowerCase().includes(query)
             );
 
-            // Step 3: Trigger dynamic card list generation
             displayTabContent(filteredResults, true);
         }
 
