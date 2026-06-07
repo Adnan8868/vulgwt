@@ -69,7 +69,7 @@
         </div>
     </header>
 
-    <div class="max-w-7xl mx-auto px-6 mt-6">
+    <div id="instructionBox" class="max-w-7xl mx-auto px-6 mt-6">
         <div class="bg-blue-50 border-l-4 border-blue-600 rounded-xl p-4 shadow-sm">
             <div class="flex items-start gap-3">
                 <div class="text-blue-600 text-xl mt-1">
@@ -93,7 +93,7 @@
     </div>
 
     <!-- Compact Quiz Vault Bar -->
-    <div class="max-w-7xl mx-auto px-6 mt-6">
+    <div id="quizBox" class="max-w-7xl mx-auto px-6 mt-6">
         <a href="https://drive.google.com/drive/folders/1U3sBJAIT0teIgq47oVd9YfVwco43gmpE" target="_blank"
             class="group">
             <div
@@ -494,23 +494,90 @@
 
     <script>
         function filterCards() {
-            let input = document.getElementById('searchInput').value.toLowerCase();
-            let cards = document.querySelectorAll('.paper-card');
-            let found = 0;
+            const val = document.getElementById("searchInput").value.toLowerCase().trim();
+            const cards = document.querySelectorAll(".paper-card");
+            const instructionBox = document.getElementById("instructionBox");
+            const quizBox = document.getElementById("quizBox");
+            let count = 0;
 
+            // 🔍 SMART HIDE INTERFACE: Kuch bhi search karne par features ko chupa do
+            if (val !== "") {
+                if (instructionBox) instructionBox.style.display = "none";
+                if (quizBox) quizBox.style.display = "none";
+            } else {
+                if (instructionBox) instructionBox.style.display = "block";
+                if (quizBox) quizBox.style.display = "block";
+            }
+
+            // Regex to detect if user typed a specific course code (e.g., CS101, ENG 201)
+            const codePattern = /^([a-z]{2,5})\s*(\d{1,4})$/i;
+            const match = val.match(codePattern);
+
+            // Core grid items lookup loop
             cards.forEach(card => {
-                let name = card.getAttribute('data-name').toLowerCase();
-                if (name.includes(input)) {
-                    card.style.display = "flex";
-                    found++;
+                const name = card.getAttribute("data-name").toLowerCase();
+                if (name.includes(val)) {
+                    card.style.display = "flex"; // Restoring layout structure parameters
+                    count++;
                 } else {
                     card.style.display = "none";
                 }
             });
 
-            document.getElementById('noResult').style.display = (found === 0) ? "block" : "none";
+            const noResultDiv = document.getElementById("noResult");
+
+            if (match && count === 0) {
+                // Smart Search Redirect Engine Injection
+                const prefix = match[1].toLowerCase(); // e.g., 'cs', 'mgt'
+                const fullCode = (match[1] + match[2]).toUpperCase(); // e.g., 'CS101'
+                const folderUrl = `${prefix}-subject.html?search=${fullCode}`;
+
+                noResultDiv.style.display = "block";
+                noResultDiv.innerHTML = `
+                <div class="text-center p-8 bg-blue-50 rounded-[2rem] shadow-sm border border-blue-100 max-w-xl mx-auto mt-8">
+                    <span class="bg-blue-600 text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest mb-4 inline-block">Smart Search</span>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-2">Looking for ${fullCode} Papers?</h3>
+                    <p class="text-slate-500 mb-6 text-sm">We found the primary vault directory for this category! Click below to jump inside directly.</p>
+                    <a href="${folderUrl}" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200 w-full md:w-auto">
+                        Search ${fullCode} Directly <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            `;
+            }
+            else if (count === 0 && val !== "") {
+                // Standard Not Found Fallback Layout Node Configuration
+                noResultDiv.style.display = "block";
+                noResultDiv.innerHTML = `
+                <div class="text-center p-8 bg-white rounded-[2rem] shadow-sm border border-slate-200 max-w-xl mx-auto mt-8">
+                    <i class="fa-solid fa-face-frown text-5xl text-slate-300 mb-4"></i>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Oops! Subject Not Found</h3>
+                    <p class="text-slate-500 mb-6 text-sm">We couldn't find any category matching "<b>${val}</b>". If you need specific solved sheets, our team is live on WhatsApp!</p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <button onclick="resetSearch()" class="px-6 py-3 bg-slate-100 text-slate-600 rounded-xl font-bold hover:bg-slate-200 transition flex justify-center items-center gap-2">
+                            <i class="fa-solid fa-rotate-left"></i> Clear Search
+                        </button>
+                        <a href="https://wa.me/923196248868?text=Hello%20LGWT%20Team%2C%20I%20couldn%27t%20find%20past%20papers%20for%3A%20${encodeURIComponent(val.toUpperCase())}" target="_blank" class="px-6 py-3 bg-green-500 text-white rounded-xl font-bold hover:bg-green-600 transition shadow-lg shadow-green-200 flex justify-center items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> Ask on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            `;
+            } else {
+                noResultDiv.style.display = "none";
+            }
         }
 
+        function resetSearch() {
+            document.getElementById("searchInput").value = "";
+
+            // Restore elements default visibility parameters states configuration
+            const instructionBox = document.getElementById("instructionBox");
+            const quizBox = document.getElementById("quizBox");
+            if (instructionBox) instructionBox.style.display = "block";
+            if (quizBox) quizBox.style.display = "block";
+
+            filterCards();
+        }
     </script>
 </body>
 
