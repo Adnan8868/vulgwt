@@ -55,12 +55,12 @@
             <i
                 class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-lg"></i>
             <input type="text" id="searchInput" onkeyup="filterSubjects()"
-                placeholder="Search Subject Name or Code (e.g. CS101, MTH)..."
+                placeholder="Search Subject Name (e.g. ENG, MTH, BIO)..."
                 class="w-full p-4 pl-12 rounded-xl text-gray-800 outline-none border-none text-base">
         </div>
     </header>
 
-    <div class="max-w-7xl mx-auto px-6 mt-6">
+    <div id="instructionBox" class="max-w-7xl mx-auto px-6 mt-6">
         <div class="bg-blue-50 border-l-4 border-blue-600 rounded-xl p-4 shadow-sm">
             <div class="flex items-start gap-3">
                 <div class="text-blue-600 text-xl mt-1">
@@ -552,37 +552,48 @@
     </footer>
 
     <script>
-        function filterSubjects() {
-            const val = document.getElementById("searchInput").value.toLowerCase().trim();
-            const cards = document.querySelectorAll(".subject-card");
-            let count = 0;
+    function filterSubjects() {
+        const val = document.getElementById("searchInput").value.toLowerCase().trim();
+        const cards = document.querySelectorAll(".subject-card");
+        const instructionBox = document.getElementById("instructionBox");
+        let count = 0;
 
-            // Regex to detect if user typed a course code (e.g., CS101, ENG 201)
-            const codePattern = /^([a-z]{2,5})\s*(\d{2,4})$/i;
-            const match = val.match(codePattern);
+        // 🔍 SMART TOGGLE: Agar search bar mein kuch typed hai toh instruction box ko chupa do
+        if (instructionBox) {
+            if (val !== "") {
+                instructionBox.style.display = "none";
+            } else {
+                instructionBox.style.display = "block";
+            }
+        }
 
-            cards.forEach(card => {
-                const name = card.getAttribute("data-name").toLowerCase();
-                if (name.includes(val)) {
-                    card.style.display = "block";
-                    count++;
-                } else {
-                    card.style.display = "none";
-                }
-            });
+        // Regex to detect if user typed a course code (e.g., CS101, ENG 201)
+        const codePattern = /^([a-z]{2,5})\s*(\d{1,4})$/i;
+        const match = val.match(codePattern);
 
-            const noResultDiv = document.getElementById("noResult");
+        // Core grid items mapping filters loop processing names configuration
+        cards.forEach(card => {
+            const name = card.getAttribute("data-name").toLowerCase();
+            if (name.includes(val)) {
+                card.style.style.display = ""; // Defaults restoration back to flex/block layout configuration parameters
+                // Note: Agar layout responsive distortion ho to dynamic display override use karein:
+                card.style.display = "block";
+                count++;
+            } else {
+                card.style.display = "none";
+            }
+        });
 
-            if (match && count === 0) {
-                // Smart Search: User typed a code, suggest the correct folder!
-                const prefix = match[1].toLowerCase(); // e.g., 'cs', 'acc'
-                const fullCode = (match[1] + match[2]).toUpperCase(); // e.g., 'CS101'
+        const noResultDiv = document.getElementById("noResult");
 
-                // Note: Make sure your filenames follow the pattern 'cs-subject.html', 'acc-subject.html'
-                const folderUrl = `${prefix}-subject.html?search=${fullCode}`;
+        if (match && count === 0) {
+            // Smart Search Redirection Suggestion Folder Node Gateway
+            const prefix = match[1].toLowerCase(); // e.g., 'cs', 'acc'
+            const fullCode = (match[1] + match[2]).toUpperCase(); // e.g., 'CS101'
+            const folderUrl = `${prefix}-subject.html?search=${fullCode}`;
 
-                noResultDiv.style.display = "block";
-                noResultDiv.innerHTML = `
+            noResultDiv.style.display = "block";
+            noResultDiv.innerHTML = `
                 <div class="text-center p-8 bg-blue-50 rounded-[2rem] shadow-sm border border-blue-100 max-w-xl mx-auto mt-8">
                     <span class="bg-blue-600 text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest mb-4 inline-block">Smart Search</span>
                     <h3 class="text-2xl font-bold text-slate-800 mb-2">Looking for ${fullCode}?</h3>
@@ -592,11 +603,11 @@
                     </a>
                 </div>
             `;
-            }
-            else if (count === 0 && val !== "") {
-                // Standard Not Found with WhatsApp Button
-                noResultDiv.style.display = "block";
-                noResultDiv.innerHTML = `
+        }
+        else if (count === 0 && val !== "") {
+            // Standard Not Found Layout Node Configuration with WhatsApp Trigger Gateway Link Injection
+            noResultDiv.style.display = "block";
+            noResultDiv.innerHTML = `
                 <div class="text-center p-8 bg-white rounded-[2rem] shadow-sm border border-slate-100 max-w-xl mx-auto mt-8">
                     <i class="fa-solid fa-face-frown text-5xl text-slate-200 mb-4"></i>
                     <h3 class="text-xl font-bold text-slate-800 mb-2">Oops! Subject Not Found</h3>
@@ -605,25 +616,31 @@
                         <button onclick="resetSearch()" class="px-6 py-3 bg-slate-100 text-slate-600 rounded-xl font-bold hover:bg-slate-200 transition flex justify-center items-center gap-2">
                             <i class="fa-solid fa-rotate-left"></i> Clear Search
                         </button>
-                        <a href="https://wa.me/923196248868?text=Hello LGWT Team, I couldn't find material for: ${val.toUpperCase()}" target="_blank" class="px-6 py-3 bg-green-500 text-white rounded-xl font-bold hover:bg-green-600 transition shadow-lg shadow-green-200 flex justify-center items-center gap-2">
+                        <a href="https://wa.me/923196248868?text=Hello%20LGWT%20Team%2C%20I%20couldn%27t%20find%20material%20for%3A%20${encodeURIComponent(val.toUpperCase())}" target="_blank" class="px-6 py-3 bg-green-500 text-white rounded-xl font-bold hover:bg-green-600 transition shadow-lg shadow-green-200 flex justify-center items-center gap-2">
                             <i class="fa-brands fa-whatsapp text-xl"></i> Ask on WhatsApp
                         </a>
                     </div>
                 </div>
             `;
-            } else {
-                noResultDiv.style.display = "none";
-            }
-
-            document.getElementById("countDisplay").innerText = `Found ${count} Categories`;
+        } else {
+            noResultDiv.style.display = "none";
         }
 
-        function resetSearch() {
-            document.getElementById("searchInput").value = "";
-            filterSubjects();
-        }
-    </script>
+        document.getElementById("countDisplay").innerText = `Found ${count} Categories`;
+    }
 
+    function resetSearch() {
+        document.getElementById("searchInput").value = "";
+        
+        // 🌸 RESTORE STATE: Input clear hone par instruction box wapas show karein
+        const instructionBox = document.getElementById("instructionBox");
+        if (instructionBox) {
+            instructionBox.style.display = "block";
+        }
+        
+        filterSubjects();
+    }
+</script>
 </body>
 
 </html>
