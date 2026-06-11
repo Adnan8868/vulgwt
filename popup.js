@@ -31,11 +31,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // ==========================================
     // 💡 APNE WHATSAPP LINKS IN QUOTES KE ANDAR PASTE KAREIN
     // ==========================================
-    const WHATSAPP_CHANNEL_LINK = "https://whatsapp.com/channel/your-channel-link";
-    const WHATSAPP_GROUP_LINK   = "https://chat.whatsapp.com/your-group-link";
-    const PAPERS_REVIEW_LINK    = "https://adnan8868.github.io/lgwt-review/"; // Added your live link
+    const WHATSAPP_CHANNEL_LINK = "https://whatsapp.com/channel/0029VbAfKscEVccSHYySNP3I";
+    const WHATSAPP_GROUP_LINK   = "https://chat.whatsapp.com/CTYeKaeMCf00pyhM0aMB0e";
+    const PAPERS_REVIEW_LINK    = "https://adnan8868.github.io/lgwt-review/";
 
-    // 2. Setup Clean, Compact & Multi-Functional Popup Layout
     const popupHtml = `
     <div id="lgwtPopupOverlay" style="backdrop-filter: blur(4px); z-index: 99999;" class="fixed inset-0 bg-slate-900/60 flex items-center justify-center p-4 transition-all duration-300 opacity-0 pointer-events-none">
         <div class="bg-white text-slate-800 w-full max-w-sm rounded-[2rem] border border-slate-100 shadow-2xl p-6 transform scale-95 transition-all duration-300 relative overflow-hidden lgwt-premium-glow">
