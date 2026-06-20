@@ -83,3 +83,18 @@
     height: 2px;
     background-color: #fbbf24; /* Yellow underline */
 }
+
+
+.nav-glass {
+     background: rgba(255, 255, 255, 0.85);
+     backdrop-filter: blur(12px);
+     -webkit-backdrop-filter: blur(12px);
+     transition: background-color 0.3s ease, border-color 0.3s ease;
+ }
+
+ /* Dark mode dynamic glass override rule hook */
+ html.dark .nav-glass {
+     background: rgba(15, 23, 42, 0.85) !important;
+     backdrop-filter: blur(12px);
+     -webkit-backdrop-filter: blur(12px);
+ }
