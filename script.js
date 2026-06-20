@@ -207,3 +207,54 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+
+/* ====================================
+     Dynamic Dark Mode Engine 
+==================================== */
+function initDarkModeEngine() {
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle');
+    
+    // Switch state checking handler
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+        setToggleIconState(true);
+    } else {
+        document.documentElement.classList.remove('dark');
+        setToggleIconState(false);
+    }
+
+    function handleThemeToggle() {
+        if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('color-theme', 'light');
+            setToggleIconState(false);
+        } else {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('color-theme', 'dark');
+            setToggleIconState(true);
+        }
+    }
+
+    if (themeToggleBtn) themeToggleBtn.addEventListener('click', handleThemeToggle);
+    if (mobileThemeToggleBtn) mobileThemeToggleBtn.addEventListener('click', handleThemeToggle);
+}
+
+function setToggleIconState(isDarkActive) {
+    const mainDesktopIcon = document.querySelector('#theme-toggle i');
+    const mainMobileIcon = document.querySelector('#mobile-theme-toggle i');
+    
+    if (isDarkActive) {
+        if (mainDesktopIcon) mainDesktopIcon.className = 'fa-solid fa-sun text-yellow-400';
+        if (mainMobileIcon) mainMobileIcon.className = 'fa-solid fa-sun text-yellow-400';
+    } else {
+        if (mainDesktopIcon) mainDesktopIcon.className = 'fa-solid fa-moon text-slate-700';
+        if (mainMobileIcon) mainMobileIcon.className = 'fa-solid fa-moon text-slate-700';
+    }
+}
+
+// Global invocation event handler
+document.addEventListener('DOMContentLoaded', () => {
+    initDarkModeEngine();
+});
