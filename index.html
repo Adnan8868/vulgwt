@@ -5,51 +5,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VU LGWT | Learning and Growing with Team</title>
+
     <meta name="description"
         content="VU LGWT (Learning and Growing with Team) provides 100% accurate LMS solutions, assignments, quizzes, and past papers for Virtual University students.">
     <meta name="keywords"
         content="LGWT, VU LGWT, Learning and Growing with Team, Virtual University Assignments, VU Study, VU Past Papers, LMS Handling">
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- <link rel="icon" href="https://img.icons8.com/fluency/48/graduation-cap.png" type="image/x-icon"> -->
-    <link rel="icon" type="image/x-icon" href="favicon.png">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <link rel="stylesheet" href="index.css">
-
+    <link rel="icon" type="image/x-icon" href="favicon.png">
 </head>
 
-<body class="bg-gray-50">
+<body
+    class="bg-gray-50 text-slate-800 dark:bg-[#0b1329] dark:text-slate-100 transition-colors duration-300 font-['Poppins']">
 
-    <!-- Scroll Bar -->
     <div id="scroll-progress-container" class="fixed top-0 left-0 w-full h-1 z-[100] bg-transparent">
         <div id="scroll-progress-bar" class="h-full bg-yellow-500 w-0 transition-all duration-150"></div>
     </div>
 
-    <!-- Nave Bar -->
-    <nav class="fixed w-full z-50 nav-glass border-b border-gray-200">
+    <!-- Buttons Papers Handouts -->
+    <section>
+        <a href="papers/pastpapers.html"
+            class="absolute top-20 left-2 sm:left-4 z-40 flex items-center gap-1.5 px-5 py-2.5 bg-gradient-to-r from-emerald-500 to-green-400 text-slate-950 font-black rounded-lg shadow-[0_4px_20px_rgba(16,185,129,0.35)] border border-emerald-300/50 transition-all transform hover:scale-105 active:scale-95"
+            title="Past Papers Vault">
+            <i class="fa-solid fa-file-lines text-[11px]"></i>
+            <span class="text-[9px] sm:text-[12px] uppercase tracking-wider font-extrabold">Past Papers</span>
+        </a>
+
+        <a href="handouts/handouts.html"
+            class="absolute top-20 right-2 sm:right-4 z-40 flex items-center gap-1.5 px-5 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-500 text-white font-black rounded-lg shadow-[0_4px_20px_rgba(147,51,234,0.35)] border border-purple-400/40 transition-all transform hover:scale-105 active:scale-95"
+            title="VU Handouts Library">
+            <span class="text-[9px] sm:text-[12px] uppercase tracking-wider font-extrabold">Handouts</span>
+            <i class="fa-solid fa-book-open text-[11px] text-purple-200"></i>
+        </a>
+    </section>
+
+    <!-- Nabvar -->
+    <nav class="fixed w-full z-50 nav-glass border-b border-gray-200 dark:border-slate-800 transition-colors">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
-                <div class="text-2xl font-bold text-blue-800">
-                    <span class="text-blue-600">VU</span> STUDY <span class="text-yellow-500">LGWT</span>
+                <div class="text-2xl font-bold text-blue-800 dark:text-blue-400">
+                    <span class="text-blue-600 dark:text-blue-500">VU</span> STUDY <span
+                        class="text-yellow-500">LGWT</span>
                 </div>
 
-                <a href="notice-board.html"
-                    class="relative text-gray-700 hover:text-blue-600 transition text-xl flex items-center p-2 mr-2 group"
-                    title="Notice Board">
-                    <i class="fa-solid fa-bell animate-[wiggle_1s_ease-in-out_infinite]"></i>
-                    <span
-                        class="absolute top-1 right-1 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-white shadow-[0_0_8px_#ef4444]"></span>
-                </a>
+                <div class="flex items-center gap-4">
+                    <a href="notice-board.html"
+                        class="relative text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition text-xl flex items-center p-2 mr-2 group"
+                        title="Notice Board">
+                        <i class="fa-solid fa-bell animate-[wiggle_1s_ease-in-out_infinite]"></i>
+                        <span
+                            class="absolute top-1 right-1 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-white dark:border-slate-900 shadow-[0_0_8px_#ef4444]"></span>
+                    </a>
 
-                <div class="hidden md:flex space-x-6 lg:space-x-8 font-medium text-gray-700 items-center">
-                    <a href="#home" class="hover:text-blue-600 transition">Home</a>
-                    <a href="#resources" class="hover:text-blue-600 transition">Exam Prep</a>
-                    <a href="#services" class="hover:text-blue-600 transition">Services</a>
-                    <a href="#lms-calculator" class="hover:text-blue-600 transition">Fee Calculator</a>
-                    <a href="#results" class="hover:text-blue-600 transition">Results</a>
+                    <button id="theme-toggle"
+                        class="p-2 rounded-xl bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 transition-all text-slate-700 dark:text-yellow-400 border border-gray-200 dark:border-slate-700 hidden md:flex items-center justify-center shadow-sm">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                </div>
+
+                <div
+                    class="hidden md:flex space-x-6 lg:space-x-8 font-medium text-gray-700 dark:text-gray-300 items-center">
+                    <a href="#home" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Home</a>
+                    <a href="#resources" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Exam
+                        Prep</a>
+                    <a href="#services"
+                        class="hover:text-blue-600 dark:hover:text-blue-400 transition">Services</a>
+                    <a href="#lms-calculator"
+                        class="hover:text-blue-600 dark:hover:text-blue-400 transition">Fee Calculator</a>
+                    <a href="#results"
+                        class="hover:text-blue-600 dark:hover:text-blue-400 transition">Results</a>
 
                     <a href="contact.html"
                         class="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-6 py-2.5 rounded-xl hover:shadow-lg hover:shadow-blue-200 transition-all transform hover:-translate-y-0.5 active:scale-95 font-bold text-sm uppercase tracking-wider flex items-center gap-2">
@@ -57,29 +91,38 @@
                     </a>
                 </div>
 
-                <button id="mobile-menu-btn" class="md:hidden text-2xl text-blue-800 focus:outline-none">
+                <button id="mobile-menu-btn"
+                    class="md:hidden text-2xl text-blue-800 dark:text-blue-400 focus:outline-none">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
         </div>
 
         <div id="mobile-menu"
-            class="hidden md:hidden bg-white border-t border-gray-100 p-6 space-y-5 shadow-2xl rounded-b-[2rem]">
-            <a href="#home" class="block text-gray-700 font-semibold hover:text-blue-600">Home</a>
-            <a href="#resources" class="block text-gray-700 font-semibold hover:text-blue-600">Files & Exam
+            class="hidden md:hidden bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-slate-800 p-6 space-y-5 shadow-2xl rounded-b-[2rem]">
+            <button id="mobile-theme-toggle"
+                class="w-full py-3 px-4 bg-gray-100 dark:bg-slate-800 rounded-xl font-bold text-xs text-slate-700 dark:text-yellow-400 border border-gray-200 dark:border-slate-700 flex items-center justify-center gap-2 transition">
+                <i class="fa-solid fa-moon"></i> SWITCH THEME
+            </button>
+            <a href="#home"
+                class="block text-gray-700 dark:text-gray-300 font-semibold hover:text-blue-600">Home</a>
+            <a href="#resources"
+                class="block text-gray-700 dark:text-gray-300 font-semibold hover:text-blue-600">Files & Exam
                 Prep</a>
-            <a href="#services" class="block text-gray-700 font-semibold hover:text-blue-600">Services</a>
-            <a href="#lms-calculator" class="block text-gray-700 font-semibold hover:text-blue-600">Fee
+            <a href="#services"
+                class="block text-gray-700 dark:text-gray-300 font-semibold hover:text-blue-600">Services</a>
+            <a href="#lms-calculator"
+                class="block text-gray-700 dark:text-gray-300 font-semibold hover:text-blue-600">Fee
                 Calculator</a>
-            <a href="#results" class="block text-gray-700 font-semibold hover:text-blue-600">Results</a>
+            <a href="#results"
+                class="block text-gray-700 dark:text-gray-300 font-semibold hover:text-blue-600">Results</a>
             <a href="contact.html"
-                class="block w-full py-4 bg-blue-600 text-white text-center rounded-2xl font-black shadow-lg shadow-blue-100">
-                CONTACT US NOW
-            </a>
+                class="block w-full py-4 bg-blue-600 text-white text-center rounded-2xl font-black shadow-lg shadow-blue-100">CONTACT
+                US NOW</a>
         </div>
     </nav>
 
-    <!-- Home page -->
+    <!-- Home Page -->
     <section id="home" class="hero-bg min-h-screen flex items-center justify-center text-center px-4 pt-16">
         <div class="max-w-4xl">
             <h1 class="text-3xl md:text-6xl font-bold text-white mb-6">
@@ -92,8 +135,7 @@
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="#lms-calculator"
                     class="bg-yellow-500 text-blue-900 px-10 py-4 rounded-xl font-bold text-lg hover:bg-yellow-400 shadow-xl transition transform hover:scale-105">
-                    Check
-                    Fee 💰
+                    Check Fee 💰
                 </a>
                 <a href="#resources"
                     class="bg-white/10 text-white border border-white/30 backdrop-blur px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition">
@@ -103,309 +145,287 @@
         </div>
     </section>
 
-    <!-- Latest -->
-    <section class="py-12 bg-white border-b">
+    <!-- Accuracy Trusted -->
+    <section
+        class="py-12 bg-white dark:bg-slate-900 border-b border-gray-100 dark:border-slate-800 transition-colors">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div class="space-y-2">
                 <i class="fa-solid fa-circle-check text-blue-600 text-3xl"></i>
-                <h4 class="font-bold text-gray-800">100% Accuracy</h4>
+                <h4 class="font-bold text-gray-800 dark:text-gray-200">100% Accuracy</h4>
             </div>
             <div class="space-y-2">
                 <i class="fa-solid fa-clock-rotate-left text-blue-600 text-3xl"></i>
-                <h4 class="font-bold text-gray-800">On-Time Delivery</h4>
+                <h4 class="font-bold text-gray-800 dark:text-gray-200">On-Time Delivery</h4>
             </div>
             <div class="space-y-2">
                 <i class="fa-regular fa-handshake text-blue-600 text-3xl"></i>
-                <h4 class="font-bold text-gray-800">Trusted Service</h4>
+                <h4 class="font-bold text-gray-800 dark:text-gray-200">Trusted Service</h4>
             </div>
             <div class="space-y-2">
                 <i class="fa-solid fa-tags text-blue-600 text-3xl"></i>
-                <h4 class="font-bold text-gray-800">Fair Pricing</h4>
+                <h4 class="font-bold text-gray-800 dark:text-gray-200">Fair Pricing</h4>
             </div>
         </div>
     </section>
 
-    <!-- Google Drive Section -->
-    <section id="google-drives-vault"
-        class="py-24 bg-gradient-to-b from-white to-slate-50 relative overflow-hidden border-b border-gray-200">
+    <!-- Cuurent Paper And Drives -->
+    <section id="exam-exclusives-vault"
+        class="py-24 bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-950 border-b border-gray-200 dark:border-slate-800 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div
-            class="absolute top-16 left-8 text-blue-500/10 text-5xl pointer-events-none hidden md:block select-none animate-[pulse_3s_infinite]">
-            <i class="fa-solid fa-leaf"></i>
-        </div>
-        <div
-            class="absolute bottom-16 right-12 text-yellow-500/10 text-5xl pointer-events-none hidden md:block select-none animate-[bounce_4s_infinite]">
-            <i class="fa-solid fa-book-open"></i>
-        </div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-
-            <div class="text-center mb-14">
+            <div class="text-center mb-16">
                 <span
-                    class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
-                    All Google Drives
+                    class="bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-400 px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
+                    Premium Exam Utilities
                 </span>
-                <h2 class="text-3xl md:text-4xl font-black text-slate-900 mt-4 uppercase">
-                    Exam Wise <span
-                        class="text-blue-600 underline decoration-yellow-400 decoration-4 underline-offset-8">Resource
+                <h2 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mt-4 uppercase">
+                    Academic <span
+                        class="text-blue-600 underline decoration-yellow-400 decoration-4 underline-offset-8">Exclusives
                         Vault</span>
                 </h2>
-                <p class="text-slate-500 mt-4 text-xs md:text-sm font-medium italic max-w-xl mx-auto">
-                    Team Hadi, Attiq Kundi, Mughal, or Zaman ke saare important links ab ek hi jagah par hain.
+                <p
+                    class="text-slate-500 dark:text-slate-400 mt-4 text-xs md:text-sm font-medium italic max-w-xl mx-auto">
+                    All Google Drive links, short notes, and daily live updated exam paper reviews arranged in
+                    a single dashboard grid.
                 </p>
             </div>
 
-            <div class="relative group max-w-5xl mx-auto">
-                <div
-                    class="absolute -inset-1.5 bg-gradient-to-r from-blue-600 via-yellow-400 to-emerald-500 rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-700">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+
+                <div class="relative group">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-[2.5rem] blur opacity-20 group-hover:opacity-40 transition duration-500">
+                    </div>
+                    <div
+                        class="relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 md:p-8 rounded-[2.5rem] shadow-xl flex flex-col justify-between h-full transition-colors">
+                        <div
+                            class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-5 mb-6">
+                            <div
+                                class="w-14 h-14 bg-gradient-to-tr from-slate-900 to-blue-900 text-white rounded-2xl flex items-center justify-center text-xl shrink-0 border border-white/10 shadow-md">
+                                <i
+                                    class="fa-solid fa-folder-open text-yellow-400 animate-[pulse_2s_infinite]"></i>
+                            </div>
+                            <div class="min-w-0">
+                                <div
+                                    class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+                                    <span
+                                        class="bg-blue-600 text-white font-black text-[9px] uppercase tracking-widest px-2.5 py-0.5 rounded-md shadow-sm">Cloud
+                                        Links</span>
+                                    <span
+                                        class="bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-400 font-bold text-[9px] uppercase px-2 py-0.5 rounded-md">Spring
+                                        2026</span>
+                                </div>
+                                <h3
+                                    class="text-xl font-black text-slate-900 dark:text-white uppercase tracking-tight mt-3">
+                                    All In One Drive Links With Name</h3>
+                                <p
+                                    class="text-slate-500 dark:text-slate-400 text-xs font-medium mt-2 leading-relaxed">
+                                    Team Hadi, Attiq Kundi, Mughal, Zaman, VU Topper, aur VU TALK ke saare
+                                    mega drives single click se access karen.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="pt-2">
+                            <a href="drive.html"
+                                class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-blue-800 text-white py-4 rounded-2xl font-black text-xs uppercase tracking-widest shadow-md transition-all active:scale-95 group/btn">
+                                <span>Open Drives Folder</span>
+                                <i
+                                    class="fa-solid fa-circle-chevron-right text-yellow-400 group-hover/btn:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
-                <div
-                    class="relative bg-white border border-slate-200/80 p-6 md:p-10 rounded-[2.5rem] shadow-xl flex flex-col lg:flex-row items-center justify-between gap-8 overflow-hidden">
-
+                <div class="relative group">
                     <div
-                        class="flex flex-col sm:flex-row items-center text-center sm:text-left gap-6 w-full lg:w-auto">
+                        class="absolute -inset-1 bg-gradient-to-r from-emerald-600 to-green-400 rounded-[2.5rem] blur opacity-20 group-hover:opacity-40 transition duration-500">
+                    </div>
+                    <div
+                        class="relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 md:p-8 rounded-[2.5rem] shadow-xl flex flex-col justify-between h-full transition-colors">
                         <div
-                            class="w-16 h-16 bg-gradient-to-tr from-slate-900 to-blue-900 text-white rounded-2xl flex items-center justify-center text-2xl shrink-0 shadow-xl border border-white/10 group-hover:scale-105 transition-transform duration-300">
-                            <i
-                                class="fa-solid fa-folder-open text-yellow-400 animate-[pulse_2s_infinite]"></i>
-                        </div>
-
-                        <div class="min-w-0">
-                            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
-                                <span
-                                    class="bg-blue-600 text-white font-black text-[9px] uppercase tracking-widest px-3 py-1 rounded-md shadow-md shadow-blue-500/20">
-                                    <i class="fa-solid fa-cloud mr-1 text-yellow-300"></i> Cloud Links Hub
-                                </span>
-                                <span
-                                    class="bg-amber-100 border border-amber-200 text-amber-800 font-bold text-[9px] uppercase tracking-wider px-2.5 py-0.5 rounded-md flex items-center gap-1 animate-pulse">
-                                    <span class="w-1.5 h-1.5 bg-amber-500 rounded-full inline-block"></span>
-                                    Spring 2026 Updated
+                            class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-5 mb-6">
+                            <div
+                                class="relative w-14 h-14 bg-slate-900 dark:bg-slate-950 rounded-2xl flex items-center justify-center text-xl shrink-0 border border-white/10 shadow-md">
+                                <i class="fa-solid fa-fire text-yellow-400"></i>
+                                <span class="absolute -top-1 -right-1 flex h-3 w-3">
+                                    <span
+                                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
                                 </span>
                             </div>
-
-                            <h3
-                                class="text-xl md:text-2xl font-black text-slate-900 uppercase tracking-tight mt-3">
-                                All In One Drive Links With Name
-                            </h3>
-                            <p class="text-slate-500 text-xs font-semibold mt-1.5 leading-relaxed max-w-2xl">
-                                Humne Virtual University ke saare top files, past papers, short notes aur
-                                grand quiz drives aur Maha Malik Drive , Team Hadi , VU Topper VU TALK, All In
-                                one Drives ko ek hi portal par Combine kar diya hai. Students bina kisi
-                                mushkil ke single click se apni pasandida drive ko open kar ke material
-                                download kar sakte hain!
-                            </p>
+                            <div class="min-w-0">
+                                <div
+                                    class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+                                    <span
+                                        class="bg-emerald-600 text-white font-black text-[9px] uppercase tracking-widest px-2.5 py-0.5 rounded-md shadow-sm">Live
+                                        Track</span>
+                                    <span
+                                        class="bg-red-100 dark:bg-red-950 text-red-600 dark:text-red-400 font-black text-[9px] uppercase px-2 py-0.5 rounded-md animate-pulse">Exam
+                                        Active</span>
+                                </div>
+                                <h3
+                                    class="text-xl font-black text-slate-900 dark:text-white uppercase tracking-tight mt-3">
+                                    Current Papers & Reviews</h3>
+                                <p
+                                    class="text-slate-500 dark:text-slate-400 text-xs font-medium mt-2 leading-relaxed">
+                                    Daily updated current active exam papers, live students shared reviews,
+                                    and expert solved terminal solutions.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="pt-2">
+                            <a href="https://adnan8868.github.io/lgwt-review/" target="_blank"
+                                class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-600 to-green-500 text-slate-950 dark:text-white py-4 rounded-2xl font-black text-xs uppercase tracking-widest shadow-md transition-all active:scale-95 group/btn">
+                                <span>Open Live Vault</span>
+                                <i
+                                    class="fa-solid fa-arrow-right text-slate-950 dark:text-emerald-300 group-hover/btn:translate-x-1 transition-transform"></i>
+                            </a>
                         </div>
                     </div>
-
-                    <div class="w-full lg:w-auto shrink-0 relative z-10 pt-2 lg:pt-0">
-                        <a href="drive.html"
-                            class="w-full lg:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest transition-all duration-300 shadow-xl hover:shadow-blue-500/20 active:scale-95 border-b-4 border-blue-900 group/btn">
-                            <i
-                                class="fa-solid fa-book-bookmark text-xs text-yellow-400 group-hover/btn:rotate-12 transition-transform"></i>
-                            <span>Open Drives Folder</span>
-                            <i
-                                class="fa-solid fa-circle-chevron-right text-base opacity-90 group-hover/btn:translate-x-1 transition-transform text-yellow-400"></i>
-                        </a>
-                    </div>
-
                 </div>
+
             </div>
 
         </div>
     </section>
 
     <!-- Resources -->
-    <section id="resources" class="py-24 bg-slate-50 border-y">
-
+    <section id="resources"
+        class="py-24 bg-slate-50 dark:bg-slate-950 border-y border-gray-200 dark:border-slate-900 transition-colors">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
                 <span
-                    class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">Student
+                    class="bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-400 px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">Student
                     Toolkit</span>
-                <h2 class="text-4xl font-black text-slate-900 mt-4 uppercase">Academic <span
+                <h2 class="text-4xl font-black text-slate-900 dark:text-white mt-4 uppercase">Academic <span
                         class="text-blue-600">Resources Hub</span></h2>
                 <div class="w-16 h-1 bg-yellow-400 mx-auto mt-4"></div>
                 <p class="text-slate-500 mt-4 font-medium italic">Everything you need to excel in your Virtual
                     University journey</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
                 <a href="handouts/handouts.html"
-                    class="bg-white p-8 rounded-[2.5rem] shadow-sm border border-slate-100 flex flex-col items-center text-center group hover:border-blue-500 hover:shadow-xl transition-all duration-300">
+                    class="bg-white dark:bg-slate-900 p-6 rounded-[2.5rem] shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col items-center text-center group hover:border-blue-700 transition-all">
                     <div
-                        class="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        class="w-14 h-14 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-xl mb-4 shadow-lg">
                         <i class="fa-solid fa-book-open"></i>
                     </div>
-                    <h3 class="text-lg font-black text-slate-800 uppercase mb-2">VU Handouts</h3>
-                    <p class="text-slate-400 text-[11px] leading-relaxed">Download latest highlighted &
-                        updated PDF handouts.</p>
+                    <h3 class="text-md font-black text-slate-800 dark:text-slate-200 uppercase mb-2">VU
+                        Handouts</h3>
+                    <p class="text-slate-400 text-[11px]">Latest highlighted PDFs.</p>
                 </a>
 
                 <a href="papers/pastpapers.html"
-                    class="bg-white p-8 rounded-[2.5rem] shadow-sm border border-slate-100 flex flex-col items-center text-center group hover:border-yellow-500 hover:shadow-xl transition-all duration-300">
+                    class="bg-white dark:bg-slate-900 p-6 rounded-[2.5rem] shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col items-center text-center group hover:border-yellow-500 transition-all">
                     <div
-                        class="w-16 h-16 bg-yellow-500 text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        class="w-14 h-14 bg-yellow-500 text-white rounded-2xl flex items-center justify-center text-xl mb-4 shadow-lg">
                         <i class="fa-solid fa-file-lines"></i>
                     </div>
-                    <h3 class="text-lg font-black text-slate-800 uppercase mb-2">Past Papers</h3>
-                    <p class="text-slate-400 text-[11px] leading-relaxed">Access Mid-term & Final-term solved
-                        paper vault.</p>
+                    <h3 class="text-md font-black text-slate-800 dark:text-slate-200 uppercase mb-2">Past
+                        Papers</h3>
+                    <p class="text-slate-400 text-[11px]">Mid & Final term vault.</p>
                 </a>
 
                 <a href="moaz/imp.html"
-                    class="bg-white p-8 rounded-[2.5rem] shadow-sm border border-slate-100 flex flex-col items-center text-center group hover:border-emerald-500 hover:shadow-xl transition-all duration-300">
+                    class="bg-white dark:bg-slate-900 p-6 rounded-[2.5rem] shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col items-center text-center group hover:border-emerald-500 transition-all">
                     <div
-                        class="w-16 h-16 bg-emerald-600 text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        class="w-14 h-14 bg-emerald-600 text-white rounded-2xl flex items-center justify-center text-xl mb-4 shadow-lg">
                         <i class="fa-solid fa-vault"></i>
                     </div>
-                    <h3 class="text-lg font-black text-slate-800 uppercase mb-2">Moaz Waqar Files</h3>
-                    <p class="text-slate-400 text-[11px] leading-relaxed">Direct Drive links by Moazz, Waqar,
-                        Junaid & VU Topper.</p>
+                    <h3 class="text-md font-black text-slate-800 dark:text-slate-200 uppercase mb-2">Moaz
+                        Waqar Files</h3>
+                    <p class="text-slate-400 text-[11px]">Direct teacher drive links.</p>
                 </a>
 
                 <a href="link.html" target="_blank"
-                    class="bg-white p-8 rounded-[2.5rem] shadow-sm border border-slate-100 flex flex-col items-center text-center group hover:border-red-500 hover:shadow-xl transition-all duration-300">
+                    class="bg-white p-6 dark:bg-slate-900 rounded-[2.5rem] shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col items-center text-center group hover:border-red-500 transition-all">
                     <div
-                        class="w-16 h-16 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner group-hover:scale-110 transition-transform">
+                        class="w-14 h-14 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center text-xl mb-4">
                         <i class="fa-brands fa-youtube"></i>
                     </div>
-                    <h3 class="text-lg font-black text-slate-800 uppercase mb-2">Short Lectures</h3>
-                    <p class="text-slate-400 text-[11px] leading-relaxed">Subject-wise curated YouTube study
-                        playlists.</p>
+                    <h3 class="text-md font-black text-slate-800 dark:text-slate-200 uppercase mb-2">Short
+                        Lectures</h3>
+                    <p class="text-slate-400 text-[11px]">YouTube playlists.</p>
                 </a>
 
                 <a href="Exam Prepartion/ExamPrepartion.html"
-                    class="bg-slate-800 p-8 rounded-[2.5rem] shadow-xl border border-slate-800 flex flex-col items-center text-center group hover:bg-blue-600 transition-all duration-300 relative overflow-hidden">
+                    class="bg-slate-800 p-6 rounded-[2.5rem] shadow-xl border border-slate-800 flex flex-col items-center text-center group hover:bg-blue-600 transition-all col-span-1">
                     <div
-                        class="absolute -top-5 -right-5 w-16 h-16 bg-white/5 rounded-full group-hover:scale-150 transition-transform">
-                    </div>
-                    <div
-                        class="w-16 h-16 bg-white/10 text-yellow-400 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner group-hover:rotate-12 transition-transform">
+                        class="w-14 h-14 bg-white/10 text-yellow-400 rounded-2xl flex items-center justify-center text-xl mb-4">
                         <i class="fa-solid fa-graduation-cap"></i>
                     </div>
-                    <h3 class="text-lg font-black text-white uppercase mb-2">Exam Prep Hub</h3>
-                    <p class="text-slate-400 text-[11px] leading-relaxed group-hover:text-white/80">340+
-                        Subjects Mid & Final Term Video Solutions.</p>
+                    <h3 class="text-md font-black text-white uppercase mb-2">Exam Prep Hub</h3>
+                    <p class="text-slate-400 text-[11px] group-hover:text-white/80">340+ Subject solutions.
+                    </p>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Current Papers & Reviews Section -->
-    <section id="current-papers" class="py-12 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <a href="https://adnan8868.github.io/lgwt-review/" target="_blank" class="relative block group">
-                <!-- Glow Effect -->
-                <div
-                    class="absolute -inset-1 bg-gradient-to-r from-blue-600 via-yellow-400 to-emerald-500 rounded-[2.5rem] blur opacity-30 group-hover:opacity-60 transition duration-500">
-                </div>
-
-                <div
-                    class="relative bg-white p-8 md:p-10 rounded-[2.5rem] border border-slate-200 shadow-xl flex flex-col md:flex-row items-center justify-between gap-8">
-                    <div class="flex items-center gap-6">
-                        <!-- Icon -->
-                        <div
-                            class="relative w-20 h-20 bg-slate-900 rounded-3xl flex items-center justify-center text-3xl shadow-2xl">
-                            <i class="fa-solid fa-fire text-yellow-400 animate-pulse"></i>
-                            <span class="absolute -top-2 -right-2 flex h-5 w-5">
-                                <span
-                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-5 w-5 bg-red-500"></span>
-                            </span>
-                        </div>
-                        <!-- Text -->
-                        <div>
-                            <span
-                                class="text-[10px] font-black uppercase tracking-[0.2em] text-blue-600">Spring
-                                2026</span>
-                            <h3
-                                class="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tight">
-                                Current Papers & Reviews</h3>
-                            <p class="text-slate-500 text-sm font-medium mt-1">Daily updated exam papers,
-                                student reviews, and solved solutions.</p>
-                        </div>
-                    </div>
-
-                    <!-- Action Button -->
-                    <div class="shrink-0">
-                        <button
-                            class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-black uppercase text-sm tracking-widest shadow-lg shadow-blue-500/30 transition-all active:scale-95">
-                            Open Vault <i class="fa-solid fa-arrow-right ml-2"></i>
-                        </button>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </section>
-
-    <!-- Services Files -->
-    <section id="services" class="py-24 bg-white">
+    <!-- Quiz Assignmnets -->
+    <section id="services" class="py-24 bg-white dark:bg-slate-900 transition-colors">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
                 <span
-                    class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">Academic
+                    class="bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-400 px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">Academic
                     Solutions</span>
-                <h2 class="text-4xl font-black text-slate-900 mt-4 uppercase">Latest <span
+                <h2 class="text-4xl font-black text-slate-900 dark:text-white mt-4 uppercase">Latest <span
                         class="text-blue-600">Solutions</span></h2>
-                <div class="w-16 h-1 bg-yellow-400 mx-auto mt-4"></div>
             </div>
 
             <div class="grid md:grid-cols-2 gap-10">
-
                 <div
-                    class="bg-slate-50 p-10 rounded-[3rem] card-shadow text-center border border-slate-100 relative group transition-all">
-                    <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">📝</div>
-                    <h3 class="text-2xl font-black text-slate-800 mb-4">Assignments</h3>
-                    <p class="text-slate-500 text-sm mb-8 leading-relaxed">Plagiarism-free, properly formatted
-                        solutions
-                        according to VU marking scheme.</p>
+                    class="bg-slate-50 dark:bg-slate-950 p-10 rounded-[3rem] card-shadow text-center border border-slate-100 dark:border-slate-800">
+                    <div class="text-5xl mb-6">📝</div>
+                    <h3 class="text-2xl font-black text-slate-800 dark:text-slate-200 mb-4">Assignments</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-8">Plagiarism-free solutions
+                        according to marking scheme.</p>
                     <a href="Services/assignmnet.html"
-                        class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-2xl font-black uppercase text-xs tracking-widest shadow-lg hover:bg-blue-700 hover:scale-105 transition-all duration-300">
-                        Access Hub <i class="fa-solid fa-arrow-right"></i>
-                    </a>
+                        class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-2xl font-black text-xs uppercase tracking-widest shadow-lg">Access
+                        Hub</a>
                 </div>
 
                 <div
-                    class="bg-slate-50 p-10 rounded-[3rem] card-shadow text-center border border-slate-100 relative group transition-all">
-                    <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">🎯</div>
-                    <h3 class="text-2xl font-black text-slate-800 mb-4">Grand Quizzes</h3>
-                    <p class="text-slate-500 text-sm mb-8 leading-relaxed">10/10 marks guaranteed with our
-                        expert
-                        handling and huge MCQ bank.</p>
+                    class="bg-slate-50 dark:bg-slate-950 p-10 rounded-[3rem] card-shadow text-center border border-slate-100 dark:border-slate-800">
+                    <div class="text-5xl mb-6">🎯</div>
+                    <h3 class="text-2xl font-black text-slate-800 dark:text-slate-200 mb-4">Grand Quizzes</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-8">10/10 marks guaranteed with
+                        expert handling pools.</p>
                     <a href="Services/solution.html"
-                        class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-2xl font-black uppercase text-xs tracking-widest shadow-lg hover:bg-blue-700 hover:scale-105 transition-all duration-300">
-                        Open Bank <i class="fa-solid fa-arrow-right"></i>
-                    </a>
+                        class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-2xl font-black text-xs uppercase tracking-widest shadow-lg">Open
+                        Bank</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Handling SMS -->
-    <section id="offer" class="py-24 bg-slate-50">
+    <!-- LMS Handling OFFER -->
+    <section id="offer"
+        class="py-24 bg-slate-50 dark:bg-slate-950 border-t border-b border-gray-100 dark:border-slate-800 transition-colors">
         <div class="max-w-7xl mx-auto px-6">
 
             <div class="text-center mb-16">
                 <span
                     class="bg-yellow-100 text-yellow-700 px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest">Premium
                     Service</span>
-                <h2 class="text-4xl font-black text-slate-900 mt-4 uppercase">LMS Handling <span
-                        class="text-blue-600">Offers</span></h2>
+                <h2 class="text-4xl font-black text-slate-900 mt-4 uppercase dark:text-white"><span
+                        class="text-green-600">LMS</span> Handling <span class="text-blue-600">Offers</span>
+                </h2>
                 <p class="text-slate-500 mt-2 italic">Professional management for busy students</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-10">
 
                 <div
-                    class="bg-white p-10 rounded-[3rem] shadow-xl border border-blue-50 relative overflow-hidden group hover:border-blue-500 transition-all">
+                    class="bg-white dark:bg-slate-900 p-10 rounded-[3rem] shadow-xl border border-blue-50 dark:border-slate-800 relative overflow-hidden">
                     <div
                         class="absolute -top-10 -right-10 w-32 h-32 bg-blue-600/5 rounded-full group-hover:scale-150 transition-all">
                     </div>
 
-                    <h3 class="text-2xl font-black text-slate-800 mb-6 flex items-center gap-3">
-                        <i class="fa-solid fa-briefcase text-blue-600"></i> Complete Handling
+                    <h3
+                        class="text-2xl font-black text-slate-800 mb-6 flex items-center gap-3 dark:text-white">
+                        <i class="fa-solid fa-briefcase text-blue-600 "></i> Complete Handling
                     </h3>
 
                     <ul class="space-y-4 text-slate-600 font-medium mb-10">
@@ -482,14 +502,15 @@
         </div>
     </section>
 
-    <!-- HTML FOE LMS Calculators -->
-    <section id="lms-calculator" class="py-10 md:py-20 bg-slate-50">
+    <!-- LMS Calculator -->
+    <section id="lms-calculator" class="py-10 md:py-20 bg-slate-50 dark:bg-slate-900 transition-colors">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-10">
                 <span
                     class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider">Premium
                     Billing</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-4 uppercase text-center">
+                <h2
+                    class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-4 uppercase text-center dark:text-white mt-4 uppercase text-center">
                     Smart <span class="text-blue-600">LMS Estimator</span></h2>
                 <p class="text-slate-500 mt-2 text-sm">Enter subjects to see your total bill and exclusive
                     savings.</p>
@@ -738,64 +759,54 @@
         </div>
     </section>
 
-    <!-- Acadmic result -->
-    <section id="results" class="py-24 bg-white border-t">
+    <!-- Result Proof -->
+    <section id="results" class="py-24 bg-white dark:bg-slate-950 transition-colors">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <div class="mb-16">
                 <span
-                    class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">Verified
+                    class="bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-400 px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">Verified
                     Proofs</span>
-                <h2 class="text-4xl font-black text-slate-900 mt-4 uppercase">
-                    Academic <span class="text-blue-600 underline decoration-yellow-400">Success Hub</span>
-                </h2>
+                <h2 class="text-4xl font-black text-slate-900 dark:text-white mt-4 uppercase">Academic <span
+                        class="text-blue-600 underline decoration-yellow-400">Success Hub</span></h2>
                 <p class="text-slate-500 font-bold italic mt-2">100% accurate work results verified by
                     students.</p>
             </div>
-
             <div class="grid md:grid-cols-2 gap-8">
-
                 <div
-                    class="group bg-slate-50 p-10 rounded-[3rem] border border-slate-100 hover:border-red-500/30 transition-all shadow-xl hover:shadow-2xl text-center">
+                    class="bg-slate-50 dark:bg-slate-900 p-10 rounded-[3rem] border border-slate-100 dark:border-slate-800">
                     <div
                         class="w-20 h-20 bg-red-100 text-red-600 rounded-[2rem] flex items-center justify-center text-4xl mx-auto mb-6 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-play"></i>
                     </div>
-                    <h3 class="text-2xl font-black text-slate-800 uppercase">Video Results</h3>
-                    <p class="text-slate-500 text-sm mt-3 mb-8">Watch screen recordings of LMS activities,
-                        Quiz
-                        handling, and Grand Quizzes results.</p>
+                    <h3 class="text-2xl font-black text-slate-800 dark:text-slate-200 uppercase">Video Results
+                    </h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mt-3 mb-8">Watch screen recordings of
+                        LMS activities.</p>
                     <a href="Result/video-results.html"
-                        class="inline-flex items-center gap-3 bg-red-600 text-white px-8 py-4 rounded-2xl font-bold hover:bg-red-700 shadow-lg shadow-red-200 transition">
-                        WATCH VIDEOS <i class="fa-solid fa-arrow-right"></i>
-                    </a>
+                        class="inline-flex items-center gap-3 bg-red-600 text-white px-8 py-4 rounded-2xl font-bold">WATCH
+                        VIDEOS</a>
                 </div>
-
                 <div
-                    class="group bg-slate-50 p-10 rounded-[3rem] border border-slate-100 hover:border-blue-500/30 transition-all shadow-xl hover:shadow-2xl text-center">
+                    class="bg-slate-50 dark:bg-slate-900 p-10 rounded-[3rem] border border-slate-100 dark:border-slate-800">
                     <div
                         class="w-20 h-20 bg-blue-100 text-blue-600 rounded-[2rem] flex items-center justify-center text-4xl mx-auto mb-6 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-file-pdf"></i>
                     </div>
-                    <h3 class="text-2xl font-black text-slate-800 uppercase">PDF Reports</h3>
-                    <p class="text-slate-500 text-sm mt-3 mb-8">Download and verify full semester marksheets
-                        and
-                        activity logs of our students.</p>
+                    <h3 class="text-2xl font-black text-slate-800 dark:text-slate-200 uppercase">PDF Reports
+                    </h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mt-3 mb-8">Download and verify full
+                        semester marksheets.</p>
                     <a href="Result/pdf-results.html"
-                        class="inline-flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold hover:bg-blue-700 shadow-lg shadow-blue-200 transition">
-                        VIEW PDF PROOFS <i class="fa-solid fa-arrow-right"></i>
-                    </a>
+                        class="inline-flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold">VIEW
+                        PDF PROOFS</a>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Small Icon Whatsapp on side bar  -->
+    <!-- Contact Whatsapp -->
     <a href="https://wa.me/923196248868" target="_blank"
         class="fixed bottom-8 right-8 z-[100] group flex items-center">
-        <span
-            class="bg-white text-gray-800 px-4 py-2 rounded-lg shadow-xl mr-3 opacity-0 group-hover:opacity-100 transition-opacity font-bold">Need
-            Help? Chat now!</span>
         <div
             class="bg-green-500 text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-3xl hover:bg-green-600 transition animate-bounce">
             <i class="fa-brands fa-whatsapp"></i>
@@ -816,7 +827,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 
                 <div class="space-y-6">
-                    <div class="text-3xl font-black tracking-tighter">
+                    <div class="text-3xl font-black tracking-tighter text-blue-600">
                         VU STUDY <span class="text-yellow-400">LGWT</span>
                     </div>
                     <p class="text-slate-400 text-sm leading-relaxed font-medium">
@@ -825,7 +836,7 @@
                         solutions, verified handouts, and guaranteed results.
                     </p>
                     <div class="flex gap-4">
-                        <a href="https://chat.whatsapp.com/CTYeKaeMCf00pyhM0aMB0e" target="_blank"
+                        <a href="https://chat.whatsapp.com/IjhnRnVG8C93oWGOhMs93d" target="_blank"
                             class="w-11 h-11 bg-white/5 text-green-500 rounded-2xl flex items-center justify-center hover:bg-green-500 hover:text-white transition-all shadow-xl border border-white/10">
                             <i class="fab fa-whatsapp text-xl"></i>
                         </a>
@@ -920,10 +931,9 @@
             </div>
         </div>
     </footer>
+
     <script src="script.js"></script>
     <script src="./anti-inspect.js"></script>
-    <script src="popup.js"></script>
-
 </body>
 
 </html>
