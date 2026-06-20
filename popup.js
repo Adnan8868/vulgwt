@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // 💡 APNE WHATSAPP LINKS IN QUOTES KE ANDAR PASTE KAREIN
     // ==========================================
     const WHATSAPP_CHANNEL_LINK = "https://whatsapp.com/channel/0029VbAfKscEVccSHYySNP3I";
-    const WHATSAPP_GROUP_LINK   = "https://chat.whatsapp.com/IjhnRnVG8C93oWGOhMs93d";";
+    const WHATSAPP_GROUP_LINK   = "https://chat.whatsapp.com/IjhnRnVG8C93oWGOhMs93d";
     const PAPERS_REVIEW_LINK    = "https://adnan8868.github.io/lgwt-review/";
 
     const popupHtml = `
