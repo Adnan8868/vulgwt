@@ -50,7 +50,7 @@
 
     <header class="hero-gradient text-white py-8 px-2 shadow-2xl text-center relative overflow-hidden">
         <div class="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
-        <h1 class="text-3xl md:text-5xl font-extrabold mb-4 uppercase tracking-widest">Exam <span
+        <h1 class="text-3xl md:text-4xl font-extrabold mb-4 uppercase tracking-widest">Exam <span
                 class="text-yellow-400">Prep</span> Hub</h1>
         <p class="text-blue-100 text-sm opacity-90 mb-8">
             <span id="headerSubjectCount">0</span>+ Subjects Mid & Final Term Preparation Videos
@@ -61,14 +61,14 @@
                     class="fa-solid fa-magnifying-glass"></i></span>
             <input type="text" id="searchInput" onkeyup="handleSearch()"
                 placeholder="Search Subject Code (e.g. CS101, MGT211)..."
-                class="w-full py-4 pl-14 pr-6 text-slate-900 font-bold outline-none border-none">
+                class="w-full py-3 pl-12 pr-5 text-slate-900 font-bold outline-none border-none">
         </div>
 
         <div class="flex justify-center gap-4 mt-6">
-            <button onclick="switchTab('mid')" id="midTabBtn"
-                class="px-8 py-2 rounded-full border-2 border-white/30 font-bold transition-all tab-active">Mid-Term</button>
             <button onclick="switchTab('final')" id="finalTabBtn"
                 class="px-8 py-2 rounded-full border-2 border-white/30 font-bold transition-all">Final-Term</button>
+            <button onclick="switchTab('mid')" id="midTabBtn"
+                class="px-8 py-2 rounded-full border-2 border-white/30 font-bold transition-all tab-active">Mid-Term</button>
         </div>
 
         <div class="max-w-7xl mx-auto px-6 pt-6">
@@ -78,7 +78,7 @@
                     class="w-6 h-8 bg-white/10 rounded-lg flex items-center justify-center group-hover:bg-white/20 transition-all">
                     <i class="fa-solid fa-arrow-left text-xs"></i>
                 </div>
-                Back to Home Page 
+                Back to Home Page
             </a>
         </div>
     </header>
@@ -87,28 +87,11 @@
     <div class="max-w-4xl mx-auto mt-8 bg-white rounded-3xl p-6 shadow-2xl border border-slate-200">
         <div class="flex items-start gap-4">
 
-            <!-- Icon -->
-            <div
-                class="w-14 h-14 rounded-2xl bg-yellow-400 text-blue-900 flex items-center justify-center text-2xl shadow-lg shrink-0">
-                <i class="fa-solid fa-lightbulb"></i>
-            </div>
-
             <!-- Content -->
             <div class="text-left">
-
                 <h3 class="text-xl font-extrabold text-yellow-500 uppercase tracking-wide mb-3">
-                    Important Preparation Note
+                    Important Note
                 </h3>
-
-                <!-- Search Notice -->
-                <div class="mb-4 bg-blue-50 border border-blue-200 rounded-2xl px-4 py-3">
-                    <p class="text-blue-800 font-bold text-sm md:text-base">
-                        🔍 Sab se pehle uper apna
-                        <span class="text-red-600">Subject Code</span>
-                        search karein
-                        (Example: CS101, MGT211, ENG101)
-                    </p>
-                </div>
 
                 <p class="text-slate-700 leading-relaxed text-sm md:text-base font-medium">
                     Yahan aapko
@@ -193,7 +176,7 @@
 
     <script src="prep-script.js"></script>
     <script src="../anti-inspect.js"></script>
-    <script src="popup.js"></script>
+    <script src="../popup.js"></script>
 </body>
 
 </html>
