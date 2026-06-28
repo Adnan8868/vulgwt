@@ -367,7 +367,7 @@ const prepData = {
     ]
 };
 
-let currentTab = 'final';
+let currentTab = 'mid';
 
 // --- Rendering and Stats Engine ---
 function renderUI() {
