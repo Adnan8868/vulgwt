@@ -4,12 +4,20 @@ const pastPapersData = {
         //  Aik subject ka aik hi box hoga, usi me objective aur subjective dono honge
         // =========================================================================
         {
+            id: "CS101",
+            name: "Introduction to Computing",
+            obj_moazz: "https://drive.google.com/uc?export=download&id=1MPLM8HJArr638db_cv3lYv9PA5mWPpZ8",
+            obj_waqar: "https://drive.google.com/uc?export=download&id=1YRgfKoyVLnbSpEn1UUh0-ShjGSxizRC7",
+            obj_junaid: "https://drive.google.com/uc?export=download&id=1QryShf1tOJxvCEulaBAYmYvuLkVFA72j",
+            obj_vutopper: "https://drive.google.com/uc?export=download&id=1rIrBb3S3-Kr9XyaYPfgkGHp9-a7ivClx",
+        },
+        {
             id: "CS201",
             name: "Introduction to Programming",
             obj_moazz: "https://drive.google.com/uc?export=download&id=11eWJesg--MYnKqMRxWJnkrZ3odzfy1rB",
             obj_waqar: "https://drive.google.com/uc?export=download&id=1WnxB6zldZgpcK519-UKRW8d9hTAWygwv",
             obj_junaid: "https://drive.google.com/uc?export=download&id=1yaJM596lEnZqUQtNU9KfNPNDNQ8vGpvN",
-            obj_vutopper: "",
+            obj_vutopper: "https://drive.google.com/uc?export=download&id=18-j8e67h-2TUwYnd6UlO3xbLjQxjSGqB/view?usp=drive_link",
             
             sub_moazz: "https://drive.google.com/uc?export=download&id=1Hwd2i3rr-EPi7v_M0UQ5j-gjIzLEDDPL",
             sub_waqar: "https://drive.google.com/uc?export=download&id=12HzaJ9BYq5pEj-mfhrWYgSt9dEu2W1en",
@@ -22,7 +30,7 @@ const pastPapersData = {
             obj_moazz: "https://drive.usercontent.google.com/download?id=1DtqJUWWJL4YO6b5O0bPSy6c7r5zYHeEE",
             obj_waqar: "https://drive.google.com/uc?export=download&id=1ew-j8DGd9GPGvQnQHEdGka1pYcNDv9Aj",
             obj_junaid: "https://drive.google.com/uc?export=download&id=1nE4ZE0dhCVY3-kebtTb7r8Atcil0Sc0M",
-            obj_vutopper: "",
+            obj_vutopper: "https://drive.google.com/uc?export=download&id=1XQXVoVThQhJHwdkTlgnqXYxhZCCWcfi4/view?usp=drive_link",
             
             sub_moazz: "https://drive.google.com/uc?export=download&id=1GX45r4pYHz-E0P67s7RSGHBAfaNvMmUB",
             sub_waqar: "https://drive.google.com/uc?export=download&id=1Bx_JsvkZen-8CEc43mrTCBpmI4sHrviW",
@@ -35,7 +43,7 @@ const pastPapersData = {
             obj_moazz: "https://drive.google.com/uc?export=download&id=1yTWNquM1RpLl9Wb-suS60YTBjiuSZAce",
             obj_waqar: "https://drive.google.com/uc?export=download&id=1WAcyLbJBgacMAMBQea2VGedVKWHcJ9-i",
             obj_junaid: "https://drive.google.com/uc?export=download&id=1WX0Cdxa7ImkkcqIPmsGu5na3Q83A9eaP",
-            obj_vutopper: "",
+            obj_vutopper: "https://drive.google.com/drive/folders/1Wi9qkKVf37pN5EptJqinZDP7jTgG_VWU",
             
             sub_moazz: "https://drive.google.com/uc?export=download&id=1uNNdkggpygdM7O328Q1NNWNCjFn6lVSz",
             sub_waqar: "https://drive.google.com/uc?export=download&id=1HAFI56pcTJMaOa5V2T0nmtmv6_cxgQxG",
@@ -48,7 +56,7 @@ const pastPapersData = {
             obj_moazz: "https://drive.google.com/uc?export=download&id=18D8PQGBGVqxazk4lzaNu_6p4BInXTIni",
             obj_waqar: "",
             obj_junaid: "https://drive.google.com/uc?export=download&id=1PU9Q_IFqnzQCfHM2_HjVngM06SIjzrVE",
-            obj_vutopper: "",
+            obj_vutopper: "https://drive.google.com/uc?export=download&id=1fck0LZRkERdD9bqm3Kse3_8DbkwzrzKP/view?usp=drive_link",
             
             sub_moazz: "https://drive.google.com/uc?export=download&id=1HMWbIEKELomQk_HYtWbgXuMRXTzz8Tog",
             sub_waqar: "",
@@ -61,7 +69,7 @@ const pastPapersData = {
             obj_moazz: "https://drive.google.com/uc?export=download&id=1l3ncgxpAFQJEWEeWfVbigWfiJ2lrU2Hr",
             obj_waqar: "https://drive.google.com/uc?export=download&id=10HmkQxV2Dh8DKl7bTquw7c6AuWzZV4d0",
             obj_junaid: "https://drive.google.com/uc?export=download&id=1MgHwM5CIfVo4VsG2FVa3G2Sd-CnTM4Lt",
-            obj_vutopper: "",
+            obj_vutopper: "https://drive.google.com/drive/folders/1_1GRWkQKsOI0i_fPKq0OBKZSQGDR92yf",
             
             sub_moazz: "https://drive.google.com/uc?export=download&id=1RFPddINYXTfwThnvg9TkQM63ynmp5XaD",
             sub_waqar: "https://drive.google.com/uc?export=download&id=1P5KD7Yy_JZS8Juq4oewpWhXzS-f2GgJZ",
@@ -248,23 +256,293 @@ const pastPapersData = {
         
     ],
     final: [
-        // ==========================================
-        //  FINAL-TERM DATA ENTRIES
-        // ==========================================
+        // =========================================================================
+        //  Aik subject ka aik hi box hoga, usi me objective aur subjective dono honge
+        // =========================================================================
         {
             id: "CS101",
-            name: "Introduction to Computing (Final)",
-            obj_moazz: "https://drive.google.com/file/d/final-obj-moazz/view",
-            obj_waqar: "https://drive.google.com/file/d/final-obj-waqar/view",
-            obj_junaid: "",
-            obj_vutopper: "https://drive.google.com/file/d/final-obj-topper/view",
+            name: "Introduction to Computing",
+            obj_moazz: "https://drive.google.com/uc?export=download&id=1FjccHUrSit1KH5Y6DA_qEw-zjiaIAcjj",
+            obj_waqar: "https://drive.google.com/uc?export=download&id=1KJYM8FUqpPv3y4-i76YRRT97QOLUKi7E",
+            obj_junaid: "https://drive.google.com/uc?export=download&id=1snz-GbMCYRYbIJkVwMSTgP11Hi6zPNXY",
+        },
+        {
+            id: "CS201",
+            name: "Introduction to Programming",
+            obj_moazz: "https://drive.google.com/uc?export=download&id=19yl27SJLi_eYYMDWRTNvmGeqYLI1lgXM",
+            obj_waqar: "https://drive.google.com/uc?export=download&id=1JIMLSFoevwVFCKhbVPShevCqQGR_38KB",
+            obj_junaid: "https://drive.google.com/uc?export=download&id=1FPjqiznjqvJejNghgUrgVZBuwA1jjUDa",
             
-            sub_moazz: "https://drive.google.com/file/d/final-sub-moazz/view",
-            sub_waqar: "",
-            sub_junaid: "https://drive.google.com/file/d/final-sub-junaid/view",
+            sub_moazz: "https://drive.google.com/uc?export=download&id=1khuk-HUAWzh66tNvq_qpr4rjUZwlw5iP",
+            sub_waqar: "https://drive.google.com/uc?export=download&id=1m_8ZFz_x7r3LU70yoYToPUlXrqSOtJDU",
+            sub_junaid: "https://drive.google.com/uc?export=download&id=1NbJsEA2fa8W1ecsPrSvkchwJBQkHGajW",
             sub_vutopper: ""
-        }
-    ]
+        },
+        {
+            id: "CS301",
+            name: "Data Structures",
+            obj_moazz: "https://drive.google.com/uc?export=download&id=1zKJOiaYH9eZEK9TvTzPBX566-kR6Y7HF",
+            obj_waqar: "https://drive.google.com/uc?export=download&id=1PIW7-CQYeXnWm95049Q_O2djbvIXW3tj",
+            obj_junaid: "https://drive.google.com/uc?export=download&id=11pp-UgRjHOtmF3mDxIwvrlbLGEzyT7M_",
+            
+            sub_moazz: "https://drive.google.com/uc?export=download&id=1QZjdUIr6LQu-Ro0DNPMlui_bSGsxAlS4",
+            sub_waqar: "https://drive.google.com/uc?export=download&id=1PIW7-CQYeXnWm95049Q_O2djbvIXW3tj",
+            sub_junaid: "https://drive.google.com/uc?export=download&id=1XLmArRBZCuf9Y1YX-kpMnN649wGomNJ2",
+            sub_vutopper: ""
+        },
+        {
+            id: "CS302",
+            name: "Digital Logic & Design",
+            obj_moazz: "https://drive.google.com/uc?export=download&id=1I1yJZ-fO5MhCOyNewGZtvDBAUkcWptU_",
+            obj_waqar: "https://drive.google.com/uc?export=download&id=1A9_fAmDMae6WM5ESO0_Y8fCwnML9cs8b",
+            obj_junaid: "https://drive.google.com/uc?export=download&id=1Q3_Gc3vReZhPVExfZKieGiZ6eR9rBHl7",
+            
+            sub_moazz: "https://drive.google.com/uc?export=download&id=1PCeOIeom6qNuVc-tAcF0bQV1zYwH6QPP",
+            sub_waqar: "https://drive.google.com/uc?export=download&id=1Y-nSOn3uFyzJhPH7gosf1TyIIrmKA5Tf",
+            sub_junaid: "https://drive.google.com/uc?export=download&id=1vAlvJ3cV1UUkfkuMgXl7Ow6x39-xLnXa",
+            sub_vutopper: ""
+        },
+        {
+            id: "CS304",
+            name: "Object Oriented Programming",
+            obj_moazz: "https://drive.google.com/uc?export=download&id=1aEE8y8Jm2MBQiNEH2iWtNTpgf0qxVv9Z",
+            obj_waqar: "https://drive.google.com/uc?export=download&id=1obssCEhv3Si613_ntgsBlZwT5yPgAfIK",
+            obj_junaid: "https://drive.google.com/uc?export=download&id=1AGAOzk0iDqmzBv5iY9aFqFRrqcIpX3HW",
+            
+            sub_moazz: "https://drive.google.com/uc?export=download&id=11J4hKwj95IV7pi_HT-SSQowqbLF2HT34",
+            sub_waqar: "https://drive.google.com/uc?export=download&id=1p2HihY9o6rv9yBwdIIR0Da2vcrw6ZXiz",
+            sub_junaid: "https://drive.google.com/uc?export=download&id=1gM7Fgfe39XeMWx_QDqr-9a03lU_H16o9",
+            sub_vutopper: ""
+        },
+        {
+            id: "CS401",
+            name: "Computer Architecture & Assembly Language",
+            obj_moazz: "https://drive.google.com/uc?export=download&id=1qAOq1-TopNPcgQv9RUO1l0pnZdMpdddz",
+            obj_waqar: "https://drive.google.com/uc?export=download&id=1z2hCGSW8qmqEQDUVVn8l0ugtwBHG6EBa",
+            obj_junaid: "https://drive.google.com/uc?export=download&id=1ZBmqWcFa2Vkw4R-FA8i6f7QfcKHmtQTC",
+            
+            sub_moazz: "https://drive.google.com/uc?export=download&id=1oke-03kHNiUSjnDcDvqHM2uHDT0jb-Ft",
+            sub_waqar: "https://drive.google.com/uc?export=download&id=1wcpduJi3C9nkBYvBM5QgJ8PUQKByjX8S",
+            sub_junaid: "https://drive.google.com/uc?export=download&id=1_skEWJCbX2QctZzZe9UnYqkhrLIiilA7",
+            sub_vutopper: ""
+        },
+        {
+            id: "CS402",
+            name: "Theory of Automata",
+            obj_moazz: "https://drive.google.com/uc?export=download&id=1-UJ-piLqtN6Z84QE3pKGgsf0FP2r4rIr",
+            obj_waqar: "https://drive.google.com/uc?export=download&id=1Hjt86aou2ASd4az-20UFpjwXB1yr9TSu",
+            obj_junaid: "https://drive.google.com/uc?export=download&id=1SgfjPw3lhlGpDy2kBml1uDGdQuyL5gDM",
+            obj_vutopper: "",
+            
+            sub_moazz: "https://drive.google.com/uc?export=download&id=165mXthL2g7UGmQtuKzey2s9YZdLwVaBV",
+            sub_waqar: "https://drive.google.com/uc?export=download&id=1DikyuM6akEOAoiSP08Iw416GI4FXTrJx",
+            sub_junaid: "https://drive.google.com/uc?export=download&id=1rWRFWsUZAAehx50AYqrOeofA9VfyX5wx",
+            sub_vutopper: ""
+        },
+        {
+            id: "CS403",
+            name: "Database Management Systems",
+            obj_moazz: "https://drive.google.com/uc?export=download&id=1lumFvhzGvR9G0ovuW8wiwHyE1PoFstd9",
+            obj_waqar: "",
+            obj_junaid: "https://drive.google.com/uc?export=download&id=1wV95TW4l07_MTkjMS80NzFjetLNosB3f",
+            obj_vutopper: "",
+            
+            sub_moazz: "https://drive.google.com/uc?export=download&id=1zsM62XftdFeKk-EjTFCHLL17PHgXVO6x",
+            sub_waqar: "",
+            sub_junaid: "https://drive.google.com/uc?export=download&id=175-iLEHeQIxKzB2yHY4Ml09HQ1EYyUki",
+            sub_vutopper: ""
+        },
+        {
+            id: "CS408",
+            name: "Human Computer Interaction",
+            obj_moazz: "",
+            obj_waqar: "https://drive.google.com/uc?export=download&id=1z-pegDwtjuX87DJ6uSPxmeCKJYWrslwU",
+            obj_junaid: "https://drive.google.com/uc?export=download&id=1i3ZrWyGu6eukP78AHWleomPudAMYd5hQ",
+            obj_vutopper: "",
+            
+            sub_moazz: "",
+            sub_waqar: "https://drive.google.com/uc?export=download&id=1Fa1ckGK0YG1AsLCfOGWpRJLqcgajS-DT",
+            sub_junaid: "",
+            sub_vutopper: ""
+        },
+        {
+            id: "CS411",
+            name: "Visual Programming",
+            obj_moazz: "",
+            obj_waqar: "",
+            obj_junaid: "https://drive.google.com/uc?export=download&id=15tvSnUesv1m_OYu2eWQUZJIofTmpHnhu",
+            obj_vutopper: "",
+            
+            sub_moazz: "",
+            sub_waqar: "",
+            sub_junaid: "https://drive.google.com/uc?export=download&id=1vH6U7NQ05bnc5Xmcv9aZ_exHwNnthMVX",
+            sub_vutopper: ""
+        },
+        {
+            id: "CS501",
+            name: "Advanced Computer Architecture",
+            obj_moazz: "https://drive.google.com/uc?export=download&id=1eRtFKc4UQroK_BZ25I7RoyJoLhxhg2CX",
+            obj_waqar: "https://drive.google.com/uc?export=download&id=1ardBvYfpUc628EOMWXoYOEk_kyzfZLI_",
+            obj_junaid: "https://drive.google.com/uc?export=download&id=18t88Z9A5Z0tKKtWI4xBZkdUeg_h982Rt",
+            obj_vutopper: "",
+            
+            sub_moazz: "https://drive.google.com/uc?export=download&id=1LLT0kXnuW8-vr9UrWbHyiBzaza2ayybN",
+            sub_waqar: "https://drive.google.com/uc?export=download&id=1ri4AP1nflZPw1IpJ8PG1xyGg-mKvtGuN",
+            sub_junaid: "https://drive.google.com/uc?export=download&id=1Ms-o_FB_v7G5Vs9GW_qG0Phg32nj7hdc",
+            sub_vutopper: ""
+        },
+        {
+            id: "CS502",
+            name: "Design & Analysis of Algorithms",
+            obj_moazz: "https://drive.google.com/uc?export=download&id=1gcH-dpL4Z9ZVkkUGNJ2WTjjUlahKILob",
+            obj_waqar: "https://drive.google.com/uc?export=download&id=1ZlZH250d_cqv59I_eDTEaBK-rsggLN-2",
+            obj_junaid: "https://drive.google.com/uc?export=download&id=1poIkwzRDyz9611iJPUqyv_Z00I8eEISK",
+            obj_vutopper: "",
+            
+            sub_moazz: "https://drive.google.com/uc?export=download&id=13jx7Kxav80_OjtM35kL-7FZzWvO-8MCL",
+            sub_waqar: "https://drive.google.com/uc?export=download&id=1ONO2u0DguRz-5kGKPc1tNrjnhGEzVNXQ",
+            sub_junaid: "",
+            sub_vutopper: ""
+        },
+        {
+            id: "CS504",
+            name: "Software Engineering",
+            obj_moazz: "https://drive.google.com/uc?export=download&id=14d-h1S-iemioPEF2rDqsYYSU7WLfK0qh",
+            obj_waqar: "https://drive.google.com/uc?export=download&id=1w-eY5YeGtEAuzcWdCVV15SBp9VxM81WF",
+            obj_junaid: "https://drive.google.com/uc?export=download&id=1fqn1_PI8xIsKdn84dM-SYyWgYkqdQQCs",
+            obj_vutopper: "",
+            
+            sub_moazz: "https://drive.google.com/uc?export=download&id=1E_vbmMS9W1wwelRwIxQJdLZT_aBnvCvU",
+            sub_waqar: "https://drive.google.com/uc?export=download&id=1efG6KEuiQuNaK_TQyot4LBzSz7nIrOBD",
+            sub_junaid: "https://drive.google.com/uc?export=download&id=139gtOIXDpw47PfC1EXpzyJdsFj7PrnrO",
+            sub_vutopper: ""
+        },
+        {
+            id: "CS506",
+            name: "Web Design and Development",
+            obj_moazz: "https://drive.google.com/uc?export=download&id=1B1YghCKS6bVa6RrD5tFIdmKHi_zNel5r",
+            obj_waqar: "https://drive.google.com/uc?export=download&id=1vgyII6ADVfQbFzY86Axd6Rak2gO0JkLb",
+            obj_junaid: "https://drive.google.com/uc?export=download&id=1XtkU3CQTFTzFDfSTC4jzxlYS1mXAzlrp",
+            obj_vutopper: "",
+            
+            sub_moazz: "https://drive.google.com/uc?export=download&id=16JWIEaQAa5FHpJn0objSSWOO2Tr2LTgr",
+            sub_waqar: "https://drive.google.com/uc?export=download&id=1vtHWlIibZ6sUiNtTBreioUUQxXaVuLD-",
+            sub_junaid: "https://drive.google.com/uc?export=download&id=1BdFUaldW1h8CzgYCDKxKL3rHFeocUMvk",
+            sub_vutopper: ""
+        },
+        {
+            id: "CS602",
+            name: "Computer Graphics",
+            obj_moazz: "https://drive.google.com/uc?export=download&id=1MwQCmBSeM-yORObaUvFDuUb20xqi30t8",
+            obj_waqar: "https://drive.google.com/uc?export=download&id=1hWXEJlFoDr-bCaOkBpFliZB-deFCaDHp",
+            obj_junaid: "https://drive.google.com/uc?export=download&id=1iNxZmkM2XyDur30ScKRj0aqoXIs8ZP-E",
+            obj_vutopper: "",
+            
+            sub_moazz: "",
+            sub_waqar: "https://drive.google.com/uc?export=download&id=1wE4NtOkwcVur_kIqP0I4ymVwJsQnfeng",
+            sub_junaid: "https://drive.google.com/uc?export=download&id=1YvJkN3uzCVyViBeP6ZUKy0QWKulDlo_I",
+            sub_vutopper: ""
+        },
+        {
+            id: "CS604",
+            name: "Operating System",
+            obj_moazz: "https://drive.google.com/uc?export=download&id=1osVwfL0MyJTYqIxZ0inpIglQJeOGcxCT",
+            obj_waqar: "https://drive.google.com/uc?export=download&id=103pJ7WyF2_03K5elQbshSE8CBvNkpFOv",
+            obj_junaid: "https://drive.google.com/uc?export=download&id=1oRcNItn5JK2kwP_rrrYV-lEDSkW8svh-",
+            obj_vutopper: "",
+            
+            sub_moazz: "https://drive.google.com/uc?export=download&id=1ycsKzwuALYYePExqPbyDpwGSj0Rh6ZNY",
+            sub_waqar: "https://drive.google.com/uc?export=download&id=1HfXMBCnDMFGevrRzdxlfSlpd5FlTEcnq",
+            sub_junaid: "",
+            sub_vutopper: ""
+        },
+        {
+            id: "CS605",
+            name: "Software Engineering-II",
+            obj_moazz: "https://drive.google.com/uc?export=download&id=1qngox1OaWOLBboZWTrn1DVUgDRnJz8ir",
+            obj_waqar: "https://drive.google.com/uc?export=download&id=1lkjpFZCmtvoRYFKfKiCd76YCcdS34qp2",
+            obj_junaid: "https://drive.google.com/uc?export=download&id=1usAdl7kiMwf-1NELpTg848ykZpCt_B3x",
+            obj_vutopper: "",
+            
+            sub_moazz: "https://drive.google.com/uc?export=download&id=1QpC1shcmt9yDrwiqK_qCZ_YYoupPbull",
+            sub_waqar: "https://drive.google.com/uc?export=download&id=1lDvpTQv6LHDJ8UXPd4MLgCEZ1n4Tzrt7",
+            sub_junaid: "https://drive.google.com/uc?export=download&id=1PCK73HQhnTRIEEHz-bImfq3pmUwCPGft",
+            sub_vutopper: ""
+        },
+        {
+            id: "CS606",
+            name: "Compiler Construction",
+            obj_moazz: "https://drive.google.com/uc?export=download&id=1_DrqfDmffYnNEXXav0uA7cXWO6wM4-hb",
+            obj_waqar: "https://drive.google.com/uc?export=download&id=1EYlJzpoA0pj6n4Ej35oZKDuYoMwzNe_U",
+            obj_junaid: "https://drive.google.com/uc?export=download&id=1rMyH-roPz3pnPe4Rg0S0Pu1VwBYM5DdG",
+            obj_vutopper: "",
+        },
+        {
+            id: "CS607",
+            name: "Artificial Intelligence",
+            obj_moazz: "https://drive.google.com/uc?export=download&id=1hcaSVAWz-GRgYEtf-Hk9g_jtU-vV88Mx",
+            obj_waqar: "https://drive.google.com/uc?export=download&id=1pe2JCGUQwGHcMhGxY03oK67j3dCvPwMc",
+            obj_junaid: "https://drive.google.com/uc?export=download&id=1KRWRDYIktEnt8bWM1Y6KbFXF8vQ8dW8L",
+            obj_vutopper: "",
+            
+            sub_moazz: "https://drive.google.com/uc?export=download&id=1XtpO5KGfY4NEgti7TI1DDCSjHfKokuUq",
+            sub_waqar: "https://drive.google.com/uc?export=download&id=10Y25rkl9_E-Ad-FsB9lPWNt0NXR0IP04",
+            sub_junaid: "",
+            sub_vutopper: ""
+        },
+        {
+            id: "CS609",
+            name: "Systems Programming",
+            obj_moazz: "https://drive.google.com/uc?export=download&id=1H2GdHdlx4g1XzYGdw3xeZVfy1UyJcru9",
+            obj_waqar: "https://drive.google.com/uc?export=download&id=1rgDf8RKxBk0bAr9lUKwrO21tWi7Yj1tl",
+            obj_junaid: "https://drive.google.com/uc?export=download&id=1vxa0Pn8MA5attTaweN0yNrBzL2lXDQF_",
+            obj_vutopper: "",
+            
+            sub_moazz: "https://drive.google.com/uc?export=download&id=1sRmWshmYAOoCVSfSwU68RTMJ4KdpXNLs",
+            sub_waqar: "https://drive.google.com/uc?export=download&id=1DprLUAR0NYnM42CbkZdqX6bqxSVOJ35j",
+            sub_junaid: "",
+            sub_vutopper: ""
+        },
+        {
+            id: "CS610",
+            name: "COMPUTER NETWORKS",
+            obj_moazz: "https://drive.google.com/uc?export=download&id=1Y1aNICG34Irh9b4izqh5GZq78AUuNMFH",
+            obj_waqar: "https://drive.google.com/uc?export=download&id=17XggX7jrBzdl4KjrHLsyxJ1fnhDjYYvQ",
+            obj_junaid: "https://drive.google.com/uc?export=download&id=1X2XKvL6V8e0QhTSOB8y1DbeLWrYtC1Al",
+            obj_vutopper: "",
+            
+            sub_moazz: "https://drive.google.com/uc?export=download&id=1rgL4Xke8LvNye2K2vi0S9d5TnLZb7u_X",
+            sub_waqar: "https://drive.google.com/uc?export=download&id=1G2dNu_WSRL1s2mauDO5kMOgnVBTqzbzz",
+            sub_junaid: "",
+            sub_vutopper: ""
+        },
+        {
+            id: "CS614",
+            name: "Introduction to Data Ware Housing",
+            obj_moazz: "https://drive.google.com/uc?export=download&id=1LHCrCmRK3tdqGtzNlZ2LATs06qx46Okl",
+            obj_waqar: "https://drive.google.com/uc?export=download&id=1Ib1GJ5ArboyF_BXQOtfzZsBnlLyxHlFb",
+            obj_junaid: "https://drive.google.com/uc?export=download&id=1QduerdCHGwySdNun1KiXINgidtnGCLEQ",
+            obj_vutopper: "",
+            
+            sub_moazz: "https://drive.google.com/uc?export=download&id=1n8a9HAzYGRCNEQJAtpZ8fKg9woJoqgCa",
+            sub_waqar: "https://drive.google.com/uc?export=download&id=1gkK8OU4M-d26RRv-hWUJgy46awOBEfLL",
+            sub_junaid: "https://drive.google.com/uc?export=download&id=1jiaySAFgRR4cm8b5MdORPx8FAUjXGOnY",
+            sub_vutopper: ""
+        },
+        {
+            id: "STA301",
+            name: "Statistics and Probability",
+            obj_moazz: "https://drive.google.com/uc?export=download&id=1nAMkxt2KzD49Iu6CmjImUmQ3i0NuszKS",
+            obj_waqar: "https://drive.google.com/uc?export=download&id=1oDqz0VvQDV-oqZkGhpvm1KE1oSCyTyJm",
+            obj_junaid: "https://drive.google.com/uc?export=download&id=15ohs7RVhQOLv-KHrUODgnZCKcBwLpFl4",
+            obj_vutopper: "",
+            
+            sub_moazz: "https://drive.google.com/uc?export=download&id=1x5mtxQnCIAaWa4zlakh24nXski6e1RP7",
+            sub_waqar: "https://drive.google.com/uc?export=download&id=19rB319OGervkXH0NS_Y4JlDNEI8W8drk",
+            sub_junaid: "https://drive.google.com/uc?export=download&id=124eAWnSNVdNw4w_Bc4mini3slBfj_4TF",
+            sub_vutopper: ""
+        },
+    ],
 };
 
 let currentPaperTab = 'mid';
