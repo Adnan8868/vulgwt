@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LMS Official Notice Board | VU Study LGWT</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" href="https://img.icons8.com/fluency/48/graduation-cap.png" type="image/x-icon">
     <style>
@@ -17,23 +22,31 @@
     </style>
 </head>
 
-<body class="bg-[#0f172a] text-slate-100 min-h-screen flex flex-col">
+<body
+    class="bg-slate-50 text-slate-800 dark:bg-[#0f172a] dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-300">
 
     <nav
-        class="fixed w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800 h-16 flex items-center justify-between px-4 md:px-8 shadow-lg">
+        class="fixed w-full z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-gray-200 dark:border-slate-800 h-16 flex items-center justify-between px-4 md:px-8 shadow-md transition-colors duration-300">
         <div class="flex items-center gap-4">
-            <div class="text-xl md:text-2xl font-black text-white tracking-tight">
-                <span class="text-blue-500">VU</span> STUDY <span class="text-yellow-500">LGWT</span>
+            <div class="text-xl md:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
+                <span class="text-blue-600 dark:text-blue-500">VU</span> STUDY <span
+                    class="text-yellow-500">LGWT</span>
             </div>
             <span
-                class="hidden md:inline-block bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
+                class="hidden md:inline-block bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
                 LMS Notice System
             </span>
         </div>
 
-        <div id="nav-action-container">
+        <div class="flex items-center gap-3" id="nav-action-container">
+            <button id="theme-toggle"
+                class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-yellow-400 border border-gray-200 dark:border-slate-700 flex items-center justify-center hover:scale-105 active:scale-95 transition-all shadow-sm"
+                title="Toggle Theme">
+                <i class="fa-solid fa-moon text-base"></i>
+            </button>
+
             <a href="index.html"
-                class="flex items-center gap-2 text-xs font-bold bg-white/5 hover:bg-white/10 text-slate-300 px-4 py-2 rounded-xl border border-white/10 transition">
+                class="flex items-center gap-2 text-xs font-bold bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 text-slate-700 dark:text-slate-300 px-4 py-2.5 rounded-xl border border-gray-200 dark:border-white/10 transition shadow-sm">
                 <i class="fa-solid fa-house text-[10px]"></i> Home
             </a>
         </div>
@@ -42,10 +55,11 @@
     <div class="flex flex-1 pt-16">
 
         <aside
-            class="hidden lg:flex flex-col w-64 bg-slate-950 border-r border-slate-900 p-5 sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto">
+            class="hidden lg:flex flex-col w-64 bg-white dark:bg-slate-950 border-r border-gray-200 dark:border-slate-900 p-5 sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto transition-colors duration-300">
             <div class="space-y-4">
                 <div>
-                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider px-1 mb-2">
+                    <div
+                        class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider px-1 mb-2">
                         Account Portal</div>
                     <a href="https://vulms.vu.edu.pk" target="_blank"
                         class="flex items-center justify-between w-full px-4 py-3 text-xs font-black text-blue-950 bg-yellow-500 hover:bg-yellow-400 rounded-xl shadow-md transition transform hover:-translate-y-0.5 tracking-wider uppercase">
@@ -54,14 +68,15 @@
                     </a>
                 </div>
 
-                <div class="h-px bg-slate-900 my-2"></div>
+                <div class="h-px bg-gray-200 dark:bg-slate-900 my-2"></div>
 
                 <div class="space-y-2">
-                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider px-1 mb-2">
+                    <div
+                        class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider px-1 mb-2">
                         Official Channels</div>
 
                     <a href="https://whatsapp.com/channel/0029VbAfKscEVccSHYySNP3I" target="_blank"
-                        class="flex items-center justify-between px-4 py-2.5 text-xs font-bold text-slate-400 hover:text-green-400 hover:bg-white/5 rounded-xl transition group">
+                        class="flex items-center justify-between px-4 py-2.5 text-xs font-bold text-slate-600 dark:text-slate-400 hover:text-green-500 dark:hover:text-green-400 hover:bg-slate-100 dark:hover:bg-white/5 rounded-xl transition group">
                         <div class="flex items-center gap-3">
                             <i class="fa-brands fa-whatsapp text-base text-green-500"></i>
                             <span>WhatsApp Channel</span>
@@ -71,7 +86,7 @@
                     </a>
 
                     <a href="https://chat.whatsapp.com/IjhnRnVG8C93oWGOhMs93d" target="_blank"
-                        class="flex items-center justify-between px-4 py-2.5 text-xs font-bold text-slate-400 hover:text-green-400 hover:bg-white/5 rounded-xl transition group">
+                        class="flex items-center justify-between px-4 py-2.5 text-xs font-bold text-slate-600 dark:text-slate-400 hover:text-green-500 dark:hover:text-green-400 hover:bg-slate-100 dark:hover:bg-white/5 rounded-xl transition group">
                         <div class="flex items-center gap-3">
                             <i class="fa-solid fa-users text-sm text-green-500"></i>
                             <span>WhatsApp Group</span>
@@ -81,7 +96,7 @@
                     </a>
 
                     <a href="https://www.youtube.com/@VUStudyLGWT" target="_blank"
-                        class="flex items-center justify-between px-4 py-2.5 text-xs font-bold text-slate-400 hover:text-red-400 hover:bg-white/5 rounded-xl transition group">
+                        class="flex items-center justify-between px-4 py-2.5 text-xs font-bold text-slate-600 dark:text-slate-400 hover:text-red-500 dark:hover:text-red-400 hover:bg-slate-100 dark:hover:bg-white/5 rounded-xl transition group">
                         <div class="flex items-center gap-3">
                             <i class="fa-brands fa-youtube text-base text-red-500"></i>
                             <span>YouTube Channel</span>
@@ -91,23 +106,24 @@
                     </a>
                 </div>
 
-                <div class="h-px bg-slate-900 my-2"></div>
+                <div class="h-px bg-gray-200 dark:bg-slate-900 my-2"></div>
 
                 <div class="space-y-2">
-                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider px-1 mb-2">
+                    <div
+                        class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider px-1 mb-2">
                         Important Links</div>
 
                     <a href="https://www.vu.edu.pk" target="_blank"
-                        class="flex items-center justify-between px-4 py-2.5 text-xs font-bold text-slate-400 hover:text-blue-400 hover:bg-white/5 rounded-xl transition group">
+                        class="flex items-center justify-between px-4 py-2.5 text-xs font-bold text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-100 dark:hover:bg-white/5 rounded-xl transition group">
                         <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-globe text-sm text-blue-400"></i>
+                            <i class="fa-solid fa-globe text-sm text-blue-500 dark:text-blue-400"></i>
                             <span>VU Official Site</span>
                         </div>
                         <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-40"></i>
                     </a>
 
                     <a href="https://datesheet.vu.edu.pk" target="_blank"
-                        class="flex items-center justify-between px-4 py-2.5 text-xs font-bold text-slate-400 hover:text-amber-400 hover:bg-white/5 rounded-xl transition group">
+                        class="flex items-center justify-between px-4 py-2.5 text-xs font-bold text-slate-600 dark:text-slate-400 hover:text-amber-600 dark:hover:text-amber-400 hover:bg-slate-100 dark:hover:bg-white/5 rounded-xl transition group">
                         <div class="flex items-center gap-3">
                             <i class="fa-solid fa-calendar-check text-sm text-amber-500"></i>
                             <span>Make Date Sheet</span>
@@ -117,28 +133,86 @@
                 </div>
             </div>
 
-            <div class="mt-auto p-3 bg-slate-900/50 border border-white/5 rounded-2xl text-center">
-                <p class="text-[10px] text-slate-500 font-medium">Learning & Growing With Team</p>
-                <p class="text-[9px] text-blue-500 font-bold tracking-widest mt-0.5">LGWT OFFICIAL &copy; 2026
-                </p>
+            <div
+                class="mt-auto p-3 bg-slate-100 dark:bg-slate-900/50 border border-gray-200 dark:border-white/5 rounded-2xl text-center">
+                <p class="text-[10px] text-slate-400 dark:text-slate-500 font-medium">Learning & Growing With
+                    Team</p>
+                <p class="text-[9px] text-blue-600 dark:text-blue-500 font-bold tracking-widest mt-0.5">LGWT
+                    OFFICIAL &copy; 2026</p>
             </div>
         </aside>
 
         <main class="flex-1 p-4 md:p-8 overflow-x-hidden">
-            <div class="max-w-3xl mx-auto">
+            <div class="max-w-3xl mx-auto space-y-6">
+
+                <div id="live-countdown-banner"
+                    class="bg-gradient-to-br from-blue-700 via-blue-900 to-indigo-950 dark:from-blue-950/80 dark:via-slate-900 dark:to-indigo-950 p-5 md:p-6 rounded-[2rem] border border-blue-500/20 shadow-xl relative overflow-hidden text-white">
+                    <div class="absolute -right-6 -top-6 w-24 h-24 bg-white/10 rounded-full blur-xl"></div>
+                    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 relative z-10">
+                        <div class="text-center sm:text-left">
+                            <span
+                                class="bg-yellow-400/20 border border-yellow-400/30 text-yellow-300 text-[9px] font-black uppercase tracking-widest px-2.5 py-1 rounded-md">
+                                Official Update
+                            </span>
+                            <h3 class="text-sm md:text-base font-black mt-2 uppercase tracking-wide">
+                                VU Final Term Exams Spring 2026
+                            </h3>
+                            <p class="text-[11px] text-blue-100 dark:text-slate-400 mt-0.5 font-medium">
+                                Final Term Exams Spring 2026 starting from <span
+                                    class="text-yellow-400 font-bold">July 27, 2026</span>.
+                            </p>
+                        </div>
+
+                        <div
+                            class="flex gap-1.5 text-center font-mono font-black text-sm bg-black/30 dark:bg-black/40 p-3 rounded-2xl border border-white/10 shadow-inner text-white">
+                            <div
+                                class="bg-blue-950 dark:bg-slate-900 px-2 py-1 rounded-xl min-w-[40px] shadow">
+                                <span id="timer-days" class="block">00</span>
+                                <span
+                                    class="text-[8px] text-blue-200 dark:text-slate-500 font-sans font-bold uppercase block">Days</span>
+                            </div>
+                            <div class="text-blue-300 dark:text-slate-600 align-middle self-center font-sans">
+                                :</div>
+                            <div
+                                class="bg-blue-950 dark:bg-slate-900 px-2 py-1 rounded-xl min-w-[40px] shadow">
+                                <span id="timer-hours" class="block text-yellow-400">00</span>
+                                <span
+                                    class="text-[8px] text-blue-200 dark:text-slate-500 font-sans font-bold uppercase block">Hrs</span>
+                            </div>
+                            <div class="text-blue-300 dark:text-slate-600 align-middle self-center font-sans">
+                                :</div>
+                            <div
+                                class="bg-blue-950 dark:bg-slate-900 px-2 py-1 rounded-xl min-w-[40px] shadow">
+                                <span id="timer-mins" class="block">00</span>
+                                <span
+                                    class="text-[8px] text-blue-200 dark:text-slate-500 font-sans font-bold uppercase block">Min</span>
+                            </div>
+                            <div class="text-blue-300 dark:text-slate-600 align-middle self-center font-sans">
+                                :</div>
+                            <div
+                                class="bg-blue-950 dark:bg-slate-900 px-2 py-1 rounded-xl min-w-[40px] shadow border border-emerald-500/20">
+                                <span id="timer-secs" class="block text-emerald-400">00</span>
+                                <span
+                                    class="text-[8px] text-blue-200 dark:text-slate-500 font-sans font-bold uppercase block">Sec</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div id="list-view-section" class="space-y-6">
-                    <div class="flex items-center gap-3 border-b border-slate-800/80 pb-4">
+                    <div
+                        class="flex items-center gap-3 border-b border-gray-200 dark:border-slate-800/80 pb-4">
                         <div
-                            class="w-10 h-10 bg-slate-900 border border-slate-800 text-yellow-500 rounded-xl flex items-center justify-center text-lg shadow-inner">
+                            class="w-10 h-10 bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 text-yellow-500 rounded-xl flex items-center justify-center text-lg shadow-sm">
                             <i class="fa-solid fa-bell animate-pulse"></i>
                         </div>
                         <div>
-                            <h2 class="text-base md:text-lg font-black text-white uppercase tracking-wider">
+                            <h2
+                                class="text-base md:text-lg font-black text-slate-900 dark:text-white uppercase tracking-wider">
                                 Active Announcement Feed
                             </h2>
-                            <p class="text-[11px] text-slate-400 font-medium">Click on any announcement header
-                                to review comprehensive details.</p>
+                            <p class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Click on any
+                                announcement header to review comprehensive details.</p>
                         </div>
                     </div>
 
@@ -146,21 +220,22 @@
                 </div>
 
                 <div id="detail-view-section"
-                    class="hidden bg-slate-900/60 border border-white/5 rounded-[2rem] p-6 md:p-8 shadow-2xl relative transition-all duration-300">
-                    <div class="border-b border-slate-800 pb-4 mb-6">
+                    class="hidden bg-white dark:bg-slate-900/60 border border-gray-200 dark:border-white/5 rounded-[2rem] p-6 md:p-8 shadow-2xl relative transition-all duration-300">
+                    <div class="border-b border-gray-200 dark:border-slate-800 pb-4 mb-6">
                         <div
                             class="flex items-center justify-between gap-4 text-[10px] font-bold uppercase tracking-wider">
                             <span id="detail-badge-target"
-                                class="bg-blue-500/10 text-blue-400 px-2.5 py-0.5 rounded-md border border-blue-500/20">--</span>
-                            <span id="detail-date-target" class="text-slate-500">--</span>
+                                class="bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 px-2.5 py-0.5 rounded-md border border-blue-100 dark:border-blue-500/20">--</span>
+                            <span id="detail-date-target" class="text-slate-400 dark:text-slate-500">--</span>
                         </div>
                         <h1 id="detail-title-target"
-                            class="text-base md:text-xl font-black text-yellow-400 uppercase tracking-wide mt-3 leading-snug">
+                            class="text-base md:text-xl font-black text-blue-600 dark:text-yellow-400 uppercase tracking-wide mt-3 leading-snug">
                             --</h1>
                     </div>
 
                     <div id="detail-content-target"
-                        class="space-y-4 text-slate-300 font-medium text-xs md:text-sm leading-relaxed"></div>
+                        class="space-y-4 text-slate-600 dark:text-slate-300 font-medium text-xs md:text-sm leading-relaxed">
+                    </div>
                 </div>
 
             </div>
@@ -168,47 +243,10 @@
     </div>
 
     <script>
-        // =========================================================================
-        // DATA OBJECTS ARRAY: Nayi updates isi structured database stack layout me add hon gi
-        // =========================================================================
+        // ====================
+        // DATA OBJECTS ARRAY: 
+        // ====================
         const myAnnouncements = [
-            {
-                id: "ann-04",
-                dateDay: "18",
-                dateMonth: "May",
-                dateYear: "2026",
-                timeStr: "04:30 PM",
-                badge: "⚠️ Urgent Live Session Alert",
-                title: "MID-TERM EXAM PREPARATION & LIVE GUIDE SESSION - BY LEARNING & GROWING WITH TEAM",
-                content: `
-                <div class="space-y-5">
-                    <p class="text-slate-300 font-medium">Dear Students, Aapke Mid-Term Exams <strong class="text-red-400">1st June</strong> se start ho rahe hain aur ab sirf <strong class="text-red-400">10 din baki</strong> reh gaye hain! 😱</p>
-                    
-                    <p class="bg-slate-950/60 border border-slate-800 p-4 rounded-2xl text-slate-300 leading-relaxed">
-                        Kya aap pareshan hain ke itne kam waqt mein achi CGPA kaise leni hai? Short time mein taiyari kaise karni hai? Aur kya sirf past paper files par depend rehna kafi hai ya nahi? In sab sawalat ke live jawabats ke liye humne kal raat (<strong class="text-yellow-400">19 May 2026, Tuesday</strong>) thik <strong class="text-yellow-400">9:15 PM</strong> par ek special <strong class="text-blue-400">Live Google Meet Session</strong> arrange kiya hai.
-                    </p>
-
-                    <div class="bg-blue-500/5 border border-blue-500/20 p-4 rounded-2xl border-l-4 border-l-blue-500">
-                        <span class="text-xs font-black text-blue-400 uppercase tracking-wider block mb-1">🔥 Special Segment</span>
-                        <p class="text-xs md:text-sm text-slate-300 font-medium">Is session mein live computer screen par aapko sikhaya jayega ke <strong>Math ka exam</strong> bina time waste kiye jaldi aur aasan tarike se software par kaise solve karte hain! Apne dosto (friends) ko bhi sath lazmi add karein taake sab live sawal puch sakein.</p>
-                    </div>
-
-                    <div class="bg-amber-500/5 border border-amber-500/20 p-4 rounded-2xl">
-                        <span class="text-xs font-black text-amber-400 uppercase tracking-wider block mb-1">📱 Mobile Users Ke Liye Hidayat</span>
-                        <p class="text-xs text-slate-400 font-medium">Class join karne se pehle apne mobile mein <strong>Google Meet App</strong> Play Store se lazmi download/install kar lein taake join karte waqt koi pareshani na ho.</p>
-                    </div>
-
-                    <div class="flex flex-wrap gap-3 pt-2">
-                        <a href="https://meet.google.com/yrd-kgan-hbv" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 px-5 rounded-xl text-xs transition shadow-lg flex items-center gap-2">
-                            <i class="fa-solid fa-video text-[10px]"></i> Join Live Meeting
-                        </a>
-                        <a href="https://api.whatsapp.com/send?text=%F0%9F%93%A2%20%2AAnouncement%2A%3A%20Kal%20Raat%209%3A15%20PM%20Live%20Google%20Meet%20Session%20Hoga%21%20Mid-Term%2010-Days%20Strategy%20%26%20Math%20Software%20Tracing%20Guide.%20Join%20Link%3A%20https%3A%2F%2Fmeet.google.com%2Fyrd-kgan-hbv" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2.5 px-5 rounded-xl text-xs transition shadow-lg flex items-center gap-2">
-                            <i class="fa-brands fa-whatsapp text-sm"></i> Share With Friends
-                        </a>
-                    </div>
-                </div>
-            `
-            },
             {
                 id: "ann-03",
                 dateDay: "17",
@@ -356,32 +394,75 @@
             }
         ];
 
-        // 1. Initializer Row Module Renderer Matrix
+        // =========================================================================
+        // REAL-TIME FINAL TERM EXAM TIMER MODULE
+        // =========================================================================
+        const EXAM_TARGET_DATE = "2026-07-27T00:00:00";
+
+        function startFinalExamTimer() {
+            const daysEl = document.getElementById('timer-days');
+            const hoursEl = document.getElementById('timer-hours');
+            const minsEl = document.getElementById('timer-mins');
+            const secsEl = document.getElementById('timer-secs');
+            const bannerEl = document.getElementById('live-countdown-banner');
+
+            const targetTime = new Date(EXAM_TARGET_DATE).getTime();
+
+            function updateClock() {
+                const now = new Date().getTime();
+                const difference = targetTime - now;
+
+                if (difference <= 0) {
+                    if (bannerEl) bannerEl.innerHTML = `<div class="text-center w-full py-2 font-bold text-yellow-400 uppercase tracking-wider">🔥 Final Term Examinations Have Begun! Best of Luck! 🔥</div>`;
+                    clearInterval(timerInterval);
+                    return;
+                }
+
+                const d = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const h = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const s = Math.floor((difference % (1000 * 60)) / 1000);
+
+                if (daysEl) daysEl.innerText = d < 10 ? '0' + d : d;
+                if (hoursEl) hoursEl.innerText = h < 10 ? '0' + h : h;
+                if (minsEl) minsEl.innerText = m < 10 ? '0' + m : m;
+                if (secsEl) secsEl.innerText = s < 10 ? '0' + s : s;
+            }
+
+            updateClock();
+            const timerInterval = setInterval(updateClock, 1000);
+        }
+
+        // =========================================================================
+        // NOTICE BOARD FEED CORE RENDERING FUNCTIONS
+        // =========================================================================
         function initNoticeBoard() {
+            startFinalExamTimer();
+            initThemeEngine(); // Activate Theme Switch Logic
+
             const rowTarget = document.getElementById('announcement-rows-target');
             rowTarget.innerHTML = myAnnouncements.map(ann => `
-                <div onclick="openAnnouncement('${ann.id}')" class="bg-slate-900/50 border border-white/5 p-4 md:p-5 rounded-2xl flex gap-4 items-center hover:border-blue-500/40 hover:bg-slate-900/80 transition-all duration-200 cursor-pointer group w-full shadow-md">
-                    <div class="bg-slate-950 text-slate-100 font-bold p-2 rounded-xl flex flex-col items-center justify-center min-w-[70px] max-w-[70px] group-hover:bg-blue-600 transition-colors shrink-0 shadow-inner">
-                        <span class="text-[9px] uppercase font-semibold tracking-wider leading-tight text-slate-500 group-hover:text-blue-100">${ann.dateMonth}</span>
+                <div onclick="openAnnouncement('${ann.id}')" class="bg-white dark:bg-slate-900/50 border border-gray-200 dark:border-white/5 p-4 md:p-5 rounded-2xl flex gap-4 items-center hover:border-blue-500/40 dark:hover:border-blue-500/40 hover:bg-slate-100 dark:hover:bg-slate-900/80 transition-all duration-200 cursor-pointer group w-full shadow-sm">
+                    <div class="bg-slate-100 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-bold p-2 rounded-xl flex flex-col items-center justify-center min-w-[70px] max-w-[70px] group-hover:bg-blue-600 group-hover:text-white transition-colors shrink-0 shadow-inner">
+                        <span class="text-[9px] uppercase font-semibold tracking-wider leading-tight text-slate-400 dark:text-slate-500 group-hover:text-blue-100">${ann.dateMonth}</span>
                         <span class="text-lg font-black tracking-tighter leading-tight mt-0.5">${ann.dateDay}</span>
-                        <span class="text-[9px] font-bold text-slate-600 group-hover:text-blue-200 tracking-tighter leading-none">${ann.dateYear}</span>
+                        <span class="text-[9px] font-bold text-slate-400 dark:text-slate-600 group-hover:text-blue-200 tracking-tighter leading-none">${ann.dateYear}</span>
                     </div>
                     <div class="flex-grow min-w-0">
                         <div class="flex items-center gap-2">
-                            <span class="bg-slate-950 text-slate-500 border border-slate-800 px-2 py-0.5 rounded font-bold text-[9px] tracking-wide">${ann.timeStr}</span>
+                            <span class="bg-slate-100 dark:bg-slate-950 text-slate-500 border border-gray-200 dark:border-slate-800 px-2 py-0.5 rounded font-bold text-[9px] tracking-wide">${ann.timeStr}</span>
                         </div>
-                        <h3 class="text-xs md:text-sm font-black text-slate-200 group-hover:text-blue-400 transition-colors mt-2 uppercase tracking-wide truncate">
+                        <h3 class="text-xs md:text-sm font-black text-slate-700 dark:text-slate-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mt-2 uppercase tracking-wide truncate">
                             ${ann.title}
                         </h3>
                     </div>
-                    <div class="text-slate-700 group-hover:text-blue-500 hidden sm:block shrink-0 pr-1 transition-colors">
+                    <div class="text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-500 hidden sm:block shrink-0 pr-1 transition-colors">
                         <i class="fa-solid fa-chevron-right text-xs"></i>
                     </div>
                 </div>
             `).join('');
         }
 
-        // 2. Open event dynamic action switch trigger panel logic
         function openAnnouncement(id) {
             const activeData = myAnnouncements.find(item => item.id === id);
             if (activeData) {
@@ -393,30 +474,83 @@
                 document.getElementById('list-view-section').classList.add('hidden');
                 document.getElementById('detail-view-section').classList.remove('hidden');
 
-                // Generate contextual navigation button module setup framework
+                // Update contextual control hub area
+                const isDark = document.documentElement.classList.contains('dark');
                 document.getElementById('nav-action-container').innerHTML = `
-                    <button onclick="closeAnnouncement()" class="flex items-center gap-2 text-xs font-black bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl shadow-md transition">
+                    <button id="theme-toggle-detail" class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-yellow-400 border border-gray-200 dark:border-slate-700 flex items-center justify-center hover:scale-105 active:scale-95 transition-all shadow-sm">
+                        <i class="fa-solid ${isDark ? 'fa-sun text-yellow-400' : 'fa-moon'} text-base"></i>
+                    </button>
+                    <button onclick="closeAnnouncement()" class="flex items-center gap-2 text-xs font-black bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-xl shadow-md transition">
                         <i class="fa-solid fa-circle-chevron-left text-[11px]"></i> Back To Feed
                     </button>
                 `;
+
+                // Attach handler to new dynamic toggle
+                document.getElementById('theme-toggle-detail').addEventListener('click', toggleThemeMode);
             }
         }
 
-        // 3. Close operation action clear router logic module components
         function closeAnnouncement() {
             document.getElementById('detail-view-section').classList.add('hidden');
             document.getElementById('list-view-section').classList.remove('hidden');
 
+            const isDark = document.documentElement.classList.contains('dark');
             document.getElementById('nav-action-container').innerHTML = `
-                <a href="index.html" class="flex items-center gap-2 text-xs font-bold bg-white/5 hover:bg-white/10 text-slate-300 px-4 py-2 rounded-xl border border-white/10 transition">
+                <button id="theme-toggle" class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-yellow-400 border border-gray-200 dark:border-slate-700 flex items-center justify-center hover:scale-105 active:scale-95 transition-all shadow-sm">
+                    <i class="fa-solid ${isDark ? 'fa-sun text-yellow-400' : 'fa-moon'} text-base"></i>
+                </button>
+                <a href="index.html" class="flex items-center gap-2 text-xs font-bold bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 px-4 py-2.5 rounded-xl border border-gray-200 dark:border-white/10 transition shadow-sm">
                     <i class="fa-solid fa-house text-[10px]"></i> Home
                 </a>
             `;
+
+            document.getElementById('theme-toggle').addEventListener('click', toggleThemeMode);
+        }
+
+        // =========================================================================
+        // SYNCED LIGHT & DARK MODE CONFIGURATION ENGINE
+        // =========================================================================
+        function initThemeEngine() {
+            const savedTheme = localStorage.getItem('color-theme');
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+            if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+                document.documentElement.classList.add('dark');
+                updateToggleIcon(true);
+            } else {
+                document.documentElement.classList.remove('dark');
+                updateToggleIcon(false);
+            }
+
+            const btn = document.getElementById('theme-toggle');
+            if (btn) btn.addEventListener('click', toggleThemeMode);
+        }
+
+        function toggleThemeMode() {
+            const isDarkActive = document.documentElement.classList.contains('dark');
+            if (isDarkActive) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+                updateToggleIcon(false);
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+                updateToggleIcon(true);
+            }
+        }
+
+        function updateToggleIcon(isDark) {
+            const icon = document.querySelector('#theme-toggle i, #theme-toggle-detail i');
+            if (!icon) return;
+            if (isDark) {
+                icon.className = 'fa-solid fa-sun text-yellow-400 text-base';
+            } else {
+                icon.className = 'fa-solid fa-moon text-slate-700 text-base';
+            }
         }
 
         window.onload = initNoticeBoard;
     </script>
-     <script src="./anti-inspect.js"></script>
 </body>
 
 </html>
