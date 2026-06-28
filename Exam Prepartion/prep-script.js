@@ -48,7 +48,7 @@ const prepData = {
                 { title: "Scholar Uzma", url: "https://www.youtube.com/watch?v=1wPfOQ9f95s" },
                 { title: "Learn with Abid (Short Notes)", url: "https://www.youtube.com/watch?v=SO4Is9azya4" },
             ]
-        },
+        },  
         {
             id: "CS302",
             name: "Digital Logic and Design",
@@ -245,10 +245,129 @@ const prepData = {
 
     // Final Start Here
     final: [
+         // ====================
+        //      CS SUBJECTS
+        // ====================
+        {
+            id: "CS101",
+            name: "Introduction To Computing",
+            videos: [
+                { title: "Student Info 5 Part 1", url: "https://www.youtube.com/watch?v=pfwc6OD1dbQ&t=59s" },
+                { title: "Student Info 5 Part 2", url: "https://www.youtube.com/watch?v=xUs3h4MX-E8" },
+                { title: "Study BRD", url: "https://www.youtube.com/watch?v=DzmyDJaVRWc&t=13s" },
+                { title: "Study BRD MCQ's File", url: "https://youtu.be/Fo1WaolwaCs?si=EobuVFVOI6hbgj9A" },
+                { title: "Halim Insights Quiz 3", url: "https://youtu.be/G-T-A9TuM2E?si=3dchQl6Jcblrd30f" },
+                { title: "Halim Insights Quiz 4", url: "https://youtu.be/zRX8Xsire2Y?si=2i0DackzJ7dpvwdm" },
+                { title: "Halim Insights Quiz 5", url: "https://youtu.be/dPnZB9n9-3M?si=d0lo-GQWBh4_ZDgF" },
+                { title: "World Of Education", url: "https://youtu.be/GsxvH1FY3FY?si=2JoNqwtbNNnwbMoi" },
+                { title: "VU Concepts", url: "https://www.youtube.com/watch?v=0FtqjhEq5Qs" },
+                { title: "Helper0711", url: "https://www.youtube.com/watch?v=iP-6w07eoGc" },
+            ]
+        },
+        {
+            id: "CS201",
+            name: "Introduction To Programing",
+            videos: [
+                { title: "VU Talk Complete Video Final-Term", url: "https://youtu.be/VEtWJ3CdPXI?si=8s0Yvz0Y_gdL6VHX" },
+                { title: "Student Info 5", url: "https://www.youtube.com/watch?v=Qn2zEbbsctY" },
+                { title: "Education World P1", url: "https://www.youtube.com/watch?v=B19pItl81EE" },
+                { title: "Education World P2", url: "https://www.youtube.com/watch?v=Ha4Q8tZBFbo" },
+                { title: "VU Concepts 2026", url: "https://www.youtube.com/watch?v=yW2YGTLpoCM" },
+                { title: "VU Concepts 2025", url: "https://www.youtube.com/watch?v=HjwVLIUIBQc" },
+                { title: "Mobiz Knowledge Corner", url: "https://www.youtube.com/watch?v=qBCe3R-6Hao" },
+                { title: "World Of Education 2026", url: "https://www.youtube.com/watch?v=ytua5Zf7Ijc" },
+                { title: "World Of Education P1", url: "https://www.youtube.com/watch?v=yMcapVZKYEQ" },
+                { title: "World Of Education P2", url: "https://www.youtube.com/watch?v=pUlZRNCDJC4" },
+            ]
+        },
+        {
+            id: "CS302",
+            name: "Digital Logic & Design",
+            videos: [
+                { title: "KST Learning 1 Hour", url: "https://youtu.be/CTtaIgmcDis?si=Fjt7TGqH_rxpwEJV" },
+                { title: "Information HUB", url: "https://youtu.be/_stXyky0XtI?si=0Pm2Mn6X6n5IhA4l" },
+                { title: "Student Info 5", url: "https://www.youtube.com/watch?v=4oduKJQgMsU" },
+                { title: "World Of Education P1", url: "https://www.youtube.com/watch?v=x6ezvCinIz8" },
+                { title: "World Of Education P2", url: "https://www.youtube.com/watch?v=wbw2mEnK2SA" },
+                { title: "VU Mentor Moaaz File Discuss", url: "    https://youtu.be/praKccNvR1A?si=48DLlSjNOBfZX1vD" },
+            ]
+        },
+        {
+            id: "CS304",
+            name: "Object Oriented Programming",
+            videos: [
+                { title: "VU TALK 4 Hour", url: "https://www.youtube.com/watch?v=F2SuRz7k13M" },
+                { title: "KST Learning 2024", url: "https://youtu.be/HNvLgJk9qsg?si=Ey3Lig4BMXyO0oqY" },
+                { title: "Information HUB", url: "https://www.youtube.com/watch?v=HJ00x6quMF0" },
+                { title: "Mobiz Knowledge P1", url: "https://www.youtube.com/watch?v=nI4mZuy1z60" },
+                { title: "Mobiz Knowledge P2", url: "https://www.youtube.com/watch?v=SdtNBD0JkN8" },
+                { title: "Mobiz Knowledge P3", url: "https://www.youtube.com/watch?v=8u8l_Ep96Jo&t=6s" },
+                { title: "Moaaz File Discussion", url: "https://www.youtube.com/watch?v=8LZrsNhguMQ" },
+            ]
+        },
+        {
+            id: "CS403",
+            name: "Database Management Systems",
+            videos: [
+                { title: "KST Learning 2024", url: "https://www.youtube.com/watch?v=tkPdTPveagI" },
+                { title: "Information HUB", url: "https://www.youtube.com/watch?v=yBk1AXliGgc" },
+                { title: "Mobiz Knowledge Objective", url: "https://www.youtube.com/watch?v=URuM_QpsRHc" },
+                { title: "Mobiz Knowledge Subjective", url: "https://www.youtube.com/watch?v=orRzGcYQJoA" },
+                { title: "Helper0071", url: "https://www.youtube.com/watch?v=8GCQAtOx8Ns" },
+            ]
+        },
+        {
+            id: "ENG101",
+            name: "English Comprehension",
+            videos: [
+                { title: "Student Info 2026", url: "https://www.youtube.com/watch?v=KY8vT6_0cpk&t=6s" },
+                { title: "Student Info 2025", url: "https://www.youtube.com/watch?v=9_SISoI8vU0&t=12s" },
+                { title: "Student Info 5 Quiz 4", url: "https://www.youtube.com/watch?v=iLKAF8iVJFw" },
+                { title: "Halim Insights Quiz 4", url: "https://www.youtube.com/watch?v=TuuET8GrWQ0" },
+                { title: "VU Concepts", url: "https://www.youtube.com/watch?v=jrtQt2J-KGw" },
+                { title: "VU Helper0711", url: "https://www.youtube.com/watch?v=ADJamgFfQwQ" },
+            ]
+        },
+        {
+            id: "ENG201",
+            name: "English Comprehension",
+            videos: [
+                { title: "Information HUB", url: "https://www.youtube.com/watch?v=hxNC4VOPkv4" },
+                { title: "Study BRD P1", url: "https://www.youtube.com/watch?v=xzoaJFiwLq0" },
+                { title: "Study BRD P2", url: "https://www.youtube.com/watch?v=JFGenvoBmPk" },
+                { title: "Student Info 5 Quiz 5", url: "https://youtu.be/1EcSfY-WRZ8?si=lwRgjCVihxasEKSH" },
+                { title: "Student Info 5 Quiz 4", url: "https://youtu.be/KzpJPtIA2q0?si=w86FKNFiifRlmCkY" },
+                { title: "Student Info 5 Quiz 3", url: "https://youtu.be/6jtqWhi6BLA?si=OrFnGTU-hIBJzYyU" },
+                { title: "VU Concepts", url: "https://www.youtube.com/watch?v=y9-jY0jv4xI" },
+                { title: "VU Helper0711", url: "https://www.youtube.com/watch?v=qzBxvRow_ys" },
+            ]
+        },
+        {
+            id: "PAK301",
+            name: "Pakistan Studies",
+            videos: [
+                { title: "Student Info 2 Hour", url: "https://www.youtube.com/watch?v=gcbAPkY8pPs" },
+                { title: "Study BRD P1", url: "https://www.youtube.com/watch?v=bUDJiIqydfQ" },
+                { title: "Study BRD P2", url: "https://www.youtube.com/watch?v=xCKc0BVapw0" },
+                { title: "Student Info 5 2026 Current", url: "https://www.youtube.com/watch?v=YjIF-_DBZp0" },
+            ]
+        },
+        {
+            id: "ISL202",
+            name: "Islamic Study",
+            videos: [
+                { title: "Study BRD", url: "https://www.youtube.com/watch?v=hujaoYsfeNg" },
+                { title: "Student Info 5 Current 2024", url: "https://www.youtube.com/watch?v=7PjdqxWFJho" },
+                { title: "Student Info 5 Quiz 5", url: "https://youtu.be/nwgJ5KN8H5s?si=Lb6uTNJmvz1Pou7r" },
+                { title: "Student Info 5 Quiz 4", url: "https://youtu.be/RA8ytKI04EQ?si=bW3yTKOZSPx4F0JS" },
+                { title: "Halim Insights", url: "https://www.youtube.com/watch?v=NE7yQDMPKTQ" },
+                { title: "VU Helper0711", url: "https://www.youtube.com/watch?v=e0Jcj6OyqTo" },
+            ]
+        },
     ]
 };
 
-let currentTab = 'mid';
+let currentTab = 'final';
 
 // --- Rendering and Stats Engine ---
 function renderUI() {
