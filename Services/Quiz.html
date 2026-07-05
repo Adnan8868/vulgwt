@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Hub | VU Study LGWT</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="../favicon.png">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body class="text-slate-800 dark:bg-[#0b1329] dark:text-slate-100 antialiased transition-colors duration-300">
+
+    <!-- Compact Header -->
+    <header class="hero-gradient text-white py-6 px-4 shadow-md relative overflow-hidden">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="text-left">
+                <h1 class="text-xl md:text-2xl font-extrabold tracking-tight uppercase">
+                    LGWT <span class="text-yellow-400">Quiz Hub</span>
+                </h1>
+                <p class="text-blue-200 text-xs opacity-90">Premium Quiz Files Archives & Online Paid Handling
+                    Desk.</p>
+            </div>
+            <a href="../index.html"
+                class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-xl text-white font-semibold text-xs backdrop-blur-sm transition border border-white/10">
+                <i class="fa-solid fa-arrow-left"></i> Dashboard
+            </a>
+        </div>
+    </header>
+
+    <!-- Top Banner Split Section (Image Included Like image_eb1f42.jpg) -->
+    <section class="max-w-6xl mx-auto px-4 pt-10">
+        <div
+            class="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-sm border border-slate-200/60 dark:border-slate-800 grid grid-cols-1 md:grid-cols-12 gap-8 items-center p-6 md:p-8">
+
+            <!-- Left Side Image Box -->
+            <div
+                class="md:col-span-5 h-64 md:h-72 rounded-2xl overflow-hidden shadow-inner bg-slate-100 dark:bg-slate-800">
+                <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                    alt="Quiz Work" class="w-full h-full object-cover">
+            </div>
+
+            <!-- Right Side Content Info -->
+            <!-- Right Side Content Info -->
+            <div class="md:col-span-7 space-y-4">
+                <div>
+                    <span
+                        class="bg-blue-100 text-blue-700 dark:bg-blue-950 dark:text-blue-400 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md">
+                        Premium Support Desk
+                    </span>
+                    <h2 class="text-2xl font-black text-slate-900 dark:text-white uppercase mt-2">
+                        LMS Online Quiz Service
+                    </h2>
+                    <div class="w-12 h-1 bg-blue-600 mt-2 rounded"></div>
+                </div>
+
+                <!-- Short Professional Points -->
+                <ul class="space-y-2 text-xs text-slate-400 dark:text-slate-300 font-medium">
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-500 mt-0.5 shrink-0"></i>
+                        <span><strong>100% Correct Result & Full Responsibility:</strong> Busy routine ya
+                            network issues hain? Hamari expert team behtareen GPA score ki guarantee ke sath
+                            aapki quizzes handle karegi.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-500 mt-0.5 shrink-0"></i>
+                        <span><strong>Affordable Prices & 24/7 Help:</strong> Sabhi online quizzes bilkul
+                            pocket-friendly rates par available hain. Kisi bhi help ya online support ke liye
+                            abhi rabta karein.</span>
+                    </li>
+                </ul>
+
+                <!-- Operations Trigger Action Buttons -->
+                <div class="flex flex-wrap items-center gap-3 pt-2">
+                    <a href="https://wa.me/923196248868?text=Hi%20LGWT,%20I%20want%20to%20register%20my%20quizzes%20for%20online%20paid%20handling%20service."
+                        target="_blank"
+                        class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3.5 rounded-xl text-xs uppercase tracking-wider transition shadow-md">
+                        <i class="fab fa-whatsapp text-sm"></i> Order Paid Quiz / Get Help
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Download Core Area -->
+    <main class="max-w-6xl mx-auto px-4 py-10">
+        <div
+            class="bg-white dark:bg-slate-900 rounded-3xl shadow-sm border border-slate-200/60 dark:border-slate-800 p-6 md:p-8 space-y-8">
+
+            <!-- SECTION A: LATEST CURRENT QUIZ (Live Drive Loader) -->
+            <div class="space-y-4">
+                <div
+                    class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-100 dark:border-slate-800">
+                    <div class="flex items-center gap-2">
+                        <div
+                            class="w-8 h-8 bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 rounded-lg flex items-center justify-center text-sm">
+                            <i class="fa-solid fa-cloud-arrow-down"></i></div>
+                        <div>
+                            <h3 class="font-bold text-slate-800 dark:text-white text-sm">Latest Current Quiz
+                                Files</h3>
+                            <p class="text-[10px] text-slate-400">Current running semester files download
+                                center</p>
+                        </div>
+                    </div>
+
+                    <!-- Internal Filter Search Bar for Current Quiz only -->
+                    <div class="relative w-full sm:w-64">
+                        <i
+                            class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+                        <input type="text" id="searchInput" placeholder="Search course code..."
+                            class="w-full pl-9 pr-4 py-2 text-xs bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl outline-none focus:border-blue-500 transition font-medium">
+                    </div>
+                </div>
+
+                <!-- Dynamic Container -->
+                <div id="solutions-list"
+                    class="space-y-2.5 max-h-[280px] overflow-y-auto pr-1 custom-scrollbar">
+                    <div class="text-center py-8">
+                        <i class="fa-solid fa-spinner animate-spin text-xl text-blue-600 mb-2"></i>
+                        <p class="text-slate-400 text-xs">Connecting to LGWT quiz stream...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION B: QUIZ BANK ARCHIVES BUTTONS -->
+            <div class="space-y-4 pt-4 border-t border-slate-100 dark:border-slate-800">
+                <div class="flex items-center gap-2 pb-2">
+                    <div
+                        class="w-8 h-8 bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 rounded-lg flex items-center justify-center text-sm">
+                        <i class="fa-solid fa-box-archive"></i></div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 dark:text-white text-sm">Historical Quiz Bank
+                            Archives</h3>
+                        <p class="text-[10px] text-slate-400">Select standard folder to view deep archives</p>
+                    </div>
+                </div>
+
+                <!-- Responsive Grid Box containing small action button chips -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                    <!-- Button 1: Spring 2026 -->
+                    <a href="https://drive.google.com/drive/folders/1x694begv1RuETNKzHEk-cdY_eNb6N6nn" target="_blank"
+                        class="flex items-center justify-between p-3.5 bg-slate-50 hover:bg-blue-50 dark:bg-slate-950 dark:hover:bg-blue-950/30 border border-slate-200/80 dark:border-slate-800 rounded-xl transition group text-xs font-bold text-slate-700 dark:text-slate-300">
+                        <span class="flex items-center gap-2 min-w-0"><i
+                                class="fa-regular fa-folder-open text-blue-500 shrink-0"></i> <span
+                                class="truncate">Spring 2026</span></span>
+                        <i
+                            class="fa-solid fa-chevron-right text-[10px] text-slate-400 group-hover:translate-x-0.5 transition-transform shrink-0"></i>
+                    </a>
+
+                    <!-- Button 2: Fall 2025 -->
+                    <a href="https://drive.google.com/drive/folders/1x1OYQanJBzPETORDsDE-1ppD9BcXEj7h" target="_blank"
+                        class="flex items-center justify-between p-3.5 bg-slate-50 hover:bg-blue-50 dark:bg-slate-950 dark:hover:bg-blue-950/30 border border-slate-200/80 dark:border-slate-800 rounded-xl transition group text-xs font-bold text-slate-700 dark:text-slate-300">
+                        <span class="flex items-center gap-2 min-w-0"><i
+                                class="fa-regular fa-folder-open text-blue-500 shrink-0"></i> <span
+                                class="truncate">Fall 2025</span></span>
+                        <i
+                            class="fa-solid fa-chevron-right text-[10px] text-slate-400 group-hover:translate-x-0.5 transition-transform shrink-0"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- JavaScript Processing Engine -->
+    <script>
+        // Aapka synchronized core backend web app URL
+        const API_URL = "https://script.google.com/macros/s/AKfycbx5403GuaxgVIM3OF6rwwI05qLnrJ7oVwU_1PL6tJ75BHLwjt4DnqDintzk0uels-Tu/exec";
+
+        let quizDriveFiles = [];
+
+        function loadQuizDatabase() {
+            fetch(API_URL)
+                .then(res => res.json())
+                .then(data => {
+                    // Ab direct bina kisi extra file name checking ke naye folder ka data load hoga
+                    quizDriveFiles = data.quizFiles || [];
+                    renderQuizEngine();
+                })
+                .catch(err => {
+                    console.error("Quiz Fetch Error:", err);
+                    document.getElementById('solutions-list').innerHTML = `
+                        <p class="text-center py-4 text-red-500 text-xs font-semibold">Failed to load current semester quiz files.</p>
+                    `;
+                });
+        }
+
+        // Search engine filter row listener
+        document.getElementById('searchInput').addEventListener('input', renderQuizEngine);
+
+        function renderQuizEngine() {
+            const container = document.getElementById('solutions-list');
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+            let filtered = quizDriveFiles.filter(f => f.name.toLowerCase().includes(searchTerm));
+
+            if (filtered.length === 0) {
+                container.innerHTML = `
+                    <div class="p-6 text-center bg-slate-50 dark:bg-slate-950 rounded-xl border border-dashed border-slate-200 dark:border-slate-800">
+                        <p class="text-slate-400 text-xs font-medium">No current quiz file matches your search.</p>
+                    </div>`;
+                return;
+            }
+
+            container.innerHTML = filtered.map(item => `
+                <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-950 hover:bg-slate-100/50 rounded-xl transition border border-slate-100 dark:border-slate-800 gap-3">
+                    <div class="flex items-center gap-3 min-w-0">
+                        <div class="w-7 h-7 bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-blue-400 rounded-lg flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-file-pdf"></i></div>
+                        <span class="text-xs font-bold text-slate-700 dark:text-slate-300 truncate">${item.name}</span>
+                    </div>
+                    <a href="${item.url}" target="_blank" class="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg text-[11px] transition shrink-0 shadow-sm">
+                        <i class="fa-solid fa-download mr-1"></i> Download File
+                    </a>
+                </div>
+            `).join('');
+        }
+
+        // Execute row stream
+        loadQuizDatabase();
+    </script>
+    <script src="../anti-inspect.js"></script>
+</body>
+
+</html>
