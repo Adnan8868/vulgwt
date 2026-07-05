@@ -364,37 +364,94 @@
     </section>
 
     <!-- Quiz Assignmnets -->
-    <section id="services" class="py-24 bg-white dark:bg-slate-900 transition-colors">
-        <div class="max-w-7xl mx-auto px-4">
+    <section id="services"
+        class="py-24 bg-white dark:bg-slate-900 border-b border-gray-100 dark:border-slate-800 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <span
-                    class="bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-400 px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">Academic
-                    Solutions</span>
+                    class="bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-400 px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">Services</span>
                 <h2 class="text-4xl font-black text-slate-900 dark:text-white mt-4 uppercase">Latest <span
                         class="text-blue-600">Solutions</span></h2>
+                <div class="w-16 h-1 bg-blue-600 mx-auto mt-3 rounded"></div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-10">
+            <!-- 3 Columns Services Grid (As Shown in image_191616.jpg) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+                <!-- Assignments Block -->
                 <div
-                    class="bg-slate-50 dark:bg-slate-950 p-10 rounded-[3rem] card-shadow text-center border border-slate-100 dark:border-slate-800">
-                    <div class="text-5xl mb-6">📝</div>
-                    <h3 class="text-2xl font-black text-slate-800 dark:text-slate-200 mb-4">Assignments</h3>
-                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-8">Plagiarism-free solutions
-                        according to marking scheme.</p>
-                    <a href="Services/assignmnet.html"
-                        class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-2xl font-black text-xs uppercase tracking-widest shadow-lg">Access
-                        Hub</a>
+                    class="bg-white dark:bg-slate-950 rounded-2xl shadow-md border border-slate-100 dark:border-slate-800 overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all group">
+                    <div>
+                        <div class="h-48 bg-slate-100 dark:bg-slate-900 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=500&auto=format&fit=crop&q=60"
+                                alt="Assignments"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <span
+                                class="absolute top-4 left-4 bg-blue-600 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded">Assignments</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-slate-800 dark:text-slate-200 mb-2">Assignments
+                            </h3>
+                            <p class="text-slate-500 dark:text-slate-400 text-xs leading-relaxed">Verified,
+                                properly formatted, and plagiarism-free assignment files ready for direct
+                                download according to marking schemes.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="Services/Assignments.html"
+                            class="block text-center bg-slate-900 dark:bg-blue-600 hover:bg-slate-800 dark:hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-xl text-xs transition uppercase tracking-wider">Read
+                            More</a>
+                    </div>
                 </div>
 
+                <!-- Quiz Block -->
                 <div
-                    class="bg-slate-50 dark:bg-slate-950 p-10 rounded-[3rem] card-shadow text-center border border-slate-100 dark:border-slate-800">
-                    <div class="text-5xl mb-6">🎯</div>
-                    <h3 class="text-2xl font-black text-slate-800 dark:text-slate-200 mb-4">Grand Quizzes</h3>
-                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-8">10/10 marks guaranteed with
-                        expert handling pools.</p>
-                    <a href="Services/solution.html"
-                        class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-2xl font-black text-xs uppercase tracking-widest shadow-lg">Open
-                        Bank</a>
+                    class="bg-white dark:bg-slate-950 rounded-2xl shadow-md border border-slate-100 dark:border-slate-800 overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all group">
+                    <div>
+                        <div class="h-48 bg-slate-100 dark:bg-slate-900 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?w=500&auto=format&fit=crop&q=60"
+                                alt="Quiz"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <span
+                                class="absolute top-4 left-4 bg-purple-600 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded">Quiz</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-slate-800 dark:text-slate-200 mb-2">QUIZ</h3>
+                            <p class="text-slate-500 dark:text-slate-400 text-xs leading-relaxed">A quiz
+                                dashboard featuring continuous live updates, historical short files evaluation
+                                and feedback references.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="Services/Quiz.html"
+                            class="block text-center bg-slate-900 dark:bg-blue-600 hover:bg-slate-800 dark:hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-xl text-xs transition uppercase tracking-wider">Read
+                            More</a>
+                    </div>
+                </div>
+
+                <!-- GDB Block -->
+                <div
+                    class="bg-white dark:bg-slate-950 rounded-2xl shadow-md border border-slate-100 dark:border-slate-800 overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all group">
+                    <div>
+                        <div class="h-48 bg-slate-100 dark:bg-slate-900 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&auto=format&fit=crop&q=60"
+                                alt="GDB"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <span
+                                class="absolute top-4 left-4 bg-amber-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded">GDB</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-slate-800 dark:text-slate-200 mb-2">GDB</h3>
+                            <p class="text-slate-500 dark:text-slate-400 text-xs leading-relaxed">The General
+                                Discussion Board dynamic text responses with integrated clean text
+                                visualization block copy features.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="Services/GDB.html"
+                            class="block text-center bg-slate-900 dark:bg-blue-600 hover:bg-slate-800 dark:hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-xl text-xs transition uppercase tracking-wider">Read
+                            More</a>
+                    </div>
                 </div>
             </div>
         </div>
