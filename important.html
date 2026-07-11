@@ -50,7 +50,7 @@
                     <h1 class="text-xl md:text-2xl font-extrabold tracking-tight uppercase">
                         LGWT <span class="text-yellow-400">Premium Preparation Files</span>
                     </h1>
-                    <p class="text-blue-200 text-xs opacity-90">100% Passing Golden Material By Sir Zaib & Sir Mubashir.</p>
+                    <p class="text-blue-200 text-xs opacity-90">100% Passing Golden Material By Sir Zaib, Sir Mubashir and His Team.</p>
                 </div>
                 
                 <div class="flex items-center gap-3">
@@ -96,7 +96,7 @@
                                 <div class="p-3.5 bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-200/60 dark:border-slate-800/60 space-y-2">
                                     <p class="text-slate-500 dark:text-slate-400 font-bold uppercase text-[10px] tracking-wide">Special Credit & Acknowledgement:</p>
                                     <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
-                                        Is pure data ka credit <span class="text-blue-600 dark:text-blue-400 font-bold">Sir Zaib</span> aur <span class="text-blue-600 dark:text-blue-400 font-bold">Sir Muhammad Mubashir Ali</span> ko diya jata hai, jinhon ne yeh files bana kar tamam students ki bharpoor madad ki.
+                                        Is pure data ka credit <span class="text-blue-600 dark:text-blue-400 font-bold">Sir Zaib, </span> <span class="text-blue-600 dark:text-blue-400 font-bold">Sir Muhammad Mubashir Ali, aur unki team </span> ko diya jata hai, jinhon ne yeh files bana kar tamam students ki bharpoor madad ki.
                                     </p>
                                 </div>
 
@@ -230,6 +230,24 @@
             executeRenderEngine();
         }
 
+        // Helper function to convert Google Drive URL to Direct Download Link
+        function makeDirectDownloadLink(url) {
+            if (url && url.includes('drive.google.com')) {
+                let fileId = '';
+                const match = url.match(/\/file\/d\/([^\/]+)/);
+                if (match && match[1]) {
+                    fileId = match[1];
+                } else {
+                    const urlParams = new URLSearchParams(url.split('?')[1]);
+                    fileId = urlParams.get('id');
+                }
+                if (fileId) {
+                    return `https://drive.google.com/uc?export=download&id=${fileId}`;
+                }
+            }
+            return url;
+        }
+
         function executeRenderEngine() {
             const container = document.getElementById('solutions-list');
             const footerDriveBtn = document.getElementById('dynamic-drive-footer-btn');
@@ -256,6 +274,8 @@
 
             container.innerHTML = filtered.map(item => {
                 let rawCleanTitle = item.name.replace(".pdf", "").replace(".docx", "").replace(".png", "").replace(".jpg", "").trim();
+                let directDownloadUrl = makeDirectDownloadLink(item.url);
+
                 return `
                 <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between p-3.5 bg-slate-50 dark:bg-[#0c142c] hover:bg-slate-100/60 dark:hover:bg-[#111c3d] rounded-2xl transition-all border border-slate-200/40 dark:border-slate-800/40 gap-3">
                     <div class="flex items-start gap-3 min-w-0 w-full">
@@ -270,7 +290,7 @@
                         <a href="${item.url}" target="_blank" class="text-center flex-1 sm:flex-initial px-3.5 py-1.5 bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 border border-blue-500/20 hover:bg-blue-50 dark:hover:bg-blue-950/40 font-bold rounded-lg text-xs transition">
                             View
                         </a>
-                        <a href="${item.url}" download class="text-center flex-1 sm:flex-initial px-3.5 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-lg text-xs transition">
+                        <a href="${directDownloadUrl}" target="_blank" class="text-center flex-1 sm:flex-initial px-3.5 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-lg text-xs transition">
                             Download
                         </a>
                     </div>
