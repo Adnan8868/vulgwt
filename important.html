@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Preparation Files | VU Study LGWT</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="https://img.icons8.com/fluency/48/graduation-cap.png" type="image/x-icon">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+        }
+
+        .full-mobile-title {
+            white-space: normal;
+            word-break: break-word;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body class="text-slate-800 dark:bg-[#0b1329] dark:text-slate-100 antialiased transition-colors duration-300 min-h-screen flex flex-col justify-between">
+
+    <div>
+        <header class="hero-gradient text-white py-6 px-4 shadow-md relative overflow-hidden">
+            <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="text-left">
+                    <h1 class="text-xl md:text-2xl font-extrabold tracking-tight uppercase">
+                        LGWT <span class="text-yellow-400">Premium Preparation Files</span>
+                    </h1>
+                    <p class="text-blue-200 text-xs opacity-90">100% Passing Golden Material By Sir Zaib & Sir Mubashir.</p>
+                </div>
+                
+                <div class="flex items-center gap-3">
+                    <button onclick="toggleInstructionsDrawer()" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-slate-950 px-4 py-2 rounded-xl font-bold text-xs uppercase transition shadow-md">
+                        <i class="fa-solid fa-circle-info"></i> Instructions
+                    </button>
+                    <a href="index.html" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-xl text-white font-semibold text-xs backdrop-blur-sm transition border border-white/10">
+                        <i class="fa-solid fa-arrow-left"></i> Dashboard
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div id="instructionsDrawer" class="fixed inset-0 z-50 overflow-hidden hidden">
+            <div class="absolute inset-0 overflow-hidden">
+                <div onclick="toggleInstructionsDrawer()" class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity"></div>
+                
+                <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+                    <div class="pointer-events-auto w-screen max-w-md transform bg-white dark:bg-slate-900 shadow-2xl border-l border-slate-200 dark:border-slate-800 transition-transform duration-300 ease-in-out">
+                        <div class="flex h-full flex-col overflow-y-auto py-6 custom-scrollbar">
+                            <div class="px-4 sm:px-6 flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
+                                <h2 class="text-sm font-extrabold text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-2">
+                                    <i class="fa-solid fa-bullhorn text-amber-500"></i> Exam Guidelines
+                                </h2>
+                                <button onclick="toggleInstructionsDrawer()" class="rounded-xl p-2 text-slate-400 hover:text-slate-500 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+                                    <i class="fa-solid fa-xmark text-xs"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="relative mt-6 flex-1 px-4 sm:px-6 space-y-4 text-xs font-medium">
+                                <div class="p-3 bg-amber-500/10 border border-amber-500/30 rounded-xl">
+                                    <p class="text-amber-700 dark:text-amber-400 font-bold flex items-center gap-1.5">
+                                        <i class="fa-solid fa-circle-exclamation"></i> Most Important Verification Note
+                                    </p>
+                                </div>
+                                <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-justify">
+                                    Yeh bohot hi important aur highly recommended files hain. Guzashta semesters mein kafi zyada students ka paper isi premium material se aaya hai.
+                                </p>
+                                <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-justify">
+                                    Yeh files senior students aur professional degree holders ne hamare liye mil kar design aur verify ki hain.
+                                </p>
+                                
+                                <div class="p-3.5 bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-200/60 dark:border-slate-800/60 space-y-2">
+                                    <p class="text-slate-500 dark:text-slate-400 font-bold uppercase text-[10px] tracking-wide">Special Credit & Acknowledgement:</p>
+                                    <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                                        Is pure data ka credit <span class="text-blue-600 dark:text-blue-400 font-bold">Sir Zaib</span> aur <span class="text-blue-600 dark:text-blue-400 font-bold">Sir Muhammad Mubashir Ali</span> ko diya jata hai, jinhon ne yeh files bana kar tamam students ki bharpoor madad ki.
+                                    </p>
+                                </div>
+
+                                <div class="pt-2 space-y-2.5">
+                                    <p class="text-slate-500 dark:text-slate-400 font-bold uppercase text-[10px] tracking-wide">Apni File Khud Banayein (AI Prompts):</p>
+                                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-[11px]">
+                                        Agar aap AI tools (ChatGPT, Gemini, Claude, ya Minus AI) ke zariye aisi hi professional standard files khud generate karna chahte hain, toh niche diye gaye button se special AI Prompt download karein. AI aapko bilkul waisi hi complete file bana kar de dega.
+                                    </p>
+                                    <a href="https://drive.google.com/uc?export=download&id=1FjZ9g2YoBpIoVhdtEw6ThYVI9o-HqKFb" target="_blank" class="w-full text-center py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold rounded-xl text-[11px] transition shadow-md flex items-center justify-center gap-2 uppercase tracking-wide">
+                                        <i class="fa-solid fa-robot"></i> Download AI Prompts PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <main class="max-w-6xl mx-auto px-4 py-10">
+            <div class="bg-white dark:bg-slate-900 rounded-3xl shadow-sm border border-slate-200/60 dark:border-slate-800 p-6 md:p-8 space-y-6">
+                
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800/60">
+                    <div class="flex flex-wrap items-center gap-3">
+                        <div class="flex bg-slate-100 dark:bg-slate-950 p-1 rounded-xl gap-1 border border-slate-200/20">
+                            <button id="tab-final-btn" onclick="switchTermTab('finalterm')" class="px-4 py-2 rounded-lg text-xs font-bold transition-all duration-200 bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 shadow-sm flex items-center gap-1.5">
+                                <i class="fa-solid fa-award"></i> Finalterm
+                                <span id="final-counter-badge" class="bg-slate-950/20 text-slate-950 text-[10px] font-black px-1.5 py-0.5 rounded"><i class="fa-solid fa-circle-notch animate-spin text-[8px]"></i></span>
+                            </button>
+                            <button id="tab-mid-btn" onclick="switchTermTab('midterm')" class="px-4 py-2 rounded-lg text-xs font-bold text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-all duration-200 flex items-center gap-1.5">
+                                <i class="fa-solid fa-graduation-cap"></i> Midterm
+                                <span id="mid-counter-badge" class="bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-black px-1.5 py-0.5 rounded"><i class="fa-solid fa-circle-notch animate-spin text-[8px]"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="relative w-full lg:w-64">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+                        <input type="text" id="searchInput" placeholder="Search course code..." class="w-full pl-9 pr-4 py-2.5 text-xs bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl outline-none focus:border-blue-500 transition font-semibold">
+                    </div>
+                </div>
+
+                <div id="solutions-list" class="space-y-2.5">
+                    <div class="text-center py-12">
+                        <i class="fa-solid fa-circle-notch animate-spin text-xl text-blue-600 mb-2"></i>
+                        <p class="text-slate-400 text-xs"> <b class="text-green-500">Please Wait,</b> Loading Premium Exam databases...</p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <footer class="max-w-6xl w-full mx-auto px-4 pb-8 mt-auto">
+        <div class="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 p-4 rounded-2xl shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="text-center sm:text-left">
+                <h4 class="text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wide">Alternative Access Utilities</h4>
+                <p class="text-[11px] text-slate-400 font-medium">Browse backup files directly or view our student feedback logs.</p>
+            </div>
+            
+            <div class="flex flex-wrap items-center justify-center gap-2 w-full sm:w-auto">
+                <a id="dynamic-drive-footer-btn" href="https://drive.google.com/drive/folders/1acaIQNSjslDv4cksOFo41AtbguyrxfSL" target="_blank" class="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs rounded-xl transition flex items-center gap-1.5 shadow-sm uppercase tracking-wider text-center">
+                    <i class="fa-solid fa-folder-open"></i> Finalterm Drive
+                </a>
+                
+                <a href="https://drive.google.com/drive/folders/1zktiAVKQhv1vgl_acoLJuhktKpfTX4kU" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs rounded-xl transition flex items-center gap-1.5 shadow-sm uppercase tracking-wider text-center">
+                    <i class="fa-solid fa-star"></i> Student Reviews
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ⚠️ YAHAAN APNA NAYA COPIED APPS SCRIPT URL PASTE KAREIN
+        const API_URL = "https://script.google.com/macros/s/AKfycbwc-oyTqz4V-CzwxzFmz7Tk9GgQIolK0sKsUPD6RcZS5NBxBozX30du3FUbHJEyD1mI/exec";
+        
+        let midtermFilesData = [];
+        let finaltermFilesData = [];
+        let currentSelectedTab = 'finalterm';
+
+        // Corrected Master Google Drive redirection setups
+        const MIDTERM_DRIVE_LINK = "https://drive.google.com/drive/folders/1RUQJKc1QZOOHD-W-Ku9y6WE0OqmpUd0g?usp=drive_link";
+        const FINALTERM_DRIVE_LINK = "https://drive.google.com/drive/folders/1acaIQNSjslDv4cksOFo41AtbguyrxfSL?usp=drive_link";
+
+        function loadExamCrackerDatabase() {
+            fetch(API_URL)
+                .then(res => res.json())
+                .then(data => {
+                    // Alphabetical Sorting Setup (A to Z Name Wise Sequence)
+                    midtermFilesData = (data.midterm || []).sort((a, b) => a.name.localeCompare(b.name));
+                    finaltermFilesData = (data.finalterm || []).sort((a, b) => a.name.localeCompare(b.name));
+                    
+                    document.getElementById('mid-counter-badge').innerText = data.midCount || 0;
+                    document.getElementById('final-counter-badge').innerText = data.finalCount || 0;
+                    
+                    executeRenderEngine();
+                })
+                .catch(err => {
+                    console.error(err);
+                    document.getElementById('solutions-list').innerHTML = `
+                        <p class="text-center py-6 text-red-500 text-xs font-semibold">Connection failed. Parameters aborted.</p>
+                    `;
+                });
+        }
+
+        document.getElementById('searchInput').addEventListener('input', executeRenderEngine);
+        function toggleInstructionsDrawer() { document.getElementById('instructionsDrawer').classList.toggle('hidden'); }
+
+        function switchTermTab(targetTab) {
+            currentSelectedTab = targetTab;
+            const midBtn = document.getElementById('tab-mid-btn');
+            const finalBtn = document.getElementById('tab-final-btn');
+            const midBadge = document.getElementById('mid-counter-badge');
+            const finalBadge = document.getElementById('final-counter-badge');
+
+            const activeMidStyle = "px-4 py-2 rounded-lg text-xs font-bold transition-all duration-200 bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-sm flex items-center gap-1.5";
+            const activeFinalStyle = "px-4 py-2 rounded-lg text-xs font-bold transition-all duration-200 bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 shadow-sm flex items-center gap-1.5";
+            const inactiveStyle = "px-4 py-2 rounded-lg text-xs font-bold text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-all duration-200 flex items-center gap-1.5";
+
+            if (targetTab === 'midterm') {
+                midBtn.className = activeMidStyle;
+                finalBtn.className = inactiveStyle;
+                midBadge.className = "bg-white/20 text-white text-[10px] font-black px-1.5 py-0.5 rounded";
+                finalBadge.className = "bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-black px-1.5 py-0.5 rounded";
+            } else {
+                finalBtn.className = activeFinalStyle;
+                midBtn.className = inactiveStyle;
+                finalBadge.className = "bg-slate-950/20 text-slate-950 text-[10px] font-black px-1.5 py-0.5 rounded";
+                midBadge.className = "bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-black px-1.5 py-0.5 rounded";
+            }
+            executeRenderEngine();
+        }
+
+        function executeRenderEngine() {
+            const container = document.getElementById('solutions-list');
+            const footerDriveBtn = document.getElementById('dynamic-drive-footer-btn');
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+            // Dynamic footer link updates
+            if (currentSelectedTab === 'midterm') {
+                footerDriveBtn.href = MIDTERM_DRIVE_LINK;
+                footerDriveBtn.innerHTML = `<i class="fa-solid fa-folder-open mr-1.5"></i> Midterm Drive`;
+                footerDriveBtn.className = "px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs rounded-xl transition flex items-center gap-1.5 shadow-sm uppercase tracking-wider text-center";
+            } else {
+                footerDriveBtn.href = FINALTERM_DRIVE_LINK;
+                footerDriveBtn.innerHTML = `<i class="fa-solid fa-folder-open mr-1.5"></i> Finalterm Drive`;
+                footerDriveBtn.className = "px-4 py-2 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs rounded-xl transition flex items-center gap-1.5 shadow-sm uppercase tracking-wider text-center";
+            }
+
+            let sourceArray = (currentSelectedTab === 'midterm') ? midtermFilesData : finaltermFilesData;
+            let filtered = sourceArray.filter(f => f.name.toLowerCase().includes(searchTerm));
+
+            if (filtered.length === 0) {
+                container.innerHTML = `<div class="p-8 text-center bg-slate-50 dark:bg-slate-950 rounded-xl border border-dashed border-slate-200 dark:border-slate-800"><p class="text-slate-400 text-xs font-bold">No Premium File Found.</p></div>`;
+                return;
+            }
+
+            container.innerHTML = filtered.map(item => {
+                let rawCleanTitle = item.name.replace(".pdf", "").replace(".docx", "").replace(".png", "").replace(".jpg", "").trim();
+                return `
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between p-3.5 bg-slate-50 dark:bg-[#0c142c] hover:bg-slate-100/60 dark:hover:bg-[#111c3d] rounded-2xl transition-all border border-slate-200/40 dark:border-slate-800/40 gap-3">
+                    <div class="flex items-start gap-3 min-w-0 w-full">
+                        <div class="w-7 h-7 bg-amber-500/10 text-amber-500 rounded-lg flex items-center justify-center text-xs shrink-0 border border-amber-500/20 mt-0.5">
+                            <i class="fa-solid fa-file-shield text-amber-500"></i>
+                        </div>
+                        <div class="min-w-0 w-full">
+                            <span class="full-mobile-title text-xs font-bold text-slate-700 dark:text-slate-300 block leading-normal">${rawCleanTitle}</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-2 w-full sm:w-auto shrink-0 border-t sm:border-t-0 pt-2.5 sm:pt-0 border-slate-200/40 dark:border-slate-800/40 justify-end">
+                        <a href="${item.url}" target="_blank" class="text-center flex-1 sm:flex-initial px-3.5 py-1.5 bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 border border-blue-500/20 hover:bg-blue-50 dark:hover:bg-blue-950/40 font-bold rounded-lg text-xs transition">
+                            View
+                        </a>
+                        <a href="${item.url}" download class="text-center flex-1 sm:flex-initial px-3.5 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-lg text-xs transition">
+                            Download
+                        </a>
+                    </div>
+                </div>
+            `;
+            }).join('');
+        }
+
+        loadExamCrackerDatabase();
+    </script>
+</body>
+
+</html>
