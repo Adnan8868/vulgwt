@@ -24,6 +24,17 @@ document.addEventListener("DOMContentLoaded", function () {
             .main-btn-pulse {
                 animation: mainPulse 2s infinite ease-in-out;
             }
+            /* Custom smooth scrollbar for popup */
+            .lgwt-scrollbar::-webkit-scrollbar {
+                width: 4px;
+            }
+            .lgwt-scrollbar::-webkit-scrollbar-track {
+                background: transparent;
+            }
+            .lgwt-scrollbar::-webkit-scrollbar-thumb {
+                background: #cbd5e1;
+                border-radius: 10px;
+            }
         `;
         document.head.appendChild(styleTag);
     }
@@ -31,19 +42,23 @@ document.addEventListener("DOMContentLoaded", function () {
     // ==========================================
     // 💡 CONFIGURATION LINKS
     // ==========================================
-    const WHATSAPP_GROUP_LINK   = "https://chat.whatsapp.com/HLR6U0I7RqDJYCUa6c3Nr4";
+    const WHATSAPP_GROUP_LINK   = "https://chat.whatsapp.com/EwrShEmFuYX22tq7GOXJtq";
     const PAPERS_REVIEW_LINK      = "https://adnan8868.github.io/lgwt-review/";
     const PREMIUM_FILES_LINK      = "important.html"; // Local page reference
 
     const popupHtml = `
     <div id="lgwtPopupOverlay" style="backdrop-filter: blur(4px); z-index: 99999;" class="fixed inset-0 bg-slate-900/60 flex items-center justify-center p-4 transition-all duration-300 opacity-0 pointer-events-none">
-        <div class="bg-white text-slate-800 w-full max-w-sm rounded-[2rem] border border-slate-100 shadow-2xl p-6 transform scale-95 transition-all duration-300 relative overflow-hidden lgwt-premium-glow">
+        <!-- added max-h and overflow-y-auto for mobile scrolling safety -->
+        <div class="bg-white text-slate-800 w-full max-w-sm rounded-[2rem] border border-slate-100 shadow-2xl p-6 max-h-[85vh] overflow-y-auto lgwt-scrollbar transform scale-95 transition-all duration-300 relative lgwt-premium-glow">
             
-            <div class="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-blue-600 via-indigo-500 to-amber-500"></div>
+            <div class="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-blue-600 via-indigo-500 to-amber-500 sticky-top"></div>
 
-            <button id="lgwtCloseBtn" class="absolute top-4 right-4 w-9 h-9 rounded-full flex items-center justify-center text-red-600 hover:text-white hover:bg-red-500 border border-red-100 font-black transition-all active:scale-90 text-base shadow-sm" aria-label="Close">
-                ✕
-            </button>
+            <!-- Sticky button wrapper to keep close icon visible even on scroll -->
+            <div class="absolute top-4 right-4 z-10">
+                <button id="lgwtCloseBtn" class="w-9 h-9 rounded-full flex items-center justify-center text-red-600 hover:text-white hover:bg-red-500 bg-white border border-red-100 font-black transition-all active:scale-90 text-base shadow-sm" aria-label="Close">
+                    ✕
+                </button>
+            </div>
 
             <div class="text-center mt-2">
                 <span class="inline-block bg-blue-50 text-[#1e3a8a] text-[9px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider mb-1">
@@ -54,8 +69,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 </h3>
             </div>
 
-            <div class="mt-5 flex flex-col gap-3">
+            <div class="mt-4 flex flex-col gap-3">
                 
+                <!-- 📢 IMPORTANT NOTICE BOX -->
+                <div class="p-3.5 bg-red-50 border border-red-100 rounded-2xl text-left shadow-sm">
+                    <h4 class="text-xs font-black text-red-600 flex items-center gap-1.5 mb-1 uppercase tracking-wide">
+                        <span>📢</span> 𝐈𝐦𝐩𝐨𝐫𝐭𝐚𝐧𝐭 𝐍𝐨𝐭𝐢𝐜𝐞 𝐅𝐢𝐧𝐚𝐥-𝐓𝐞𝐫𝐦
+                    </h4>
+                    <p class="text-[11px] font-bold text-slate-700 leading-normal">
+                        Assalam-o-Alaikum! <br>
+                        Tamam students se guzarish hai ke neeche diya gaya WhatsApp group zaroor join kar lein. <br>
+                        <span class="text-red-600 font-extrabold">🗓️ 19 July ko Fajr ke baad</span> tamam zaroori files isi group mein share ki jayengi. Apna <span class="italic text-indigo-600">*Subject Code*</span> search karke file download kar len.
+                    </p>
+                </div>
+
+                <!-- 🔥 WhatsApp Button -->
                 <a href="${WHATSAPP_GROUP_LINK}" target="_blank" class="w-full bg-green-500 hover:bg-green-600 text-white font-black py-3 px-4 rounded-xl text-center text-xs md:text-sm transition-all shadow-md shadow-green-100 flex items-center justify-center gap-2 main-btn-pulse">
                     <i class="fab fa-whatsapp text-base"></i>
                     <span>JOIN WHATSAPP GROUP</span>
@@ -66,11 +94,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     <span>🔥 CURRENT PAPER REVIEWS</span>
                 </a>
 
-                <hr class="border-slate-100 my-1">
+                <hr class="border-slate-100 my-0.5">
 
                 <div class="p-3 bg-amber-500/10 border border-amber-500/20 rounded-2xl text-justify">
                     <p class="text-[11px] font-semibold text-slate-600 leading-normal">
-                        ⭐ <span class="text-amber-600 font-black">100% Passing Golden Material</span> designed by <span class="text-blue-600 font-bold">Sir Zaib</span> & <span class="text-blue-600 font-bold">Sir Mubashir</span>. Guzashta semesters ka maximum paper isi verified data se aaya hai!
+                        ⭐ <span class="text-amber-600 font-black">100% Passing Golden Material</span> designed by <span class="text-blue-600 font-bold">Sir Zaib</span> & <span class="text-blue-600 font-bold">Sir Mubashir</span>. Guzashta semesters ka paper isi verified data se aaya hai!
                     </p>
                 </div>
 
@@ -81,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             </div>
 
-            <p class="text-center text-[10px] text-slate-400 mt-4 italic">
+            <p class="text-center text-[10px] text-slate-400 mt-3 italic">
                 ✨ Accurate shortcuts aur authentic exam updates!
             </p>
 
