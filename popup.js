@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <p class="text-[11px] font-bold text-slate-700 leading-normal">
                         Assalam-o-Alaikum! <br>
                         Tamam students se guzarish hai ke neeche diya gaya WhatsApp group zaroor join kar lein. <br>
-                        <span class="text-red-600 font-extrabold">🗓️ 19 July ko Fajr ke baad</span> tamam zaroori files isi group mein share ki jayengi. Apna <span class="italic text-indigo-600">*Subject Code*</span> search karke file download kar len.
+                        <span class="text-red-600 font-extrabold">🗓️ 22 July ko Fajr ke baad</span> tamam zaroori files isi group mein share ki jayengi. Apna <span class="italic text-indigo-600">*Subject Code*</span> search karke file download kar len.
                     </p>
                 </div>
 
