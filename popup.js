@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // ==========================================
     // 💡 CONFIGURATION LINKS
     // ==========================================
-    const WHATSAPP_GROUP_LINK   = "https://chat.whatsapp.com/HLR6U0I7RqDJYCUa6c3Nr4";
+    const WHATSAPP_GROUP_LINK   = "https://chat.whatsapp.com/EdTgmprdPrQ6l5hjXCNxYm";
     const PAPERS_REVIEW_LINK      = "https://adnan8868.github.io/lgwt-review/";
     const PREMIUM_FILES_LINK      = "important.html"; // Local page reference
 
