@@ -1,563 +1,223 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VU Past Papers | LGWT Study</title>
+    <title>Past Papers & Files | LGWT Study Officail</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="../favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Plus Jakarta Sans', 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* --- Dark Mode Custom Styles --- */
+        .dark body {
+            background-color: #0b1329;
+            color: #f8fafc;
+        }
+
+        .dark .hero-bg {
+            background: radial-gradient(circle at top, #1e293b 0%, #0b1329 100%);
+        }
+
+        .dark .prep-card-style {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: #ffffff;
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+        }
+
+        .dark .prep-card-style:hover {
+            border-color: rgba(59, 130, 246, 0.6);
+            box-shadow: 0 12px 30px -10px rgba(59, 130, 246, 0.3);
+        }
+
+        /* --- Light Mode Custom Styles --- */
+        html:not(.dark) body {
             background-color: #f8fafc;
+            color: #1e293b;
         }
 
-        .hero-section {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        html:not(.dark) .hero-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2a5298 100%);
         }
 
-        .paper-card {
-            transition: all 0.3s ease;
-            background: white;
-            border-radius: 2rem;
-            padding: 2rem;
-            text-align: center;
+        html:not(.dark) .prep-card-style {
+            background-color: #ffffff;
             border: 1px solid #e2e8f0;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+            color: #1e293b;
         }
 
-        .paper-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
+        html:not(.dark) .prep-card-style:hover {
             border-color: #3b82f6;
+            box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.1);
         }
 
-        .icon-box {
-            width: 70px;
-            height: 70px;
-            border-radius: 1.2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 2.2rem;
-            box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 10px;
         }
     </style>
 </head>
 
-<body>
-    <header class="hero-section text-white py-10 px-4 text-center shadow-xl">
-        <h1 class="text-3xl md:text-4xl font-bold mb-2 uppercase tracking-tight">
-            Exam <span class="text-yellow-400">Past Papers</span>
-        </h1>
-        <p class="opacity-90 max-w-2xl mx-auto text-sm md:text-base text-blue-100">
-            Official Solved Midterm & Finalterm Collections for Virtual University.
-        </p>
+<body class="min-h-screen flex flex-col justify-between antialiased transition-colors duration-300">
 
-        <div class="max-w-xl mx-auto mt-6 relative">
-            <input type="text" id="searchInput" onkeyup="filterCards()"
-                placeholder="Search Subject (e.g. BIO, MGT, CS)..."
-                class="w-full p-4 rounded-xl text-gray-800 shadow-2xl focus:ring-4 focus:ring-yellow-400 outline-none border-none text-base">
-        </div>
-    </header>
+    <div>
+        <header
+            class="hero-bg border-b border-slate-800/80 py-7 md:py-9 px-4 md:px-8 relative overflow-hidden transition-colors duration-300">
+            <div class="max-w-[94%] mx-auto flex flex-col items-center text-center">
 
-    <!-- Compact Quiz Vault Bar -->
-    <div id="quizBox" class="max-w-7xl mx-auto px-6 mt-6">
-        <a href="https://drive.google.com/drive/folders/1U3sBJAIT0teIgq47oVd9YfVwco43gmpE" target="_blank"
-            class="group">
-            <div
-                class="bg-white border border-blue-100 rounded-2xl p-4 flex flex-col md:flex-row items-center justify-between gap-4 shadow-sm hover:shadow-md transition-all border-l-8 border-l-blue-600">
+                <div class="w-full flex items-center justify-between mb-3">
+                    <a href="../index.html"
+                        class="inline-flex items-center gap-1.5 text-blue-100 dark:text-slate-300 hover:text-white text-[11px] md:text-xs font-semibold transition bg-white/10 dark:bg-slate-800/80 px-3.5 py-1.5 rounded-full border border-white/10 dark:border-slate-700">
+                        <i class="fa-solid fa-arrow-left text-[10px]"></i> Dashboard
+                    </a>
 
-                <div class="flex items-center gap-4">
-                    <div
-                        class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-cloud-arrow-down"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-sm md:text-base font-bold text-slate-800">
-                            All-in-One Quiz Archive <span
-                                class="text-blue-600 text-[10px] ml-2 px-2 py-0.5 bg-blue-50 rounded-full">2025-2026+</span>
-                        </h3>
-                        <p class="text-[11px] text-slate-500 font-medium">Click to access current and future
-                            solved quizzes (Auto-Updating File)</p>
-                    </div>
+                    <button id="themeToggleBtn" onclick="toggleTheme()"
+                        class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 dark:bg-slate-800/90 border border-white/20 dark:border-slate-700 text-white text-xs font-bold transition shadow-sm hover:scale-105 active:scale-95">
+                        <i id="themeIcon" class="fa-solid fa-sun text-amber-400"></i>
+                        <span id="themeText">Light</span>
+                    </button>
                 </div>
 
                 <div
-                    class="flex items-center gap-2 bg-slate-900 text-white px-5 py-2.5 rounded-xl font-bold text-[11px] tracking-widest group-hover:bg-blue-600 transition-all uppercase">
-                    Open Drive <i class="fa-solid fa-external-link text-[10px] text-yellow-400"></i>
+                    class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-blue-500/20 dark:bg-blue-500/10 border border-blue-400/30 dark:border-blue-500/20 text-yellow-300 dark:text-blue-400 text-[11px] md:text-xs font-bold mb-2">
+                    <span
+                        class="w-1.5 h-1.5 rounded-full bg-yellow-400 dark:bg-blue-400 animate-pulse"></span>
+                    <span>Official VU Solved Past Papers & Files</span>
+                </div>
+
+                <h1
+                    class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-white mb-2 uppercase">
+                    PAST PAPERS & <span
+                        class="text-yellow-400 dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-blue-400 dark:to-indigo-400">FILES</span>
+                </h1>
+
+                <div class="w-full max-w-sm mt-1 relative mx-auto">
+                    <i
+                        class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+                    <input type="text" id="searchInput" oninput="this.value = this.value.toUpperCase()"
+                        onkeyup="renderSubjects()" placeholder="Search code (e.g. CS101, MGT)..."
+                        class="w-full pl-8 pr-3.5 py-2.5 text-xs bg-white dark:bg-slate-900/90 text-slate-900 dark:text-slate-100 placeholder-slate-400 rounded-lg outline-none border border-slate-200 dark:border-slate-700/80 focus:border-blue-500 font-bold transition shadow-inner">
+                </div>
+
+            </div>
+        </header>
+
+        <main class="max-w-[94%] mx-auto px-2 md:px-4 py-6 md:py-8">
+
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-6 px-1">
+                <div id="deptTabsContainer"
+                    class="flex flex-wrap gap-1.5 text-xs font-bold justify-center md:justify-start">
+                </div>
+
+                <div
+                    class="flex items-center gap-2 bg-white dark:bg-slate-900/80 px-4 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 text-xs shadow-sm shrink-0">
+                    <span class="text-slate-400">Total Found:</span>
+                    <b id="countDisplay" class="text-blue-600 dark:text-blue-400 font-extrabold text-sm">0
+                        Subjects</b>
                 </div>
             </div>
-        </a>
-    </div>
 
-    <div class="max-w-7xl mx-auto px-6 py-12">
-        <div class="mb-10">
-            <a href="../index.html"
-                class="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-xl text-blue-700 font-bold shadow-sm hover:bg-blue-50 transition border border-gray-100">
-                <span>🏠</span> Back to Home
-            </a>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" id="grid">
-
-            <div class="paper-card" data-name="ACC Accounting">
-                <div>
-                    <div class="icon-box bg-blue-50">📊</div>
-                    <h3 class="text-lg font-bold text-gray-800">ACC Papers</h3>
-                    <p class="text-xs text-blue-500 font-bold tracking-widest mb-6">ACCOUNTING</p>
+            <div id="noResult" class="hidden text-center py-12">
+                <div
+                    class="prep-card-style rounded-2xl p-6 max-w-sm mx-auto text-center border-dashed border-slate-300 dark:border-slate-700">
+                    <i class="fa-solid fa-magnifying-glass text-3xl text-slate-400 mb-2"></i>
+                    <h3 class="text-sm font-bold uppercase mb-1">Subject Not Found</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-xs mb-4">Required subject code nahi
+                        mila. Team se WhatsApp par rabta karein!</p>
+                    <div class="flex justify-center gap-2">
+                        <button onclick="resetSearch()"
+                            class="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded-lg font-bold text-xs">Clear
+                            Search</button>
+                        <a href="https://wa.me/923196248868" target="_blank"
+                            class="px-4 py-2 bg-green-500 text-white rounded-lg font-bold text-xs flex items-center gap-1.5">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
+                        </a>
+                    </div>
                 </div>
-                <a href="acc-subject.html"
-                    class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-blue-600 transition">Open
-                    Vault</a>
             </div>
 
-            <div class="paper-card" data-name="BIF Bioinformatics">
-                <div>
-                    <div class="icon-box bg-emerald-50">🧬</div>
-                    <h3 class="text-lg font-bold text-gray-800">BIF Papers</h3>
-                    <p class="text-xs text-emerald-500 font-bold tracking-widest mb-6">BIOINFORMATICS</p>
-                </div>
-                <a href="bif-subject.html"
-                    class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-emerald-600 transition">Open
-                    Vault</a>
-            </div>
+            <div id="departmentsContainer" class="space-y-8 md:space-y-10"></div>
 
-            <div class="paper-card" data-name="BIO Biology">
-                <div>
-                    <div class="icon-box bg-green-50">🌿</div>
-                    <h3 class="text-lg font-bold text-gray-800">BIO Papers</h3>
-                    <p class="text-xs text-green-500 font-bold tracking-widest mb-6">BIOLOGY</p>
-                </div>
-                <a href="bio-subject.html"
-                    class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-green-600 transition">Open
-                    Vault</a>
-            </div>
-
-            <div class="paper-card" data-name="BNK Banking">
-                <div>
-                    <div class="icon-box bg-indigo-50">🏦</div>
-                    <h3 class="text-lg font-bold text-gray-800">BNK Papers</h3>
-                    <p class="text-xs text-indigo-500 font-bold tracking-widest mb-6">BANKING</p>
-                </div>
-                <a href="bnk-subject.html"
-                    class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-indigo-600 transition">Open
-                    Vault</a>
-            </div>
-
-            <div class="paper-card" data-name="CS Computer Science">
-                <div>
-                    <div class="icon-box bg-sky-50">💻</div>
-                    <h3 class="text-lg font-bold text-gray-800">CS Papers</h3>
-                    <p class="text-xs text-sky-500 font-bold tracking-widest mb-6">COMPUTER SCIENCE</p>
-                </div>
-                <a href="cs-subject.html"
-                    class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-sky-600 transition">Open
-                    Vault</a>
-            </div>
-
-            <div class="paper-card" data-name="ECO Economics">
-                <div>
-                    <div class="icon-box bg-rose-50">📈</div>
-                    <h3 class="text-lg font-bold text-gray-800">ECO Papers</h3>
-                    <p class="text-xs text-rose-500 font-bold tracking-widest mb-6">ECONOMICS</p>
-                </div>
-                <a href="eco-subject.html"
-                    class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-rose-600 transition">Open
-                    Vault</a>
-            </div>
-
-            <div class="paper-card" data-name="EDU Education">
-                <div>
-                    <div class="icon-box bg-teal-50">🎓</div>
-                    <h3 class="text-lg font-bold text-gray-800">EDU Papers</h3>
-                    <p class="text-xs text-teal-500 font-bold tracking-widest mb-6">EDUCATION</p>
-                </div>
-                <a href="edu-subject.html"
-                    class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-teal-600 transition">Open
-                    Vault</a>
-            </div>
-
-            <div class="paper-card" data-name="ENG English">
-                <div>
-                    <div class="icon-box bg-cyan-50">✍️</div>
-                    <h3 class="text-lg font-bold text-gray-800">ENG Papers</h3>
-                    <p class="text-xs text-cyan-500 font-bold tracking-widest mb-6">ENGLISH</p>
-                </div>
-                <a href="eng-subject.html"
-                    class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-cyan-600 transition">Open
-                    Vault</a>
-            </div>
-
-            <div class="paper-card" data-name="FIN Finance">
-                <div>
-                    <div class="icon-box bg-amber-50">💰</div>
-                    <h3 class="text-lg font-bold text-gray-800">FIN Papers</h3>
-                    <p class="text-xs text-amber-500 font-bold tracking-widest mb-6">FINANCE</p>
-                </div>
-                <a href="fin-subject.html"
-                    class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-amber-600 transition">Open
-                    Vault</a>
-            </div>
-
-            <div class="paper-card" data-name="GSC General Science">
-                <div>
-                    <div class="icon-box bg-violet-50">🔬</div>
-                    <h3 class="text-lg font-bold text-gray-800">GSC Papers</h3>
-                    <p class="text-xs text-violet-500 font-bold tracking-widest mb-6">GENERAL SCIENCE</p>
-                </div>
-                <a href="gsc-subject.html"
-                    class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-violet-600 transition">Open
-                    Vault</a>
-            </div>
-
-            <div class="paper-card" data-name="ISL Islamiyat">
-                <div>
-                    <div class="icon-box bg-emerald-50">🌙</div>
-                    <h3 class="text-lg font-bold text-gray-800">ISL Papers</h3>
-                    <p class="text-xs text-emerald-600 font-bold tracking-widest mb-6">ISLAMIYAT</p>
-                </div>
-                <a href="isl-subject.html"
-                    class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-emerald-700 transition">Open
-                    Vault</a>
-            </div>
-
-            <div class="paper-card" data-name="IT Information Technology">
-                <div>
-                    <div class="icon-box bg-blue-50">🖥️</div>
-                    <h3 class="text-lg font-bold text-gray-800">IT Papers</h3>
-                    <p class="text-xs text-blue-500 font-bold tracking-widest mb-6">INFORMATION TECH</p>
-                </div>
-                <a href="it-subject.html"
-                    class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-blue-600 transition">Open
-                    Vault</a>
-            </div>
-
-            <div class="paper-card" data-name="MCM Mass Communication">
-                <div>
-                    <div class="icon-box bg-pink-50">📢</div>
-                    <h3 class="text-lg font-bold text-gray-800">MCM Papers</h3>
-                    <p class="text-xs text-pink-500 font-bold tracking-widest mb-6">MASS COMM</p>
-                </div>
-                <a href="mcm-subject.html"
-                    class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-pink-600 transition">Open
-                    Vault</a>
-            </div>
-
-            <div class="paper-card" data-name="MGMT Management">
-                <div>
-                    <div class="icon-box bg-slate-50">🏢</div>
-                    <h3 class="text-lg font-bold text-gray-800">MGMT Papers</h3>
-                    <p class="text-xs text-slate-500 font-bold tracking-widest mb-6">MANAGEMENT</p>
-                </div>
-                <a href="mgmt-subject.html"
-                    class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-slate-700 transition">Open
-                    Vault</a>
-            </div>
-
-            <div class="paper-card" data-name="MGT Management">
-                <div>
-                    <div class="icon-box bg-slate-50">💼</div>
-                    <h3 class="text-lg font-bold text-gray-800">MGT Papers</h3>
-                    <p class="text-xs text-slate-500 font-bold tracking-widest mb-6">BUSINESS MGT</p>
-                </div>
-                <a href="mgt-subject.html"
-                    class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-slate-700 transition">Open
-                    Vault</a>
-            </div>
-
-            <div class="paper-card" data-name="MKT Marketing">
-                <div>
-                    <div class="icon-box bg-orange-50">🎯</div>
-                    <h3 class="text-lg font-bold text-gray-800">MKT Papers</h3>
-                    <p class="text-xs text-orange-500 font-bold tracking-widest mb-6">MARKETING</p>
-                </div>
-                <a href="mkt-subject.html"
-                    class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-orange-600 transition">Open
-                    Vault</a>
-            </div>
-
-            <div class="paper-card" data-name="MTH Mathematics">
-                <div>
-                    <div class="icon-box bg-yellow-50">📐</div>
-                    <h3 class="text-lg font-bold text-gray-800">MTH Papers</h3>
-                    <p class="text-xs text-yellow-600 font-bold tracking-widest mb-6">MATHEMATICS</p>
-                </div>
-                <a href="mth-subject.html"
-                    class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-yellow-500 transition">Open
-                    Vault</a>
-            </div>
-
-            <div class="paper-card" data-name="PAK Pakistan Studies">
-                <div>
-                    <div class="icon-box bg-green-50">🇵🇰</div>
-                    <h3 class="text-lg font-bold text-gray-800">PAK Papers</h3>
-                    <p class="text-xs text-green-600 font-bold tracking-widest mb-6">PAK STUDIES</p>
-                </div>
-                <a href="pak-subject.html"
-                    class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-green-700 transition">Open
-                    Vault</a>
-            </div>
-
-            <div class="paper-card" data-name="PSC Political Science">
-                <div>
-                    <div class="icon-box bg-blue-50">⚖️</div>
-                    <h3 class="text-lg font-bold text-gray-800">PSC Papers</h3>
-                    <p class="text-xs text-blue-500 font-bold tracking-widest mb-6">POLITICAL SCI</p>
-                </div>
-                <a href="psc-subject.html"
-                    class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-blue-600 transition">Open
-                    Vault</a>
-            </div>
-
-            <div class="paper-card" data-name="PHY Physics">
-                <div>
-                    <div class="icon-box bg-sky-50">⚛️</div>
-                    <h3 class="text-lg font-bold text-gray-800">PHY Papers</h3>
-                    <p class="text-xs text-sky-500 font-bold tracking-widest mb-6">PHYSICS</p>
-                </div>
-                <a href="phy-subject.html"
-                    class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-sky-600 transition">Open
-                    Vault</a>
-            </div>
-
-            <div class="paper-card" data-name="PSY Psychology">
-                <div>
-                    <div class="icon-box bg-purple-50">🧠</div>
-                    <h3 class="text-lg font-bold text-gray-800">PSY Papers</h3>
-                    <p class="text-xs text-purple-500 font-bold tracking-widest mb-6">PSYCHOLOGY</p>
-                </div>
-                <a href="psy-subject.html"
-                    class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-purple-600 transition">Open
-                    Vault</a>
-            </div>
-
-            <div class="paper-card" data-name="SOC Sociology">
-                <div>
-                    <div class="icon-box bg-amber-50">👥</div>
-                    <h3 class="text-lg font-bold text-gray-800">SOC Papers</h3>
-                    <p class="text-xs text-amber-500 font-bold tracking-widest mb-6">SOCIOLOGY</p>
-                </div>
-                <a href="soc-subject.html"
-                    class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-amber-600 transition">Open
-                    Vault</a>
-            </div>
-
-            <div class="paper-card" data-name="STA Statistics">
-                <div>
-                    <div class="icon-box bg-fuchsia-50">📊</div>
-                    <h3 class="text-lg font-bold text-gray-800">STA Papers</h3>
-                    <p class="text-xs text-fuchsia-500 font-bold tracking-widest mb-6">STATISTICS</p>
-                </div>
-                <a href="sta-subject.html"
-                    class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-fuchsia-600 transition">Open
-                    Vault</a>
-            </div>
-
-        </div>
-
-        <div id="noResult" class="hidden text-center py-20">
-            <p class="text-2xl font-bold text-gray-400">❌ No subjects found matching your search</p><br>
-            <b class="text-2xl font-bold text-gray-400 mt-">Please Pehly Subject Folder Open Kren Then Apna
-                Subject Code Search Kren (eg... CS Papers)</b>
-        </div>
+        </main>
     </div>
 
     <footer
-        class="bg-[#0f172a] text-white pt-20 pb-10 mt-20 relative overflow-hidden font-['Poppins'] border-t border-white/5">
-
-        <div
-            class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 via-yellow-400 to-blue-600">
-        </div>
-        <div class="absolute -bottom-20 -right-20 w-80 h-80 bg-blue-600/10 rounded-full blur-[100px]"></div>
-
+        class="bg-[#0f172a] text-white pt-16 pb-8 mt-16 relative overflow-hidden border-t border-white/5 font-['Poppins']">
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-
                 <div class="space-y-6">
-                    <div class="text-2xl font-black tracking-tighter">
-                        LGWT <span class="text-yellow-400">PAPERS</span>
+                    <div class="text-3xl font-black tracking-tighter">
+                        VU STUDY <span class="text-yellow-400">LGWT</span>
                     </div>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Pakistan's most organized collection of VU Solved Past Papers. Helping students since
-                        2025 with 100% verified material.
+                    <p class="text-slate-400 text-sm leading-relaxed font-medium">
+                        Pakistan's most trusted partner for Virtual University success. We provide 100%
+                        accurate LMS solutions, verified handouts, and guaranteed results.
                     </p>
-                    <div class="flex gap-4">
-                        <a href="https://wa.me/923196248868" target="_blank"
-                            class="w-10 h-10 bg-white/5 text-green-500 rounded-xl flex items-center justify-center hover:bg-green-500 hover:text-white transition-all border border-white/10 shadow-lg">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="https://youtube.com/@VUStudyLGWT" target="_blank"
-                            class="w-10 h-10 bg-white/5 text-red-500 rounded-xl flex items-center justify-center hover:bg-red-500 hover:text-white transition-all border border-white/10 shadow-lg">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
                 </div>
-
                 <div class="space-y-6">
                     <h4
-                        class="text-white font-bold border-l-4 border-blue-600 pl-4 uppercase tracking-[0.2em] text-[10px]">
-                        Study Material</h4>
-                    <ul class="space-y-4 text-slate-400 text-sm font-medium">
+                        class="text-white font-bold border-l-4 border-blue-600 pl-4 uppercase tracking-[0.2em] text-xs">
+                        Quick Links</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm font-semibold">
                         <li><a href="../handouts/handouts.html"
-                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
-                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
-                                Main Handouts</a></li>
-                        <li><a href="../index.html#results"
-                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
-                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
-                                Result Proofs</a></li>
-                        <li><a href="../index.html#bot-console"
-                                class="hover:text-yellow-400 transition flex items-center gap-2 group"><i
-                                    class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition"></i>
-                                LGWT Bot Center</a></li>
+                                class="hover:text-yellow-400 transition flex items-center gap-2"><i
+                                    class="fa-solid fa-chevron-right text-[10px]"></i> Handouts Library</a>
+                        </li>
+                        <li><a href="pastpapers.html"
+                                class="hover:text-yellow-400 transition flex items-center gap-2"><i
+                                    class="fa-solid fa-chevron-right text-[10px]"></i> Past Papers Vault</a>
+                        </li>
                     </ul>
                 </div>
-
                 <div class="space-y-6">
                     <h4
-                        class="text-white font-bold border-l-4 border-yellow-400 pl-4 uppercase tracking-[0.2em] text-[10px]">
-                        Quick Help</h4>
-                    <ul class="space-y-4 text-slate-400 text-sm font-medium">
-                        <li class="flex items-center gap-3"><i
-                                class="fa-solid fa-circle-check text-green-500/50"></i> Midterm Papers</li>
-                        <li class="flex items-center gap-3"><i
-                                class="fa-solid fa-circle-check text-green-500/50"></i> Finalterm Papers</li>
-                        <li class="flex items-center gap-3"><i
-                                class="fa-solid fa-circle-check text-green-500/50"></i> Solved Subjective</li>
+                        class="text-white font-bold border-l-4 border-yellow-400 pl-4 uppercase tracking-[0.2em] text-xs">
+                        Services</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm font-semibold">
+                        <li>LMS Full Handling</li>
+                        <li>Quiz Management</li>
                     </ul>
                 </div>
-
                 <div class="space-y-6">
                     <h4
-                        class="text-white font-bold border-l-4 border-blue-600 pl-4 uppercase tracking-[0.2em] text-[10px]">
-                        Missing Something?</h4>
-                    <div class="bg-white/5 p-6 rounded-[2.5rem] border border-white/10 space-y-4 shadow-2xl">
-                        <p class="text-[11px] text-slate-400 leading-relaxed italic">"Agar aapka subject list
-                            mein nahi hai, toh inbox mein batayein, hum add kar denge."</p>
-                        <a href="https://wa.me/923196248868?text=Assalam-o-Alaikum! Mujhe past papers chahiye."
-                            target="_blank"
-                            class="block w-full py-3 bg-blue-600 text-white text-center rounded-xl font-black text-[10px] hover:bg-blue-700 transition-all uppercase tracking-widest shadow-lg shadow-blue-500/20">
-                            REQUEST PAPERS
-                        </a>
-                    </div>
+                        class="text-white font-bold border-l-4 border-blue-600 pl-4 uppercase tracking-[0.2em] text-xs">
+                        Support</h4>
+                    <a href="https://wa.me/923196248868" target="_blank"
+                        class="block w-full py-4 bg-yellow-400 text-blue-950 text-center rounded-xl font-black text-xs hover:bg-yellow-300 transition uppercase shadow-lg">Send
+                        Message</a>
                 </div>
             </div>
-
-            <div class="h-px w-full bg-gradient-to-r from-transparent via-slate-700 to-transparent mb-10">
-            </div>
-
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div
-                    class="text-slate-500 text-[10px] font-bold uppercase tracking-widest text-center md:text-left">
-                    &copy; 2026 LGWT OFFICIAL | <span class="text-white">PREMIUM EXAM VAULT</span>
-                </div>
-                <div
-                    class="flex items-center gap-2 text-slate-500 text-[9px] uppercase tracking-[0.4em] font-black">
-                    Learning <span class="text-blue-500">&</span> Growing <span class="text-yellow-400">With
-                        Team</span>
-                </div>
+            <div class="h-px w-full bg-slate-800 mb-10"></div>
+            <div class="text-center text-slate-500 text-[11px] font-medium">
+                &copy; 2026 <span class="text-white font-bold">LGWT Official</span>. Learning & Growing With
+                Team.
             </div>
         </div>
     </footer>
 
-    <script>
-        function filterCards() {
-            const val = document.getElementById("searchInput").value.toLowerCase().trim();
-            const cards = document.querySelectorAll(".paper-card");
-            const instructionBox = document.getElementById("instructionBox");
-            const quizBox = document.getElementById("quizBox");
-            let count = 0;
-
-            // 🔍 SMART HIDE INTERFACE: Kuch bhi search karne par features ko chupa do
-            if (val !== "") {
-                if (instructionBox) instructionBox.style.display = "none";
-                if (quizBox) quizBox.style.display = "none";
-            } else {
-                if (instructionBox) instructionBox.style.display = "block";
-                if (quizBox) quizBox.style.display = "block";
-            }
-
-            // Regex to detect if user typed a specific course code (e.g., CS101, ENG 201)
-            const codePattern = /^([a-z]{2,5})\s*(\d{1,4})$/i;
-            const match = val.match(codePattern);
-
-            // Core grid items lookup loop
-            cards.forEach(card => {
-                const name = card.getAttribute("data-name").toLowerCase();
-                if (name.includes(val)) {
-                    card.style.display = "flex"; // Restoring layout structure parameters
-                    count++;
-                } else {
-                    card.style.display = "none";
-                }
-            });
-
-            const noResultDiv = document.getElementById("noResult");
-
-            if (match && count === 0) {
-                // Smart Search Redirect Engine Injection
-                const prefix = match[1].toLowerCase(); // e.g., 'cs', 'mgt'
-                const fullCode = (match[1] + match[2]).toUpperCase(); // e.g., 'CS101'
-                const folderUrl = `${prefix}-subject.html?search=${fullCode}`;
-
-                noResultDiv.style.display = "block";
-                noResultDiv.innerHTML = `
-                <div class="text-center p-8 bg-blue-50 rounded-[2rem] shadow-sm border border-blue-100 max-w-xl mx-auto mt-8">
-                    <span class="bg-blue-600 text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest mb-4 inline-block">Smart Search</span>
-                    <h3 class="text-2xl font-bold text-slate-800 mb-2">Looking for ${fullCode} Papers?</h3>
-                    <p class="text-slate-500 mb-6 text-sm">We found the primary vault directory for this category! Click below to jump inside directly.</p>
-                    <a href="${folderUrl}" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200 w-full md:w-auto">
-                        Search ${fullCode} Directly <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-            `;
-            }
-            else if (count === 0 && val !== "") {
-                // Standard Not Found Fallback Layout Node Configuration
-                noResultDiv.style.display = "block";
-                noResultDiv.innerHTML = `
-                <div class="text-center p-8 bg-white rounded-[2rem] shadow-sm border border-slate-200 max-w-xl mx-auto mt-8">
-                    <i class="fa-solid fa-face-frown text-5xl text-slate-300 mb-4"></i>
-                    <h3 class="text-xl font-bold text-slate-800 mb-2">Oops! Subject Not Found</h3>
-                    <p class="text-slate-500 mb-6 text-sm">We couldn't find any category matching "<b>${val}</b>". If you need specific solved sheets, our team is live on WhatsApp!</p>
-                    <div class="flex flex-col sm:flex-row justify-center gap-4">
-                        <button onclick="resetSearch()" class="px-6 py-3 bg-slate-100 text-slate-600 rounded-xl font-bold hover:bg-slate-200 transition flex justify-center items-center gap-2">
-                            <i class="fa-solid fa-rotate-left"></i> Clear Search
-                        </button>
-                        <a href="https://wa.me/923196248868?text=Hello%20LGWT%20Team%2C%20I%20couldn%27t%20find%20past%20papers%20for%3A%20${encodeURIComponent(val.toUpperCase())}" target="_blank" class="px-6 py-3 bg-green-500 text-white rounded-xl font-bold hover:bg-green-600 transition shadow-lg shadow-green-200 flex justify-center items-center gap-2">
-                            <i class="fa-brands fa-whatsapp text-xl"></i> Ask on WhatsApp
-                        </a>
-                    </div>
-                </div>
-            `;
-            } else {
-                noResultDiv.style.display = "none";
-            }
-        }
-
-        function resetSearch() {
-            document.getElementById("searchInput").value = "";
-
-            // Restore elements default visibility parameters states configuration
-            const instructionBox = document.getElementById("instructionBox");
-            const quizBox = document.getElementById("quizBox");
-            if (instructionBox) instructionBox.style.display = "block";
-            if (quizBox) quizBox.style.display = "block";
-
-            filterCards();
-        }
-    </script>
-    <script src="../anti-inspect.js"></script>
-    <script src="../popup.js"></script>
+    <script src="pastpaper-data.js"></script>
+    <script src="pastpaper.js"></script>
 </body>
 
 </html>
