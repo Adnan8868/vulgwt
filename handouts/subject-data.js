@@ -1,1 +1,947 @@
-const a0_0x18c283=a0_0x45b8;function a0_0x45b8(_0x493fed,_0x44319c){_0x493fed=_0x493fed-0xfe;const _0x4bbe0a=a0_0x4bbe();let _0x45b808=_0x4bbe0a[_0x493fed];return _0x45b808;}function a0_0x4bbe(){const _0x442bc0=['10QZQBGu29izJhmF4E7wEWMloj-8kbbO7','bg-emerald-600\x20text-white\x20shadow-md\x20shadow-emerald-600/20','Psychological\x20Testing\x20&\x20Measurement','1qLRoskDqYap5SSxneclEJnZEoUCk_ziS','GSC201','Language\x20Classroom\x20Management','General\x20Mathematics','Human\x20Resource\x20Management','Dynamics','1ziX-rIVMzF5cNlibVXKnXfvi5SLiHZed','STA301','STA404','https://drive.google.com/file/d/1hPHrO_Kf-yP6QZxa6X-dO4AITvbAA3Cz/view','Information\x20Technology\x20in\x20Education','EDU516','EDU512','Ecology,\x20Biodiversity\x20&\x20Evolution-I','PSY610','https://drive.google.com/drive/folders/1oxMIRgNIEt0plpHOfcrAhg_CV35IzU7v','Bioinformatics-I','ENG301','Morphology\x20and\x20Syntax','1NfpltYvkkyH8cnOtPkTHaa0EcICdZiP7','Bioinformatics\x20Computing\x20I','BT302','1k6sAGLfKIX2KimMuax9CixTa5htpvc4t','BIO201','CS615','1JhS0gSyciIV0oBl5u-RJHxazYF8zzOoT','Organizational\x20Development','1oUU7yD_761Y62eiuj1KOkzYA6sJyF65H','Globalization\x20of\x20Media','PSY\x20-\x20Psychology','https://drive.google.com/drive/folders/1hrJmqy17GQUaPWYkdZLs3d2omwqxlhGz','STA\x20-\x20Statistics','Introduction\x20to\x20Cultural\x20Anthropology','EDU433','https://drive.google.com/file/d/1-cxt4MVCQQDJen7_f6N2-RK20otcNHVY/view','https://drive.google.com/drive/folders/1L2l5wcJM9qjU0ELtA84UmKlcaNRAkdZ4','Introduction\x20to\x20Programming','CS435','ENG511','https://drive.google.com/drive/folders/1UGDi8zPkc8RiHTgEqIn9K-noVPclKDMM','1RLdfDaBIjc-qPrAk8p5tl3heYT1gTDl0','124YEHJog','English\x20Comprehension','https://drive.google.com/file/d/1WMyJWPtjIQM90AMLR3JeXci80DaOqs-V/view','BT101','Basic\x20Algebra\x20and\x20Trigonometry','Organizational\x20Behavior','14lReE9BHvjAfdsb6NKekCxamI_KXdr7A','EDU','https://drive.google.com/file/d/1bO5q3rlP0MXQoa2UCKfnOpB5fLXiSE-H/view','1bvrT4aSYKuZM3Y9CYq9wEXJa4svZO_vF','https://drive.google.com/drive/folders/1W2GOJ_7UE1zmYkAxu2H3-iEunkQX4VhO','Mass\x20Media\x20in\x20Pakistan','1S7-16sqAfJIH95xvrO00z_-tS8Ay7bSt','Total\x20Quality\x20Management','https://drive.google.com/drive/folders/1BDth85EVoVyoZWpcoKrSwQ_zbV76Mas0','Information\x20Retrieval','Group\x20Theory','Language\x20and\x20Gender','https://drive.google.com/uc?export=download&id=13-T9w7StO2NhrqzngcOhvtN1G8wApHM8','MGMT','Testing\x20and\x20Assessment','MTH631','MTH201','https://drive.google.com/uc?export=download&id=1M825wE5s4G1fkjvRSXRgps1DURbRuzvz','Molecular\x20Biology','Financial\x20Management','MKT530','1p1-ckFDj1yBRKTEsxhAmCIIuDlFzsjvk','MGMT628','ZOO504','1XcHxPNhibM677cLYuNl8wRgBSTDusFlS','FIN621','1EAZQeu7OynkDVhXtpvSFCC-yUQftrwKH','Biochemistry-I\x20(Advanced)','MTH104','Visual\x20Programming','1AXGjmKM05qhhEa_evIQBwondFsFFWabl','1vSW7ajSdV6NkTGfFZuHo8dxE30ZqLtoi','ENG523','School\x20Community\x20and\x20Teacher','CS408','18b7q1Av7jsPYEtyNreTF5w_ziex3XBWY','ENG504','CS409','Experimental\x20Psychology','BIO301\x20|\x20BIO505T','Radio\x20News,\x20Reporting\x20and\x20Production','Algorithms\x20Design\x20&\x20Analysis','Modeling\x20&\x20Simulation','1g1Mbm1uBn2JH1eBOkAiEEw0vjf0MAX3-','Bilingualism','Introduction\x20to\x20Economics','PSY408','1Ahnl52sXEdYoanBECozNyRuM3kj0YtnI','1LyGnVcL3Rc-MFTfqaa4KdNpvH8wpHG3W','Introduction\x20to\x20ELT','Journalistic\x20Writing','https://drive.google.com/drive/folders/1DMKOzXB76VtRnMQUFrrnQw0pPBN-0lAM','Teaching\x20of\x20Literacy\x20Skills','Fundamentals\x20of\x20Front\x20End\x20Development','Business\x20Finance','ZOO510','1wRnXUzQN-hHddrVTssGG-yrwWUdUIAy1','SOC101','Advanced\x20Differential\x20Equations','CHE201','BIO302','https://drive.google.com/file/d/1eXtgLSwQWL1ePEMSrt399u00TmCxzuWN','MGT503','EDU\x20-\x20Education','Financial\x20Accounting\x20II','Teaching\x20of\x20General\x20Science','1V7Ndod8Wp4lj4Ft_MPhDW3gr3Ii-pyVj','Theories\x20of\x20Communication','Business\x20Communication','1K3HBgK83Bzf3Ty_svNB8gGGAe7w95rSO','16TkwNibadi8kOa8tCb37-2qKRG4LYe1m','BIO101','MTH101','Parallel\x20Computing','Physiology','CS601','https://drive.google.com/file/d/1LUKZd85GCryh-udgX8g4jXzu6b1Kf1A3/view','Community\x20Journalism','Advanced\x20Cost\x20Accounting','https://drive.google.com/drive/folders/1x-4BbdEhDI9fdDR3haDnnq_yPIkNHnEL','Human\x20Relations','MGMT627','https://drive.google.com/drive/folders/1_jVVldSs-MPQL5tjgaK7x7EpMB50g49g?usp=drive_link','1dlRfeoEE-TFJBXiJUBGSjUqAbtIYVwJI','CHE\x20-\x20Chemistry','MGT502','BIO','CS724','STA641','Elementary\x20Mathematics','1-Aj67SgQcT-TKYwOJFQJ0mGObhWKNUlh','Research\x20Methodology','Advanced\x20Linear\x20Algebra','https://drive.google.com/file/d/1hfDDU9dboSK0FwA4VktRcIRsa-mr3cUe','MCM401','https://drive.google.com/uc?export=download&id=12m6mLNY_2FmoHfcItix4FnE2NPvzTtu7','STA642','1Plmwckeb4Dr_FuyqHasHjcEnkifdpQ53','Calculus\x20&\x20Analytical\x20Geometry-II','SME\x20Management','FIN611','1d3TSdYz0xhylqlVPfQk6XWMG4LrAH2jH','1EBRMSC34bVcrgeFE8QXeTHLvBd6v6-j_','Sociology\x20of\x20Development','CS407','1fAx8GEYUulT-Tgong3185frwtgMnySsl','ECOO606','BIO401','Numerical\x20Analysis','EDU410','ECOO610','1wQ6ge7H2zGNqq6-ZagyUoXAl4uqDmA-3','1VgpJIJ7bjGDQ_A4wOIgDbtn8r2oiDeFN','CS304','1RzfMUgqYur8gwT6W_xx8yTsVhkMZfFww','1p1wKq67LjdRRUlwR3Q38W5cZleD5mLSG','Project\x20Management','Calculus\x20And\x20Analytical\x20Geometry','ECO','Fundamentals\x20of\x20Auditing','MCM301','EDU101','Marketing\x20Management','Digital\x20Logic\x20&\x20Design','Art\x20Craft\x20and\x20Calligraphy','https://drive.google.com/file/d/1kXtUo2t0Mcqtb6AiHMNRvoD5ANjEal90','Immunology','Computer\x20Graphics','88098iqQuGG','Quantitative\x20Research\x20Methods','1AYDbtBD8JbjIqV1aZJPeWNoo3e4yG5NQ','6036835MmGbUX','1Vz5a9DZL-G9CFqFhNCanQxuG-mWOrhnQ','CS202','ZOO518','1SANg7-1aRxPf_hqS4ZOkPzcy73hsW7HG','SOC602','ECOO612','15SrgZUoCIcZyg515iw5npBtrwGmeOkN_','https://drive.google.com/file/d/1NYOnbovJST2Ry6iba751j9N42eU1bBp7/view','1VxnBoe3zdzfbpbyBtOi44vH0m38mktns','BIO503','1IcsYHmjtOF_-aZuQoi-UrrM2_Y7fZihI','https://drive.google.com/drive/folders/12zt-C5nJmsNmUylDBIuYmMwXEkbIPH9S','Operations\x20Research','International\x20Communication','Routing\x20and\x20Switching','120UtiZ5tkUE4_aZbs5oQvJglNb90fcxQ','https://drive.google.com/file/d/1VrgT6yMP9Jy5Ysd4BWSIBUrucxDPdhwp','World\x20Englishes','ACC311','14ZmjJVG0LMLW_Izy1yvGK6uePTD3l-zE','1eIBdHMamhLf03070V8A-jchwjPPIl-R_','CS606','Bioinformatics-II','1YACzWuKyCyagVDQmBLmo0OVEux3abmEN','1bp-P7uBkLTAWdXoL7eYpQABbidSvVZx7','Personality\x20Psychology','1N_ZSuz31Zs3Mgz0q0dUQplymdkF5hnBI','1y1KWR2Y8MTJIF-0iLwlkigUWx7uzSsMf','CS411','https://drive.google.com/drive/folders/1nygHEDjjN49KP3dBX3mWey0T4UrRNn2f','CS505','1HC3LD4j6vlmQJzwyPfcEquMhbAanaZMT','BNK604','https://drive.google.com/uc?export=download&id=1cBvfSv7-WmtXnc4KF9no-sNjf5fjXpal','https://drive.google.com/drive/folders/1RwTXw8VVH2AxX1swTkRjASq4HcnkPA9Q','ENG513','1BF-3QeiF1oIho77QV5PsHjxztDjIuyUJ','1Rtxy56_qbj_3OAItEVYxxz9NcQyMByxb','1IN51Nonj8t-mSTjATZwt2KM6hBb0X4Bc','https://drive.google.com/file/d/1-sue_OMgDaX7UoIK8PdENSy7ROMu-S8p/view','18VgeX9Lg2CEGOoYos4Oa2sd4CEpY0IFH','CS620','STA632','Software\x20Engineering\x20–\x20I','1VWlAXDj8oc7bO3ypd5CMldz6yLRUUw05','STA100','MGT\x20-\x20Management','PSY631','Student\x20Guidance\x20and\x20Counselling','1-g_VROSWnCY1Bvm7wORWli0w5QlTpaBH','Computer\x20Networks','https://drive.google.com/drive/folders/1Gg6SxzxGofXuO0pXp0RigQLPvqRSlbX0','Financial\x20Economics','https://drive.google.com/file/d/1tQ88sy-_EWL-8mxYoTilAEAkxTFJZJVp/view','Software\x20Quality\x20Engineering','1vSbeTvhyMzu-hVVEY29wm1nymOgHJwCd','1MnEBNPhSEYZGJ3gcBDq8QQhKGxP9OEf_','bg-amber-600\x20text-white\x20shadow-md\x20shadow-amber-600/20','EDU430','1_gfo5lZ6DyT1cHrOFwFRCvqa5GN37CB-','1Zsm6KLOGU1gzbL4zc2kgC9-KUkt6P0Lp','BNK\x20-\x20Banking\x20&\x20Finance','https://drive.google.com/drive/folders/1W_gzyGtUsuVzH6oyhYq-vQ-rxK6HxyX6','https://drive.google.com/drive/folders/1c-wqy0d2RyWbjeAo53Wt7U0QhwLbfIfy','https://drive.google.com/file/d/1ZXAlhlnM8y4nYxwZA4Ctu8fFD-gqcV2G','ENG505','1YGIuo6OJ4c8OJkiKLtmdwwIDPJTo1Mj4','Circuit\x20Theory','1D3MfaAj9llGzVfETITzr7zmW2w72kxQr','bg-sky-600\x20text-white\x20shadow-md\x20shadow-sky-600/20','GSC','MTH202','Operating\x20System','Business\x20and\x20Technical\x20English','MGMT630','1WTmy0GMTVjtzwcZELKGxwUHftjteWD4u','14OMSN_CwM7VFNFtvyYg1HXogHfSAaofd','1oKPyrwOz5YxtRb_7uocBVGzLRCWQ3mEL','https://drive.google.com/drive/folders/1OsFpSYlg5pKGTVa-HlvH1ARM5-RsrkzH','1phCNywx_xoubmto2Fk97ntoW5EuXoy3g','https://drive.google.com/file/d/1k65C8GeBAPg-g2l8c1zwZHxtpHdIu6zA/view','1fFxksRZwJT6zGojaQSRPWzxvh6pbctJK','PSY515','17nSfBMNjFrpYVzAnTyBCBRJcR12zBe6K','https://drive.google.com/uc?export=download&id=1wGFl8kZVtHdAagCz2Vpg5SV92QbosDjg','1-y_mlFNv9l92YV_4krz_0mXZWzGm41gU','MTH621','1JY0_3cGuOmYMfk9eFNCBBEuUMjUCCsPw','FIN','1nDpK70rA8nB8BwdVtIkyoytyCwiMkA9k','ENG201','Basics\x20of\x20Financial\x20Accounting','1Nq3cZE5viN2nl7iTZvnicmBIopFIwbze','Services\x20Marketing','Introduction\x20to\x20Linguistics','BIO202\x20|\x20BIO504T','https://drive.google.com/file/d/11fdoBEP8C9AQNoYHlNnnPwTVU9EC2pH0/view','SOC601','1k6g0-FyKZXSXWL7n8_OZ2z6d0nNDDU8v','1oRUHjRr7HAG_vSW0OKe5zAOloVcoUkS8','MTH633','CS101','1XW_ZWG2ypDCeIOpXIOWSi41Shmf76f1t','CS511','https://drive.google.com/drive/folders/130yIam2ZmVd73Ass4YjAXQ4mbnJrEA2O','MCM517','27FucCHe','SOC603','SOC605','https://drive.google.com/drive/folders/1Oq4LwMDZm77JxmEgLnDz4vd8mbhZPcxB','1r3oji7wD59hUMJsuhkO5LZCJE9K_MBQP','1Nj7tUV3vKx6XoIKpdyFFaihCmdKaV','Quantitative\x20Research\x20Methodology','bg-teal-600\x20text-white\x20shadow-md\x20shadow-teal-600/20','STA','https://drive.google.com/file/d/1OOmgMih5mV327zZmYRbFoS9IpwdnxLjJ','1r5b3bOs4BrycOnfgRlPBTnT6ZHmS_CRl','Language\x20Teaching\x20Methods','MGT713','1krEoI98Tp8sWH0fhugzDzU5lr1xduAmM','Sociolinguistics','1yw8WmMK5ii-P5zPEp0MjROX4WJkaf_bL','Introduction\x20to\x20Broadcasting','EDU431','1GeoSLww1FLv5yt6gtNt2du7mY0n8aDue','PAK\x20-\x20Pakistan\x20Studies','https://drive.google.com/file/d/1bF6xqje9WhIc9M5egK8pe2syIkG7_Tvw','1CZUhe2rn8E7K_12DdsLmzKCMrDwThZve','https://drive.google.com/drive/folders/1HykBN-oph0dognk6AD7rJvrnapDwR2Zg','Credit\x20Analysis\x20&\x20Risk\x20Management','https://drive.google.com/drive/folders/1vJ_Dk9KR45XfKn0pb-5Ed9dY6Mgw9SHi','Educational\x20Psychology','Linear\x20Algebra','Animal\x20Form\x20&\x20Function-I','1qzJDHuCeNqcH32VKiG5YZpexFSkDaYMo','ENG519','CS402','Sets\x20and\x20Logic','Production\x20Management','CS403','Classroom\x20Assessment','1JNc7YhLZGdODlRj9iOKp7iQLbeV5cz-G','1S9489BygKnC2bX3kG42EfJiHKW5xY5kq','1tnt94eHuMaRiPgnoNXMC3MCp_zy5FCmE','Real\x20Analysis\x20II','1CR7ijfBlljUhl2HazgKjMRK8E5DWOilp','1N7Q8HkMdhOG7_JipMpg1Nu_titFoYe0J','PSC\x20-\x20Political\x20Science','https://drive.google.com/file/d/1hB7cMGqULR2BLqWL8w1hP5o8pW0HNCuc','1-Ma40JpK1w07pU5kiLatUhGfDpIKWN1m','Media\x20Management','ECOO605','MTH301','https://drive.google.com/drive/folders/1S1YV3HM_I78IMV49lwszvkWHXS73MG-r','18zu-zwUiQ5FRxw0HxB8EMtcyEGKPxgdf','https://drive.google.com/drive/folders/1MmNukuN4Tv97_VBeUnQY9TWHUSYISeBG','CS609','17_zvsYMSQHBhdy57N3Lk00AqwUnk8FqY','PSY511','Mathematical\x20Economics\x20I','MGT201','1Jb2GEsz31W3Hwui4AvwZcDSSG044Y-kr','Research\x20Methods\x20(STA631)','PSC201','https://drive.google.com/drive/folders/11VUndHop-gwsTzw87ZByaTrZAzkaUBiT','MKT611','1k5GRolNgZSw2JeQtDggVVE9eabLliq4w','1RuXdIVS8UpbcCoGeZw6MUaHTxeMh5JVp','1iJ3KvbdSUCjSC5r0gdp2He-jckY7ZUwP','https://drive.google.com/file/d/1j5A-Pff-r4m7LSh_48oZ3NlC_Rp-XG-i','1IeK2h4z3UGvJw6lBOzt0UzEYBQGU1n02','Functional\x20Analysis','https://drive.google.com/file/d/1h01zzZbs3fQVMuiY_eDAjxaY8Bxay4mS/view','MB502\x20|\x20BIO731','https://drive.google.com/file/d/1dtdKNGNKHPihjqSX5XXXO0Lfas4ORvff/view','BT605','163fs8TgkKBJGlsvV5GOPMtDwmYxr4eJ7','SOC402','https://drive.google.com/drive/folders/1UE-bw2t_NdyZw2dBWKHaNWPg6RJZjtRp','https://drive.google.com/drive/folders/12NeXAHeT3LYYhMz5JZq_OvSzbvNYbLO0','1VuTlN23XLI8ryDBFDkVxEPe5TWXg7gXz','1-DFbYieg0juy5CE3Sg9ipykWDgRzpZkm','ACC\x20-\x20Accounting','1qAzhhmDfIuUFjZL6m00JfFeX7L9hw4DD','1YDVWy1dfRVCi7HXVaa3gV5FHYZQwLjB_','MKT625','CS201','MGT520','https://drive.google.com/drive/folders/1GcOCIUO8_kSwuIenFX5wK-EWr484iq-b','Feature\x20&\x20Column\x20Writing','16u_3uP83X87PP3GlB-Ff7PMSiCoTlIqc','ECOO601','Topology','1DB8lKIYLTXwKveT8bvgMEsEqSqOLooky','https://drive.google.com/drive/folders/1R8pFgAvat590lNReDx9IoS5yYRZdlApg','13zFZHK_dR6ymNDcvmWc2gbgqCbi9HMCe','https://drive.google.com/file/d/1WTmy0GMTVjtzwcZELKGxwUHftjteWD4u','BIO732','Advertising\x20and\x20Promotion','ZOO501','1i9D54AhB1HIVRxofAgStmkgm6Lwq3o3A','EDU409','https://drive.google.com/drive/folders/1dLvD79ml76t33JbIHmBqV5e0uj_EhRPY','https://drive.google.com/drive/folders/1auCYiI8LzL_FxvrpAT9H9R1zc4cKoc8m','1qpV6M3uig0GuqhqOS6humlwdzbiV9VTF','1SfvSaeGyUbKuQtQ9uPJovO10PRGYyDIe','878982nkRYMU','1-2TF_FPGBRyXR91o-8D_Vk-lf_HzmSf5','Managerial\x20Accounting','1BWXpCAFsLIv_W6rNK1yLa5AxCxS2aQ4K','1iCpy2HEzYRbhuaXC1jErlAIsSnqWfIbP','Essentials\x20of\x20Genetics','BT\x20-\x20Biotechnology','https://drive.google.com/drive/folders/1aPoRXPK4kk3DvgT7jnPQKZ6zKFSZ4pvZ','https://drive.google.com/drive/folders/1OKqSqpqGQOGPE2e0LONYWGDY616L1uO_','1pcr4NggkvGrWyg49fYmKM9meRaxTqdbM','https://drive.google.com/drive/folders/17eM3SAEiCBOyNd-INQsAuqtSFII9AtSv','1Xk-TceTINiJa_h-4EqUxlmVuHWW6cl5q','IT430','1md8D98ZXUBzUkUGKOdSXniVwS7RpCPjC','1Y5d_uuMseD6glF74yG5YlMskZ8YuSByr','BIO5105','1X-71Ej6fL1w6obF-2d3v-kVNr1WFueft','Media\x20Laws\x20and\x20Ethics','MCM531','12j0xzApO6OVwnPXRATD_VpvKjZYNpgRU','1SIssIJkn1P2Dmikm8NmUcxTYd7YxNuCs','Physics','Research\x20Methods','Change\x20Management','https://drive.google.com/file/d/1sarTe4Yy4Fw_ji97bYSWvVJaqCdFd7Kt/view','1mA5bh-U6uJFkaAhTBY83v2jp3tci4_cO','12iiE0_SOA0sfw_ciFgFSInNCtj_0no1_','BNK','ENG503','1OHbV31CljXEC5jgegd2YKJVpUHNSrYO1','Theory\x20of\x20Automata','4217285OcQfTb','1NB_0s-ANg0xjkBVBE9zCapB4ZrHGz02A','Statics','18sucCSivbGgYTc56SLdCC6SHmBIwAuIz','EDU603','MKT501','Sampling\x20Techniques','1gVmg8FZve-O5eq2voQYly1R6aTEQYxtZ','https://drive.google.com/file/d/15ObB0_ZbuV7QGVnUXI_xLzAfYnHKnDsN/view','MTH302','Biochemistry-I','1W5ja10yhaacRBCnAdiB-amrpwuvcsxwO','Islamic\x20Studies\x20(New)','1Oq25bGbk14gvYABupLJhJlG6scArNhav','ENG001','Database\x20Management\x20System','1j1gX5aIHHkvpWfLwIMqm4epnJfzxnQAT','Data\x20Structures','ENG517','https://drive.google.com/file/d/1Fz7PX0MM0udo9mBbdL67flP6x7OQxDaq/view','ENG527','1Ry8zdwMislUvhK__OnWmM22IgEOblmXw','1BeqQTzJgkJeb_oBw2CM54bey0IJMhKJL','BIO\x20-\x20Biological\x20Sciences','1yuEqRzpyQYu47fHxf7oBnaeSXi0c1wY9','Second\x20Language\x20Acquisition','Database\x20Administration','Calculus\x20II','Contemporary\x20Mass\x20Media','Network\x20Security','CS312','MCM310','https://drive.google.com/uc?export=download&id=15x_J4I-UBjA47ttUik6VSwNYJp1X93k0','Human\x20Computer\x20Interaction','ENG','PSY504','Environmental\x20Psychology','MTH100','Assembly\x20Language\x20Programming','SOC201','Introduction\x20to\x20Sociology','Wireless\x20Networks','Pakistan\x20Studies','Fluid\x20Mechanics','EDU402','MTH403','https://drive.google.com/file/d/1K__zvA1zZNUWb9OFAe5AA1yKV52RYq6w/view','IT601','ZOO516T','Genomics','CHE','MGT','CS420','1gcgAyB6VBpihd8p1nQBwyFSHziTVt9DM','https://drive.google.com/drive/folders/1dUV6yyxA8dXNYwfBlDmvx3_WmJ5Dxk9-','1jacZ_RiPspsAnr7WiMS1kQG9vW9rNMXU','Test\x20Development\x20and\x20Evaluation','CS442','SOC301','PSC','Financial\x20Statement\x20Analysis','1XmTpw_7bIwBKQpuAxwzOVhs1ZnU5_3WP','1m1FYzKzbOAZLP-hugVl6p35LecnvWeO7','CS001','CS\x20-\x20Computer\x20Science\x20&\x20IT','1EZ9mSH4NMZw0Ea7tDJK1g5g3iiurQRnj','Phonetics\x20and\x20Phonology','1izvvRLUxqO_F5zgJh61r0dGUdNv4efkH','Advanced\x20Algorithms','SOC','ENG501','https://drive.google.com/uc?export=download&id=1W8wEN4fdeDufjvsrcpI6ogx66FI0l6sv','1MZfBZWVGH1hZndck6F67PptybTZW3AKG','Sport\x20Psychology','https://drive.google.com/file/d/1ShCoiav5pcKqtYId93tXCt_ig7GO0Ndf','1JJ_hMVKPNoJKUcrXsClTLmmcd5fPNUR3','https://drive.google.com/drive/folders/1SQ_KceBd6QWydWiiIPrBDWSianhFEnK7','1k3S9CdP6qzU0VSHL0GSeclSClBHLE5ev','11X3zCXRGKKMhNIENDzdraaY16piCw0MP','BIF501','Sociology\x20of\x20Education','https://drive.google.com/file/d/1EjG1UzTlaBG-klp3i5R3yeWKHaJFJWlZ/view','1P1W9kk8Ib1Z2gqfMlRKDr7Vk1hotmtnf','https://drive.google.com/file/d/1ixOh_Oo2O2cpQpeawpgAgVqrHZ1DMdRd/view','1myBcCbCqg_lll6f8hLTw_ptFAXRFxeFp','Complex\x20Analysis\x20and\x20Differential\x20Geometry','1c7-Kywr3zE9yy_gC3qEv28ltXgaajQPJ','PSY406','1W9c4s3Rv3JTcYEcvROHD_Gi-rEccMvVe','Business\x20Mathematics\x20&\x20Statistics','https://drive.google.com/drive/folders/1oHho4dtGnZxTGGwLNX0_8gCYFo_8Bp9y','MCM411','https://drive.google.com/drive/folders/1gbwNuBvBGe_yD4mQEgBguGpCqzlnPWBI','https://drive.google.com/drive/folders/1lugzC5sWzgancnWbgY1Ydi5Xe74uGA2C','ECOO607','1CzvD77mFOE9hixkSWLnRJ1IWK9LqmO2V','Web\x20Design\x20and\x20Development','1kiXj7OlsUJ2pFgUK9RXqwVx9qlc0bA2w','https://drive.google.com/drive/folders/1EqV6c3qP7pzO81vXMWNuC9-vqImMxEV6','https://drive.google.com/drive/folders/1tGUAmZYQTcY1MakgMf25gNedxWm1-qIB','https://drive.google.com/drive/folders/11yMEjOXAJEgGgB3fPW3rQaW3XOqAmyrU','1OI4Q74i9kbuIpSmofxIcnlTZeLU2O03F','1-W9tVnz58wOMyQY3-Fhg8HOg9_Ud27ij','BNK612','ECOO402','https://drive.google.com/drive/folders/1MczjsaAufs447bM-QBq2YlTmB8-K2NM-','https://drive.google.com/file/d/1nUnuYQbble_Mgv3vaSe0OBR5SqMeLwDh/view','https://drive.google.com/drive/folders/1RTDxFWCl5LAQdpf18NbglSDWPAAklUp5','MKT','GSC\x20-\x20General\x20Science','MTH634','18m7Y94Irb8UhLX4UZswbU_MeynThFGtG','1rAxYFgR-md6nmMewkgrv5cBzfgjJ2aWm','Philosophy\x20of\x20Education','Human\x20Development\x20and\x20Learning','1EnX4uPVNUnY_pttNv9-ZdjU7eBFlNVVr','Educational\x20Leadership\x20and\x20Management','Production\x20and\x20Operations\x20Management','https://drive.google.com/drive/folders/1Ep9MyNfPLdc_MY_hcpWUQLRhwDwgzXJ6?usp=drive_link','https://drive.google.com/file/d/1GcogJ_47cV_3Wqqof2rlSueTcCDaBAKP/view','Database\x20Modeling\x20and\x20Design','CS507','1mkmEPQSHjbfDRiuAbWs41WGomMa5EYnd','https://drive.google.com/drive/folders/1dHOnAXGZAZIqXXtn60m-WlAR3AaqmsoC','https://drive.google.com/drive/folders/163Grrqk28VnJCnR1pxXv8sZiz9Gzv-hY','1taS0axoOsedpU163k8fGhAqxeoc3hp34','PHY','1mZpvdz8cwqdOt-F4jYVnavFQ6ZnNTOmr','Investment\x20Analysis\x20&\x20Portfolio\x20Management','Information\x20Security','MCM501','Technology\x20in\x20Language\x20Teaching','Formal\x20Methods','MCM516','Taxation\x20Management','ISL','https://drive.google.com/drive/folders/1FSRgNfPZgX0A2-VF5Oo5kaF6Ft6zjD_i','ISL202','MCM520','PHY101','1r2xzDmFNQo8M-ffuzdSJ2PAycIz_jaL8','Sociological\x20Perspectives','Teaching\x20of\x20Mathematics','CS610','1q8syQhAsfuSfiph4zhHYsnmyVIVhTNT6','MGMT611','MGMT624','CS625','https://drive.google.com/file/d/1BBhcQCgBx8kcZD3elUFLNM103qEsOtXw/view','https://drive.google.com/drive/folders/1_3QNKvAn1J6LUEo04xQGv67MFE_vDiMA','EDU405','1bKgsDTRRVIFDIV2Tnvt9DkOPYBjm_MFS','Professionalism\x20in\x20Teaching','1cwNQJccpZkqNa-vjDgFKq5pr2zJv4Ov7','MGT612','1m8aq9hEpEGL5LIhlFCuetbgGyBhYOAmg','ZOO','10UeY_P2BybABaVAcYKNf_BN_HaAjttBN','Fundamentals\x20of\x20Public\x20Relations','https://drive.google.com/file/d/1Zudg5e6dWlJvTWr7iaLuETq1QllV66Wz/view','Administrative\x20Law','414WlWVao','MTH643','1pdvhl0JosYSmZ-kHJ4z65Ds3Fpfspkn1','1l82Ju8jhNWaa2SQFVqYZAZq1J-n2R_Ly','1YHk_AgjBV5hlXGfUm4tW5drtRiVrgv96','1WcFzujXupwGT_OdeEP3yScWHI7XQIb9x','1-N8_ddH9IJF93--pMzhkgqnbEi8lGAi9','bg-purple-600\x20text-white\x20shadow-md\x20shadow-purple-600/20','EDU602','MGT501','ENG510','MTH641','ISL\x20-\x20Islamic\x20Studies','MCM','CS301','Virology','BNK601','https://drive.google.com/file/d/1x79ZMMXrElN3NqqBzzyPNEP3oF20taq4/view','Business\x20Econometrics','128fKE_YbnxOj2a8H28LH-iZzlu8wToLZ','MTH501','CS508','https://drive.google.com/drive/folders/1srf0YfO45v0VKLfKomu3RdPMSAc2ugoC','Genetic\x20Engineering','1Gmfxa4S79opcDLIt_RtqM7-Y15kFWuP9','Mobile\x20Web\x20Development','https://drive.google.com/file/d/16ImmGYzNg_nmkPBOletb68HzBnFuMIg-/view','729648cJNrMh','1OR7IDJB84lGJ-MwObtcb7v0UXB8-e9_1','Web\x20Engineering','EDU201','1IX0hiU6r0sVEJPb7lC5Vu2aMaofHV4AA','Technical\x20Articles','Entrepreneurship','PSY401','SOC401','Management\x20of\x20Financial\x20Institutions','EDU654','Language\x20Learning\x20Theories','MGT111','Neurological\x20Bases\x20of\x20Behavior','Consumer\x20Behavior','1tbqS12WTcflnXe9Fqwzjru0qSi6kmqWS','https://drive.google.com/uc?export=download&id=1r3oji7wD59hUMJsuhkO5LZCJE9K_MBQP','ENG507','ACC','https://drive.google.com/file/d/1bqtF548LaFmD8cn4Ma5OtfJDLf5LFYqi/view','Object\x20Oriented\x20Programming','Comparative\x20Education','Cyber\x20Law','https://drive.google.com/file/d/18EsOgUnAD74kaQoLTeGH85xfvsPnBPYH/view','Network\x20Modeling\x20&\x20Simulation','CS607','Teaching\x20Listening\x20and\x20Speaking\x20Skills','1b7Fn0ZQLN53xNQUvu_0K5sQaKrrxLEVB','PSY632','PSY409','https://drive.google.com/drive/folders/1_0vyxQ24yqWI8onjarqD_rwtBORPOUwh','ENG506','https://drive.google.com/file/d/1ZDGv2ku34ogMG2fRlYp2T-sgfVVAn7bS','General\x20Methods\x20of\x20Teaching','ENG512','MGMT615','https://drive.google.com/file/d/1KIvLsClMwywjPJqtFYT6EgrynwNojm9y','Wildlife','MCM\x20-\x20Mass\x20Communication','1c5UJjfXN7nYMZoNeTqW6Peka2B2jAIba','CS502','https://drive.google.com/file/d/1g91yXOFbIurs97QEqA_pAK9EVTm6RVpv/view','19xsBF7HTowCt1wKo32Kusi7bv4aaPIe1','STA631','Money\x20&\x20Banking','Financial\x20Jurisprudence\x20in\x20Islam','MTH603','FIN630','1IcUaj04DJtqfz9MQ7qfHbudokB0Dvh8s','1inriTfPK6PH2eIlIpVH8yP418Ib8QfSR','Foundations\x20of\x20Education','https://drive.google.com/drive/folders/18UbNu8DOBGE7QvV2URaVtBwSbvxDBKKv','Physical\x20Chemistry','Brand\x20Management','1xlCoqSI2WmYch0sYZy31vuCfSx0fvomZ','1a_DH03lWzYVrwuLRX4RrR8rS440Y7cZL','CS405','PSY514','MTH','CS504','Vectors\x20and\x20Classical\x20Mechanics','Advanced\x20Measure\x20Theory','1x0fm1g2bhqXyNPDWZA_-gg710O7WJRqm','International\x20Relations','Pakistan\x20Studies\x20(New\x20Curriculum)','1JA8LYP6-z92SeaKNZWossf3uOQzi4ejM','not_found.html','19NVxmGljS7K8dvsNzVzL1fi7Yho3eTY_','MGT404','General\x20Science','https://drive.google.com/drive/folders/1nggruhu0oWrYJH73Fzyu98ZPv6L0JpUk','Software\x20Project\x20Management','Teaching\x20of\x20Islamic\x20Studies','Economic\x20Zoology','bg-blue-600\x20text-white\x20shadow-md\x20shadow-blue-600/20','EDU401','Classroom\x20Testing\x20and\x20Evaluation','Macroeconomics','MCM604','1gEzR7z0Jnq8fKPC2Ug0VWxyoZvQ1eNKj','PHY\x20-\x20Physics','1tGdxE_n9D7AuHlZWqhFzTKMnFICYHQv5','Managerial\x20Economics','Multivariable\x20Calculus','12gXxDYwrV1NABFID-poki8XFO5Nxiski','Computer\x20Assisted\x20Language\x20Learning','https://drive.google.com/drive/folders/1o_gi0eEVlXx9IX-Oh2iAq1nlQVFGSFoH','1kq_Lyk_Ciyk2BiFbhR7GCawAHfa-d5KN','BIF601','https://drive.google.com/drive/folders/17zZ-VKwRQc6_VtVBhP-O-DqagtugV6xG','PSY402','Developmental\x20Psychology','PSY101','ECOO501','https://drive.google.com/drive/folders/1PF_DGVRU8PbRHDqZIlr_a6PqoF8n1DZu','Teaching\x20of\x20Geography','846iAeIuU','FIN\x20-\x20Finance','CS506','1W9V5-HELV5IhVSYNA1gfI_pFdveh5cpf','https://drive.google.com/file/d/1ZlR55xiZmXk2Hrsq5VqDq5tNtipJ5y1A/view','Mathematical\x20Methods','1-MWcJII1lVsehtBUWqDJMon41IxKm6H1','https://drive.google.com/drive/folders/1vTHx7-n1ysQKAqFGarV5wGasEJkgCPS9','https://drive.google.com/drive/folders/10h9TxVsM8xG1KkKMAMD3FPAuLvNm3Qb6','MGT101','1mip-W4gA4DfpYib1wgYLgVKh0vjFdhZL','1fxo9C0g007zlfEMVLlYe8aBUkaPFduzS','System\x20Programming','MTH632','11451hEUyYA','Data\x20Communication','15E7hwpSmqxFEd55zqgRN-J91SP_Kf5jq','Marketing\x20Research','Introduction\x20to\x20Virtualization','https://drive.google.com/drive/folders/1spkszvgIA_Vdd9RgqmbNi1rZLaEfcRW1','https://drive.google.com/drive/folders/173igWwemlNOchHcPOAdN12ooM2xmVxww','MKT621','1ICxNTuPrBnrB6W61l70q_zqmzKk475OH','Cross-Cultural\x20Psychology','1790MLrQNp','PSC401','1RblWfA3NvdB666s6JEh4mRI8z7Dhfo3s','Knowledge\x20Management','MGMT623','1ta8_GTmXipOw1m-2EqKK9ZBlSiR-kUY3','128-NCeCFstbVY4ryGLWRWnmFacwZ0Ow4','PSY407','ENG514','Organization\x20Theory\x20and\x20Design','1X_wPBd7qNAL1kcRq_3UJioR0WnasekFZ','PAK301','ECOO404','1kk_6ADzKx_ycKhpWaTYKlq6N54pqUGKl','Addressing\x20Problems\x20of\x20Learning\x20through\x20Pedagogy\x20&\x20Technology','Differential\x20Equations','EDU404','CS711','CS311','ENG515','BIF602','1pE65qNopOsQcw02A5lLuMSEBYwrT273M','Corporate\x20Finance','ENG509','BIF','Biosafety\x20&\x20Bioethics','Development\x20Communication','Islamic\x20Studies\x20(Old)','Customer\x20Relationship\x20Management','MTH401','Issues\x20in\x20Pakistan\x20Economy','Cell\x20Biology\x20Introduction','MTH102','https://drive.google.com/file/d/13Ew9qhg_aw5TWL70Y7W9qjMXARUZuWby/view','1d7P0YH1pfMlquLozoXqzzG9JG3-4yUkv','https://drive.google.com/drive/folders/1ipaB1nM4vzTjyop1E2BnnIB8LWDjNndJ','Islamic\x20Banking\x20Practices','https://drive.google.com/file/d/1JQXyrUPdEHJfg1kY55DNH31Q6Jmsqb4M/view','https://drive.google.com/file/d/1VyKMDhkOddpa3knFUatD2oHozkZiELca/view','Critical\x20Thinking\x20and\x20Reflective\x20Practices','https://drive.google.com/drive/folders/1II6te3MZQUHwLo0_ERTPfHPiFqF-U057','ENG502','18uuwE2AZns7YHZPJJPTplU0ktgvxUGQZ','History\x20of\x20English\x20Language','MCM304','BNK603','1oH_dyHZtMv1Cqo8vnWD5xhuGb8uFxp7L','1d-3XflNRY8_Ktzztq48RB6oVkhdeJa77','MGT504','MGT301','1xe78opbBfoVvhuZlMOcto9LtbXTbcKn8','Sociological\x20Theories','Population\x20Dynamics','1ZZae2-4aqD1wOfbMf7n-CdIhUxYElr0x','1M9zqxgQd2D6hi4YGyev2jOJ6DmKtONOj','1a2b1agsnAa5WI2JqmXEMv6X1FcWjc9MM','MGT611','EDU411','BNK610','1M6WijWM_1B1syGQzaQ140_jSViGtd7u4','1VrgT6yMP9Jy5Ysd4BWSIBUrucxDPdhwp','https://drive.google.com/file/d/1XW_ZWG2ypDCeIOpXIOWSi41Shmf76f1t/view','1p2H4O-fAkxVIpPOKSjVPUXS8jJYXzuf0','MGT621','Communication\x20Skills','E-Commerce','1c8I8zMqJbiDM4ayfYsDvDbWl3S6aXPVv','Introduction\x20to\x20Business','1xPBbXCqJVxKcGzHUDD32wRrfq25LoKoJ','Positive\x20Psychology','https://drive.google.com/drive/folders/1gdAGCcTvJAwj55a6eg8L0659IUfSsNo5','Statistical\x20Inference','1Qim0_5j4HqkQ-Ul_4Zl4edAS5wIFHcHX','https://drive.google.com/file/d/1IbxZF0OnLc2p9vWFXBY1dNZPj99I6t2K/view','MGT613','CS401','BIF401','Organizational\x20Psychology','1W8wEN4fdeDufjvsrcpI6ogx66FI0l6sv','CS501','https://drive.google.com/drive/folders/1k_MYNQ9jOtCFWw-HUip0Fhp67CYmMGvH','Advanced\x20Bioinformatics','MKT\x20-\x20Marketing','CS704','CS701','CS614','PAK','1LA6gt9fcgVcWOBzEzv3ErUd_NrLuQPgR','ENG\x20-\x20English','Theory\x20and\x20Practice\x20of\x20Counseling','MTH622','EDU505','TV\x20News\x20Reporting\x20and\x20Production','Abnormal\x20Psychology','Ethical\x20and\x20Legal\x20Issues','PSY','EDU712','MTH405','1aIhAI1iVIcGamexG35iKyExhovB9vUKi','ZOO519','18G5stqVMhSfnP5n6Aihg2AEV3w8INhb5','SOC509','bg-green-600\x20text-white\x20shadow-md\x20shadow-green-600/20','https://drive.google.com/file/d/1DxtgWkSxmlj9HsfKMVgfgIe_jQtpKKJs/view','https://drive.google.com/drive/folders/11719rS7Cak_Lgqe8seSFh8ZPWoI7_ElZ','Introduction\x20to\x20Psychology','Elementary\x20Topics\x20in\x20Pure\x20Mathematics','Islamic\x20Mode\x20of\x20Financing','Curriculum\x20Development','ENG508','https://drive.google.com/drive/folders/11s7wRV9y4e8S_HVDhTm6M6JnTU1slwz1','https://drive.google.com/drive/folders/1RM88UhP158R7dfhubU63MGD9VzK5ucav','https://drive.google.com/file/d/1wRkj0WoqglzZuKt8XXE_4ewc8wAazMXQ','https://drive.google.com/drive/folders/1musuJCffN7ckR_5D651khuywOvn5-gL9','https://drive.google.com/file/d/1VmOj-f1kc_dM8AA9z3hsYDACVdhnTRaO/view','MGT602','Psycholinguistics','bg-indigo-600\x20text-white\x20shadow-md\x20shadow-indigo-600/20','1TpduwOYeY7WKYfWzE4E2MpSqlBF-2SUw','https://drive.google.com/drive/folders/1cAuOnkYUA4WeMvLPNWwY2PXDv1tukM6w','1-qkbjnCh9xD78jPSIqvWCtPrYWiIBAFN','https://drive.google.com/drive/folders/1XJFu5qckJZvIPK6uLnG8S--sbSEBt1xq','1p8GFipeQIlKURX-gqOTVxqsNXzCN2ybf','https://drive.google.com/drive/folders/1yplK2QVl0QtIHABHwvG9y3bybkYodSNM','CS603','Semantics\x20and\x20Pragmatics','https://drive.google.com/drive/folders/1ne4YCe8JbSjPHBkAO4WPinEKHf_oROhm','https://drive.google.com/file/d/1a1t9GhvXZz1_8MXiFJjKvyCFNV0S-g7Y/view','MTH304','MKT624','1QO8oKDC2VlqkBuHFBQl6N3tPWM5gXYyX','MGT411','https://drive.google.com/drive/folders/1eWM51s-Lm4KDEvNxSDIgjz2qVvSGh5m8?usp=drive_link','1vqiH0KUgKwu7AJzEihaUSuxtlx24yEva','Leadership\x20&\x20Team\x20Management','Social\x20Psychology','Crisis\x20Management','Introduction\x20to\x20Bio\x20Statistics','https://drive.google.com/drive/folders/1RUjVCekUXBLHp2vjLzfnAQJectQG7bBP','1ExJ9fOU5IkEK2G-0uTm54yy9XiVrpiKh'];a0_0x4bbe=function(){return _0x442bc0;};return a0_0x4bbe();}(function(_0x18ad34,_0x56cd5a){const _0x5dceb7=a0_0x45b8,_0xadf17d=_0x18ad34();while(!![]){try{const _0x423b75=parseInt(_0x5dceb7(0x272))/0x1*(-parseInt(_0x5dceb7(0x2ed))/0x2)+-parseInt(_0x5dceb7(0x443))/0x3*(parseInt(_0x5dceb7(0x3bd))/0x4)+parseInt(_0x5dceb7(0x1d1))/0x5+-parseInt(_0x5dceb7(0x1b2))/0x6+parseInt(_0x5dceb7(0x446))/0x7+-parseInt(_0x5dceb7(0x28d))/0x8*(-parseInt(_0x5dceb7(0x14e))/0x9)+-parseInt(_0x5dceb7(0x305))/0xa*(parseInt(_0x5dceb7(0x2fb))/0xb);if(_0x423b75===_0x56cd5a)break;else _0xadf17d['push'](_0xadf17d['shift']());}catch(_0x982551){_0xadf17d['push'](_0xadf17d['shift']());}}}(a0_0x4bbe,0x89018));const deptNames={'ACC':a0_0x18c283(0x19a),'BIF':'BIF\x20-\x20Bioinformatics','BIO':a0_0x18c283(0x1e8),'BT':a0_0x18c283(0x1b8),'BNK':a0_0x18c283(0x121),'CHE':a0_0x18c283(0x417),'CS':a0_0x18c283(0x211),'ECO':'ECO\x20-\x20Economics','EDU':a0_0x18c283(0x402),'ENG':a0_0x18c283(0x35d),'FIN':a0_0x18c283(0x2ee),'GSC':a0_0x18c283(0x23e),'ISL':a0_0x18c283(0x27e),'MCM':a0_0x18c283(0x2b3),'MGT':a0_0x18c283(0x112),'MKT':a0_0x18c283(0x357),'MTH':'MTH\x20-\x20Mathematics','PAK':a0_0x18c283(0x161),'PHY':a0_0x18c283(0x2dd),'PSC':a0_0x18c283(0x177),'PSY':a0_0x18c283(0x3b1),'SOC':'SOC\x20-\x20Sociology','STA':a0_0x18c283(0x3b3),'ZOO':'ZOO\x20-\x20Zoology'},deptColors={'ALL':'bg-yellow-400\x20text-slate-950\x20shadow-md\x20shadow-yellow-400/20','ACC':a0_0x18c283(0x11d),'BIO':a0_0x18c283(0x36b),'CS':a0_0x18c283(0x2d7),'EDU':a0_0x18c283(0x279),'ENG':a0_0x18c283(0x129),'ISL':a0_0x18c283(0x155),'MGT':a0_0x18c283(0x392),'MTH':a0_0x18c283(0x37a),'PHY':'bg-rose-600\x20text-white\x20shadow-md\x20shadow-rose-600/20'},activeFilterTabs=['ALL'],subjectsData=[{'dept':a0_0x18c283(0x29f),'id':a0_0x18c283(0x459),'name':a0_0x18c283(0x43a),'handouts':a0_0x18c283(0x3f2),'highlighted':'not_found.html','ppt':'not_found.html'},{'dept':'ACC','id':'ACC501','name':a0_0x18c283(0x3f9),'handouts':'1TmrMSbWi-ajJ6H2yVrtgtbPQgak8EuaT','highlighted':'https://drive.google.com/drive/folders/1AR6yWtbM5zb0reuR2ARakUYq1auREp8n','ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x31d),'id':'BIF101','name':'Introduction\x20to\x20Bioinformatics','handouts':a0_0x18c283(0x214),'highlighted':'not_found.html','ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x31d),'id':a0_0x18c283(0x351),'name':a0_0x18c283(0x3a4),'handouts':a0_0x18c283(0x303),'highlighted':a0_0x18c283(0x2a0),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x31d),'id':'BIF402','name':a0_0x18c283(0x363),'handouts':a0_0x18c283(0x229),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x31d),'id':a0_0x18c283(0x220),'name':a0_0x18c283(0x45d),'handouts':a0_0x18c283(0x32a),'highlighted':a0_0x18c283(0x2cf),'ppt':'not_found.html'},{'dept':a0_0x18c283(0x31d),'id':a0_0x18c283(0x2e5),'name':a0_0x18c283(0x3a8),'handouts':a0_0x18c283(0x40f),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x31d),'id':a0_0x18c283(0x319),'name':'Bioinformatics\x20Computing\x20II','handouts':a0_0x18c283(0x326),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x31d),'id':'BIF731','name':a0_0x18c283(0x356),'handouts':a0_0x18c283(0x144),'highlighted':a0_0x18c283(0x2cf),'ppt':'not_found.html'},{'dept':a0_0x18c283(0x419),'id':a0_0x18c283(0x40a),'name':'Basic\x20I-Biology','handouts':a0_0x18c283(0x18b),'highlighted':'https://drive.google.com/uc?export=download&id=1RuXdIVS8UpbcCoGeZw6MUaHTxeMh5JVp','ppt':'not_found.html'},{'dept':a0_0x18c283(0x419),'id':a0_0x18c283(0x3ab),'name':a0_0x18c283(0x324),'handouts':'1I2f-91LqPNjb8-jw2Sl1AFF6YspL9WeR','highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x419),'id':a0_0x18c283(0x143),'name':a0_0x18c283(0x1db),'handouts':a0_0x18c283(0x28a),'highlighted':'not_found.html','ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x419),'id':a0_0x18c283(0x3ea),'name':a0_0x18c283(0x1b7),'handouts':a0_0x18c283(0x44a),'highlighted':a0_0x18c283(0x18d),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x419),'id':a0_0x18c283(0x3ff),'name':a0_0x18c283(0x3d5),'handouts':a0_0x18c283(0x236),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x419),'id':'BIO303','name':a0_0x18c283(0x3de),'handouts':'1U5WNr4CN0ypfgDivIwk6TVkVGqmHucCy','highlighted':'#','ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x419),'id':a0_0x18c283(0x42e),'name':a0_0x18c283(0x38e),'handouts':a0_0x18c283(0x153),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':'BIO','id':'BIO502','name':a0_0x18c283(0x202),'handouts':a0_0x18c283(0x139),'highlighted':'#','ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x419),'id':a0_0x18c283(0x450),'name':'Biological\x20Physics','handouts':a0_0x18c283(0x274),'highlighted':'not_found.html','ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x419),'id':a0_0x18c283(0x1c1),'name':'Cell\x20Biology','handouts':a0_0x18c283(0x2bd),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x419),'id':a0_0x18c283(0x191),'name':'Molecular\x20Biology','handouts':a0_0x18c283(0x312),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x419),'id':a0_0x18c283(0x1a9),'name':a0_0x18c283(0x289),'handouts':a0_0x18c283(0x285),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x1cd),'id':a0_0x18c283(0x282),'name':'Banking\x20Laws\x20and\x20Practices','handouts':'1iZZA-PoK6-hRTRwnykerZ27qzxa4TipT','highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x1cd),'id':a0_0x18c283(0x332),'name':'Consumer\x20Banking','handouts':'1CCkzAj4s4YbjNvsDdx8O0xot0AdM_mrf','highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x1cd),'id':a0_0x18c283(0x104),'name':a0_0x18c283(0x296),'handouts':a0_0x18c283(0x456),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x1cd),'id':a0_0x18c283(0x33f),'name':a0_0x18c283(0x329),'handouts':'1pw54rueGW4qMf56J2L3QzRD0oXaHjdKk','highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x1cd),'id':a0_0x18c283(0x238),'name':a0_0x18c283(0x2ba),'handouts':a0_0x18c283(0x2be),'highlighted':a0_0x18c283(0x2cf),'ppt':'not_found.html'},{'dept':a0_0x18c283(0x203),'id':a0_0x18c283(0x3fe),'name':a0_0x18c283(0x2c1),'handouts':a0_0x18c283(0x435),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x210),'name':'Computer\x20Proficiency\x20License','handouts':a0_0x18c283(0x28c),'highlighted':a0_0x18c283(0x135),'ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x149),'name':'Introduction\x20to\x20Computing','handouts':a0_0x18c283(0x25d),'highlighted':a0_0x18c283(0x235),'ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x19e),'name':a0_0x18c283(0x3b8),'handouts':a0_0x18c283(0x3e2),'highlighted':a0_0x18c283(0x1bc),'ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x448),'name':a0_0x18c283(0x3f8),'handouts':a0_0x18c283(0x31a),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':'CS204','name':a0_0x18c283(0x2a3),'handouts':a0_0x18c283(0x45b),'highlighted':'https://drive.google.com/drive/folders/1n4q3f68yiAwLZ3A7hjee4vjX3LT_TI1J','ppt':a0_0x18c283(0x36c)},{'dept':'CS','id':'CS205','name':a0_0x18c283(0x252),'handouts':'1LKR2pcbJjOKBYxNdFvrkiz9jNboy-DS6','highlighted':'https://drive.google.com/drive/folders/1bnr8VJETywsgLHY2QVUyrvn9OhYG1oi0','ppt':a0_0x18c283(0x32b)},{'dept':'CS','id':a0_0x18c283(0x280),'name':a0_0x18c283(0x1e2),'handouts':a0_0x18c283(0x278),'highlighted':'https://drive.google.com/drive/folders/1_tTenyQbgHZFSzHSiquiuDVAnrRzvJsG','ppt':'not_found.html'},{'dept':'CS','id':'CS302','name':a0_0x18c283(0x43e),'handouts':a0_0x18c283(0x38a),'highlighted':a0_0x18c283(0x259),'ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x434),'name':a0_0x18c283(0x2a1),'handouts':a0_0x18c283(0x3ee),'highlighted':a0_0x18c283(0x207),'ppt':'not_found.html'},{'dept':'CS','id':a0_0x18c283(0x317),'name':'Web\x20Services\x20Development','handouts':a0_0x18c283(0x194),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x1ef),'name':a0_0x18c283(0x249),'handouts':a0_0x18c283(0x13d),'highlighted':a0_0x18c283(0x106),'ppt':'not_found.html'},{'dept':'CS','id':'CS315','name':a0_0x18c283(0x1ee),'handouts':a0_0x18c283(0x2a8),'highlighted':a0_0x18c283(0x2cf),'ppt':'not_found.html'},{'dept':'CS','id':a0_0x18c283(0x350),'name':a0_0x18c283(0x1f7),'handouts':a0_0x18c283(0x2e1),'highlighted':a0_0x18c283(0x288),'ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x16c),'name':a0_0x18c283(0x1d0),'handouts':a0_0x18c283(0x387),'highlighted':a0_0x18c283(0x21d),'ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x16f),'name':a0_0x18c283(0x1e0),'handouts':'1dg-c25Zm2AgS2CK7uqv_x3C8xpv--eaU','highlighted':a0_0x18c283(0x188),'ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x2c5),'name':'Oracle\x2011g\x20Programming','handouts':a0_0x18c283(0x230),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x42b),'name':a0_0x18c283(0x455),'handouts':a0_0x18c283(0x291),'highlighted':a0_0x18c283(0x2cf),'ppt':'not_found.html'},{'dept':'CS','id':a0_0x18c283(0x3e5),'name':a0_0x18c283(0x1f2),'handouts':a0_0x18c283(0x20e),'highlighted':'https://drive.google.com/drive/folders/1c2f5kzpGdHlHO3V8NTTBLSbUEq-Nj9R3','ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x3e8),'name':a0_0x18c283(0x1eb),'handouts':'1R4AKwlAWZbYcRCGCc29zq_TeRmV7WTXF','highlighted':a0_0x18c283(0x3b7),'ppt':a0_0x18c283(0x190)},{'dept':'CS','id':a0_0x18c283(0x100),'name':a0_0x18c283(0x3e0),'handouts':a0_0x18c283(0x1c6),'highlighted':a0_0x18c283(0x376),'ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x205),'name':a0_0x18c283(0x28b),'handouts':a0_0x18c283(0x240),'highlighted':a0_0x18c283(0x2e6),'ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':'CS432','name':a0_0x18c283(0x2a5),'handouts':'1iKIl3ye2_Yz-b43PG-orG9TvK0ok1BBs','highlighted':'https://drive.google.com/drive/folders/1OcFpM6xpn2XmBVFKnIKWP2ypGXr3YjJg','ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x3b9),'name':'Cloud\x20Computing','handouts':a0_0x18c283(0x349),'highlighted':a0_0x18c283(0x36d),'ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x20a),'name':'Introduction\x20to\x20Data\x20Science','handouts':a0_0x18c283(0x12f),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x1a8)},{'dept':'CS','id':a0_0x18c283(0x354),'name':'Advance\x20Computer\x20Architecture','handouts':a0_0x18c283(0x21c),'highlighted':'https://drive.google.com/drive/folders/1gccP84wZwW0GvwrUMy6cgKJ2jD8JJgH1','ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x2b5),'name':a0_0x18c283(0x3ec),'handouts':'1EiHQLxRkA1Itq5DWA9WlKAHN57erm5tN','highlighted':a0_0x18c283(0x24d),'ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x2c8),'name':a0_0x18c283(0x10f),'handouts':a0_0x18c283(0x30a),'highlighted':'https://drive.google.com/drive/folders/16vE7_L4Mbu_A8j-s0DHrDXG1ZkyVEDdf','ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x102),'name':a0_0x18c283(0x2ff),'handouts':a0_0x18c283(0x14a),'highlighted':a0_0x18c283(0x342),'ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x2ef),'name':a0_0x18c283(0x231),'handouts':a0_0x18c283(0x1e1),'highlighted':'https://drive.google.com/drive/folders/1wSIp3R0jmuU6BmuNbNA7pAEJd1xeoM9j','ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x24a),'name':'Information\x20System','handouts':a0_0x18c283(0x416),'highlighted':a0_0x18c283(0x2eb),'ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x287),'name':'Modern\x20Programming\x20Languages','handouts':a0_0x18c283(0x1c0),'highlighted':a0_0x18c283(0x1ae),'ppt':'not_found.html'},{'dept':'CS','id':'CS510','name':'Software\x20Specification','handouts':a0_0x18c283(0x19b),'highlighted':a0_0x18c283(0x328),'ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x14b),'name':a0_0x18c283(0x28f),'handouts':a0_0x18c283(0x2c0),'highlighted':'https://drive.google.com/drive/folders/18UbNu8DOBGE7QvV2URaVtBwSbvxDBKKv','ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x40e),'name':a0_0x18c283(0x2fc),'handouts':'1u_4mNALdFK6uIdN4Ma2O6xCLLXiM3Nn0','highlighted':a0_0x18c283(0x164),'ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':'CS602','name':a0_0x18c283(0x442),'handouts':a0_0x18c283(0x126),'highlighted':a0_0x18c283(0x17f),'ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x381),'name':'Software\x20Architecture','handouts':a0_0x18c283(0x2cf),'highlighted':a0_0x18c283(0x2cf),'ppt':'not_found.html'},{'dept':'CS','id':'CS604','name':a0_0x18c283(0x12c),'handouts':a0_0x18c283(0x1ac),'highlighted':'https://drive.google.com/drive/folders/1vmQApQohYyycJH1uyiBCaJgplXNgcOiH','ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':'CS605','name':'Software\x20Engineering-II','handouts':a0_0x18c283(0x327),'highlighted':a0_0x18c283(0x412),'ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x45c),'name':'Compiler\x20Construction','handouts':'1Xt8egZ1k4Xw77v9Qr3yM7fk5URHr0z6d','highlighted':a0_0x18c283(0x233),'ppt':'not_found.html'},{'dept':'CS','id':a0_0x18c283(0x2a6),'name':'Artificial\x20Intelligence','handouts':a0_0x18c283(0x1cf),'highlighted':a0_0x18c283(0x2f4),'ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':'CS608','name':'Software\x20Verification\x20&\x20Validation','handouts':a0_0x18c283(0x179),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x180),'name':a0_0x18c283(0x2f9),'handouts':a0_0x18c283(0x147),'highlighted':a0_0x18c283(0x3c7),'ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x260),'name':a0_0x18c283(0x116),'handouts':a0_0x18c283(0x3aa),'highlighted':a0_0x18c283(0x117),'ppt':'https://drive.google.com/file/d/1N45uEer2tyz1_e5KPG8_2IOw_YIzQ9bq/view'},{'dept':'CS','id':'CS611','name':a0_0x18c283(0x11a),'handouts':'1KsLO-DcPMjByUnqvB7nOn0F8dLKwq43c','highlighted':a0_0x18c283(0x222),'ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x35a),'name':'Data\x20Warehousing','handouts':a0_0x18c283(0x103),'highlighted':a0_0x18c283(0x3c5),'ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x3ac),'name':a0_0x18c283(0x2d4),'handouts':a0_0x18c283(0x13b),'highlighted':'https://drive.google.com/drive/folders/1Fx8qlxWioEPQ2Y1wdkRj9hYgEz-cl9t_','ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x10d),'name':a0_0x18c283(0x3ed),'handouts':a0_0x18c283(0x101),'highlighted':a0_0x18c283(0x101),'ppt':a0_0x18c283(0x101)},{'dept':'CS','id':'CS621','name':a0_0x18c283(0x40c),'handouts':a0_0x18c283(0x373),'highlighted':a0_0x18c283(0x373),'ppt':a0_0x18c283(0x192)},{'dept':'CS','id':a0_0x18c283(0x264),'name':'Professional\x20Practices','handouts':a0_0x18c283(0x447),'highlighted':a0_0x18c283(0x151),'ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':'CS636','name':a0_0x18c283(0x255),'handouts':a0_0x18c283(0x377),'highlighted':'https://drive.google.com/file/d/1QB9xhksVb1ehNYoKUcfNa4zboEtvTsmx/view','ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x359),'name':'Theory\x20of\x20Computation','handouts':a0_0x18c283(0x270),'highlighted':a0_0x18c283(0x2cf),'ppt':'not_found.html'},{'dept':'CS','id':'CS702','name':a0_0x18c283(0x215),'handouts':a0_0x18c283(0x23b),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x358),'name':'Advanced\x20Architecture','handouts':a0_0x18c283(0x3b6),'highlighted':'not_found.html','ppt':'not_found.html'},{'dept':'CS','id':a0_0x18c283(0x316),'name':'Software\x20Design','handouts':'https://drive.google.com/file/d/1uLSyo_nEPiwF3ReMOS-LAxL4M02Ex-Ep/view','highlighted':a0_0x18c283(0x2cf),'ppt':'not_found.html'},{'dept':'CS','id':'CS718','name':a0_0x18c283(0x1fa),'handouts':'https://drive.google.com/file/d/1FljAxEkI6OUbRHTLrC04A6Ws5bGDkmxP/view','highlighted':'not_found.html','ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':a0_0x18c283(0x41a),'name':'Software\x20process\x20Improvement','handouts':a0_0x18c283(0x134),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':'CS','id':'CS726','name':a0_0x18c283(0x3cc),'handouts':a0_0x18c283(0x1d9),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x439),'id':'ECOO401','name':a0_0x18c283(0x3f0),'handouts':a0_0x18c283(0x146),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':'ECO','id':a0_0x18c283(0x239),'name':'Micro\x20Economics','handouts':a0_0x18c283(0x45f),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x439),'id':'ECOO403','name':a0_0x18c283(0x2da),'handouts':a0_0x18c283(0x208),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x439),'id':a0_0x18c283(0x311),'name':a0_0x18c283(0x2df),'handouts':'1fHgn90v0tSLPXzCCQn5UYlkKT_KNWChI','highlighted':'','ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x439),'id':a0_0x18c283(0x2ea),'name':'Development\x20Economics','handouts':a0_0x18c283(0x24b),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':'ECO','id':a0_0x18c283(0x1a3),'name':a0_0x18c283(0x284),'handouts':'10tripUcXSmNUd6RY4_HMSQs0zt_N9RnQ','highlighted':'not_found.html','ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x439),'id':a0_0x18c283(0x17b),'name':a0_0x18c283(0x118),'handouts':a0_0x18c283(0x3c3),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x439),'id':a0_0x18c283(0x42d),'name':a0_0x18c283(0x183),'handouts':'101EgC8db79ADrBwesMiNAVbkhtDBvHq3','highlighted':'https://drive.google.com/file/d/1OOlw7mvtHLubOLbLIl4-rJ0b26U-Hh9m/view','ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x439),'id':a0_0x18c283(0x22f),'name':'Mathematical\x20Economics\x20II','handouts':a0_0x18c283(0x2d0),'highlighted':'not_found.html','ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x439),'id':a0_0x18c283(0x431),'name':a0_0x18c283(0x323),'handouts':a0_0x18c283(0x2f8),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x439),'id':a0_0x18c283(0x44c),'name':'Population\x20Economics','handouts':a0_0x18c283(0x26a),'highlighted':a0_0x18c283(0x2cf),'ppt':'not_found.html'},{'dept':a0_0x18c283(0x3c4),'id':a0_0x18c283(0x43c),'name':a0_0x18c283(0x2bf),'handouts':a0_0x18c283(0x409),'highlighted':a0_0x18c283(0x17d),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x3c4),'id':a0_0x18c283(0x290),'name':'Learning\x20Theories','handouts':a0_0x18c283(0x11b),'highlighted':'not_found.html','ppt':'not_found.html'},{'dept':'EDU','id':'EDU301','name':a0_0x18c283(0x2ae),'handouts':'1qjYsRGNDRsYkAFc1Aliiute3MNBrJzk_','highlighted':a0_0x18c283(0x105),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x3c4),'id':'EDU302','name':a0_0x18c283(0x243),'handouts':'1iVICWuAadFOQu7lTnxPsX2rWx9QC_cNI','highlighted':a0_0x18c283(0x138),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x3c4),'id':'EDU303','name':'Child\x20Development','handouts':a0_0x18c283(0x29c),'highlighted':a0_0x18c283(0x1f1),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x3c4),'id':'EDU304','name':a0_0x18c283(0x114),'handouts':'1BjI_cNPjWjXqyLz9acn5oy8h8F20Ibi9','highlighted':a0_0x18c283(0x415),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x3c4),'id':'EDU305','name':'Classroom\x20Management','handouts':a0_0x18c283(0x277),'highlighted':a0_0x18c283(0x422),'ppt':a0_0x18c283(0x2cf)},{'dept':'EDU','id':a0_0x18c283(0x2d8),'name':'Contemporary\x20Issues\x20and\x20Trends\x20in\x20Education','handouts':a0_0x18c283(0x247),'highlighted':a0_0x18c283(0x37c),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x3c4),'id':a0_0x18c283(0x1fd),'name':a0_0x18c283(0x371),'handouts':'1MFe5sjrAkxi4mdXc-pZg_ktHRbKNBmA2','highlighted':a0_0x18c283(0x124),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x3c4),'id':'EDU403','name':a0_0x18c283(0x43f),'handouts':a0_0x18c283(0x3e1),'highlighted':a0_0x18c283(0x389),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x3c4),'id':a0_0x18c283(0x315),'name':a0_0x18c283(0x2d9),'handouts':'1pG-0J2yVVLrC5tyW5_YYHzg09a5jqecx','highlighted':'not_found.html','ppt':a0_0x18c283(0x2cf)},{'dept':'EDU','id':a0_0x18c283(0x267),'name':a0_0x18c283(0x170),'handouts':'1P7AH_i9IhQRTj6vGN8qnAJoGS_Jn-lZn','highlighted':a0_0x18c283(0x2cf),'ppt':'not_found.html'},{'dept':a0_0x18c283(0x3c4),'id':'EDU406','name':a0_0x18c283(0x32c),'handouts':a0_0x18c283(0x1d8),'highlighted':'https://drive.google.com/drive/folders/18uM7iNSIkpYcM5jM0ssWNM5w2ka2wjiA','ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x3c4),'id':a0_0x18c283(0x1ad),'name':'Teaching\x20of\x20Literacy\x20and\x20Language','handouts':a0_0x18c283(0x2b7),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x3c4),'id':a0_0x18c283(0x430),'name':a0_0x18c283(0x3f7),'handouts':a0_0x18c283(0x110),'highlighted':'1EGBtRll9mxglKWaguGjwBLZg3F958SSQ','ppt':a0_0x18c283(0x2cf)},{'dept':'EDU','id':a0_0x18c283(0x33e),'name':'تدریس\x20زبانِ\x20اردو','handouts':a0_0x18c283(0x34d),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x3c4),'id':a0_0x18c283(0x11e),'name':a0_0x18c283(0x39e),'handouts':'183shV9Kqt2XAbA-ODD9p54-pGBaGXUK8','highlighted':a0_0x18c283(0x196),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x3c4),'id':a0_0x18c283(0x15f),'name':a0_0x18c283(0x209),'handouts':'1RddK8C9IwyMkgLzuzZzWam4d0njbSrBX','highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x3c4),'id':a0_0x18c283(0x3b5),'name':a0_0x18c283(0x269),'handouts':a0_0x18c283(0x2c3),'highlighted':a0_0x18c283(0x157),'ppt':a0_0x18c283(0x2cf)},{'dept':'EDU','id':'EDU501','name':a0_0x18c283(0x3e4),'handouts':a0_0x18c283(0x44f),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x3c4),'id':a0_0x18c283(0x360),'name':'Educational\x20Development\x20in\x20Pakistan','handouts':a0_0x18c283(0x37b),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x3c4),'id':'EDU510','name':a0_0x18c283(0x25f),'handouts':a0_0x18c283(0x1a2),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x3c4),'id':a0_0x18c283(0x3a0),'name':a0_0x18c283(0x2d5),'handouts':a0_0x18c283(0x340),'highlighted':'1sDREUxTJ0XAxLCWwpHxI7i8h2_-kwZxL','ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x3c4),'id':'EDU515','name':a0_0x18c283(0x2ec),'handouts':a0_0x18c283(0x333),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x3c4),'id':a0_0x18c283(0x39f),'name':'Teaching\x20of\x20English','handouts':a0_0x18c283(0x140),'highlighted':a0_0x18c283(0x383),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x3c4),'id':'EDU601','name':a0_0x18c283(0x242),'handouts':'18g6sURD5X9lKMqbZomIGpjaPdZVxf1W7','highlighted':'https://drive.google.com/file/d/1KpRpksnDAT4Ol5Wzko0yZkGu7dv_2GPr','ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x3c4),'id':a0_0x18c283(0x27a),'name':a0_0x18c283(0x245),'handouts':'1i0iKhCFc1Pcbo2j6maApkUnWwlRc9hlK','highlighted':a0_0x18c283(0x178),'ppt':'not_found.html'},{'dept':a0_0x18c283(0x3c4),'id':a0_0x18c283(0x1d5),'name':'Educational\x20Governance:\x20Policy\x20&\x20Practice','handouts':'1xW4153QiFU2bqQIIKaTAa1h8Z4shJrlp','highlighted':'not_found.html','ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x3c4),'id':'EDU604','name':a0_0x18c283(0x2a2),'handouts':a0_0x18c283(0x21f),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':'EDU','id':a0_0x18c283(0x297),'name':a0_0x18c283(0x313),'handouts':a0_0x18c283(0x11c),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':'EDU','id':a0_0x18c283(0x365),'name':a0_0x18c283(0x444),'handouts':a0_0x18c283(0x225),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':'ENG','id':a0_0x18c283(0x1df),'name':'Elementary\x20English','handouts':a0_0x18c283(0x212),'highlighted':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x1f3),'id':'ENG101','name':a0_0x18c283(0x3be),'handouts':a0_0x18c283(0x3af),'highlighted':a0_0x18c283(0x32d)},{'dept':a0_0x18c283(0x1f3),'id':a0_0x18c283(0x13e),'name':a0_0x18c283(0x12d),'handouts':a0_0x18c283(0x32f),'highlighted':a0_0x18c283(0x3f6)},{'dept':a0_0x18c283(0x1f3),'id':a0_0x18c283(0x3a5),'name':a0_0x18c283(0x407),'handouts':a0_0x18c283(0x432),'highlighted':'https://drive.google.com/drive/folders/1r1kbCyJ1t1TcdgpcUhHKib6MJ8m8axaZ'},{'dept':a0_0x18c283(0x1f3),'id':a0_0x18c283(0x217),'name':a0_0x18c283(0x330),'handouts':'1cvUGCYh2SXjC-nii3P78VPRBmG08s70Q','highlighted':a0_0x18c283(0x22e)},{'dept':'ENG','id':a0_0x18c283(0x32e),'name':a0_0x18c283(0x142),'handouts':'1em2YBMIISiEC-mnp2EMtYLeJhnvH-mMr','highlighted':a0_0x18c283(0x22b)},{'dept':a0_0x18c283(0x1f3),'id':a0_0x18c283(0x1ce),'name':a0_0x18c283(0x3f4),'handouts':'1lrhXGXIKRqR-KYOHSrHwZqwd3gWOSM56','highlighted':a0_0x18c283(0x34b)},{'dept':a0_0x18c283(0x1f3),'id':a0_0x18c283(0x3e7),'name':a0_0x18c283(0x1ea),'handouts':a0_0x18c283(0x3db),'highlighted':a0_0x18c283(0x123)},{'dept':a0_0x18c283(0x1f3),'id':a0_0x18c283(0x125),'name':a0_0x18c283(0x298),'handouts':a0_0x18c283(0x45e),'highlighted':a0_0x18c283(0x132)},{'dept':a0_0x18c283(0x1f3),'id':a0_0x18c283(0x2ac),'name':a0_0x18c283(0x458),'handouts':a0_0x18c283(0x24e),'highlighted':a0_0x18c283(0x38f)},{'dept':a0_0x18c283(0x1f3),'id':a0_0x18c283(0x29e),'name':a0_0x18c283(0x213),'handouts':'1dp_rlmSJoVMNqm4e1Lqto4_OVg2Nseki','highlighted':a0_0x18c283(0x14c)},{'dept':a0_0x18c283(0x1f3),'id':a0_0x18c283(0x372),'name':a0_0x18c283(0x382),'handouts':a0_0x18c283(0x275),'highlighted':a0_0x18c283(0x2d3)},{'dept':'ENG','id':a0_0x18c283(0x31c),'name':a0_0x18c283(0x3a6),'handouts':a0_0x18c283(0x42c),'highlighted':'https://drive.google.com/drive/folders/1L4SDEltjCI6mBVBebbzgKjsHIqntsQQo'},{'dept':a0_0x18c283(0x1f3),'id':a0_0x18c283(0x27c),'name':a0_0x18c283(0x15c),'handouts':a0_0x18c283(0x408),'highlighted':a0_0x18c283(0x1a0)},{'dept':a0_0x18c283(0x1f3),'id':a0_0x18c283(0x3ba),'name':a0_0x18c283(0x379),'handouts':a0_0x18c283(0x45a),'highlighted':a0_0x18c283(0x2ab)},{'dept':'ENG','id':a0_0x18c283(0x2af),'name':a0_0x18c283(0x3ef),'handouts':a0_0x18c283(0x1bf),'highlighted':a0_0x18c283(0x23c)},{'dept':a0_0x18c283(0x1f3),'id':a0_0x18c283(0x107),'name':a0_0x18c283(0x159),'handouts':a0_0x18c283(0x347),'highlighted':a0_0x18c283(0x166)},{'dept':'ENG','id':a0_0x18c283(0x30d),'name':a0_0x18c283(0x2a7),'handouts':'1FO0-EmpH17t3heSI4WgzOy9un35dzene','highlighted':a0_0x18c283(0x3b2)},{'dept':a0_0x18c283(0x1f3),'id':a0_0x18c283(0x318),'name':'Teaching\x20Reading\x20and\x20Writing\x20Skills','handouts':a0_0x18c283(0x109),'highlighted':'https://drive.google.com/drive/folders/1mGQNXepoIBz4-gDtutne25rDSbbhayCB'},{'dept':a0_0x18c283(0x1f3),'id':'ENG516','name':'School\x20Teaching\x20of\x20Business\x20Communication','handouts':'1C0nZ0Wp6fUJdU52ZElowSh3sF4Js3P49','highlighted':a0_0x18c283(0x1a6)},{'dept':a0_0x18c283(0x1f3),'id':a0_0x18c283(0x1e3),'name':a0_0x18c283(0x2e2),'handouts':a0_0x18c283(0x11f),'highlighted':'not_found.html'},{'dept':a0_0x18c283(0x1f3),'id':'ENG518','name':a0_0x18c283(0x41e),'handouts':a0_0x18c283(0x394),'highlighted':a0_0x18c283(0x234)},{'dept':a0_0x18c283(0x1f3),'id':a0_0x18c283(0x16b),'name':'Curriculum\x20Design','handouts':a0_0x18c283(0x1b3),'highlighted':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x1f3),'id':'ENG520','name':a0_0x18c283(0x3d1),'handouts':a0_0x18c283(0x369),'highlighted':a0_0x18c283(0x3a3)},{'dept':'ENG','id':'ENG521','name':a0_0x18c283(0x396),'handouts':a0_0x18c283(0x16a),'highlighted':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x1f3),'id':'ENG522','name':'Applied\x20Linguistics','handouts':'1wOb9qWNLeyMbzbQkwnswkmPLk-M_SV5p','highlighted':'https://drive.google.com/drive/folders/1Dv4yOkZP-pREzy7pk2Tgqd_jD34jwOO6'},{'dept':a0_0x18c283(0x1f3),'id':a0_0x18c283(0x3e3),'name':'Discourse\x20Analysis','handouts':a0_0x18c283(0x428),'highlighted':a0_0x18c283(0x300)},{'dept':a0_0x18c283(0x1f3),'id':'ENG524','name':'Critical\x20Discourse\x20Analysis','handouts':a0_0x18c283(0x3f3),'highlighted':a0_0x18c283(0x3bb)},{'dept':a0_0x18c283(0x1f3),'id':a0_0x18c283(0x1e5),'name':a0_0x18c283(0x3ce),'handouts':a0_0x18c283(0x130),'highlighted':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x1f3),'id':'ENG529','name':a0_0x18c283(0x254),'handouts':a0_0x18c283(0x334),'highlighted':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x13c),'id':a0_0x18c283(0x427),'name':'Advanced\x20Financial\x20Accounting','handouts':a0_0x18c283(0x15d),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x13c),'id':a0_0x18c283(0x3dc),'name':a0_0x18c283(0x20d),'handouts':a0_0x18c283(0x268),'highlighted':'not_found.html','ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x13c),'id':'FIN622','name':a0_0x18c283(0x31b),'handouts':a0_0x18c283(0x227),'highlighted':'not_found.html','ppt':a0_0x18c283(0x2cf)},{'dept':'FIN','id':'FIN623','name':a0_0x18c283(0x257),'handouts':a0_0x18c283(0x343),'highlighted':'not_found.html','ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x13c),'id':'FIN624','name':a0_0x18c283(0x370),'handouts':a0_0x18c283(0x1b0),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x13c),'id':'FIN625','name':a0_0x18c283(0x165),'handouts':'1rqxSCaAiRjmRe6H-U6UrC-kP6LbMwVzs','highlighted':a0_0x18c283(0x2cf),'ppt':'not_found.html'},{'dept':a0_0x18c283(0x13c),'id':a0_0x18c283(0x2bc),'name':a0_0x18c283(0x251),'handouts':a0_0x18c283(0x3d8),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x12a),'id':'GSC101','name':a0_0x18c283(0x2d2),'handouts':a0_0x18c283(0x1d2),'highlighted':a0_0x18c283(0x452),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x12a),'id':a0_0x18c283(0x395),'name':a0_0x18c283(0x404),'handouts':a0_0x18c283(0x181),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x258),'id':'ISL201','name':a0_0x18c283(0x320),'handouts':a0_0x18c283(0x2f3),'highlighted':'https://drive.google.com/file/d/1Au9BQumr8vK8TGFwPkdaLmEyfYOC33dN/view','ppt':'not_found.html'},{'dept':a0_0x18c283(0x258),'id':a0_0x18c283(0x25a),'name':a0_0x18c283(0x1dd),'handouts':'1LPrbJsMD7xlAlOU47Xw-J5J_Y-Yj5Njo','highlighted':a0_0x18c283(0x122),'ppt':a0_0x18c283(0x2cf)},{'dept':'IT','id':a0_0x18c283(0x1be),'name':a0_0x18c283(0x346),'handouts':'https://drive.google.com/file/d/1vL7EN92n_ocBpBz1Ff6jkCdjoxLK_f44/view','highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':'IT','id':a0_0x18c283(0x200),'name':'System\x20and\x20Network\x20Administration','handouts':a0_0x18c283(0x283),'highlighted':a0_0x18c283(0x2cf),'ppt':'not_found.html'},{'dept':a0_0x18c283(0x27f),'id':'MCM101','name':'Introduction\x20to\x20Mass\x20Communication','handouts':'1k_6NYkPJRUvq6f7iUCtTBIry5jzPJxuG','highlighted':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x27f),'id':a0_0x18c283(0x43b),'name':a0_0x18c283(0x345),'handouts':a0_0x18c283(0x1b5),'highlighted':a0_0x18c283(0x37e)},{'dept':a0_0x18c283(0x27f),'id':a0_0x18c283(0x331),'name':a0_0x18c283(0x3c8),'handouts':a0_0x18c283(0x276),'highlighted':a0_0x18c283(0x2cf)},{'dept':'MCM','id':a0_0x18c283(0x1f0),'name':a0_0x18c283(0x3f5),'handouts':a0_0x18c283(0x1e7),'highlighted':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x27f),'id':'MCM311','name':'Reporting\x20and\x20Sub-Editing','handouts':a0_0x18c283(0x20f),'highlighted':a0_0x18c283(0x2cf)},{'dept':'MCM','id':a0_0x18c283(0x421),'name':a0_0x18c283(0x26f),'handouts':'1RS2hpWnR8VIY5D-GuXN5hDnUsaytWAnq','highlighted':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x27f),'id':'MCM404','name':a0_0x18c283(0x3b0),'handouts':a0_0x18c283(0x250),'highlighted':'not_found.html'},{'dept':a0_0x18c283(0x27f),'id':a0_0x18c283(0x22c),'name':a0_0x18c283(0x15e),'handouts':a0_0x18c283(0x244),'highlighted':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x27f),'id':'MCM431','name':a0_0x18c283(0x31f),'handouts':a0_0x18c283(0x2ce),'highlighted':'not_found.html'},{'dept':a0_0x18c283(0x27f),'id':a0_0x18c283(0x253),'name':'Advertising','handouts':'1WSbiapvs7SaQpRRew8eSOdAdKT3IWDdU','highlighted':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x27f),'id':'MCM511','name':a0_0x18c283(0x406),'handouts':'1da2SgiZo7dUujz5tzLzVEXCRS7MoJNZz','highlighted':'not_found.html'},{'dept':'MCM','id':'MCM514','name':a0_0x18c283(0x1a1),'handouts':'1xyxLSESx_-yAVFbBwNnH-mHCw606X5-D','highlighted':a0_0x18c283(0x2cf)},{'dept':'MCM','id':'MCM515','name':a0_0x18c283(0x3eb),'handouts':'1AtqJoo22m9lxIjfkNSz97sBJHLXHvhq8','highlighted':'not_found.html'},{'dept':'MCM','id':a0_0x18c283(0x256),'name':a0_0x18c283(0x361),'handouts':a0_0x18c283(0x137),'highlighted':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x27f),'id':a0_0x18c283(0x14d),'name':'Online\x20Journalism','handouts':a0_0x18c283(0x1c5),'highlighted':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x27f),'id':a0_0x18c283(0x25b),'name':a0_0x18c283(0x1ed),'handouts':a0_0x18c283(0x3fb),'highlighted':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x27f),'id':a0_0x18c283(0x1c4),'name':a0_0x18c283(0x410),'handouts':'1CYW68mq116YyWJ_xUTPA01dJWdf6p1Ho','highlighted':'not_found.html'},{'dept':a0_0x18c283(0x27f),'id':'MCM601','name':a0_0x18c283(0x17a),'handouts':a0_0x18c283(0x2fd),'highlighted':'not_found.html'},{'dept':'MCM','id':a0_0x18c283(0x2db),'name':a0_0x18c283(0x454),'handouts':a0_0x18c283(0x2de),'highlighted':a0_0x18c283(0x2cf)},{'dept':'MCM','id':'MCM610','name':a0_0x18c283(0x1c3),'handouts':a0_0x18c283(0x10c),'highlighted':'not_found.html'},{'dept':'MGMT','id':a0_0x18c283(0x262),'name':a0_0x18c283(0x413),'handouts':'1ntz6WVwt31dAShiHFXjuOULf_0nJze35','highlighted':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x3d0),'id':'MGMT614','name':'Supply\x20Chain\x20Management','handouts':a0_0x18c283(0x171),'highlighted':a0_0x18c283(0x2cf)},{'dept':'MGMT','id':a0_0x18c283(0x2b0),'name':'Transportation\x20&\x20Logistics\x20Management','handouts':'1JPeqQ5RzXxZaFNe67yvhJhqFCapKV4wD','highlighted':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x3d0),'id':'MGMT622','name':'Management\x20Skills','handouts':a0_0x18c283(0x133),'highlighted':'not_found.html'},{'dept':a0_0x18c283(0x3d0),'id':a0_0x18c283(0x309),'name':a0_0x18c283(0x38b),'handouts':a0_0x18c283(0x3e6),'highlighted':'not_found.html'},{'dept':a0_0x18c283(0x3d0),'id':a0_0x18c283(0x263),'name':'Conflict\x20Management','handouts':a0_0x18c283(0x367),'highlighted':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x3d0),'id':'MGMT625','name':a0_0x18c283(0x1c9),'handouts':a0_0x18c283(0x18e),'highlighted':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x3d0),'id':a0_0x18c283(0x414),'name':a0_0x18c283(0x437),'handouts':a0_0x18c283(0x1e6),'highlighted':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x3d0),'id':a0_0x18c283(0x3d9),'name':a0_0x18c283(0x3ae),'handouts':a0_0x18c283(0x158),'highlighted':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x3d0),'id':'MGMT629','name':a0_0x18c283(0x38d),'handouts':'1nLXbLzcHajREcAwKqywkRsqaxnq-z48V','highlighted':a0_0x18c283(0x2cf)},{'dept':'MGMT','id':a0_0x18c283(0x12e),'name':a0_0x18c283(0x308),'handouts':'15drEvGbAXzvh_s9EaYeA_lnds8ODBNy1','highlighted':'not_found.html'},{'dept':'MGT','id':a0_0x18c283(0x2f6),'name':a0_0x18c283(0x13f),'handouts':a0_0x18c283(0x2e4),'highlighted':a0_0x18c283(0x2a4),'ppt':'not_found.html'},{'dept':a0_0x18c283(0x204),'id':a0_0x18c283(0x299),'name':'Introduction\x20to\x20Public\x20Administration','handouts':a0_0x18c283(0x3bc),'highlighted':a0_0x18c283(0x224),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x204),'id':a0_0x18c283(0x184),'name':a0_0x18c283(0x3d6),'handouts':a0_0x18c283(0x128),'highlighted':a0_0x18c283(0x380),'ppt':'not_found.html'},{'dept':a0_0x18c283(0x204),'id':'MGT211','name':a0_0x18c283(0x348),'handouts':a0_0x18c283(0x429),'highlighted':'https://drive.google.com/uc?export=download&id=1gdj02Ui7EMrOaU8YVuMeNUFaWezqyGyc','ppt':'not_found.html'},{'dept':a0_0x18c283(0x204),'id':a0_0x18c283(0x336),'name':a0_0x18c283(0x292),'handouts':a0_0x18c283(0x337),'highlighted':a0_0x18c283(0x22d),'ppt':'https://drive.google.com/file/d/1EqUK4Z3f7z6Z-u_EQQj9C4xAkS1vpgPZ/view'},{'dept':'MGT','id':'MGT401','name':a0_0x18c283(0x403),'handouts':a0_0x18c283(0x185),'highlighted':'not_found.html','ppt':'not_found.html'},{'dept':'MGT','id':a0_0x18c283(0x2d1),'name':a0_0x18c283(0x1b4),'handouts':a0_0x18c283(0x3c9),'highlighted':a0_0x18c283(0x2cf),'ppt':'not_found.html'},{'dept':a0_0x18c283(0x204),'id':a0_0x18c283(0x388),'name':a0_0x18c283(0x2b9),'handouts':'1rW9IJ66Sn8mrKXZhYcNynxn3qSXJ8H4s','highlighted':'not_found.html','ppt':a0_0x18c283(0x374)},{'dept':a0_0x18c283(0x204),'id':a0_0x18c283(0x27b),'name':a0_0x18c283(0x398),'handouts':a0_0x18c283(0x18a),'highlighted':'https://drive.google.com/drive/folders/1K03OlFByht_jbPzdL8_N8LhAbq8GCwQU','ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x204),'id':a0_0x18c283(0x418),'name':a0_0x18c283(0x3c2),'handouts':a0_0x18c283(0x1bb),'highlighted':a0_0x18c283(0x1ca),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x204),'id':a0_0x18c283(0x401),'name':'Principles\x20of\x20Management','handouts':'1icK0lWc9rX9nj5QfWGZlyBz-U2t_UAEj','highlighted':a0_0x18c283(0x3cb),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x204),'id':a0_0x18c283(0x335),'name':a0_0x18c283(0x30e),'handouts':a0_0x18c283(0x232),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x204),'id':'MGT510','name':a0_0x18c283(0x3ca),'handouts':a0_0x18c283(0x198),'highlighted':'not_found.html','ppt':'not_found.html'},{'dept':a0_0x18c283(0x204),'id':a0_0x18c283(0x19f),'name':'International\x20Business','handouts':'10Bu7btnO8gv8oucaJLkQGoDwh2qXshEW','highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x204),'id':'MGT601','name':a0_0x18c283(0x426),'handouts':a0_0x18c283(0x120),'highlighted':a0_0x18c283(0x2cf),'ppt':'not_found.html'},{'dept':a0_0x18c283(0x204),'id':a0_0x18c283(0x378),'name':a0_0x18c283(0x293),'handouts':a0_0x18c283(0x10a),'highlighted':'https://drive.google.com/file/d/1IN51Nonj8t-mSTjATZwt2KM6hBb0X4Bc/view','ppt':a0_0x18c283(0x119)},{'dept':a0_0x18c283(0x204),'id':'MGT603','name':'Strategic\x20Management','handouts':a0_0x18c283(0x436),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x204),'id':a0_0x18c283(0x33d),'name':'Business\x20and\x20Labour\x20Laws','handouts':a0_0x18c283(0x33c),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':'MGT','id':a0_0x18c283(0x26b),'name':'Corporate\x20Law','handouts':a0_0x18c283(0x237),'highlighted':'not_found.html','ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x204),'id':a0_0x18c283(0x34f),'name':a0_0x18c283(0x246),'handouts':a0_0x18c283(0x1cc),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x204),'id':a0_0x18c283(0x344),'name':a0_0x18c283(0x271),'handouts':a0_0x18c283(0x1d4),'highlighted':'not_found.html','ppt':a0_0x18c283(0x2cf)},{'dept':'MGT','id':'MGT705','name':a0_0x18c283(0x411),'handouts':'13qRat5FH6Wx_6NltIctH8ti7kE1bX1tq','highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':'MGT','id':a0_0x18c283(0x15a),'name':a0_0x18c283(0x16e),'handouts':a0_0x18c283(0x1bd),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x23d),'id':a0_0x18c283(0x1d6),'name':a0_0x18c283(0x43d),'handouts':'1D9xwm_-op5Tjv6gXhLiUmWLKfnEJBgtC','highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x23d),'id':a0_0x18c283(0x3d7),'name':a0_0x18c283(0x29b),'handouts':a0_0x18c283(0x163),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x23d),'id':'MKT610','name':a0_0x18c283(0x321),'handouts':a0_0x18c283(0x1a5),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x23d),'id':a0_0x18c283(0x189),'name':a0_0x18c283(0x2fe),'handouts':'1D5p_QijUvGXjJu9izeVoRRcT8CKKwlHz','highlighted':'not_found.html','ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x23d),'id':a0_0x18c283(0x302),'name':a0_0x18c283(0x1aa),'handouts':a0_0x18c283(0x445),'highlighted':a0_0x18c283(0x2cf),'ppt':'not_found.html'},{'dept':'MKT','id':a0_0x18c283(0x386),'name':a0_0x18c283(0x2c2),'handouts':a0_0x18c283(0x1cb),'highlighted':a0_0x18c283(0x2cf),'ppt':'not_found.html'},{'dept':a0_0x18c283(0x23d),'id':a0_0x18c283(0x19d),'name':a0_0x18c283(0x141),'handouts':a0_0x18c283(0x241),'highlighted':'not_found.html','ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x2c7),'id':'MTH001','name':a0_0x18c283(0x41c),'handouts':a0_0x18c283(0x405),'highlighted':a0_0x18c283(0x2cf),'ppt':'not_found.html'},{'dept':a0_0x18c283(0x2c7),'id':a0_0x18c283(0x1f6),'name':a0_0x18c283(0x397),'handouts':a0_0x18c283(0x424),'highlighted':a0_0x18c283(0x2f1),'ppt':a0_0x18c283(0x248)},{'dept':'MTH','id':a0_0x18c283(0x40b),'name':a0_0x18c283(0x438),'handouts':a0_0x18c283(0x1b1),'highlighted':a0_0x18c283(0x2f5),'ppt':a0_0x18c283(0x1ba)},{'dept':a0_0x18c283(0x2c7),'id':a0_0x18c283(0x325),'name':a0_0x18c283(0x3c1),'handouts':a0_0x18c283(0x219),'highlighted':'not_found.html','ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x2c7),'id':a0_0x18c283(0x3df),'name':a0_0x18c283(0x16d),'handouts':a0_0x18c283(0x24c),'highlighted':a0_0x18c283(0x24c),'ppt':a0_0x18c283(0x3bf)},{'dept':a0_0x18c283(0x2c7),'id':a0_0x18c283(0x3d3),'name':a0_0x18c283(0x2e0),'handouts':a0_0x18c283(0x1a7),'highlighted':'not_found.html','ppt':'not_found.html'},{'dept':'MTH','id':a0_0x18c283(0x12b),'name':'Discrete\x20Mathematics','handouts':'12sJJ11vxNbyfLWLbs_8BZUzyGv0YVl6E','highlighted':'https://drive.google.com/drive/folders/1scCQyY5IkPVN_4razWD1I1oLRBeHSBiO','ppt':a0_0x18c283(0x34e)},{'dept':'MTH','id':a0_0x18c283(0x17c),'name':a0_0x18c283(0x1ec),'handouts':a0_0x18c283(0x173),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x355)},{'dept':a0_0x18c283(0x2c7),'id':a0_0x18c283(0x1da),'name':a0_0x18c283(0x22a),'handouts':a0_0x18c283(0x1b6),'highlighted':a0_0x18c283(0x2b6),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x2c7),'id':'MTH303','name':a0_0x18c283(0x2f2),'handouts':'1oT6JPs8vnN7X3w6jUDHxKno0YoIiJmG-','highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x2c7),'id':a0_0x18c283(0x385),'name':a0_0x18c283(0x1d3),'handouts':'1bIyLMvQGovluDnwQe8A1hEUXt-2IwkrR','highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x23a)},{'dept':'MTH','id':a0_0x18c283(0x322),'name':a0_0x18c283(0x314),'handouts':a0_0x18c283(0xfe),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x2c7),'id':a0_0x18c283(0x1fe),'name':a0_0x18c283(0x425),'handouts':a0_0x18c283(0x33b),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x2c7),'id':'MTH404','name':a0_0x18c283(0x399),'handouts':'https://drive.google.com/drive/folders/1FVbuwZYSqisJ6CqwZLaPYDjp5K2p2Wtf','highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x265)},{'dept':a0_0x18c283(0x2c7),'id':a0_0x18c283(0x366),'name':a0_0x18c283(0x36f),'handouts':a0_0x18c283(0x2dc),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':'MTH','id':a0_0x18c283(0x286),'name':a0_0x18c283(0x168),'handouts':a0_0x18c283(0x175),'highlighted':a0_0x18c283(0x1ff),'ppt':a0_0x18c283(0x1b9)},{'dept':'MTH','id':'MTH601','name':a0_0x18c283(0x453),'handouts':a0_0x18c283(0x108),'highlighted':'https://drive.google.com/drive/folders/1wt4qCZGrPox6hB3hF8YZg4aU5sxU6iiE','ppt':'https://drive.google.com/drive/folders/1tzNrMhTKXoy7u1s_-CHNAwO2kstXN9Yd'},{'dept':a0_0x18c283(0x2c7),'id':a0_0x18c283(0x2bb),'name':a0_0x18c283(0x42f),'handouts':a0_0x18c283(0x223),'highlighted':a0_0x18c283(0x266),'ppt':'not_found.html'},{'dept':a0_0x18c283(0x2c7),'id':a0_0x18c283(0x13a),'name':'Real\x20Analysis\x20I','handouts':a0_0x18c283(0x261),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x44e)},{'dept':a0_0x18c283(0x2c7),'id':a0_0x18c283(0x35f),'name':a0_0x18c283(0x2c9),'handouts':'1NYn3BleFvdmeADuP7QbeiSNeMJr8Qg27','highlighted':a0_0x18c283(0x39d),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x2c7),'id':a0_0x18c283(0x3d2),'name':a0_0x18c283(0x174),'handouts':'1bp9bqWyWaOv3thJe6H01WwSBYzDsEZwZ','highlighted':a0_0x18c283(0x2cf),'ppt':'not_found.html'},{'dept':a0_0x18c283(0x2c7),'id':a0_0x18c283(0x2fa),'name':a0_0x18c283(0x226),'handouts':a0_0x18c283(0x2f0),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x2c7),'id':a0_0x18c283(0x148),'name':a0_0x18c283(0x3cd),'handouts':a0_0x18c283(0x172),'highlighted':'https://drive.google.com/file/d/1BTCgeiH019jhMOtrkLIS8jXk5AiI5qYp/view','ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x2c7),'id':a0_0x18c283(0x23f),'name':a0_0x18c283(0x1a4),'handouts':a0_0x18c283(0x1c2),'highlighted':a0_0x18c283(0x1e4),'ppt':'not_found.html'},{'dept':a0_0x18c283(0x2c7),'id':a0_0x18c283(0x27d),'name':a0_0x18c283(0x18f),'handouts':a0_0x18c283(0x2f7),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x2c7),'id':'MTH642','name':a0_0x18c283(0x1fc),'handouts':'1bNUXyPtIclUnhmpYGQYkPQVzfRdJE_u6','highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x1af)},{'dept':a0_0x18c283(0x2c7),'id':a0_0x18c283(0x273),'name':a0_0x18c283(0x3fd),'handouts':'1y4IGTxIYA_36gC2TNcwW7-8j1wf5NQHg','highlighted':'not_found.html','ppt':a0_0x18c283(0x2cf)},{'dept':'MTH','id':'MTH644','name':a0_0x18c283(0x41f),'handouts':'https://drive.google.com/drive/folders/1o_gi0eEVlXx9IX-Oh2iAq1nlQVFGSFoH','highlighted':'https://drive.google.com/drive/folders/1o_gi0eEVlXx9IX-Oh2iAq1nlQVFGSFoH','ppt':a0_0x18c283(0x2e3)},{'dept':a0_0x18c283(0x2c7),'id':'MTH645','name':a0_0x18c283(0x2ca),'handouts':'https://drive.google.com/file/d/1SqJTTptjtSAkgHcL46Fp9SNf8ZQqXjDj/view','highlighted':'https://drive.google.com/file/d/1E-JWxJldmW9z2wyN7JJkMOmHKDj30ioK/view','ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x35b),'id':a0_0x18c283(0x310),'name':a0_0x18c283(0x1fb),'handouts':a0_0x18c283(0x21e),'highlighted':'https://drive.google.com/uc?export=download&id=1dsDu0e1eZ9qBpHwKSFnbdkXKTelmORvr','ppt':a0_0x18c283(0x2cf)},{'dept':'PAK','id':'PAK302','name':a0_0x18c283(0x2cd),'handouts':a0_0x18c283(0x2c4),'highlighted':'https://drive.google.com/uc?export=download&id=1GngtRDNMZD-BoTdDuyQFhL5_KcYZZY8o','ppt':a0_0x18c283(0x3d4)},{'dept':a0_0x18c283(0x35b),'id':'PAK522','name':'Constitution\x20of\x20Pakistan','handouts':'https://drive.google.com/file/d/1g54JjYwahrLx7y7veK64I1k4G6yvIOz0','highlighted':'not_found.html','ppt':a0_0x18c283(0x3d4)},{'dept':'PHY','id':a0_0x18c283(0x25c),'name':a0_0x18c283(0x1c7),'handouts':'13ySMA-hyCDwbqN9IsBpJBBgXx_FIVUsj','highlighted':'https://drive.google.com/drive/folders/14nRtY5xqD66Zpp1Wm2Ig_V-36PMkcyuK','ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x24f),'id':'PHY301','name':a0_0x18c283(0x127),'handouts':a0_0x18c283(0x115),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x20c),'id':a0_0x18c283(0x187),'name':a0_0x18c283(0x2cc),'handouts':a0_0x18c283(0x1de),'highlighted':a0_0x18c283(0x2cf),'ppt':'not_found.html'},{'dept':a0_0x18c283(0x20c),'id':a0_0x18c283(0x306),'name':'Public\x20International\x20Law','handouts':'17Hg0fFhLx7XY39fFaIW5Uj9NN1tLWa5A','highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x364),'id':a0_0x18c283(0x2e9),'name':a0_0x18c283(0x36e),'handouts':'1KftueKRiUmot03y5gjhBggv5OeBMiS4p','highlighted':a0_0x18c283(0x3cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x364),'id':a0_0x18c283(0x294),'name':'Clinical\x20Psychology','handouts':'1x7aywbLIyL1irh_EChT5wCM0EXS5_iq_','highlighted':'not_found.html','ppt':a0_0x18c283(0x2cf)},{'dept':'PSY','id':a0_0x18c283(0x2e7),'name':a0_0x18c283(0x3e9),'handouts':a0_0x18c283(0x33a),'highlighted':'not_found.html','ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x364),'id':'PSY403','name':a0_0x18c283(0x38c),'handouts':'1o0YbM2KEOqqQyKWuS0d781QPZWF_zR0f','highlighted':a0_0x18c283(0x2cf),'ppt':'not_found.html'},{'dept':a0_0x18c283(0x364),'id':'PSY404','name':a0_0x18c283(0x362),'handouts':a0_0x18c283(0x390),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x364),'id':'PSY405','name':a0_0x18c283(0x460),'handouts':a0_0x18c283(0x199),'highlighted':a0_0x18c283(0x2cf),'ppt':'not_found.html'},{'dept':'PSY','id':a0_0x18c283(0x228),'name':a0_0x18c283(0x167),'handouts':'1sfziOmUXQDU_ioJbif5qG9wZvMvp8fqF','highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x364),'id':a0_0x18c283(0x30c),'name':a0_0x18c283(0x21a),'handouts':a0_0x18c283(0x3ad),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x364),'id':a0_0x18c283(0x3f1),'name':'Health\x20Psychology','handouts':a0_0x18c283(0x17e),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x364),'id':a0_0x18c283(0x2aa),'name':a0_0x18c283(0x34a),'handouts':'1WzumRqicUY9_Mj4wtl2BlWDizhdhAowd','highlighted':'not_found.html','ppt':a0_0x18c283(0x2cf)},{'dept':'PSY','id':'PSY502','name':'History\x20&\x20Systems\x20of\x20Psychology','handouts':'1Vf4QpXlZ8SqWzDlKNuJVjNJGlnvCydDM','highlighted':a0_0x18c283(0x2cf),'ppt':'not_found.html'},{'dept':a0_0x18c283(0x364),'id':a0_0x18c283(0x1f4),'name':'Cognitive\x20Psychology','handouts':a0_0x18c283(0x433),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':'PSY','id':'PSY505','name':a0_0x18c283(0x2e8),'handouts':a0_0x18c283(0x35c),'highlighted':'not_found.html','ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x364),'id':'PSY510','name':a0_0x18c283(0x352),'handouts':a0_0x18c283(0x44d),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x364),'id':a0_0x18c283(0x182),'name':a0_0x18c283(0x1f5),'handouts':a0_0x18c283(0x41d),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x364),'id':'PSY512','name':'Gender\x20Issues\x20in\x20Psychology','handouts':a0_0x18c283(0x30b),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x364),'id':'PSY513','name':'Forensic\x20Psychology','handouts':'1H4lPxNVUBFs3sBKSbij_urUbC56Yk9IW','highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x364),'id':a0_0x18c283(0x2c6),'name':'Consumer\x20Psychology','handouts':a0_0x18c283(0x26c),'highlighted':a0_0x18c283(0x2cf),'ppt':'not_found.html'},{'dept':'PSY','id':a0_0x18c283(0x136),'name':a0_0x18c283(0x304),'handouts':a0_0x18c283(0x2cb),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x364),'id':a0_0x18c283(0x3a2),'name':a0_0x18c283(0x29a),'handouts':a0_0x18c283(0x3a7),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x364),'id':a0_0x18c283(0x113),'name':a0_0x18c283(0x393),'handouts':a0_0x18c283(0x18c),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x364),'id':a0_0x18c283(0x2a9),'name':a0_0x18c283(0x35e),'handouts':'1BK-MjEkVl2piDZVGzB0OHoXGm35OQ9vq','highlighted':'not_found.html','ppt':'not_found.html'},{'dept':'SOC','id':a0_0x18c283(0x3fc),'name':a0_0x18c283(0x1f9),'handouts':a0_0x18c283(0x160),'highlighted':'https://drive.google.com/drive/folders/1JtrxBw-TC9GdMKd4qiVHdeDLFbs_x7x6','ppt':a0_0x18c283(0x2cf)},{'dept':'SOC','id':a0_0x18c283(0x1f8),'name':'Social\x20Statistics','handouts':a0_0x18c283(0x1e9),'highlighted':a0_0x18c283(0x1e9),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x216),'id':a0_0x18c283(0x20b),'name':'Introduction\x20to\x20Social\x20Work','handouts':a0_0x18c283(0x2b4),'highlighted':a0_0x18c283(0x26e),'ppt':'not_found.html'},{'dept':'SOC','id':'SOC302','name':a0_0x18c283(0x338),'handouts':a0_0x18c283(0x39a),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x216),'id':a0_0x18c283(0x295),'name':a0_0x18c283(0x3b4),'handouts':'https://drive.google.com/drive/folders/12NeXAHeT3LYYhMz5JZq_OvSzbvNYbLO0','highlighted':a0_0x18c283(0x197),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x216),'id':a0_0x18c283(0x195),'name':a0_0x18c283(0x25e),'handouts':a0_0x18c283(0x30f),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x216),'id':'SOC403','name':'Gender\x20Studies','handouts':'1PTSvuKRpJLQ2AbXs8gV_-m49iNCAllYR','highlighted':a0_0x18c283(0x2cf),'ppt':'not_found.html'},{'dept':a0_0x18c283(0x216),'id':a0_0x18c283(0x36a),'name':a0_0x18c283(0x154),'handouts':a0_0x18c283(0x176),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':'SOC','id':a0_0x18c283(0x145),'name':'Social\x20Policy\x20and\x20Governance','handouts':'1IcsYHmjtOF_-aZuQoi-UrrM2_Y7fZihI','highlighted':a0_0x18c283(0x451),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x216),'id':a0_0x18c283(0x44b),'name':a0_0x18c283(0x221),'handouts':a0_0x18c283(0x391),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x216),'id':a0_0x18c283(0x14f),'name':a0_0x18c283(0x42a),'handouts':'13MmN5TbLPBlBDIE_h0vB7bBt044tAI2P','highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':'SOC','id':a0_0x18c283(0x150),'name':a0_0x18c283(0x339),'handouts':a0_0x18c283(0x28e),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x156),'id':a0_0x18c283(0x111),'name':'General\x20Mathematics\x20and\x20Biostatistics','handouts':a0_0x18c283(0x131),'highlighted':'not_found.html','ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x156),'id':a0_0x18c283(0x39b),'name':'Statistics\x20and\x20Probability','handouts':a0_0x18c283(0x1dc),'highlighted':a0_0x18c283(0x301),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x156),'id':a0_0x18c283(0x39c),'name':'Regression\x20and\x20Correlation\x20Analysis','handouts':a0_0x18c283(0xff),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x156),'id':'STA406','name':a0_0x18c283(0x34c),'handouts':a0_0x18c283(0x3dd),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x156),'id':'STA630','name':a0_0x18c283(0x1c8),'handouts':a0_0x18c283(0x15b),'highlighted':a0_0x18c283(0x10b),'ppt':a0_0x18c283(0x10b)},{'dept':a0_0x18c283(0x156),'id':a0_0x18c283(0x2b8),'name':a0_0x18c283(0x186),'handouts':a0_0x18c283(0x384),'highlighted':a0_0x18c283(0x2cf),'ppt':'not_found.html'},{'dept':'STA','id':a0_0x18c283(0x10e),'name':a0_0x18c283(0x1d7),'handouts':'1G8fzY4I3qcLMdEteKN9GjK5xyb8CI0J2','highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x156),'id':a0_0x18c283(0x41b),'name':'Statistical\x20Packages\x20Applications','handouts':a0_0x18c283(0x353),'highlighted':'not_found.html','ppt':a0_0x18c283(0x218)},{'dept':a0_0x18c283(0x156),'id':a0_0x18c283(0x423),'name':'Probability\x20&\x20Statistics','handouts':a0_0x18c283(0x152),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x29d)},{'dept':a0_0x18c283(0x26d),'id':a0_0x18c283(0x1ab),'name':'Developmental\x20Biology','handouts':'1bghNPSuarGw5TFbYBqwCyUlrBhJ9imRx','highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2cf)},{'dept':'ZOO','id':'ZOO503','name':'Zoogeography\x20and\x20Paleontology','handouts':a0_0x18c283(0x37f),'highlighted':'not_found.html','ppt':a0_0x18c283(0x440)},{'dept':a0_0x18c283(0x26d),'id':a0_0x18c283(0x3da),'name':a0_0x18c283(0x2b2),'handouts':'1Utz3Ere988EezS-7-x5s5Vl9I9c2Cshr','highlighted':'not_found.html','ppt':a0_0x18c283(0x420)},{'dept':a0_0x18c283(0x26d),'id':a0_0x18c283(0x3fa),'name':a0_0x18c283(0x2d6),'handouts':a0_0x18c283(0x206),'highlighted':a0_0x18c283(0x375),'ppt':a0_0x18c283(0x400)},{'dept':a0_0x18c283(0x26d),'id':a0_0x18c283(0x201),'name':a0_0x18c283(0x169),'handouts':a0_0x18c283(0x19c),'highlighted':a0_0x18c283(0x2cf),'ppt':'not_found.html'},{'dept':'ZOO','id':a0_0x18c283(0x449),'name':'Applied\x20Entomology\x20and\x20Pest\x20Management','handouts':a0_0x18c283(0x37d),'highlighted':'not_found.html','ppt':a0_0x18c283(0x2cf)},{'dept':a0_0x18c283(0x26d),'id':a0_0x18c283(0x368),'name':a0_0x18c283(0x40d),'handouts':'1Ki2LMQEM8FtX6i0RndT3TWTCZOabLXzP','highlighted':a0_0x18c283(0x2cf),'ppt':'not_found.html'},{'dept':'BT','id':a0_0x18c283(0x3c0),'name':a0_0x18c283(0x3a1),'handouts':a0_0x18c283(0x307),'highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x162)},{'dept':'BT','id':a0_0x18c283(0x3a9),'name':a0_0x18c283(0x441),'handouts':a0_0x18c283(0x341),'highlighted':'https://drive.google.com/file/d/1J4F0CE3mv8d8DEcgQXP1b9oWT_56dSs8','ppt':a0_0x18c283(0x457)},{'dept':'BT','id':'BT601','name':a0_0x18c283(0x281),'handouts':a0_0x18c283(0x3c6),'highlighted':a0_0x18c283(0x21b),'ppt':a0_0x18c283(0x2ad)},{'dept':'BT','id':a0_0x18c283(0x193),'name':a0_0x18c283(0x31e),'handouts':'1KIvLsClMwywjPJqtFYT6EgrynwNojm9y','highlighted':a0_0x18c283(0x2cf),'ppt':a0_0x18c283(0x2b1)}];
+// subject-data.js
+
+const deptNames = {
+    "ACC": "ACC - Accounting",
+    "BIF": "BIF - Bioinformatics",
+    "BIO": "BIO - Biological Sciences",
+    "BT": "BT - Biotechnology",
+    "BNK": "BNK - Banking & Finance",
+    "CHE": "CHE - Chemistry",
+    "CS": "CS - Computer Science & IT",
+    "ECO": "ECO - Economics",
+    "EDU": "EDU - Education",
+    "ENG": "ENG - English",
+    "FIN": "FIN - Finance",
+    "GSC": "GSC - General Science",
+    "ISL": "ISL - Islamic Studies",
+    "MCM": "MCM - Mass Communication",
+    "MGT": "MGT - Management",
+    "MKT": "MKT - Marketing",
+    "MTH": "MTH - Mathematics",
+    "PAK": "PAK - Pakistan Studies",
+    "PHY": "PHY - Physics",
+    "PSC": "PSC - Political Science",
+    "PSY": "PSY - Psychology",
+    "SOC": "SOC - Sociology",
+    "STA": "STA - Statistics",
+    "ZOO": "ZOO - Zoology",
+
+};
+
+const deptColors = {
+    "ALL": "bg-yellow-400 text-slate-950 shadow-md shadow-yellow-400/20",
+    "ACC": "bg-amber-600 text-white shadow-md shadow-amber-600/20",
+    "BIO": "bg-green-600 text-white shadow-md shadow-green-600/20",
+    "CS": "bg-blue-600 text-white shadow-md shadow-blue-600/20",
+    "EDU": "bg-purple-600 text-white shadow-md shadow-purple-600/20",
+    "ENG": "bg-sky-600 text-white shadow-md shadow-sky-600/20",
+    "ISL": "bg-teal-600 text-white shadow-md shadow-teal-600/20",
+    "MGT": "bg-emerald-600 text-white shadow-md shadow-emerald-600/20",
+    "MTH": "bg-indigo-600 text-white shadow-md shadow-indigo-600/20",
+    "PHY": "bg-rose-600 text-white shadow-md shadow-rose-600/20"
+};
+
+const activeFilterTabs = ["ALL"];
+
+// Master Subjects Database Array
+const subjectsData = [
+    // ACC Dept
+    {
+        dept: "ACC",
+        id: "ACC311",
+        name: "Fundamentals of Auditing",
+        handouts: "1Ahnl52sXEdYoanBECozNyRuM3kj0YtnI",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "ACC",
+        id: "ACC501",
+        name: "Business Finance",
+        handouts: "1TmrMSbWi-ajJ6H2yVrtgtbPQgak8EuaT",
+        highlighted: "https://drive.google.com/drive/folders/1AR6yWtbM5zb0reuR2ARakUYq1auREp8n",
+        ppt: "not_found.html"
+    },
+
+    // BIF Dept
+    {
+        dept: "BIF",
+        id: "BIF101",
+        name: "Introduction to Bioinformatics",
+        handouts: "1izvvRLUxqO_F5zgJh61r0dGUdNv4efkH",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "BIF",
+        id: "BIF401",
+        name: "Bioinformatics-I",
+        handouts: "1ICxNTuPrBnrB6W61l70q_zqmzKk475OH",
+        highlighted: "https://drive.google.com/file/d/1bqtF548LaFmD8cn4Ma5OtfJDLf5LFYqi/view",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "BIF",
+        id: "BIF402",
+        name: "Ethical and Legal Issues",
+        handouts: "1W9c4s3Rv3JTcYEcvROHD_Gi-rEccMvVe",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "BIF",
+        id: "BIF501",
+        name: "Bioinformatics-II",
+        handouts: "https://drive.google.com/file/d/1JQXyrUPdEHJfg1kY55DNH31Q6Jmsqb4M/view",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "BIF",
+        id: "BIF601",
+        name: "Bioinformatics Computing I",
+        handouts: "https://drive.google.com/file/d/1LUKZd85GCryh-udgX8g4jXzu6b1Kf1A3/view",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "BIF",
+        id: "BIF602",
+        name: "Bioinformatics Computing II",
+        handouts: "https://drive.google.com/file/d/13Ew9qhg_aw5TWL70Y7W9qjMXARUZuWby/view",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "BIF",
+        id: "BIF731",
+        name: "Advanced Bioinformatics",
+        handouts: "https://drive.google.com/file/d/11fdoBEP8C9AQNoYHlNnnPwTVU9EC2pH0/view",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+
+    // BIO Dept
+    {
+        dept: "BIO",
+        id: "BIO101",
+        name: "Basic I-Biology",
+        handouts: "1RuXdIVS8UpbcCoGeZw6MUaHTxeMh5JVp",
+        highlighted: "https://drive.google.com/uc?export=download&id=1RuXdIVS8UpbcCoGeZw6MUaHTxeMh5JVp",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "BIO",
+        id: "BIO102",
+        name: "Basic II-Chemistry",
+        handouts: "",
+        highlighted: "",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "BIO",
+        id: "BIO201",
+        name: "Cell Biology Introduction",
+        handouts: "1I2f-91LqPNjb8-jw2Sl1AFF6YspL9WeR",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "BIO",
+        id: "BIO203",
+        name: "Methods in Molecular Biology",
+        handouts: "",
+        highlighted: "",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "BIO",
+        id: "BIO202 | BIO504T",
+        name: "Biochemistry-I",
+        handouts: "1Gmfxa4S79opcDLIt_RtqM7-Y15kFWuP9",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "BIO",
+        id: "BIO204",
+        name: "Principles of Biochemical Engineering",
+        handouts: "",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "BIO",
+        id: "BIO301 | BIO505T",
+        name: "Essentials of Genetics",
+        handouts: "1SANg7-1aRxPf_hqS4ZOkPzcy73hsW7HG",
+        highlighted: "https://drive.google.com/file/d/1j5A-Pff-r4m7LSh_48oZ3NlC_Rp-XG-i",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "BIO",
+        id: "BIO302",
+        name: "Molecular Biology",
+        handouts: "1OI4Q74i9kbuIpSmofxIcnlTZeLU2O03F",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "BIO",
+        id: "BIO303",
+        name: "Biochemistry-II (Advanced)",
+        handouts: "1U5WNr4CN0ypfgDivIwk6TVkVGqmHucCy",
+        highlighted: "#",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "BIO",
+        id: "BIO401",
+        name: "Introduction to Bio Statistics",
+        handouts: "1Nj7tUV3vKx6XoIKpdyFFaihCmdKaV",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "BIO",
+        id: "BIO502",
+        name: "Genomics",
+        handouts: "1-y_mlFNv9l92YV_4krz_0mXZWzGm41gU",
+        highlighted: "#",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "BIO",
+        id: "BIO503",
+        name: "Biological Physics",
+        handouts: "1pdvhl0JosYSmZ-kHJ4z65Ds3Fpfspkn1",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "BIO",
+        id: "BIO5105",
+        name: "Cell Biology",
+        handouts: "1IcUaj04DJtqfz9MQ7qfHbudokB0Dvh8s",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "BIO",
+        id: "MB502 | BIO731",
+        name: "Molecular Biology",
+        handouts: "1kk_6ADzKx_ycKhpWaTYKlq6N54pqUGKl",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "BIO",
+        id: "BIO732",
+        name: "Genetic Engineering",
+        handouts: "128fKE_YbnxOj2a8H28LH-iZzlu8wToLZ",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+
+    // BNK Dept
+    {
+        dept: "BNK",
+        id: "BNK601",
+        name: "Banking Laws and Practices",
+        handouts: "1iZZA-PoK6-hRTRwnykerZ27qzxa4TipT",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "BNK",
+        id: "BNK603",
+        name: "Consumer Banking",
+        handouts: "1CCkzAj4s4YbjNvsDdx8O0xot0AdM_mrf",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "BNK",
+        id: "BNK604",
+        name: "Management of Financial Institutions",
+        handouts: "120UtiZ5tkUE4_aZbs5oQvJglNb90fcxQ",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "BNK",
+        id: "BNK610",
+        name: "Islamic Banking Practices",
+        handouts: "1pw54rueGW4qMf56J2L3QzRD0oXaHjdKk",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "BNK",
+        id: "BNK612",
+        name: "Financial Jurisprudence in Islam",
+        handouts: "1inriTfPK6PH2eIlIpVH8yP418Ib8QfSR",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+
+
+    // CHE Dept
+    { dept: "CHE", id: "CHE201", name: "Physical Chemistry", handouts: "1RzfMUgqYur8gwT6W_xx8yTsVhkMZfFww", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    // CS Dept
+    { dept: "CS", id: "CS001", name: "Computer Proficiency License", handouts: "https://drive.google.com/file/d/16ImmGYzNg_nmkPBOletb68HzBnFuMIg-/view", highlighted: "1fFxksRZwJT6zGojaQSRPWzxvh6pbctJK", ppt: "not_found.html" },
+    { dept: "CS", id: "CS101", name: "Introduction to Computing", handouts: "1r2xzDmFNQo8M-ffuzdSJ2PAycIz_jaL8", highlighted: "https://drive.google.com/drive/folders/11yMEjOXAJEgGgB3fPW3rQaW3XOqAmyrU", ppt: "not_found.html" },
+    { dept: "CS", id: "CS201", name: "Introduction to Programming", handouts: "1vSW7ajSdV6NkTGfFZuHo8dxE30ZqLtoi", highlighted: "https://drive.google.com/drive/folders/17eM3SAEiCBOyNd-INQsAuqtSFII9AtSv", ppt: "not_found.html" },
+    { dept: "CS", id: "CS202", name: "Fundamentals of Front End Development", handouts: "1pE65qNopOsQcw02A5lLuMSEBYwrT273M", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "CS", id: "CS204", name: "Cyber Law", handouts: "1eIBdHMamhLf03070V8A-jchwjPPIl-R_", highlighted: "https://drive.google.com/drive/folders/1n4q3f68yiAwLZ3A7hjee4vjX3LT_TI1J", ppt: "https://drive.google.com/file/d/1DxtgWkSxmlj9HsfKMVgfgIe_jQtpKKJs/view" },
+    { dept: "CS", id: "CS205", name: "Information Security", handouts: "1LKR2pcbJjOKBYxNdFvrkiz9jNboy-DS6", highlighted: "https://drive.google.com/drive/folders/1bnr8VJETywsgLHY2QVUyrvn9OhYG1oi0", ppt: "https://drive.google.com/file/d/1VyKMDhkOddpa3knFUatD2oHozkZiELca/view" },
+    { dept: "CS", id: "CS301", name: "Data Structures", handouts: "1-N8_ddH9IJF93--pMzhkgqnbEi8lGAi9", highlighted: "https://drive.google.com/drive/folders/1_tTenyQbgHZFSzHSiquiuDVAnrRzvJsG", ppt: "not_found.html" },
+    { dept: "CS", id: "CS302", name: "Digital Logic & Design", handouts: "1vqiH0KUgKwu7AJzEihaUSuxtlx24yEva", highlighted: "https://drive.google.com/drive/folders/1FSRgNfPZgX0A2-VF5Oo5kaF6Ft6zjD_i", ppt: "not_found.html" },
+    { dept: "CS", id: "CS304", name: "Object Oriented Programming", handouts: "1g1Mbm1uBn2JH1eBOkAiEEw0vjf0MAX3-", highlighted: "https://drive.google.com/drive/folders/1dUV6yyxA8dXNYwfBlDmvx3_WmJ5Dxk9-", ppt: "not_found.html" },
+    { dept: "CS", id: "CS311", name: "Web Services Development", handouts: "163fs8TgkKBJGlsvV5GOPMtDwmYxr4eJ7", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "CS", id: "CS312", name: "Database Modeling and Design", handouts: "1nDpK70rA8nB8BwdVtIkyoytyCwiMkA9k", highlighted: "https://drive.google.com/drive/folders/1RwTXw8VVH2AxX1swTkRjASq4HcnkPA9Q", ppt: "not_found.html" },
+    { dept: "CS", id: "CS315", name: "Network Security", handouts: "1b7Fn0ZQLN53xNQUvu_0K5sQaKrrxLEVB", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "CS", id: "CS401", name: "Assembly Language Programming", handouts: "12gXxDYwrV1NABFID-poki8XFO5Nxiski", highlighted: "https://drive.google.com/drive/folders/1srf0YfO45v0VKLfKomu3RdPMSAc2ugoC", ppt: "not_found.html" },
+    { dept: "CS", id: "CS402", name: "Theory of Automata", handouts: "1QO8oKDC2VlqkBuHFBQl6N3tPWM5gXYyX", highlighted: "https://drive.google.com/drive/folders/1SQ_KceBd6QWydWiiIPrBDWSianhFEnK7", ppt: "not_found.html" },
+    { dept: "CS", id: "CS403", name: "Database Management System", handouts: "1dg-c25Zm2AgS2CK7uqv_x3C8xpv--eaU", highlighted: "https://drive.google.com/drive/folders/11VUndHop-gwsTzw87ZByaTrZAzkaUBiT", ppt: "not_found.html" },
+    { dept: "CS", id: "CS405", name: "Oracle 11g Programming", handouts: "1CzvD77mFOE9hixkSWLnRJ1IWK9LqmO2V", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "CS", id: "CS407", name: "Routing and Switching", handouts: "1IX0hiU6r0sVEJPb7lC5Vu2aMaofHV4AA", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "CS", id: "CS408", name: "Human Computer Interaction", handouts: "1XmTpw_7bIwBKQpuAxwzOVhs1ZnU5_3WP", highlighted: "https://drive.google.com/drive/folders/1c2f5kzpGdHlHO3V8NTTBLSbUEq-Nj9R3", ppt: "not_found.html" },
+    { dept: "CS", id: "CS409", name: "Database Administration", handouts: "1R4AKwlAWZbYcRCGCc29zq_TeRmV7WTXF", highlighted: "https://drive.google.com/drive/folders/1L2l5wcJM9qjU0ELtA84UmKlcaNRAkdZ4", ppt: "https://drive.google.com/file/d/1h01zzZbs3fQVMuiY_eDAjxaY8Bxay4mS/view" },
+    { dept: "CS", id: "CS411", name: "Visual Programming", handouts: "1SIssIJkn1P2Dmikm8NmUcxTYd7YxNuCs", highlighted: "https://drive.google.com/drive/folders/1musuJCffN7ckR_5D651khuywOvn5-gL9", ppt: "not_found.html" },
+    { dept: "CS", id: "CS420", name: "Mobile Web Development", handouts: "18m7Y94Irb8UhLX4UZswbU_MeynThFGtG", highlighted: "https://drive.google.com/drive/folders/17zZ-VKwRQc6_VtVBhP-O-DqagtugV6xG", ppt: "not_found.html" },
+    { dept: "CS", id: "CS432", name: "Network Modeling & Simulation", handouts: "1iKIl3ye2_Yz-b43PG-orG9TvK0ok1BBs", highlighted: "https://drive.google.com/drive/folders/1OcFpM6xpn2XmBVFKnIKWP2ypGXr3YjJg", ppt: "not_found.html" },
+    { dept: "CS", id: "CS435", name: "Cloud Computing", handouts: "1xPBbXCqJVxKcGzHUDD32wRrfq25LoKoJ", highlighted: "https://drive.google.com/drive/folders/11719rS7Cak_Lgqe8seSFh8ZPWoI7_ElZ", ppt: "not_found.html" },
+    { dept: "CS", id: "CS442", name: "Introduction to Data Science", handouts: "1WTmy0GMTVjtzwcZELKGxwUHftjteWD4u", highlighted: "not_found.html", ppt: "https://drive.google.com/file/d/1WTmy0GMTVjtzwcZELKGxwUHftjteWD4u" },
+    { dept: "CS", id: "CS501", name: "Advance Computer Architecture", handouts: "1JJ_hMVKPNoJKUcrXsClTLmmcd5fPNUR3", highlighted: "https://drive.google.com/drive/folders/1gccP84wZwW0GvwrUMy6cgKJ2jD8JJgH1", ppt: "not_found.html" },
+    { dept: "CS", id: "CS502", name: "Algorithms Design & Analysis", handouts: "1EiHQLxRkA1Itq5DWA9WlKAHN57erm5tN", highlighted: "https://drive.google.com/drive/folders/163Grrqk28VnJCnR1pxXv8sZiz9Gzv-hY", ppt: "not_found.html" },
+    { dept: "CS", id: "CS504", name: "Software Engineering – I", handouts: "1ta8_GTmXipOw1m-2EqKK9ZBlSiR-kUY3", highlighted: "https://drive.google.com/drive/folders/16vE7_L4Mbu_A8j-s0DHrDXG1ZkyVEDdf", ppt: "not_found.html" },
+    { dept: "CS", id: "CS505", name: "Introduction to Virtualization", handouts: "1XW_ZWG2ypDCeIOpXIOWSi41Shmf76f1t", highlighted: "https://drive.google.com/file/d/1XW_ZWG2ypDCeIOpXIOWSi41Shmf76f1t/view", ppt: "not_found.html" },
+    { dept: "CS", id: "CS506", name: "Web Design and Development", handouts: "1j1gX5aIHHkvpWfLwIMqm4epnJfzxnQAT", highlighted: "https://drive.google.com/drive/folders/1wSIp3R0jmuU6BmuNbNA7pAEJd1xeoM9j", ppt: "not_found.html" },
+    { dept: "CS", id: "CS507", name: "Information System", handouts: "1dlRfeoEE-TFJBXiJUBGSjUqAbtIYVwJI", highlighted: "https://drive.google.com/drive/folders/1PF_DGVRU8PbRHDqZIlr_a6PqoF8n1DZu", ppt: "not_found.html" },
+    { dept: "CS", id: "CS508", name: "Modern Programming Languages", handouts: "1Y5d_uuMseD6glF74yG5YlMskZ8YuSByr", highlighted: "https://drive.google.com/drive/folders/1dLvD79ml76t33JbIHmBqV5e0uj_EhRPY", ppt: "not_found.html" },
+    { dept: "CS", id: "CS510", name: "Software Specification", handouts: "1qAzhhmDfIuUFjZL6m00JfFeX7L9hw4DD", highlighted: "https://drive.google.com/drive/folders/1ipaB1nM4vzTjyop1E2BnnIB8LWDjNndJ", ppt: "not_found.html" },
+    { dept: "CS", id: "CS511", name: "Web Engineering", handouts: "https://drive.google.com/drive/folders/18UbNu8DOBGE7QvV2URaVtBwSbvxDBKKv", highlighted: "https://drive.google.com/drive/folders/18UbNu8DOBGE7QvV2URaVtBwSbvxDBKKv", ppt: "not_found.html" },
+    { dept: "CS", id: "CS601", name: "Data Communication", handouts: "1u_4mNALdFK6uIdN4Ma2O6xCLLXiM3Nn0", highlighted: "https://drive.google.com/drive/folders/1HykBN-oph0dognk6AD7rJvrnapDwR2Zg", ppt: "not_found.html" },
+    { dept: "CS", id: "CS602", name: "Computer Graphics", handouts: "1YGIuo6OJ4c8OJkiKLtmdwwIDPJTo1Mj4", highlighted: "https://drive.google.com/drive/folders/1MmNukuN4Tv97_VBeUnQY9TWHUSYISeBG", ppt: "not_found.html" },
+    { dept: "CS", id: "CS603", name: "Software Architecture", handouts: "not_found.html", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "CS", id: "CS604", name: "Operating System", handouts: "1i9D54AhB1HIVRxofAgStmkgm6Lwq3o3A", highlighted: "https://drive.google.com/drive/folders/1vmQApQohYyycJH1uyiBCaJgplXNgcOiH", ppt: "not_found.html" },
+    { dept: "CS", id: "CS605", name: "Software Engineering-II", handouts: "1d7P0YH1pfMlquLozoXqzzG9JG3-4yUkv", highlighted: "https://drive.google.com/drive/folders/1x-4BbdEhDI9fdDR3haDnnq_yPIkNHnEL", ppt: "not_found.html" },
+    { dept: "CS", id: "CS606", name: "Compiler Construction", handouts: "1Xt8egZ1k4Xw77v9Qr3yM7fk5URHr0z6d", highlighted: "https://drive.google.com/drive/folders/1EqV6c3qP7pzO81vXMWNuC9-vqImMxEV6", ppt: "not_found.html" },
+    { dept: "CS", id: "CS607", name: "Artificial Intelligence", handouts: "1OHbV31CljXEC5jgegd2YKJVpUHNSrYO1", highlighted: "https://drive.google.com/drive/folders/1vTHx7-n1ysQKAqFGarV5wGasEJkgCPS9", ppt: "not_found.html" },
+    { dept: "CS", id: "CS608", name: "Software Verification & Validation", handouts: "1-Ma40JpK1w07pU5kiLatUhGfDpIKWN1m", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "CS", id: "CS609", name: "System Programming", handouts: "1oRUHjRr7HAG_vSW0OKe5zAOloVcoUkS8", highlighted: "https://drive.google.com/drive/folders/1W2GOJ_7UE1zmYkAxu2H3-iEunkQX4VhO", ppt: "not_found.html" },
+    { dept: "CS", id: "CS610", name: "Computer Networks", handouts: "1k6sAGLfKIX2KimMuax9CixTa5htpvc4t", highlighted: "https://drive.google.com/drive/folders/1Gg6SxzxGofXuO0pXp0RigQLPvqRSlbX0", ppt: "https://drive.google.com/file/d/1N45uEer2tyz1_e5KPG8_2IOw_YIzQ9bq/view" },
+    { dept: "CS", id: "CS611", name: "Software Quality Engineering", handouts: "1KsLO-DcPMjByUnqvB7nOn0F8dLKwq43c", highlighted: "https://drive.google.com/file/d/1EjG1UzTlaBG-klp3i5R3yeWKHaJFJWlZ/view", ppt: "not_found.html" },
+    { dept: "CS", id: "CS614", name: "Data Warehousing", handouts: "1HC3LD4j6vlmQJzwyPfcEquMhbAanaZMT", highlighted: "https://drive.google.com/file/d/1bO5q3rlP0MXQoa2UCKfnOpB5fLXiSE-H/view", ppt: "not_found.html" },
+    { dept: "CS", id: "CS615", name: "Software Project Management", handouts: "1JY0_3cGuOmYMfk9eFNCBBEuUMjUCCsPw", highlighted: "https://drive.google.com/drive/folders/1Fx8qlxWioEPQ2Y1wdkRj9hYgEz-cl9t_", ppt: "not_found.html" },
+    { dept: "CS", id: "CS620", name: "Modeling & Simulation", handouts: "https://drive.google.com/drive/folders/1nygHEDjjN49KP3dBX3mWey0T4UrRNn2f", highlighted: "https://drive.google.com/drive/folders/1nygHEDjjN49KP3dBX3mWey0T4UrRNn2f", ppt: "https://drive.google.com/drive/folders/1nygHEDjjN49KP3dBX3mWey0T4UrRNn2f" },
+    { dept: "CS", id: "CS621", name: "Parallel Computing", handouts: "https://drive.google.com/drive/folders/11s7wRV9y4e8S_HVDhTm6M6JnTU1slwz1", highlighted: "https://drive.google.com/drive/folders/11s7wRV9y4e8S_HVDhTm6M6JnTU1slwz1", ppt: "https://drive.google.com/file/d/1dtdKNGNKHPihjqSX5XXXO0Lfas4ORvff/view" },
+    { dept: "CS", id: "CS625", name: "Professional Practices", handouts: "1Vz5a9DZL-G9CFqFhNCanQxuG-mWOrhnQ", highlighted: "https://drive.google.com/drive/folders/1Oq4LwMDZm77JxmEgLnDz4vd8mbhZPcxB", ppt: "not_found.html" },
+    { dept: "CS", id: "CS636", name: "Formal Methods", handouts: "https://drive.google.com/file/d/1VmOj-f1kc_dM8AA9z3hsYDACVdhnTRaO/view", highlighted: "https://drive.google.com/file/d/1QB9xhksVb1ehNYoKUcfNa4zboEtvTsmx/view", ppt: "not_found.html" },
+    { dept: "CS", id: "CS701", name: "Theory of Computation", handouts: "https://drive.google.com/file/d/1Zudg5e6dWlJvTWr7iaLuETq1QllV66Wz/view", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "CS", id: "CS702", name: "Advanced Algorithms", handouts: "https://drive.google.com/file/d/1nUnuYQbble_Mgv3vaSe0OBR5SqMeLwDh/view", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "CS", id: "CS704", name: "Advanced Architecture", handouts: "https://drive.google.com/file/d/1-cxt4MVCQQDJen7_f6N2-RK20otcNHVY/view", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "CS", id: "CS711", name: "Software Design", handouts: "https://drive.google.com/file/d/1uLSyo_nEPiwF3ReMOS-LAxL4M02Ex-Ep/view", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "CS", id: "CS718", name: "Wireless Networks", handouts: "https://drive.google.com/file/d/1FljAxEkI6OUbRHTLrC04A6Ws5bGDkmxP/view", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "CS", id: "CS724", name: "Software process Improvement", handouts: "https://drive.google.com/file/d/1k65C8GeBAPg-g2l8c1zwZHxtpHdIu6zA/view", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "CS", id: "CS726", name: "Information Retrieval", handouts: "https://drive.google.com/file/d/15ObB0_ZbuV7QGVnUXI_xLzAfYnHKnDsN/view", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    // ECO Dept
+    { dept: "ECO", id: "ECOO401", name: "Introduction to Economics", handouts: "1k6g0-FyKZXSXWL7n8_OZ2z6d0nNDDU8v", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "ECO", id: "ECOO402", name: "Micro Economics", handouts: "1bp-P7uBkLTAWdXoL7eYpQABbidSvVZx7", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "ECO", id: "ECOO403", name: "Macroeconomics", handouts: "1jacZ_RiPspsAnr7WiMS1kQG9vW9rNMXU", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "ECO", id: "ECOO404", name: "Managerial Economics", handouts: "1fHgn90v0tSLPXzCCQn5UYlkKT_KNWChI", highlighted: "", ppt: "not_found.html" },
+    { dept: "ECO", id: "ECOO501", name: "Development Economics", handouts: "1mkmEPQSHjbfDRiuAbWs41WGomMa5EYnd", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "ECO", id: "ECOO601", name: "Business Econometrics", handouts: "10tripUcXSmNUd6RY4_HMSQs0zt_N9RnQ", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "ECO", id: "ECOO605", name: "Financial Economics", handouts: "14lReE9BHvjAfdsb6NKekCxamI_KXdr7A", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "ECO", id: "ECOO606", name: "Mathematical Economics I", handouts: "101EgC8db79ADrBwesMiNAVbkhtDBvHq3", highlighted: "https://drive.google.com/file/d/1OOlw7mvtHLubOLbLIl4-rJ0b26U-Hh9m/view", ppt: "not_found.html" },
+    { dept: "ECO", id: "ECOO607", name: "Mathematical Economics II", handouts: "19NVxmGljS7K8dvsNzVzL1fi7Yho3eTY_", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "ECO", id: "ECOO610", name: "Issues in Pakistan Economy", handouts: "1fxo9C0g007zlfEMVLlYe8aBUkaPFduzS", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "ECO", id: "ECOO612", name: "Population Economics", handouts: "1cwNQJccpZkqNa-vjDgFKq5pr2zJv4Ov7", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    // EDU Dept
+    { dept: "EDU", id: "EDU101", name: "Foundations of Education", handouts: "16TkwNibadi8kOa8tCb37-2qKRG4LYe1m", highlighted: "https://drive.google.com/drive/folders/1S1YV3HM_I78IMV49lwszvkWHXS73MG-r", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU201", name: "Learning Theories", handouts: "1vSbeTvhyMzu-hVVEY29wm1nymOgHJwCd", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU301", name: "General Methods of Teaching", handouts: "1qjYsRGNDRsYkAFc1Aliiute3MNBrJzk_", highlighted: "https://drive.google.com/uc?export=download&id=1cBvfSv7-WmtXnc4KF9no-sNjf5fjXpal", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU302", name: "Human Development and Learning", handouts: "1iVICWuAadFOQu7lTnxPsX2rWx9QC_cNI", highlighted: "https://drive.google.com/uc?export=download&id=1wGFl8kZVtHdAagCz2Vpg5SV92QbosDjg", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU303", name: "Child Development", handouts: "1tbqS12WTcflnXe9Fqwzjru0qSi6kmqWS", highlighted: "https://drive.google.com/uc?export=download&id=15x_J4I-UBjA47ttUik6VSwNYJp1X93k0", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU304", name: "Student Guidance and Counselling", handouts: "1BjI_cNPjWjXqyLz9acn5oy8h8F20Ibi9", highlighted: "https://drive.google.com/drive/folders/1_jVVldSs-MPQL5tjgaK7x7EpMB50g49g?usp=drive_link", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU305", name: "Classroom Management", handouts: "1WcFzujXupwGT_OdeEP3yScWHI7XQIb9x", highlighted: "https://drive.google.com/uc?export=download&id=12m6mLNY_2FmoHfcItix4FnE2NPvzTtu7", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU401", name: "Contemporary Issues and Trends in Education", handouts: "https://drive.google.com/drive/folders/1Ep9MyNfPLdc_MY_hcpWUQLRhwDwgzXJ6?usp=drive_link", highlighted: "https://drive.google.com/drive/folders/1cAuOnkYUA4WeMvLPNWwY2PXDv1tukM6w", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU402", name: "Curriculum Development", handouts: "1MFe5sjrAkxi4mdXc-pZg_ktHRbKNBmA2", highlighted: "https://drive.google.com/file/d/1ZXAlhlnM8y4nYxwZA4Ctu8fFD-gqcV2G", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU403", name: "Art Craft and Calligraphy", handouts: "1AXGjmKM05qhhEa_evIQBwondFsFFWabl", highlighted: "https://drive.google.com/drive/folders/1eWM51s-Lm4KDEvNxSDIgjz2qVvSGh5m8?usp=drive_link", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU404", name: "Classroom Testing and Evaluation", handouts: "1pG-0J2yVVLrC5tyW5_YYHzg09a5jqecx", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU405", name: "Classroom Assessment", handouts: "1P7AH_i9IhQRTj6vGN8qnAJoGS_Jn-lZn", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU406", name: "Critical Thinking and Reflective Practices", handouts: "1gVmg8FZve-O5eq2voQYly1R6aTEQYxtZ", highlighted: "https://drive.google.com/drive/folders/18uM7iNSIkpYcM5jM0ssWNM5w2ka2wjiA", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU409", name: "Teaching of Literacy and Language", handouts: "19xsBF7HTowCt1wKo32Kusi7bv4aaPIe1", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU410", name: "Teaching of Literacy Skills", handouts: "1VWlAXDj8oc7bO3ypd5CMldz6yLRUUw05", highlighted: "1EGBtRll9mxglKWaguGjwBLZg3F958SSQ", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU411", name: "تدریس زبانِ اردو", handouts: "1Qim0_5j4HqkQ-Ul_4Zl4edAS5wIFHcHX", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU430", name: "Information Technology in Education", handouts: "183shV9Kqt2XAbA-ODD9p54-pGBaGXUK8", highlighted: "https://drive.google.com/drive/folders/1UE-bw2t_NdyZw2dBWKHaNWPg6RJZjtRp", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU431", name: "Test Development and Evaluation", handouts: "1RddK8C9IwyMkgLzuzZzWam4d0njbSrBX", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU433", name: "Professionalism in Teaching", handouts: "1xlCoqSI2WmYch0sYZy31vuCfSx0fvomZ", highlighted: "https://drive.google.com/file/d/1OOmgMih5mV327zZmYRbFoS9IpwdnxLjJ", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU501", name: "School Community and Teacher", handouts: "1VxnBoe3zdzfbpbyBtOi44vH0m38mktns", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU505", name: "Educational Development in Pakistan", handouts: "1TpduwOYeY7WKYfWzE4E2MpSqlBF-2SUw", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU510", name: "Teaching of Mathematics", handouts: "16u_3uP83X87PP3GlB-Ff7PMSiCoTlIqc", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU512", name: "Teaching of Islamic Studies", handouts: "1M6WijWM_1B1syGQzaQ140_jSViGtd7u4", highlighted: "1sDREUxTJ0XAxLCWwpHxI7i8h2_-kwZxL", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU515", name: "Teaching of Geography", handouts: "1oH_dyHZtMv1Cqo8vnWD5xhuGb8uFxp7L", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU516", name: "Teaching of English", handouts: "1Nq3cZE5viN2nl7iTZvnicmBIopFIwbze", highlighted: "https://drive.google.com/drive/folders/1ne4YCe8JbSjPHBkAO4WPinEKHf_oROhm", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU601", name: "Philosophy of Education", handouts: "18g6sURD5X9lKMqbZomIGpjaPdZVxf1W7", highlighted: "https://drive.google.com/file/d/1KpRpksnDAT4Ol5Wzko0yZkGu7dv_2GPr", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU602", name: "Educational Leadership and Management", handouts: "1i0iKhCFc1Pcbo2j6maApkUnWwlRc9hlK", highlighted: "https://drive.google.com/file/d/1hB7cMGqULR2BLqWL8w1hP5o8pW0HNCuc", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU603", name: "Educational Governance: Policy & Practice", handouts: "1xW4153QiFU2bqQIIKaTAa1h8Z4shJrlp", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU604", name: "Comparative Education", handouts: "11X3zCXRGKKMhNIENDzdraaY16piCw0MP", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU654", name: "Addressing Problems of Learning through Pedagogy & Technology", handouts: "1MnEBNPhSEYZGJ3gcBDq8QQhKGxP9OEf_", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "EDU", id: "EDU712", name: "Quantitative Research Methods", handouts: "1myBcCbCqg_lll6f8hLTw_ptFAXRFxeFp", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    // ENG Dept
+    { dept: "ENG", id: "ENG001", name: "Elementary English", handouts: "1EZ9mSH4NMZw0Ea7tDJK1g5g3iiurQRnj", highlighted: "not_found.html" },
+
+    { dept: "ENG", id: "ENG101", name: "English Comprehension", handouts: "1oUU7yD_761Y62eiuj1KOkzYA6sJyF65H", highlighted: "https://drive.google.com/drive/folders/1II6te3MZQUHwLo0_ERTPfHPiFqF-U057" },
+
+    { dept: "ENG", id: "ENG201", name: "Business and Technical English", handouts: "18uuwE2AZns7YHZPJJPTplU0ktgvxUGQZ", highlighted: "https://drive.google.com/drive/folders/1DMKOzXB76VtRnMQUFrrnQw0pPBN-0lAM" },
+
+    { dept: "ENG", id: "ENG301", name: "Business Communication", handouts: "1wQ6ge7H2zGNqq6-ZagyUoXAl4uqDmA-3", highlighted: "https://drive.google.com/drive/folders/1r1kbCyJ1t1TcdgpcUhHKib6MJ8m8axaZ" },
+
+    { dept: "ENG", id: "ENG501", name: "History of English Language", handouts: "1cvUGCYh2SXjC-nii3P78VPRBmG08s70Q", highlighted: "https://drive.google.com/drive/folders/1lugzC5sWzgancnWbgY1Ydi5Xe74uGA2C" },
+
+    { dept: "ENG", id: "ENG502", name: "Introduction to Linguistics", handouts: "1em2YBMIISiEC-mnp2EMtYLeJhnvH-mMr", highlighted: "https://drive.google.com/drive/folders/1oHho4dtGnZxTGGwLNX0_8gCYFo_8Bp9y" },
+
+    { dept: "ENG", id: "ENG503", name: "Introduction to ELT", handouts: "1lrhXGXIKRqR-KYOHSrHwZqwd3gWOSM56", highlighted: "https://drive.google.com/drive/folders/1gdAGCcTvJAwj55a6eg8L0659IUfSsNo5" },
+
+    { dept: "ENG", id: "ENG504", name: "Second Language Acquisition", handouts: "1XcHxPNhibM677cLYuNl8wRgBSTDusFlS", highlighted: "https://drive.google.com/drive/folders/1c-wqy0d2RyWbjeAo53Wt7U0QhwLbfIfy" },
+
+    { dept: "ENG", id: "ENG505", name: "Language Learning Theories", handouts: "1YACzWuKyCyagVDQmBLmo0OVEux3abmEN", highlighted: "https://drive.google.com/drive/folders/1OsFpSYlg5pKGTVa-HlvH1ARM5-RsrkzH" },
+
+    { dept: "ENG", id: "ENG506", name: "World Englishes", handouts: "1taS0axoOsedpU163k8fGhAqxeoc3hp34", highlighted: "https://drive.google.com/drive/folders/1RUjVCekUXBLHp2vjLzfnAQJectQG7bBP" },
+
+    { dept: "ENG", id: "ENG507", name: "Phonetics and Phonology", handouts: "1dp_rlmSJoVMNqm4e1Lqto4_OVg2Nseki", highlighted: "https://drive.google.com/drive/folders/130yIam2ZmVd73Ass4YjAXQ4mbnJrEA2O" },
+
+    { dept: "ENG", id: "ENG508", name: "Semantics and Pragmatics", handouts: "1l82Ju8jhNWaa2SQFVqYZAZq1J-n2R_Ly", highlighted: "https://drive.google.com/drive/folders/1nggruhu0oWrYJH73Fzyu98ZPv6L0JpUk" },
+
+    { dept: "ENG", id: "ENG509", name: "Morphology and Syntax", handouts: "1fAx8GEYUulT-Tgong3185frwtgMnySsl", highlighted: "https://drive.google.com/drive/folders/1L4SDEltjCI6mBVBebbzgKjsHIqntsQQo" },
+
+    { dept: "ENG", id: "ENG510", name: "Sociolinguistics", handouts: "1K3HBgK83Bzf3Ty_svNB8gGGAe7w95rSO", highlighted: "https://drive.google.com/drive/folders/1GcOCIUO8_kSwuIenFX5wK-EWr484iq-b" },
+
+    { dept: "ENG", id: "ENG511", name: "Psycholinguistics", handouts: "14ZmjJVG0LMLW_Izy1yvGK6uePTD3l-zE", highlighted: "https://drive.google.com/drive/folders/1_0vyxQ24yqWI8onjarqD_rwtBORPOUwh" },
+
+    { dept: "ENG", id: "ENG512", name: "Bilingualism", handouts: "1md8D98ZXUBzUkUGKOdSXniVwS7RpCPjC", highlighted: "https://drive.google.com/drive/folders/1RTDxFWCl5LAQdpf18NbglSDWPAAklUp5" },
+
+    { dept: "ENG", id: "ENG513", name: "Language Teaching Methods", handouts: "1c8I8zMqJbiDM4ayfYsDvDbWl3S6aXPVv", highlighted: "https://drive.google.com/drive/folders/1vJ_Dk9KR45XfKn0pb-5Ed9dY6Mgw9SHi" },
+
+    { dept: "ENG", id: "ENG514", name: "Teaching Listening and Speaking Skills", handouts: "1FO0-EmpH17t3heSI4WgzOy9un35dzene", highlighted: "https://drive.google.com/drive/folders/1hrJmqy17GQUaPWYkdZLs3d2omwqxlhGz" },
+
+    { dept: "ENG", id: "ENG515", name: "Teaching Reading and Writing Skills", handouts: "1Rtxy56_qbj_3OAItEVYxxz9NcQyMByxb", highlighted: "https://drive.google.com/drive/folders/1mGQNXepoIBz4-gDtutne25rDSbbhayCB" },
+
+    { dept: "ENG", id: "ENG516", name: "School Teaching of Business Communication", handouts: "1C0nZ0Wp6fUJdU52ZElowSh3sF4Js3P49", highlighted: "https://drive.google.com/drive/folders/1R8pFgAvat590lNReDx9IoS5yYRZdlApg" },
+
+    { dept: "ENG", id: "ENG517", name: "Computer Assisted Language Learning", handouts: "1_gfo5lZ6DyT1cHrOFwFRCvqa5GN37CB-", highlighted: "not_found.html" },
+
+    { dept: "ENG", id: "ENG518", name: "Research Methodology", handouts: "1qLRoskDqYap5SSxneclEJnZEoUCk_ziS", highlighted: "https://drive.google.com/drive/folders/1tGUAmZYQTcY1MakgMf25gNedxWm1-qIB" },
+
+    { dept: "ENG", id: "ENG519", name: "Curriculum Design", handouts: "1-2TF_FPGBRyXR91o-8D_Vk-lf_HzmSf5", highlighted: "not_found.html" },
+
+    { dept: "ENG", id: "ENG520", name: "Testing and Assessment", handouts: "18G5stqVMhSfnP5n6Aihg2AEV3w8INhb5", highlighted: "https://drive.google.com/drive/folders/1oxMIRgNIEt0plpHOfcrAhg_CV35IzU7v" },
+
+    { dept: "ENG", id: "ENG521", name: "Language Classroom Management", handouts: "1qzJDHuCeNqcH32VKiG5YZpexFSkDaYMo", highlighted: "not_found.html" },
+
+    { dept: "ENG", id: "ENG522", name: "Applied Linguistics", handouts: "1wOb9qWNLeyMbzbQkwnswkmPLk-M_SV5p", highlighted: "https://drive.google.com/drive/folders/1Dv4yOkZP-pREzy7pk2Tgqd_jD34jwOO6" },
+
+    { dept: "ENG", id: "ENG523", name: "Discourse Analysis", handouts: "1d3TSdYz0xhylqlVPfQk6XWMG4LrAH2jH", highlighted: "https://drive.google.com/drive/folders/1spkszvgIA_Vdd9RgqmbNi1rZLaEfcRW1" },
+
+    { dept: "ENG", id: "ENG524", name: "Critical Discourse Analysis", handouts: "1LyGnVcL3Rc-MFTfqaa4KdNpvH8wpHG3W", highlighted: "https://drive.google.com/drive/folders/1UGDi8zPkc8RiHTgEqIn9K-noVPclKDMM" },
+
+    { dept: "ENG", id: "ENG527", name: "Language and Gender", handouts: "14OMSN_CwM7VFNFtvyYg1HXogHfSAaofd", highlighted: "not_found.html" },
+
+    { dept: "ENG", id: "ENG529", name: "Technology in Language Teaching", handouts: "1d-3XflNRY8_Ktzztq48RB6oVkhdeJa77", highlighted: "not_found.html" },
+
+    // FIN Dept
+    { dept: "FIN", id: "FIN611", name: "Advanced Financial Accounting", handouts: "1yw8WmMK5ii-P5zPEp0MjROX4WJkaf_bL", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "FIN", id: "FIN621", name: "Financial Statement Analysis", handouts: "1bKgsDTRRVIFDIV2Tnvt9DkOPYBjm_MFS", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "FIN", id: "FIN622", name: "Corporate Finance", handouts: "1c7-Kywr3zE9yy_gC3qEv28ltXgaajQPJ", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "FIN", id: "FIN623", name: "Taxation Management", handouts: "1p2H4O-fAkxVIpPOKSjVPUXS8jJYXzuf0", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "FIN", id: "FIN624", name: "Islamic Mode of Financing", handouts: "1qpV6M3uig0GuqhqOS6humlwdzbiV9VTF", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "FIN", id: "FIN625", name: "Credit Analysis & Risk Management", handouts: "1rqxSCaAiRjmRe6H-U6UrC-kP6LbMwVzs", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "FIN", id: "FIN630", name: "Investment Analysis & Portfolio Management", handouts: "1p1-ckFDj1yBRKTEsxhAmCIIuDlFzsjvk", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    // GSC Dept
+    { dept: "GSC", id: "GSC101", name: "General Science", handouts: "1NB_0s-ANg0xjkBVBE9zCapB4ZrHGz02A", highlighted: "https://drive.google.com/drive/folders/12zt-C5nJmsNmUylDBIuYmMwXEkbIPH9S", ppt: "not_found.html" },
+    { dept: "GSC", id: "GSC201", name: "Teaching of General Science", handouts: "17_zvsYMSQHBhdy57N3Lk00AqwUnk8FqY", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    // ISL Subject
+    { dept: "ISL", id: "ISL201", name: "Islamic Studies (Old)", handouts: "1-MWcJII1lVsehtBUWqDJMon41IxKm6H1", highlighted: "https://drive.google.com/file/d/1Au9BQumr8vK8TGFwPkdaLmEyfYOC33dN/view", ppt: "not_found.html" },
+    { dept: "ISL", id: "ISL202", name: "Islamic Studies (New)", handouts: "1LPrbJsMD7xlAlOU47Xw-J5J_Y-Yj5Njo", highlighted: "https://drive.google.com/drive/folders/1W_gzyGtUsuVzH6oyhYq-vQ-rxK6HxyX6", ppt: "not_found.html" },
+
+    // IT dept
+    { dept: "IT", id: "IT430", name: "E-Commerce", handouts: "https://drive.google.com/file/d/1vL7EN92n_ocBpBz1Ff6jkCdjoxLK_f44/view", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "IT", id: "IT601", name: "System and Network Administration", handouts: "https://drive.google.com/file/d/1x79ZMMXrElN3NqqBzzyPNEP3oF20taq4/view", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    // MCM Dept
+    { dept: "MCM", id: "MCM101", name: "Introduction to Mass Communication", handouts: "1k_6NYkPJRUvq6f7iUCtTBIry5jzPJxuG", highlighted: "not_found.html", },
+    { dept: "MCM", id: "MCM301", name: "Communication Skills", handouts: "1BWXpCAFsLIv_W6rNK1yLa5AxCxS2aQ4K", highlighted: "https://drive.google.com/drive/folders/1XJFu5qckJZvIPK6uLnG8S--sbSEBt1xq", },
+    { dept: "MCM", id: "MCM304", name: "Mass Media in Pakistan", handouts: "1YHk_AgjBV5hlXGfUm4tW5drtRiVrgv96", highlighted: "not_found.html", },
+    { dept: "MCM", id: "MCM310", name: "Journalistic Writing", handouts: "1BeqQTzJgkJeb_oBw2CM54bey0IJMhKJL", highlighted: "not_found.html", },
+    { dept: "MCM", id: "MCM311", name: "Reporting and Sub-Editing", handouts: "1m1FYzKzbOAZLP-hugVl6p35LecnvWeO7", highlighted: "not_found.html", },
+    { dept: "MCM", id: "MCM401", name: "Fundamentals of Public Relations", handouts: "1RS2hpWnR8VIY5D-GuXN5hDnUsaytWAnq", highlighted: "not_found.html", },
+    { dept: "MCM", id: "MCM404", name: "Globalization of Media", handouts: "1mZpvdz8cwqdOt-F4jYVnavFQ6ZnNTOmr", highlighted: "not_found.html", },
+    { dept: "MCM", id: "MCM411", name: "Introduction to Broadcasting", handouts: "1EnX4uPVNUnY_pttNv9-ZdjU7eBFlNVVr", highlighted: "not_found.html", },
+    { dept: "MCM", id: "MCM431", name: "Development Communication", handouts: "1JA8LYP6-z92SeaKNZWossf3uOQzi4ejM", highlighted: "not_found.html", },
+    { dept: "MCM", id: "MCM501", name: "Advertising", handouts: "1WSbiapvs7SaQpRRew8eSOdAdKT3IWDdU", highlighted: "not_found.html", },
+    { dept: "MCM", id: "MCM511", name: "Theories of Communication", handouts: "1da2SgiZo7dUujz5tzLzVEXCRS7MoJNZz", highlighted: "not_found.html", },
+    { dept: "MCM", id: "MCM514", name: "Feature & Column Writing", handouts: "1xyxLSESx_-yAVFbBwNnH-mHCw606X5-D", highlighted: "not_found.html", },
+    { dept: "MCM", id: "MCM515", name: "Radio News, Reporting and Production", handouts: "1AtqJoo22m9lxIjfkNSz97sBJHLXHvhq8", highlighted: "not_found.html", },
+    { dept: "MCM", id: "MCM516", name: "TV News Reporting and Production", handouts: "17nSfBMNjFrpYVzAnTyBCBRJcR12zBe6K", highlighted: "not_found.html", },
+    { dept: "MCM", id: "MCM517", name: "Online Journalism", handouts: "12j0xzApO6OVwnPXRATD_VpvKjZYNpgRU", highlighted: "not_found.html", },
+    { dept: "MCM", id: "MCM520", name: "Contemporary Mass Media", handouts: "1wRnXUzQN-hHddrVTssGG-yrwWUdUIAy1", highlighted: "not_found.html", },
+    { dept: "MCM", id: "MCM531", name: "Community Journalism", handouts: "1CYW68mq116YyWJ_xUTPA01dJWdf6p1Ho", highlighted: "not_found.html", },
+    { dept: "MCM", id: "MCM601", name: "Media Management", handouts: "15E7hwpSmqxFEd55zqgRN-J91SP_Kf5jq", highlighted: "not_found.html", },
+    { dept: "MCM", id: "MCM604", name: "International Communication", handouts: "1tGdxE_n9D7AuHlZWqhFzTKMnFICYHQv5", highlighted: "not_found.html", },
+    { dept: "MCM", id: "MCM610", name: "Media Laws and Ethics", handouts: "18VgeX9Lg2CEGOoYos4Oa2sd4CEpY0IFH", highlighted: "not_found.html", },
+
+    // MGMT Dept
+    { dept: "MGMT", id: "MGMT611", name: "Human Relations", handouts: "1ntz6WVwt31dAShiHFXjuOULf_0nJze35", highlighted: "not_found.html", },
+    { dept: "MGMT", id: "MGMT614", name: "Supply Chain Management", handouts: "1JNc7YhLZGdODlRj9iOKp7iQLbeV5cz-G", highlighted: "not_found.html", },
+    { dept: "MGMT", id: "MGMT615", name: "Transportation & Logistics Management", handouts: "1JPeqQ5RzXxZaFNe67yvhJhqFCapKV4wD", highlighted: "not_found.html", },
+    { dept: "MGMT", id: "MGMT622", name: "Management Skills", handouts: "1phCNywx_xoubmto2Fk97ntoW5EuXoy3g", highlighted: "not_found.html", },
+    { dept: "MGMT", id: "MGMT623", name: "Leadership & Team Management", handouts: "18b7q1Av7jsPYEtyNreTF5w_ziex3XBWY", highlighted: "not_found.html", },
+    { dept: "MGMT", id: "MGMT624", name: "Conflict Management", handouts: "1aIhAI1iVIcGamexG35iKyExhovB9vUKi", highlighted: "not_found.html", },
+    { dept: "MGMT", id: "MGMT625", name: "Change Management", handouts: "1IeK2h4z3UGvJw6lBOzt0UzEYBQGU1n02", highlighted: "not_found.html", },
+    { dept: "MGMT", id: "MGMT627", name: "Project Management", handouts: "1Ry8zdwMislUvhK__OnWmM22IgEOblmXw", highlighted: "not_found.html", },
+    { dept: "MGMT", id: "MGMT628", name: "Organizational Development", handouts: "1r5b3bOs4BrycOnfgRlPBTnT6ZHmS_CRl", highlighted: "not_found.html", },
+    { dept: "MGMT", id: "MGMT629", name: "Crisis Management", handouts: "1nLXbLzcHajREcAwKqywkRsqaxnq-z48V", highlighted: "not_found.html", },
+    { dept: "MGMT", id: "MGMT630", name: "Knowledge Management", handouts: "15drEvGbAXzvh_s9EaYeA_lnds8ODBNy1", highlighted: "not_found.html", },
+
+    // MGT Dept
+    { dept: "MGT", id: "MGT101", name: "Basics of Financial Accounting", handouts: "1kq_Lyk_Ciyk2BiFbhR7GCawAHfa-d5KN", highlighted: "https://drive.google.com/file/d/18EsOgUnAD74kaQoLTeGH85xfvsPnBPYH/view", ppt: "not_found.html" },
+
+    { dept: "MGT", id: "MGT111", name: "Introduction to Public Administration", handouts: "1RLdfDaBIjc-qPrAk8p5tl3heYT1gTDl0", highlighted: "https://drive.google.com/file/d/1ixOh_Oo2O2cpQpeawpgAgVqrHZ1DMdRd/view", ppt: "not_found.html" },
+    { dept: "MGT", id: "MGT201", name: "Financial Management", handouts: "1D3MfaAj9llGzVfETITzr7zmW2w72kxQr", highlighted: "https://drive.google.com/drive/folders/1yplK2QVl0QtIHABHwvG9y3bybkYodSNM", ppt: "not_found.html" },
+    { dept: "MGT", id: "MGT211", name: "Introduction to Business", handouts: "1EBRMSC34bVcrgeFE8QXeTHLvBd6v6-j_", highlighted: "https://drive.google.com/uc?export=download&id=1gdj02Ui7EMrOaU8YVuMeNUFaWezqyGyc", ppt: "not_found.html" },
+    { dept: "MGT", id: "MGT301", name: "Technical Articles", handouts: "1xe78opbBfoVvhuZlMOcto9LtbXTbcKn8", highlighted: "https://drive.google.com/drive/folders/1gbwNuBvBGe_yD4mQEgBguGpCqzlnPWBI", ppt: "https://drive.google.com/file/d/1EqUK4Z3f7z6Z-u_EQQj9C4xAkS1vpgPZ/view" },
+    { dept: "MGT", id: "MGT401", name: "Financial Accounting II", handouts: "1Jb2GEsz31W3Hwui4AvwZcDSSG044Y-kr", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "MGT", id: "MGT404", name: "Managerial Accounting", handouts: "1S7-16sqAfJIH95xvrO00z_-tS8Ay7bSt", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "MGT", id: "MGT411", name: "Money & Banking", handouts: "1rW9IJ66Sn8mrKXZhYcNynxn3qSXJ8H4s", highlighted: "not_found.html", ppt: "https://drive.google.com/drive/folders/1RM88UhP158R7dfhubU63MGD9VzK5ucav" },
+    { dept: "MGT", id: "MGT501", name: "Human Resource Management", handouts: "1k5GRolNgZSw2JeQtDggVVE9eabLliq4w", highlighted: "https://drive.google.com/drive/folders/1K03OlFByht_jbPzdL8_N8LhAbq8GCwQU", ppt: "not_found.html" },
+    { dept: "MGT", id: "MGT502", name: "Organizational Behavior", handouts: "1pcr4NggkvGrWyg49fYmKM9meRaxTqdbM", highlighted: "https://drive.google.com/file/d/1sarTe4Yy4Fw_ji97bYSWvVJaqCdFd7Kt/view", ppt: "not_found.html" },
+    { dept: "MGT", id: "MGT503", name: "Principles of Management", handouts: "1icK0lWc9rX9nj5QfWGZlyBz-U2t_UAEj", highlighted: "https://drive.google.com/drive/folders/1BDth85EVoVyoZWpcoKrSwQ_zbV76Mas0", ppt: "not_found.html" },
+    { dept: "MGT", id: "MGT504", name: "Organization Theory and Design", handouts: "1kiXj7OlsUJ2pFgUK9RXqwVx9qlc0bA2w", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "MGT", id: "MGT510", name: "Total Quality Management", handouts: "1VuTlN23XLI8ryDBFDkVxEPe5TWXg7gXz", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "MGT", id: "MGT520", name: "International Business", handouts: "10Bu7btnO8gv8oucaJLkQGoDwh2qXshEW", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "MGT", id: "MGT601", name: "SME Management", handouts: "1Zsm6KLOGU1gzbL4zc2kgC9-KUkt6P0Lp", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "MGT", id: "MGT602", name: "Entrepreneurship", handouts: "1IN51Nonj8t-mSTjATZwt2KM6hBb0X4Bc", highlighted: "https://drive.google.com/file/d/1IN51Nonj8t-mSTjATZwt2KM6hBb0X4Bc/view", ppt: "https://drive.google.com/file/d/1tQ88sy-_EWL-8mxYoTilAEAkxTFJZJVp/view" },
+    { dept: "MGT", id: "MGT603", name: "Strategic Management", handouts: "1p1wKq67LjdRRUlwR3Q38W5cZleD5mLSG", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "MGT", id: "MGT611", name: "Business and Labour Laws", handouts: "1a2b1agsnAa5WI2JqmXEMv6X1FcWjc9MM", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "MGT", id: "MGT612", name: "Corporate Law", handouts: "1-W9tVnz58wOMyQY3-Fhg8HOg9_Ud27ij", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "MGT", id: "MGT613", name: "Production and Operations Management", handouts: "12iiE0_SOA0sfw_ciFgFSInNCtj_0no1_", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "MGT", id: "MGT621", name: "Administrative Law", handouts: "18sucCSivbGgYTc56SLdCC6SHmBIwAuIz", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "MGT", id: "MGT705", name: "Advanced Cost Accounting", handouts: "13qRat5FH6Wx_6NltIctH8ti7kE1bX1tq", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "MGT", id: "MGT713", name: "Production Management", handouts: "1Xk-TceTINiJa_h-4EqUxlmVuHWW6cl5q", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    // MKT Dept
+    { dept: "MKT", id: "MKT501", name: "Marketing Management", handouts: "1D9xwm_-op5Tjv6gXhLiUmWLKfnEJBgtC", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "MKT", id: "MKT530", name: "Consumer Behavior", handouts: "1CZUhe2rn8E7K_12DdsLmzKCMrDwThZve", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "MKT", id: "MKT610", name: "Customer Relationship Management", handouts: "1DB8lKIYLTXwKveT8bvgMEsEqSqOLooky", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "MKT", id: "MKT611", name: "Marketing Research", handouts: "1D5p_QijUvGXjJu9izeVoRRcT8CKKwlHz", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "MKT", id: "MKT621", name: "Advertising and Promotion", handouts: "1AYDbtBD8JbjIqV1aZJPeWNoo3e4yG5NQ", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "MKT", id: "MKT624", name: "Brand Management", handouts: "1mA5bh-U6uJFkaAhTBY83v2jp3tci4_cO", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "MKT", id: "MKT625", name: "Services Marketing", handouts: "1rAxYFgR-md6nmMewkgrv5cBzfgjJ2aWm", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    // MTH Dept
+    { dept: "MTH", id: "MTH001", name: "Elementary Mathematics", handouts: "1V7Ndod8Wp4lj4Ft_MPhDW3gr3Ii-pyVj", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "MTH", id: "MTH100", name: "General Mathematics", handouts: "1Plmwckeb4Dr_FuyqHasHjcEnkifdpQ53", highlighted: "https://drive.google.com/file/d/1ZlR55xiZmXk2Hrsq5VqDq5tNtipJ5y1A/view", ppt: "https://drive.google.com/file/d/1GcogJ_47cV_3Wqqof2rlSueTcCDaBAKP/view" },
+
+    { dept: "MTH", id: "MTH101", name: "Calculus And Analytical Geometry", handouts: "1SfvSaeGyUbKuQtQ9uPJovO10PRGYyDIe", highlighted: "https://drive.google.com/drive/folders/10h9TxVsM8xG1KkKMAMD3FPAuLvNm3Qb6", ppt: "https://drive.google.com/drive/folders/1OKqSqpqGQOGPE2e0LONYWGDY616L1uO_" },
+
+    { dept: "MTH", id: "MTH102", name: "Basic Algebra and Trigonometry", handouts: "1MZfBZWVGH1hZndck6F67PptybTZW3AKG", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "MTH", id: "MTH104", name: "Sets and Logic", handouts: "https://drive.google.com/drive/folders/1dHOnAXGZAZIqXXtn60m-WlAR3AaqmsoC", highlighted: "https://drive.google.com/drive/folders/1dHOnAXGZAZIqXXtn60m-WlAR3AaqmsoC", ppt: "https://drive.google.com/file/d/1WMyJWPtjIQM90AMLR3JeXci80DaOqs-V/view" },
+
+    { dept: "MTH", id: "MTH201", name: "Multivariable Calculus", handouts: "13zFZHK_dR6ymNDcvmWc2gbgqCbi9HMCe", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "MTH", id: "MTH202", name: "Discrete Mathematics", handouts: "12sJJ11vxNbyfLWLbs_8BZUzyGv0YVl6E", highlighted: "https://drive.google.com/drive/folders/1scCQyY5IkPVN_4razWD1I1oLRBeHSBiO", ppt: "https://drive.google.com/file/d/1IbxZF0OnLc2p9vWFXBY1dNZPj99I6t2K/view" },
+
+    { dept: "MTH", id: "MTH301", name: "Calculus II", handouts: "1tnt94eHuMaRiPgnoNXMC3MCp_zy5FCmE", highlighted: "not_found.html", ppt: "https://drive.google.com/drive/folders/1k_MYNQ9jOtCFWw-HUip0Fhp67CYmMGvH" },
+
+    { dept: "MTH", id: "MTH302", name: "Business Mathematics & Statistics", handouts: "1iCpy2HEzYRbhuaXC1jErlAIsSnqWfIbP", highlighted: "https://drive.google.com/file/d/1g91yXOFbIurs97QEqA_pAK9EVTm6RVpv/view", ppt: "not_found.html" },
+
+    { dept: "MTH", id: "MTH303", name: "Mathematical Methods", handouts: "1oT6JPs8vnN7X3w6jUDHxKno0YoIiJmG-", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "MTH", id: "MTH304", name: "Statics", handouts: "1bIyLMvQGovluDnwQe8A1hEUXt-2IwkrR", highlighted: "not_found.html", ppt: "https://drive.google.com/drive/folders/1MczjsaAufs447bM-QBq2YlTmB8-K2NM-" },
+
+    { dept: "MTH", id: "MTH401", name: "Differential Equations", handouts: "1N_ZSuz31Zs3Mgz0q0dUQplymdkF5hnBI", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "MTH", id: "MTH403", name: "Calculus & Analytical Geometry-II", handouts: "1M9zqxgQd2D6hi4YGyev2jOJ6DmKtONOj", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "MTH", id: "MTH404", name: "Dynamics", handouts: "https://drive.google.com/drive/folders/1FVbuwZYSqisJ6CqwZLaPYDjp5K2p2Wtf", highlighted: "not_found.html", ppt: "https://drive.google.com/file/d/1BBhcQCgBx8kcZD3elUFLNM103qEsOtXw/view" },
+
+    { dept: "MTH", id: "MTH405", name: "Elementary Topics in Pure Mathematics", handouts: "1gEzR7z0Jnq8fKPC2Ug0VWxyoZvQ1eNKj", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "MTH", id: "MTH501", name: "Linear Algebra", handouts: "1CR7ijfBlljUhl2HazgKjMRK8E5DWOilp", highlighted: "https://drive.google.com/file/d/1K__zvA1zZNUWb9OFAe5AA1yKV52RYq6w/view", ppt: "https://drive.google.com/drive/folders/1aPoRXPK4kk3DvgT7jnPQKZ6zKFSZ4pvZ" },
+
+    { dept: "MTH", id: "MTH601", name: "Operations Research", handouts: "1BF-3QeiF1oIho77QV5PsHjxztDjIuyUJ", highlighted: "https://drive.google.com/drive/folders/1wt4qCZGrPox6hB3hF8YZg4aU5sxU6iiE", ppt: "https://drive.google.com/drive/folders/1tzNrMhTKXoy7u1s_-CHNAwO2kstXN9Yd" },
+
+    { dept: "MTH", id: "MTH603", name: "Numerical Analysis", handouts: "1P1W9kk8Ib1Z2gqfMlRKDr7Vk1hotmtnf", highlighted: "https://drive.google.com/drive/folders/1_3QNKvAn1J6LUEo04xQGv67MFE_vDiMA", ppt: "not_found.html" },
+
+    { dept: "MTH", id: "MTH621", name: "Real Analysis I", handouts: "1q8syQhAsfuSfiph4zhHYsnmyVIVhTNT6", highlighted: "not_found.html", ppt: "https://drive.google.com/file/d/1NYOnbovJST2Ry6iba751j9N42eU1bBp7/view" },
+
+    { dept: "MTH", id: "MTH622", name: "Vectors and Classical Mechanics", handouts: "1NYn3BleFvdmeADuP7QbeiSNeMJr8Qg27", highlighted: "https://drive.google.com/file/d/1hPHrO_Kf-yP6QZxa6X-dO4AITvbAA3Cz/view", ppt: "not_found.html" },
+
+    { dept: "MTH", id: "MTH631", name: "Real Analysis II", handouts: "1bp9bqWyWaOv3thJe6H01WwSBYzDsEZwZ", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "MTH", id: "MTH632", name: "Complex Analysis and Differential Geometry", handouts: "1W9V5-HELV5IhVSYNA1gfI_pFdveh5cpf", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "MTH", id: "MTH633", name: "Group Theory", handouts: "1S9489BygKnC2bX3kG42EfJiHKW5xY5kq", highlighted: "https://drive.google.com/file/d/1BTCgeiH019jhMOtrkLIS8jXk5AiI5qYp/view", ppt: "not_found.html" },
+
+    { dept: "MTH", id: "MTH634", name: "Topology", handouts: "1X-71Ej6fL1w6obF-2d3v-kVNr1WFueft", highlighted: "https://drive.google.com/file/d/1Fz7PX0MM0udo9mBbdL67flP6x7OQxDaq/view", ppt: "not_found.html" },
+
+    { dept: "MTH", id: "MTH641", name: "Functional Analysis", handouts: "1mip-W4gA4DfpYib1wgYLgVKh0vjFdhZL", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "MTH", id: "MTH642", name: "Fluid Mechanics", handouts: "1bNUXyPtIclUnhmpYGQYkPQVzfRdJE_u6", highlighted: "not_found.html", ppt: "https://drive.google.com/drive/folders/1auCYiI8LzL_FxvrpAT9H9R1zc4cKoc8m" },
+
+    { dept: "MTH", id: "MTH643", name: "Advanced Differential Equations", handouts: "1y4IGTxIYA_36gC2TNcwW7-8j1wf5NQHg", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "MTH", id: "MTH644", name: "Advanced Linear Algebra", handouts: "https://drive.google.com/drive/folders/1o_gi0eEVlXx9IX-Oh2iAq1nlQVFGSFoH", highlighted: "https://drive.google.com/drive/folders/1o_gi0eEVlXx9IX-Oh2iAq1nlQVFGSFoH", ppt: "https://drive.google.com/drive/folders/1o_gi0eEVlXx9IX-Oh2iAq1nlQVFGSFoH" },
+
+    { dept: "MTH", id: "MTH645", name: "Advanced Measure Theory", handouts: "https://drive.google.com/file/d/1SqJTTptjtSAkgHcL46Fp9SNf8ZQqXjDj/view", highlighted: "https://drive.google.com/file/d/1E-JWxJldmW9z2wyN7JJkMOmHKDj30ioK/view", ppt: "not_found.html" },
+
+    // PAK Dept
+    {
+        dept: "PAK", id: "PAK301",
+        name: "Pakistan Studies",
+        handouts: "1k3S9CdP6qzU0VSHL0GSeclSClBHLE5ev",
+        highlighted: "https://drive.google.com/uc?export=download&id=1dsDu0e1eZ9qBpHwKSFnbdkXKTelmORvr",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "PAK", id: "PAK302",
+        name: "Pakistan Studies (New Curriculum)",
+        handouts: "1a_DH03lWzYVrwuLRX4RrR8rS440Y7cZL",
+        highlighted: "https://drive.google.com/uc?export=download&id=1GngtRDNMZD-BoTdDuyQFhL5_KcYZZY8o",
+        ppt: "https://drive.google.com/uc?export=download&id=1M825wE5s4G1fkjvRSXRgps1DURbRuzvz"
+    },
+    {
+        dept: "PAK", id: "PAK522",
+        name: "Constitution of Pakistan",
+        handouts: "https://drive.google.com/file/d/1g54JjYwahrLx7y7veK64I1k4G6yvIOz0",
+        highlighted: "not_found.html",
+        ppt: "https://drive.google.com/uc?export=download&id=1M825wE5s4G1fkjvRSXRgps1DURbRuzvz"
+    },
+
+    // PHY Dept
+    { dept: "PHY", id: "PHY101", name: "Physics", handouts: "13ySMA-hyCDwbqN9IsBpJBBgXx_FIVUsj", highlighted: "https://drive.google.com/drive/folders/14nRtY5xqD66Zpp1Wm2Ig_V-36PMkcyuK", ppt: "not_found.html" },
+    { dept: "PHY", id: "PHY301", name: "Circuit Theory", handouts: "1-g_VROSWnCY1Bvm7wORWli0w5QlTpaBH", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    // PSC Dept
+    {
+        dept: "PSC", id: "PSC201",
+        name: "International Relations",
+        handouts: "1Oq25bGbk14gvYABupLJhJlG6scArNhav",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "PSC", id: "PSC401",
+        name: "Public International Law",
+        handouts: "17Hg0fFhLx7XY39fFaIW5Uj9NN1tLWa5A",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+
+    // PSY Dept
+    { dept: "PSY", id: "PSY101", name: "Introduction to Psychology", handouts: "1KftueKRiUmot03y5gjhBggv5OeBMiS4p", highlighted: "https://drive.google.com/uc?export=download&id=13-T9w7StO2NhrqzngcOhvtN1G8wApHM8", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY401", name: "Clinical Psychology", handouts: "1x7aywbLIyL1irh_EChT5wCM0EXS5_iq_", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY402", name: "Experimental Psychology", handouts: "1ZZae2-4aqD1wOfbMf7n-CdIhUxYElr0x", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY403", name: "Social Psychology", handouts: "1o0YbM2KEOqqQyKWuS0d781QPZWF_zR0f", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY404", name: "Abnormal Psychology", handouts: "1ExJ9fOU5IkEK2G-0uTm54yy9XiVrpiKh", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY405", name: "Personality Psychology", handouts: "1-DFbYieg0juy5CE3Sg9ipykWDgRzpZkm", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY406", name: "Educational Psychology", handouts: "1sfziOmUXQDU_ioJbif5qG9wZvMvp8fqF", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY407", name: "Sport Psychology", handouts: "1JhS0gSyciIV0oBl5u-RJHxazYF8zzOoT", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY408", name: "Health Psychology", handouts: "18zu-zwUiQ5FRxw0HxB8EMtcyEGKPxgdf", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY409", name: "Positive Psychology", handouts: "1WzumRqicUY9_Mj4wtl2BlWDizhdhAowd", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY502", name: "History & Systems of Psychology", handouts: "1Vf4QpXlZ8SqWzDlKNuJVjNJGlnvCydDM", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY504", name: "Cognitive Psychology", handouts: "1VgpJIJ7bjGDQ_A4wOIgDbtn8r2oiDeFN", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY505", name: "Developmental Psychology", handouts: "1LA6gt9fcgVcWOBzEzv3ErUd_NrLuQPgR", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY510", name: "Organizational Psychology", handouts: "15SrgZUoCIcZyg515iw5npBtrwGmeOkN_", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY511", name: "Environmental Psychology", handouts: "1-Aj67SgQcT-TKYwOJFQJ0mGObhWKNUlh", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY512", name: "Gender Issues in Psychology", handouts: "128-NCeCFstbVY4ryGLWRWnmFacwZ0Ow4", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY513", name: "Forensic Psychology", handouts: "1H4lPxNVUBFs3sBKSbij_urUbC56Yk9IW", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY514", name: "Consumer Psychology", handouts: "1m8aq9hEpEGL5LIhlFCuetbgGyBhYOAmg", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY515", name: "Cross-Cultural Psychology", handouts: "1x0fm1g2bhqXyNPDWZA_-gg710O7WJRqm", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY610", name: "Neurological Bases of Behavior", handouts: "1NfpltYvkkyH8cnOtPkTHaa0EcICdZiP7", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY631", name: "Psychological Testing & Measurement", handouts: "1iJ3KvbdSUCjSC5r0gdp2He-jckY7ZUwP", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY632", name: "Theory and Practice of Counseling", handouts: "1BK-MjEkVl2piDZVGzB0OHoXGm35OQ9vq", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    // SOC Dept
+    { dept: "SOC", id: "SOC101", name: "Introduction to Sociology", handouts: "1GeoSLww1FLv5yt6gtNt2du7mY0n8aDue", highlighted: "https://drive.google.com/drive/folders/1JtrxBw-TC9GdMKd4qiVHdeDLFbs_x7x6", ppt: "not_found.html" },
+
+    { dept: "SOC", id: "SOC201", name: "Social Statistics", handouts: "1yuEqRzpyQYu47fHxf7oBnaeSXi0c1wY9", highlighted: "1yuEqRzpyQYu47fHxf7oBnaeSXi0c1wY9", ppt: "not_found.html" },
+
+    { dept: "SOC", id: "SOC301", name: "Introduction to Social Work", handouts: "1c5UJjfXN7nYMZoNeTqW6Peka2B2jAIba", highlighted: "10UeY_P2BybABaVAcYKNf_BN_HaAjttBN", ppt: "not_found.html" },
+
+    { dept: "SOC", id: "SOC302", name: "Sociological Theories", handouts: "1ziX-rIVMzF5cNlibVXKnXfvi5SLiHZed", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "SOC", id: "SOC401", name: "Introduction to Cultural Anthropology", handouts: "https://drive.google.com/drive/folders/12NeXAHeT3LYYhMz5JZq_OvSzbvNYbLO0", highlighted: "https://drive.google.com/drive/folders/12NeXAHeT3LYYhMz5JZq_OvSzbvNYbLO0", ppt: "not_found.html" },
+
+    { dept: "SOC", id: "SOC402", name: "Sociological Perspectives", handouts: "1X_wPBd7qNAL1kcRq_3UJioR0WnasekFZ", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "SOC", id: "SOC403", name: "Gender Studies", handouts: "1PTSvuKRpJLQ2AbXs8gV_-m49iNCAllYR", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "SOC", id: "SOC509", name: "Quantitative Research Methodology", handouts: "1N7Q8HkMdhOG7_JipMpg1Nu_titFoYe0J", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "SOC", id: "SOC601", name: "Social Policy and Governance", handouts: "1IcsYHmjtOF_-aZuQoi-UrrM2_Y7fZihI", highlighted: "1IcsYHmjtOF_-aZuQoi-UrrM2_Y7fZihI", ppt: "not_found.html" },
+
+    { dept: "SOC", id: "SOC602", name: "Sociology of Education", handouts: "10QZQBGu29izJhmF4E7wEWMloj-8kbbO7", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "SOC", id: "SOC603", name: "Sociology of Development", handouts: "13MmN5TbLPBlBDIE_h0vB7bBt044tAI2P", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "SOC", id: "SOC605", name: "Population Dynamics", handouts: "1OR7IDJB84lGJ-MwObtcb7v0UXB8-e9_1", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    // STA Dept
+    {
+        dept: "STA", id: "STA100", name: "General Mathematics and Biostatistics",
+        handouts: "1oKPyrwOz5YxtRb_7uocBVGzLRCWQ3mEL",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+
+    {
+        dept: "STA", id: "STA301", name: "Statistics and Probability",
+        handouts: "1W5ja10yhaacRBCnAdiB-amrpwuvcsxwO",
+        highlighted: "https://drive.google.com/drive/folders/173igWwemlNOchHcPOAdN12ooM2xmVxww",
+        ppt: "not_found.html"
+    },
+
+    {
+        dept: "STA", id: "STA404", name: "Regression and Correlation Analysis",
+        handouts: "1y1KWR2Y8MTJIF-0iLwlkigUWx7uzSsMf",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+
+    {
+        dept: "STA", id: "STA406", name: "Statistical Inference",
+        handouts: "1EAZQeu7OynkDVhXtpvSFCC-yUQftrwKH",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+
+    {
+        dept: "STA", id: "STA630", name: "Research Methods",
+        handouts: "1krEoI98Tp8sWH0fhugzDzU5lr1xduAmM",
+        highlighted: "https://drive.google.com/file/d/1-sue_OMgDaX7UoIK8PdENSy7ROMu-S8p/view",
+        ppt: "https://drive.google.com/file/d/1-sue_OMgDaX7UoIK8PdENSy7ROMu-S8p/view"
+    },
+
+    {
+        dept: "STA", id: "STA631", name: "Research Methods (STA631)",
+        handouts: "https://drive.google.com/file/d/1a1t9GhvXZz1_8MXiFJjKvyCFNV0S-g7Y/view",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+
+    {
+        dept: "STA", id: "STA632", name: "Sampling Techniques",
+        handouts: "1G8fzY4I3qcLMdEteKN9GjK5xyb8CI0J2",
+        highlighted: "not_found.html", ppt: "not_found.html"
+    },
+
+    {
+        dept: "STA", id: "STA641", name: "Statistical Packages Applications",
+        handouts: "1W8wEN4fdeDufjvsrcpI6ogx66FI0l6sv",
+        highlighted: "not_found.html",
+        ppt: "https://drive.google.com/uc?export=download&id=1W8wEN4fdeDufjvsrcpI6ogx66FI0l6sv"
+    },
+
+    {
+        dept: "STA", id: "STA642", name: "Probability & Statistics",
+        handouts: "1r3oji7wD59hUMJsuhkO5LZCJE9K_MBQP",
+        highlighted: "not_found.html",
+        ppt: "https://drive.google.com/uc?export=download&id=1r3oji7wD59hUMJsuhkO5LZCJE9K_MBQP"
+    },
+
+    // ZOO Dept
+    {
+        dept: "ZOO", id: "ZOO101 | ZOO515T", name: "Biological Techniques",
+        handouts: "1bRCXoXIZBOxO_QsrG_bpsK6es38S3yqz",
+        highlighted: "https://drive.google.com/file/d/1bRCXoXIZBOxO_QsrG_bpsK6es38S3yqz",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "ZOO", id: "ZOO102 | ZOO514T", name: "Principles of Animal Life-I",
+        handouts: "1QN6o2CwGDX20FvH9JL1Iu6-6192lygM3",
+        highlighted: "https://drive.google.com/file/d/1AspvGrsEdoup_bacOOPA1lg6d1NcLAH-",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "ZOO", id: "ZOO103 | ZOO511T", name: "Principles of Systematics",
+        handouts: "1_KVjLE2x7OpkgZ0xS5emN5JU4A2WeOTn",
+        highlighted: "https://drive.google.com/file/d/1OZeanWDph-d1JId5LbLcN8BCvdedcNuA",
+        ppt: "https://drive.google.com/file/d/1_KVjLE2x7OpkgZ0xS5emN5JU4A2WeOTn"
+    },
+    {
+        dept: "ZOO", id: "ZOO201 | ZOO512T", name: "Animal Diversity: Invertebrates",
+        handouts: "11BmjNScRwXE8yjJObeh2GRFZ20ammrSQ",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "ZOO", id: "ZOO202 | ZOO513T", name: "Animal Diversity: Chordates",
+        handouts: "https://drive.google.com/file/d/1HD8f4II4gB3rFoEi1Hw9YmOT-TrujL58",
+        highlighted: "not_found.html",
+        ppt: "https://drive.google.com/file/d/1v9ITdiEu5bulgyzGorlf8pixn30N3np3"
+    },
+    {
+        dept: "ZOO", id: "ZOO203", name: "Principles of Animal Life – II",
+        handouts: "",
+        highlighted: "not_found.html",
+        ppt: "https://drive.google.com/file/d/1Wfn1Yx6JmabN0v4iQgIZ1OhgkrEc_uR6"
+    },
+    {
+        dept: "ZOO", id: "ZOO301 | ZOO516T", name: "Animal Form & Function-I",
+        handouts: "1HyOzggNqWKirnS1FTVOq1sKtMXM7lOyq",
+        highlighted: "https://drive.google.com/file/d/1HyOzggNqWKirnS1FTVOq1sKtMXM7lOyq",
+        ppt: "https://drive.google.com/file/d/15w-Qm1pfpPisiniBeYQUEwhz9KO7USgq"
+    },
+    {
+        dept: "ZOO", id: "ZOO302 | ZOO517T", name: "Animal Form & Function-II",
+        handouts: "https://drive.google.com/file/d/1QMT1s0dGFnXq5kfEotO-v5d9JcwQLLFZ",
+        highlighted: "not_found.html",
+        ppt: "https://drive.google.com/file/d/1VDF5GHh7eSu75PVkVOop3GzOW0qBOYlU"
+    },
+    {
+        dept: "ZOO", id: "ZOO307", name: "Environmental Biology",
+        handouts: "1_zYBSFBdBaZu_iatoXzRubGvZobmhEFT",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "ZOO", id: "ZOO401", name: "Limnology",
+        handouts: "",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "ZOO", id: "ZOO403", name: "Animal Behavior (Ethology)",
+        handouts: "1Fp8_ksHfmcNJqi15QIiXFCyaZjlIkXGh",
+        highlighted: "not_found.html",
+        ppt: "https://drive.google.com/file/d/18STrUb27kNBzU9NsCApSOj3I_TqojSSO"
+    },
+    {
+        dept: "ZOO", id: "ZOO404 | ZOO519", name: "Physiology",
+        handouts: "17lr7y_AGZocK_0kmSC8PWAl_VJJ_bVsD",
+        highlighted: "not_found.html",
+        ppt: "https://drive.google.com/file/d/1AWk_1pocO0zb4jdoz6y61twIw8E11434"
+    },
+    {
+        dept: "ZOO", id: "ZOO501", name: "Developmental Biology",
+        handouts: "12CG-lrQVY7w8gMSr1ZTAVkxoy0L0NeTp",
+        highlighted: "not_found.html",
+        ppt: "https://drive.google.com/file/d/1YjYiOdQIjQG4dwr2H02Tuw1fUKEH-zQa"
+    },
+    {
+        dept: "ZOO", id: "ZOO502", name: "Animal Physiology and Behavior",
+        handouts: "1cowdk-vKLbnZR4QG0sf463Cur_MkC-Cj",
+        highlighted: "https://drive.google.com/file/d/1KEVH0wYR1dOovtStOOxWtfM2gw3k8y4h",
+        ppt: ""
+    },
+    {
+        dept: "ZOO", id: "ZOO503", name: "Zoogeography and Paleontology",
+        handouts: "1dGDIxbnCbbCwm-wao6gpeOaQGIxW1ZGj",
+        highlighted: "https://drive.google.com/file/d/1dGDIxbnCbbCwm-wao6gpeOaQGIxW1ZGj",
+        ppt: "https://drive.google.com/file/d/1fnp23kL_tTo5hc4Nm1MmkN5yWSYKY-zB"
+    },
+    {
+        dept: "ZOO", id: "ZOO504", name: "Wildlife",
+        handouts: "1Utz3Ere988EezS-7-x5s5Vl9I9c2Cshr",
+        highlighted: "https://drive.google.com/file/d/1OvLEOspQDzivkepFrSyEeYdd2rYKNuYe",
+        ppt: "https://drive.google.com/file/d/10zjQ8lDaLyJrWnqRSbM2Sg26gtbBrfNi"
+    },
+    {
+        dept: "ZOO", id: "ZOO505", name: "Cell and Molecular Biology",
+        handouts: "1Ozv479NHyHYAO1CtqIRwDzkFXtQ8W7Ce",
+        highlighted: "not_found.html",
+        ppt: "https://drive.google.com/file/d/1Pa5gPzvKYVXQ3opZiU4wXpY7yC9Eq69Z"
+    },
+     {
+        dept: "ZOO", id: "ZOO506 | ZOO518", name: "Applied Entomology and Pest Management",
+        handouts: "1bjjczQDekO8fBT9M_pA2JxRPLLoRZk47",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "ZOO", id: "ZOO507", name: "Principles of Animal Ecology",
+        handouts: "154UjSJZhL0T7nPOIp-_H-ufos9MdvQme",
+        highlighted: "https://drive.google.com/file/d/154UjSJZhL0T7nPOIp-_H-ufos9MdvQme",
+        ppt: ""
+    },
+    {
+        dept: "ZOO", id: "ZOO510", name: "Economic Zoology",
+        handouts: "1qB1KkqtGonstxQoWkBRu6hOY9Y2dB1ma",
+        highlighted: "https://drive.google.com/file/d/1wRkj0WoqglzZuKt8XXE_4ewc8wAazMXQ",
+        ppt: "https://drive.google.com/file/d/1eXtgLSwQWL1ePEMSrt399u00TmCxzuWN"
+    },
+    {
+        dept: "ZOO", id: "ZOO603T", name: "Fish Biology",
+        handouts: "",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+
+    // BT
+    {
+        dept: "BT", id: "BT101", name: "Ecology, Biodiversity & Evolution-I",
+        handouts: "1RblWfA3NvdB666s6JEh4mRI8z7Dhfo3s",
+        highlighted: "not_found.html",
+        ppt: "https://drive.google.com/file/d/1bF6xqje9WhIc9M5egK8pe2syIkG7_Tvw"
+    },
+    {
+        dept: "BT", id: "BT302", name: "Immunology",
+        handouts: "1VrgT6yMP9Jy5Ysd4BWSIBUrucxDPdhwp",
+        highlighted: "https://drive.google.com/file/d/1J4F0CE3mv8d8DEcgQXP1b9oWT_56dSs8",
+        ppt: "https://drive.google.com/file/d/1VrgT6yMP9Jy5Ysd4BWSIBUrucxDPdhwp"
+    },
+    {
+        dept: "BT", id: "BT601", name: "Virology",
+        handouts: "1bvrT4aSYKuZM3Y9CYq9wEXJa4svZO_vF",
+        highlighted: "https://drive.google.com/file/d/1ShCoiav5pcKqtYId93tXCt_ig7GO0Ndf",
+        ppt: "https://drive.google.com/file/d/1ZDGv2ku34ogMG2fRlYp2T-sgfVVAn7bS"
+    },
+    {
+        dept: "BT", id: "BT605", name: "Biosafety & Bioethics",
+        handouts: "1KIvLsClMwywjPJqtFYT6EgrynwNojm9y",
+        highlighted: "not_found.html",
+        ppt: "https://drive.google.com/file/d/1KIvLsClMwywjPJqtFYT6EgrynwNojm9y"
+    },
+
+];
