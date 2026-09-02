@@ -27,22 +27,6 @@ const deptNames = {
     "ZOO": "ZOO - Zoology",
 
 };
-
-const deptColors = {
-    "ALL": "bg-yellow-400 text-slate-950 shadow-md shadow-yellow-400/20",
-    "ACC": "bg-amber-600 text-white shadow-md shadow-amber-600/20",
-    "BIO": "bg-green-600 text-white shadow-md shadow-green-600/20",
-    "CS": "bg-blue-600 text-white shadow-md shadow-blue-600/20",
-    "EDU": "bg-purple-600 text-white shadow-md shadow-purple-600/20",
-    "ENG": "bg-sky-600 text-white shadow-md shadow-sky-600/20",
-    "ISL": "bg-teal-600 text-white shadow-md shadow-teal-600/20",
-    "MGT": "bg-emerald-600 text-white shadow-md shadow-emerald-600/20",
-    "MTH": "bg-indigo-600 text-white shadow-md shadow-indigo-600/20",
-    "PHY": "bg-rose-600 text-white shadow-md shadow-rose-600/20"
-};
-
-const activeFilterTabs = ["ALL"];
-
 // Master Subjects Database Array
 const subjectsData = [
     // ACC Dept
