@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VU Handouts Hub | LGWT Study Official</title>
+    <title>VU Study Handouts | LGWT Official Hub</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -14,6 +14,11 @@
     </script>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="../favicon.png" type="image/x-icon">
 
@@ -77,6 +82,19 @@
             background: #475569;
             border-radius: 10px;
         }
+
+        .asma-arabic {
+            font-family: "Amiri", serif;
+            direction: rtl;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .asma-urdu {
+            font-family: "Noto Nastaliq Urdu", serif;
+            direction: rtl;
+            font-size: 13px;
+        }
     </style>
 </head>
 
@@ -98,6 +116,14 @@
                         <i id="themeIcon" class="fa-solid fa-sun text-amber-400"></i>
                         <span id="themeText">Light</span>
                     </button>
+                </div>
+
+                <!-- Asma-ul-Husna Badge Integration -->
+                <div
+                    class="inline-flex items-center justify-center gap-4 px-5 py-2 rounded-2xl bg-white/15 dark:bg-slate-900/85 border border-white/25 dark:border-slate-700 text-white mb-3 shadow-xl backdrop-blur-md">
+                    <span id="header-meaning" class="asma-urdu text-white font-medium">سب سے بڑا مہربان</span>
+                    <span class="h-6 w-px bg-white/30 shrink-0"></span>
+                    <span id="header-arabic" class="asma-arabic text-yellow-300 font-bold">الرَّحْمَٰن</span>
                 </div>
 
                 <div
@@ -127,11 +153,7 @@
 
         <main class="max-w-[94%] mx-auto px-2 md:px-4 py-6 md:py-8">
 
-            <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-6 px-1">
-                <div id="deptTabsContainer"
-                    class="flex flex-wrap gap-1.5 text-xs font-bold justify-center md:justify-start">
-                </div>
-
+            <div class="flex items-center justify-end mb-6 px-1">
                 <div
                     class="flex items-center gap-2 bg-white dark:bg-slate-900/80 px-4 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 text-xs shadow-sm shrink-0">
                     <span class="text-slate-400">Total Found:</span>
@@ -278,9 +300,306 @@
     </footer>
 
     <script src="subject-data.js"></script>
-    <script src="handout.js"></script>
-    <script src="../anti-inspect.js"></script>
-    <script src="../popup.js"></script>
+    <script>
+        // Asma-ul-Husna Rotation Data & Engine
+        const asmaUlHusnaList = [
+            { arabic: "الرَّحْمَٰن", meaning: "سب سے بڑا مہربان" },
+            { arabic: "الرَّحِيم", meaning: "بے حد رحم کرنے والا" },
+            { arabic: "الْمَلِك", meaning: "سب کا مالک و بادشاہ" },
+            { arabic: "الْقُدُّوس", meaning: "نہایت پاک و مقدس" },
+            { arabic: "السَّلَام", meaning: "سلامتی دینے والا" },
+            { arabic: "الْمُؤْمِن", meaning: "امن و امان دینے والا" },
+            { arabic: "الْمُهَيْمِن", meaning: "نگہبان و محافظ" },
+            { arabic: "الْعَزِيز", meaning: "سب پر غالب اور عزت والا" },
+            { arabic: "الْجَبَّار", meaning: "زبردست اقتدار والا، کمی پوری کرنے والا" },
+            { arabic: "الْمُتَكَبِّر", meaning: "بزرگی اور بڑائی والا" },
+            { arabic: "الْخَالِق", meaning: "پیدا کرنے والا" },
+            { arabic: "الْبَارِئ", meaning: "وجود میں لانے والا" },
+            { arabic: "الْمُصَوِّر", meaning: "صورتیں بنانے والا" },
+            { arabic: "الْغَفَّار", meaning: "بار بار بخشنے والا" },
+            { arabic: "الْقَهَّار", meaning: "ہر چیز پر غالب آنے والا" },
+            { arabic: "الْوَهَّاب", meaning: "بہت عطا کرنے والا" },
+            { arabic: "الرَّزَّاق", meaning: "رزق دینے والا" },
+            { arabic: "الْفَتَّاح", meaning: "مشکلیں کھولنے والا" },
+            { arabic: "الْعَلِيم", meaning: "سب کچھ جاننے والا" },
+            { arabic: "الْقَابِض", meaning: "تنگی کرنے والا" },
+            { arabic: "الْبَاسِط", meaning: "کشادگی دینے والا" },
+            { arabic: "الْخَافِض", meaning: "پست کرنے والا" },
+            { arabic: "الرَّافِع", meaning: "بلند کرنے والا" },
+            { arabic: "الْمُعِزّ", meaning: "عزت دینے والا" },
+            { arabic: "الْمُذِلّ", meaning: "ذلت دینے والا" },
+            { arabic: "السَّمِيع", meaning: "سب کچھ سننے والا" },
+            { arabic: "الْبَصِير", meaning: "سب کچھ دیکھنے والا" },
+            { arabic: "الْحَكَم", meaning: "فیصلہ کرنے والا" },
+            { arabic: "الْعَدْل", meaning: "نہایت انصاف کرنے والا" },
+            { arabic: "اللَّطِيف", meaning: "نہایت مہربان و باریک بین" },
+            { arabic: "الْخَبِير", meaning: "ہر چیز سے باخبر" },
+            { arabic: "الْحَلِيم", meaning: "بہت بردبار" },
+            { arabic: "الْعَظِيم", meaning: "نہایت عظمت والا" },
+            { arabic: "الْغَفُور", meaning: "بہت بخشنے والا" },
+            { arabic: "الشَّكُور", meaning: "قدردان اور اجر دینے والا" },
+            { arabic: "الْعَلِيّ", meaning: "سب سے بلند" },
+            { arabic: "الْكَبِير", meaning: "سب سے بڑا" },
+            { arabic: "الْحَفِيظ", meaning: "حفاظت کرنے والا" },
+            { arabic: "الْمُقِيت", meaning: "روزی اور قوت دینے والا" },
+            { arabic: "الْحَسِيب", meaning: "حساب لینے والا" },
+            { arabic: "الْجَلِيل", meaning: "عظمت و جلال والا" },
+            { arabic: "الْكَرِيم", meaning: "بہت کرم کرنے والا" },
+            { arabic: "الرَّقِيب", meaning: "نگرانی کرنے والا" },
+            { arabic: "الْمُجِيب", meaning: "دعائیں قبول کرنے والا" },
+            { arabic: "الْوَاسِع", meaning: "بڑی وسعت والا" },
+            { arabic: "الْحَكِيم", meaning: "نہایت حکمت والا" },
+            { arabic: "الْوَدُود", meaning: "بہت محبت کرنے والا" },
+            { arabic: "الْمَجِيد", meaning: "بڑی شان و بزرگی والا" },
+            { arabic: "الْبَاعِث", meaning: "دوبارہ اٹھانے والا" },
+            { arabic: "الشَّهِيد", meaning: "ہر چیز کا گواہ" },
+            { arabic: "الْحَقّ", meaning: "برحق" },
+            { arabic: "الْوَكِيل", meaning: "کارساز" },
+            { arabic: "الْقَوِيّ", meaning: "نہایت طاقتور" },
+            { arabic: "الْمَتِين", meaning: "بہت مضبوط" },
+            { arabic: "الْوَلِيّ", meaning: "مددگار و سرپرست" },
+            { arabic: "الْحَمِيد", meaning: "قابلِ حمد و تعریف" },
+            { arabic: "الْمُحْصِي", meaning: "ہر چیز کا شمار رکھنے والا" },
+            { arabic: "الْمُبْدِئ", meaning: "پہلی بار پیدا کرنے والا" },
+            { arabic: "الْمُعِيد", meaning: "دوبارہ پیدا کرنے والا" },
+            { arabic: "الْمُحْيِي", meaning: "زندگی دینے والا" },
+            { arabic: "الْمُمِيت", meaning: "موت دینے والا" },
+            { arabic: "الْحَيّ", meaning: "ہمیشہ زندہ رہنے والا" },
+            { arabic: "الْقَيُّوم", meaning: "سب کو قائم رکھنے والا" },
+            { arabic: "الْوَاجِد", meaning: "ہر چیز کو پانے والا" },
+            { arabic: "الْمَاجِد", meaning: "بزرگی و شرف والا" },
+            { arabic: "الْوَاحِد", meaning: "اکیلا اور یکتا" },
+            { arabic: "الْأَحَد", meaning: "ایک اور بے مثال" },
+            { arabic: "الصَّمَد", meaning: "بے نیاز، سب کا سہارا" },
+            { arabic: "الْقَادِر", meaning: "ہر چیز پر قدرت رکھنے والا" },
+            { arabic: "الْمُقْتَدِر", meaning: "کامل قدرت والا" },
+            { arabic: "الْمُقَدِّم", meaning: "آگے کرنے والا" },
+            { arabic: "الْمُؤَخِّر", meaning: "پیچھے کرنے والا" },
+            { arabic: "الْأَوَّل", meaning: "سب سے پہلے" },
+            { arabic: "الْآخِر", meaning: "سب سے آخر" },
+            { arabic: "الظَّاهِر", meaning: "ظاہر و غالب" },
+            { arabic: "الْبَاطِن", meaning: "پوشیدہ اور باطن سے باخبر" },
+            { arabic: "الْوَالِي", meaning: "حاکم و کارساز" },
+            { arabic: "الْمُتَعَالِي", meaning: "نہایت بلند و برتر" },
+            { arabic: "الْبَرّ", meaning: "نیکی اور احسان کرنے والا" },
+            { arabic: "التَّوَّاب", meaning: "توبہ قبول کرنے والا" },
+            { arabic: "الْمُنْتَقِم", meaning: "بدلہ لینے والا" },
+            { arabic: "الْعَفُوّ", meaning: "بہت معاف کرنے والا" },
+            { arabic: "الرَّؤُوف", meaning: "نہایت شفقت کرنے والا" },
+            { arabic: "مَالِكُ الْمُلْك", meaning: "تمام بادشاہی کا مالک" },
+            { arabic: "ذُو الْجَلَالِ وَالْإِكْرَام", meaning: "جلال اور اکرام والا" },
+            { arabic: "الْمُقْسِط", meaning: "انصاف قائم کرنے والا" },
+            { arabic: "الْجَامِع", meaning: "جمع کرنے والا" },
+            { arabic: "الْغَنِيّ", meaning: "بے نیاز" },
+            { arabic: "الْمُغْنِي", meaning: "بے نیاز کرنے والا" },
+            { arabic: "الْمَانِع", meaning: "روکنے والا" },
+            { arabic: "الضَّارّ", meaning: "ضرر پر قادر" },
+            { arabic: "النَّافِع", meaning: "نفع پہنچانے والا" },
+            { arabic: "النُّور", meaning: "نور دینے والا" },
+            { arabic: "الْهَادِي", meaning: "ہدایت دینے والا" },
+            { arabic: "الْبَدِيع", meaning: "بے مثال پیدا کرنے والا" },
+            { arabic: "الْبَاقِي", meaning: "ہمیشہ باقی رہنے والا" },
+            { arabic: "الْوَارِث", meaning: "سب کے بعد باقی رہنے والا" },
+            { arabic: "الرَّشِيد", meaning: "درست راہ دکھانے والا" },
+            { arabic: "الصَّبُور", meaning: "نہایت صبر والا" }
+        ];
+
+        function rotateHeaderName() {
+            const arabicEl = document.getElementById('header-arabic');
+            const meaningEl = document.getElementById('header-meaning');
+            if (!arabicEl || !meaningEl) return;
+
+            let currentIndex = 0;
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % asmaUlHusnaList.length;
+                const current = asmaUlHusnaList[currentIndex];
+                arabicEl.innerText = current.arabic;
+                meaningEl.innerText = current.meaning;
+            }, 3000);
+        }
+
+        // Handouts Logic (All Departments Display)
+        function formatDriveUrl(link) {
+            if (!link || link === "not_found.html") return "not_found.html";
+            return link.startsWith('http') ? link : `https://drive.google.com/uc?export=download&id=${link}`;
+        }
+
+        function renderSubjects() {
+            const query = document.getElementById('searchInput').value.toLowerCase().trim();
+            const container = document.getElementById('departmentsContainer');
+            const noResult = document.getElementById('noResult');
+
+            container.innerHTML = `
+        <div id="loadingSpinner" class="flex flex-col items-center justify-center py-16 my-8 w-full">
+            <div class="relative w-12 h-12 mb-3">
+                <div class="w-12 h-12 rounded-full border-4 border-slate-200 dark:border-slate-800 border-t-blue-600 dark:border-t-blue-400 animate-spin"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <i class="fa-solid fa-graduation-cap text-xs text-blue-600 dark:text-blue-400"></i>
+                </div>
+            </div>
+            <h3 class="text-xs md:text-sm font-bold text-slate-700 dark:text-slate-200 tracking-wide uppercase">
+                Loading Handouts Database... Please Wait 2 Seconds...
+            </h3>
+            <p class="text-[11px] text-slate-400 dark:text-slate-500 mt-1 font-medium">Please wait a moment</p>
+        </div>
+    `;
+
+            setTimeout(() => {
+                container.innerHTML = ''; 
+
+                const filtered = subjectsData.filter(item => {
+                    return item.id.toLowerCase().includes(query) || item.name.toLowerCase().includes(query);
+                });
+
+                document.getElementById('countDisplay').innerText = `${filtered.length} Subjects`;
+
+                if (filtered.length === 0) {
+                    noResult.classList.remove('hidden');
+                    return;
+                } else {
+                    noResult.classList.add('hidden');
+                }
+
+                const grouped = {};
+                filtered.forEach(item => {
+                    if (!grouped[item.dept]) grouped[item.dept] = [];
+                    grouped[item.dept].push(item);
+                });
+
+                const sortedDeptKeys = Object.keys(grouped).sort((a, b) => a.localeCompare(b));
+
+                sortedDeptKeys.forEach(deptKey => {
+                    const items = grouped[deptKey];
+                    const deptTitle = (typeof deptNames !== 'undefined' && deptNames[deptKey]) ? deptNames[deptKey] : `${deptKey} Department`;
+
+                    let cardsHTML = '';
+                    items.forEach(item => {
+                        const handoutsUrl = formatDriveUrl(item.handouts);
+                        const highlightedUrl = formatDriveUrl(item.highlighted);
+                        const pptUrl = formatDriveUrl(item.ppt);
+
+                        const highlightedLabel = (item.dept === "MTH") ? "Highlighted / Notes" : "Highlighted";
+
+                        const hidePPTDepartments = ["ISL", "GSC", "PSC"];
+                        let pptButtonHTML = "";
+
+                        if (!hidePPTDepartments.includes(item.dept)) {
+                            if (pptUrl !== "not_found.html") {
+                                pptButtonHTML = `
+                            <a href="${pptUrl}" target="_blank" class="flex items-center justify-center gap-1.5 w-full py-1.5 md:py-2 bg-purple-600 text-white rounded-xl font-bold text-[10px] md:text-xs hover:bg-purple-700 transition shadow-md">
+                                <i class="fa-solid fa-file-powerpoint"></i> PPT
+                            </a>
+                        `;
+                            } else {
+                                pptButtonHTML = `
+                            <button disabled class="flex items-center justify-center gap-1.5 w-full py-1.5 md:py-2 bg-slate-100 dark:bg-slate-800/60 text-slate-400 dark:text-slate-500 rounded-xl font-semibold text-[9px] md:text-[10px] cursor-not-allowed">
+                                <i class="fa-solid fa-ban"></i> PPT N/A
+                            </button>
+                        `;
+                            }
+                        }
+
+                        cardsHTML += `
+    <div class="prep-card-style p-4 md:p-5 rounded-2xl flex flex-col justify-between transition-all duration-200 shadow-sm">
+        <div>
+            <div class="flex justify-between items-center mb-2">
+                <span class="bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-500/20 px-2.5 py-0.5 rounded-md text-[10px] md:text-[11px] font-extrabold uppercase tracking-wider">${item.dept}</span>
+                <i class="fa-solid fa-file-pdf text-red-500 text-sm md:text-base"></i>
+            </div>
+            <h3 class="text-base md:text-lg font-extrabold text-slate-800 dark:text-white mt-0.5 leading-tight">${item.id}</h3>
+            <p class="text-slate-500 dark:text-slate-400 text-xs font-medium mb-4 h-5 md:h-10 overflow-hidden leading-tight truncate md:whitespace-normal">${item.name}</p>
+        </div>
+        
+        <div class="space-y-2">
+            ${handoutsUrl !== "not_found.html" ? `
+                <a href="${handoutsUrl}" target="_blank" class="flex items-center justify-center gap-2 w-full py-2.5 md:py-2 bg-blue-600 text-white rounded-xl font-bold text-xs hover:bg-blue-700 transition shadow-sm active:scale-95">
+                    <i class="fa-solid fa-file-pdf text-sm"></i> Handouts
+                </a>
+            ` : `
+                <button disabled class="flex items-center justify-center gap-2 w-full py-2.5 md:py-2 bg-slate-100 dark:bg-slate-800/60 text-slate-400 dark:text-slate-500 rounded-xl font-semibold text-xs cursor-not-allowed">
+                    <i class="fa-solid fa-ban"></i> Handouts N/A
+                </button>
+            `}
+
+            ${highlightedUrl !== "not_found.html" ? `
+                <a href="${highlightedUrl}" target="_blank" class="flex items-center justify-center gap-2 w-full py-2.5 md:py-2 bg-gradient-to-r from-orange-500 to-yellow-400 text-slate-950 rounded-xl font-bold text-xs hover:bg-yellow-500 transition shadow-sm active:scale-95">
+                    <i class="fa-solid fa-highlighter text-sm"></i> ${highlightedLabel}
+                </a>
+            ` : `
+                <button disabled class="flex items-center justify-center gap-2 w-full py-2.5 md:py-2 bg-slate-100 dark:bg-slate-800/60 text-slate-400 dark:text-slate-500 rounded-xl font-semibold text-xs cursor-not-allowed">
+                    <i class="fa-solid fa-ban"></i> ${highlightedLabel} N/A
+                </button>
+            `}
+
+            ${pptButtonHTML}
+        </div>
+    </div>
+`;
+                    });
+
+                    const sectionHTML = `
+                <section>
+                    <div class="w-full flex items-center gap-3 my-4">
+                        <div class="h-[1px] bg-slate-200 dark:bg-slate-800 flex-1"></div>
+                        <h2 class="text-xs md:text-sm font-extrabold text-blue-600 dark:text-blue-400 uppercase tracking-widest px-3 py-1 bg-blue-50 dark:bg-blue-500/10 rounded-md border border-blue-200 dark:border-blue-500/20">
+                            <i class="fa-solid fa-folder-open mr-1.5"></i> ${deptTitle}
+                        </h2>
+                        <div class="h-[1px] bg-slate-200 dark:bg-slate-800 flex-1"></div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5">
+                        ${cardsHTML}
+                    </div>
+                </section>
+            `;
+
+                    container.innerHTML += sectionHTML;
+                });
+            }, 250); 
+        }
+
+        function resetSearch() {
+            document.getElementById("searchInput").value = "";
+            renderSubjects();
+        }
+
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.documentElement.classList.add('dark');
+                updateThemeUI(true);
+            } else {
+                document.documentElement.classList.remove('dark');
+                updateThemeUI(false);
+            }
+        }
+
+        function toggleTheme() {
+            const isDark = document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateThemeUI(isDark);
+        }
+
+        function updateThemeUI(isDark) {
+            const icon = document.getElementById('themeIcon');
+            const text = document.getElementById('themeText');
+            if (icon && text) {
+                if (isDark) {
+                    icon.className = 'fa-solid fa-moon text-yellow-300';
+                    text.innerText = 'Dark';
+                } else {
+                    icon.className = 'fa-solid fa-sun text-amber-500';
+                    text.innerText = 'Light';
+                }
+            }
+        }
+
+        window.onload = () => {
+            initTheme();
+            rotateHeaderName();
+            renderSubjects();
+        };
+    </script>
 </body>
 
 </html>
