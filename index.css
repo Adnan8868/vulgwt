@@ -1,75 +1,102 @@
- /* <!-- Bot style --> */
+/* =======================
+   Bismillah Calligraphy Style & Translation
+========================== */
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap');
 
- @keyframes scan {
-     0% {
-         transform: translateY(-100%);
-     }
+.bismillah-single-line {
+    font-family: 'Amiri', serif;
+    direction: rtl;
+    font-size: clamp(1.6rem, 4.5vw, 3.2rem);
+    font-weight: 700;
+    color: #fef08a;
+    white-space: nowrap;
+    text-shadow: 0 0 25px rgba(251, 191, 36, 0.6), 0 0 50px rgba(234, 179, 8, 0.4);
+    animation: bismillahFade 1.5s ease forwards;
+}
 
-     100% {
-         transform: translateY(400%);
-     }
- }
+.bismillah-translation {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    direction: rtl;
+    font-size: clamp(0.85rem, 1.8vw, 1.1rem);
+    font-weight: 600;
+    color: #93c5fd; /* Soft light blue */
+    letter-spacing: 0.5px;
+    animation: bismillahFade 1.8s ease forwards;
+}
 
- .log-line {
-     opacity: 0;
-     transform: translateX(-10px);
-     animation: fadeInLog 0.3s forwards;
- }
+@keyframes bismillahFade {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
- @keyframes fadeInLog {
-     to {
-         opacity: 1;
-         transform: translateX(0);
-     }
- }
+/* <!-- Bot style --> */
+@keyframes scan {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(400%); }
+}
 
- /* Other CSS */
- body {
-     font-family: 'Poppins', sans-serif;
-     scroll-behavior: smooth;
- }
+.log-line {
+    opacity: 0;
+    transform: translateX(-10px);
+    animation: fadeInLog 0.3s forwards;
+}
 
- .hero-bg {
-     background: linear-gradient(rgba(30, 58, 138, 0.9), rgba(30, 58, 138, 0.8)),
-         url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-     background-size: cover;
-     background-position: center;
- }
+@keyframes fadeInLog {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
- .nav-glass {
-     background: rgba(255, 255, 255, 0.9);
-     backdrop-filter: blur(10px);
- }
+/* Other CSS */
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
 
- .card-shadow:hover {
-     transform: translateY(-10px);
-     transition: 0.3s;
-     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
- }
+.hero-bg {
+    background: linear-gradient(rgba(30, 58, 138, 0.92), rgba(30, 58, 138, 0.85)),
+        url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+}
 
- /* Scrollbar Styling for Video Grid */
- .custom-scroll::-webkit-scrollbar {
-     width: 6px;
- }
+.nav-glass {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+}
 
- .custom-scroll::-webkit-scrollbar-track {
-     background: #f1f1f1;
-     border-radius: 10px;
- }
+.card-shadow:hover {
+    transform: translateY(-10px);
+    transition: 0.3s;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
 
- .custom-scroll::-webkit-scrollbar-thumb {
-     background: #cbd5e1;
-     border-radius: 10px;
- }
+/* Scrollbar Styling */
+.custom-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+.custom-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+    background: #1e3a8a;
+}
 
- .custom-scroll::-webkit-scrollbar-thumb:hover {
-     background: #1e3a8a;
- }
-
-
- /* Active Navigation Link Style */
+/* Active Navigation Link Style */
 .nav-active {
-    color: #1e40af !important; /* Dark Blue */
+    color: #1e40af !important;
     font-weight: 800 !important;
     position: relative;
 }
@@ -81,20 +108,11 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #fbbf24; /* Yellow underline */
+    background-color: #fbbf24;
 }
 
-
-.nav-glass {
-     background: rgba(255, 255, 255, 0.85);
-     backdrop-filter: blur(12px);
-     -webkit-backdrop-filter: blur(12px);
-     transition: background-color 0.3s ease, border-color 0.3s ease;
- }
-
- /* Dark mode dynamic glass override rule hook */
- html.dark .nav-glass {
-     background: rgba(15, 23, 42, 0.85) !important;
-     backdrop-filter: blur(12px);
-     -webkit-backdrop-filter: blur(12px);
- }
+html.dark .nav-glass {
+    background: rgba(15, 23, 42, 0.85) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
