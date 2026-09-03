@@ -35,25 +35,6 @@
     }
 }
 
-/* <!-- Bot style --> */
-@keyframes scan {
-    0% { transform: translateY(-100%); }
-    100% { transform: translateY(400%); }
-}
-
-.log-line {
-    opacity: 0;
-    transform: translateX(-10px);
-    animation: fadeInLog 0.3s forwards;
-}
-
-@keyframes fadeInLog {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
 /* Other CSS */
 body {
     font-family: 'Poppins', sans-serif;
