@@ -722,7 +722,7 @@ const subjectsData = [
     {
         dept: "STA", id: "STA301", name: "Statistics and Probability",
         handouts: "1W5ja10yhaacRBCnAdiB-amrpwuvcsxwO",
-        highlighted: "https://drive.google.com/drive/folders/173igWwemlNOchHcPOAdN12ooM2xmVxww",
+        highlighted: "https://drive.google.com/file/d/1Rj18u9HXd6Xn-jL7E1oMndD3THY3QvNK",
         ppt: "not_found.html"
     },
 
