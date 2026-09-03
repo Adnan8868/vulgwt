@@ -204,6 +204,14 @@ const subjectsData = [
     },
     {
         dept: "BIO",
+        id: "BIO5101",
+        name: "Introduction to Biotechnology",
+        handouts: "1sw2LKe6v0LZE7O81ckOBQVT7SsxI8UCF",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "BIO",
         id: "BIO5105",
         name: "Cell Biology",
         handouts: "1IcUaj04DJtqfz9MQ7qfHbudokB0Dvh8s",
