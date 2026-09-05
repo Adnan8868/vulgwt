@@ -8,65 +8,70 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            darkMode: 'class',
-        }
+        tailwind.config = { darkMode: 'class' }
     </script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" href="favicon.png" type="image/x-icon">
-    
+
     <style>
-        body { 
-            font-family: 'Poppins', sans-serif; 
+        body {
+            font-family: 'Poppins', sans-serif;
             scroll-behavior: smooth;
         }
+
         .nav-glass {
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(12px);
         }
+
         .dark .nav-glass {
             background: rgba(15, 23, 42, 0.85);
             backdrop-filter: blur(12px);
         }
+
         .tab-btn {
             transition: all 0.25s ease-in-out;
         }
+
         .tab-btn.active {
             background-color: #2563eb !important;
             color: #ffffff !important;
             box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
         }
-        .vault-card { 
-            transition: all 0.25s ease-in-out; 
-        }
-        .vault-card:hover { 
-            transform: translateY(-2px); 
-            border-color: #3b82f6;
+
+        .vault-card {
+            transition: all 0.25s ease-in-out;
         }
     </style>
 </head>
 
-<body class="text-slate-700 dark:text-slate-200 min-h-screen flex flex-col bg-slate-50 dark:bg-slate-950 transition-colors duration-200">
+<body
+    class="text-slate-700 dark:text-slate-200 min-h-screen flex flex-col bg-slate-50 dark:bg-slate-950 transition-colors duration-200">
 
     <!-- Navbar -->
-    <nav class="fixed w-full z-[90] nav-glass border-b border-slate-200 dark:border-slate-800 h-20 flex items-center justify-between px-6 md:px-16 shadow-xs">
-        <div class="flex items-center gap-3">
-            <div class="w-10 h-10 bg-gradient-to-tr from-blue-600 to-blue-400 rounded-xl flex items-center justify-center text-white text-base shadow-md shadow-blue-500/20">
+    <nav
+        class="fixed w-full z-[90] nav-glass border-b border-slate-200 dark:border-slate-800 h-20 flex items-center justify-between px-4 md:px-16 shadow-xs">
+        <div class="flex items-center gap-2.5 min-w-0">
+            <div
+                class="w-9 h-9 md:w-10 md:h-10 bg-gradient-to-tr from-blue-600 to-blue-400 rounded-xl flex items-center justify-center text-white text-sm md:text-base shadow-md shadow-blue-500/20 shrink-0">
                 <i class="fa-solid fa-graduation-cap"></i>
             </div>
-            <div class="text-xl md:text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+            <div
+                class="text-sm sm:text-base md:text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight whitespace-nowrap overflow-hidden text-ellipsis">
                 VU STUDY <span class="text-amber-500">LGWT</span>
             </div>
         </div>
 
-        <div class="flex items-center gap-3">
-            <!-- Theme Toggle Button -->
-            <button onclick="toggleTheme()" class="flex items-center gap-2 text-xs font-semibold bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 transition-all shadow-xs">
+        <div class="flex items-center gap-2 shrink-0">
+            <button onclick="toggleTheme()"
+                class="flex items-center gap-1.5 text-xs font-semibold bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 px-3 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 transition-all shadow-xs">
                 <i id="themeIcon" class="fa-solid fa-sun text-amber-500"></i>
-                <span id="themeText">Light</span>
+                <span id="themeText" class="hidden sm:inline">Light</span>
             </button>
-            <a href="index.html" class="flex items-center gap-2 text-xs font-semibold bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 transition-all shadow-xs">
+            <a href="index.html"
+                class="flex items-center gap-1.5 text-xs font-semibold bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 transition-all shadow-xs">
                 <i class="fa-solid fa-house text-[10px] text-blue-600 dark:text-blue-400"></i> Home
             </a>
         </div>
@@ -75,57 +80,69 @@
     <main class="flex-grow pt-28 pb-20 px-4 md:px-8 max-w-5xl mx-auto w-full">
         <div class="space-y-6">
 
-            <!-- Hidden Elements for script compatibility -->
-            <div class="hidden">
-                <h1 id="vault-subtitle"></h1>
-                <div id="counter-badge"></div>
-            </div>
-
             <!-- Header Info -->
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pt-0.5">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
-                    <h2 class="text-xl md:text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight">Mid & Final Term Drive Links</h2>
-                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5 font-medium">Quickly browse and copy organized subject drive links.</p>
+                    <h2
+                        class="text-xl md:text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                        Mid & Final Term Drive Links Hub</h2>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5 font-medium">Browse folders,
+                        scan contents live, or open them directly.</p>
                 </div>
                 <div class="flex items-center">
-                    <span id="countDisplay" class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 px-3.5 py-1.5 rounded-xl text-xs font-semibold shadow-xs flex items-center gap-2">
+                    <span id="countDisplay"
+                        class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 px-3.5 py-1.5 rounded-xl text-xs font-semibold shadow-xs flex items-center gap-2">
                         <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                         <span id="dynamic-count-text">Loading...</span>
                     </span>
                 </div>
             </div>
 
-            <!-- Single Search Bar -->
+            <!-- Global Search Bar -->
             <div class="relative shadow-xs rounded-xl">
                 <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-slate-400">
                     <i class="fa-solid fa-magnifying-glass text-xs"></i>
                 </span>
-                <input type="text" id="vault-search" oninput="filterVault()" placeholder="Search by name or subject (e.g. Attiq Kundi, CS101)..." 
-                    class="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl pl-11 pr-4 py-3 text-xs font-medium text-slate-800 dark:text-slate-200 placeholder-slate-400 focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-500/10 transition-all">
+                <input type="text" id="vault-search" oninput="filterVault()"
+                    placeholder="Search folders by name (e.g. Attiq Kundi, VU Talk)..."
+                    class="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl pl-11 pr-4 py-3 text-xs font-medium text-slate-800 dark:text-slate-200 placeholder-slate-400 focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 transition-all">
             </div>
 
             <!-- Tab Navigation Container -->
-            <div id="tab-navigation-container" class="grid grid-cols-2 md:grid-cols-5 gap-2 bg-white dark:bg-slate-900 p-2 rounded-2xl shadow-xs border border-slate-200 dark:border-slate-800">
-                <button onclick="switchTab('mid')" id="tab-btn-mid" class="tab-btn active py-2.5 px-2 rounded-xl font-semibold text-[11px] text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800/80 hover:bg-slate-100 dark:hover:bg-slate-800 text-center">Midterm Only</button>
-                <button onclick="switchTab('final')" id="tab-btn-final" class="tab-btn py-2.5 px-2 rounded-xl font-semibold text-[11px] text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800/80 hover:bg-slate-100 dark:hover:bg-slate-800 text-center">Finalterm Only</button>
-                <button onclick="switchTab('mix')" id="tab-btn-mix" class="tab-btn py-2.5 px-2 rounded-xl font-semibold text-[11px] text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800/80 hover:bg-slate-100 dark:hover:bg-slate-800 text-center">Mid & Final Mix</button>
-                <button onclick="switchTab('newquiz')" id="tab-btn-newquiz" class="tab-btn py-2.5 px-2 rounded-xl font-semibold text-[11px] text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800/80 hover:bg-slate-100 dark:hover:bg-slate-800 text-center">Latest Quizzes</button>
-                <button onclick="switchTab('subwise')" id="tab-btn-subwise" class="tab-btn py-2.5 px-2 rounded-xl font-semibold text-[11px] text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800/80 hover:bg-slate-100 dark:hover:bg-slate-800 text-center">Subject Wise Data</button>
+            <div id="tab-navigation-container"
+                class="grid grid-cols-2 md:grid-cols-4 gap-2 bg-white dark:bg-slate-900 p-2 rounded-2xl shadow-xs border border-slate-200 dark:border-slate-800">
+                <button onclick="switchTab('mid')" id="tab-btn-mid"
+                    class="tab-btn active py-2.5 px-2 rounded-xl font-semibold text-[11px] text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 text-center">Midterm
+                    Only</button>
+                <button onclick="switchTab('final')" id="tab-btn-final"
+                    class="tab-btn py-2.5 px-2 rounded-xl font-semibold text-[11px] text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 text-center">Finalterm
+                    Only</button>
+                <button onclick="switchTab('mix')" id="tab-btn-mix"
+                    class="tab-btn py-2.5 px-2 rounded-xl font-semibold text-[11px] text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 text-center">Mid
+                    & Final Mix</button>
+                <button onclick="switchTab('newquiz')" id="tab-btn-newquiz"
+                    class="tab-btn py-2.5 px-2 rounded-xl font-semibold text-[11px] text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 text-center">Latest
+                    Quizzes</button>
             </div>
 
             <!-- Bulk Actions Panel -->
-            <div id="bulk-actions-panel" class="bg-gradient-to-r from-slate-900 to-blue-950 rounded-xl p-3.5 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3 border border-slate-800">
+            <div id="bulk-actions-panel"
+                class="bg-gradient-to-r from-slate-900 to-blue-950 rounded-xl p-3.5 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3 border border-slate-800">
                 <div class="text-center sm:text-left">
-                    <p class="text-[10px] font-bold tracking-wider text-amber-400 uppercase flex items-center justify-center sm:justify-start gap-1.5">
+                    <p
+                        class="text-[10px] font-bold tracking-wider text-amber-400 uppercase flex items-center justify-center sm:justify-start gap-1.5">
                         <i class="fa-solid fa-share-nodes"></i> Bulk Actions
                     </p>
-                    <p id="bulk-panel-desc" class="text-slate-300 font-normal text-[11px] mt-0.5">Copy or share all links listed in this current section.</p>
+                    <p id="bulk-panel-desc" class="text-slate-300 font-normal text-[11px] mt-0.5">Copy or
+                        share all links listed in this current section.</p>
                 </div>
                 <div class="flex items-center gap-2 w-full sm:w-auto">
-                    <button onclick="handleBulkAction('copy')" id="master-bulk-copy-btn" class="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 text-[11px] font-semibold bg-white hover:bg-slate-100 text-slate-900 px-3.5 py-2 rounded-lg transition-all active:scale-95 shadow-xs">
+                    <button onclick="handleBulkAction('copy')" id="master-bulk-copy-btn"
+                        class="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 text-[11px] font-semibold bg-white hover:bg-slate-100 text-slate-900 px-3.5 py-2 rounded-lg transition-all active:scale-95 shadow-xs">
                         <i class="fa-regular fa-copy text-blue-600"></i> Copy List
                     </button>
-                    <button onclick="handleBulkAction('whatsapp')" class="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 text-[11px] font-semibold bg-emerald-600 hover:bg-emerald-500 text-white px-3.5 py-2 rounded-lg transition-all active:scale-95 shadow-xs">
+                    <button onclick="handleBulkAction('whatsapp')"
+                        class="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 text-[11px] font-semibold bg-emerald-600 hover:bg-emerald-500 text-white px-3.5 py-2 rounded-lg transition-all active:scale-95 shadow-xs">
                         <i class="fa-brands fa-whatsapp"></i> WhatsApp
                     </button>
                 </div>
@@ -137,25 +154,28 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-slate-900 dark:bg-slate-950 text-white pt-12 pb-10 px-6 md:px-16 border-t border-slate-800 dark:border-slate-900">
+    <footer class="bg-slate-900 text-white pt-12 pb-10 px-6 md:px-16 border-t border-slate-800">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="text-slate-400 text-xs font-medium text-center md:text-left leading-relaxed">
-                &copy; 2026 <span class="text-slate-200 font-semibold">LGWT Official</span>. Crafted for Virtual University Students.
+            <div class="text-slate-400 text-xs font-medium text-center md:text-left">
+                &copy; 2026 <span class="text-slate-200 font-semibold">LGWT Official</span>. Crafted for VU
+                Students.
             </div>
             <div class="text-slate-500 text-[10px] uppercase tracking-[0.2em] font-semibold">
-                Learning <span class="text-blue-400">&</span> Growing <span class="text-amber-400">With Team</span>
+                Learning <span class="text-blue-400">&</span> Growing <span class="text-amber-400">With
+                    Team</span>
             </div>
         </div>
     </footer>
 
     <script>
+        const SCANNER_API_URL = "https://script.google.com/macros/s/AKfycbwoyWvKyKONEAccRcPWMZIowwFChH_Uemgfc2oZ2ukvo2l5CywoCK4FePnO24bN_2aVZg/exec";
+
         const mainVaultData = {
             mid: [
                 { name: "Mid All Data Drive (Attiq Kundi)", desc: "", badge: "Mega Mid Drive", icon: "fa-folder-open", color: "text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-500/10 border-purple-100 dark:border-purple-500/20", url: "https://drive.google.com/drive/folders/1xnMat0LNYkpkWSwWWWiNFU4rV45vzdEL" },
                 { name: "Midterm Data Node By VU TALK", desc: "", badge: "VU Talk Mid", icon: "fa-folder-open", color: "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-500/10 border-blue-100 dark:border-blue-500/20", url: "https://drive.google.com/drive/folders/1ArwT9HcZQ0E6LujnPiPzoC3Sv56eNPZK" },
                 { name: "PRO 2022 Midterm Mega Drive", desc: "", badge: "Archive Drive", icon: "fa-database", color: "text-slate-600 dark:text-slate-400 bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-800", url: "https://drive.google.com/drive/folders/1HVEfmK1OQZKZYAbkBUali0Et1zTFeeCl" },
-                { name: "Biological Science", desc: "", badge: "Bio", icon: "fa-database", color: "text-slate-600 dark:text-slate-400 bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-800", url: "https://drive.google.com/drive/folders/1DXn42cd0TnmGSqdTpfywGmtKImoHF-NV" },
+                { name: "Biological Science Mid Term Only", desc: "", badge: "Bio", icon: "fa-database", color: "text-slate-600 dark:text-slate-400 bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-800", url: "https://drive.google.com/drive/folders/1DXn42cd0TnmGSqdTpfywGmtKImoHF-NV" },
                 { name: "Team Hadi Mid-Term", desc: "", badge: "Team Hadi", icon: "fa-database", color: "text-slate-600 dark:text-slate-400 bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-800", url: "https://drive.google.com/drive/folders/1tQb0qKW8KE4p8O1Xawf917CI683JnkMT" },
                 { name: "VU Topper Mid-Term", desc: "", badge: "VU Topper", icon: "fa-database", color: "text-slate-600 dark:text-slate-400 bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-800", url: "https://drive.google.com/drive/folders/1swAsTvjQ4mkJUQrJrjzYT1iVGrsad09H" },
                 { name: "VU File Mid Term", desc: "", badge: "Vu File", icon: "fa-database", color: "text-slate-600 dark:text-slate-400 bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-800", url: "https://drive.google.com/drive/folders/1jltMuKf0h6RAbXqQ7OCyHG7CpWxxXc0g" },
@@ -165,19 +185,25 @@
                 { name: "Final Term Attiq Kundi Drive 1", desc: "", badge: "Mega Drive", icon: "fa-folder-open", color: "text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-500/10 border-rose-100 dark:border-rose-500/20", url: "https://drive.google.com/drive/folders/10GG0S4v28Vo2yde_ba18NMmG1Nxwl3q8" },
                 { name: "Final Term Attiq Kundi Drive 2", desc: "", badge: "Mega Drive", icon: "fa-folder-open", color: "text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-500/10 border-rose-100 dark:border-rose-500/20", url: "https://drive.google.com/drive/folders/1opOEKdl6UpcQn_BAadopZDF561txt59P" },
                 { name: "Pro Final VU TALK", desc: "", badge: "VU Talk", icon: "fa-folder-open", color: "text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-500/10 border-rose-100 dark:border-rose-500/20", url: "https://drive.google.com/drive/folders/1QI9_QgYZU88uulylWksI3mKXECYDkSHB" },
-                { name: "Biological Science", desc: "", badge: "Bio", icon: "fa-folder-open", color: "text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-500/10 border-rose-100 dark:border-rose-500/20", url: "https://drive.google.com/drive/folders/17RTgzLuloAXAjl0mCYfMWDDxC7eo9ovG" },
+                { name: "Biological Science Final Only", desc: "", badge: "Bio", icon: "fa-folder-open", color: "text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-500/10 border-rose-100 dark:border-rose-500/20", url: "https://drive.google.com/drive/folders/17RTgzLuloAXAjl0mCYfMWDDxC7eo9ovG" },
                 { name: "Afsand Yar Khan Final Collection", desc: "", badge: "Core Finals", icon: "fa-scroll", color: "text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-500/10 border-rose-100 dark:border-rose-500/20", url: "https://drive.google.com/drive/folders/1ZCeUHM8vXczv8ye6a0jfrcNjLi9-qgS7" },
                 { name: "Final Term VU QUIZ ARTIST", desc: "", badge: "Quiz Artist", icon: "fa-star", color: "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-500/10 border-blue-100 dark:border-blue-500/20", url: "https://drive.google.com/drive/folders/11gLeO_CnEFnU5yEdvgkEUQNgjhUQx0g5" },
             ],
 
             mix: [
-                { name: "Mughal Organized Master Drive Folder Mid & Final", desc: "", badge: "Mughal Mix", icon: "fa-cubes", color: "text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-500/10 border-purple-100 dark:border-purple-500/20", url: "https://drive.google.com/drive/folders/1gn9vOlBosa4sco-W_NvgGWgCV432sLdu" },
+                { name: "Haseeb Mughal Drive Mid & Final", desc: "", badge: "Mughal Mix", icon: "fa-cubes", color: "text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-500/10 border-purple-100 dark:border-purple-500/20", url: "https://drive.google.com/drive/folders/1gn9vOlBosa4sco-W_NvgGWgCV432sLdu" },
                 { name: "ZOOLOGY Legends By Zaman", desc: "", badge: "Zaman Hub", icon: "fa-server", color: "text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-500/10 border-indigo-100 dark:border-indigo-500/20", url: "https://drive.google.com/drive/folders/18XX5kpRc1150FVti-kDjvto25xKbmEtO" },
                 { name: "ALL ZOO SEMSTER", desc: "", badge: "Zoo Codes", icon: "fa-server", color: "text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-500/10 border-indigo-100 dark:border-indigo-500/20", url: "https://drive.google.com/drive/folders/1AW5xcAeABpWu9ZNx8fCKDi6Eh1H-Yn50" },
                 { name: "BIO, BT, ZOO", desc: "", badge: "Bio/BT/Zoo", icon: "fa-server", color: "text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-500/10 border-indigo-100 dark:border-indigo-500/20", url: "https://drive.google.com/drive/folders/1Vj6_3QoLYZgRhl0ADVH9jbloQ2jDz-gG" },
                 { name: "Biological Students Study Material", desc: "", badge: "Mid & Final", icon: "fa-server", color: "text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-500/10 border-indigo-100 dark:border-indigo-500/20", url: "https://drive.google.com/drive/folders/1e86UwiTdTO5uun4newSAn4YepBfIHj8o" },
                 { name: "Hamza Hassan", desc: "", badge: "Hamza Hassan", icon: "fa-server", color: "text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-500/10 border-rose-100 dark:border-rose-500/20", url: "https://drive.google.com/drive/folders/1i3v79NvfvB6-gCq1KgB-jwSLl3OoX9_O" },
                 { name: "Bio Mid And Final by Zain", desc: "", badge: "Zain Bio", icon: "fa-server", color: "text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-500/10 border-rose-100 dark:border-rose-500/20", url: "https://drive.google.com/drive/folders/1otdtBp0wTC9KseXTAG7lf35VGbrQjw3k?direction=a" },
+                { name: "MS Rehman Mid&Final", desc: "", badge: "VU MS", icon: "fa-server", color: "text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-500/10 border-rose-100 dark:border-rose-500/20", url: "https://drive.google.com/drive/folders/1WZDwl_s-gErmAXcHUWA1cZiAXIpAkfXl" },
+                { name: "Math Helper YT", desc: "", badge: "Math Helper", icon: "fa-server", color: "text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-500/10 border-rose-100 dark:border-rose-500/20", url: "https://drive.google.com/drive/folders/1C7DLWnbNMV0NT-QzQ3NAaLGr_LrYE7Bi" },
+                { name: "All Subject MS", desc: "", badge: "MS Rehman", icon: "fa-server", color: "text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-500/10 border-rose-100 dark:border-rose-500/20", url: "https://drive.google.com/drive/folders/1Rdbj8LilrumE7GBrNbRgYGauwbPC0Ubb" },
+                { name: "BS English 1", desc: "", badge: "BS English", icon: "fa-server", color: "text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-500/10 border-rose-100 dark:border-rose-500/20", url: "https://drive.google.com/drive/folders/1aTauls0Dk4EhLbc-TTppsPBI9yg_EdFe" },
+                { name: "BS English 2", desc: "", badge: "BS English", icon: "fa-server", color: "text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-500/10 border-rose-100 dark:border-rose-500/20", url: "https://drive.google.com/drive/folders/1Xz63_AjPCJ3x2Fl3nIIBP4554R2iKeqf" },
+                { name: "BS English 3", desc: "", badge: "Some Maha", icon: "fa-server", color: "text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-500/10 border-rose-100 dark:border-rose-500/20", url: "https://drive.google.com/drive/folders/1kcy9vLk541hy2JZ5IucOyuCtmCyYwEeC" },
             ],
 
             newquiz: [
@@ -190,81 +216,53 @@
             subwise: []
         };
 
-        const tabNamesMapping = {
-            mid: "Midterm Specifics",
-            final: "Finalterm Specifics",
-            mix: "Mid & Final Mix",
-            newquiz: "Latest Quizzes Bank",
-            subwise: "Subject Wise Data"
-        };
-
+        const tabNamesMapping = { mid: "Midterm", final: "Finalterm", mix: "Mix", newquiz: "Quizzes" };
         let currentActiveTab = 'mid';
-        let currentRenderedItems = []; 
+        let currentRenderedItems = [];
 
-        // Core Render Engine
-        function displayTabContent(items, isGlobalSearch = false) {
+        function displayTabContent(items) {
             const target = document.getElementById('vault-cards-target');
-            const counter = document.getElementById('counter-badge');
-            const dynamicCountText = document.getElementById('dynamic-count-text');
             const bulkPanel = document.getElementById('bulk-actions-panel');
-            
-            currentRenderedItems = items; 
-            const countString = `${items.length} Folders`;
-            counter.innerText = countString;
-            dynamicCountText.innerText = countString;
+            currentRenderedItems = items;
+
+            document.getElementById('dynamic-count-text').innerText = `${items.length} Folders`;
 
             if (items.length === 0) {
-                bulkPanel.classList.add('hidden'); 
-                target.innerHTML = `
-                    <div class="text-center py-12 bg-white dark:bg-slate-900 border border-dashed border-slate-300 dark:border-slate-800 rounded-2xl shadow-xs">
-                        <div class="w-10 h-10 bg-slate-100 dark:bg-slate-800 text-slate-400 dark:text-slate-500 rounded-full flex items-center justify-center text-base mx-auto mb-2">
-                            <i class="fa-solid fa-folder-open"></i>
-                        </div>
-                        <p class="text-xs font-semibold text-slate-600 dark:text-slate-400">No resources found matching search</p>
-                    </div>
-                `;
+                bulkPanel.classList.add('hidden');
+                target.innerHTML = `<div class="text-center py-10 bg-white dark:bg-slate-900 border rounded-xl text-xs">No folders found.</div>`;
                 return;
             }
 
             bulkPanel.classList.remove('hidden');
-            document.getElementById('bulk-panel-desc').innerText = isGlobalSearch 
-                ? `Copy or share all ${items.length} filtered search matching items instantly.`
-                : `Copy or share all ${items.length} folders of ${tabNamesMapping[currentActiveTab]} category.`;
 
             target.innerHTML = items.map((item, index) => `
-                <div class="vault-card bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 p-3.5 md:p-4 rounded-xl flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between shadow-xs">
-                    <div class="flex gap-3 items-center min-w-0 w-full">
-                        <div class="w-10 h-10 rounded-lg flex items-center justify-center text-xs shrink-0 border ${item.color || 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-500/10 border-blue-100 dark:border-blue-500/20'}">
-                            <i class="fa-solid ${item.icon}"></i>
-                        </div>
-                        <div class="min-w-0 flex-1">
-                            <div class="flex flex-wrap items-center gap-1.5 mb-1">
-                                <span class="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 px-2 py-0.5 rounded font-semibold text-[9px] uppercase tracking-wide">
-                                    ${item.badge}
-                                </span>
-                                ${isGlobalSearch && item.originTab ? `
-                                    <span class="bg-blue-50 dark:bg-blue-500/10 text-blue-700 dark:text-blue-400 border border-blue-100 dark:border-blue-500/20 px-2 py-0.5 rounded font-semibold text-[9px] uppercase tracking-wide">
-                                        ${tabNamesMapping[item.originTab]}
-                                    </span>
-                                ` : ''}
+                <div class="vault-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 rounded-xl shadow-xs space-y-3">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                        <div class="flex items-center gap-3 min-w-0">
+                            <div class="w-10 h-10 rounded-lg flex items-center justify-center text-blue-600 bg-blue-50 dark:bg-slate-800 shrink-0">
+                                <i class="fa-solid fa-folder-open"></i>
                             </div>
-                            <h3 class="text-xs md:text-sm font-semibold text-slate-900 dark:text-white truncate">
-                                ${item.name}
-                            </h3>
+                            <div class="min-w-0">
+                                <span class="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded font-semibold text-[9px] uppercase">${item.badge}</span>
+                                <h3 class="text-xs md:text-sm font-semibold text-slate-900 dark:text-white truncate mt-1">${item.name}</h3>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 w-full sm:w-auto justify-end flex-wrap">
+                            <button onclick="copySingleResource(this, '${btoa(encodeURIComponent(item.name))}', '${item.url}')" 
+                                class="px-3 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-semibold rounded-lg text-xs uppercase flex items-center gap-1.5 border border-slate-200 dark:border-slate-700">
+                                <i class="fa-regular fa-copy text-xs"></i> <span>Copy</span>
+                            </button>
+                            <button onclick="scanFolderContent('${item.url}', 'files-container-${index}')" class="px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg text-xs uppercase flex items-center gap-1.5 shadow-sm">
+                                <i class="fa-solid fa-magnifying-glass-plus text-xs"></i> Scan
+                            </button>
+                            <a href="${item.url}" target="_blank" class="px-3.5 py-2 bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold rounded-lg text-xs uppercase flex items-center gap-1">
+                                Open <i class="fa-solid fa-external-link text-[10px]"></i>
+                            </a>
                         </div>
                     </div>
-                    
-                    <div class="w-full sm:w-auto shrink-0 flex items-center gap-2">
-                        <button onclick="copySingleResource(this, '${btoa(encodeURIComponent(item.name))}', '${item.url}')" 
-                            class="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 text-[11px] font-semibold bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 px-3.5 py-2 rounded-lg transition-all active:scale-95 border border-slate-200 dark:border-slate-700" 
-                            title="Copy Link">
-                            <i class="fa-regular fa-copy text-xs"></i> <span>Copy</span>
-                        </button>
-                        
-                        <a href="${item.url}" target="_blank" class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 text-[11px] font-semibold bg-amber-400 hover:bg-amber-300 text-slate-950 px-4 py-2 rounded-lg shadow-xs transition-all active:scale-95">
-                            Open <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-70"></i>
-                        </a>
-                    </div>
+
+                    <!-- Hidden container where scanned files will load -->
+                    <div id="files-container-${index}" class="hidden pt-3 border-t border-slate-100 dark:border-slate-800 space-y-2"></div>
                 </div>
             `).join('');
         }
@@ -278,12 +276,12 @@
 
             navigator.clipboard.writeText(formattedText).then(() => {
                 const originalContent = btnElement.innerHTML;
-                btnElement.innerHTML = `<i class="fa-solid fa-check text-emerald-600 dark:text-emerald-400"></i> <span>Copied!</span>`;
-                btnElement.classList.add('bg-emerald-50', 'dark:bg-emerald-500/10', 'border-emerald-200', 'dark:border-emerald-500/20', 'text-emerald-700', 'dark:text-emerald-400');
+                btnElement.innerHTML = `<i class="fa-solid fa-check text-emerald-600"></i> <span>Copied!</span>`;
+                btnElement.classList.add('bg-emerald-50', 'border-emerald-300', 'text-emerald-700');
 
                 setTimeout(() => {
                     btnElement.innerHTML = originalContent;
-                    btnElement.classList.remove('bg-emerald-50', 'dark:bg-emerald-500/10', 'border-emerald-200', 'dark:border-emerald-500/20', 'text-emerald-700', 'dark:text-emerald-400');
+                    btnElement.classList.remove('bg-emerald-50', 'border-emerald-300', 'text-emerald-700');
                 }, 1500);
             });
         }
@@ -321,7 +319,7 @@
                 navigator.clipboard.writeText(compiledMessageText).then(() => {
                     const copyMasterBtn = document.getElementById('master-bulk-copy-btn');
                     const originalBtnHtml = copyMasterBtn.innerHTML;
-                    
+
                     copyMasterBtn.innerHTML = `<i class="fa-solid fa-square-check text-emerald-600"></i> List Copied!`;
                     copyMasterBtn.classList.add('bg-emerald-50', 'text-emerald-900', 'border-emerald-300');
 
@@ -336,84 +334,133 @@
             }
         }
 
-        // Tab Switching Logic
-        function switchTab(tabKey) {
-            currentActiveTab = tabKey;
-            
-            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-            document.getElementById(`tab-btn-${tabKey}`).classList.add('active');
-            
-            document.getElementById('vault-search').value = '';
-            document.getElementById('tab-navigation-container').classList.remove('opacity-40', 'pointer-events-none');
-            
-            displayTabContent(mainVaultData[tabKey], false);
+        // Live Scanner function for specific folder card
+        function scanFolderContent(folderUrl, containerId) {
+            const container = document.getElementById(containerId);
+            container.classList.remove('hidden');
+            container.innerHTML = `
+                <div class="text-center py-4 text-emerald-600 text-xs font-bold">
+                    <i class="fa-solid fa-sync animate-spin mr-1"></i> Scanning folder files, please wait...
+                </div>`;
+
+            fetch(`${SCANNER_API_URL}?folderUrl=${encodeURIComponent(folderUrl)}`)
+                .then(res => res.json())
+                .then(data => {
+                    if (data.error || !data.files || data.files.length === 0) {
+                        container.innerHTML = `
+                            <div class="text-center py-3 text-slate-400 text-xs font-medium space-y-2">
+                                <div>Folder is empty or restriction issue.</div>
+                                <a href="${folderUrl}" target="_blank" class="px-3 py-1 bg-blue-600 text-white rounded text-xs font-bold inline-block">Open in Google Drive</a>
+                            </div>`;
+                        return;
+                    }
+
+                    container.dataset.files = JSON.stringify(data.files);
+                    renderFileList(container, data.files, folderUrl);
+                })
+                .catch(err => {
+                    container.innerHTML = `
+                        <div class="text-center py-3 text-red-500 text-xs font-bold space-y-2">
+                            <div>Scan failed due to network or CORS.</div>
+                            <a href="${folderUrl}" target="_blank" class="px-3 py-1 bg-red-600 text-white rounded text-xs font-bold inline-block">Open Drive Directly</a>
+                        </div>`;
+                });
         }
 
-        // Search Filter
-        function filterVault() {
-            const query = document.getElementById('vault-search').value.toLowerCase().trim();
-            const tabContainer = document.getElementById('tab-navigation-container');
-            
-            if (!query) {
-                tabContainer.classList.remove('opacity-40', 'pointer-events-none');
-                displayTabContent(mainVaultData[currentActiveTab], false);
+        function renderFileList(container, files, folderUrl) {
+            let html = `
+                <div class="mb-2 flex items-center justify-between">
+                    <span class="text-[11px] font-bold text-slate-500 uppercase">Found ${files.length} Files:</span>
+                    <input type="text" oninput="filterScannedFiles(this, '${container.id}')" placeholder="Filter files inside this folder..." class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs border border-slate-200 dark:border-slate-700 w-1/2 focus:outline-none">
+                </div>
+                <div class="max-h-60 overflow-y-auto space-y-1.5 pr-1 file-list-box">`;
+
+            files.forEach(file => {
+                let cleanName = file.name.replace(/\.(pdf|docx|doc|zip|rar)$/i, "").trim();
+                let directDownload = `https://drive.google.com/uc?export=download&id=${file.id}`;
+
+                html += `
+                    <div class="flex items-center justify-between p-2 bg-slate-50 dark:bg-slate-800/60 rounded-lg text-xs border border-slate-200/50 dark:border-slate-700/50">
+                        <span class="font-semibold truncate pr-2 text-slate-800 dark:text-slate-200">${cleanName}</span>
+                        <div class="flex gap-2 shrink-0">
+                            <a href="${file.url}" target="_blank" class="px-2.5 py-1 bg-white dark:bg-slate-900 text-blue-600 rounded text-[10px] font-bold border">View</a>
+                            <a href="${directDownload}" target="_blank" class="px-2.5 py-1 bg-emerald-600 text-white rounded text-[10px] font-bold">Download</a>
+                        </div>
+                    </div>`;
+            });
+
+            html += `</div>`;
+            container.innerHTML = html;
+        }
+
+        function filterScannedFiles(inputElem, containerId) {
+            const query = inputElem.value.toLowerCase();
+            const container = document.getElementById(containerId);
+            const allFiles = JSON.parse(container.dataset.files || '[]');
+
+            const filtered = allFiles.filter(f => f.name.toLowerCase().includes(query));
+            const fileListBox = container.querySelector('.file-list-box');
+
+            if (filtered.length === 0) {
+                fileListBox.innerHTML = `<div class="text-center py-2 text-xs text-slate-400">No matching file found.</div>`;
                 return;
             }
 
-            tabContainer.classList.add('opacity-40', 'pointer-events-none');
-
-            let globalCollectedSet = [];
-            for (const key in mainVaultData) {
-                if (mainVaultData.hasOwnProperty(key)) {
-                    mainVaultData[key].forEach(element => {
-                        globalCollectedSet.push({ ...element, originTab: key });
-                    });
-                }
-            }
-
-            const filteredResults = globalCollectedSet.filter(item => 
-                item.name.toLowerCase().includes(query) || 
-                item.badge.toLowerCase().includes(query)
-            );
-
-            displayTabContent(filteredResults, true);
+            fileListBox.innerHTML = filtered.map(file => {
+                let cleanName = file.name.replace(/\.(pdf|docx|doc|zip|rar)$/i, "").trim();
+                let directDownload = `https://drive.google.com/uc?export=download&id=${file.id}`;
+                return `
+                    <div class="flex items-center justify-between p-2 bg-slate-50 dark:bg-slate-800/60 rounded-lg text-xs border border-slate-200/50 dark:border-slate-700/50">
+                        <span class="font-semibold truncate pr-2 text-slate-800 dark:text-slate-200">${cleanName}</span>
+                        <div class="flex gap-2 shrink-0">
+                            <a href="${file.url}" target="_blank" class="px-2.5 py-1 bg-white dark:bg-slate-900 text-blue-600 rounded text-[10px] font-bold border">View</a>
+                            <a href="${directDownload}" target="_blank" class="px-2.5 py-1 bg-emerald-600 text-white rounded text-[10px] font-bold">Download</a>
+                        </div>
+                    </div>`;
+            }).join('');
         }
 
-        // Theme Support
+        function switchTab(tabKey) {
+            currentActiveTab = tabKey;
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`tab-btn-${tabKey}`).classList.add('active');
+            document.getElementById('vault-search').value = '';
+            displayTabContent(mainVaultData[tabKey]);
+        }
+
+        function filterVault() {
+            const query = document.getElementById('vault-search').value.toLowerCase().trim();
+            if (!query) {
+                displayTabContent(mainVaultData[currentActiveTab]);
+                return;
+            }
+            let allFolders = [];
+            for (const key in mainVaultData) {
+                mainVaultData[key].forEach(el => allFolders.push(el));
+            }
+            const filtered = allFolders.filter(item => item.name.toLowerCase().includes(query));
+            displayTabContent(filtered);
+        }
+
         function initTheme() {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'dark') {
+            if (localStorage.getItem('theme') === 'dark') {
                 document.documentElement.classList.add('dark');
                 updateThemeUI(true);
-            } else {
-                document.documentElement.classList.remove('dark');
-                updateThemeUI(false);
             }
         }
-
         function toggleTheme() {
             const isDark = document.documentElement.classList.toggle('dark');
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
             updateThemeUI(isDark);
         }
-
         function updateThemeUI(isDark) {
-            const icon = document.getElementById('themeIcon');
-            const text = document.getElementById('themeText');
-            if (icon && text) {
-                if (isDark) {
-                    icon.className = 'fa-solid fa-moon text-yellow-300';
-                    text.innerText = 'Dark';
-                } else {
-                    icon.className = 'fa-solid fa-sun text-amber-500';
-                    text.innerText = 'Light';
-                }
-            }
+            document.getElementById('themeIcon').className = isDark ? 'fa-solid fa-moon text-yellow-300' : 'fa-solid fa-sun text-amber-500';
+            document.getElementById('themeText').innerText = isDark ? 'Dark' : 'Light';
         }
 
         window.onload = () => {
             initTheme();
-            displayTabContent(mainVaultData['mid'], false);
+            displayTabContent(mainVaultData['mid']);
         };
     </script>
 </body>
