@@ -27,6 +27,7 @@ const deptNames = {
     "ZOO": "ZOO - Zoology",
 
 };
+
 // Master Subjects Database Array
 const subjectsData = [
     // ACC Dept
@@ -54,7 +55,7 @@ const subjectsData = [
         name: "Introduction to Bioinformatics",
         handouts: "1izvvRLUxqO_F5zgJh61r0dGUdNv4efkH",
         highlighted: "not_found.html",
-        ppt: "not_found.html"
+        ppt: "https://drive.google.com/uc?export=download&id=1ocZ3lf_5lANi7Q5HtL27aiinNgPvMOTR"
     },
     {
         dept: "BIF",
@@ -62,7 +63,7 @@ const subjectsData = [
         name: "Bioinformatics-I",
         handouts: "1ICxNTuPrBnrB6W61l70q_zqmzKk475OH",
         highlighted: "https://drive.google.com/file/d/1bqtF548LaFmD8cn4Ma5OtfJDLf5LFYqi/view",
-        ppt: "not_found.html"
+        ppt: "https://drive.google.com/uc?export=download&id=1ojhT29SqQszAEdxA-_SKLPt6tIL67w1A"
     },
     {
         dept: "BIF",
@@ -204,14 +205,6 @@ const subjectsData = [
     },
     {
         dept: "BIO",
-        id: "BIO5101",
-        name: "Introduction to Biotechnology",
-        handouts: "1sw2LKe6v0LZE7O81ckOBQVT7SsxI8UCF",
-        highlighted: "not_found.html",
-        ppt: "not_found.html"
-    },
-    {
-        dept: "BIO",
         id: "BIO5105",
         name: "Cell Biology",
         handouts: "1IcUaj04DJtqfz9MQ7qfHbudokB0Dvh8s",
@@ -285,21 +278,22 @@ const subjectsData = [
     { dept: "CS", id: "CS001", name: "Computer Proficiency License", handouts: "https://drive.google.com/file/d/16ImmGYzNg_nmkPBOletb68HzBnFuMIg-/view", highlighted: "1fFxksRZwJT6zGojaQSRPWzxvh6pbctJK", ppt: "not_found.html" },
     { dept: "CS", id: "CS101", name: "Introduction to Computing", handouts: "1r2xzDmFNQo8M-ffuzdSJ2PAycIz_jaL8", highlighted: "https://drive.google.com/drive/folders/11yMEjOXAJEgGgB3fPW3rQaW3XOqAmyrU", ppt: "not_found.html" },
     { dept: "CS", id: "CS201", name: "Introduction to Programming", handouts: "1vSW7ajSdV6NkTGfFZuHo8dxE30ZqLtoi", highlighted: "https://drive.google.com/drive/folders/17eM3SAEiCBOyNd-INQsAuqtSFII9AtSv", ppt: "not_found.html" },
-    { dept: "CS", id: "CS202", name: "Fundamentals of Front End Development", handouts: "1pE65qNopOsQcw02A5lLuMSEBYwrT273M", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "CS", id: "CS202", name: "Fundamentals of Front End Development", handouts: "1pE65qNopOsQcw02A5lLuMSEBYwrT273M", highlighted: "https://drive.google.com/uc?export=download&id=1xjnyH2o1mFZE8nBeshKTN-ghAUuNsg-K", ppt: "not_found.html" },
     { dept: "CS", id: "CS204", name: "Cyber Law", handouts: "1eIBdHMamhLf03070V8A-jchwjPPIl-R_", highlighted: "https://drive.google.com/drive/folders/1n4q3f68yiAwLZ3A7hjee4vjX3LT_TI1J", ppt: "https://drive.google.com/file/d/1DxtgWkSxmlj9HsfKMVgfgIe_jQtpKKJs/view" },
     { dept: "CS", id: "CS205", name: "Information Security", handouts: "1LKR2pcbJjOKBYxNdFvrkiz9jNboy-DS6", highlighted: "https://drive.google.com/drive/folders/1bnr8VJETywsgLHY2QVUyrvn9OhYG1oi0", ppt: "https://drive.google.com/file/d/1VyKMDhkOddpa3knFUatD2oHozkZiELca/view" },
+    { dept: "CS", id: "CS206", name: "INTRODUCTION TO NETWORK DESIGN AND ANALYSIS", handouts: "1LKR2pcbJjOKBYxNdFvrkiz9jNboy-DS6", highlighted: "https://drive.google.com/file/d/1xeaBCP89dOxalSxjFSZhYWKJReAcPY88", ppt: "https://drive.google.com/file/d/1VyKMDhkOddpa3knFUatD2oHozkZiELca/view" },
     { dept: "CS", id: "CS301", name: "Data Structures", handouts: "1-N8_ddH9IJF93--pMzhkgqnbEi8lGAi9", highlighted: "https://drive.google.com/drive/folders/1_tTenyQbgHZFSzHSiquiuDVAnrRzvJsG", ppt: "not_found.html" },
-    { dept: "CS", id: "CS302", name: "Digital Logic & Design", handouts: "1vqiH0KUgKwu7AJzEihaUSuxtlx24yEva", highlighted: "https://drive.google.com/drive/folders/1FSRgNfPZgX0A2-VF5Oo5kaF6Ft6zjD_i", ppt: "not_found.html" },
-    { dept: "CS", id: "CS304", name: "Object Oriented Programming", handouts: "1g1Mbm1uBn2JH1eBOkAiEEw0vjf0MAX3-", highlighted: "https://drive.google.com/drive/folders/1dUV6yyxA8dXNYwfBlDmvx3_WmJ5Dxk9-", ppt: "not_found.html" },
+    { dept: "CS", id: "CS302", name: "Digital Logic & Design", handouts: "1vqiH0KUgKwu7AJzEihaUSuxtlx24yEva", highlighted: "https://drive.google.com/uc?export=download&id=1ORQp6ctJjnpzJ28GC7DHYUeGJigcVeBB", ppt: "not_found.html" },
+    { dept: "CS", id: "CS304", name: "Object Oriented Programming", handouts: "1g1Mbm1uBn2JH1eBOkAiEEw0vjf0MAX3-", highlighted: "https://drive.google.com/uc?export=download&id=1y_2Up-wQO48G6HUtmy7qk-m5Gz9sldcE", ppt: "not_found.html" },
     { dept: "CS", id: "CS311", name: "Web Services Development", handouts: "163fs8TgkKBJGlsvV5GOPMtDwmYxr4eJ7", highlighted: "not_found.html", ppt: "not_found.html" },
     { dept: "CS", id: "CS312", name: "Database Modeling and Design", handouts: "1nDpK70rA8nB8BwdVtIkyoytyCwiMkA9k", highlighted: "https://drive.google.com/drive/folders/1RwTXw8VVH2AxX1swTkRjASq4HcnkPA9Q", ppt: "not_found.html" },
     { dept: "CS", id: "CS315", name: "Network Security", handouts: "1b7Fn0ZQLN53xNQUvu_0K5sQaKrrxLEVB", highlighted: "not_found.html", ppt: "not_found.html" },
     { dept: "CS", id: "CS401", name: "Assembly Language Programming", handouts: "12gXxDYwrV1NABFID-poki8XFO5Nxiski", highlighted: "https://drive.google.com/drive/folders/1srf0YfO45v0VKLfKomu3RdPMSAc2ugoC", ppt: "not_found.html" },
-    { dept: "CS", id: "CS402", name: "Theory of Automata", handouts: "1QO8oKDC2VlqkBuHFBQl6N3tPWM5gXYyX", highlighted: "https://drive.google.com/drive/folders/1SQ_KceBd6QWydWiiIPrBDWSianhFEnK7", ppt: "not_found.html" },
+    { dept: "CS", id: "CS402", name: "Theory of Automata", handouts: "1QO8oKDC2VlqkBuHFBQl6N3tPWM5gXYyX", highlighted: "https://drive.google.com/drive/folders/1SQ_KceBd6QWydWiiIPrBDWSianhFEnK7", ppt: "https://drive.google.com/file/d/1R580CKV7wXbG2mapN9vitK8G7zvs2xYv" },
     { dept: "CS", id: "CS403", name: "Database Management System", handouts: "1dg-c25Zm2AgS2CK7uqv_x3C8xpv--eaU", highlighted: "https://drive.google.com/drive/folders/11VUndHop-gwsTzw87ZByaTrZAzkaUBiT", ppt: "not_found.html" },
     { dept: "CS", id: "CS405", name: "Oracle 11g Programming", handouts: "1CzvD77mFOE9hixkSWLnRJ1IWK9LqmO2V", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "CS", id: "CS407", name: "Routing and Switching", handouts: "1IX0hiU6r0sVEJPb7lC5Vu2aMaofHV4AA", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "CS", id: "CS408", name: "Human Computer Interaction", handouts: "1XmTpw_7bIwBKQpuAxwzOVhs1ZnU5_3WP", highlighted: "https://drive.google.com/drive/folders/1c2f5kzpGdHlHO3V8NTTBLSbUEq-Nj9R3", ppt: "not_found.html" },
+    { dept: "CS", id: "CS407", name: "Routing and Switching", handouts: "1IX0hiU6r0sVEJPb7lC5Vu2aMaofHV4AA", highlighted: "https://drive.google.com/file/d/1PVaXe9X2LuSdtpjSexdlZrqgNvagBD3H", ppt: "not_found.html" },
+    { dept: "CS", id: "CS408", name: "Human Computer Interaction", handouts: "1XmTpw_7bIwBKQpuAxwzOVhs1ZnU5_3WP", highlighted: "https://drive.google.com/drive/folders/1c2f5kzpGdHlHO3V8NTTBLSbUEq-Nj9R3", ppt: "https://drive.google.com/file/d/1W4OXLQkP1KFZlzz_e1S9mKYP4_Tq_Qsb" },
     { dept: "CS", id: "CS409", name: "Database Administration", handouts: "1R4AKwlAWZbYcRCGCc29zq_TeRmV7WTXF", highlighted: "https://drive.google.com/drive/folders/1L2l5wcJM9qjU0ELtA84UmKlcaNRAkdZ4", ppt: "https://drive.google.com/file/d/1h01zzZbs3fQVMuiY_eDAjxaY8Bxay4mS/view" },
     { dept: "CS", id: "CS411", name: "Visual Programming", handouts: "1SIssIJkn1P2Dmikm8NmUcxTYd7YxNuCs", highlighted: "https://drive.google.com/drive/folders/1musuJCffN7ckR_5D651khuywOvn5-gL9", ppt: "not_found.html" },
     { dept: "CS", id: "CS420", name: "Mobile Web Development", handouts: "18m7Y94Irb8UhLX4UZswbU_MeynThFGtG", highlighted: "https://drive.google.com/drive/folders/17zZ-VKwRQc6_VtVBhP-O-DqagtugV6xG", ppt: "not_found.html" },
@@ -341,17 +335,17 @@ const subjectsData = [
     { dept: "CS", id: "CS726", name: "Information Retrieval", handouts: "https://drive.google.com/file/d/15ObB0_ZbuV7QGVnUXI_xLzAfYnHKnDsN/view", highlighted: "not_found.html", ppt: "not_found.html" },
 
     // ECO Dept
-    { dept: "ECO", id: "ECOO401", name: "Introduction to Economics", handouts: "1k6g0-FyKZXSXWL7n8_OZ2z6d0nNDDU8v", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "ECO", id: "ECOO402", name: "Micro Economics", handouts: "1bp-P7uBkLTAWdXoL7eYpQABbidSvVZx7", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "ECO", id: "ECOO403", name: "Macroeconomics", handouts: "1jacZ_RiPspsAnr7WiMS1kQG9vW9rNMXU", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "ECO", id: "ECOO404", name: "Managerial Economics", handouts: "1fHgn90v0tSLPXzCCQn5UYlkKT_KNWChI", highlighted: "", ppt: "not_found.html" },
-    { dept: "ECO", id: "ECOO501", name: "Development Economics", handouts: "1mkmEPQSHjbfDRiuAbWs41WGomMa5EYnd", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "ECO", id: "ECOO601", name: "Business Econometrics", handouts: "10tripUcXSmNUd6RY4_HMSQs0zt_N9RnQ", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "ECO", id: "ECOO605", name: "Financial Economics", handouts: "14lReE9BHvjAfdsb6NKekCxamI_KXdr7A", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "ECO", id: "ECOO606", name: "Mathematical Economics I", handouts: "101EgC8db79ADrBwesMiNAVbkhtDBvHq3", highlighted: "https://drive.google.com/file/d/1OOlw7mvtHLubOLbLIl4-rJ0b26U-Hh9m/view", ppt: "not_found.html" },
-    { dept: "ECO", id: "ECOO607", name: "Mathematical Economics II", handouts: "19NVxmGljS7K8dvsNzVzL1fi7Yho3eTY_", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "ECO", id: "ECOO610", name: "Issues in Pakistan Economy", handouts: "1fxo9C0g007zlfEMVLlYe8aBUkaPFduzS", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "ECO", id: "ECOO612", name: "Population Economics", handouts: "1cwNQJccpZkqNa-vjDgFKq5pr2zJv4Ov7", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "ECO", id: "ECO401", name: "Introduction to Economics", handouts: "1k6g0-FyKZXSXWL7n8_OZ2z6d0nNDDU8v", highlighted: "https://drive.google.com/file/d/1CfAlTHu7apluwYRwDN9azhvIQIEokEWv", ppt: "not_found.html" },
+    { dept: "ECO", id: "ECO402", name: "Micro Economics", handouts: "1bp-P7uBkLTAWdXoL7eYpQABbidSvVZx7", highlighted: "https://drive.google.com/uc?export=download&id=1ce8A8xKD5oGldFqCQNO6ShBXDQRGOtlG", ppt: "not_found.html" },
+    { dept: "ECO", id: "ECO403", name: "Macroeconomics", handouts: "1jacZ_RiPspsAnr7WiMS1kQG9vW9rNMXU", highlighted: "https://drive.google.com/file/d/1W9BHSlXte0EpldVoj9gxsZaWuNdr8tsy", ppt: "not_found.html" },
+    { dept: "ECO", id: "ECO404", name: "Managerial Economics", handouts: "1fHgn90v0tSLPXzCCQn5UYlkKT_KNWChI", highlighted: "", ppt: "not_found.html" },
+    { dept: "ECO", id: "ECO501", name: "Development Economics", handouts: "1mkmEPQSHjbfDRiuAbWs41WGomMa5EYnd", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "ECO", id: "ECO601", name: "Business Econometrics", handouts: "10tripUcXSmNUd6RY4_HMSQs0zt_N9RnQ", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "ECO", id: "ECO605", name: "Financial Economics", handouts: "14lReE9BHvjAfdsb6NKekCxamI_KXdr7A", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "ECO", id: "ECO606", name: "Mathematical Economics I", handouts: "101EgC8db79ADrBwesMiNAVbkhtDBvHq3", highlighted: "https://drive.google.com/file/d/1OOlw7mvtHLubOLbLIl4-rJ0b26U-Hh9m/view", ppt: "not_found.html" },
+    { dept: "ECO", id: "ECO607", name: "Mathematical Economics II", handouts: "19NVxmGljS7K8dvsNzVzL1fi7Yho3eTY_", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "ECO", id: "ECO610", name: "Issues in Pakistan Economy", handouts: "1fxo9C0g007zlfEMVLlYe8aBUkaPFduzS", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "ECO", id: "ECO612", name: "Population Economics", handouts: "1cwNQJccpZkqNa-vjDgFKq5pr2zJv4Ov7", highlighted: "not_found.html", ppt: "not_found.html" },
 
     // EDU Dept
     { dept: "EDU", id: "EDU101", name: "Foundations of Education", handouts: "16TkwNibadi8kOa8tCb37-2qKRG4LYe1m", highlighted: "https://drive.google.com/drive/folders/1S1YV3HM_I78IMV49lwszvkWHXS73MG-r", ppt: "not_found.html" },
@@ -366,13 +360,13 @@ const subjectsData = [
 
     { dept: "EDU", id: "EDU304", name: "Student Guidance and Counselling", handouts: "1BjI_cNPjWjXqyLz9acn5oy8h8F20Ibi9", highlighted: "https://drive.google.com/drive/folders/1_jVVldSs-MPQL5tjgaK7x7EpMB50g49g?usp=drive_link", ppt: "not_found.html" },
 
-    { dept: "EDU", id: "EDU305", name: "Classroom Management", handouts: "1WcFzujXupwGT_OdeEP3yScWHI7XQIb9x", highlighted: "https://drive.google.com/uc?export=download&id=12m6mLNY_2FmoHfcItix4FnE2NPvzTtu7", ppt: "not_found.html" },
+    { dept: "EDU", id: "EDU305", name: "Classroom Management", handouts: "1WcFzujXupwGT_OdeEP3yScWHI7XQIb9x", highlighted: "https://drive.google.com/uc?export=download&id=1_gYH17lM10zh6wgmeOpZCX1T_gkRM8Oc", ppt: "not_found.html" },
 
-    { dept: "EDU", id: "EDU401", name: "Contemporary Issues and Trends in Education", handouts: "https://drive.google.com/drive/folders/1Ep9MyNfPLdc_MY_hcpWUQLRhwDwgzXJ6?usp=drive_link", highlighted: "https://drive.google.com/drive/folders/1cAuOnkYUA4WeMvLPNWwY2PXDv1tukM6w", ppt: "not_found.html" },
+    { dept: "EDU", id: "EDU401", name: "Contemporary Issues and Trends in Education", handouts: "1X0JcQ5u68U3EJyf72eHoYAjzVyuZ3eeM", highlighted: "https://drive.google.com/drive/folders/1cAuOnkYUA4WeMvLPNWwY2PXDv1tukM6w", ppt: "not_found.html" },
 
     { dept: "EDU", id: "EDU402", name: "Curriculum Development", handouts: "1MFe5sjrAkxi4mdXc-pZg_ktHRbKNBmA2", highlighted: "https://drive.google.com/file/d/1ZXAlhlnM8y4nYxwZA4Ctu8fFD-gqcV2G", ppt: "not_found.html" },
 
-    { dept: "EDU", id: "EDU403", name: "Art Craft and Calligraphy", handouts: "1AXGjmKM05qhhEa_evIQBwondFsFFWabl", highlighted: "https://drive.google.com/drive/folders/1eWM51s-Lm4KDEvNxSDIgjz2qVvSGh5m8?usp=drive_link", ppt: "not_found.html" },
+    { dept: "EDU", id: "EDU403", name: "Art Craft and Calligraphy", handouts: "1AXGjmKM05qhhEa_evIQBwondFsFFWabl", highlighted: "https://drive.google.com/uc?export=download&id=1hLdtSm_eJ18xkOWJaPFkCsQQcbukOmzZ", ppt: "not_found.html" },
 
     { dept: "EDU", id: "EDU404", name: "Classroom Testing and Evaluation", handouts: "1pG-0J2yVVLrC5tyW5_YYHzg09a5jqecx", highlighted: "not_found.html", ppt: "not_found.html" },
 
@@ -382,7 +376,7 @@ const subjectsData = [
 
     { dept: "EDU", id: "EDU409", name: "Teaching of Literacy and Language", handouts: "19xsBF7HTowCt1wKo32Kusi7bv4aaPIe1", highlighted: "not_found.html", ppt: "not_found.html" },
 
-    { dept: "EDU", id: "EDU410", name: "Teaching of Literacy Skills", handouts: "1VWlAXDj8oc7bO3ypd5CMldz6yLRUUw05", highlighted: "1EGBtRll9mxglKWaguGjwBLZg3F958SSQ", ppt: "not_found.html" },
+    { dept: "EDU", id: "EDU410", name: "Teaching of Literacy Skills", handouts: "1VWlAXDj8oc7bO3ypd5CMldz6yLRUUw05", highlighted: "https://drive.google.com/uc?export=download&id=1EGBtRll9mxglKWaguGjwBLZg3F958SSQ", ppt: "not_found.html" },
 
     { dept: "EDU", id: "EDU411", name: "تدریس زبانِ اردو", handouts: "1Qim0_5j4HqkQ-Ul_4Zl4edAS5wIFHcHX", highlighted: "not_found.html", ppt: "not_found.html" },
 
@@ -730,7 +724,7 @@ const subjectsData = [
     {
         dept: "STA", id: "STA301", name: "Statistics and Probability",
         handouts: "1W5ja10yhaacRBCnAdiB-amrpwuvcsxwO",
-        highlighted: "https://drive.google.com/file/d/1Rj18u9HXd6Xn-jL7E1oMndD3THY3QvNK",
+        highlighted: "https://drive.google.com/drive/folders/173igWwemlNOchHcPOAdN12ooM2xmVxww",
         ppt: "not_found.html"
     },
 
