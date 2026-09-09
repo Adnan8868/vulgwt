@@ -14,6 +14,7 @@ const deptNames = {
     "FIN": "FIN - Finance",
     "GSC": "GSC - General Science",
     "ISL": "ISL - Islamic Studies",
+    "ETH": "ETH - Ethics",
     "MCM": "MCM - Mass Communication",
     "MGT": "MGT - Management",
     "MKT": "MKT - Marketing",
@@ -228,6 +229,32 @@ const subjectsData = [
         ppt: "not_found.html"
     },
 
+    // BT
+    {
+        dept: "BT", id: "BT101", name: "Ecology, Biodiversity & Evolution-I",
+        handouts: "1RblWfA3NvdB666s6JEh4mRI8z7Dhfo3s",
+        highlighted: "not_found.html",
+        ppt: "https://drive.google.com/file/d/1bF6xqje9WhIc9M5egK8pe2syIkG7_Tvw"
+    },
+    {
+        dept: "BT", id: "BT302", name: "Immunology",
+        handouts: "1VrgT6yMP9Jy5Ysd4BWSIBUrucxDPdhwp",
+        highlighted: "https://drive.google.com/file/d/1J4F0CE3mv8d8DEcgQXP1b9oWT_56dSs8",
+        ppt: "https://drive.google.com/file/d/1VrgT6yMP9Jy5Ysd4BWSIBUrucxDPdhwp"
+    },
+    {
+        dept: "BT", id: "BT601", name: "Virology",
+        handouts: "1bvrT4aSYKuZM3Y9CYq9wEXJa4svZO_vF",
+        highlighted: "https://drive.google.com/file/d/1ShCoiav5pcKqtYId93tXCt_ig7GO0Ndf",
+        ppt: "https://drive.google.com/file/d/1ZDGv2ku34ogMG2fRlYp2T-sgfVVAn7bS"
+    },
+    {
+        dept: "BT", id: "BT605", name: "Biosafety & Bioethics",
+        handouts: "1KIvLsClMwywjPJqtFYT6EgrynwNojm9y",
+        highlighted: "not_found.html",
+        ppt: "https://drive.google.com/file/d/1KIvLsClMwywjPJqtFYT6EgrynwNojm9y"
+    },
+
     // BNK Dept
     {
         dept: "BNK",
@@ -281,7 +308,7 @@ const subjectsData = [
     { dept: "CS", id: "CS202", name: "Fundamentals of Front End Development", handouts: "1pE65qNopOsQcw02A5lLuMSEBYwrT273M", highlighted: "https://drive.google.com/uc?export=download&id=1xjnyH2o1mFZE8nBeshKTN-ghAUuNsg-K", ppt: "not_found.html" },
     { dept: "CS", id: "CS204", name: "Cyber Law", handouts: "1eIBdHMamhLf03070V8A-jchwjPPIl-R_", highlighted: "https://drive.google.com/drive/folders/1n4q3f68yiAwLZ3A7hjee4vjX3LT_TI1J", ppt: "https://drive.google.com/file/d/1DxtgWkSxmlj9HsfKMVgfgIe_jQtpKKJs/view" },
     { dept: "CS", id: "CS205", name: "Information Security", handouts: "1LKR2pcbJjOKBYxNdFvrkiz9jNboy-DS6", highlighted: "https://drive.google.com/drive/folders/1bnr8VJETywsgLHY2QVUyrvn9OhYG1oi0", ppt: "https://drive.google.com/file/d/1VyKMDhkOddpa3knFUatD2oHozkZiELca/view" },
-    { dept: "CS", id: "CS206", name: "INTRODUCTION TO NETWORK DESIGN AND ANALYSIS", handouts: "1urRjRv-2eynJXcSgcvgExq3P2lZo0cR3", highlighted: "https://drive.google.com/file/d/1xeaBCP89dOxalSxjFSZhYWKJReAcPY88", ppt: "" },
+    { dept: "CS", id: "CS206", name: "INTRODUCTION TO NETWORK DESIGN AND ANALYSIS", handouts: "1LKR2pcbJjOKBYxNdFvrkiz9jNboy-DS6", highlighted: "https://drive.google.com/file/d/1xeaBCP89dOxalSxjFSZhYWKJReAcPY88", ppt: "https://drive.google.com/file/d/1VyKMDhkOddpa3knFUatD2oHozkZiELca/view" },
     { dept: "CS", id: "CS301", name: "Data Structures", handouts: "1-N8_ddH9IJF93--pMzhkgqnbEi8lGAi9", highlighted: "https://drive.google.com/drive/folders/1_tTenyQbgHZFSzHSiquiuDVAnrRzvJsG", ppt: "not_found.html" },
     { dept: "CS", id: "CS302", name: "Digital Logic & Design", handouts: "1vqiH0KUgKwu7AJzEihaUSuxtlx24yEva", highlighted: "https://drive.google.com/uc?export=download&id=1ORQp6ctJjnpzJ28GC7DHYUeGJigcVeBB", ppt: "not_found.html" },
     { dept: "CS", id: "CS304", name: "Object Oriented Programming", handouts: "1g1Mbm1uBn2JH1eBOkAiEEw0vjf0MAX3-", highlighted: "https://drive.google.com/uc?export=download&id=1y_2Up-wQO48G6HUtmy7qk-m5Gz9sldcE", ppt: "not_found.html" },
@@ -471,6 +498,11 @@ const subjectsData = [
 
     { dept: "ENG", id: "ENG529", name: "Technology in Language Teaching", handouts: "1d-3XflNRY8_Ktzztq48RB6oVkhdeJa77", highlighted: "not_found.html" },
 
+    // ETH
+    { dept: "ETH", id: "ETH100", name: "Effective Citizenship", handouts: "1JnjftpvfUL0mdXo0pPigw2Tu0Rao4blW", highlighted: "https://drive.google.com/uc?export=download&id=1EUnfSmiakBwwpf83ue8JsAZulANt7nw7" },
+    { dept: "ETH", id: "ETH201", name: "Ethics For non-Muslims", handouts: "1j9px8AAlHwUnxacB4NtqfTvHCYJqp40C", highlighted: "not_found.html" },
+    { dept: "ETH", id: "ETH202", name: "Ethics and Cultural Norms", handouts: "1j9px8AAlHwUnxacB4NtqfTvHCYJqp40C", highlighted: "not_found.html" },
+
     // FIN Dept
     { dept: "FIN", id: "FIN611", name: "Advanced Financial Accounting", handouts: "1yw8WmMK5ii-P5zPEp0MjROX4WJkaf_bL", highlighted: "not_found.html", ppt: "not_found.html" },
     { dept: "FIN", id: "FIN621", name: "Financial Statement Analysis", handouts: "1bKgsDTRRVIFDIV2Tnvt9DkOPYBjm_MFS", highlighted: "not_found.html", ppt: "not_found.html" },
@@ -485,12 +517,17 @@ const subjectsData = [
     { dept: "GSC", id: "GSC201", name: "Teaching of General Science", handouts: "17_zvsYMSQHBhdy57N3Lk00AqwUnk8FqY", highlighted: "not_found.html", ppt: "not_found.html" },
 
     // ISL Subject
-    { dept: "ISL", id: "ISL201", name: "Islamic Studies (Old)", handouts: "1-MWcJII1lVsehtBUWqDJMon41IxKm6H1", highlighted: "https://drive.google.com/file/d/1Au9BQumr8vK8TGFwPkdaLmEyfYOC33dN/view", ppt: "not_found.html" },
-    { dept: "ISL", id: "ISL202", name: "Islamic Studies (New)", handouts: "1LPrbJsMD7xlAlOU47Xw-J5J_Y-Yj5Njo", highlighted: "https://drive.google.com/drive/folders/1W_gzyGtUsuVzH6oyhYq-vQ-rxK6HxyX6", ppt: "not_found.html" },
+    { dept: "ISL", id: "ISL201", name: "Islamic Studies", handouts: "1-MWcJII1lVsehtBUWqDJMon41IxKm6H1", highlighted: "https://drive.google.com/file/d/1Au9BQumr8vK8TGFwPkdaLmEyfYOC33dN/view", ppt: "not_found.html" },
+    { dept: "ISL", id: "ISL202", name: "Islamic Studies", handouts: "1LPrbJsMD7xlAlOU47Xw-J5J_Y-Yj5Njo", highlighted: "https://drive.google.com/drive/folders/1W_gzyGtUsuVzH6oyhYq-vQ-rxK6HxyX6", ppt: "not_found.html" },
+    { dept: "ISL", id: "ISL1252", name: "Introduction of Topics of Holy Qur’an", handouts: "1NGD1EBb2dPHcCB35fs0LcylwGo1-m2bu", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "ISL", id: "ISL1253", name: "Arabic Language – I", handouts: "1sEUC4nTLSCXlaWloCP9Aa_8UQddqkY39", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "ISL", id: "ISL2351", name: "Textual Study of al-Qur’an-I", handouts: "https://drive.google.com/drive/folders/1O5ohZzmOj3nisRFbzSTJDQKfR9syYBUJ", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "ISL", id: "ISL2352", name: "History & Compilation of Hadith", handouts: "1ombGXskgZC8KLPiyFGWzU9vNGyyt6ox6", highlighted: "not_found.html", ppt: "not_found.html" },
 
     // IT dept
     { dept: "IT", id: "IT430", name: "E-Commerce", handouts: "https://drive.google.com/file/d/1vL7EN92n_ocBpBz1Ff6jkCdjoxLK_f44/view", highlighted: "not_found.html", ppt: "not_found.html" },
     { dept: "IT", id: "IT601", name: "System and Network Administration", handouts: "https://drive.google.com/file/d/1x79ZMMXrElN3NqqBzzyPNEP3oF20taq4/view", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "IT", id: "IT602", name: "Information Technology Infrastructure", handouts: "1PhF2iQB5Rby637NGTNAodDl_GukoR4bL", highlighted: "not_found.html", ppt: "not_found.html" },
 
     // MCM Dept
     { dept: "MCM", id: "MCM101", name: "Introduction to Mass Communication", handouts: "1k_6NYkPJRUvq6f7iUCtTBIry5jzPJxuG", highlighted: "not_found.html", },
@@ -528,32 +565,90 @@ const subjectsData = [
     { dept: "MGMT", id: "MGMT630", name: "Knowledge Management", handouts: "15drEvGbAXzvh_s9EaYeA_lnds8ODBNy1", highlighted: "not_found.html", },
 
     // MGT Dept
-    { dept: "MGT", id: "MGT101", name: "Basics of Financial Accounting", handouts: "1kq_Lyk_Ciyk2BiFbhR7GCawAHfa-d5KN", highlighted: "https://drive.google.com/file/d/18EsOgUnAD74kaQoLTeGH85xfvsPnBPYH/view", ppt: "not_found.html" },
+    {
+        dept: "MGT", id: "MGT101", name: "Basics of Financial Accounting", handouts: "1kq_Lyk_Ciyk2BiFbhR7GCawAHfa-d5KN",
+        highlighted: "https://drive.google.com/uc?export=download&id=18EsOgUnAD74kaQoLTeGH85xfvsPnBPYH",
+        ppt: "https://drive.google.com/uc?export=download&id=1y44OQ0Opc4Otrc5hFxTRWNsY-VpIyyog"
+    },
 
     { dept: "MGT", id: "MGT111", name: "Introduction to Public Administration", handouts: "1RLdfDaBIjc-qPrAk8p5tl3heYT1gTDl0", highlighted: "https://drive.google.com/file/d/1ixOh_Oo2O2cpQpeawpgAgVqrHZ1DMdRd/view", ppt: "not_found.html" },
     { dept: "MGT", id: "MGT201", name: "Financial Management", handouts: "1D3MfaAj9llGzVfETITzr7zmW2w72kxQr", highlighted: "https://drive.google.com/drive/folders/1yplK2QVl0QtIHABHwvG9y3bybkYodSNM", ppt: "not_found.html" },
-    { dept: "MGT", id: "MGT211", name: "Introduction to Business", handouts: "1EBRMSC34bVcrgeFE8QXeTHLvBd6v6-j_", highlighted: "https://drive.google.com/uc?export=download&id=1gdj02Ui7EMrOaU8YVuMeNUFaWezqyGyc", ppt: "not_found.html" },
-    { dept: "MGT", id: "MGT301", name: "Technical Articles", handouts: "1xe78opbBfoVvhuZlMOcto9LtbXTbcKn8", highlighted: "https://drive.google.com/drive/folders/1gbwNuBvBGe_yD4mQEgBguGpCqzlnPWBI", ppt: "https://drive.google.com/file/d/1EqUK4Z3f7z6Z-u_EQQj9C4xAkS1vpgPZ/view" },
-    { dept: "MGT", id: "MGT401", name: "Financial Accounting II", handouts: "1Jb2GEsz31W3Hwui4AvwZcDSSG044Y-kr", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "MGT", id: "MGT404", name: "Managerial Accounting", handouts: "1S7-16sqAfJIH95xvrO00z_-tS8Ay7bSt", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "MGT", id: "MGT411", name: "Money & Banking", handouts: "1rW9IJ66Sn8mrKXZhYcNynxn3qSXJ8H4s", highlighted: "not_found.html", ppt: "https://drive.google.com/drive/folders/1RM88UhP158R7dfhubU63MGD9VzK5ucav" },
-    { dept: "MGT", id: "MGT501", name: "Human Resource Management", handouts: "1k5GRolNgZSw2JeQtDggVVE9eabLliq4w", highlighted: "https://drive.google.com/drive/folders/1K03OlFByht_jbPzdL8_N8LhAbq8GCwQU", ppt: "not_found.html" },
-    { dept: "MGT", id: "MGT502", name: "Organizational Behavior", handouts: "1pcr4NggkvGrWyg49fYmKM9meRaxTqdbM", highlighted: "https://drive.google.com/file/d/1sarTe4Yy4Fw_ji97bYSWvVJaqCdFd7Kt/view", ppt: "not_found.html" },
-    { dept: "MGT", id: "MGT503", name: "Principles of Management", handouts: "1icK0lWc9rX9nj5QfWGZlyBz-U2t_UAEj", highlighted: "https://drive.google.com/drive/folders/1BDth85EVoVyoZWpcoKrSwQ_zbV76Mas0", ppt: "not_found.html" },
-    { dept: "MGT", id: "MGT504", name: "Organization Theory and Design", handouts: "1kiXj7OlsUJ2pFgUK9RXqwVx9qlc0bA2w", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "MGT", id: "MGT510", name: "Total Quality Management", handouts: "1VuTlN23XLI8ryDBFDkVxEPe5TWXg7gXz", highlighted: "not_found.html", ppt: "not_found.html" },
+    {
+        dept: "MGT", id: "MGT211", name: "Introduction to Business", handouts: "1EBRMSC34bVcrgeFE8QXeTHLvBd6v6-j_",
+        highlighted: "https://drive.google.com/uc?export=download&id=1gdj02Ui7EMrOaU8YVuMeNUFaWezqyGyc", ppt: "not_found.html"
+    },
+    {
+        dept: "MGT", id: "MGT301", name: "Technical Articles", handouts: "1xe78opbBfoVvhuZlMOcto9LtbXTbcKn8",
+        highlighted: "https://drive.google.com/uc?export=download&id=1mm-TNz3SvIkNq5BQZEBcpNVepXpI1gii",
+        ppt: "https://drive.google.com/uc?export=download&id=1AJWkFF8iDFVvFUKKfJPu2hbZNOzfNKNV"
+    },
+    {
+        dept: "MGT", id: "MGT401", name: "Financial Accounting II", handouts: "1xm89BAXsP9-xSgmvKCzhbnZn_qP4YOu0",
+        highlighted: "https://drive.google.com/uc?export=download&id=1xm89BAXsP9-xSgmvKCzhbnZn_qP4YOu0", ppt: "not_found.html"
+    },
+    {
+        dept: "MGT", id: "MGT402", name: "Cost & Management Accounting", handouts: "1FtuexTa0Us83VQ5LZ0ShJXeXmi5VhybH",
+        highlighted: "not_found.html", ppt: "not_found.html"
+    },
+    { dept: "MGT", id: "MGT404", name: "Managerial Accounting", handouts: "1rrGhgchoY937U2ee2dytGiqG_LNfLxOj", highlighted: "not_found.html", ppt: "not_found.html" },
+    {
+        dept: "MGT", id: "MGT411", name: "Money & Banking", handouts: "1rW9IJ66Sn8mrKXZhYcNynxn3qSXJ8H4s",
+        highlighted: "https://drive.google.com/uc?export=download&id=10xW3co43ZUjthC1i6wyl0dmc6YpSrPmp",
+        ppt: "https://drive.google.com/uc?export=download&id=1R00HgGJpLny9ubztxnPYSV60e5oR26lY"
+    },
+    {
+        dept: "MGT", id: "MGT501", name: "Human Resource Management", handouts: "1k5GRolNgZSw2JeQtDggVVE9eabLliq4w",
+        highlighted: "https://drive.google.com/uc?export=download&id=1K95i03vQpjOaLFugpohxu5iBkmr4hbvi",
+        ppt: "not_found.html"
+    },
+    {
+        dept: "MGT", id: "MGT502", name: "Organizational Behavior", handouts: "1pcr4NggkvGrWyg49fYmKM9meRaxTqdbM",
+        highlighted: "https://drive.google.com/uc?export=download&id=1sarTe4Yy4Fw_ji97bYSWvVJaqCdFd7Kt/view", ppt: "not_found.html"
+    },
+    {
+        dept: "MGT", id: "MGT503", name: "Principles of Management", handouts: "1icK0lWc9rX9nj5QfWGZlyBz-U2t_UAEj",
+        highlighted: "https://drive.google.com/uc?export=download&id=1wau4M940jTnp5HWOnIG5cklnd6mJG9YG", ppt: "not_found.html"
+    },
+    {
+        dept: "MGT", id: "MGT504", name: "Organization Theory and Design", handouts: "1kiXj7OlsUJ2pFgUK9RXqwVx9qlc0bA2w",
+        highlighted: "https://drive.google.com/uc?export=download&id=1VwaQvUdlfYf2mkvkYeJgflMPMZgomR0w", ppt: "not_found.html"
+    },
+    {
+        dept: "MGT", id: "MGT510", name: "Total Quality Management", handouts: "1VuTlN23XLI8ryDBFDkVxEPe5TWXg7gXz",
+        highlighted: "https://drive.google.com/uc?export=download&id=1CCvpUIHAjyYSywXKLWwSvbzMw-3HTbyY", ppt: "not_found.html"
+    },
+    {
+        dept: "MGT", id: "MGT513", name: "Public Administration in Pakistan", handouts: "1OBBcJOnIpf74L1oad5i3VORRfQ-OMea8",
+        highlighted: "not_found.html", ppt: "https://drive.google.com/uc?export=download&id=1OBBcJOnIpf74L1oad5i3VORRfQ-OMea8"
+    },
     { dept: "MGT", id: "MGT520", name: "International Business", handouts: "10Bu7btnO8gv8oucaJLkQGoDwh2qXshEW", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "MGT", id: "MGT522", name: "Introduction to Public Policy", handouts: "1FLN3iR54P1UF_dGYsCve2etBNq6RF-GD", highlighted: "not_found.html", ppt: "https://drive.google.com/uc?export=download&id=1FLN3iR54P1UF_dGYsCve2etBNq6RF-GD" },
     { dept: "MGT", id: "MGT601", name: "SME Management", handouts: "1Zsm6KLOGU1gzbL4zc2kgC9-KUkt6P0Lp", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "MGT", id: "MGT602", name: "Entrepreneurship", handouts: "1IN51Nonj8t-mSTjATZwt2KM6hBb0X4Bc", highlighted: "https://drive.google.com/file/d/1IN51Nonj8t-mSTjATZwt2KM6hBb0X4Bc/view", ppt: "https://drive.google.com/file/d/1tQ88sy-_EWL-8mxYoTilAEAkxTFJZJVp/view" },
-    { dept: "MGT", id: "MGT603", name: "Strategic Management", handouts: "1p1wKq67LjdRRUlwR3Q38W5cZleD5mLSG", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "MGT", id: "MGT611", name: "Business and Labour Laws", handouts: "1a2b1agsnAa5WI2JqmXEMv6X1FcWjc9MM", highlighted: "not_found.html", ppt: "not_found.html" },
+    {
+        dept: "MGT", id: "MGT602", name: "Entrepreneurship", handouts: "1UoDClFGwKERs7GHsAsZVn4euflFmCxoK",
+        highlighted: "https://drive.google.com/uc?export=download&id=1IN51Nonj8t-mSTjATZwt2KM6hBb0X4Bc",
+        ppt: "https://drive.google.com/uc?export=download&id=tQ88sy-_EWL-8mxYoTilAEAkxTFJZJVp"
+    },
+    {
+        dept: "MGT", id: "MGT603", name: "Strategic Management", handouts: "1p1wKq67LjdRRUlwR3Q38W5cZleD5mLSG",
+        highlighted: "https://drive.google.com/uc?export=download&id=1bfRlHTMtsMJWokoyIQiUOszCTCB3Qs43",
+        ppt: "https://drive.google.com/uc?export=download&id=1zOCjQWYHL9eIP9-o09ljFpHzvxmtsrf8"
+    },
+
+    {
+        dept: "MGT", id: "MGT610", name: "BUSINESS ETHICS", handouts: "1X2KV5ENRirRiSqMQf-Esmf9vdnCUa0QJ",
+        highlighted: "https://drive.google.com/file/d/1aT-EWxEHEJA3kO_hdIYURoHqzrKKl9lm", ppt: "not_found.html"
+    },
+
+    { dept: "MGT", id: "MGT611", name: "Business and Labour Laws", handouts: "1a2b1agsnAa5WI2JqmXEMv6X1FcWjc9MM", highlighted: "https://drive.google.com/file/d/1T1mKPpeYyNyH6-O9EAIv8VVHZuSJ8pHR", ppt: "not_found.html" },
+
     { dept: "MGT", id: "MGT612", name: "Corporate Law", handouts: "1-W9tVnz58wOMyQY3-Fhg8HOg9_Ud27ij", highlighted: "not_found.html", ppt: "not_found.html" },
     { dept: "MGT", id: "MGT613", name: "Production and Operations Management", handouts: "12iiE0_SOA0sfw_ciFgFSInNCtj_0no1_", highlighted: "not_found.html", ppt: "not_found.html" },
     { dept: "MGT", id: "MGT621", name: "Administrative Law", handouts: "18sucCSivbGgYTc56SLdCC6SHmBIwAuIz", highlighted: "not_found.html", ppt: "not_found.html" },
     { dept: "MGT", id: "MGT705", name: "Advanced Cost Accounting", handouts: "13qRat5FH6Wx_6NltIctH8ti7kE1bX1tq", highlighted: "not_found.html", ppt: "not_found.html" },
     { dept: "MGT", id: "MGT713", name: "Production Management", handouts: "1Xk-TceTINiJa_h-4EqUxlmVuHWW6cl5q", highlighted: "not_found.html", ppt: "not_found.html" },
 
-    // MKT Dept
+    // =========== MKT Dept =========== 
     { dept: "MKT", id: "MKT501", name: "Marketing Management", handouts: "1D9xwm_-op5Tjv6gXhLiUmWLKfnEJBgtC", highlighted: "not_found.html", ppt: "not_found.html" },
     { dept: "MKT", id: "MKT530", name: "Consumer Behavior", handouts: "1CZUhe2rn8E7K_12DdsLmzKCMrDwThZve", highlighted: "not_found.html", ppt: "not_found.html" },
     { dept: "MKT", id: "MKT610", name: "Customer Relationship Management", handouts: "1DB8lKIYLTXwKveT8bvgMEsEqSqOLooky", highlighted: "not_found.html", ppt: "not_found.html" },
@@ -562,7 +657,7 @@ const subjectsData = [
     { dept: "MKT", id: "MKT624", name: "Brand Management", handouts: "1mA5bh-U6uJFkaAhTBY83v2jp3tci4_cO", highlighted: "not_found.html", ppt: "not_found.html" },
     { dept: "MKT", id: "MKT625", name: "Services Marketing", handouts: "1rAxYFgR-md6nmMewkgrv5cBzfgjJ2aWm", highlighted: "not_found.html", ppt: "not_found.html" },
 
-    // MTH Dept
+    // ====== MTH Dept =======
     { dept: "MTH", id: "MTH001", name: "Elementary Mathematics", handouts: "1V7Ndod8Wp4lj4Ft_MPhDW3gr3Ii-pyVj", highlighted: "not_found.html", ppt: "not_found.html" },
 
     { dept: "MTH", id: "MTH100", name: "General Mathematics", handouts: "1Plmwckeb4Dr_FuyqHasHjcEnkifdpQ53", highlighted: "https://drive.google.com/file/d/1ZlR55xiZmXk2Hrsq5VqDq5tNtipJ5y1A/view", ppt: "https://drive.google.com/file/d/1GcogJ_47cV_3Wqqof2rlSueTcCDaBAKP/view" },
@@ -575,117 +670,156 @@ const subjectsData = [
 
     { dept: "MTH", id: "MTH201", name: "Multivariable Calculus", handouts: "13zFZHK_dR6ymNDcvmWc2gbgqCbi9HMCe", highlighted: "not_found.html", ppt: "not_found.html" },
 
-    { dept: "MTH", id: "MTH202", name: "Discrete Mathematics", handouts: "12sJJ11vxNbyfLWLbs_8BZUzyGv0YVl6E", highlighted: "https://drive.google.com/drive/folders/1scCQyY5IkPVN_4razWD1I1oLRBeHSBiO", ppt: "https://drive.google.com/file/d/1IbxZF0OnLc2p9vWFXBY1dNZPj99I6t2K/view" },
+    {
+        dept: "MTH", id: "MTH202", name: "Discrete Mathematics", handouts: "12sJJ11vxNbyfLWLbs_8BZUzyGv0YVl6E",
+        highlighted: "https://drive.google.com/drive/folders/1scCQyY5IkPVN_4razWD1I1oLRBeHSBiO",
+        ppt: "https://drive.google.com/file/d/1IbxZF0OnLc2p9vWFXBY1dNZPj99I6t2K/view"
+    },
 
     { dept: "MTH", id: "MTH301", name: "Calculus II", handouts: "1tnt94eHuMaRiPgnoNXMC3MCp_zy5FCmE", highlighted: "not_found.html", ppt: "https://drive.google.com/drive/folders/1k_MYNQ9jOtCFWw-HUip0Fhp67CYmMGvH" },
 
-    { dept: "MTH", id: "MTH302", name: "Business Mathematics & Statistics", handouts: "1iCpy2HEzYRbhuaXC1jErlAIsSnqWfIbP", highlighted: "https://drive.google.com/file/d/1g91yXOFbIurs97QEqA_pAK9EVTm6RVpv/view", ppt: "not_found.html" },
+    {
+        dept: "MTH", id: "MTH302", name: "Business Mathematics & Statistics", handouts: "1iCpy2HEzYRbhuaXC1jErlAIsSnqWfIbP",
+        highlighted: "https://drive.google.com/uc?export=download&id=1Mf2mJuH11q6Lfuy_Vxa8YK23aoZvrbE4",
+        ppt: "https://drive.google.com/uc?export=download&id=1yXFZA1VUhBTjD44K4nMvpdlAAe8sekz8"
+    },
 
     { dept: "MTH", id: "MTH303", name: "Mathematical Methods", handouts: "1oT6JPs8vnN7X3w6jUDHxKno0YoIiJmG-", highlighted: "not_found.html", ppt: "not_found.html" },
 
-    { dept: "MTH", id: "MTH304", name: "Statics", handouts: "1bIyLMvQGovluDnwQe8A1hEUXt-2IwkrR", highlighted: "not_found.html", ppt: "https://drive.google.com/drive/folders/1MczjsaAufs447bM-QBq2YlTmB8-K2NM-" },
+    {
+        dept: "MTH", id: "MTH304", name: "Statics", handouts: "1bIyLMvQGovluDnwQe8A1hEUXt-2IwkrR",
+        highlighted: "https://drive.google.com/drive/folders/1MczjsaAufs447bM-QBq2YlTmB8-K2NM-",
+        ppt: "https://drive.google.com/drive/folders/1MczjsaAufs447bM-QBq2YlTmB8-K2NM-"
+    },
 
-    { dept: "MTH", id: "MTH401", name: "Differential Equations", handouts: "1N_ZSuz31Zs3Mgz0q0dUQplymdkF5hnBI", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "MTH", id: "MTH401", name: "Differential Equations", handouts: "1N_ZSuz31Zs3Mgz0q0dUQplymdkF5hnBI", highlighted: "https://drive.google.com/uc?export=download&id=1IBGpmf0j0AsMgjosWnz-WzjfS1-V_vUq", ppt: "not_found.html" },
 
     { dept: "MTH", id: "MTH403", name: "Calculus & Analytical Geometry-II", handouts: "1M9zqxgQd2D6hi4YGyev2jOJ6DmKtONOj", highlighted: "not_found.html", ppt: "not_found.html" },
-
-    { dept: "MTH", id: "MTH404", name: "Dynamics", handouts: "https://drive.google.com/drive/folders/1FVbuwZYSqisJ6CqwZLaPYDjp5K2p2Wtf", highlighted: "not_found.html", ppt: "https://drive.google.com/file/d/1BBhcQCgBx8kcZD3elUFLNM103qEsOtXw/view" },
-
-    { dept: "MTH", id: "MTH405", name: "Elementary Topics in Pure Mathematics", handouts: "1gEzR7z0Jnq8fKPC2Ug0VWxyoZvQ1eNKj", highlighted: "not_found.html", ppt: "not_found.html" },
-
-    { dept: "MTH", id: "MTH501", name: "Linear Algebra", handouts: "1CR7ijfBlljUhl2HazgKjMRK8E5DWOilp", highlighted: "https://drive.google.com/file/d/1K__zvA1zZNUWb9OFAe5AA1yKV52RYq6w/view", ppt: "https://drive.google.com/drive/folders/1aPoRXPK4kk3DvgT7jnPQKZ6zKFSZ4pvZ" },
-
-    { dept: "MTH", id: "MTH601", name: "Operations Research", handouts: "1BF-3QeiF1oIho77QV5PsHjxztDjIuyUJ", highlighted: "https://drive.google.com/drive/folders/1wt4qCZGrPox6hB3hF8YZg4aU5sxU6iiE", ppt: "https://drive.google.com/drive/folders/1tzNrMhTKXoy7u1s_-CHNAwO2kstXN9Yd" },
-
-    { dept: "MTH", id: "MTH603", name: "Numerical Analysis", handouts: "1P1W9kk8Ib1Z2gqfMlRKDr7Vk1hotmtnf", highlighted: "https://drive.google.com/drive/folders/1_3QNKvAn1J6LUEo04xQGv67MFE_vDiMA", ppt: "not_found.html" },
-
-    { dept: "MTH", id: "MTH621", name: "Real Analysis I", handouts: "1q8syQhAsfuSfiph4zhHYsnmyVIVhTNT6", highlighted: "not_found.html", ppt: "https://drive.google.com/file/d/1NYOnbovJST2Ry6iba751j9N42eU1bBp7/view" },
-
-    { dept: "MTH", id: "MTH622", name: "Vectors and Classical Mechanics", handouts: "1NYn3BleFvdmeADuP7QbeiSNeMJr8Qg27", highlighted: "https://drive.google.com/file/d/1hPHrO_Kf-yP6QZxa6X-dO4AITvbAA3Cz/view", ppt: "not_found.html" },
-
-    { dept: "MTH", id: "MTH631", name: "Real Analysis II", handouts: "1bp9bqWyWaOv3thJe6H01WwSBYzDsEZwZ", highlighted: "not_found.html", ppt: "not_found.html" },
-
-    { dept: "MTH", id: "MTH632", name: "Complex Analysis and Differential Geometry", handouts: "1W9V5-HELV5IhVSYNA1gfI_pFdveh5cpf", highlighted: "not_found.html", ppt: "not_found.html" },
-
-    { dept: "MTH", id: "MTH633", name: "Group Theory", handouts: "1S9489BygKnC2bX3kG42EfJiHKW5xY5kq", highlighted: "https://drive.google.com/file/d/1BTCgeiH019jhMOtrkLIS8jXk5AiI5qYp/view", ppt: "not_found.html" },
-
-    { dept: "MTH", id: "MTH634", name: "Topology", handouts: "1X-71Ej6fL1w6obF-2d3v-kVNr1WFueft", highlighted: "https://drive.google.com/file/d/1Fz7PX0MM0udo9mBbdL67flP6x7OQxDaq/view", ppt: "not_found.html" },
-
-    { dept: "MTH", id: "MTH641", name: "Functional Analysis", handouts: "1mip-W4gA4DfpYib1wgYLgVKh0vjFdhZL", highlighted: "not_found.html", ppt: "not_found.html" },
-
-    { dept: "MTH", id: "MTH642", name: "Fluid Mechanics", handouts: "1bNUXyPtIclUnhmpYGQYkPQVzfRdJE_u6", highlighted: "not_found.html", ppt: "https://drive.google.com/drive/folders/1auCYiI8LzL_FxvrpAT9H9R1zc4cKoc8m" },
-
-    { dept: "MTH", id: "MTH643", name: "Advanced Differential Equations", handouts: "1y4IGTxIYA_36gC2TNcwW7-8j1wf5NQHg", highlighted: "not_found.html", ppt: "not_found.html" },
-
-    { dept: "MTH", id: "MTH644", name: "Advanced Linear Algebra", handouts: "https://drive.google.com/drive/folders/1o_gi0eEVlXx9IX-Oh2iAq1nlQVFGSFoH", highlighted: "https://drive.google.com/drive/folders/1o_gi0eEVlXx9IX-Oh2iAq1nlQVFGSFoH", ppt: "https://drive.google.com/drive/folders/1o_gi0eEVlXx9IX-Oh2iAq1nlQVFGSFoH" },
-
-    { dept: "MTH", id: "MTH645", name: "Advanced Measure Theory", handouts: "https://drive.google.com/file/d/1SqJTTptjtSAkgHcL46Fp9SNf8ZQqXjDj/view", highlighted: "https://drive.google.com/file/d/1E-JWxJldmW9z2wyN7JJkMOmHKDj30ioK/view", ppt: "not_found.html" },
-
-    // PAK Dept
     {
-        dept: "PAK", id: "PAK301",
-        name: "Pakistan Studies",
-        handouts: "1k3S9CdP6qzU0VSHL0GSeclSClBHLE5ev",
-        highlighted: "https://drive.google.com/uc?export=download&id=1dsDu0e1eZ9qBpHwKSFnbdkXKTelmORvr",
-        ppt: "not_found.html"
+        dept: "MTH", id: "MTH404", name: "Dynamics", handouts: "1LevNR67H3Wba7OG8F4brWGVtfWWRb7G6",
+        highlighted: "https://drive.google.com/drive/folders/1NkDyrKB_jMU2Gfc_geQH1AXjMv8IZmiT",
+        ppt: "https://drive.google.com/drive/folders/1NkDyrKB_jMU2Gfc_geQH1AXjMv8IZmiT"
+    },
+    { dept: "MTH", id: "MTH405", name: "Elementary Topics in Pure Mathematics", handouts: "1gEzR7z0Jnq8fKPC2Ug0VWxyoZvQ1eNKj", highlighted: "not_found.html", ppt: "https://drive.google.com/drive/folders/1DyxonZFePFW3Pldx3rP3U5yxkv79N29J" },
+    {
+        dept: "MTH", id: "MTH501", name: "Linear Algebra", handouts: "1CR7ijfBlljUhl2HazgKjMRK8E5DWOilp",
+        highlighted: "https://drive.google.com/uc?export=download&id=1K__zvA1zZNUWb9OFAe5AA1yKV52RYq6w",
+        ppt: "https://drive.google.com/drive/folders/1aPoRXPK4kk3DvgT7jnPQKZ6zKFSZ4pvZ"
     },
     {
-        dept: "PAK", id: "PAK302",
-        name: "Pakistan Studies (New Curriculum)",
-        handouts: "1a_DH03lWzYVrwuLRX4RrR8rS440Y7cZL",
-        highlighted: "https://drive.google.com/uc?export=download&id=1GngtRDNMZD-BoTdDuyQFhL5_KcYZZY8o",
-        ppt: "https://drive.google.com/uc?export=download&id=1M825wE5s4G1fkjvRSXRgps1DURbRuzvz"
+        dept: "MTH", id: "MTH5101", name: "Calculus I", handouts: "https://drive.google.com/drive/folders/1cn_l4UsAUlRfAOuk2s2lDcRtI1YY8aiy",
+        highlighted: "", ppt: "https://drive.google.com/uc?export=download&id=1fRFRufgLP1XB1WKTf5SXOs1-IgkabqXl"
     },
     {
-        dept: "PAK", id: "PAK522",
-        name: "Constitution of Pakistan",
-        handouts: "https://drive.google.com/file/d/1g54JjYwahrLx7y7veK64I1k4G6yvIOz0",
-        highlighted: "not_found.html",
-        ppt: "https://drive.google.com/uc?export=download&id=1M825wE5s4G1fkjvRSXRgps1DURbRuzvz"
+        dept: "MTH", id: "MTH5102", name: "Calculus II", handouts: "1vKsIykd6yL1NMlOc2sY3E3OLmPae76kF", highlighted: "", ppt: ""
+    },
+    {
+        dept: "MTH", id: "MTH601", name: "Operations Research", handouts: "1BF-3QeiF1oIho77QV5PsHjxztDjIuyUJ",
+        highlighted: "https://drive.google.com/file/d/uc?export=download&id=1EBNCi6ypPHI9uThKQL9BYTVi5GiGxkqx",
+        ppt: "https://drive.google.com/drive/folders/1tzNrMhTKXoy7u1s_-CHNAwO2kstXN9Yd"
+    },
+    {
+        dept: "MTH", id: "MTH603", name: "Numerical Analysis", handouts: "1P1W9kk8Ib1Z2gqfMlRKDr7Vk1hotmtnf",
+        highlighted: "https://drive.google.com/uc?export=download&id=1Wtcj3pGSDlZhO94SjieIs8rCAFmFkICF",
+        ppt: "https://drive.google.com/file/d/165awmiM2UrE451P519iWQko8wxCSiCZ-"
+    },
+    {
+        dept: "MTH", id: "MTH621", name: "Real Analysis I", handouts: "1q8syQhAsfuSfiph4zhHYsnmyVIVhTNT6",
+        highlighted: "https://drive.google.com/uc?export=download&id=1FT4-BW5f2JNGzYcSpu0RlBsmVIJXmfju",
+        ppt: "https://drive.google.com/uc?export=download&id=1NYOnbovJST2Ry6iba751j9N42eU1bBp7"
+    },
+    {
+        dept: "MTH", id: "MTH622", name: "Vectors and Classical Mechanics", handouts: "1NYn3BleFvdmeADuP7QbeiSNeMJr8Qg27",
+        highlighted: "https://drive.google.com/uc?export=download&id=1xDDlQR5cD8Y6GwbJQpqFpWiTSVCwmLll",
+        ppt: "https://drive.google.com/uc?export=download&id=1EAFrBKabJjDVi9FpGyVNOsUg-SKZNNBO"
+    },
+    {
+        dept: "MTH", id: "MTH623", name: "Tensor Analysis and its Applications", handouts: "1sphaEY9-5_ksAM8Z4LXTMX1K_39tJb6b",
+        highlighted: "https://drive.google.com/drive/folders/1CzM6mzfDIoI_xV3iCJ55Av8S-wqUdZGy",
+        ppt: "https://drive.google.com/uc?export=download&id=1sphaEY9-5_ksAM8Z4LXTMX1K_39tJb6b"
+    },
+    {
+        dept: "MTH", id: "MTH631", name: "Real Analysis II", handouts: "1bp9bqWyWaOv3thJe6H01WwSBYzDsEZwZ",
+        highlighted: "https://drive.google.com/uc?export=download&id=1PMuEJolOigxKYRZJvm5uJPT5Gshgijf8", ppt: "not_found.html"
+    },
+    {
+        dept: "MTH", id: "MTH632", name: "Complex Analysis and Differential Geometry", handouts: "1W9V5-HELV5IhVSYNA1gfI_pFdveh5cpf", highlighted: "https://drive.google.com/drive/folders/1PUUPzAkLtJxBlclAyIby0V-s8-A8NTZH",
+        ppt: "https://drive.google.com/uc?export=download&id=1ixz0Vl-pbS0msimAWfVRnMjSc6PQyKnj"
     },
 
-    // PHY Dept
+    {
+        dept: "MTH", id: "MTH633", name: "Group Theory", handouts: "1BTCgeiH019jhMOtrkLIS8jXk5AiI5qYp", highlighted: "",
+        ppt: "https://drive.google.com/uc?export=download&id=1BTCgeiH019jhMOtrkLIS8jXk5AiI5qYp"
+    },
+    {
+        dept: "MTH", id: "MTH634", name: "Topology", handouts: "1X-71Ej6fL1w6obF-2d3v-kVNr1WFueft",
+        highlighted: "https://drive.google.com/uc?export=download&id=1ogrLP5zOPyliGIb79xuLbwgFQvmYir3d",
+        ppt: "https://drive.google.com/uc?export=download&id=1U-qm_IaWNVHVPtkkXMyVi2QrTpWYJi9g"
+    },
+    { dept: "MTH", id: "MTH641", name: "Functional Analysis", handouts: "1mip-W4gA4DfpYib1wgYLgVKh0vjFdhZL", highlighted: "https://drive.google.com/drive/folders/1lgy6RWuxebYx-NW4tKel9lb0YTnKeTyQ", ppt: "not_found.html" },
+
+    { dept: "MTH", id: "MTH642", name: "Fluid Mechanics", handouts: "1bNUXyPtIclUnhmpYGQYkPQVzfRdJE_u6", highlighted: "https://drive.google.com/drive/folders/1auCYiI8LzL_FxvrpAT9H9R1zc4cKoc8m", ppt: "https://drive.google.com/drive/folders/1auCYiI8LzL_FxvrpAT9H9R1zc4cKoc8m" },
+    {
+        dept: "MTH", id: "MTH643", name: "Introduction to MATLAB", handouts: "1y4IGTxIYA_36gC2TNcwW7-8j1wf5NQHg", highlighted: "not_found.html",
+        ppt: "https://drive.google.com/file/d/1C9f36ng-5L8URw49960qT4sz2G6_kGNL"
+    },
+    {
+        dept: "MTH", id: "MTH644", name: "Measure Theory", handouts: "12L7Pi4A2g0xQSXQTUpPJ09Io2-WXAza9",
+        highlighted: "https://drive.google.com/drive/folders/1o_gi0eEVlXx9IX-Oh2iAq1nlQVFGSFoH", ppt: ""
+    },
+
+    {
+        dept: "MTH", id: "MTH645", name: "Fuzzy Logic and Applications", handouts: "1SqJTTptjtSAkgHcL46Fp9SNf8ZQqXjDj",
+        highlighted: "https://drive.google.com/uc?export=download&id=1XFDDYb9MeSLUAP8eoHlXmxh-FyDjmMYx",
+        ppt: "https://drive.google.com/uc?export=download&id=1aHljYL-r3tzgCFvE4O_u6L6c7T97NhRS"
+    },
+    {
+        dept: "MTH", id: "MTH646", name: "Partial Differential Equations", handouts: "12JKrTUudKCnVfOMnHQpVs1_R8F-a6LkT",
+        highlighted: "https://drive.google.com/uc?export=download&id=1h7zupz2q_9ZWTvURGSuL5wBfQaIw50M5",
+        ppt: "https://drive.google.com/uc?export=download&id=1SYOqHCWP-LtNo2Q16ayWDzefMVu1HG7Z"
+    },
+    {
+        dept: "MTH", id: "MTH647", name: "Methods in Mathematical Physics", handouts: "1WEjerxkMq0Ot8ktRt7Pk_gqeFZvqtlmM",
+        highlighted: "https://drive.google.com/file/d/1KPE6_CRrHynGe9nmcePZIMDU4q58Iu9t", ppt: "not_found.html"
+    },
+
+    // ====================  PAK Dept  ====================
+    { dept: "PAK", id: "PAK301", name: "Pakistan Studies", handouts: "1k3S9CdP6qzU0VSHL0GSeclSClBHLE5ev", highlighted: "https://drive.google.com/uc?export=download&id=1dsDu0e1eZ9qBpHwKSFnbdkXKTelmORvr", ppt: "https://drive.google.com/file/d/1oBEYRtdrw_hzO1hz7GHT83qLOZLBoQN5" },
+    { dept: "PAK", id: "PAK302", name: "Pakistan Studies (New Curriculum)", handouts: "1a_DH03lWzYVrwuLRX4RrR8rS440Y7cZL", highlighted: "https://drive.google.com/uc?export=download&id=1GngtRDNMZD-BoTdDuyQFhL5_KcYZZY8o", ppt: "https://drive.google.com/uc?export=download&id=1M825wE5s4G1fkjvRSXRgps1DURbRuzvz" },
+    { dept: "PAK", id: "PAK522", name: "Constitution of Pakistan", handouts: "13Bq9Fl1OwzjI2G6v6EjyhFo92nEexsj1", highlighted: "not_found.html", ppt: "" },
+
+    // ====================  PHY Dept  ====================
     { dept: "PHY", id: "PHY101", name: "Physics", handouts: "13ySMA-hyCDwbqN9IsBpJBBgXx_FIVUsj", highlighted: "https://drive.google.com/drive/folders/14nRtY5xqD66Zpp1Wm2Ig_V-36PMkcyuK", ppt: "not_found.html" },
     { dept: "PHY", id: "PHY301", name: "Circuit Theory", handouts: "1-g_VROSWnCY1Bvm7wORWli0w5QlTpaBH", highlighted: "not_found.html", ppt: "not_found.html" },
 
-    // PSC Dept
-    {
-        dept: "PSC", id: "PSC201",
-        name: "International Relations",
-        handouts: "1Oq25bGbk14gvYABupLJhJlG6scArNhav",
-        highlighted: "not_found.html",
-        ppt: "not_found.html"
-    },
-    {
-        dept: "PSC", id: "PSC401",
-        name: "Public International Law",
-        handouts: "17Hg0fFhLx7XY39fFaIW5Uj9NN1tLWa5A",
-        highlighted: "not_found.html",
-        ppt: "not_found.html"
-    },
+    // ====================  PSC Dept  ====================
+    { dept: "PSC", id: "PSC201", name: "International Relations", handouts: "1Oq25bGbk14gvYABupLJhJlG6scArNhav", highlighted: "https://drive.google.com/uc?export=download&id=1M05BBWcmnjUyl0kw5bemt5DCmQbC3zu2", ppt: "not_found.html" },
+    { dept: "PSC", id: "PSC401", name: "Public International Law", handouts: "17Hg0fFhLx7XY39fFaIW5Uj9NN1tLWa5A", highlighted: "not_found.html", ppt: "not_found.html" },
 
-    // PSY Dept
-    { dept: "PSY", id: "PSY101", name: "Introduction to Psychology", handouts: "1KftueKRiUmot03y5gjhBggv5OeBMiS4p", highlighted: "https://drive.google.com/uc?export=download&id=13-T9w7StO2NhrqzngcOhvtN1G8wApHM8", ppt: "not_found.html" },
-    { dept: "PSY", id: "PSY401", name: "Clinical Psychology", handouts: "1x7aywbLIyL1irh_EChT5wCM0EXS5_iq_", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "PSY", id: "PSY402", name: "Experimental Psychology", handouts: "1ZZae2-4aqD1wOfbMf7n-CdIhUxYElr0x", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "PSY", id: "PSY403", name: "Social Psychology", handouts: "1o0YbM2KEOqqQyKWuS0d781QPZWF_zR0f", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "PSY", id: "PSY404", name: "Abnormal Psychology", handouts: "1ExJ9fOU5IkEK2G-0uTm54yy9XiVrpiKh", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "PSY", id: "PSY405", name: "Personality Psychology", handouts: "1-DFbYieg0juy5CE3Sg9ipykWDgRzpZkm", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "PSY", id: "PSY406", name: "Educational Psychology", handouts: "1sfziOmUXQDU_ioJbif5qG9wZvMvp8fqF", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "PSY", id: "PSY407", name: "Sport Psychology", handouts: "1JhS0gSyciIV0oBl5u-RJHxazYF8zzOoT", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "PSY", id: "PSY408", name: "Health Psychology", handouts: "18zu-zwUiQ5FRxw0HxB8EMtcyEGKPxgdf", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "PSY", id: "PSY409", name: "Positive Psychology", handouts: "1WzumRqicUY9_Mj4wtl2BlWDizhdhAowd", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "PSY", id: "PSY502", name: "History & Systems of Psychology", handouts: "1Vf4QpXlZ8SqWzDlKNuJVjNJGlnvCydDM", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "PSY", id: "PSY504", name: "Cognitive Psychology", handouts: "1VgpJIJ7bjGDQ_A4wOIgDbtn8r2oiDeFN", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "PSY", id: "PSY505", name: "Developmental Psychology", handouts: "1LA6gt9fcgVcWOBzEzv3ErUd_NrLuQPgR", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "PSY", id: "PSY510", name: "Organizational Psychology", handouts: "15SrgZUoCIcZyg515iw5npBtrwGmeOkN_", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "PSY", id: "PSY511", name: "Environmental Psychology", handouts: "1-Aj67SgQcT-TKYwOJFQJ0mGObhWKNUlh", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "PSY", id: "PSY512", name: "Gender Issues in Psychology", handouts: "128-NCeCFstbVY4ryGLWRWnmFacwZ0Ow4", highlighted: "not_found.html", ppt: "not_found.html" },
+    // ====================  PSY Dept  ====================
+    { dept: "PSY", id: "PSY101", name: "Introduction to Psychology", handouts: "1KftueKRiUmot03y5gjhBggv5OeBMiS4p", highlighted: "https://drive.google.com/uc?export=download&id=1hVMJDE0N5K6DES79jUBiwjYiOMqhEbF8", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY401", name: "Clinical Psychology", handouts: "1x7aywbLIyL1irh_EChT5wCM0EXS5_iq_", highlighted: "https://drive.google.com/uc?export=download&id=1LufkYtDV3fxd5S4c-IjWts2NkPMf7dG_", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY402", name: "Experimental Psychology", handouts: "1ZZae2-4aqD1wOfbMf7n-CdIhUxYElr0x", highlighted: "https://drive.google.com/uc?export=download&id=1xrLf2W-flES7qHjjRNIBy803XevMu15e", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY403", name: "Social Psychology", handouts: "1o0YbM2KEOqqQyKWuS0d781QPZWF_zR0f", highlighted: "https://drive.google.com/uc?export=download&id=11GHRAdW5HBrldq0Yfv4qDrNVxutbeP2w", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY404", name: "Abnormal Psychology", handouts: "1ExJ9fOU5IkEK2G-0uTm54yy9XiVrpiKh", highlighted: "https://drive.google.com/uc?export=download&id=1Ppz48CeSikJpTN1xU_1cOqjA76RGr6QG", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY405", name: "Personality Psychology", handouts: "1-DFbYieg0juy5CE3Sg9ipykWDgRzpZkm", highlighted: "https://drive.google.com/uc?export=download&id=1rX_xFcjBlW9LE7w9Ny9blS0DlcUr70gE", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY406", name: "Educational Psychology", handouts: "1sfziOmUXQDU_ioJbif5qG9wZvMvp8fqF", highlighted: "https://drive.google.com/drive/folders/14kxILBlQzKr-oIeA1PfAN0vJC00FGgK7", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY407", name: "Sport Psychology", handouts: "1JhS0gSyciIV0oBl5u-RJHxazYF8zzOoT", highlighted: "https://drive.google.com/uc?export=download&id=1VwQWd0A7N4h-jnD2VAOsH2kOZFDz1EgY", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY408", name: "Health Psychology", handouts: "18zu-zwUiQ5FRxw0HxB8EMtcyEGKPxgdf", highlighted: "https://drive.google.com/uc?export=download&id=1-UIsDVBTO7RZI_Nk2yzOXMZzoNYSqRmg", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY409", name: "Positive Psychology", handouts: "1WzumRqicUY9_Mj4wtl2BlWDizhdhAowd", highlighted: "https://drive.google.com/uc?export=download&id=1StbsXxRspu3LDV6CtzPfnz01KPT0sIrc", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY502", name: "History & Systems of Psychology", handouts: "1Vf4QpXlZ8SqWzDlKNuJVjNJGlnvCydDM", highlighted: "https://drive.google.com/drive/folders/1-Rl-Ob94eWfh_pgrpXlTdLAIHDtVT9ri", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY504", name: "Cognitive Psychology", handouts: "1VgpJIJ7bjGDQ_A4wOIgDbtn8r2oiDeFN", highlighted: "https://drive.google.com/uc?export=download&id=1qmtvEp0w_kRe3S9LujQq1aLaSsE-haOK", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY505", name: "Developmental Psychology", handouts: "1LA6gt9fcgVcWOBzEzv3ErUd_NrLuQPgR", highlighted: "https://drive.google.com/uc?export=download&id=1HIZZgmnBNOB2fuR6UoBE_h-B9C4Wnv_-", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY510", name: "Organizational Psychology", handouts: "15SrgZUoCIcZyg515iw5npBtrwGmeOkN_", highlighted: "https://drive.google.com/uc?export=download&id=1mobByN8mRsJeWbGDM-suiwvrRgRrK54Q", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY511", name: "Environmental Psychology", handouts: "1-Aj67SgQcT-TKYwOJFQJ0mGObhWKNUlh", highlighted: "https://drive.google.com/file/d/1dlIHXaWxF34yfA2JnVGekcb1X4Cz_5A0", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY512", name: "Gender Issues in Psychology", handouts: "128-NCeCFstbVY4ryGLWRWnmFacwZ0Ow4", highlighted: "https://drive.google.com/uc?export=download&id=1wiqqlQuz9KuGPYt6x8zvCJiWN9lOuyJT", ppt: "not_found.html" },
     { dept: "PSY", id: "PSY513", name: "Forensic Psychology", handouts: "1H4lPxNVUBFs3sBKSbij_urUbC56Yk9IW", highlighted: "not_found.html", ppt: "not_found.html" },
     { dept: "PSY", id: "PSY514", name: "Consumer Psychology", handouts: "1m8aq9hEpEGL5LIhlFCuetbgGyBhYOAmg", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "PSY", id: "PSY515", name: "Cross-Cultural Psychology", handouts: "1x0fm1g2bhqXyNPDWZA_-gg710O7WJRqm", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "PSY", id: "PSY610", name: "Neurological Bases of Behavior", handouts: "1NfpltYvkkyH8cnOtPkTHaa0EcICdZiP7", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "PSY", id: "PSY631", name: "Psychological Testing & Measurement", handouts: "1iJ3KvbdSUCjSC5r0gdp2He-jckY7ZUwP", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY515", name: "Cross-Cultural Psychology", handouts: "1x0fm1g2bhqXyNPDWZA_-gg710O7WJRqm", highlighted: "https://drive.google.com/uc?export=download&id=1uXhV3bk2uceviyoQc9pfR4uV-g841bzY", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY516", name: "Statistics in Psychology", handouts: "18TW3oC4fukbmJQfWtfmF5YUov3cNRf3e", highlighted: "https://drive.google.com/uc?export=download&id=1uiN-qrjKQKm5LXjk7MqdsoRsBcrOtEBA", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY610", name: "Neurological Bases of Behavior", handouts: "1NfpltYvkkyH8cnOtPkTHaa0EcICdZiP7", highlighted: "https://drive.google.com/uc?export=download&id=17gXnzy2UbOgzhK8FFErPjlJXBVWxhCvF", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY611", name: "Ethical issues in Psychology", handouts: "1NfpltYvkkyH8cnOtPkTHaa0EcICdZiP7", highlighted: "https://drive.google.com/uc?export=download&id=1OKsUWuSIGpvPDMFePOAb9eLKCw9PA7p-", ppt: "not_found.html" },
+    { dept: "PSY", id: "PSY631", name: "Psychological Testing & Measurement", handouts: "1iJ3KvbdSUCjSC5r0gdp2He-jckY7ZUwP", highlighted: "https://drive.google.com/uc?export=download&id=1mpZ5cX9mkCP73QCzf3d4yx0KIhqcFpJ9", ppt: "not_found.html" },
     { dept: "PSY", id: "PSY632", name: "Theory and Practice of Counseling", handouts: "1BK-MjEkVl2piDZVGzB0OHoXGm35OQ9vq", highlighted: "not_found.html", ppt: "not_found.html" },
 
     // SOC Dept
@@ -697,21 +831,38 @@ const subjectsData = [
 
     { dept: "SOC", id: "SOC302", name: "Sociological Theories", handouts: "1ziX-rIVMzF5cNlibVXKnXfvi5SLiHZed", highlighted: "not_found.html", ppt: "not_found.html" },
 
-    { dept: "SOC", id: "SOC401", name: "Introduction to Cultural Anthropology", handouts: "https://drive.google.com/drive/folders/12NeXAHeT3LYYhMz5JZq_OvSzbvNYbLO0", highlighted: "https://drive.google.com/drive/folders/12NeXAHeT3LYYhMz5JZq_OvSzbvNYbLO0", ppt: "not_found.html" },
+    { dept: "SOC", id: "SOC401", name: "Introduction to Cultural Anthropology", handouts: "1qJAS_vBQ7gIGbsuLxM_ur4hZs9E8Oxzb", highlighted: "https://drive.google.com/drive/folders/12NeXAHeT3LYYhMz5JZq_OvSzbvNYbLO0", ppt: "not_found.html" },
 
     { dept: "SOC", id: "SOC402", name: "Sociological Perspectives", handouts: "1X_wPBd7qNAL1kcRq_3UJioR0WnasekFZ", highlighted: "not_found.html", ppt: "not_found.html" },
 
     { dept: "SOC", id: "SOC403", name: "Gender Studies", handouts: "1PTSvuKRpJLQ2AbXs8gV_-m49iNCAllYR", highlighted: "not_found.html", ppt: "not_found.html" },
 
+    { dept: "SOC", id: "SOC404", name: "Pakistani Society and Culture", handouts: "18Jmiwpsqsgb7FSQywmzHF3PQIORMRPjN", highlighted: "https://drive.google.com/drive/folders/1YCqVzYO1qtW23sOP9QCudYw-euQGHgNN", ppt: "not_found.html" },
+
     { dept: "SOC", id: "SOC509", name: "Quantitative Research Methodology", handouts: "1N7Q8HkMdhOG7_JipMpg1Nu_titFoYe0J", highlighted: "not_found.html", ppt: "not_found.html" },
 
-    { dept: "SOC", id: "SOC601", name: "Social Policy and Governance", handouts: "1IcsYHmjtOF_-aZuQoi-UrrM2_Y7fZihI", highlighted: "1IcsYHmjtOF_-aZuQoi-UrrM2_Y7fZihI", ppt: "not_found.html" },
+    { dept: "SOC", id: "SOC601", name: "Social Policy and Governance", handouts: "1vSDB0ZoSKL4o6M8uEbbhd2VUYoPqdR9f", highlighted: "https://drive.google.com/uc?export=download&id=1IcsYHmjtOF_-aZuQoi-UrrM2_Y7fZihI", ppt: "not_found.html" },
 
     { dept: "SOC", id: "SOC602", name: "Sociology of Education", handouts: "10QZQBGu29izJhmF4E7wEWMloj-8kbbO7", highlighted: "not_found.html", ppt: "not_found.html" },
 
     { dept: "SOC", id: "SOC603", name: "Sociology of Development", handouts: "13MmN5TbLPBlBDIE_h0vB7bBt044tAI2P", highlighted: "not_found.html", ppt: "not_found.html" },
 
+    { dept: "SOC", id: "SOC604", name: "Community Development", handouts: "1hdW4X5fvPJW95JkXX-eAsHUnFA-fQ9D6", highlighted: "not_found.html", ppt: "not_found.html" },
+
     { dept: "SOC", id: "SOC605", name: "Population Dynamics", handouts: "1OR7IDJB84lGJ-MwObtcb7v0UXB8-e9_1", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "SOC", id: "SOC606", name: "Rural Sociology", handouts: "1OR7IDJB84lGJ-MwObtcb7v0UXB8-e9_1", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "SOC", id: "SOC606", name: "Urban Sociology", handouts: "1OR7IDJB84lGJ-MwObtcb7v0UXB8-e9_1", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "SOC", id: "SOC608", name: "Sociology of Health", handouts: "1i1tJxTBVAg6cQhHDivo21_gIYXpkr3TN", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "SOC", id: "SOC609", name: "Qualitative Research Methods", handouts: "1z9kFvyfh0gDQnir2mFNfzHTgp_09yuMO", highlighted: "https://drive.google.com/uc?export=download&id=1FyozDG0uw0QbPNzDfaSLr-QyhYWE6Uuz", ppt: "not_found.html" },
+
+    { dept: "SOC", id: "SOC610", name: "Electronic Media & Virtual Community", handouts: "1gO4y0XeeUHCUlD2ZnluJQeqkW4ysKQfs", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    { dept: "SOC", id: "SOC611", name: "Criminology", handouts: "1dBo7FRuRIwhEjryjNOArKfEII-AOW4FL", highlighted: "not_found.html", ppt: "not_found.html" },
+    { dept: "SOC", id: "SOC613", name: "Social Change and Transformation", handouts: "1AKyID7P2UumZ7OJDYZAQ7sIKTuggyr3R", highlighted: "not_found.html", ppt: "not_found.html" },
 
     // STA Dept
     {
@@ -720,55 +871,59 @@ const subjectsData = [
         highlighted: "not_found.html",
         ppt: "not_found.html"
     },
-
     {
         dept: "STA", id: "STA301", name: "Statistics and Probability",
         handouts: "1W5ja10yhaacRBCnAdiB-amrpwuvcsxwO",
         highlighted: "https://drive.google.com/drive/folders/173igWwemlNOchHcPOAdN12ooM2xmVxww",
         ppt: "not_found.html"
     },
-
+    {
+        dept: "STA", id: "STA304", name: "Applied Statistics",
+        handouts: "1wvZcoL7GK8DBq0fgu-a_cvzAYZ9YmzgH",
+        highlighted: "not_found.html",
+        ppt: "not_found.html"
+    },
     {
         dept: "STA", id: "STA404", name: "Regression and Correlation Analysis",
         handouts: "1y1KWR2Y8MTJIF-0iLwlkigUWx7uzSsMf",
         highlighted: "not_found.html",
         ppt: "not_found.html"
     },
-
     {
         dept: "STA", id: "STA406", name: "Statistical Inference",
-        handouts: "1EAZQeu7OynkDVhXtpvSFCC-yUQftrwKH",
+        handouts: "1_ghIYV6VtF4ti1mFGQ6WGCKBxnw-qD6M",
         highlighted: "not_found.html",
-        ppt: "not_found.html"
+        ppt: "https://drive.google.com/uc?export=download&id=1_ghIYV6VtF4ti1mFGQ6WGCKBxnw-qD6M"
     },
-
+    {
+        dept: "STA", id: "STA408", name: "Design and Analysis of Experiments",
+        handouts: "1X_5S9Ar2rkADwvn5UAwwZRMcHzrshs6l",
+        highlighted: "https://drive.google.com/uc?export=download&id=1q01g37GZHz-gySoEVclAiUZUhlITRIX7",
+        ppt: "https://drive.google.com/uc?export=download&id=1X_5S9Ar2rkADwvn5UAwwZRMcHzrshs6l"
+    },
     {
         dept: "STA", id: "STA630", name: "Research Methods",
         handouts: "1krEoI98Tp8sWH0fhugzDzU5lr1xduAmM",
         highlighted: "https://drive.google.com/file/d/1-sue_OMgDaX7UoIK8PdENSy7ROMu-S8p/view",
         ppt: "https://drive.google.com/file/d/1-sue_OMgDaX7UoIK8PdENSy7ROMu-S8p/view"
     },
-
     {
-        dept: "STA", id: "STA631", name: "Research Methods (STA631)",
+        dept: "STA", id: "STA631", name: "Research Methods",
         handouts: "https://drive.google.com/file/d/1a1t9GhvXZz1_8MXiFJjKvyCFNV0S-g7Y/view",
         highlighted: "not_found.html",
         ppt: "not_found.html"
     },
-
     {
         dept: "STA", id: "STA632", name: "Sampling Techniques",
         handouts: "1G8fzY4I3qcLMdEteKN9GjK5xyb8CI0J2",
         highlighted: "not_found.html", ppt: "not_found.html"
     },
-
     {
         dept: "STA", id: "STA641", name: "Statistical Packages Applications",
         handouts: "1W8wEN4fdeDufjvsrcpI6ogx66FI0l6sv",
         highlighted: "not_found.html",
         ppt: "https://drive.google.com/uc?export=download&id=1W8wEN4fdeDufjvsrcpI6ogx66FI0l6sv"
     },
-
     {
         dept: "STA", id: "STA642", name: "Probability & Statistics",
         handouts: "1r3oji7wD59hUMJsuhkO5LZCJE9K_MBQP",
@@ -879,7 +1034,7 @@ const subjectsData = [
         highlighted: "not_found.html",
         ppt: "https://drive.google.com/file/d/1Pa5gPzvKYVXQ3opZiU4wXpY7yC9Eq69Z"
     },
-     {
+    {
         dept: "ZOO", id: "ZOO506 | ZOO518", name: "Applied Entomology and Pest Management",
         handouts: "1bjjczQDekO8fBT9M_pA2JxRPLLoRZk47",
         highlighted: "not_found.html",
@@ -903,31 +1058,4 @@ const subjectsData = [
         highlighted: "not_found.html",
         ppt: "not_found.html"
     },
-
-    // BT
-    {
-        dept: "BT", id: "BT101", name: "Ecology, Biodiversity & Evolution-I",
-        handouts: "1RblWfA3NvdB666s6JEh4mRI8z7Dhfo3s",
-        highlighted: "not_found.html",
-        ppt: "https://drive.google.com/file/d/1bF6xqje9WhIc9M5egK8pe2syIkG7_Tvw"
-    },
-    {
-        dept: "BT", id: "BT302", name: "Immunology",
-        handouts: "1VrgT6yMP9Jy5Ysd4BWSIBUrucxDPdhwp",
-        highlighted: "https://drive.google.com/file/d/1J4F0CE3mv8d8DEcgQXP1b9oWT_56dSs8",
-        ppt: "https://drive.google.com/file/d/1VrgT6yMP9Jy5Ysd4BWSIBUrucxDPdhwp"
-    },
-    {
-        dept: "BT", id: "BT601", name: "Virology",
-        handouts: "1bvrT4aSYKuZM3Y9CYq9wEXJa4svZO_vF",
-        highlighted: "https://drive.google.com/file/d/1ShCoiav5pcKqtYId93tXCt_ig7GO0Ndf",
-        ppt: "https://drive.google.com/file/d/1ZDGv2ku34ogMG2fRlYp2T-sgfVVAn7bS"
-    },
-    {
-        dept: "BT", id: "BT605", name: "Biosafety & Bioethics",
-        handouts: "1KIvLsClMwywjPJqtFYT6EgrynwNojm9y",
-        highlighted: "not_found.html",
-        ppt: "https://drive.google.com/file/d/1KIvLsClMwywjPJqtFYT6EgrynwNojm9y"
-    },
-
 ];
