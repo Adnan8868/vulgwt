@@ -12,6 +12,10 @@
             darkMode: 'class',
         }
     </script>
+    
+    <!-- SUPABASE JS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +32,6 @@
             scroll-behavior: smooth;
         }
 
-        /* --- Dark Mode Styles --- */
         .dark body {
             background-color: #0b1329;
             color: #f8fafc;
@@ -51,7 +54,6 @@
             box-shadow: 0 12px 30px -10px rgba(59, 130, 246, 0.3);
         }
 
-        /* --- Light Mode Styles --- */
         html:not(.dark) body {
             background-color: #f8fafc;
             color: #1e293b;
@@ -73,7 +75,6 @@
             box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.1);
         }
 
-        /* Custom Scrollbar */
         .custom-scrollbar::-webkit-scrollbar,
         .code-box::-webkit-scrollbar {
             width: 6px;
@@ -104,12 +105,10 @@
 <body class="min-h-screen flex flex-col justify-between antialiased transition-colors duration-300">
 
     <div>
-        <!-- COMPACT HEADER -->
-        <header
-            class="hero-bg border-b border-slate-800/80 py-4 md:py-6 px-4 md:px-8 relative overflow-hidden transition-colors duration-300">
+        <!-- HEADER -->
+        <header class="hero-bg border-b border-slate-800/80 py-4 md:py-6 px-4 md:px-8 relative overflow-hidden transition-colors duration-300">
             <div class="max-w-[94%] mx-auto flex flex-col items-center text-center">
 
-                <!-- Top Row: Dashboard & Theme Toggle -->
                 <div class="w-full flex items-center justify-between mb-2">
                     <a href="../index.html"
                         class="inline-flex items-center gap-1.5 text-blue-100 dark:text-slate-300 hover:text-white text-[11px] font-semibold transition bg-white/10 dark:bg-slate-800/80 px-3 py-1.5 rounded-full border border-white/10 dark:border-slate-700">
@@ -123,40 +122,29 @@
                     </button>
                 </div>
 
-                <!-- Asma-ul-Husna Badge -->
-                <div
-                    class="inline-flex items-center justify-center gap-3 px-4 py-1.5 rounded-2xl bg-white/15 dark:bg-slate-900/85 border border-white/25 dark:border-slate-700 text-white mb-2 shadow-xl backdrop-blur-md">
+                <div class="inline-flex items-center justify-center gap-3 px-4 py-1.5 rounded-2xl bg-white/15 dark:bg-slate-900/85 border border-white/25 dark:border-slate-700 text-white mb-2 shadow-xl backdrop-blur-md">
                     <span id="header-meaning" class="asma-urdu text-white font-medium">سب سے بڑا مہربان</span>
                     <span class="h-4 w-px bg-white/30 shrink-0"></span>
                     <span id="header-arabic" class="asma-arabic text-yellow-300 font-bold">الرَّحْمَٰن</span>
                 </div>
 
-                <!-- Title -->
-                <h1
-                    class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight text-white uppercase">
-                    LGWT <span
-                        class="text-yellow-400 dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-blue-400 dark:to-indigo-400">ASSIGNMENTS
-                        HUB</span>
+                <h1 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight text-white uppercase">
+                    LGWT <span class="text-yellow-400 dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-blue-400 dark:to-indigo-400">ASSIGNMENTS HUB</span>
                 </h1>
             </div>
         </header>
 
-        <!-- SERVICE & ACTION SECTION (Responsive Mobile Mini-Image + Actions) -->
+        <!-- SERVICES SECTION -->
         <section class="max-w-[94%] mx-auto px-2 md:px-4 pt-4 md:pt-6">
             <div class="prep-card-style rounded-2xl md:rounded-3xl p-4 md:p-6 transition-all duration-300">
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 items-center">
 
-                    <!-- Mobile Header Bar: Mini Image + Title -->
-                    <div
-                        class="flex md:hidden items-center gap-3 pb-2 border-b border-slate-200 dark:border-slate-800">
-                        <div
-                            class="w-12 h-12 rounded-xl overflow-hidden shadow-inner shrink-0 border border-slate-200 dark:border-slate-700">
-                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
-                                alt="Assignment" class="w-full h-full object-cover">
+                    <div class="flex md:hidden items-center gap-3 pb-2 border-b border-slate-200 dark:border-slate-800">
+                        <div class="w-12 h-12 rounded-xl overflow-hidden shadow-inner shrink-0 border border-slate-200 dark:border-slate-700">
+                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Assignment" class="w-full h-full object-cover">
                         </div>
                         <div>
-                            <span
-                                class="bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-500/20 text-[9px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded">
+                            <span class="bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-500/20 text-[9px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded">
                                 Assignment Desk
                             </span>
                             <h3 class="text-xs font-black text-slate-800 dark:text-white uppercase mt-0.5">
@@ -165,69 +153,49 @@
                         </div>
                     </div>
 
-                    <!-- Desktop Left Image -->
-                    <div
-                        class="hidden md:block md:col-span-5 h-56 rounded-2xl overflow-hidden shadow-inner bg-slate-100 dark:bg-slate-800">
-                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                            alt="Assignment Work" class="w-full h-full object-cover">
+                    <div class="hidden md:block md:col-span-5 h-56 rounded-2xl overflow-hidden shadow-inner bg-slate-100 dark:bg-slate-800">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Assignment Work" class="w-full h-full object-cover">
                     </div>
 
-                    <!-- Action & Pricing Details -->
                     <div class="md:col-span-7 space-y-3">
                         <div class="hidden md:flex items-center justify-between">
-                            <span
-                                class="bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-500/20 text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-md">
+                            <span class="bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-500/20 text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-md">
                                 Paid Handling Desk
                             </span>
                             <span class="text-[11px] text-emerald-500 font-bold flex items-center gap-1">
-                                <span
-                                    class="w-2 h-2 rounded-full bg-emerald-500 animate-ping inline-block"></span>
+                                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping inline-block"></span>
                                 100% Unique Solutions
                             </span>
                         </div>
 
-                        <!-- Pricing Cards Grid -->
                         <div class="grid grid-cols-2 gap-2.5">
-                            <div
-                                class="p-3 bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between">
+                            <div class="p-3 bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between">
                                 <div>
-                                    <h4
-                                        class="font-bold text-[11px] text-slate-800 dark:text-slate-200 uppercase tracking-wide truncate">
+                                    <h4 class="font-bold text-[11px] text-slate-800 dark:text-slate-200 uppercase tracking-wide truncate">
                                         <i class="fa-solid fa-tag text-blue-600 mr-1"></i> Normal Subjects
                                     </h4>
-                                    <p class="text-[10px] text-slate-400 mt-0.5 truncate">Unique conceptual
-                                        work</p>
+                                    <p class="text-[10px] text-slate-400 mt-0.5 truncate">Unique conceptual work</p>
                                 </div>
                                 <div class="mt-2">
-                                    <span
-                                        class="text-base md:text-lg font-black text-blue-600 dark:text-blue-400">Rs.
-                                        200</span>
+                                    <span class="text-base md:text-lg font-black text-blue-600 dark:text-blue-400">Rs. 200</span>
                                     <span class="text-[9px] text-slate-400 font-medium">/ sub</span>
                                 </div>
                             </div>
 
-                            <div
-                                class="p-3 bg-amber-50/50 dark:bg-amber-950/20 rounded-xl border border-amber-200/60 dark:border-amber-900/40 flex flex-col justify-between">
+                            <div class="p-3 bg-amber-50/50 dark:bg-amber-950/20 rounded-xl border border-amber-200/60 dark:border-amber-900/40 flex flex-col justify-between">
                                 <div>
-                                    <h4
-                                        class="font-bold text-[11px] text-amber-800 dark:text-amber-400 uppercase tracking-wide truncate">
-                                        <i class="fa-solid fa-network-wired text-amber-600 mr-1"></i> Cisco /
-                                        Lab
+                                    <h4 class="font-bold text-[11px] text-amber-800 dark:text-amber-400 uppercase tracking-wide truncate">
+                                        <i class="fa-solid fa-network-wired text-amber-600 mr-1"></i> Cisco / Lab
                                     </h4>
-                                    <p class="text-[10px] text-slate-400 mt-0.5 truncate">CS201P, CS301P etc.
-                                    </p>
+                                    <p class="text-[10px] text-slate-400 mt-0.5 truncate">CS201P, CS301P etc.</p>
                                 </div>
                                 <div class="mt-2 flex items-center justify-between">
-                                    <span
-                                        class="text-[11px] font-bold text-amber-600 dark:text-amber-400">Best
-                                        Price</span>
-                                    <span
-                                        class="bg-emerald-600 text-white text-[8px] font-black px-1.5 py-0.5 rounded uppercase">Discount</span>
+                                    <span class="text-[11px] font-bold text-amber-600 dark:text-amber-400">Best Price</span>
+                                    <span class="bg-emerald-600 text-white text-[8px] font-black px-1.5 py-0.5 rounded uppercase">Discount</span>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Main Action Buttons -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
                             <button onclick="openUploadModal()"
                                 class="w-full inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-4 rounded-xl text-xs uppercase tracking-wider transition shadow-md active:scale-95">
@@ -245,13 +213,11 @@
             </div>
         </section>
 
-        <!-- MAIN ASSIGNMENT CONTENT -->
+        <!-- MAIN CONTENT -->
         <main class="max-w-[94%] mx-auto px-2 md:px-4 py-4 md:py-6">
             <div class="prep-card-style rounded-2xl md:rounded-3xl p-4 md:p-6">
 
-                <!-- TABS & SEARCH BAR -->
-                <div
-                    class="flex flex-col lg:flex-row lg:items-center justify-between gap-3 mb-5 pb-4 border-b border-slate-200 dark:border-slate-800">
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3 mb-5 pb-4 border-b border-slate-200 dark:border-slate-800">
 
                     <div class="grid grid-cols-3 sm:flex bg-slate-100 dark:bg-slate-950 p-1 rounded-xl gap-1">
                         <button id="tab-files-btn" onclick="switchTab('files')"
@@ -270,63 +236,72 @@
 
                     <div class="flex items-center gap-2 w-full lg:w-auto">
                         <div class="relative flex-1 lg:w-72">
-                            <i
-                                class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+                            <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
                             <input type="text" id="searchInput"
                                 oninput="this.value = this.value.toUpperCase()"
-                                placeholder="Filter code (e.g. CS201, MGT211)..."
+                                placeholder="Filter code (e.g. CS201, MGT501)..."
                                 class="w-full pl-8 pr-3 py-2 text-xs bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-800 dark:text-slate-200 outline-none focus:border-blue-500 font-bold transition">
                         </div>
-                        <div
-                            class="bg-slate-50 dark:bg-slate-950 px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-800 text-xs shadow-sm shrink-0">
-                            <b id="countDisplay"
-                                class="text-blue-600 dark:text-blue-400 font-extrabold text-xs">0</b>
+                        <div class="bg-slate-50 dark:bg-slate-950 px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-800 text-xs shadow-sm shrink-0">
+                            <b id="countDisplay" class="text-blue-600 dark:text-blue-400 font-extrabold text-xs">0</b>
                         </div>
                     </div>
                 </div>
 
-                <!-- DYNAMIC LIST CONTAINER -->
                 <div id="solutions-list" class="space-y-3">
-                    <div id="loadingSpinner"
-                        class="flex flex-col items-center justify-center py-16 my-8 w-full text-center">
+                    <div id="loadingSpinner" class="flex flex-col items-center justify-center py-16 my-8 w-full text-center">
                         <div class="relative w-12 h-12 mb-3 mx-auto">
-                            <div
-                                class="w-12 h-12 rounded-full border-4 border-slate-200 dark:border-slate-800 border-t-blue-600 dark:border-t-blue-400 animate-spin">
-                            </div>
+                            <div class="w-12 h-12 rounded-full border-4 border-slate-200 dark:border-slate-800 border-t-blue-600 dark:border-t-blue-400 animate-spin"></div>
                             <div class="absolute inset-0 flex items-center justify-center">
-                                <i
-                                    class="fa-solid fa-graduation-cap text-xs text-blue-600 dark:text-blue-400"></i>
+                                <i class="fa-solid fa-graduation-cap text-xs text-blue-600 dark:text-blue-400"></i>
                             </div>
                         </div>
-                        <h3 class="text-sm md:text-base font-extrabold text-amber-500 dark:text-amber-400 tracking-wide mb-1"
-                            style="font-family: 'Amiri', serif;">
+                        <h3 class="text-sm md:text-base font-extrabold text-amber-500 dark:text-amber-400 tracking-wide mb-1" style="font-family: 'Amiri', serif;">
                             صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ
                         </h3>
-                        <p
-                            class="text-xs md:text-sm font-bold text-slate-700 dark:text-slate-200 tracking-wide uppercase">
-                            Loading Assignments Solution...
+                        <p class="text-xs md:text-sm font-bold text-slate-700 dark:text-slate-200 tracking-wide uppercase">
+                            Loading Assignments...
                         </p>
-                        <p class="text-[11px] text-slate-400 dark:text-slate-500 mt-1 font-medium">Please wait
-                            a moment</p>
                     </div>
                 </div>
             </div>
         </main>
     </div>
 
+    <!-- DOCUMENT PREVIEW MODAL (IN-APP PREVIEW WITHOUT AUTO-DOWNLOAD) -->
+    <div id="viewerModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[60] flex items-center justify-center p-2 sm:p-4 hidden">
+        <div class="bg-slate-900 border border-slate-800 w-full max-w-4xl h-[90vh] rounded-2xl flex flex-col shadow-2xl overflow-hidden">
+            <div class="px-4 py-3 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
+                <div class="flex items-center gap-2 truncate">
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span>
+                    <h3 id="viewerModalTitle" class="text-xs font-bold text-white uppercase tracking-wider truncate">Document Preview</h3>
+                </div>
+                <button onclick="closeViewerModal()" class="text-slate-400 hover:text-white p-1 rounded-lg text-lg transition">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="flex-1 bg-slate-950 relative overflow-hidden">
+                <div id="viewerLoading" class="absolute inset-0 flex flex-col items-center justify-center text-slate-400 text-xs gap-2">
+                    <i class="fa-solid fa-spinner animate-spin text-xl text-blue-500"></i>
+                    <span>Loading preview...</span>
+                </div>
+                <iframe id="viewerFrame" class="w-full h-full border-0 hidden" onload="document.getElementById('viewerLoading').classList.add('hidden'); this.classList.remove('hidden');"></iframe>
+                <div id="viewerImgContainer" class="w-full h-full flex items-center justify-center p-4 overflow-auto hidden">
+                    <img id="viewerImg" class="max-h-full max-w-full object-contain rounded-lg shadow" alt="Preview">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- UPLOAD MODAL -->
-    <div id="uploadModal"
-        class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
-        <div
-            class="bg-white dark:bg-slate-900 w-full max-w-md rounded-2xl p-5 shadow-2xl relative border border-slate-200 dark:border-slate-800">
-            <button onclick="closeUploadModal()"
-                class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-lg transition">
+    <div id="uploadModal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white dark:bg-slate-900 w-full max-w-md rounded-2xl p-5 shadow-2xl relative border border-slate-200 dark:border-slate-800">
+            <button onclick="closeUploadModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-lg transition">
                 <i class="fa-solid fa-xmark"></i>
             </button>
 
             <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100 dark:border-slate-800">
-                <div
-                    class="w-9 h-9 bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 rounded-xl flex items-center justify-center text-base shadow-sm">
+                <div class="w-9 h-9 bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 rounded-xl flex items-center justify-center text-base shadow-sm">
                     <i class="fa-solid fa-cloud-arrow-up"></i>
                 </div>
                 <div>
@@ -337,38 +312,31 @@
 
             <form id="uploadForm" class="space-y-3">
                 <div>
-                    <label
-                        class="block text-[11px] font-bold text-slate-600 dark:text-slate-400 uppercase mb-1">Subject
-                        Code</label>
+                    <label class="block text-[11px] font-bold text-slate-600 dark:text-slate-400 uppercase mb-1">Subject Code</label>
                     <input type="text" id="uploadSubject" required placeholder="e.g. MGT211"
                         oninput="this.value = this.value.toUpperCase()"
                         class="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs text-slate-900 dark:text-slate-100 outline-none focus:border-emerald-500 font-bold transition">
                 </div>
                 <div>
-                    <label
-                        class="block text-[11px] font-bold text-slate-600 dark:text-slate-400 uppercase mb-1">Select
-                        File (PDF / Image / DOCX)</label>
+                    <label class="block text-[11px] font-bold text-slate-600 dark:text-slate-400 uppercase mb-1">Select File (PDF / Image / DOCX)</label>
                     <input type="file" id="uploadFile" required
                         class="w-full text-xs text-slate-500 file:mr-3 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-[11px] file:font-semibold file:bg-emerald-50 dark:file:bg-emerald-950 file:text-emerald-700 dark:file:text-emerald-400 hover:file:bg-emerald-100 cursor-pointer">
                 </div>
-                <div
-                    class="p-2.5 bg-blue-50 dark:bg-blue-950/40 border border-blue-100 dark:border-blue-900/50 rounded-xl">
+                <div class="p-2.5 bg-blue-50 dark:bg-blue-950/40 border border-blue-100 dark:border-blue-900/50 rounded-xl">
                     <p class="text-[10px] text-blue-700 dark:text-blue-300 leading-relaxed font-medium">
-                        <i class="fa-solid fa-circle-info mr-1"></i> Upload karne ke baad hamari team iska
-                        accurate solution portal par jald upload kar degi.
+                        <i class="fa-solid fa-circle-info mr-1"></i> Upload karne ke baad hamari team iska accurate solution portal par upload kar degi.
                     </p>
                 </div>
                 <button type="submit" id="submitBtn"
                     class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 rounded-xl text-xs shadow-md transition flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-paper-plane"></i> Submit to Drive
+                    <i class="fa-solid fa-paper-plane"></i> Submit to Portal
                 </button>
             </form>
         </div>
     </div>
 
     <!-- FOOTER -->
-    <footer
-        class="bg-[#0f172a] text-white pt-12 pb-6 mt-12 relative overflow-hidden border-t border-white/5 font-['Poppins']">
+    <footer class="bg-[#0f172a] text-white pt-12 pb-6 mt-12 relative overflow-hidden border-t border-white/5 font-['Poppins']">
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
                 <div class="space-y-4">
@@ -376,67 +344,35 @@
                         VU STUDY <span class="text-yellow-400">LGWT</span>
                     </div>
                     <p class="text-slate-400 text-xs leading-relaxed font-medium">
-                        Pakistan's most trusted partner for Virtual University success. 100% accurate
-                        assignment solutions and academic support.
+                        Pakistan's most trusted partner for Virtual University success. 100% accurate assignment solutions.
                     </p>
-                    <div class="flex gap-3">
-                        <a href="https://whatsapp.com/channel/0029VbAfKscEVccSHYySNP3I" target="_blank"
-                            class="w-9 h-9 bg-white/5 text-green-500 rounded-xl flex items-center justify-center hover:bg-green-500 hover:text-white transition shadow border border-white/10 text-sm">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@VUStudyLGWT" target="_blank"
-                            class="w-9 h-9 bg-white/5 text-red-500 rounded-xl flex items-center justify-center hover:bg-red-500 hover:text-white transition shadow border border-white/10 text-sm">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
                 </div>
-
                 <div class="space-y-3">
-                    <h4
-                        class="text-white font-bold border-l-4 border-blue-600 pl-3 uppercase tracking-wider text-[11px]">
-                        Quick Links</h4>
+                    <h4 class="text-white font-bold border-l-4 border-blue-600 pl-3 uppercase tracking-wider text-[11px]">Quick Links</h4>
                     <ul class="space-y-2 text-slate-400 text-xs font-semibold">
-                        <li><a href="../index.html" class="hover:text-yellow-400 transition">Home Page</a>
-                        </li>
-                        <li><a href="../papers/pastpapers.html" class="hover:text-yellow-400 transition">Past
-                                Papers Vault</a></li>
-                        <li><a href="../Exam Prepartion/ExamPrepartion.html"
-                                class="hover:text-yellow-400 transition">Exam Preparation</a></li>
-                        <li><a href="../important.html" class="hover:text-yellow-400 transition">Premium
-                                Files</a></li>
+                        <li><a href="../index.html" class="hover:text-yellow-400 transition">Home Page</a></li>
+                        <li><a href="../papers/pastpapers.html" class="hover:text-yellow-400 transition">Past Papers Vault</a></li>
                     </ul>
                 </div>
-
                 <div class="space-y-3">
-                    <h4
-                        class="text-white font-bold border-l-4 border-yellow-400 pl-3 uppercase tracking-wider text-[11px]">
-                        Services</h4>
+                    <h4 class="text-white font-bold border-l-4 border-yellow-400 pl-3 uppercase tracking-wider text-[11px]">Services</h4>
                     <ul class="space-y-2 text-slate-400 text-xs font-semibold">
                         <li>LMS Full Handling</li>
                         <li>Paid Assignments</li>
-                        <li>Quiz Management</li>
-                        <li>Cisco Assignments</li>
                     </ul>
                 </div>
-
                 <div class="space-y-3">
-                    <h4
-                        class="text-white font-bold border-l-4 border-blue-600 pl-3 uppercase tracking-wider text-[11px]">
-                        Direct Support</h4>
+                    <h4 class="text-white font-bold border-l-4 border-blue-600 pl-3 uppercase tracking-wider text-[11px]">Direct Support</h4>
                     <a href="https://wa.me/923196248868" target="_blank"
                         class="block w-full py-2.5 bg-yellow-400 text-blue-950 text-center rounded-xl font-black text-xs hover:bg-yellow-300 transition uppercase tracking-widest shadow">
                         <i class="fab fa-whatsapp mr-1"></i> WhatsApp +92 319 6248868
                     </a>
                 </div>
             </div>
-
             <div class="h-px w-full bg-slate-800 mb-6"></div>
-
-            <div
-                class="flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-slate-500 font-semibold uppercase tracking-wider">
+            <div class="flex justify-between items-center text-[10px] text-slate-500 font-semibold uppercase tracking-wider">
                 <div>&copy; 2026 LGWT Official. All rights reserved.</div>
-                <div>Learning <span class="text-blue-500">&</span> Growing <span class="text-yellow-400">With
-                        Team</span></div>
+                <div>Learning & Growing With Team</div>
             </div>
         </div>
     </footer>
@@ -444,8 +380,7 @@
     <!-- Toast Notification -->
     <div id="toastNotification"
         class="fixed top-4 right-4 z-[100] transform translate-x-full opacity-0 transition-all duration-300 ease-out flex items-center gap-3 px-4 py-3 rounded-xl shadow-xl border max-w-xs">
-        <div id="toastIconContainer"
-            class="w-5 h-5 rounded-lg flex items-center justify-center text-xs shrink-0">
+        <div id="toastIconContainer" class="w-5 h-5 rounded-lg flex items-center justify-center text-xs shrink-0">
             <i id="toastIcon" class="fa-solid"></i>
         </div>
         <div>
@@ -456,400 +391,7 @@
 
     <!-- SCRIPTS -->
     <script>
-        const API_URL = "https://script.google.com/macros/s/AKfycbzov5qwIRTuFBsJhZJtTfS6hRRbApetxgvZJD3b9GVYYjJIPiERaiDMgj3UMIUjNvdU/exec";
-        const WHATSAPP_CHANNEL_URL = "https://whatsapp.com/channel/0029VaDK7bMId7nUnzXfNq3E";
-
-        // Asma-ul-Husna Engine
-        const asmaUlHusnaList = [
-            { arabic: "الرَّحْمَٰن", meaning: "سب سے بڑا مہربان" },
-            { arabic: "الرَّحِيم", meaning: "بے حد رحم کرنے والا" },
-            { arabic: "الْمَلِك", meaning: "سب کا مالک و بادشاہ" },
-            { arabic: "الْقُدُّوس", meaning: "نہایت پاک و مقدس" },
-            { arabic: "السَّلَام", meaning: "سلامتی دینے والا" },
-            { arabic: "الْمُؤْمِن", meaning: "امن و امان دینے والا" },
-            { arabic: "الْمُهَيْمِن", meaning: "نگہبان و محافظ" },
-            { arabic: "الْعَزِيز", meaning: "سب پر غالب اور عزت والا" },
-            { arabic: "الْجَبَّار", meaning: "زبردست اقتدار والا، کمی پوری کرنے والا" },
-            { arabic: "الْمُتَكَبِّر", meaning: "بزرگی اور بڑائی والا" },
-            { arabic: "الْخَالِق", meaning: "پیدا کرنے والا" },
-            { arabic: "الْبَارِئ", meaning: "وجود میں لانے والا" },
-            { arabic: "الْمُصَوِّر", meaning: "صورتیں بنانے والا" },
-            { arabic: "الْغَفَّار", meaning: "بار بار بخشنے والا" },
-            { arabic: "الْقَهَّار", meaning: "ہر چیز پر غالب آنے والا" },
-            { arabic: "الْوَهَّاب", meaning: "بہت عطا کرنے والا" },
-            { arabic: "الرَّزَّاق", meaning: "رزق دینے والا" },
-            { arabic: "الْفَتَّاح", meaning: "مشکلیں کھولنے والا" },
-            { arabic: "الْعَلِيم", meaning: "سب کچھ جاننے والا" },
-            { arabic: "الْحَفِيظ", meaning: "حفاظت کرنے والا" },
-            { arabic: "الْكَرِيم", meaning: "بہت کرم کرنے والا" },
-            { arabic: "الْحَكِيم", meaning: "نہایت حکمت والا" },
-            { arabic: "الْوَدُود", meaning: "بہت محبت کرنے والا" },
-            { arabic: "الْوَكِيل", meaning: "کارساز" }
-        ];
-
-        function rotateHeaderName() {
-            const arabicEl = document.getElementById('header-arabic');
-            const meaningEl = document.getElementById('header-meaning');
-            if (!arabicEl || !meaningEl) return;
-
-            let currentIndex = 0;
-            setInterval(() => {
-                currentIndex = (currentIndex + 1) % asmaUlHusnaList.length;
-                const current = asmaUlHusnaList[currentIndex];
-                arabicEl.innerText = current.arabic;
-                meaningEl.innerText = current.meaning;
-            }, 3000);
-        }
-
-        // Theme Toggle Engine
-        function initTheme() {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'dark') {
-                document.documentElement.classList.add('dark');
-                updateThemeUI(true);
-            } else {
-                document.documentElement.classList.remove('dark');
-                updateThemeUI(false);
-            }
-        }
-
-        function toggleTheme() {
-            const isDark = document.documentElement.classList.toggle('dark');
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-            updateThemeUI(isDark);
-        }
-
-        function updateThemeUI(isDark) {
-            const icon = document.getElementById('themeIcon');
-            const text = document.getElementById('themeText');
-            if (icon && text) {
-                if (isDark) {
-                    icon.className = 'fa-solid fa-moon text-yellow-300';
-                    text.innerText = 'Dark';
-                } else {
-                    icon.className = 'fa-solid fa-sun text-amber-500';
-                    text.innerText = 'Light';
-                }
-            }
-        }
-
-        // Database Engine
-        let driveData = [];
-        let sheetData = [];
-        let submittedQuestionsData = [];
-        let currentActiveTab = 'files';
-
-        function getDriveDownloadLink(url) {
-            const match = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
-            if (match) {
-                return `https://drive.google.com/uc?export=download&id=${match[1]}`;
-            }
-            return url;
-        }
-
-        function loadDatabase() {
-            fetch(API_URL)
-                .then(res => res.json())
-                .then(data => {
-                    driveData = data.driveFiles || [];
-                    sheetData = data.sheetTexts || [];
-                    submittedQuestionsData = data.submittedQuestions || [];
-                    executeRenderEngine();
-                })
-                .catch(err => {
-                    console.error("Database Sync Error:", err);
-                    document.getElementById('solutions-list').innerHTML = `
-                        <p class="text-center py-6 text-red-500 text-xs font-semibold">Failed to sync database rows.</p>
-                    `;
-                });
-        }
-
-        document.getElementById('searchInput').addEventListener('input', executeRenderEngine);
-
-        function switchTab(tabMode) {
-            currentActiveTab = tabMode;
-            const filesBtn = document.getElementById('tab-files-btn');
-            const textBtn = document.getElementById('tab-text-btn');
-            const submittedBtn = document.getElementById('tab-submitted-btn');
-
-            const inactiveClass = "px-3 py-2 rounded-lg text-xs font-bold text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-all text-center";
-            const activeClass = "px-3 py-2 rounded-lg text-xs font-bold transition-all bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 shadow-sm text-center";
-
-            filesBtn.className = inactiveClass;
-            textBtn.className = inactiveClass;
-            submittedBtn.className = inactiveClass;
-
-            if (tabMode === 'files') filesBtn.className = activeClass;
-            else if (tabMode === 'text') textBtn.className = activeClass;
-            else if (tabMode === 'submitted') submittedBtn.className = activeClass;
-
-            executeRenderEngine();
-        }
-
-        function executeRenderEngine() {
-            const container = document.getElementById('solutions-list');
-            const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
-
-            if (currentActiveTab === 'files') {
-                container.className = "space-y-3";
-                let filtered = driveData.filter(f => (f.name || '').toLowerCase().includes(searchTerm));
-                document.getElementById('countDisplay').innerText = `${filtered.length} Files`;
-
-                if (filtered.length === 0) {
-                    container.innerHTML = `<div class="p-8 text-center bg-slate-50 dark:bg-slate-950/60 rounded-xl border border-dashed border-slate-200 dark:border-slate-800"><p class="text-slate-400 text-xs font-bold">No Solution Files Found.</p></div>`;
-                    return;
-                }
-                container.innerHTML = filtered.map(item => `
-                    <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-950/70 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-xl transition border border-slate-200/80 dark:border-slate-800/80 gap-3">
-                        <div class="flex items-center gap-2.5 min-w-0">
-                            <div class="w-7 h-7 bg-red-50 dark:bg-red-950/40 text-red-500 rounded-lg flex items-center justify-center text-xs shrink-0 border border-red-200/40 dark:border-red-800/30">
-                                <i class="fa-solid fa-file-pdf"></i>
-                            </div>
-                            <span class="text-xs font-bold text-slate-700 dark:text-slate-200 truncate">${escapeHtml(item.name || '')}</span>
-                        </div>
-                        <a href="${item.url}" target="_blank" class="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg text-[11px] transition shrink-0 shadow-sm active:scale-95">
-                            <i class="fa-solid fa-download mr-1"></i> Download
-                        </a>
-                    </div>
-                `).join('');
-
-            } else if (currentActiveTab === 'text') {
-                container.className = "space-y-3";
-                let filtered = sheetData.filter(f => (f.name || '').toLowerCase().includes(searchTerm));
-                document.getElementById('countDisplay').innerText = `${filtered.length} Solved`;
-
-                if (filtered.length === 0) {
-                    container.innerHTML = `<div class="p-8 text-center bg-slate-50 dark:bg-slate-950/60 rounded-xl border border-dashed border-slate-200 dark:border-slate-800"><p class="text-slate-400 text-xs font-bold">No Text Code Solutions Found.</p></div>`;
-                    return;
-                }
-                container.innerHTML = filtered.map((item, index) => {
-                    const blockText = item.answer ? item.answer : `// No text solution updated inside sheet for ${item.name}`;
-
-                    return `
-                        <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-md mb-4 text-left">
-                            <div class="p-3 bg-slate-950 flex justify-between items-center text-xs border-b border-slate-800/60">
-                                <span class="font-bold text-slate-200 flex items-center gap-1.5 min-w-0">
-                                    <span class="w-2 h-2 rounded-full bg-emerald-500 inline-block shrink-0"></span>
-                                    <span class="ml-1 font-mono text-slate-300 truncate text-[11px] md:text-xs">
-                                        <span class="text-yellow-400 font-bold">${escapeHtml(item.name || '')}</span> 
-                                        <span class="text-slate-500 mx-1">|</span> 
-                                        <span class="text-[9px] text-blue-400 uppercase tracking-wider font-sans">Assignment Solution</span>
-                                    </span>
-                                </span>
-                                <button onclick="copyAssignmentSolution(${index}, this)" class="px-2.5 py-1.5 bg-amber-500 hover:bg-amber-600 text-slate-950 text-[11px] font-bold rounded-lg transition flex items-center gap-1 shadow-sm shrink-0">
-                                    <i class="fa-regular fa-copy"></i> Copy
-                                </button>
-                            </div>
-                            <pre class="code-box bg-[#090d16] text-emerald-400/90 p-4 font-mono text-[11px] md:text-xs overflow-x-auto whitespace-pre leading-relaxed max-h-[250px] block border-b border-slate-800/40">${escapeHtml(blockText)}</pre>
-                            <div class="bg-slate-950/60 p-2.5 px-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-[10px]">
-                                <span class="text-slate-400 font-medium truncate"><i class="fa-solid fa-bell text-yellow-400 mr-1"></i> Get instant updates for upcoming assignments!</span>
-                                <a href="${WHATSAPP_CHANNEL_URL}" target="_blank" class="inline-flex items-center gap-1 text-emerald-400 hover:underline font-bold shrink-0">
-                                    <i class="fab fa-whatsapp"></i> Join Channel
-                                </a>
-                            </div>
-                        </div>
-                    `;
-                }).join('');
-
-            } else if (currentActiveTab === 'submitted') {
-                let filtered = submittedQuestionsData.filter(f => (f.name || '').toLowerCase().includes(searchTerm));
-                document.getElementById('countDisplay').innerText = `${filtered.length} Requests`;
-
-                if (filtered.length === 0) {
-                    container.className = "space-y-3";
-                    container.innerHTML = `<div class="p-8 text-center bg-slate-50 dark:bg-slate-950/60 rounded-xl border border-dashed border-slate-200 dark:border-slate-800"><p class="text-slate-400 text-xs font-bold">No Submitted Student Files Found.</p></div>`;
-                    return;
-                }
-
-                container.className = "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 space-y-0";
-                container.innerHTML = filtered.map(item => {
-                    let cleanName = item.name.match(/^[^_]+/)?.[0] || item.name;
-                    return `
-                        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 flex flex-col items-center justify-between text-center transition shadow-sm hover:shadow-md">
-                            <div class="w-12 h-12 mb-2 bg-slate-50 dark:bg-slate-950 text-blue-600 dark:text-blue-400 rounded-xl flex items-center justify-center text-xl">
-                                <i class="fa-solid fa-book-open"></i>
-                            </div>
-                            
-                            <div class="w-full">
-                                <h4 class="text-xs font-extrabold text-slate-800 dark:text-white uppercase tracking-wide truncate">${escapeHtml(cleanName)}</h4>
-                                <p class="text-[9px] font-semibold text-amber-500 mt-0.5">
-                                    <i class="fa-solid fa-clock-rotate-left mr-0.5"></i> Awaiting Solution
-                                </p>
-                            </div>
-                            
-                            <div class="flex items-center justify-center gap-2 mt-3 w-full pt-2 border-t border-slate-100 dark:border-slate-800/80">
-                                <a href="${item.url}" target="_blank" title="View Document" class="w-7 h-7 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded-lg flex items-center justify-center text-[10px] transition hover:bg-slate-200">
-                                    <i class="fa-solid fa-eye"></i>
-                                </a>
-                                <a href="${getDriveDownloadLink(item.url)}" target="_blank" title="Download File" class="w-7 h-7 bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 rounded-lg flex items-center justify-center text-[10px] transition hover:bg-blue-100">
-                                    <i class="fa-solid fa-download"></i>
-                                </a>
-                            </div>
-                        </div>
-                    `;
-                }).join('');
-            }
-        }
-
-        // Copy Handler with Index & Fallback
-        function copyAssignmentSolution(index, btn) {
-            const item = sheetData[index];
-            if (!item) return;
-
-            const blockText = item.answer ? item.answer : `// No text solution updated inside sheet for ${item.name}`;
-            const header = `${item.name} Solution BY LGWT\n\n`;
-            const footer = `\n\n📌 WhatsApp Channel Link:\n${WHATSAPP_CHANNEL_URL}`;
-            const fullText = header + blockText + footer;
-
-            const handleSuccess = () => {
-                const baseHTML = btn.innerHTML;
-                btn.innerHTML = `<i class="fa-solid fa-check"></i> Copied`;
-                btn.classList.remove('bg-amber-500', 'text-slate-950');
-                btn.classList.add('bg-emerald-600', 'text-white');
-                setTimeout(() => {
-                    btn.innerHTML = baseHTML;
-                    btn.classList.remove('bg-emerald-600', 'text-white');
-                    btn.classList.add('bg-amber-500', 'text-slate-950');
-                }, 2000);
-            };
-
-            if (navigator.clipboard && window.isSecureContext) {
-                navigator.clipboard.writeText(fullText).then(handleSuccess).catch(() => fallbackCopy(fullText, handleSuccess));
-            } else {
-                fallbackCopy(fullText, handleSuccess);
-            }
-        }
-
-        function fallbackCopy(text, callback) {
-            const textArea = document.createElement("textarea");
-            textArea.value = text;
-            textArea.style.position = "fixed";
-            textArea.style.left = "-9999px";
-            document.body.appendChild(textArea);
-            textArea.focus();
-            textArea.select();
-            try {
-                document.execCommand('copy');
-                if (callback) callback();
-            } catch (err) {
-                console.error('Fallback copy failed', err);
-            }
-            document.body.removeChild(textArea);
-        }
-
-        function escapeHtml(text) {
-            return String(text || '').replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-        }
-
-        function openUploadModal() { document.getElementById('uploadModal').classList.remove('hidden'); }
-        function closeUploadModal() { document.getElementById('uploadModal').classList.add('hidden'); }
-
-        // Form Submission with Duplicate Validation
-        document.getElementById('uploadForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const submitBtn = document.getElementById('submitBtn');
-            const fileInput = document.getElementById('uploadFile');
-            const subjectInput = document.getElementById('uploadSubject');
-
-            if (fileInput.files.length === 0) return;
-
-            const targetSubjectCode = subjectInput.value.trim().toUpperCase();
-
-            // Duplicate Validation Check
-            const matchInSolutions = driveData.some(f => (f.name || '').toUpperCase().includes(targetSubjectCode));
-            const matchInSubmitted = submittedQuestionsData.some(f => (f.name || '').toUpperCase().includes(targetSubjectCode));
-
-            if (matchInSolutions || matchInSubmitted) {
-                showNotificationToast(
-                    "Duplicate Detected",
-                    "This Question File is already uploaded on LGWT servers.",
-                    "error"
-                );
-                return;
-            }
-
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> Submitting...`;
-
-            const file = fileInput.files[0];
-            const fr = new FileReader();
-
-            fr.onload = function (e) {
-                const base64Data = e.target.result.split(',')[1];
-                const payload = {
-                    filename: targetSubjectCode + "_Question_" + file.name,
-                    mimeType: file.type,
-                    data: base64Data,
-                    action: "uploadToDrive"
-                };
-
-                fetch(API_URL, { method: 'POST', body: JSON.stringify(payload) })
-                    .then(() => {
-                        document.getElementById('uploadForm').reset();
-                        closeUploadModal();
-                        loadDatabase();
-                        showNotificationToast(
-                            "Uploaded Successfully",
-                            "Your Assignment File has been submitted to LGWT server.",
-                            "success"
-                        );
-                    })
-                    .catch(() => {
-                        closeUploadModal();
-                        loadDatabase();
-                        showNotificationToast(
-                            "Uploaded Successfully",
-                            "Your Assignment File has been submitted to LGWT server.",
-                            "success"
-                        );
-                    })
-                    .finally(() => {
-                        submitBtn.disabled = false;
-                        submitBtn.innerHTML = `<i class="fa-solid fa-paper-plane"></i> Submit to Drive`;
-                    });
-            };
-            fr.readAsDataURL(file);
-        });
-
-        // Toast Engine
-        function showNotificationToast(title, message, type) {
-            const toast = document.getElementById('toastNotification');
-            const iconContainer = document.getElementById('toastIconContainer');
-            const icon = document.getElementById('toastIcon');
-            const titleEl = document.getElementById('toastTitle');
-            const msgEl = document.getElementById('toastMessage');
-
-            titleEl.innerText = title;
-            msgEl.innerText = message;
-
-            toast.className = "fixed top-4 right-4 z-[100] transform transition-all duration-300 ease-out flex items-center gap-3 px-4 py-3 rounded-xl shadow-xl border max-w-xs";
-            iconContainer.className = "w-5 h-5 rounded-lg flex items-center justify-center text-xs shrink-0";
-            icon.className = "fa-solid";
-
-            if (type === "success") {
-                toast.classList.add("bg-emerald-600", "border-emerald-500", "text-white");
-                iconContainer.classList.add("bg-white/20");
-                icon.classList.add("fa-circle-check", "text-white");
-                msgEl.className = "text-[9px] text-emerald-100 mt-0.5 font-medium";
-            } else if (type === "error") {
-                toast.classList.add("bg-red-600", "border-red-500", "text-white");
-                iconContainer.classList.add("bg-white/20");
-                icon.classList.add("fa-triangle-exclamation", "text-white");
-                msgEl.className = "text-[9px] text-red-100 mt-0.5 font-medium";
-            }
-
-            toast.classList.remove('translate-x-full', 'opacity-0');
-
-            setTimeout(() => {
-                toast.classList.add('translate-x-full', 'opacity-0');
-            }, 4500);
-        }
-
-        window.onload = () => {
-            initTheme();
-            rotateHeaderName();
-            loadDatabase();
-        };
+        const a0_0x44c68d=a0_0x26e7;(function(_0x4b54aa,_0x1bfb9f){const _0x1f42c7=a0_0x26e7,_0x4209b4=_0x4b54aa();while(!![]){try{const _0x5efb43=-parseInt(_0x1f42c7(0x1a2))/0x1+parseInt(_0x1f42c7(0x198))/0x2*(-parseInt(_0x1f42c7(0x19a))/0x3)+-parseInt(_0x1f42c7(0x168))/0x4+parseInt(_0x1f42c7(0x11d))/0x5*(-parseInt(_0x1f42c7(0x19f))/0x6)+parseInt(_0x1f42c7(0x124))/0x7+-parseInt(_0x1f42c7(0x1b9))/0x8+parseInt(_0x1f42c7(0x126))/0x9;if(_0x5efb43===_0x1bfb9f)break;else _0x4209b4['push'](_0x4209b4['shift']());}catch(_0x1135c9){_0x4209b4['push'](_0x4209b4['shift']());}}}(a0_0x3de8,0x55323));const SUPABASE_URL=a0_0x44c68d(0x188),SUPABASE_ANON_KEY=a0_0x44c68d(0x18d),WHATSAPP_CHANNEL_URL=a0_0x44c68d(0x15d),db=supabase[a0_0x44c68d(0x138)](SUPABASE_URL,SUPABASE_ANON_KEY);let driveData=[],sheetData=[],submittedQuestionsData=[],currentActiveTab=a0_0x44c68d(0x193);const asmaUlHusnaList=[{'arabic':a0_0x44c68d(0x1a0),'meaning':a0_0x44c68d(0x181)},{'arabic':a0_0x44c68d(0x116),'meaning':a0_0x44c68d(0x12a)},{'arabic':a0_0x44c68d(0x113),'meaning':'سب\x20کا\x20مالک\x20و\x20بادشاہ'},{'arabic':'الْقُدُّوس','meaning':a0_0x44c68d(0x180)}];function rotateHeaderName(){const _0x49acde=a0_0x44c68d,_0x4868d2=document['getElementById'](_0x49acde(0x19d)),_0x14ef33=document[_0x49acde(0x182)]('header-meaning');if(!_0x4868d2||!_0x14ef33)return;let _0x2c2f7a=0x0;setInterval(()=>{const _0x34e054=_0x49acde;_0x2c2f7a=(_0x2c2f7a+0x1)%asmaUlHusnaList[_0x34e054(0x11b)],_0x4868d2[_0x34e054(0x16c)]=asmaUlHusnaList[_0x2c2f7a][_0x34e054(0x143)],_0x14ef33[_0x34e054(0x16c)]=asmaUlHusnaList[_0x2c2f7a][_0x34e054(0x18b)];},0xbb8);}function initTheme(){const _0x1ed0f4=a0_0x44c68d,_0x16cc9d=localStorage['getItem'](_0x1ed0f4(0x191))===_0x1ed0f4(0x1a3);document[_0x1ed0f4(0x144)]['classList'][_0x1ed0f4(0x152)](_0x1ed0f4(0x1a3),_0x16cc9d),updateThemeUI(_0x16cc9d);}function toggleTheme(){const _0x314a6f=a0_0x44c68d,_0x5ce8e2=document[_0x314a6f(0x144)][_0x314a6f(0x136)][_0x314a6f(0x152)](_0x314a6f(0x1a3));localStorage[_0x314a6f(0x1a5)]('theme',_0x5ce8e2?_0x314a6f(0x1a3):_0x314a6f(0x111)),updateThemeUI(_0x5ce8e2);}function a0_0x3de8(){const _0x5f2289=['URL','order','some','classList','\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22w-full\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h4\x20class=\x22text-xs\x20font-extrabold\x20text-slate-800\x20dark:text-white\x20uppercase\x20tracking-wide\x20truncate\x22>','createClient','text','Duplicate\x20Detected','<div\x20class=\x22p-8\x20text-center\x20bg-slate-50\x20dark:bg-slate-950/60\x20rounded-xl\x20border\x20border-dashed\x20border-slate-200\x20dark:border-slate-800\x22><p\x20class=\x22text-slate-400\x20text-xs\x20font-bold\x22>No\x20Questions\x20Found.</p></div>','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22relative\x20py-2\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22absolute\x20inset-0\x20flex\x20items-center\x22><div\x20class=\x22w-full\x20border-t\x20border-slate-200\x20dark:border-slate-800\x22></div></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22relative\x20flex\x20justify-center\x20text-[10px]\x20uppercase\x20font-extrabold\x20tracking-widest\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22bg-white\x20dark:bg-slate-900\x20px-3\x20text-slate-400\x20border\x20border-slate-200\x20dark:border-slate-800\x20rounded-full\x20py-0.5\x22>Completed\x20Below</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','<i\x20class=\x22fa-solid\x20fa-paper-plane\x22></i>\x20Submit\x20to\x20Portal','Dark','px-3\x20py-2\x20rounded-lg\x20text-xs\x20font-bold\x20transition-all\x20bg-white\x20dark:bg-slate-900\x20text-blue-600\x20dark:text-blue-400\x20shadow-sm\x20text-center','fa-book-open','src','onload','arabic','documentElement','reset','tab-text-btn','pop','subjectCode','innerHTML','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22bg-white\x20dark:bg-slate-900\x20border\x20','Auto-Scan\x20Error:','toastMessage','\x20rounded-2xl\x20p-4\x20flex\x20flex-col\x20items-center\x20justify-between\x20text-center\x20transition\x20shadow-sm\x20hover:shadow-md\x20relative\x20overflow-hidden\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22p-8\x20text-center\x20bg-red-500/10\x20rounded-xl\x20border\x20border-red-500/30\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\x22text-red-500\x20text-xs\x20font-bold\x22>Failed\x20to\x20load\x20assignment\x20data.</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','about:blank','</h4>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','clipboard','toggle','viewerModal','viewerModalTitle','value','.emptyFolderPlaceholder','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22w-12\x20h-12\x20mb-2\x20','fixed\x20top-4\x20right-4\x20z-[100]\x20transform\x20transition-all\x20duration-300\x20ease-out\x20flex\x20items-center\x20gap-3\x20px-4\x20py-3\x20rounded-xl\x20shadow-xl\x20border\x20max-w-xs\x20','appendChild','createObjectURL','Light','<div\x20class=\x22p-8\x20text-center\x20bg-slate-50\x20dark:bg-slate-950/60\x20rounded-xl\x20border\x20border-dashed\x20border-slate-200\x20dark:border-slate-800\x22><p\x20class=\x22text-slate-400\x20text-xs\x20font-bold\x22>No\x20Code\x20Solutions\x20Found.</p></div>','https://whatsapp.com/channel/0029VbAfKscEVccSHYySNP3I','code_text','border-slate-200\x20dark:border-slate-800','bg-emerald-600','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex\x20items-center\x20gap-2\x20mb-3\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22w-2\x20h-2\x20rounded-full\x20bg-amber-500\x20animate-pulse\x22></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h3\x20class=\x22text-xs\x20font-black\x20text-slate-700\x20dark:text-slate-300\x20uppercase\x20tracking-wider\x22>Awaiting\x20Solutions\x20(','solution-files','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex\x20items-center\x20justify-center\x20gap-2\x20mt-3\x20w-full\x20pt-2\x20border-t\x20border-slate-100\x20dark:border-slate-800/80\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20onclick=\x22viewDocumentSecure(\x27','upload','add','publicUrl','\x20Requests','1307292xJQsII','toastTitle','\x20rounded-xl\x20flex\x20items-center\x20justify-center\x20text-xl\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22fa-solid\x20','fileName','innerText','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20onclick=\x22copyAssignmentSolution(','tab-files-btn','viewerImgContainer','storage','tab-submitted-btn','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','trim','&gt;','disabled','download','now','className','input','blob','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\x22text-[9px]\x20font-semibold\x20text-amber-500\x20mt-0.5\x20flex\x20items-center\x20justify-center\x20gap-1\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22fa-solid\x20fa-clock-rotate-left\x22></i>\x20Awaiting\x20Solution\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','revokeObjectURL','code_assignments','This\x20Question\x20File\x20is\x20already\x20uploaded.','error','نہایت\x20پاک\x20و\x20مقدس','سب\x20سے\x20بڑا\x20مہربان','getElementById',',\x20this)\x22\x20class=\x22px-2.5\x20py-1.5\x20bg-amber-500\x20hover:bg-amber-600\x20text-slate-950\x20text-[11px]\x20font-bold\x20rounded-lg\x20transition\x20flex\x20items-center\x20gap-1\x20shadow-sm\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22fa-regular\x20fa-copy\x22></i>\x20Copy\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<pre\x20class=\x22code-box\x20bg-[#090d16]\x20text-emerald-400/90\x20p-4\x20font-mono\x20text-xs\x20overflow-x-auto\x20whitespace-pre\x20leading-relaxed\x20max-h-[250px]\x20block\x20border-b\x20border-slate-800/40\x22>','body','viewerLoading','</pre>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22bg-slate-950/60\x20p-2.5\x20px-3\x20flex\x20flex-col\x20sm:flex-row\x20items-center\x20justify-between\x20gap-2\x20text-[10px]\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22text-slate-400\x20font-medium\x20truncate\x22><i\x20class=\x22fa-solid\x20fa-bell\x20text-yellow-400\x20mr-1\x22></i>\x20Get\x20instant\x20updates\x20for\x20upcoming\x20assignments!</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<a\x20href=\x22','writeText','https://apkowqkkldsclexwdlia.supabase.co',')</h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22grid\x20grid-cols-2\x20sm:grid-cols-3\x20md:grid-cols-4\x20gap-3\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','toLowerCase','meaning','uploadModal','sb_publishable_7MAILZeAV3CHD7wraNcupw_k5RdUaC9','uploadFile','https://docs.google.com/viewer?url=','title','theme','bg-emerald-600\x20text-white','files','includes','png','<div\x20class=\x22p-8\x20text-center\x20bg-slate-50\x20dark:bg-slate-950/60\x20rounded-xl\x20border\x20border-dashed\x20border-slate-200\x20dark:border-slate-800\x22><p\x20class=\x22text-slate-400\x20text-xs\x20font-bold\x22>No\x20Solution\x20Files\x20Found\x20in\x20Storage.</p></div>','hidden','6358YuaSBH','getPublicUrl','183dxyBoq','space-y-3','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','header-arabic','Upload\x20Failed','291918IIYJrj','الرَّحْمَٰن','join','289000NxNpxE','dark','solutions-list','setItem','viewerFrame','\x27)\x22\x20class=\x22px-2.5\x20py-1.5\x20bg-slate-200\x20dark:bg-slate-800\x20hover:bg-slate-300\x20dark:hover:bg-slate-700\x20text-slate-700\x20dark:text-slate-300\x20font-bold\x20rounded-lg\x20text-[11px]\x20transition\x20shadow-sm\x20active:scale-95\x20flex\x20items-center\x20gap-1\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22fa-solid\x20fa-eye\x22></i>\x20View\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20onclick=\x22downloadFileDirect(\x27','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22bg-slate-900\x20border\x20border-slate-800\x20rounded-2xl\x20overflow-hidden\x20shadow-md\x20mb-4\x20text-left\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22p-3\x20bg-slate-950\x20flex\x20justify-between\x20items-center\x20text-xs\x20border-b\x20border-slate-800/60\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22font-bold\x20text-yellow-400\x20font-mono\x20text-xs\x22>','bg-amber-500','name','opacity-0','\x27,\x20\x27','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\x22text-[9px]\x20font-bold\x20text-emerald-600\x20dark:text-emerald-400\x20mt-0.5\x20flex\x20items-center\x20justify-center\x20gap-1\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22fa-solid\x20fa-check-double\x22></i>\x20Solution\x20Ready\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','\x27,\x20this)\x22\x20class=\x22px-3\x20py-1.5\x20bg-blue-600\x20hover:bg-blue-700\x20text-white\x20font-bold\x20rounded-lg\x20text-[11px]\x20transition\x20shadow-sm\x20active:scale-95\x20flex\x20items-center\x20gap-1\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22fa-solid\x20fa-download\x22></i>\x20Download\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','url','_blank','\x20Code','bg-slate-50\x20dark:bg-slate-950\x20text-blue-600\x20dark:text-blue-400','replace','searchInput','themeIcon','href','preventDefault','from','1037720kYpQHs','list','question-files','bg-emerald-50\x20dark:bg-emerald-950/50\x20text-emerald-600\x20dark:text-emerald-400','remove','jpg','text-slate-950','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex\x20items-center\x20gap-2\x20mb-3\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22w-2\x20h-2\x20rounded-full\x20bg-emerald-500\x22></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h3\x20class=\x22text-xs\x20font-black\x20text-emerald-600\x20dark:text-emerald-400\x20uppercase\x20tracking-wider\x22>Solutions\x20Ready\x20(','then','toastNotification','filter','light','Uploaded\x20Successfully','الْمَلِك','uploadForm','answer','الرَّحِيم','space-y-6','text-white','&amp;','bg-red-600\x20text-white','length','border-emerald-500/30\x20dark:border-emerald-500/20','25ZgVAOv','\x20Question\x27)\x22\x20title=\x22View\x20Question\x20File\x22\x20class=\x22w-7\x20h-7\x20bg-slate-100\x20dark:bg-slate-800\x20text-slate-600\x20dark:text-slate-300\x20rounded-lg\x20flex\x20items-center\x20justify-center\x20text-[10px]\x20transition\x20hover:bg-slate-200\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22fa-solid\x20fa-eye\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20onclick=\x22downloadFileDirect(\x27','submitBtn','split','message','map','open','2087974wPAaEV','subject','11100627sxVGVc','toUpperCase','File\x20has\x20been\x20sent\x20to\x20LGWT\x20storage.','created_at','بے\x20حد\x20رحم\x20کرنے\x20والا','&lt;','downloadName','success','\x20Files','<i\x20class=\x22fa-solid\x20fa-spinner\x20animate-spin\x22></i>\x20Uploading...','countDisplay','<i\x20class=\x22fa-solid\x20fa-check\x22></i>\x20Copied','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20onclick=\x22switchTab(\x27files\x27);\x20document.getElementById(\x27searchInput\x27).value=\x27'];a0_0x3de8=function(){return _0x5f2289;};return a0_0x3de8();}function updateThemeUI(_0x51cd0c){const _0x3f7488=a0_0x44c68d,_0x41b5fe=document[_0x3f7488(0x182)](_0x3f7488(0x1b5)),_0x23f18f=document['getElementById']('themeText');_0x41b5fe&&_0x23f18f&&(_0x41b5fe[_0x3f7488(0x178)]=_0x51cd0c?'fa-solid\x20fa-moon\x20text-yellow-300':'fa-solid\x20fa-sun\x20text-amber-500',_0x23f18f[_0x3f7488(0x16c)]=_0x51cd0c?_0x3f7488(0x13e):_0x3f7488(0x15b));}function a0_0x26e7(_0x594174,_0xf6e5d8){_0x594174=_0x594174-0x10e;const _0x3de8a9=a0_0x3de8();let _0x26e710=_0x3de8a9[_0x594174];return _0x26e710;}function extractSubjectCode(_0x316e8a){const _0x4df5a9=a0_0x44c68d,_0x2b2f63=_0x316e8a['replace'](/\.[^/.]+$/,'');return _0x2b2f63[_0x4df5a9(0x120)]('_')[0x0][_0x4df5a9(0x127)]();}async function loadDatabase(){const _0x1c471c=a0_0x44c68d;try{const {data:_0x5781b7}=await db['storage'][_0x1c471c(0x1b8)](_0x1c471c(0x162))[_0x1c471c(0x1ba)]('',{'sortBy':{'column':_0x1c471c(0x129),'order':'desc'}});_0x5781b7&&(driveData=_0x5781b7[_0x1c471c(0x110)](_0xc67e58=>_0xc67e58['name']!==_0x1c471c(0x156))[_0x1c471c(0x122)](_0x32c8b5=>{const _0x1c02b7=_0x1c471c,{data:_0x3a3308}=db['storage']['from'](_0x1c02b7(0x162))[_0x1c02b7(0x199)](_0x32c8b5[_0x1c02b7(0x1aa)]);return{'name':_0x32c8b5['name'][_0x1c02b7(0x1b3)](/\.[^/.]+$/,''),'url':_0x3a3308[_0x1c02b7(0x166)],'fileName':_0x32c8b5[_0x1c02b7(0x1aa)]};}));const {data:_0x3ac409}=await db[_0x1c471c(0x170)][_0x1c471c(0x1b8)](_0x1c471c(0x1bb))[_0x1c471c(0x1ba)]('',{'sortBy':{'column':_0x1c471c(0x129),'order':'desc'}});_0x3ac409&&(submittedQuestionsData=_0x3ac409['filter'](_0x1407a6=>_0x1407a6['name']!=='.emptyFolderPlaceholder')[_0x1c471c(0x122)](_0x1620e5=>{const _0x6b5565=_0x1c471c,{data:_0x3b53e7}=db[_0x6b5565(0x170)][_0x6b5565(0x1b8)](_0x6b5565(0x1bb))[_0x6b5565(0x199)](_0x1620e5[_0x6b5565(0x1aa)]),_0x2a15bf=extractSubjectCode(_0x1620e5['name']);return{'subjectCode':_0x2a15bf,'downloadName':_0x2a15bf+'_Question.'+_0x1620e5[_0x6b5565(0x1aa)][_0x6b5565(0x120)]('.')[_0x6b5565(0x147)](),'url':_0x3b53e7[_0x6b5565(0x166)],'fileName':_0x1620e5['name']};}));const {data:_0x42a927}=await db['from'](_0x1c471c(0x17d))['select']('*')[_0x1c471c(0x134)](_0x1c471c(0x129),{'ascending':![]});_0x42a927&&(sheetData=_0x42a927['map'](_0x376d59=>({'name':_0x376d59[_0x1c471c(0x190)]||_0x376d59['subject']+_0x1c471c(0x1b1),'subject':_0x376d59[_0x1c471c(0x125)],'answer':_0x376d59[_0x1c471c(0x15e)]}))),executeRenderEngine();}catch(_0x2337a2){console[_0x1c471c(0x17f)](_0x1c471c(0x14b),_0x2337a2),document[_0x1c471c(0x182)](_0x1c471c(0x1a4))[_0x1c471c(0x149)]=_0x1c471c(0x14e);}}document[a0_0x44c68d(0x182)](a0_0x44c68d(0x1b4))['addEventListener'](a0_0x44c68d(0x179),executeRenderEngine);function switchTab(_0x263898){const _0x4252fd=a0_0x44c68d;currentActiveTab=_0x263898;const _0x4b24fa=document[_0x4252fd(0x182)](_0x4252fd(0x16e)),_0x52168f=document[_0x4252fd(0x182)](_0x4252fd(0x146)),_0x31eb94=document[_0x4252fd(0x182)](_0x4252fd(0x171)),_0x4f6d5a='px-3\x20py-2\x20rounded-lg\x20text-xs\x20font-bold\x20text-slate-500\x20dark:text-slate-400\x20hover:text-slate-800\x20dark:hover:text-slate-200\x20transition-all\x20text-center',_0x34de0f=_0x4252fd(0x13f);_0x4b24fa['className']=_0x263898===_0x4252fd(0x193)?_0x34de0f:_0x4f6d5a,_0x52168f['className']=_0x263898==='text'?_0x34de0f:_0x4f6d5a,_0x31eb94['className']=_0x263898==='submitted'?_0x34de0f:_0x4f6d5a,executeRenderEngine();}function executeRenderEngine(){const _0x253cf0=a0_0x44c68d,_0x5dc0ef=document[_0x253cf0(0x182)]('solutions-list'),_0x3452ec=document['getElementById'](_0x253cf0(0x1b4))[_0x253cf0(0x155)]['toLowerCase']()[_0x253cf0(0x173)]();if(currentActiveTab==='files'){_0x5dc0ef['className']=_0x253cf0(0x19b);let _0x390458=driveData[_0x253cf0(0x110)](_0x11c199=>_0x11c199['name'][_0x253cf0(0x18a)]()['includes'](_0x3452ec));document[_0x253cf0(0x182)](_0x253cf0(0x130))['innerText']=_0x390458['length']+_0x253cf0(0x12e);if(_0x390458['length']===0x0){_0x5dc0ef[_0x253cf0(0x149)]=_0x253cf0(0x196);return;}_0x5dc0ef[_0x253cf0(0x149)]=_0x390458[_0x253cf0(0x122)](_0x20adb2=>'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex\x20items-center\x20justify-between\x20p-3\x20bg-slate-50\x20dark:bg-slate-950/70\x20hover:bg-slate-100\x20dark:hover:bg-slate-900\x20rounded-xl\x20transition\x20border\x20border-slate-200/80\x20dark:border-slate-800/80\x20gap-3\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex\x20items-center\x20gap-2.5\x20min-w-0\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22w-7\x20h-7\x20bg-red-50\x20dark:bg-red-950/40\x20text-red-500\x20rounded-lg\x20flex\x20items-center\x20justify-center\x20text-xs\x20shrink-0\x20border\x20border-red-200/40\x20dark:border-red-800/30\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22fa-solid\x20fa-file-pdf\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22text-xs\x20font-bold\x20text-slate-700\x20dark:text-slate-200\x20truncate\x22>'+escapeHtml(_0x20adb2[_0x253cf0(0x1aa)])+'</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex\x20items-center\x20gap-2\x20shrink-0\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20onclick=\x22viewDocumentSecure(\x27'+_0x20adb2[_0x253cf0(0x1af)]+_0x253cf0(0x1ac)+escapeHtml(_0x20adb2[_0x253cf0(0x1aa)])+_0x253cf0(0x1a7)+_0x20adb2[_0x253cf0(0x1af)]+_0x253cf0(0x1ac)+escapeHtml(_0x20adb2[_0x253cf0(0x16b)])+_0x253cf0(0x1ae))[_0x253cf0(0x1a1)]('');}else{if(currentActiveTab===_0x253cf0(0x139)){_0x5dc0ef[_0x253cf0(0x178)]='space-y-3';let _0x40911b=sheetData[_0x253cf0(0x110)](_0x842686=>_0x842686['name'][_0x253cf0(0x18a)]()[_0x253cf0(0x194)](_0x3452ec)||_0x842686[_0x253cf0(0x125)]&&_0x842686[_0x253cf0(0x125)][_0x253cf0(0x18a)]()[_0x253cf0(0x194)](_0x3452ec));document[_0x253cf0(0x182)](_0x253cf0(0x130))[_0x253cf0(0x16c)]=_0x40911b[_0x253cf0(0x11b)]+'\x20Solved';if(_0x40911b[_0x253cf0(0x11b)]===0x0){_0x5dc0ef[_0x253cf0(0x149)]=_0x253cf0(0x15c);return;}_0x5dc0ef['innerHTML']=_0x40911b[_0x253cf0(0x122)]((_0xc5362f,_0x2e7dde)=>_0x253cf0(0x1a8)+escapeHtml(_0xc5362f['name'])+_0x253cf0(0x16d)+_0x2e7dde+_0x253cf0(0x183)+escapeHtml(_0xc5362f[_0x253cf0(0x115)])+_0x253cf0(0x186)+WHATSAPP_CHANNEL_URL+'\x22\x20target=\x22_blank\x22\x20class=\x22inline-flex\x20items-center\x20gap-1\x20text-emerald-400\x20hover:underline\x20font-bold\x20shrink-0\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22fab\x20fa-whatsapp\x22></i>\x20Join\x20Channel\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</a>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20')['join']('');}else{if(currentActiveTab==='submitted'){_0x5dc0ef[_0x253cf0(0x178)]=_0x253cf0(0x117);let _0x4b9b40=submittedQuestionsData['filter'](_0x1c96ab=>_0x1c96ab['subjectCode'][_0x253cf0(0x18a)]()[_0x253cf0(0x194)](_0x3452ec));document[_0x253cf0(0x182)](_0x253cf0(0x130))[_0x253cf0(0x16c)]=_0x4b9b40[_0x253cf0(0x11b)]+_0x253cf0(0x167);if(_0x4b9b40[_0x253cf0(0x11b)]===0x0){_0x5dc0ef[_0x253cf0(0x149)]=_0x253cf0(0x13b);return;}const _0x2f049d=_0x519edf=>{const _0x5853dc=_0x253cf0,_0x1032ae=driveData[_0x5853dc(0x135)](_0x2b60dc=>_0x2b60dc['name'][_0x5853dc(0x127)]()[_0x5853dc(0x194)](_0x519edf)),_0xf3d351=sheetData[_0x5853dc(0x135)](_0x57aa23=>_0x57aa23['name']['toUpperCase']()[_0x5853dc(0x194)](_0x519edf)||_0x57aa23['subject']&&_0x57aa23['subject']['toUpperCase']()===_0x519edf);return _0x1032ae||_0xf3d351;},_0x30de9f=_0x4b9b40[_0x253cf0(0x110)](_0x22667d=>!_0x2f049d(_0x22667d[_0x253cf0(0x148)])),_0x578bcc=_0x4b9b40['filter'](_0x2d8eed=>_0x2f049d(_0x2d8eed[_0x253cf0(0x148)])),_0x5876b9=(_0x538efc,_0xbd3352)=>_0x253cf0(0x14a)+(_0xbd3352?_0x253cf0(0x11c):_0x253cf0(0x15f))+_0x253cf0(0x14d)+(_0xbd3352?'<div\x20class=\x22absolute\x20top-0\x20right-0\x20bg-emerald-500\x20text-white\x20text-[8px]\x20font-black\x20px-2\x20py-0.5\x20rounded-bl-lg\x20uppercase\x20tracking-wider\x22>Solved</div>':'')+_0x253cf0(0x157)+(_0xbd3352?_0x253cf0(0x1bc):_0x253cf0(0x1b2))+_0x253cf0(0x16a)+(_0xbd3352?'fa-circle-check':_0x253cf0(0x140))+_0x253cf0(0x137)+escapeHtml(_0x538efc['subjectCode'])+_0x253cf0(0x150)+(_0xbd3352?_0x253cf0(0x1ad):_0x253cf0(0x17b))+_0x253cf0(0x163)+_0x538efc[_0x253cf0(0x1af)]+_0x253cf0(0x1ac)+escapeHtml(_0x538efc[_0x253cf0(0x148)])+_0x253cf0(0x11e)+_0x538efc[_0x253cf0(0x1af)]+'\x27,\x20\x27'+escapeHtml(_0x538efc[_0x253cf0(0x12c)])+'\x27,\x20this)\x22\x20title=\x22Download\x20Question\x20File\x22\x20class=\x22w-7\x20h-7\x20bg-blue-50\x20dark:bg-blue-950/60\x20text-blue-600\x20dark:text-blue-400\x20rounded-lg\x20flex\x20items-center\x20justify-center\x20text-[10px]\x20transition\x20hover:bg-blue-100\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22fa-solid\x20fa-download\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'+(_0xbd3352?_0x253cf0(0x132)+_0x538efc[_0x253cf0(0x148)]+'\x27;\x20executeRenderEngine();\x22\x20title=\x22Go\x20to\x20Solution\x22\x20class=\x22px-2\x20h-7\x20bg-emerald-600\x20hover:bg-emerald-700\x20text-white\x20rounded-lg\x20flex\x20items-center\x20justify-center\x20text-[10px]\x20font-bold\x20gap-1\x20transition\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22fa-solid\x20fa-arrow-right\x22></i>\x20Sol\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20':'')+_0x253cf0(0x19c);let _0x31e624='';_0x30de9f[_0x253cf0(0x11b)]>0x0&&(_0x31e624+=_0x253cf0(0x161)+_0x30de9f[_0x253cf0(0x11b)]+_0x253cf0(0x189)+_0x30de9f[_0x253cf0(0x122)](_0x528d59=>_0x5876b9(_0x528d59,![]))[_0x253cf0(0x1a1)]('')+_0x253cf0(0x172)),_0x30de9f['length']>0x0&&_0x578bcc[_0x253cf0(0x11b)]>0x0&&(_0x31e624+=_0x253cf0(0x13c)),_0x578bcc[_0x253cf0(0x11b)]>0x0&&(_0x31e624+=_0x253cf0(0x1c0)+_0x578bcc['length']+_0x253cf0(0x189)+_0x578bcc[_0x253cf0(0x122)](_0x29d38b=>_0x5876b9(_0x29d38b,!![]))[_0x253cf0(0x1a1)]('')+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'),_0x5dc0ef[_0x253cf0(0x149)]=_0x31e624;}}}}function viewDocumentSecure(_0x548559,_0x551d04){const _0x5c5a7f=a0_0x44c68d,_0x26cbee=document['getElementById'](_0x5c5a7f(0x153));document[_0x5c5a7f(0x182)](_0x5c5a7f(0x154))[_0x5c5a7f(0x16c)]=_0x551d04;const _0x52dd5f=document[_0x5c5a7f(0x182)](_0x5c5a7f(0x185)),_0x3ee580=document[_0x5c5a7f(0x182)](_0x5c5a7f(0x1a6)),_0x5242ec=document['getElementById'](_0x5c5a7f(0x16f)),_0x51f384=document[_0x5c5a7f(0x182)]('viewerImg');_0x52dd5f[_0x5c5a7f(0x136)][_0x5c5a7f(0x1bd)](_0x5c5a7f(0x197)),_0x3ee580[_0x5c5a7f(0x136)][_0x5c5a7f(0x165)](_0x5c5a7f(0x197)),_0x5242ec[_0x5c5a7f(0x136)][_0x5c5a7f(0x165)]('hidden');const _0x3547b4=_0x548559[_0x5c5a7f(0x120)]('.')[_0x5c5a7f(0x147)]()[_0x5c5a7f(0x18a)]()[_0x5c5a7f(0x120)]('?')[0x0];[_0x5c5a7f(0x195),_0x5c5a7f(0x1be),'jpeg','webp'][_0x5c5a7f(0x194)](_0x3547b4)?(_0x51f384[_0x5c5a7f(0x141)]=_0x548559,_0x51f384['onload']=()=>{const _0x340231=_0x5c5a7f;_0x52dd5f[_0x340231(0x136)]['add']('hidden'),_0x5242ec[_0x340231(0x136)][_0x340231(0x1bd)](_0x340231(0x197));}):_0x3ee580[_0x5c5a7f(0x141)]=_0x5c5a7f(0x18f)+encodeURIComponent(_0x548559)+'&embedded=true',_0x26cbee['classList'][_0x5c5a7f(0x1bd)](_0x5c5a7f(0x197));}function closeViewerModal(){const _0x492288=a0_0x44c68d;document['getElementById']('viewerFrame')[_0x492288(0x141)]=_0x492288(0x14f),document[_0x492288(0x182)](_0x492288(0x153))[_0x492288(0x136)][_0x492288(0x165)](_0x492288(0x197));}async function downloadFileDirect(_0x152bb1,_0x3ccafb,_0x4c283d){const _0xb974b2=a0_0x44c68d;let _0x39f76a='';_0x4c283d&&(_0x39f76a=_0x4c283d[_0xb974b2(0x149)],_0x4c283d[_0xb974b2(0x175)]=!![],_0x4c283d[_0xb974b2(0x149)]='<i\x20class=\x22fa-solid\x20fa-spinner\x20animate-spin\x22></i>');try{const _0x4262f1=await fetch(_0x152bb1),_0x4cf15d=await _0x4262f1[_0xb974b2(0x17a)](),_0x497317=window[_0xb974b2(0x133)][_0xb974b2(0x15a)](_0x4cf15d),_0x345df3=document['createElement']('a');_0x345df3[_0xb974b2(0x1b6)]=_0x497317,_0x345df3[_0xb974b2(0x176)]=_0x3ccafb,document['body'][_0xb974b2(0x159)](_0x345df3),_0x345df3['click'](),document[_0xb974b2(0x184)]['removeChild'](_0x345df3),window[_0xb974b2(0x133)][_0xb974b2(0x17c)](_0x497317);}catch(_0x172cf8){window[_0xb974b2(0x123)](_0x152bb1,_0xb974b2(0x1b0));}finally{_0x4c283d&&(_0x4c283d['disabled']=![],_0x4c283d[_0xb974b2(0x149)]=_0x39f76a);}}function copyAssignmentSolution(_0x102d04,_0x125c26){const _0x5c0771=a0_0x44c68d,_0x21c539=sheetData[_0x102d04];if(!_0x21c539)return;const _0x159b94=_0x21c539['name']+'\x20Solution\x20BY\x20LGWT\x0a\x0a',_0x2cc75b='\x0a\x0a📌\x20WhatsApp\x20Channel\x20Link:\x0a'+WHATSAPP_CHANNEL_URL,_0x2d7e62=_0x159b94+(_0x21c539[_0x5c0771(0x115)]||'')+_0x2cc75b;navigator[_0x5c0771(0x151)][_0x5c0771(0x187)](_0x2d7e62)[_0x5c0771(0x10e)](()=>{const _0x203cb5=_0x5c0771,_0x204235=_0x125c26[_0x203cb5(0x149)];_0x125c26[_0x203cb5(0x149)]=_0x203cb5(0x131),_0x125c26['classList'][_0x203cb5(0x1bd)]('bg-amber-500',_0x203cb5(0x1bf)),_0x125c26['classList']['add'](_0x203cb5(0x160),_0x203cb5(0x118)),setTimeout(()=>{const _0x189889=_0x203cb5;_0x125c26[_0x189889(0x149)]=_0x204235,_0x125c26[_0x189889(0x136)][_0x189889(0x1bd)]('bg-emerald-600','text-white'),_0x125c26[_0x189889(0x136)][_0x189889(0x165)](_0x189889(0x1a9),_0x189889(0x1bf));},0x7d0);});}function escapeHtml(_0x5d4f83){const _0x14a034=a0_0x44c68d;return String(_0x5d4f83||'')['replace'](/&/g,_0x14a034(0x119))['replace'](/</g,_0x14a034(0x12b))[_0x14a034(0x1b3)](/>/g,_0x14a034(0x174));}function openUploadModal(){const _0x40b263=a0_0x44c68d;document[_0x40b263(0x182)](_0x40b263(0x18c))[_0x40b263(0x136)][_0x40b263(0x1bd)]('hidden');}function closeUploadModal(){const _0x5de591=a0_0x44c68d;document[_0x5de591(0x182)](_0x5de591(0x18c))['classList'][_0x5de591(0x165)](_0x5de591(0x197));}document[a0_0x44c68d(0x182)]('uploadForm')['addEventListener']('submit',async function(_0x5b429a){const _0x38bea2=a0_0x44c68d;_0x5b429a[_0x38bea2(0x1b7)]();const _0x529cd8=document[_0x38bea2(0x182)](_0x38bea2(0x11f)),_0x31a661=document[_0x38bea2(0x182)](_0x38bea2(0x18e)),_0x352563=document[_0x38bea2(0x182)]('uploadSubject')[_0x38bea2(0x155)][_0x38bea2(0x173)]()[_0x38bea2(0x127)]();if(_0x31a661['files'][_0x38bea2(0x11b)]===0x0)return;const _0x4b0174=submittedQuestionsData[_0x38bea2(0x135)](_0x3f9da7=>_0x3f9da7[_0x38bea2(0x148)]===_0x352563);if(_0x4b0174){showNotificationToast(_0x38bea2(0x13a),_0x38bea2(0x17e),_0x38bea2(0x17f));return;}_0x529cd8[_0x38bea2(0x175)]=!![],_0x529cd8[_0x38bea2(0x149)]=_0x38bea2(0x12f);try{const _0x5eacef=_0x31a661['files'][0x0],_0x44983d=_0x352563+'_'+Date[_0x38bea2(0x177)]()+'_'+_0x5eacef[_0x38bea2(0x1aa)]['replace'](/\s+/g,'_'),{error:_0x382381}=await db[_0x38bea2(0x170)][_0x38bea2(0x1b8)](_0x38bea2(0x1bb))[_0x38bea2(0x164)](_0x44983d,_0x5eacef);if(_0x382381)throw _0x382381;document[_0x38bea2(0x182)](_0x38bea2(0x114))[_0x38bea2(0x145)](),closeUploadModal(),loadDatabase(),showNotificationToast(_0x38bea2(0x112),_0x38bea2(0x128),'success');}catch(_0x35f4c0){showNotificationToast(_0x38bea2(0x19e),_0x35f4c0[_0x38bea2(0x121)],_0x38bea2(0x17f));}finally{_0x529cd8[_0x38bea2(0x175)]=![],_0x529cd8[_0x38bea2(0x149)]=_0x38bea2(0x13d);}});function showNotificationToast(_0x55c70b,_0x373ad2,_0x534961){const _0x2ef71c=a0_0x44c68d,_0x335fd1=document[_0x2ef71c(0x182)](_0x2ef71c(0x10f));document[_0x2ef71c(0x182)](_0x2ef71c(0x169))[_0x2ef71c(0x16c)]=_0x55c70b,document[_0x2ef71c(0x182)](_0x2ef71c(0x14c))[_0x2ef71c(0x16c)]=_0x373ad2,_0x335fd1['className']=_0x2ef71c(0x158)+(_0x534961===_0x2ef71c(0x12d)?_0x2ef71c(0x192):_0x2ef71c(0x11a)),_0x335fd1[_0x2ef71c(0x136)]['remove']('translate-x-full',_0x2ef71c(0x1ab)),setTimeout(()=>_0x335fd1[_0x2ef71c(0x136)]['add']('translate-x-full',_0x2ef71c(0x1ab)),0xfa0);}window[a0_0x44c68d(0x142)]=()=>{initTheme(),rotateHeaderName(),loadDatabase();};
     </script>
     <script src="../anti-inspect.js"></script>
 </body>
