@@ -340,9 +340,15 @@ const subjectsData = [
         dept: "CS", id: "CS411", name: "Visual Programming", handouts: "1SIssIJkn1P2Dmikm8NmUcxTYd7YxNuCs",
         highlighted: "https://drive.google.com/uc?export=download&id=1PXm0i_hjd6i4fE5DbCsSMWCDNirR5GNm", ppt: "not_found.html"
     },
-    { dept: "CS", id: "CS420", name: "Mobile Web Development", handouts: "18m7Y94Irb8UhLX4UZswbU_MeynThFGtG", highlighted: "https://drive.google.com/drive/folders/17zZ-VKwRQc6_VtVBhP-O-DqagtugV6xG", ppt: "not_found.html" },
-    
-    { dept: "CS", id: "CS432", name: "Network Modeling & Simulation", handouts: "1iKIl3ye2_Yz-b43PG-orG9TvK0ok1BBs", highlighted: "https://drive.google.com/drive/folders/1OcFpM6xpn2XmBVFKnIKWP2ypGXr3YjJg", ppt: "not_found.html" },
+    {
+        dept: "CS", id: "CS420", name: "Mobile Web Development", handouts: "18m7Y94Irb8UhLX4UZswbU_MeynThFGtG",
+        highlighted: "https://drive.google.com/file/d/1LGTCWtiq8KPWglVf3ax1h6TzXGnEe_or", ppt: "not_found.html"
+    },
+
+    {
+        dept: "CS", id: "CS432", name: "Network Modeling & Simulation", handouts: "1iKIl3ye2_Yz-b43PG-orG9TvK0ok1BBs",
+        highlighted: "https://drive.google.com/uc?export=download&id=1khcJkPZPM0omdo-DVfBp07hDoFXQYjkN", ppt: "not_found.html"
+    },
     {
         dept: "CS", id: "CS435", name: "Cloud Computing", handouts: "1xPBbXCqJVxKcGzHUDD32wRrfq25LoKoJ",
         highlighted: "https://drive.google.com/drive/folders/11719rS7Cak_Lgqe8seSFh8ZPWoI7_ElZ",
@@ -352,32 +358,88 @@ const subjectsData = [
         dept: "CS", id: "CS442", name: "Introduction to Data Science", handouts: "1WTmy0GMTVjtzwcZELKGxwUHftjteWD4u",
         highlighted: "not_found.html", ppt: "https://drive.google.com/uc?export=download&id=1WTmy0GMTVjtzwcZELKGxwUHftjteWD4u"
     },
-    { dept: "CS", id: "CS501", name: "Advance Computer Architecture", handouts: "1JJ_hMVKPNoJKUcrXsClTLmmcd5fPNUR3", highlighted: "https://drive.google.com/drive/folders/1gccP84wZwW0GvwrUMy6cgKJ2jD8JJgH1", ppt: "not_found.html" },
-    { dept: "CS", id: "CS502", name: "Algorithms Design & Analysis", handouts: "1EiHQLxRkA1Itq5DWA9WlKAHN57erm5tN", highlighted: "https://drive.google.com/drive/folders/163Grrqk28VnJCnR1pxXv8sZiz9Gzv-hY", ppt: "not_found.html" },
-    { dept: "CS", id: "CS504", name: "Software Engineering – I", handouts: "1ta8_GTmXipOw1m-2EqKK9ZBlSiR-kUY3", highlighted: "https://drive.google.com/drive/folders/16vE7_L4Mbu_A8j-s0DHrDXG1ZkyVEDdf", ppt: "not_found.html" },
-    { dept: "CS", id: "CS505", name: "Introduction to Virtualization", handouts: "1XW_ZWG2ypDCeIOpXIOWSi41Shmf76f1t", highlighted: "https://drive.google.com/file/d/1XW_ZWG2ypDCeIOpXIOWSi41Shmf76f1t/view", ppt: "not_found.html" },
+    {
+        dept: "CS", id: "CS501", name: "Advance Computer Architecture", handouts: "1JJ_hMVKPNoJKUcrXsClTLmmcd5fPNUR3",
+        highlighted: "https://drive.google.com/uc?export=download&id=1_F6KbD_0c9H-EU5hcYecpDL6QiNtRfun", ppt: "not_found.html"
+    },
+    {
+        dept: "CS", id: "CS502", name: "Algorithms Design & Analysis", handouts: "1EiHQLxRkA1Itq5DWA9WlKAHN57erm5tN",
+        highlighted: "https://drive.google.com/drive/folders/163Grrqk28VnJCnR1pxXv8sZiz9Gzv-hY", ppt: "not_found.html"
+    },
+    {
+        dept: "CS", id: "CS504", name: "Software Engineering – I", handouts: "1ta8_GTmXipOw1m-2EqKK9ZBlSiR-kUY3",
+        highlighted: "https://drive.google.com/uc?export=download&id=1HZY4VaG7RWNAhVDOCqYr6SGhcphctizF", ppt: "not_found.html"
+    },
+    {
+        dept: "CS", id: "CS505", name: "Introduction to Virtualization", handouts: "1vOUpCnfCYR1Dnb-2CbCCBsKdQhlH2E5w",
+        highlighted: "https://drive.google.com/uc?export=download&id=1vOUpCnfCYR1Dnb-2CbCCBsKdQhlH2E5w", ppt: "not_found.html"
+    },
     { dept: "CS", id: "CS506", name: "Web Design and Development", handouts: "1j1gX5aIHHkvpWfLwIMqm4epnJfzxnQAT", highlighted: "https://drive.google.com/drive/folders/1wSIp3R0jmuU6BmuNbNA7pAEJd1xeoM9j", ppt: "not_found.html" },
-    { dept: "CS", id: "CS507", name: "Information System", handouts: "1dlRfeoEE-TFJBXiJUBGSjUqAbtIYVwJI", highlighted: "https://drive.google.com/drive/folders/1PF_DGVRU8PbRHDqZIlr_a6PqoF8n1DZu", ppt: "not_found.html" },
-    { dept: "CS", id: "CS508", name: "Modern Programming Languages", handouts: "1Y5d_uuMseD6glF74yG5YlMskZ8YuSByr", highlighted: "https://drive.google.com/drive/folders/1dLvD79ml76t33JbIHmBqV5e0uj_EhRPY", ppt: "not_found.html" },
+
+    {
+        dept: "CS", id: "CS507", name: "Information System", handouts: "1dlRfeoEE-TFJBXiJUBGSjUqAbtIYVwJI",
+        highlighted: "https://drive.google.com/uc?export=download&id=1lMPLkaeezvs69MMkXwI-wg4XpYo65NWf", ppt: "not_found.html"
+    },
+    {
+        dept: "CS", id: "CS508", name: "Modern Programming Languages", handouts: "1Y5d_uuMseD6glF74yG5YlMskZ8YuSByr",
+        highlighted: "https://drive.google.com/uc?export=download&id=1DPY9NbPp1PL_Cpr5VRJRh5lAROvvPL4D", ppt: "not_found.html"
+    },
     { dept: "CS", id: "CS510", name: "Software Specification", handouts: "1qAzhhmDfIuUFjZL6m00JfFeX7L9hw4DD", highlighted: "https://drive.google.com/drive/folders/1ipaB1nM4vzTjyop1E2BnnIB8LWDjNndJ", ppt: "not_found.html" },
-    { dept: "CS", id: "CS511", name: "Web Engineering", handouts: "https://drive.google.com/drive/folders/18UbNu8DOBGE7QvV2URaVtBwSbvxDBKKv", highlighted: "https://drive.google.com/drive/folders/18UbNu8DOBGE7QvV2URaVtBwSbvxDBKKv", ppt: "not_found.html" },
+
+    {
+        dept: "CS", id: "CS511", name: "Web Engineering",
+        handouts: "https://drive.google.com/drive/folders/18UbNu8DOBGE7QvV2URaVtBwSbvxDBKKv",
+        highlighted: "https://drive.google.com/drive/folders/18UbNu8DOBGE7QvV2URaVtBwSbvxDBKKv", ppt: "not_found.html"
+    },
     {
         dept: "CS", id: "CS525", name: "Professional Paractice", handouts: "1SqLMTrznZmo9l0oXCKPL_qcjkf_p4Ls7", highlighted: "",
-        ppt: "https://drive.google.com/file/d/1SqLMTrznZmo9l0oXCKPL_qcjkf_p4Ls7"
+        ppt: "https://drive.google.com/uc?export=download&id=1SqLMTrznZmo9l0oXCKPL_qcjkf_p4Ls7"
     },
-    { dept: "CS", id: "CS601", name: "Data Communication", handouts: "1u_4mNALdFK6uIdN4Ma2O6xCLLXiM3Nn0", highlighted: "https://drive.google.com/drive/folders/1HykBN-oph0dognk6AD7rJvrnapDwR2Zg", ppt: "not_found.html" },
-    { dept: "CS", id: "CS602", name: "Computer Graphics", handouts: "1YGIuo6OJ4c8OJkiKLtmdwwIDPJTo1Mj4", highlighted: "https://drive.google.com/drive/folders/1MmNukuN4Tv97_VBeUnQY9TWHUSYISeBG", ppt: "not_found.html" },
-    { dept: "CS", id: "CS603", name: "Software Architecture", handouts: "not_found.html", highlighted: "not_found.html", ppt: "not_found.html" },
+    {
+        dept: "CS", id: "CS601", name: "Data Communication", handouts: "1u_4mNALdFK6uIdN4Ma2O6xCLLXiM3Nn0",
+        highlighted: "", ppt: "not_found.html"
+    },
+    {
+        dept: "CS", id: "CS602", name: "Computer Graphics", handouts: "1YGIuo6OJ4c8OJkiKLtmdwwIDPJTo1Mj4",
+        highlighted: "https://drive.google.com/uc?export=download&id=1yjqK__6fy8CPgpx9iPtCbMQluOd-T8I4", ppt: "not_found.html"
+    },
+    {
+        dept: "CS", id: "CS603", name: "Software Architecture", handouts: "1qp_D2xCPGUvLsK5HFWUH9WlnYSoejqxC",
+        highlighted: "https://drive.google.com/drive/folders/1DxGTtQIaTtu47O9HTkQFHSvmukxNMRRx", ppt: "not_found.html"
+    },
     { dept: "CS", id: "CS604", name: "Operating System", handouts: "1i9D54AhB1HIVRxofAgStmkgm6Lwq3o3A", highlighted: "https://drive.google.com/drive/folders/1vmQApQohYyycJH1uyiBCaJgplXNgcOiH", ppt: "not_found.html" },
-    { dept: "CS", id: "CS605", name: "Software Engineering-II", handouts: "1d7P0YH1pfMlquLozoXqzzG9JG3-4yUkv", highlighted: "https://drive.google.com/drive/folders/1x-4BbdEhDI9fdDR3haDnnq_yPIkNHnEL", ppt: "not_found.html" },
-    { dept: "CS", id: "CS606", name: "Compiler Construction", handouts: "1Xt8egZ1k4Xw77v9Qr3yM7fk5URHr0z6d", highlighted: "https://drive.google.com/drive/folders/1EqV6c3qP7pzO81vXMWNuC9-vqImMxEV6", ppt: "not_found.html" },
-    { dept: "CS", id: "CS607", name: "Artificial Intelligence", handouts: "1OHbV31CljXEC5jgegd2YKJVpUHNSrYO1", highlighted: "https://drive.google.com/drive/folders/1vTHx7-n1ysQKAqFGarV5wGasEJkgCPS9", ppt: "not_found.html" },
+    {
+        dept: "CS", id: "CS605", name: "Software Engineering-II", handouts: "1d7P0YH1pfMlquLozoXqzzG9JG3-4yUkv",
+        highlighted: "https://drive.google.com/uc?export=download&id=1EUJlOHiFNR5V5MKWb4z2RmezKJRi8ms_", ppt: "not_found.html"
+    },
+    {
+        dept: "CS", id: "CS606", name: "Compiler Construction", handouts: "1Xt8egZ1k4Xw77v9Qr3yM7fk5URHr0z6d",
+        highlighted: "https://drive.google.com/uc?export=download&id=1uGbXDMc3CKGcF-oJDkeKqZBDGdjfUt0j", ppt: "not_found.html"
+    },
+    {
+        dept: "CS", id: "CS607", name: "Artificial Intelligence", handouts: "1OHbV31CljXEC5jgegd2YKJVpUHNSrYO1",
+        highlighted: "https://drive.google.com/uc?export=download&id=1XtqLILJpgFToWfWEjbdyV0UKVFdWLwa6", ppt: "not_found.html"
+    },
+
     { dept: "CS", id: "CS608", name: "Software Verification & Validation", handouts: "1-Ma40JpK1w07pU5kiLatUhGfDpIKWN1m", highlighted: "not_found.html", ppt: "not_found.html" },
-    { dept: "CS", id: "CS609", name: "System Programming", handouts: "1oRUHjRr7HAG_vSW0OKe5zAOloVcoUkS8", highlighted: "https://drive.google.com/drive/folders/1W2GOJ_7UE1zmYkAxu2H3-iEunkQX4VhO", ppt: "not_found.html" },
-    { dept: "CS", id: "CS610", name: "Computer Networks", handouts: "1k6sAGLfKIX2KimMuax9CixTa5htpvc4t", highlighted: "https://drive.google.com/drive/folders/1Gg6SxzxGofXuO0pXp0RigQLPvqRSlbX0", ppt: "https://drive.google.com/file/d/1N45uEer2tyz1_e5KPG8_2IOw_YIzQ9bq/view" },
+    {
+        dept: "CS", id: "CS609", name: "System Programming", handouts: "1oRUHjRr7HAG_vSW0OKe5zAOloVcoUkS8",
+        highlighted: "https://drive.google.com/uc?export=download&id=13l1WEtXgPbt0WF-FegJ_5_1gmNQJdKQB", ppt: "not_found.html"
+    },
+    {
+        dept: "CS", id: "CS610", name: "Computer Networks", handouts: "1k6sAGLfKIX2KimMuax9CixTa5htpvc4t",
+        highlighted: "https://drive.google.com/drive/folders/1Gg6SxzxGofXuO0pXp0RigQLPvqRSlbX0", ppt: ""
+    },
     { dept: "CS", id: "CS611", name: "Software Quality Engineering", handouts: "1KsLO-DcPMjByUnqvB7nOn0F8dLKwq43c", highlighted: "https://drive.google.com/file/d/1EjG1UzTlaBG-klp3i5R3yeWKHaJFJWlZ/view", ppt: "not_found.html" },
-    { dept: "CS", id: "CS614", name: "Data Warehousing", handouts: "1HC3LD4j6vlmQJzwyPfcEquMhbAanaZMT", highlighted: "https://drive.google.com/file/d/1bO5q3rlP0MXQoa2UCKfnOpB5fLXiSE-H/view", ppt: "not_found.html" },
-    { dept: "CS", id: "CS615", name: "Software Project Management", handouts: "1JY0_3cGuOmYMfk9eFNCBBEuUMjUCCsPw", highlighted: "https://drive.google.com/drive/folders/1Fx8qlxWioEPQ2Y1wdkRj9hYgEz-cl9t_", ppt: "not_found.html" },
+    {
+        dept: "CS", id: "CS614", name: "Data Warehousing", handouts: "1HC3LD4j6vlmQJzwyPfcEquMhbAanaZMT",
+        highlighted: "https://drive.google.com/uc?export=download&id=10cLz5OJdwATijAc1Cnj_vzQkzuAONh7I", ppt: "not_found.html"
+    },
+    {
+        dept: "CS", id: "CS615", name: "Software Project Management", handouts: "1JY0_3cGuOmYMfk9eFNCBBEuUMjUCCsPw",
+        highlighted: "https://drive.google.com/uc?export=download&id=1s5OyeaPuxTQM-RWqmuDKY70ZzGWLhhLA", ppt: "not_found.html"
+    },
+
     { dept: "CS", id: "CS620", name: "Modeling & Simulation", handouts: "https://drive.google.com/drive/folders/1nygHEDjjN49KP3dBX3mWey0T4UrRNn2f", highlighted: "https://drive.google.com/drive/folders/1nygHEDjjN49KP3dBX3mWey0T4UrRNn2f", ppt: "https://drive.google.com/drive/folders/1nygHEDjjN49KP3dBX3mWey0T4UrRNn2f" },
     { dept: "CS", id: "CS621", name: "Parallel Computing", handouts: "https://drive.google.com/drive/folders/11s7wRV9y4e8S_HVDhTm6M6JnTU1slwz1", highlighted: "https://drive.google.com/drive/folders/11s7wRV9y4e8S_HVDhTm6M6JnTU1slwz1", ppt: "https://drive.google.com/file/d/1dtdKNGNKHPihjqSX5XXXO0Lfas4ORvff/view" },
     { dept: "CS", id: "CS625", name: "Professional Practices", handouts: "1Vz5a9DZL-G9CFqFhNCanQxuG-mWOrhnQ", highlighted: "https://drive.google.com/drive/folders/1Oq4LwMDZm77JxmEgLnDz4vd8mbhZPcxB", ppt: "not_found.html" },
