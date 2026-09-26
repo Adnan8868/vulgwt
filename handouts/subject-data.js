@@ -439,11 +439,30 @@ const subjectsData = [
         dept: "CS", id: "CS615", name: "Software Project Management", handouts: "1JY0_3cGuOmYMfk9eFNCBBEuUMjUCCsPw",
         highlighted: "https://drive.google.com/uc?export=download&id=1s5OyeaPuxTQM-RWqmuDKY70ZzGWLhhLA", ppt: "not_found.html"
     },
-
-    { dept: "CS", id: "CS620", name: "Modeling & Simulation", handouts: "https://drive.google.com/drive/folders/1nygHEDjjN49KP3dBX3mWey0T4UrRNn2f", highlighted: "https://drive.google.com/drive/folders/1nygHEDjjN49KP3dBX3mWey0T4UrRNn2f", ppt: "https://drive.google.com/drive/folders/1nygHEDjjN49KP3dBX3mWey0T4UrRNn2f" },
-    { dept: "CS", id: "CS621", name: "Parallel Computing", handouts: "https://drive.google.com/drive/folders/11s7wRV9y4e8S_HVDhTm6M6JnTU1slwz1", highlighted: "https://drive.google.com/drive/folders/11s7wRV9y4e8S_HVDhTm6M6JnTU1slwz1", ppt: "https://drive.google.com/file/d/1dtdKNGNKHPihjqSX5XXXO0Lfas4ORvff/view" },
-    { dept: "CS", id: "CS625", name: "Professional Practices", handouts: "1Vz5a9DZL-G9CFqFhNCanQxuG-mWOrhnQ", highlighted: "https://drive.google.com/drive/folders/1Oq4LwMDZm77JxmEgLnDz4vd8mbhZPcxB", ppt: "not_found.html" },
-    { dept: "CS", id: "CS636", name: "Formal Methods", handouts: "https://drive.google.com/file/d/1VmOj-f1kc_dM8AA9z3hsYDACVdhnTRaO/view", highlighted: "https://drive.google.com/file/d/1QB9xhksVb1ehNYoKUcfNa4zboEtvTsmx/view", ppt: "not_found.html" },
+    {
+        dept: "CS", id: "CS620", name: "Modeling & Simulation", handouts: "1vnj4Wm6gGf8VhjL-lBBVTmAm2JlK55cR",
+        highlighted: "https://drive.google.com/drive/folders/1nygHEDjjN49KP3dBX3mWey0T4UrRNn2f",
+        ppt: "https://drive.google.com/uc?export=download&id=1vnj4Wm6gGf8VhjL-lBBVTmAm2JlK55cR"
+    },
+    {
+        dept: "CS", id: "CS621", name: "Parallel Computing", handouts: "https://drive.google.com/drive/folders/11s7wRV9y4e8S_HVDhTm6M6JnTU1slwz1", highlighted: "https://drive.google.com/drive/folders/11s7wRV9y4e8S_HVDhTm6M6JnTU1slwz1",
+        ppt: "https://drive.google.com/uc?export=download&id=1dtdKNGNKHPihjqSX5XXXO0Lfas4ORvff"
+    },
+    {
+        dept: "CS", id: "CS625", name: "Professional Practices", handouts: "1Vz5a9DZL-G9CFqFhNCanQxuG-mWOrhnQ",
+        highlighted: "https://drive.google.com/drive/folders/1Oq4LwMDZm77JxmEgLnDz4vd8mbhZPcxB",
+        ppt: "https://drive.google.com/uc?export=download&id=1yCie37MH--FEv-bMTHy97uHxCg9_Pgzg"
+    },
+    {
+        dept: "CS", id: "CS627", name: "Cyber Security", handouts: "1cLkD8YcvFtse4eOgkxaWKTlhLDUW4xmp",
+        highlighted: "https://drive.google.com/drive/folders/1FfNja7sZ7Bcq-b4rZ3AqcpAtvxGURJ3-",
+        ppt: "https://drive.google.com/uc?export=download&id=1cLkD8YcvFtse4eOgkxaWKTlhLDUW4xmp"
+    },
+    {
+        dept: "CS", id: "CS636", name: "Formal Methods", handouts: "1VmOj-f1kc_dM8AA9z3hsYDACVdhnTRaO",
+        highlighted: "https://drive.google.com/drive/folders/1E-VdHXqc48OR-ar7VIXw4DZQKP5sznmI",
+        ppt: "https://drive.google.com/uc?export=download&id=1VmOj-f1kc_dM8AA9z3hsYDACVdhnTRaO"
+    },
     { dept: "CS", id: "CS701", name: "Theory of Computation", handouts: "https://drive.google.com/file/d/1Zudg5e6dWlJvTWr7iaLuETq1QllV66Wz/view", highlighted: "not_found.html", ppt: "not_found.html" },
     { dept: "CS", id: "CS702", name: "Advanced Algorithms", handouts: "https://drive.google.com/file/d/1nUnuYQbble_Mgv3vaSe0OBR5SqMeLwDh/view", highlighted: "not_found.html", ppt: "not_found.html" },
     { dept: "CS", id: "CS704", name: "Advanced Architecture", handouts: "https://drive.google.com/file/d/1-cxt4MVCQQDJen7_f6N2-RK20otcNHVY/view", highlighted: "not_found.html", ppt: "not_found.html" },
@@ -480,6 +499,12 @@ const subjectsData = [
     { dept: "ECO", id: "ECO607", name: "Mathematical Economics II", handouts: "19NVxmGljS7K8dvsNzVzL1fi7Yho3eTY_", highlighted: "not_found.html", ppt: "not_found.html" },
     { dept: "ECO", id: "ECO610", name: "Issues in Pakistan Economy", handouts: "1fxo9C0g007zlfEMVLlYe8aBUkaPFduzS", highlighted: "not_found.html", ppt: "not_found.html" },
     { dept: "ECO", id: "ECO612", name: "Population Economics", handouts: "1cwNQJccpZkqNa-vjDgFKq5pr2zJv4Ov7", highlighted: "not_found.html", ppt: "not_found.html" },
+
+    // ===========  ECE Dept  ===========
+    { dept: "EDU", id: "ECE101", name: "Early Childhood Education", handouts: "1Qfu-uDWYVaRoj7TzM5l81aZEv_3_7nAP", highlighted: "", ppt: "not_found.html" },
+    {
+        dept: "EDU", id: "ECE201", name: "Language Development of the Child", handouts: "1UrP1qe09t6Lm9TkKHJZMjdTxB0sohAKP",        highlighted: "", ppt: "not_found.html"
+    },
 
     // ===========  EDU Dept  ===========
     { dept: "EDU", id: "EDU101", name: "Foundations of Education", handouts: "16TkwNibadi8kOa8tCb37-2qKRG4LYe1m", highlighted: "https://drive.google.com/uc?export=download&id=1Te7K9jzM4apEkq1-nqTduCtUS8C4TaNk", ppt: "not_found.html" },
