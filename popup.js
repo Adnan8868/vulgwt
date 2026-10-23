@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // ==========================================================
 
     const WHATSAPP_GROUP_LINK =
-        "https://chat.whatsapp.com/EbRuKt2blNu4FVd7Odb9hc";
+        "https://chat.whatsapp.com/H8sioJIOQGv4vxIqG2MFqg";
 
     const WHATSAPP_CONTACT =
         "https://wa.me/923196248868"; // <-- Apna WhatsApp number yahan lagayen
