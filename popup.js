@@ -1,1001 +1,178 @@
 // ============================================================
-// VU STUDY LGWT — PREMIUM LMS HANDLING POPUP
-// Semester Launch Campaign
+// VU STUDY LGWT — COMPACT & STYLISH COMMUNITY NOTICE POPUP
 // ============================================================
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Don't show again after closing in this session
-    if (sessionStorage.getItem("lgwt_lms_popup_closed") === "true") {
+    // Ek session mein close karne ke baad dobara show nahi hoga
+    if (sessionStorage.getItem("lgwt_notice_popup_closed") === "true") {
         return;
     }
 
     // ==========================================================
-    // CONFIG
+    // CONFIG (Apne New Links Yahan Lagayein)
     // ==========================================================
-
-    const WHATSAPP_GROUP_LINK =
-        "https://chat.whatsapp.com/H8sioJIOQGv4vxIqG2MFqg";
-
-    const WHATSAPP_CONTACT =
-        "https://wa.me/923196248868"; // <-- Apna WhatsApp number yahan lagayen
-
-    const CALCULATOR_LINK = "#lms-calculator";
-
+    const NEW_WHATSAPP_GROUP_LINK = "https://chat.whatsapp.com/KR0mtlb4a9d2DLF65Be2KM";
+    const CURRENT_PAPERS_LINK = "https://adnan8868.github.io/lgwt-review/";
+    const WHATSAPP_CHANNEL_LINK = "https://whatsapp.com/channel/0029VbAfKscEVccSHYySNP3I";
 
     // ==========================================================
     // POPUP STYLES
     // ==========================================================
-
-    if (!document.getElementById("lgwt-lms-popup-styles")) {
-
+    if (!document.getElementById("lgwt-compact-popup-styles")) {
         const styleTag = document.createElement("style");
-
-        styleTag.id = "lgwt-lms-popup-styles";
-
+        styleTag.id = "lgwt-compact-popup-styles";
         styleTag.innerHTML = `
-
-            /* ==============================
-               OVERLAY
-            ============================== */
-
-            #lgwtLmsPopupOverlay {
+            #lgwtPopupOverlay {
                 opacity: 0;
                 pointer-events: none;
-                transition: opacity .35s ease;
+                transition: opacity 0.3s ease;
             }
-
-            #lgwtLmsPopupOverlay.lgwt-popup-visible {
+            #lgwtPopupOverlay.lgwt-visible {
                 opacity: 1;
                 pointer-events: auto;
             }
-
-
-            /* ==============================
-               CARD
-            ============================== */
-
-            #lgwtLmsPopupCard {
+            #lgwtPopupCard {
                 opacity: 0;
-                transform: scale(.94) translateY(15px);
-                transition:
-                    opacity .4s ease,
-                    transform .4s cubic-bezier(.16,1,.3,1);
-
-                font-family:
-                    'Poppins',
-                    'Inter',
-                    system-ui,
-                    sans-serif;
+                transform: scale(0.92) translateY(14px);
+                transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+                font-family: 'Plus Jakarta Sans', 'Poppins', system-ui, sans-serif;
             }
-
-            #lgwtLmsPopupOverlay.lgwt-popup-visible
-            #lgwtLmsPopupCard {
+            #lgwtPopupOverlay.lgwt-visible #lgwtPopupCard {
                 opacity: 1;
                 transform: scale(1) translateY(0);
             }
-
-
-            /* ==============================
-               OFFER PULSE
-            ============================== */
-
-            @keyframes lgwtOfferPulse {
-
-                0%, 100% {
-                    box-shadow:
-                        0 0 0 0 rgba(245,158,11,.30);
-                }
-
-                50% {
-                    box-shadow:
-                        0 0 0 5px rgba(245,158,11,0);
-                }
+            @keyframes lgwtPulseDot {
+                0%, 100% { opacity: 1; transform: scale(1); }
+                50% { opacity: 0.4; transform: scale(0.85); }
             }
-
-            .lgwt-offer-pulse {
-                animation: lgwtOfferPulse 2.2s infinite;
+            .lgwt-pulse-dot {
+                animation: lgwtPulseDot 1.6s infinite;
             }
-
-
-            /* ==============================
-               LIVE DOT
-            ============================== */
-
-            @keyframes lgwtLive {
-
-                0%, 100% {
-                    opacity: 1;
-                }
-
-                50% {
-                    opacity: .35;
-                }
-            }
-
-            .lgwt-live-dot {
-                animation: lgwtLive 1.5s infinite;
-            }
-
-
-            /* ==============================
-               ICON FLOAT
-            ============================== */
-
-            @keyframes lgwtFloat {
-
-                0%, 100% {
-                    transform: translateY(0);
-                }
-
-                50% {
-                    transform: translateY(-4px);
-                }
-            }
-
-            .lgwt-icon-float {
-                animation: lgwtFloat 3s ease-in-out infinite;
-            }
-
-
-            /* ==============================
-               BUTTON SHINE
-            ============================== */
-
-            .lgwt-shine {
+            .lgwt-btn-shine {
                 position: relative;
                 overflow: hidden;
             }
-
-            .lgwt-shine::after {
+            .lgwt-btn-shine::after {
                 content: "";
                 position: absolute;
                 top: 0;
                 left: -120%;
-                width: 60%;
+                width: 55%;
                 height: 100%;
-                background:
-                    linear-gradient(
-                        90deg,
-                        transparent,
-                        rgba(255,255,255,.20),
-                        transparent
-                    );
+                background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
                 transform: skewX(-20deg);
-                animation: lgwtShine 4s infinite;
+                animation: lgwtBtnShine 3.5s infinite;
             }
-
-            @keyframes lgwtShine {
-
-                0% {
-                    left: -120%;
-                }
-
-                55%, 100% {
-                    left: 150%;
-                }
+            @keyframes lgwtBtnShine {
+                0% { left: -120%; }
+                55%, 100% { left: 150%; }
             }
-
-
-            /* ==============================
-               MOBILE
-            ============================== */
-
-            @media (max-width: 480px) {
-
-                #lgwtLmsPopupCard {
-                    max-height: calc(100vh - 20px);
-                    overflow-y: auto;
-                }
-
-                #lgwtLmsPopupCard::-webkit-scrollbar {
-                    width: 3px;
-                }
-
-                #lgwtLmsPopupCard::-webkit-scrollbar-thumb {
-                    background: rgba(148,163,184,.35);
-                    border-radius: 10px;
-                }
-
-            }
-
         `;
-
         document.head.appendChild(styleTag);
     }
 
-
     // ==========================================================
-    // POPUP HTML
+    // COMPACT & STYLISH POPUP HTML
     // ==========================================================
-
     const popupHtml = `
+        <div id="lgwtPopupOverlay"
+            class="fixed inset-0 flex items-center justify-center p-4"
+            style="z-index: 99999; background: rgba(2, 6, 23, 0.72); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);">
 
-        <div
-            id="lgwtLmsPopupOverlay"
-            class="
-                fixed
-                inset-0
-                flex
-                items-center
-                justify-center
-                p-3
-            "
-            style="
-                z-index:99999;
-                background:rgba(2,6,23,.76);
-                backdrop-filter:blur(9px);
-                -webkit-backdrop-filter:blur(9px);
-            "
-        >
+            <div id="lgwtPopupCard"
+                class="relative w-full max-w-[350px] rounded-3xl overflow-hidden bg-slate-950 border border-white/10 shadow-[0_25px_70px_rgba(0,0,0,0.65)] text-center">
 
-            <!-- CARD -->
+                <!-- Top Gradient Accent Bar -->
+                <div class="h-1 w-full bg-gradient-to-r from-emerald-400 via-blue-500 to-amber-400"></div>
 
-            <div
-                id="lgwtLmsPopupCard"
-                class="
-                    relative
-                    w-full
-                    max-w-[380px]
-                    rounded-[1.8rem]
-                    overflow-hidden
-                    bg-slate-950
-                    border
-                    border-white/10
-                    shadow-[0_25px_80px_rgba(0,0,0,.5)]
-                "
-            >
-
-                <!-- TOP LINE -->
-
-                <div
-                    class="
-                        absolute
-                        top-0
-                        left-0
-                        right-0
-                        h-1
-                        bg-gradient-to-r
-                        from-blue-500
-                        via-indigo-500
-                        to-yellow-400
-                    "
-                ></div>
-
-
-                <!-- CLOSE -->
-
-                <button
-                    id="lgwtLmsCloseBtn"
-                    class="
-                        absolute
-                        top-3
-                        right-3
-                        z-30
-                        w-8
-                        h-8
-                        rounded-full
-                        bg-white/5
-                        border
-                        border-white/10
-                        text-slate-400
-                        hover:bg-red-500
-                        hover:text-white
-                        transition-all
-                        flex
-                        items-center
-                        justify-center
-                    "
-                    aria-label="Close"
-                >
-
+                <!-- Close Button -->
+                <button id="lgwtPopupCloseBtn" aria-label="Close"
+                    class="absolute top-3.5 right-3.5 w-7 h-7 rounded-full bg-white/5 hover:bg-red-500/90 border border-white/10 text-slate-400 hover:text-white transition-all flex items-center justify-center cursor-pointer">
                     <i class="fas fa-times text-xs"></i>
-
                 </button>
 
+                <div class="px-5 pt-5 pb-6 space-y-4">
 
-                <!-- CONTENT -->
-
-                <div class="relative z-10 px-5 py-5">
-
-
-                    <!-- STATUS -->
-
-                    <div class="flex justify-center">
-
-                        <div
-                            class="
-                                inline-flex
-                                items-center
-                                gap-2
-                                px-3
-                                py-1
-                                rounded-full
-                                bg-green-500/10
-                                border
-                                border-green-500/20
-                                text-green-400
-                                text-[8px]
-                                font-medium
-                                uppercase
-                                tracking-[.14em]
-                            "
-                        >
-
-                            <span
-                                class="
-                                    lgwt-live-dot
-                                    w-1.5
-                                    h-1.5
-                                    rounded-full
-                                    bg-green-400
-                                "
-                            ></span>
-
-                            LMS Booking Open
-
-                        </div>
-
+                    <!-- Alert Badge -->
+                    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/25 text-red-400 text-[10px] font-semibold uppercase tracking-wider">
+                        <span class="lgwt-pulse-dot w-1.5 h-1.5 rounded-full bg-red-400"></span>
+                        Important Update
                     </div>
 
-
-                    <!-- ICON -->
-
-                    <div class="flex justify-center mt-4 mb-3">
-
-                        <div
-                            class="
-                                lgwt-icon-float
-                                w-14
-                                h-14
-                                rounded-2xl
-                                bg-gradient-to-br
-                                from-blue-600
-                                to-indigo-700
-                                flex
-                                items-center
-                                justify-center
-                                shadow-lg
-                                shadow-blue-600/20
-                            "
-                        >
-
-                            <i
-                                class="
-                                    fas
-                                    fa-graduation-cap
-                                    text-white
-                                    text-xl
-                                "
-                            ></i>
-
+                    <!-- Brand Icon & Heading -->
+                    <div class="space-y-1.5">
+                        <div class="w-12 h-12 mx-auto rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white text-xl shadow-lg shadow-emerald-500/20">
+                            <i class="fab fa-whatsapp"></i>
                         </div>
-
-                    </div>
-
-
-                    <!-- TITLE -->
-
-                    <div class="text-center">
-
-                        <p
-                            class="
-                                text-blue-400
-                                text-[8px]
-                                font-medium
-                                uppercase
-                                tracking-[.24em]
-                            "
-                        >
-                            VU STUDY LGWT
+                        <h3 class="text-lg font-bold text-white tracking-tight pt-1">
+                            New LGWT Official <span class="text-amber-400">Group</span>
+                        </h3>
+                        <p class="text-[11px] text-slate-400 leading-relaxed">
+                            Hamara purana WhatsApp group <span class="text-red-400 font-semibold">permanently suspend</span> ho gaya hai. Kindly purana group <strong class="text-slate-200">leave</strong> kar dein aur updates & current papers ke liye neeche diye gaye links join karein!
                         </p>
-
-
-                        <h2
-                            class="
-                                text-[25px]
-                                sm:text-[27px]
-                                font-semibold
-                                text-white
-                                leading-tight
-                                mt-1
-                                tracking-tight
-                            "
-                        >
-
-                            LMS Handling
-
-                            <span class="text-yellow-400">
-                                Is Open
-                            </span>
-
-                        </h2>
-
-
-                        <p
-                            class="
-                                text-slate-400
-                                text-[11px]
-                                font-normal
-                                leading-relaxed
-                                mt-2
-                            "
-                        >
-
-                            Semester start hone wala hai —
-                            apni LMS activities ko tension-free
-                            manage karwain.
-
-                        </p>
-
                     </div>
 
+                    <!-- Action Buttons -->
+                    <div class="space-y-2.5 pt-1">
+                        <!-- Primary: New WhatsApp Group -->
+                        <a href="${NEW_WHATSAPP_GROUP_LINK}" target="_blank" rel="noopener noreferrer"
+                            class="lgwt-btn-shine w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white font-semibold text-xs shadow-lg shadow-emerald-500/20 transition-all">
+                            <i class="fab fa-whatsapp text-base"></i>
+                            Join New WhatsApp Group
+                        </a>
 
-                    <!-- OFFER -->
+                        <!-- Secondary: Current Papers Bank -->
+                        <a href="${CURRENT_PAPERS_LINK}" target="_blank" rel="noopener noreferrer"
+                            class="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold text-xs shadow-md shadow-blue-600/20 transition-all">
+                            <i class="fas fa-file-lines text-amber-300"></i>
+                            Current & Past Paper Bank
+                        </a>
 
-                    <div
-                        class="
-                            lgwt-offer-pulse
-                            mt-4
-                            rounded-2xl
-                            bg-yellow-500/10
-                            border
-                            border-yellow-500/20
-                            px-4
-                            py-3
-                            text-center
-                        "
-                    >
-
-                        <div
-                            class="
-                                flex
-                                items-center
-                                justify-center
-                                gap-2
-                                text-yellow-400
-                                text-[9px]
-                                font-medium
-                                uppercase
-                                tracking-wider
-                            "
-                        >
-
-                            <i class="fas fa-bolt"></i>
-
-                            Semester Launch Offer
-
-                        </div>
-
-
-                        <p
-                            class="
-                                text-white
-                                text-[12px]
-                                font-medium
-                                mt-1
-                            "
-                        >
-
-                            Very Low Introductory Price
-
-                        </p>
-
-
-                        <p
-                            class="
-                                text-yellow-300
-                                text-[9px]
-                                font-normal
-                                mt-1
-                            "
-                        >
-
-                            Full applicable discount available
-                            for eligible bookings.
-
-                        </p>
-
+                        <!-- Subtle: WhatsApp Channel -->
+                        <a href="${WHATSAPP_CHANNEL_LINK}" target="_blank" rel="noopener noreferrer"
+                            class="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 text-slate-300 hover:text-white text-[11px] font-medium transition-all">
+                            <i class="fas fa-bullhorn text-emerald-400 text-[10px]"></i>
+                            Follow Official WhatsApp Channel
+                        </a>
                     </div>
 
-
-                    <!-- SLOTS -->
-
-                    <div
-                        class="
-                            mt-3
-                            flex
-                            justify-center
-                        "
-                    >
-
-                        <span
-                            class="
-                                px-3
-                                py-1
-                                rounded-full
-                                bg-red-500/10
-                                border
-                                border-red-500/20
-                                text-red-400
-                                text-[9px]
-                                font-medium
-                            "
-                        >
-
-                            ⏳ Only 10 Slots Available
-
-                        </span>
-
-                    </div>
-
-
-                    <!-- SERVICES -->
-
-                    <div
-                        class="
-                            grid
-                            grid-cols-2
-                            gap-2
-                            mt-4
-                        "
-                    >
-
-                        <div
-                            class="
-                                flex
-                                items-center
-                                gap-2
-                                p-2.5
-                                rounded-xl
-                                bg-white/[.04]
-                                border
-                                border-white/[.07]
-                            "
-                        >
-
-                            <i
-                                class="
-                                    fas
-                                    fa-file-pen
-                                    text-blue-400
-                                    text-xs
-                                "
-                            ></i>
-
-                            <span
-                                class="
-                                    text-[9px]
-                                    font-normal
-                                    text-slate-300
-                                "
-                            >
-                                Assignments
-                            </span>
-
-                        </div>
-
-
-                        <div
-                            class="
-                                flex
-                                items-center
-                                gap-2
-                                p-2.5
-                                rounded-xl
-                                bg-white/[.04]
-                                border
-                                border-white/[.07]
-                            "
-                        >
-
-                            <i
-                                class="
-                                    fas
-                                    fa-list-check
-                                    text-indigo-400
-                                    text-xs
-                                "
-                            ></i>
-
-                            <span
-                                class="
-                                    text-[9px]
-                                    font-normal
-                                    text-slate-300
-                                "
-                            >
-                                Quizzes
-                            </span>
-
-                        </div>
-
-
-                        <div
-                            class="
-                                flex
-                                items-center
-                                gap-2
-                                p-2.5
-                                rounded-xl
-                                bg-white/[.04]
-                                border
-                                border-white/[.07]
-                            "
-                        >
-
-                            <i
-                                class="
-                                    fas
-                                    fa-comments
-                                    text-yellow-400
-                                    text-xs
-                                "
-                            ></i>
-
-                            <span
-                                class="
-                                    text-[9px]
-                                    font-normal
-                                    text-slate-300
-                                "
-                            >
-                                GDBs
-                            </span>
-
-                        </div>
-
-
-                        <div
-                            class="
-                                flex
-                                items-center
-                                gap-2
-                                p-2.5
-                                rounded-xl
-                                bg-white/[.04]
-                                border
-                                border-white/[.07]
-                            "
-                        >
-
-                            <i
-                                class="
-                                    fas
-                                    fa-laptop
-                                    text-green-400
-                                    text-xs
-                                "
-                            ></i>
-
-                            <span
-                                class="
-                                    text-[9px]
-                                    font-normal
-                                    text-slate-300
-                                "
-                            >
-                                LMS Support
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- CALCULATOR -->
-
-                    <a
-                        href="${CALCULATOR_LINK}"
-                        id="lgwtCalculateBtn"
-                        class="
-                            lgwt-shine
-                            mt-4
-                            w-full
-                            flex
-                            items-center
-                            justify-center
-                            gap-2
-                            py-3.5
-                            px-4
-                            rounded-xl
-                            bg-gradient-to-r
-                            from-blue-600
-                            to-indigo-600
-                            hover:from-blue-500
-                            hover:to-indigo-500
-                            text-white
-                            font-medium
-                            text-[11px]
-                            tracking-wide
-                            shadow-lg
-                            shadow-blue-600/20
-                            transition-all
-                        "
-                    >
-
-                        <i
-                            class="
-                                fas
-                                fa-calculator
-                                text-yellow-300
-                            "
-                        ></i>
-
-                        Calculate LMS Fee
-
-                        <i
-                            class="
-                                fas
-                                fa-arrow-right
-                                text-[9px]
-                            "
-                        ></i>
-
-                    </a>
-
-
-                    <!-- DIRECT WHATSAPP -->
-
-                    <a
-                        href="${WHATSAPP_CONTACT}"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="
-                            mt-2
-                            w-full
-                            flex
-                            items-center
-                            justify-center
-                            gap-2
-                            py-3.5
-                            px-4
-                            rounded-xl
-                            bg-green-500
-                            hover:bg-green-600
-                            text-white
-                            font-medium
-                            text-[11px]
-                            tracking-wide
-                            transition-all
-                            shadow-lg
-                            shadow-green-500/10
-                        "
-                    >
-
-                        <i
-                            class="
-                                fab
-                                fa-whatsapp
-                                text-lg
-                            "
-                        ></i>
-
-                        Contact Us on WhatsApp
-
-                    </a>
-
-
-                    <!-- GROUP -->
-
-                    <a
-                        href="${WHATSAPP_GROUP_LINK}"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="
-                            mt-2
-                            w-full
-                            flex
-                            items-center
-                            justify-center
-                            gap-2
-                            py-2.5
-                            px-4
-                            rounded-xl
-                            bg-white/[.04]
-                            border
-                            border-white/[.08]
-                            text-slate-300
-                            hover:text-white
-                            hover:bg-white/[.07]
-                            font-normal
-                            text-[9px]
-                            transition-all
-                        "
-                    >
-
-                        <i
-                            class="
-                                fab
-                                fa-whatsapp
-                                text-green-400
-                            "
-                        ></i>
-
-                        Join LGWT WhatsApp Group
-
-                    </a>
-
-
-                    <!-- FOOTER -->
-
-                    <p
-                        class="
-                            text-center
-                            text-[8px]
-                            font-normal
-                            text-slate-500
-                            mt-3
-                        "
-                    >
-
-                        Calculate your fee • Check discount •
-                        Contact us for booking
-
+                    <!-- Footer Note -->
+                    <p class="text-[10px] text-slate-500">
+                        VU Study LGWT • Learning & Growing With Team
                     </p>
-
                 </div>
-
             </div>
-
         </div>
     `;
 
+    document.body.insertAdjacentHTML("beforeend", popupHtml);
 
-    // ==========================================================
-    // INSERT POPUP
-    // ==========================================================
-
-    document.body.insertAdjacentHTML(
-        "beforeend",
-        popupHtml
-    );
-
-
-    // ==========================================================
-    // ELEMENTS
-    // ==========================================================
-
-    const overlay =
-        document.getElementById("lgwtLmsPopupOverlay");
-
-    const closeBtn =
-        document.getElementById("lgwtLmsCloseBtn");
-
-    const calculateBtn =
-        document.getElementById("lgwtCalculateBtn");
-
-
-    // ==========================================================
-    // SHOW
-    // ==========================================================
+    const overlay = document.getElementById("lgwtPopupOverlay");
+    const closeBtn = document.getElementById("lgwtPopupCloseBtn");
 
     setTimeout(() => {
-
-        if (overlay) {
-            overlay.classList.add(
-                "lgwt-popup-visible"
-            );
-        }
-
-    }, 450);
-
-
-    // ==========================================================
-    // CLOSE
-    // ==========================================================
+        if (overlay) overlay.classList.add("lgwt-visible");
+    }, 350);
 
     function closePopup() {
-
         if (!overlay) return;
-
-        overlay.classList.remove(
-            "lgwt-popup-visible"
-        );
-
-        sessionStorage.setItem(
-            "lgwt_lms_popup_closed",
-            "true"
-        );
-
-        setTimeout(() => {
-
-            overlay.remove();
-
-        }, 350);
+        overlay.classList.remove("lgwt-visible");
+        sessionStorage.setItem("lgwt_notice_popup_closed", "true");
+        setTimeout(() => overlay.remove(), 300);
     }
 
-
-    // ==========================================================
-    // CLOSE BUTTON
-    // ==========================================================
-
-    if (closeBtn) {
-
-        closeBtn.addEventListener(
-            "click",
-            closePopup
-        );
-
-    }
-
-
-    // ==========================================================
-    // CALCULATOR
-    // ==========================================================
-
-    if (calculateBtn) {
-
-        calculateBtn.addEventListener(
-            "click",
-            function () {
-
-                closePopup();
-
-                setTimeout(() => {
-
-                    const calculator =
-                        document.getElementById(
-                            "lms-calculator"
-                        );
-
-                    if (calculator) {
-
-                        calculator.scrollIntoView({
-                            behavior: "smooth",
-                            block: "start"
-                        });
-
-                    }
-
-                }, 350);
-
-            }
-        );
-
-    }
-
-
-    // ==========================================================
-    // OUTSIDE CLICK
-    // ==========================================================
+    if (closeBtn) closeBtn.addEventListener("click", closePopup);
 
     if (overlay) {
-
-        overlay.addEventListener(
-            "click",
-            function (event) {
-
-                if (event.target === overlay) {
-                    closePopup();
-                }
-
-            }
-        );
-
+        overlay.addEventListener("click", function (e) {
+            if (e.target === overlay) closePopup();
+        });
     }
 
-
-    // ==========================================================
-    // ESC
-    // ==========================================================
-
-    document.addEventListener(
-        "keydown",
-        function (event) {
-
-            if (
-                event.key === "Escape" &&
-                document.getElementById(
-                    "lgwtLmsPopupOverlay"
-                )
-            ) {
-
-                closePopup();
-
-            }
-
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && document.getElementById("lgwtPopupOverlay")) {
+            closePopup();
         }
-    );
-
+    });
 });
